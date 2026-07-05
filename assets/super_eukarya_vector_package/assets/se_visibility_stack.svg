@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision">
+<title id="title">Visibility Stack</title>
+<desc id="desc">A visibility stack with six horizontal cards, each containing a title and short description.</desc>
+<defs>
+<style>
+  .title { font: 800 38px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .subtitle { font: 700 16px Arial, sans-serif; fill: #736646; letter-spacing: 0; }
+  .card-title { font: 800 19px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .card-title-sm { font: 800 16px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .card-body { font: 600 14px Arial, sans-serif; fill: #4A5563; letter-spacing: 0; }
+  .card-body-sm { font: 600 13px Arial, sans-serif; fill: #4A5563; letter-spacing: 0; }
+  .invert-title { font: 800 22px Arial, sans-serif; fill: #F7F3EA; letter-spacing: 0; }
+  .invert-body { font: 600 14px Arial, sans-serif; fill: #F7F3EA; opacity: .86; letter-spacing: 0; }
+  .micro { font: 700 12px Arial, sans-serif; fill: #736646; letter-spacing: 0; }
+  .card { fill: #FFFFFF; stroke: #DED6C6; stroke-width: 2; vector-effect: non-scaling-stroke; }
+  .soft { fill: #FFFFFF; opacity: .68; stroke: #DED6C6; stroke-width: 1.6; vector-effect: non-scaling-stroke; }
+  .line { fill: none; stroke: #B9A36A; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+  .line-soft { fill: none; stroke: #142B44; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: .22; vector-effect: non-scaling-stroke; }
+</style>
+<marker id="arrow" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+  <path d="M2 2 L11 7 L2 12 Z" fill="#B9A36A"/>
+</marker>
+</defs>
+<rect width="1200" height="720" fill="#F7F3EA"/>
+<text x="72" y="80" class="title">Visibility Stack</text>
+<text x="74" y="116" class="subtitle">Use this to build one promotion packet that can travel through many channels.</text>
+<line x1="72" y1="148" x2="1128" y2="148" stroke="#B9A36A" stroke-width="3" stroke-linecap="round"/>
+
+<g>
+  <rect x="166" y="182" width="868" height="66" rx="14" class="card"/>
+  <circle cx="205" cy="215" r="18" fill="#6CB894"/>
+  <text x="205" y="221" text-anchor="middle" class="invert-body">1</text>
+  <text x="408" y="213" text-anchor="start" class="card-title">Website or listing</text>
+  <text x="408" y="235" text-anchor="start" class="card-body">Stable facts people can verify later.</text>
+</g>
+
+<g>
+  <rect x="166" y="260" width="868" height="66" rx="14" class="card"/>
+  <circle cx="205" cy="293" r="18" fill="#6F8FC9"/>
+  <text x="205" y="299" text-anchor="middle" class="invert-body">2</text>
+  <text x="408" y="291" text-anchor="start" class="card-title">Google or maps</text>
+  <text x="408" y="313" text-anchor="start" class="card-body">Hours, photos, phone, and directions.</text>
+</g>
+
+<g>
+  <rect x="166" y="338" width="868" height="66" rx="14" class="card"/>
+  <circle cx="205" cy="371" r="18" fill="#5BAEAD"/>
+  <text x="205" y="377" text-anchor="middle" class="invert-body">3</text>
+  <text x="408" y="369" text-anchor="start" class="card-title">Social post</text>
+  <text x="408" y="391" text-anchor="start" class="card-body">Short update people can share quickly.</text>
+</g>
+
+<g>
+  <rect x="166" y="416" width="868" height="66" rx="14" class="card"/>
+  <circle cx="205" cy="449" r="18" fill="#B9A36A"/>
+  <text x="205" y="455" text-anchor="middle" class="invert-body">4</text>
+  <text x="408" y="447" text-anchor="start" class="card-title">Calendar or event</text>
+  <text x="408" y="469" text-anchor="start" class="card-body">Date, place, registration, and cost.</text>
+</g>
+
+<g>
+  <rect x="166" y="494" width="868" height="66" rx="14" class="card"/>
+  <circle cx="205" cy="527" r="18" fill="#D48964"/>
+  <text x="205" y="533" text-anchor="middle" class="invert-body">5</text>
+  <text x="408" y="525" text-anchor="start" class="card-title">Flyer or handout</text>
+  <text x="408" y="547" text-anchor="start" class="card-body">Readable offline copy for boards.</text>
+</g>
+
+<g>
+  <rect x="166" y="572" width="868" height="66" rx="14" class="card"/>
+  <circle cx="205" cy="605" r="18" fill="#695674"/>
+  <text x="205" y="611" text-anchor="middle" class="invert-body">6</text>
+  <text x="408" y="603" text-anchor="start" class="card-title">Partner referral</text>
+  <text x="408" y="625" text-anchor="start" class="card-body">Plain language others can reuse.</text>
+</g>
+<path d="M141 230 L141 620" class="line" marker-end="url(#arrow)"/>
+</svg>

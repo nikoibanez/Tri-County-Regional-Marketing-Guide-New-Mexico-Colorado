@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision">
+<title id="title">Accessible Contrast</title>
+<desc id="desc">An accessibility contrast guide with centered cards for color pairings and legibility practices.</desc>
+<defs>
+<style>
+  .title { font: 800 38px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .subtitle { font: 700 16px Arial, sans-serif; fill: #736646; letter-spacing: 0; }
+  .card-title { font: 800 19px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .card-title-sm { font: 800 16px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .card-body { font: 600 14px Arial, sans-serif; fill: #4A5563; letter-spacing: 0; }
+  .card-body-sm { font: 600 13px Arial, sans-serif; fill: #4A5563; letter-spacing: 0; }
+  .invert-title { font: 800 22px Arial, sans-serif; fill: #F7F3EA; letter-spacing: 0; }
+  .invert-body { font: 600 14px Arial, sans-serif; fill: #F7F3EA; opacity: .86; letter-spacing: 0; }
+  .micro { font: 700 12px Arial, sans-serif; fill: #736646; letter-spacing: 0; }
+  .card { fill: #FFFFFF; stroke: #DED6C6; stroke-width: 2; vector-effect: non-scaling-stroke; }
+  .soft { fill: #FFFFFF; opacity: .68; stroke: #DED6C6; stroke-width: 1.6; vector-effect: non-scaling-stroke; }
+  .line { fill: none; stroke: #B9A36A; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+  .line-soft { fill: none; stroke: #142B44; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: .22; vector-effect: non-scaling-stroke; }
+</style>
+<marker id="arrow" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+  <path d="M2 2 L11 7 L2 12 Z" fill="#B9A36A"/>
+</marker>
+</defs>
+<rect width="1200" height="720" fill="#F7F3EA"/>
+<text x="72" y="80" class="title">Accessible Contrast</text>
+<text x="74" y="116" class="subtitle">Use this to keep flyers, listings, and guide graphics readable.</text>
+<line x1="72" y1="148" x2="1128" y2="148" stroke="#B9A36A" stroke-width="3" stroke-linecap="round"/>
+
+<rect x="88" y="196" width="304" height="170" rx="20" fill="#F7F3EA" stroke="#DED6C6" stroke-width="2"/>
+<text x="240" y="254" text-anchor="middle" class="card-title">Dark on cream</text>
+<text x="240" y="288" text-anchor="middle" class="card-body">Use for body text,</text>
+<text x="240" y="306" text-anchor="middle" class="card-body">captions, and lists.</text>
+<rect x="124" y="318" width="232" height="28" rx="14" fill="#502020"/>
+<text x="240" y="338" text-anchor="middle" class="invert-body">High contrast</text>
+
+<rect x="448" y="196" width="304" height="170" rx="20" fill="#142B44" stroke="#DED6C6" stroke-width="2"/>
+<text x="600" y="254" text-anchor="middle" class="invert-title">Cream on navy</text>
+<text x="600" y="288" text-anchor="middle" class="invert-body">Use for buttons,</text>
+<text x="600" y="306" text-anchor="middle" class="invert-body">headers, and footer.</text>
+<rect x="484" y="318" width="232" height="28" rx="14" fill="#F7F3EA"/>
+<text x="600" y="338" text-anchor="middle" class="card-body">Readable accent</text>
+
+<rect x="808" y="196" width="304" height="170" rx="20" fill="#502020" stroke="#DED6C6" stroke-width="2"/>
+<text x="960" y="254" text-anchor="middle" class="invert-title">Cream on Raton dark</text>
+<text x="960" y="288" text-anchor="middle" class="invert-body">Use for cursor,</text>
+<text x="960" y="306" text-anchor="middle" class="invert-body">icons, and badges.</text>
+<rect x="844" y="318" width="232" height="28" rx="14" fill="#C9933A"/>
+<text x="960" y="338" text-anchor="middle" class="card-body">Accent only</text>
+
+
+<g>
+  <rect x="144" y="452" width="256" height="118" rx="18" class="card"/>
+  <rect x="162" y="470" width="34" height="8" rx="4" fill="#6CB894"/>
+  <text x="272" y="498" text-anchor="middle" class="card-title">Keep type large</text>
+  <text x="272" y="528" text-anchor="middle" class="card-body">Avoid tiny text over</text>
+<text x="272" y="546" text-anchor="middle" class="card-body">busy images.</text>
+</g>
+
+<g>
+  <rect x="472" y="452" width="256" height="118" rx="18" class="card"/>
+  <rect x="490" y="470" width="34" height="8" rx="4" fill="#6F8FC9"/>
+  <text x="600" y="498" text-anchor="middle" class="card-title">Use plain labels</text>
+  <text x="600" y="528" text-anchor="middle" class="card-body">Readers scan faster</text>
+<text x="600" y="546" text-anchor="middle" class="card-body">with direct wording.</text>
+</g>
+
+<g>
+  <rect x="800" y="452" width="256" height="118" rx="18" class="card"/>
+  <rect x="818" y="470" width="34" height="8" rx="4" fill="#B9A36A"/>
+  <text x="928" y="498" text-anchor="middle" class="card-title">Check before print</text>
+  <text x="928" y="528" text-anchor="middle" class="card-body">Test flyers on paper</text>
+<text x="928" y="546" text-anchor="middle" class="card-body">and mobile screens.</text>
+</g>
+
+</svg>

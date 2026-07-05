@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision">
+<title id="title">Persona Finder</title>
+<desc id="desc">A persona finder flow with four centered cards for role, need, place, and source confidence.</desc>
+<defs>
+<style>
+  .title { font: 800 38px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .subtitle { font: 700 16px Arial, sans-serif; fill: #736646; letter-spacing: 0; }
+  .card-title { font: 800 19px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .card-title-sm { font: 800 16px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .card-body { font: 600 14px Arial, sans-serif; fill: #4A5563; letter-spacing: 0; }
+  .card-body-sm { font: 600 13px Arial, sans-serif; fill: #4A5563; letter-spacing: 0; }
+  .invert-title { font: 800 22px Arial, sans-serif; fill: #F7F3EA; letter-spacing: 0; }
+  .invert-body { font: 600 14px Arial, sans-serif; fill: #F7F3EA; opacity: .86; letter-spacing: 0; }
+  .micro { font: 700 12px Arial, sans-serif; fill: #736646; letter-spacing: 0; }
+  .card { fill: #FFFFFF; stroke: #DED6C6; stroke-width: 2; vector-effect: non-scaling-stroke; }
+  .soft { fill: #FFFFFF; opacity: .68; stroke: #DED6C6; stroke-width: 1.6; vector-effect: non-scaling-stroke; }
+  .line { fill: none; stroke: #B9A36A; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+  .line-soft { fill: none; stroke: #142B44; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: .22; vector-effect: non-scaling-stroke; }
+</style>
+<marker id="arrow" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+  <path d="M2 2 L11 7 L2 12 Z" fill="#B9A36A"/>
+</marker>
+</defs>
+<rect width="1200" height="720" fill="#F7F3EA"/>
+<text x="72" y="80" class="title">Persona Finder</text>
+<text x="74" y="116" class="subtitle">Use this to filter the guide by the person doing the work.</text>
+<line x1="72" y1="148" x2="1128" y2="148" stroke="#B9A36A" stroke-width="3" stroke-linecap="round"/>
+
+<path d="M244 384 H956" class="line" marker-end="url(#arrow)" opacity=".55"/>
+
+<g>
+  <rect x="92" y="272" width="228" height="160" rx="18" class="card"/>
+  <rect x="110" y="290" width="34" height="8" rx="4" fill="#6CB894"/>
+  <text x="206" y="330.5" text-anchor="middle" class="card-title">Who are you?</text>
+  <text x="206" y="360.5" text-anchor="middle" class="card-body">Business, artist,</text>
+<text x="206" y="378.5" text-anchor="middle" class="card-body">nonprofit, mentor,</text>
+<text x="206" y="396.5" text-anchor="middle" class="card-body">or event organizer.</text>
+</g>
+
+<g>
+  <rect x="356" y="272" width="228" height="160" rx="18" class="card"/>
+  <rect x="374" y="290" width="34" height="8" rx="4" fill="#6F8FC9"/>
+  <text x="470" y="330.5" text-anchor="middle" class="card-title">What is needed?</text>
+  <text x="470" y="360.5" text-anchor="middle" class="card-body">Visibility, partners,</text>
+<text x="470" y="378.5" text-anchor="middle" class="card-body">funding, posting,</text>
+<text x="470" y="396.5" text-anchor="middle" class="card-body">or directory help.</text>
+</g>
+
+<g>
+  <rect x="620" y="272" width="228" height="160" rx="18" class="card"/>
+  <rect x="638" y="290" width="34" height="8" rx="4" fill="#5BAEAD"/>
+  <text x="734" y="330.5" text-anchor="middle" class="card-title">Where first?</text>
+  <text x="734" y="360.5" text-anchor="middle" class="card-body">Choose county,</text>
+<text x="734" y="378.5" text-anchor="middle" class="card-body">community, or</text>
+<text x="734" y="396.5" text-anchor="middle" class="card-body">cross-county route.</text>
+</g>
+
+<g>
+  <rect x="884" y="272" width="228" height="160" rx="18" class="card"/>
+  <rect x="902" y="290" width="34" height="8" rx="4" fill="#B9A36A"/>
+  <text x="998" y="330.5" text-anchor="middle" class="card-title">What is trusted?</text>
+  <text x="998" y="360.5" text-anchor="middle" class="card-body">Prioritize official,</text>
+<text x="998" y="378.5" text-anchor="middle" class="card-body">linked, or field-check</text>
+<text x="998" y="396.5" text-anchor="middle" class="card-body">sources.</text>
+</g>
+<rect x="256" y="526" width="688" height="54" rx="27" class="soft"/>
+<text x="600" y="560" text-anchor="middle" class="micro">Use filters to turn a large lead bank into a short, relevant action list.</text>
+
+</svg>

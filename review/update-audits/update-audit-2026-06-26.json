@@ -1,0 +1,2857 @@
+{
+  "generated_at": "2026-06-26",
+  "registry": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\data\\update-source-registry.json",
+  "summary": {
+    "checked": 110,
+    "counts": {
+      "manual_review": 18,
+      "missing_url": 1,
+      "network_error": 2,
+      "ok": 87,
+      "redirect": 2
+    },
+    "needs_attention": 21,
+    "human_approval_required": 49
+  },
+  "results": [
+    {
+      "record": {
+        "id": "directory-colfax-county-clerk-55cee7eb",
+        "source_group": "directory_sources",
+        "title": "Colfax County Clerk",
+        "county": "Colfax",
+        "category": "County clerk / records",
+        "url": "https://www.co.colfax.nm.us/government/county_clerk.php",
+        "host": "co.colfax.nm.us",
+        "update_domain": "civic",
+        "cadence_days": 90,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for official-record questions and to verify county office contact pathways."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.co.colfax.nm.us/government/county_clerk.php",
+        "elapsed_ms": 749,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "posting-general-regional-pattern-15f23190",
+        "source_group": "posting_spaces",
+        "title": "General regional pattern",
+        "county": "Regional",
+        "category": "Posting pathway",
+        "url": "",
+        "host": "",
+        "update_domain": "civic",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Field-check needed",
+        "review_level": "manual_verification_needed",
+        "public_claim_boundary": "Verify physical board access, posting permission, office hours, and public-notice rules directly.",
+        "reader_action": ""
+      },
+      "check": {
+        "status": "missing_url",
+        "status_code": null,
+        "final_url": "",
+        "error": "No source URL is attached."
+      }
+    },
+    {
+      "record": {
+        "id": "posting-raton-colfax-18bb3c19",
+        "source_group": "posting_spaces",
+        "title": "Raton / Colfax",
+        "county": "Regional",
+        "category": "Posting pathway",
+        "url": "https://www.ratonnm.gov/government/agendas_minutes.php",
+        "host": "ratonnm.gov",
+        "update_domain": "civic",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Hybrid - verify current posting locations",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify physical board access, posting permission, office hours, and public-notice rules directly.",
+        "reader_action": ""
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.ratonnm.gov/government/agendas_minutes.php",
+        "elapsed_ms": 601,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "posting-trinidad-las-animas-883818f0",
+        "source_group": "posting_spaces",
+        "title": "Trinidad / Las Animas",
+        "county": "Regional",
+        "category": "Posting pathway",
+        "url": "https://www.trinidad.co.gov/government/public_notice.php",
+        "host": "trinidad.co.gov",
+        "update_domain": "civic",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Hybrid - verify board rules and deadlines",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify physical board access, posting permission, office hours, and public-notice rules directly.",
+        "reader_action": ""
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.trinidad.co.gov/government/public_notice.php",
+        "elapsed_ms": 643,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "posting-walsenburg-huerfano-84a3f091",
+        "source_group": "posting_spaces",
+        "title": "Walsenburg / Huerfano",
+        "county": "Regional",
+        "category": "Posting pathway",
+        "url": "https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes",
+        "host": "walsenburg.org",
+        "update_domain": "civic",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Hybrid - verify office-specific posting rules",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify physical board access, posting permission, office hours, and public-notice rules directly.",
+        "reader_action": ""
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-raton-arts-humanities-council-44345608",
+        "source_group": "directory_sources",
+        "title": "Raton Arts & Humanities Council",
+        "county": "Colfax",
+        "category": "Arts organization",
+        "url": "https://www.ratonarts.org/",
+        "host": "ratonarts.org",
+        "update_domain": "creative",
+        "cadence_days": 90,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for artist visibility, exhibit questions, and cultural partnerships."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.ratonarts.org/",
+        "elapsed_ms": 510,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-city-of-raton-business-licenses-and-regulations-e63ba348",
+        "source_group": "directory_sources",
+        "title": "City of Raton Business Licenses and Regulations",
+        "county": "Colfax",
+        "category": "Licensing / compliance",
+        "url": "https://www.ratonnm.gov/business/business_license_regulations.php",
+        "host": "ratonnm.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use before publishing a startup checklist for Raton-based ventures."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.ratonnm.gov/business/business_license_regulations.php",
+        "elapsed_ms": 356,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-city-of-raton-business-services-56b4736e",
+        "source_group": "directory_sources",
+        "title": "City of Raton Business Services",
+        "county": "Colfax",
+        "category": "Municipal business resources",
+        "url": "https://www.ratonnm.gov/business/index.php",
+        "host": "ratonnm.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as the official city business hub; if a direct directory path changes, start here."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.ratonnm.gov/business/index.php",
+        "elapsed_ms": 368,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-city-of-raton-local-business-support-42043643",
+        "source_group": "directory_sources",
+        "title": "City of Raton Local Business Support",
+        "county": "Colfax",
+        "category": "Business support",
+        "url": "https://www.ratonnm.gov/business/economic_development/local_business_resources.php",
+        "host": "ratonnm.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a new venture needs the first phone call or support form."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.ratonnm.gov/business/economic_development/local_business_resources.php",
+        "elapsed_ms": 354,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colfax-county-business-resources-8ae3ba30",
+        "source_group": "directory_sources",
+        "title": "Colfax County Business Resources",
+        "county": "Colfax",
+        "category": "County business resources",
+        "url": "https://www.co.colfax.nm.us/business/index.php",
+        "host": "co.colfax.nm.us",
+        "update_domain": "directory",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for county procurement, notices, and official Colfax business context."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.co.colfax.nm.us/business/index.php",
+        "elapsed_ms": 500,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-enigma-directory-raton-business-entities-817a5a3b",
+        "source_group": "directory_sources",
+        "title": "Enigma Directory: Raton Business Entities",
+        "county": "Colfax",
+        "category": "Business data aggregator",
+        "url": "https://www.enigma.com/directory/nm/raton/",
+        "host": "enigma.com",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for research leads only; do not treat as an official directory or endorsement."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.enigma.com/directory/nm/raton/",
+        "elapsed_ms": 1690,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-explore-raton-shopping-bfb0e270",
+        "source_group": "directory_sources",
+        "title": "Explore Raton Shopping",
+        "county": "Colfax",
+        "category": "Visitor business directory",
+        "url": "https://www.exploreraton.com/shop",
+        "host": "exploreraton.com",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a business, maker, or artist can serve travelers or day-trip visitors."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.exploreraton.com/shop",
+        "elapsed_ms": 553,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-groundworks-new-mexico-nonprofit-directory-8ebb838e",
+        "source_group": "directory_sources",
+        "title": "Groundworks New Mexico Nonprofit Directory",
+        "county": "Colfax",
+        "category": "Nonprofit directory",
+        "url": "https://www.groundworksnm.org/nonprofit-directory/new-mexico-busin?combine=&order=city&page=32&sort=desc",
+        "host": "groundworksnm.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use before manually collecting New Mexico nonprofit names."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.groundworksnm.org/nonprofit-directory/new-mexico-busin?combine=&order=city&page=32&sort=desc",
+        "elapsed_ms": 1177,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-growraton-cad019b0",
+        "source_group": "directory_sources",
+        "title": "GrowRaton",
+        "county": "Colfax",
+        "category": "Economic development",
+        "url": "https://www.growraton.org/",
+        "host": "growraton.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for entrepreneurs and existing businesses trying to grow in Raton/Colfax."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.growraton.org/",
+        "elapsed_ms": 828,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-growraton-commercial-properties-c488abb5",
+        "source_group": "directory_sources",
+        "title": "GrowRaton Commercial Properties",
+        "county": "Colfax",
+        "category": "Property / expansion",
+        "url": "https://www.growraton.org/properties/",
+        "host": "growraton.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a growth path needs physical space, not just promotion."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.growraton.org/properties/",
+        "elapsed_ms": 755,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-new-mexico-small-business-assistance-program-bb7f381d",
+        "source_group": "directory_sources",
+        "title": "New Mexico Small Business Assistance Program",
+        "county": "Colfax",
+        "category": "Technical assistance / noncash support",
+        "url": "https://nmsbaprogram.org/",
+        "host": "nmsbaprogram.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a product, process, testing, design, or technical barrier is blocking business growth; note that this is assistance, not cash."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://nmsbaprogram.org/",
+        "elapsed_ms": 1392,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-nm-creative-industries-resource-center-32b3dd8b",
+        "source_group": "directory_sources",
+        "title": "NM Creative Industries Resource Center",
+        "county": "Colfax",
+        "category": "Creative economy directory",
+        "url": "https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
+        "host": "edd.newmexico.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when artists or creative ventures need a statewide directory and listing path."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
+        "elapsed_ms": 1352,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-rain-colfax-business-licenses-349f76e7",
+        "source_group": "directory_sources",
+        "title": "RAIN Colfax Business Licenses",
+        "county": "Colfax",
+        "category": "Business license support",
+        "url": "https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/",
+        "host": "raincolfax.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as a support pointer, then verify with the responsible official office."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/",
+        "elapsed_ms": 1759,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-raton-arts-and-cultural-district-3d2e95b3",
+        "source_group": "directory_sources",
+        "title": "Raton Arts and Cultural District",
+        "county": "Colfax",
+        "category": "Creative district",
+        "url": "https://www.nmartsandculturaldistricts.org/raton/",
+        "host": "nmartsandculturaldistricts.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use to frame Raton as a creative-economy path, not only a business path."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.nmartsandculturaldistricts.org/raton/",
+        "elapsed_ms": 583,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-raton-chamber-business-directory-bac4788d",
+        "source_group": "directory_sources",
+        "title": "Raton Chamber Business Directory",
+        "county": "Colfax",
+        "category": "Business directory",
+        "url": "https://www.raton.info/business-directory.html",
+        "host": "raton.info",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Check this before building a fresh Raton contact list."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.raton.info/business-directory.html",
+        "elapsed_ms": 974,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-yellow-pages-raton-business-listings-c16ba0f3",
+        "source_group": "directory_sources",
+        "title": "Yellow Pages Raton Business Listings",
+        "county": "Colfax",
+        "category": "Commercial directory",
+        "url": "https://www.yellowpages.com/raton-nm/business-listings/1",
+        "host": "yellowpages.com",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use only as a secondary discovery source and confirm details elsewhere."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://www.yellowpages.com/raton-nm/business-listings/1",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-huerfano-chamber-resources-4f502f51",
+        "source_group": "directory_sources",
+        "title": "Huerfano Chamber Resources",
+        "county": "Huerfano",
+        "category": "Resource hub",
+        "url": "https://www.chamber.huerfano.org/resources",
+        "host": "chamber.huerfano.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as the fastest local gateway to Huerfano public and business resources."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.chamber.huerfano.org/resources",
+        "elapsed_ms": 596,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-spanish-peaks-country-add-business-listing-dfbb8ff9",
+        "source_group": "directory_sources",
+        "title": "Spanish Peaks Country Add Business Listing",
+        "county": "Huerfano",
+        "category": "Directory submission",
+        "url": "https://spanishpeakscountry.com/add-business-listing/",
+        "host": "spanishpeakscountry.com",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use to request a listing; do not promise acceptance without review."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://spanishpeakscountry.com/add-business-listing/",
+        "elapsed_ms": 436,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-spanish-peaks-country-business-directory-bd52c578",
+        "source_group": "directory_sources",
+        "title": "Spanish Peaks Country Business Directory",
+        "county": "Huerfano",
+        "category": "Business / tourism directory",
+        "url": "https://spanishpeakscountry.com/business-directory",
+        "host": "spanishpeakscountry.com",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use before manually building a Walsenburg/La Veta/Cuchara visitor economy list."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://spanishpeakscountry.com/business-directory",
+        "elapsed_ms": 206,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-town-of-la-veta-business-directory-e56f0617",
+        "source_group": "directory_sources",
+        "title": "Town of La Veta Business Directory",
+        "county": "Huerfano",
+        "category": "Municipal business directory",
+        "url": "https://townoflaveta-co.gov/business-directory/",
+        "host": "townoflaveta-co.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for La Veta outreach, cross-promotion, and referral lists."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://townoflaveta-co.gov/business-directory/",
+        "elapsed_ms": 649,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-wheelhouse-retail-incubator-makerspace-2adcbf46",
+        "source_group": "directory_sources",
+        "title": "Wheelhouse Retail Incubator & Makerspace",
+        "county": "Huerfano",
+        "category": "Incubator / makerspace",
+        "url": "https://www.wheelhouseincubator.org/",
+        "host": "wheelhouseincubator.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for product-based businesses, makers, and local retail experimentation."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.wheelhouseincubator.org/",
+        "elapsed_ms": 494,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-spanish-peaks-country-business-directory-bd52c578",
+        "source_group": "amplifier_channels",
+        "title": "Spanish Peaks Country Business Directory",
+        "county": "Huerfano County",
+        "category": "Business directory; add business listing",
+        "url": "https://spanishpeakscountry.com/business-directory",
+        "host": "spanishpeakscountry.com",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Submit or update eligible business listings."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://spanishpeakscountry.com/business-directory",
+        "elapsed_ms": 237,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-bent-county-business-development-8d3d27fc",
+        "source_group": "directory_sources",
+        "title": "Bent County Business Development",
+        "county": "Las Animas",
+        "category": "Regional business development",
+        "url": "https://www.bentcounty.net/businesses/business_development.php",
+        "host": "bentcounty.net",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as a regional referral lead and verify coverage before sending users there."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.bentcounty.net/businesses/business_development.php",
+        "elapsed_ms": 740,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colorado-gives-11d3dfa9",
+        "source_group": "directory_sources",
+        "title": "Colorado Gives",
+        "county": "Las Animas",
+        "category": "Nonprofit giving directory",
+        "url": "https://www.coloradogives.org/",
+        "host": "coloradogives.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a nonprofit needs a public giving/listing path."
+      },
+      "check": {
+        "status": "network_error",
+        "status_code": null,
+        "final_url": "https://www.coloradogives.org/",
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colorado-nonprofit-association-directory-f60b84b3",
+        "source_group": "directory_sources",
+        "title": "Colorado Nonprofit Association Directory",
+        "county": "Regional",
+        "category": "Nonprofit directory",
+        "url": "https://coloradononprofits.org/member-resources/nonprofit-member-directory/",
+        "host": "coloradononprofits.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use carefully: the directory states non-commercial use limits."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://coloradononprofits.org/member-resources/nonprofit-member-directory/",
+        "elapsed_ms": 407,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colorado-oedit-rural-opportunity-office-68bfa088",
+        "source_group": "directory_sources",
+        "title": "Colorado OEDIT Rural Opportunity Office",
+        "county": "Regional",
+        "category": "Rural business development",
+        "url": "https://oedit.colorado.gov/category/rural-opportunity-office",
+        "host": "oedit.colorado.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Las Animas and Huerfano projects that need statewide rural-development context."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/category/rural-opportunity-office",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colorado-sbdc-network-f328b9da",
+        "source_group": "directory_sources",
+        "title": "Colorado SBDC Network",
+        "county": "Regional",
+        "category": "SBDC",
+        "url": "https://oedit.colorado.gov/colorado-small-business-development-center-network",
+        "host": "oedit.colorado.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Las Animas and Huerfano businesses needing technical assistance."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/colorado-small-business-development-center-network",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-finance-new-mexico-regional-economic-development-organ-e0ac24fd",
+        "source_group": "directory_sources",
+        "title": "Finance New Mexico Regional Economic Development Organizations",
+        "county": "Regional",
+        "category": "Economic-development directory",
+        "url": "https://financenewmexico.org/resources/general-business-assistance/regional-economic-development-organizations/",
+        "host": "financenewmexico.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when Colfax users need support beyond a city-specific organization."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://financenewmexico.org/resources/general-business-assistance/regional-economic-development-organizations/",
+        "elapsed_ms": 594,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-new-mexico-business-portal-c2467d66",
+        "source_group": "directory_sources",
+        "title": "New Mexico Business Portal",
+        "county": "Regional",
+        "category": "Business startup / licensing",
+        "url": "https://biz.nm.gov/business-navigator/licenses-and-permits/",
+        "host": "biz.nm.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Colfax County startup and compliance pathways."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://biz.nm.gov/business-navigator/licenses-and-permits/",
+        "elapsed_ms": 760,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-new-mexico-small-business-development-center-405fbe3a",
+        "source_group": "directory_sources",
+        "title": "New Mexico Small Business Development Center",
+        "county": "Regional",
+        "category": "SBDC",
+        "url": "https://www.nmsbdc.org/",
+        "host": "nmsbdc.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as the default first stop for New Mexico startup and growth questions."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.nmsbdc.org/",
+        "elapsed_ms": 970,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-nm-family-friendly-business-directory-0d206041",
+        "source_group": "directory_sources",
+        "title": "NM Family Friendly Business Directory",
+        "county": "Regional",
+        "category": "Business recognition directory",
+        "url": "https://nmfamilyfriendlybusiness.org/premium-business-directory/",
+        "host": "nmfamilyfriendlybusiness.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as a values-aligned visibility path, then verify application or listing rules."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://nmfamilyfriendlybusiness.org/premium-business-directory/",
+        "elapsed_ms": 1601,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-sba-sbdc-finder-60ca736f",
+        "source_group": "directory_sources",
+        "title": "SBA SBDC Finder",
+        "county": "Regional",
+        "category": "Federal business support",
+        "url": "https://www.sba.gov/local-assistance/resource-partners/small-business-development-centers-sbdc",
+        "host": "sba.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a user is unsure which SBDC office covers them."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.sba.gov/local-assistance/resource-partners/small-business-development-centers-sbdc",
+        "elapsed_ms": 645,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-southern-colorado-economic-development-district-137fc545",
+        "source_group": "directory_sources",
+        "title": "Southern Colorado Economic Development District",
+        "county": "Regional",
+        "category": "Economic development district",
+        "url": "https://www.scedd.com/",
+        "host": "scedd.com",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Colorado regional development context and business-support referrals."
+      },
+      "check": {
+        "status": "redirect",
+        "status_code": 200,
+        "final_url": "https://scedd.com/",
+        "elapsed_ms": 2036,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-angel-fire-resort-events-e5c52688",
+        "source_group": "amplifier_channels",
+        "title": "Angel Fire Resort Events",
+        "county": "Angel Fire / Colfax",
+        "category": "Events calendar; calendar subscription; newsletter signup",
+        "url": "https://www.angelfireresort.com/events/",
+        "host": "angelfireresort.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Check event fit, calendar options, and newsletter signup path."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.angelfireresort.com/events/",
+        "elapsed_ms": 4585,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-angel-fire-resort-vacation-rentals-9f197384",
+        "source_group": "amplifier_channels",
+        "title": "Angel Fire Resort Vacation Rentals",
+        "county": "Angel Fire / Colfax",
+        "category": "Events referral; newsletter signup",
+        "url": "https://www.angelfireresortvacationrentals.com/plan-your-trip/summer-events/",
+        "host": "angelfireresortvacationrentals.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Ask whether local events, lodging partners, or visitor resources can be shared."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.angelfireresortvacationrentals.com/plan-your-trip/summer-events/",
+        "elapsed_ms": 958,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-visit-angel-fire-events-be477e81",
+        "source_group": "amplifier_channels",
+        "title": "Visit Angel Fire Events",
+        "county": "Angel Fire / Colfax",
+        "category": "Events calendar; list your event; calendar subscription; newsletter",
+        "url": "https://visitangelfirenm.com/events/",
+        "host": "visitangelfirenm.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Submit local events and prepare clean event data, images, and contact details."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://visitangelfirenm.com/events/",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-visit-angel-fire-nm-get-listed-2c302212",
+        "source_group": "amplifier_channels",
+        "title": "Visit Angel Fire NM Get Listed",
+        "county": "Angel Fire / Colfax",
+        "category": "Business listing intake; event submission; newsletter signup",
+        "url": "https://visitangelfirenm.com/get-listed/",
+        "host": "visitangelfirenm.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Submit eligible properties/listings or ask about event/listing pathways."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://visitangelfirenm.com/get-listed/",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-explore-raton-8019c848",
+        "source_group": "directory_sources",
+        "title": "Explore Raton",
+        "county": "Colfax",
+        "category": "Tourism / events",
+        "url": "https://www.exploreraton.com/",
+        "host": "exploreraton.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a business or artist can benefit from visitor traffic."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.exploreraton.com/",
+        "elapsed_ms": 450,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-explore-raton-events-17ea8f9f",
+        "source_group": "directory_sources",
+        "title": "Explore Raton Events",
+        "county": "Colfax",
+        "category": "Event calendar",
+        "url": "https://www.exploreraton.com/events",
+        "host": "exploreraton.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Check before scheduling a launch, show, promotion, or fundraiser."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.exploreraton.com/events",
+        "elapsed_ms": 201,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-krtn-enchanted-air-radio-ffc0fe97",
+        "source_group": "directory_sources",
+        "title": "KRTN Enchanted Air Radio",
+        "county": "Colfax",
+        "category": "Media / advertising",
+        "url": "https://krtnradio.com/wp/advertising/",
+        "host": "krtnradio.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when an event or offer needs Colfax plus southern Colorado reach."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://krtnradio.com/wp/advertising/",
+        "elapsed_ms": 549,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-raton-mainstreet-9acd320e",
+        "source_group": "directory_sources",
+        "title": "Raton MainStreet",
+        "county": "Colfax",
+        "category": "Downtown / events",
+        "url": "https://ratonmainstreet.org/",
+        "host": "ratonmainstreet.org",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for downtown locations, event collaboration, and historic-district visibility."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://ratonmainstreet.org/",
+        "elapsed_ms": 821,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-bachman-community-calendar-c3201617",
+        "source_group": "directory_sources",
+        "title": "Bachman Community Calendar",
+        "county": "Huerfano",
+        "category": "Community calendar",
+        "url": "https://www.discoverbachman.com/community-calendar/",
+        "host": "discoverbachman.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use to avoid calendar conflicts and find offline outreach opportunities."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.discoverbachman.com/community-calendar/",
+        "elapsed_ms": 521,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-huerfano-county-chamber-62e9f799",
+        "source_group": "directory_sources",
+        "title": "Huerfano County Chamber",
+        "county": "Huerfano",
+        "category": "Chamber / events",
+        "url": "https://www.chamber.huerfano.org/",
+        "host": "chamber.huerfano.org",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for business collaboration and event promotion in Walsenburg, La Veta, Cuchara, Gardner, and Aguilar."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.chamber.huerfano.org/",
+        "elapsed_ms": 479,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-huerfano-county-government-ce77ceae",
+        "source_group": "directory_sources",
+        "title": "Huerfano County Government",
+        "county": "Huerfano",
+        "category": "County government",
+        "url": "https://huerfano.us/",
+        "host": "huerfano.us",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for official Huerfano County source check and public-notice routing."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://huerfano.us/",
+        "elapsed_ms": 1031,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-huerfano-county-government-calendar-cf076ae0",
+        "source_group": "directory_sources",
+        "title": "Huerfano County Government Calendar",
+        "county": "Huerfano",
+        "category": "Public calendar",
+        "url": "https://huerfano.us/",
+        "host": "huerfano.us",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use before scheduling civic or nonprofit events that need public-sector awareness."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://huerfano.us/",
+        "elapsed_ms": 774,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-la-veta-creative-district-f20414b0",
+        "source_group": "directory_sources",
+        "title": "La Veta Creative District",
+        "county": "Huerfano",
+        "category": "Creative district",
+        "url": "https://www.lavetacreativedistrict.org/",
+        "host": "lavetacreativedistrict.org",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for creative-sector partnerships and event timing in La Veta/Cuchara."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.lavetacreativedistrict.org/",
+        "elapsed_ms": 475,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-spanish-peaks-country-submit-event-41332a40",
+        "source_group": "directory_sources",
+        "title": "Spanish Peaks Country Submit Event",
+        "county": "Huerfano",
+        "category": "Event submission",
+        "url": "https://spanishpeakscountry.com/spc-events/community/add/",
+        "host": "spanishpeakscountry.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for event promotion and verify event-category fit before submitting."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
+        "elapsed_ms": 481,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-the-world-journal-b03da397",
+        "source_group": "directory_sources",
+        "title": "The World Journal",
+        "county": "Huerfano",
+        "category": "Media / submissions",
+        "url": "https://worldjournalnewspaper.com/",
+        "host": "worldjournalnewspaper.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Huerfano media outreach and event/public notice timing."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://worldjournalnewspaper.com/",
+        "elapsed_ms": 408,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-world-journal-6cdd8bb0",
+        "source_group": "amplifier_channels",
+        "title": "World Journal",
+        "county": "Huerfano / Walsenburg",
+        "category": "Newspaper, events, classifieds, advertising inquiry possible",
+        "url": "https://worldjournalnewspaper.com/",
+        "host": "worldjournalnewspaper.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Ask about story coverage, event listings, classifieds, legal notices, advertising, and deadlines."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://worldjournalnewspaper.com/",
+        "elapsed_ms": 232,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-spanish-peaks-country-submit-event-41332a40",
+        "source_group": "amplifier_channels",
+        "title": "Spanish Peaks Country Submit Event",
+        "county": "Huerfano County",
+        "category": "Submit event; event calendar",
+        "url": "https://spanishpeakscountry.com/spc-events/community/add/",
+        "host": "spanishpeakscountry.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Submit events with clean title, timing, location, description, contact, and image."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
+        "elapsed_ms": 223,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-spanish-peaks-country-newsletter-657f3e3f",
+        "source_group": "amplifier_channels",
+        "title": "Spanish Peaks Country Newsletter",
+        "county": "Huerfano County / Walsenburg / La Veta / Cuchara",
+        "category": "Newsletter; events calendar; submit event; business directory; add listing",
+        "url": "https://spanishpeakscountry.com/newsletter-signup/",
+        "host": "spanishpeakscountry.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Ask about event submission, directory listing, newsletter signup, and visitor-guide pathways."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://spanishpeakscountry.com/newsletter-signup/",
+        "elapsed_ms": 250,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-la-veta-creative-district-578f5360",
+        "source_group": "amplifier_channels",
+        "title": "La Veta Creative District",
+        "county": "La Veta / Huerfano",
+        "category": "Events/festivals, arts visibility, possible mailing/news",
+        "url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
+        "host": "lavetacreativedistrict.org",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Ask about arts events, festival participation, listings, partner sharing, or newsletter options."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
+        "elapsed_ms": 211,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-city-of-trinidad-economic-development-newsletter-86317b98",
+        "source_group": "directory_sources",
+        "title": "City of Trinidad Economic Development Newsletter",
+        "county": "Las Animas",
+        "category": "Economic development updates",
+        "url": "https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php",
+        "host": "trinidad.co.gov",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use to track city-backed economic development opportunities."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php",
+        "elapsed_ms": 666,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colexico-alliance-tlac-chamber-43c40d35",
+        "source_group": "directory_sources",
+        "title": "Colexico Alliance / TLAC Chamber",
+        "county": "Las Animas",
+        "category": "Regional chamber",
+        "url": "https://tlacchamber.org/",
+        "host": "tlacchamber.org",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as the first regional business network shortcut for Trinidad and neighboring counties."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://tlacchamber.org/",
+        "elapsed_ms": 933,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-create-trinidad-e6deffdd",
+        "source_group": "directory_sources",
+        "title": "CREATE Trinidad",
+        "county": "Las Animas",
+        "category": "Creative district",
+        "url": "https://www.trinidadcreativedistrict.org/",
+        "host": "trinidadcreativedistrict.org",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for creative-economy partnerships and Trinidad arts visibility."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.trinidadcreativedistrict.org/",
+        "elapsed_ms": 452,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-visit-trinidad-resources-for-locals-eca0bb18",
+        "source_group": "directory_sources",
+        "title": "Visit Trinidad Resources for Locals",
+        "county": "Las Animas",
+        "category": "Tourism / event support",
+        "url": "https://visittrinidadcolorado.com/resources-for-locals/",
+        "host": "visittrinidadcolorado.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a Trinidad business, event, or attraction needs an official tourism channel."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
+        "elapsed_ms": 981,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-visit-trinidad-submit-your-event-9b33a2ac",
+        "source_group": "directory_sources",
+        "title": "Visit Trinidad Submit Your Event",
+        "county": "Las Animas",
+        "category": "Event submission",
+        "url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+        "host": "visittrinidadcolorado.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for events, not general advertising; follow the posted review rules."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+        "elapsed_ms": 648,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-red-river-brewing-company-distillery-8ff0e7b5",
+        "source_group": "amplifier_channels",
+        "title": "Red River Brewing Company & Distillery",
+        "county": "Red River / Colfax",
+        "category": "Own-site newsletter / mailing list",
+        "url": "https://www.redriverbrewing.com/",
+        "host": "redriverbrewing.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Ask about newsletter signup, promotion fit, and any business-originating mailing-list opportunity."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.redriverbrewing.com/",
+        "elapsed_ms": 840,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-red-river-chamber-redriver-org-events-884b987b",
+        "source_group": "amplifier_channels",
+        "title": "Red River Chamber / RedRiver.org Events",
+        "county": "Red River / Colfax",
+        "category": "Events calendar; submit event; newsletter; vacation guide",
+        "url": "https://redriver.org/events/",
+        "host": "redriver.org",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Submit local visitor-friendly events and ask about guide or newsletter fit."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://redriver.org/events/",
+        "elapsed_ms": 758,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-nm-creative-industries-resource-submission-update-094ac533",
+        "source_group": "directory_sources",
+        "title": "NM Creative Industries Resource Submission / Update",
+        "county": "Regional",
+        "category": "Creative economy listing update",
+        "url": "https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
+        "host": "edd.newmexico.gov",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use this when a creative business, gallery, maker, venue, nonprofit, or program should be added or corrected in the statewide creative resource layer."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
+        "elapsed_ms": 199,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-city-of-trinidad-economic-development-dee64eda",
+        "source_group": "amplifier_channels",
+        "title": "City of Trinidad Economic Development",
+        "county": "Trinidad / Las Animas",
+        "category": "Economic-development newsletter; business news/resources/events",
+        "url": "https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php",
+        "host": "trinidad.co.gov",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Ask how to receive updates or share business-resource news."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php",
+        "elapsed_ms": 1640,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-main-street-live-90c50164",
+        "source_group": "amplifier_channels",
+        "title": "Main Street LIVE",
+        "county": "Trinidad / Las Animas",
+        "category": "Events calendar; season lineup; special events",
+        "url": "https://www.mainstreetlive.org/",
+        "host": "mainstreetlive.org",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Ask about event partnership, venue calendar fit, sponsorship, or audience alignment."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.mainstreetlive.org/",
+        "elapsed_ms": 518,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-main-street-live-2026-calendar-12c81d89",
+        "source_group": "amplifier_channels",
+        "title": "Main Street LIVE 2026 Calendar",
+        "county": "Trinidad / Las Animas",
+        "category": "Calendar / ticketed event lineup",
+        "url": "https://www.mainstreetlive.org/2026-calendar",
+        "host": "mainstreetlive.org",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Check schedule fit and ask about partnership or listing opportunities."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.mainstreetlive.org/2026-calendar",
+        "elapsed_ms": 217,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-visit-trinidad-submit-event-553d155c",
+        "source_group": "amplifier_channels",
+        "title": "Visit Trinidad Submit Event",
+        "county": "Trinidad / Las Animas",
+        "category": "Event submission rules / approval process",
+        "url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+        "host": "visittrinidadcolorado.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Submit events for review with complete public details and images."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+        "elapsed_ms": 538,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-visit-trinidad-tourism-resources-for-locals-511e5c97",
+        "source_group": "amplifier_channels",
+        "title": "Visit Trinidad Tourism / Resources for Locals",
+        "county": "Trinidad / Las Animas",
+        "category": "Marketing support; social media co-op; community calendar; business directory request",
+        "url": "https://visittrinidadcolorado.com/resources-for-locals/",
+        "host": "visittrinidadcolorado.com",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Ask about event support, attraction/business listings, co-promotion, and community calendar fit."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
+        "elapsed_ms": 311,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-new-mexico-arts-grants-156498c9",
+        "source_group": "directory_sources",
+        "title": "New Mexico Arts Grants",
+        "county": "Colfax",
+        "category": "Arts organization grants",
+        "url": "https://nmarts.org/grants/grants-information/",
+        "host": "nmarts.org",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Colfax County arts nonprofits, cultural organizations, and fiscally sponsored public arts activities."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://nmarts.org/grants/grants-information/",
+        "elapsed_ms": 1797,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-new-mexico-business-portal-financial-assistance-fefa5cfd",
+        "source_group": "directory_sources",
+        "title": "New Mexico Business Portal Financial Assistance",
+        "county": "Colfax",
+        "category": "Business funding directory",
+        "url": "https://biz.nm.gov/financial-assistance/",
+        "host": "biz.nm.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as a plain-language first stop before moving into SBA, NMFA, JTIP, LEDA, or local economic-development contacts."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://biz.nm.gov/financial-assistance/",
+        "elapsed_ms": 791,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-new-mexico-creative-industries-division-grants-9810b077",
+        "source_group": "directory_sources",
+        "title": "New Mexico Creative Industries Division Grants",
+        "county": "Colfax",
+        "category": "Creative business / organization grants",
+        "url": "https://www.edd.newmexico.gov/grants/cid-grants/",
+        "host": "edd.newmexico.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Colfax creative-economy projects, but verify whether the current phase is a grant application, pre-application, or future funding notice."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.edd.newmexico.gov/grants/cid-grants/",
+        "elapsed_ms": 1552,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-new-mexico-finance-authority-opportunity-enterprise-0b4b0ec2",
+        "source_group": "directory_sources",
+        "title": "New Mexico Finance Authority Opportunity Enterprise",
+        "county": "Colfax",
+        "category": "Commercial development loans",
+        "url": "https://www.nmfinance.com/project/opportunity-enterprise-commercial-development/",
+        "host": "nmfinance.com",
+        "update_domain": "funding",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a project is about commercial space, adaptive reuse, or business-location infrastructure rather than operating cash."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.nmfinance.com/project/opportunity-enterprise-commercial-development/",
+        "elapsed_ms": 1479,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-new-mexico-finance-authority-ssbci-0b98924d",
+        "source_group": "directory_sources",
+        "title": "New Mexico Finance Authority SSBCI",
+        "county": "Colfax",
+        "category": "Small business capital access",
+        "url": "https://www.nmfinance.com/project/state-small-business-credit-initiative-ssbci/",
+        "host": "nmfinance.com",
+        "update_domain": "funding",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use with a participating lender or SBDC advisor when a business is viable but needs a capital structure that lowers lender risk."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.nmfinance.com/project/state-small-business-credit-initiative-ssbci/",
+        "elapsed_ms": 951,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-new-mexico-job-training-incentive-program-cd0c7cb0",
+        "source_group": "directory_sources",
+        "title": "New Mexico Job Training Incentive Program",
+        "county": "Colfax",
+        "category": "Workforce training reimbursement",
+        "url": "https://www.edd.newmexico.gov/programs-and-services/business-development/job-training-incentive-program/",
+        "host": "edd.newmexico.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use before hiring for an expansion plan; verify eligible jobs, wages, and timing before making hiring promises."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.edd.newmexico.gov/programs-and-services/business-development/job-training-incentive-program/",
+        "elapsed_ms": 1080,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-share-new-mexico-8b420b0c",
+        "source_group": "directory_sources",
+        "title": "SHARE New Mexico",
+        "county": "Colfax",
+        "category": "Community resource directory",
+        "url": "https://sharenm.org/",
+        "host": "sharenm.org",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for social-service, nonprofit, and community program referrals."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://sharenm.org/",
+        "elapsed_ms": 1846,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-wesst-lending-5484811c",
+        "source_group": "directory_sources",
+        "title": "WESST Lending",
+        "county": "Colfax",
+        "category": "Startup / small business loans",
+        "url": "https://www.wesst.org/lending",
+        "host": "wesst.org",
+        "update_domain": "funding",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Colfax entrepreneurs who may not fit traditional bank lending and need technical assistance with financing."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.wesst.org/lending",
+        "elapsed_ms": 456,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-huerfano-county-economic-development-support-incentive-541ae004",
+        "source_group": "directory_sources",
+        "title": "Huerfano County Economic Development Support & Incentives",
+        "county": "Huerfano",
+        "category": "Economic development",
+        "url": "https://www.huerfano.org/support",
+        "host": "huerfano.org",
+        "update_domain": "funding",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a business is considering startup, relocation, expansion, or incentives in Huerfano."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.huerfano.org/support",
+        "elapsed_ms": 522,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-bar-ni-community-fund-e41bc0ec",
+        "source_group": "directory_sources",
+        "title": "Bar NI Community Fund",
+        "county": "Las Animas",
+        "category": "Local nonprofit grants",
+        "url": "https://barnicommunityfund.org/",
+        "host": "barnicommunityfund.org",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Trinidad-area nonprofit projects, then verify the current spring or fall cycle before promising a deadline."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://barnicommunityfund.org/",
+        "elapsed_ms": 910,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-city-of-trinidad-grants-ff4985ed",
+        "source_group": "directory_sources",
+        "title": "City of Trinidad Grants",
+        "county": "Las Animas",
+        "category": "Funding",
+        "url": "https://www.trinidad.co.gov/services/grants.php",
+        "host": "trinidad.co.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for local funding checks before searching statewide grant lists."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.trinidad.co.gov/services/grants.php",
+        "elapsed_ms": 1662,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-southern-colorado-community-foundation-nonprofit-direc-7c64bedd",
+        "source_group": "directory_sources",
+        "title": "Southern Colorado Community Foundation Nonprofit Directory",
+        "county": "Las Animas",
+        "category": "Nonprofit directory",
+        "url": "https://sccfcolorado.org/nonprofit-directory/",
+        "host": "sccfcolorado.org",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Colorado nonprofit discovery before building a manual organization list."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://sccfcolorado.org/nonprofit-directory/",
+        "elapsed_ms": 1134,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-trinidad-community-foundation-grant-process-7c31fc68",
+        "source_group": "directory_sources",
+        "title": "Trinidad Community Foundation Grant Process",
+        "county": "Las Animas",
+        "category": "Local nonprofit grants",
+        "url": "https://www.trinidadcf.org/grants.html",
+        "host": "trinidadcf.org",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Trinidad-area nonprofit projects and confirm the current city/foundation process before applying."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.trinidadcf.org/grants.html",
+        "elapsed_ms": 575,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-arts-in-society-grant-dace9b4f",
+        "source_group": "directory_sources",
+        "title": "Arts in Society Grant",
+        "county": "Regional",
+        "category": "Arts / civic grants",
+        "url": "https://oedit.colorado.gov/arts-in-society-grant",
+        "host": "oedit.colorado.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Las Animas and Huerfano arts/community projects that have a clear public benefit and partnership frame."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/arts-in-society-grant",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colorado-advanced-industries-accelerator-programs-1ceb864a",
+        "source_group": "directory_sources",
+        "title": "Colorado Advanced Industries Accelerator Programs",
+        "county": "Regional",
+        "category": "Startup / innovation grants",
+        "url": "https://oedit.colorado.gov/advanced-industries-accelerator-programs",
+        "host": "oedit.colorado.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a growth business needs research, commercialization, export, or early-stage capital support; pair with SBDC help before applying."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/advanced-industries-accelerator-programs",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colorado-business-funding-and-incentives-696460e9",
+        "source_group": "directory_sources",
+        "title": "Colorado Business Funding and Incentives",
+        "county": "Regional",
+        "category": "Business funding directory",
+        "url": "https://oedit.colorado.gov/business-funding-and-incentives",
+        "host": "oedit.colorado.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as the Colorado starting page before drilling into Rural Jump-Start, enterprise zone, or industry-specific programs."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/business-funding-and-incentives",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colorado-community-revitalization-grant-08bf7f93",
+        "source_group": "directory_sources",
+        "title": "Colorado Community Revitalization Grant",
+        "county": "Regional",
+        "category": "Creative district / main street funding",
+        "url": "https://oedit.colorado.gov/colorado-community-revitalization-grant",
+        "host": "oedit.colorado.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for venue, corridor, downtown, arts-district, or adaptive-reuse ideas in Colorado communities; verify open cycles first."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/colorado-community-revitalization-grant",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colorado-creates-grant-fad35e06",
+        "source_group": "directory_sources",
+        "title": "Colorado Creates Grant",
+        "county": "Regional",
+        "category": "Arts organization grants",
+        "url": "https://oedit.colorado.gov/colorado-creates-grant",
+        "host": "oedit.colorado.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Las Animas and Huerfano arts nonprofits, galleries with nonprofit partners, and community arts programming."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/colorado-creates-grant",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colorado-creative-industries-07d8f266",
+        "source_group": "directory_sources",
+        "title": "Colorado Creative Industries",
+        "county": "Regional",
+        "category": "Creative economy support",
+        "url": "https://oedit.colorado.gov/colorado-creative-industries",
+        "host": "oedit.colorado.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for artists, galleries, makers, and creative nonprofits in Las Animas and Huerfano."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/colorado-creative-industries",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colorado-rural-jump-start-program-80d6a509",
+        "source_group": "directory_sources",
+        "title": "Colorado Rural Jump-Start Program",
+        "county": "Regional",
+        "category": "Startup incentive / rural grant",
+        "url": "https://oedit.colorado.gov/rural-jump-start-program",
+        "host": "oedit.colorado.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for Huerfano or Las Animas startup/relocation questions, then verify zone eligibility and job-creation requirements with OEDIT."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/rural-jump-start-program",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-folk-and-traditional-arts-project-grant-cfcf0c63",
+        "source_group": "directory_sources",
+        "title": "Folk and Traditional Arts Project Grant",
+        "county": "Regional",
+        "category": "Cultural heritage grants",
+        "url": "https://oedit.colorado.gov/folk-and-traditional-arts-project-grant",
+        "host": "oedit.colorado.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for culture-bearers, local history/heritage groups, arts nonprofits, and community documentation projects."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/folk-and-traditional-arts-project-grant",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-gates-family-foundation-capital-grants-082e555b",
+        "source_group": "directory_sources",
+        "title": "Gates Family Foundation Capital Grants",
+        "county": "Regional",
+        "category": "Colorado nonprofit capital grants",
+        "url": "https://gatesfamilyfoundation.org/types-of-support/capital-grants/",
+        "host": "gatesfamilyfoundation.org",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for larger place-based projects after the organization has a real capital plan, board support, and matching/funding strategy."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://gatesfamilyfoundation.org/types-of-support/capital-grants/",
+        "elapsed_ms": 3384,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-grants-gov-0c9623d7",
+        "source_group": "directory_sources",
+        "title": "Grants.gov",
+        "county": "Regional",
+        "category": "Federal grant search",
+        "url": "https://www.grants.gov/",
+        "host": "grants.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use after clarifying the applicant type and project purpose; pair with SBDC, nonprofit, or grant-writing help before applying."
+      },
+      "check": {
+        "status": "network_error",
+        "status_code": null,
+        "final_url": "https://www.grants.gov/",
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-history-colorado-state-historical-fund-ff216222",
+        "source_group": "directory_sources",
+        "title": "History Colorado State Historical Fund",
+        "county": "Regional",
+        "category": "Historic preservation grants",
+        "url": "https://www.historycolorado.org/state-historical-fund",
+        "host": "historycolorado.org",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for historic buildings, museums, downtown preservation, heritage tourism, and cultural-resource projects in Las Animas or Huerfano."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 202,
+        "final_url": "https://www.historycolorado.org/state-historical-fund",
+        "elapsed_ms": 431,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-national-endowment-for-the-arts-grants-c2515ba7",
+        "source_group": "directory_sources",
+        "title": "National Endowment for the Arts Grants",
+        "county": "Regional",
+        "category": "Federal arts grants",
+        "url": "https://www.arts.gov/grants",
+        "host": "arts.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for stronger nonprofit arts projects with clear public outcomes; verify the specific NEA program, deadline, and eligibility each cycle."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.arts.gov/grants",
+        "elapsed_ms": 714,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-nm-edd-business-resource-map-b8299472",
+        "source_group": "directory_sources",
+        "title": "NM EDD Business Resource Map",
+        "county": "Regional",
+        "category": "Economic-development resource directory",
+        "url": "https://www.edd.newmexico.gov/resource-map/",
+        "host": "edd.newmexico.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use this alongside city and chamber resources when a Colfax user needs a statewide business-support path or a resource needs to be submitted for review."
+      },
+      "check": {
+        "status": "redirect",
+        "status_code": 200,
+        "final_url": "https://www.edd.newmexico.gov/news-and-information/resource-map/",
+        "elapsed_ms": 2320,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-sba-funding-programs-de512a5b",
+        "source_group": "directory_sources",
+        "title": "SBA Funding Programs",
+        "county": "Regional",
+        "category": "Small business loans / capital",
+        "url": "https://www.sba.gov/funding-programs",
+        "host": "sba.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a startup or existing business needs financing but should compare loans, grants, and counseling before applying."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.sba.gov/funding-programs",
+        "elapsed_ms": 495,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-sba-lender-match-2956ef7a",
+        "source_group": "directory_sources",
+        "title": "SBA Lender Match",
+        "county": "Regional",
+        "category": "Small business lender matching",
+        "url": "https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders",
+        "host": "sba.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use after estimating the amount, purpose, repayment plan, and documents needed for a loan conversation."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders",
+        "elapsed_ms": 241,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-southern-colorado-community-foundation-grants-dea6191b",
+        "source_group": "directory_sources",
+        "title": "Southern Colorado Community Foundation Grants",
+        "county": "Regional",
+        "category": "Nonprofit grants",
+        "url": "https://sccfcolorado.org/for-grantseekers/grants/",
+        "host": "sccfcolorado.org",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for community-serving nonprofit projects, then verify available funds, award range, service area, and the March/September cycle."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://sccfcolorado.org/for-grantseekers/grants/",
+        "elapsed_ms": 2147,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-southern-colorado-community-foundation-scholarship-8db4b9ee",
+        "source_group": "directory_sources",
+        "title": "Southern Colorado Community Foundation Scholarship",
+        "county": "Regional",
+        "category": "Scholarship",
+        "url": "https://sccfcolorado.org/madeline-mellers-memorial-girls-golf-scholarship/",
+        "host": "sccfcolorado.org",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as a regional scholarship lead; verify eligibility and deadline before sharing with students or families."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://sccfcolorado.org/madeline-mellers-memorial-girls-golf-scholarship/",
+        "elapsed_ms": 658,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-usda-rural-business-development-grants-45e9ea87",
+        "source_group": "directory_sources",
+        "title": "USDA Rural Business Development Grants",
+        "county": "Regional",
+        "category": "Rural funding",
+        "url": "https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants",
+        "host": "rd.usda.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for rural-capacity projects and business-support organizations."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-usda-rural-microentrepreneur-assistance-program-148a6675",
+        "source_group": "directory_sources",
+        "title": "USDA Rural Microentrepreneur Assistance Program",
+        "county": "Regional",
+        "category": "Rural microbusiness loans / grants",
+        "url": "https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program",
+        "host": "rd.usda.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for nonprofit/lender/intermediary partners serving rural microbusinesses; individual businesses usually work through an eligible intermediary."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-usda-value-added-producer-grants-5585a1e1",
+        "source_group": "directory_sources",
+        "title": "USDA Value-Added Producer Grants",
+        "county": "Regional",
+        "category": "Agriculture / producer grants",
+        "url": "https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants",
+        "host": "rd.usda.gov",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for farms, ranches, food businesses, and producer-led ventures that need planning or working-capital support."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-tax-exempt-world-colfax-county-organizations-71d6bf5b",
+        "source_group": "directory_sources",
+        "title": "Tax Exempt World Colfax County Organizations",
+        "county": "Colfax",
+        "category": "Nonprofit aggregator",
+        "url": "https://www.taxexemptworld.com/organizations/colfax-county-nm-new-mexico.asp",
+        "host": "taxexemptworld.com",
+        "update_domain": "general",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use only as an aggregator; verify every organization through its own site or state/federal records."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.taxexemptworld.com/organizations/colfax-county-nm-new-mexico.asp",
+        "elapsed_ms": 713,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-spanish-peaks-library-community-links-aac33ddc",
+        "source_group": "directory_sources",
+        "title": "Spanish Peaks Library Community Links",
+        "county": "Huerfano",
+        "category": "Community links",
+        "url": "https://www.spld.org/connect/community-links/",
+        "host": "spld.org",
+        "update_domain": "general",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use to discover public-service and cultural-resource partners."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.spld.org/connect/community-links/",
+        "elapsed_ms": 1297,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-las-animas-county-government-389a8f70",
+        "source_group": "directory_sources",
+        "title": "Las Animas County Government",
+        "county": "Las Animas",
+        "category": "County government",
+        "url": "https://lasanimascounty.colorado.gov/",
+        "host": "lasanimascounty.colorado.gov",
+        "update_domain": "general",
+        "cadence_days": 90,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a guide section needs official Las Animas County source check."
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://lasanimascounty.colorado.gov/",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-el-raton-media-works-local-businesses-5668309c",
+        "source_group": "directory_sources",
+        "title": "El Raton Media Works Local Businesses",
+        "county": "Colfax",
+        "category": "Local business list",
+        "url": "https://www.elratonmediaworks.org/local-businesses",
+        "host": "elratonmediaworks.org",
+        "update_domain": "media",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as a supplemental contact discovery source, then verify details."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.elratonmediaworks.org/local-businesses",
+        "elapsed_ms": 513,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-world-journal-services-directory-b1479bc1",
+        "source_group": "directory_sources",
+        "title": "World Journal Services Directory",
+        "county": "Huerfano",
+        "category": "Services directory",
+        "url": "https://worldjournalnewspaper.com/services/",
+        "host": "worldjournalnewspaper.com",
+        "update_domain": "media",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for service-provider discovery and local advertising context."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://worldjournalnewspaper.com/services/",
+        "elapsed_ms": 639,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-the-chronicle-news-0bcd10eb",
+        "source_group": "directory_sources",
+        "title": "The Chronicle-News",
+        "county": "Las Animas",
+        "category": "Media / classifieds",
+        "url": "https://www.thechronicle-news.com/",
+        "host": "thechronicle-news.com",
+        "update_domain": "media",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for media pitches, classifieds, public notices, jobs, and regional news awareness."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.thechronicle-news.com/",
+        "elapsed_ms": 1569,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "amplifier-red-river-chamber-vacation-guide-6cbf6448",
+        "source_group": "amplifier_channels",
+        "title": "Red River Chamber Vacation Guide",
+        "county": "Red River / Colfax",
+        "category": "Vacation guide request; visitor mailing pathway; newsletter",
+        "url": "https://redriver.org/plan-your-trip/vacation-guide/",
+        "host": "redriver.org",
+        "update_domain": "media",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-26",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
+        "reader_action": "Ask about visitor-guide listing or advertising requirements, deadlines, and eligibility."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://redriver.org/plan-your-trip/vacation-guide/",
+        "elapsed_ms": 666,
+        "error": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+# Live Link Verification
+
+Generated: 2026-06-22T07:11:34.208962+00:00
+
+## Summary
+
+- Unique URL-bearing listings checked: 133
+- OK or redirected successfully: 114
+- Needs normal-browser/manual confirmation: 19
+- Rows without a public URL, routed to field-check/manual verification: 386
+
+Automated checks confirm whether a URL responded to scripted access. They do not prove ad availability, directory acceptance, rates, deadlines, eligibility, or current contact accuracy.
+
+## Manual Field-Check Counts
+
+- posting_space: 1
+- resource_row: 385
+
+## URLs Needing Manual Confirmation
+
+- https://aguilarcountrycottages.com - url_error  [Errno 11001] getaddrinfo failed
+  - Referenced by: resource_row: Aguilar Country Cottages
+- https://aguilarstation.com - url_error  [Errno 11001] getaddrinfo failed
+  - Referenced by: resource_row: The Station
+- https://boom-noodles.com - http_error 404 HTTP Error 404: Not Found
+  - Referenced by: resource_row: Boom Noodles
+- https://cawthonpark.com - url_error  [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1028)
+  - Referenced by: resource_row: Cawthon RV Park & Motel
+- https://cityofwalsenburg.colorado.gov - http_error 403 HTTP Error 403: Forbidden
+  - Referenced by: resource_row: City of Walsenburg
+- https://county.pueblo.org/energy-and-economic-development-department/small-business-development-center - http_error 403 HTTP Error 403: Forbidden
+  - Referenced by: resource_row: Colorado Small Business Development Center - Pueblo
+- https://foxtheatrewalsenburg.org - url_error  [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)
+  - Referenced by: resource_row: Fox Theatre Walsenburg
+- https://huerfanofair.com - url_error  [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)
+  - Referenced by: resource_row: Huerfano County Fair Board
+- https://jimandmelissa.org - http_error 404 HTTP Error 404: Not Found
+  - Referenced by: resource_row: Trails End Motel
+- https://la-h-health.colorado.gov - http_error 403 HTTP Error 403: Forbidden
+  - Referenced by: resource_row: Las Animas-Huerfano Counties District Health Department
+- https://lasanimascounty.colorado.gov/ - http_error 403 HTTP Error 403: Forbidden
+  - Referenced by: directory_source: Las Animas County Government
+- https://missionatthebell.com - http_error 403 HTTP Error 403: Forbidden
+  - Referenced by: resource_row: Mission at the Bell
+- https://oedit.colorado.gov/category/rural-opportunity-office - http_error 403 HTTP Error 403: Forbidden
+  - Referenced by: directory_source: Colorado OEDIT Rural Opportunity Office
+- https://oedit.colorado.gov/colorado-creative-industries - http_error 403 HTTP Error 403: Forbidden
+  - Referenced by: directory_source: Colorado Creative Industries
+- https://oedit.colorado.gov/colorado-small-business-development-center-network - http_error 403 HTTP Error 403: Forbidden
+  - Referenced by: directory_source: Colorado SBDC Network
+- https://www.coloradogives.org/ - url_error  [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
+  - Referenced by: directory_source: Colorado Gives
+- https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants - http_error 403 HTTP Error 403: Forbidden
+  - Referenced by: directory_source: USDA Rural Business Development Grants
+- https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes - http_error 403 HTTP Error 403: Forbidden
+  - Referenced by: posting_space: Walsenburg / Huerfano
+- https://www.yellowpages.com/raton-nm/business-listings/1 - http_error 403 HTTP Error 403: Forbidden
+  - Referenced by: directory_source: Yellow Pages Raton Business Listings
+
+## Checked URLs
+
+- OK: https://5280fire.com 200
+- CHECK: https://aguilarcountrycottages.com
+- CHECK: https://aguilarstation.com
+- OK: https://almackskitchen.com 200
+- OK: https://biz.nm.gov/business-navigator/licenses-and-permits/ 200
+- CHECK: https://boom-noodles.com 404
+- OK: https://bransoncolorado.com 200
+- OK: https://bransonschoolonline.com 200
+- OK: https://casadelgavilan.com 200
+- CHECK: https://cawthonpark.com
+- CHECK: https://cityofwalsenburg.colorado.gov 403
+- OK: https://coloradononprofits.org/member-resources/nonprofit-member-directory/ 200
+- CHECK: https://county.pueblo.org/energy-and-economic-development-department/small-business-development-center 403
+- OK: https://cuchara.org 200
+- OK: https://exploreraton.com 200
+- OK: https://exstjames.com 200
+- OK: https://financenewmexico.org/resources/general-business-assistance/regional-economic-development-organizations/ 200
+- OK: https://flattsburger.com 200
+- CHECK: https://foxtheatrewalsenburg.org
+- OK: https://franciscofort.org 200
+- OK: https://gagliardis489.com 200
+- OK: https://glutenfreeinthe303.com 200
+- OK: https://grill14.com 200
+- OK: https://hoehnesd.org 200
+- OK: https://hollywoodbarandcafe.com 200
+- OK: https://huerfano.k12.co.us 200
+- OK: https://huerfano.org 200
+- OK: https://huerfano.us 200
+- OK: https://huerfano.us/ 200
+- CHECK: https://huerfanofair.com
+- CHECK: https://jimandmelissa.org 404
+- OK: https://kangaroocoffeellc.com 200
+- OK: https://krtnradio.com 200
+- OK: https://krtnradio.com/wp/advertising/ 200
+- OK: https://kspk.com 200
+- CHECK: https://la-h-health.colorado.gov 403
+- CHECK: https://lasanimascounty.colorado.gov/ 403
+- OK: https://lavetafire.org 200
+- OK: https://lvk12.org 200
+- OK: https://lvpl.org 200
+- CHECK: https://missionatthebell.com 403
+- OK: https://msrhc.org 200
+- OK: https://nmfamilyfriendlybusiness.org/premium-business-directory/ 200
+- OK: https://nwwd.us 200
+- CHECK: https://oedit.colorado.gov/category/rural-opportunity-office 403
+- CHECK: https://oedit.colorado.gov/colorado-creative-industries 403
+- CHECK: https://oedit.colorado.gov/colorado-small-business-development-center-network 403
+- OK: https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/ 200
+- OK: https://ratonmainstreet.org/ 200
+- OK: https://ratonnm.gov 200
+- OK: https://redriver.org/events/ 200
+- OK: https://redriver.org/plan-your-trip/vacation-guide/ 200
+- OK: https://redriverbrewing.com 200
+- OK: https://sccfcolorado.org/nonprofit-directory/ 200
+- OK: https://sharenm.org/ 200
+- OK: https://spanishpeakschamber.com 200
+- OK: https://spanishpeakscountry.com 200
+- OK: https://spanishpeakscountry.com/add-business-listing/ 200
+- OK: https://spanishpeakscountry.com/business-directory 200
+- OK: https://spanishpeakscountry.com/newsletter-signup/ 200
+- OK: https://spanishpeakscountry.com/spc-events/community/add/ 200
+- OK: https://spba.huerfano.org 200
+- OK: https://spld.org 200
+- OK: https://sprhc.org 200
+- OK: https://thechronicle-news.com 200
+- OK: https://themonumentlakeresort.com 200
+- OK: https://tlacchamber.org/ 200
+- OK: https://tower64motelandrv.com 200
+- OK: https://townoflaveta-co.gov/ 200
+- OK: https://townoflaveta-co.gov/business-directory/ 200
+- OK: https://trinidad.co.gov 200
+- OK: https://visitangelfirenm.com/events/ 200
+- OK: https://visitangelfirenm.com/get-listed/ 200
+- OK: https://visittrinidadcolorado.com/attraction/a-r-mitchell-museum-of-western-art/ 200
+- OK: https://visittrinidadcolorado.com/attraction/create-trinidad/ 200
+- OK: https://visittrinidadcolorado.com/attraction/main-street-live/ 200
+- OK: https://visittrinidadcolorado.com/attraction/space-to-create/ 200
+- OK: https://visittrinidadcolorado.com/attraction/trinidad-history-museum/ 200
+- OK: https://visittrinidadcolorado.com/resources-for-locals/ 200
+- OK: https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/ 200
+- OK: https://wellhoteltrinidad.com 200
+- OK: https://worldjournalnewspaper.com/ 200
+- OK: https://worldjournalnewspaper.com/services/ 200
+- OK: https://www.angelfireresort.com/events/ 200
+- OK: https://www.angelfireresortvacationrentals.com/plan-your-trip/summer-events/ 200
+- OK: https://www.bentcounty.net/businesses/business_development.php 200
+- OK: https://www.chamber.huerfano.org/ 200
+- OK: https://www.chamber.huerfano.org/resources 200
+- OK: https://www.co.colfax.nm.us/business/index.php 200
+- OK: https://www.co.colfax.nm.us/government/county_clerk.php 200
+- CHECK: https://www.coloradogives.org/
+- OK: https://www.discoverbachman.com/community-calendar/ 200
+- OK: https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/ 200
+- OK: https://www.edd.newmexico.gov/resource-map/ 200
+- OK: https://www.elratonmediaworks.org/local-businesses 200
+- OK: https://www.enigma.com/directory/nm/raton/ 200
+- OK: https://www.exploreraton.com/ 200
+- OK: https://www.exploreraton.com/events 200
+- OK: https://www.exploreraton.com/shop 200
+- OK: https://www.groundworksnm.org/nonprofit-directory/new-mexico-busin?combine=&order=city&page=32&sort=desc 200
+- OK: https://www.growraton.org/ 200
+- OK: https://www.growraton.org/properties/ 200
+- OK: https://www.huerfano.org/support 200
+- OK: https://www.huerfano.us/ 200
+- OK: https://www.lavetacreativedistrict.org/ 200
+- OK: https://www.lavetacreativedistrict.org/festivals-and-signature-events 200
+- OK: https://www.mainstreetlive.org/ 200
+- OK: https://www.mainstreetlive.org/2026-calendar 200
+- OK: https://www.nmartsandculturaldistricts.org/raton/ 200
+- OK: https://www.nmsbdc.org/ 200
+- OK: https://www.raton.info/business-directory.html 200
+- OK: https://www.ratonarts.org/ 200
+- OK: https://www.ratonnm.gov 200
+- OK: https://www.ratonnm.gov/business/business_license_regulations.php 200
+- OK: https://www.ratonnm.gov/business/economic_development/local_business_resources.php 200
+- OK: https://www.ratonnm.gov/business/index.php 200
+- OK: https://www.ratonnm.gov/government/agendas_minutes.php 200
+- CHECK: https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants 403
+- OK: https://www.redriverbrewing.com/ 200
+- OK: https://www.sba.gov/local-assistance/resource-partners/small-business-development-centers-sbdc 200
+- OK: https://www.scedd.com/ 200
+- OK: https://www.spld.org/connect/community-links/ 200
+- OK: https://www.taxexemptworld.com/organizations/colfax-county-nm-new-mexico.asp 200
+- OK: https://www.thechronicle-news.com/ 200
+- OK: https://www.trinidad.co.gov 200
+- OK: https://www.trinidad.co.gov/government/public_notice.php 200
+- OK: https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php 200
+- OK: https://www.trinidad.co.gov/services/grants.php 200
+- OK: https://www.trinidadcreativedistrict.org/ 200
+- OK: https://www.visittrinidadcolorado.com 200
+- CHECK: https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes 403
+- OK: https://www.wheelhouseincubator.org/ 200
+- CHECK: https://www.yellowpages.com/raton-nm/business-listings/1 403

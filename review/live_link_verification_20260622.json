@@ -1,0 +1,2125 @@
+{
+  "generated_at": "2026-06-22T07:11:34.208962+00:00",
+  "summary": {
+    "checked": 133,
+    "ok": 114,
+    "needs_manual_confirmation": 19,
+    "by_status": {
+      "ok": 114,
+      "url_error": 6,
+      "http_error": 13
+    }
+  },
+  "manual_counts": {
+    "posting_space": 1,
+    "resource_row": 385
+  },
+  "checks": [
+    {
+      "url": "https://5280fire.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://5280fire.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Upper Huerfano Fire District",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://aguilarcountrycottages.com",
+      "ok": false,
+      "status": "url_error",
+      "error": "[Errno 11001] getaddrinfo failed",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Aguilar Country Cottages",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://aguilarstation.com",
+      "ok": false,
+      "status": "url_error",
+      "error": "[Errno 11001] getaddrinfo failed",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "The Station",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://almackskitchen.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.almackskitchen.com/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "AlMack's Kitchen",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://biz.nm.gov/business-navigator/licenses-and-permits/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://biz.nm.gov/business-navigator/licenses-and-permits/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "New Mexico Business Portal",
+          "county": "Regional",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://boom-noodles.com",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Boom Noodles",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://bransoncolorado.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.bransoncolorado.com/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Town of Branson",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://bransonschoolonline.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://bransonschoolonline.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Branson School / Branson School Online",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://casadelgavilan.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://casadelgavilan.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Casa del Gavilan Historic Inn",
+          "county": "Colfax",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://cawthonpark.com",
+      "ok": false,
+      "status": "url_error",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1028)",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Cawthon RV Park & Motel",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://cityofwalsenburg.colorado.gov",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "City of Walsenburg",
+          "county": "Huerfano",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://coloradononprofits.org/member-resources/nonprofit-member-directory/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://coloradononprofits.org/member-resources/nonprofit-member-directory/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Colorado Nonprofit Association Directory",
+          "county": "Regional",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://county.pueblo.org/energy-and-economic-development-department/small-business-development-center",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Colorado Small Business Development Center - Pueblo",
+          "county": "Huerfano",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://cuchara.org",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.cuchara.org/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Cuchara Water and Sanitation District",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://exploreraton.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.exploreraton.com/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Raton / Colfax",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://exstjames.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://exstjames.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "St. James Hotel",
+          "county": "Colfax",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://financenewmexico.org/resources/general-business-assistance/regional-economic-development-organizations/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://financenewmexico.org/resources/general-business-assistance/regional-economic-development-organizations/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Finance New Mexico Regional Economic Development Organizations",
+          "county": "Regional",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://flattsburger.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.flattsburger.com/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Flatt's Burgers & Shakes",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://foxtheatrewalsenburg.org",
+      "ok": false,
+      "status": "url_error",
+      "error": "[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Fox Theatre Walsenburg",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://franciscofort.org",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.franciscofort.org/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Francisco Fort Museum",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://gagliardis489.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://gagliardis489.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Gagliardi's 489",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://glutenfreeinthe303.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.glutenfreeinthe303.com/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Gluten Free in the 303",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://grill14.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://grill14.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Grill 14",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://hoehnesd.org",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://hoehnesd.org",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Hoehne School District RE-3",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://hollywoodbarandcafe.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.hollywoodbarandcafe.com/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Hollywood Bar & Cafe",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://huerfano.k12.co.us",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://huerfano.k12.co.us/en-US",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Walsenburg Jr./Sr. High School",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "resource_row",
+          "label": "Peakview School",
+          "county": "Huerfano",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://huerfano.org",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.huerfano.org/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Huerfano County Economic Development Inc.",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "resource_row",
+          "label": "Huerfano County Economic Development",
+          "county": "Huerfano",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://huerfano.us",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://huerfano.us",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Huerfano County, CO Walsenburg, La Veta, Gardner & unincorporated communities",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "resource_row",
+          "label": "Huerfano County / Walsenburg, La Veta & Cuchara",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "resource_row",
+          "label": "Gardner Public Improvement District",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://huerfano.us/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://huerfano.us/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Huerfano County Government Calendar",
+          "county": "Huerfano",
+          "status": "Source-linked lead"
+        },
+        {
+          "source_type": "directory_source",
+          "label": "Huerfano County Government",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://huerfanofair.com",
+      "ok": false,
+      "status": "url_error",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Huerfano County Fair Board",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://jimandmelissa.org",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Trails End Motel",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://kangaroocoffeellc.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://kangaroocoffeellc.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Kangaroo Coffee",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://krtnradio.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://krtnradio.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "KRTN Enchanted Air Radio",
+          "county": "Colfax",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://krtnradio.com/wp/advertising/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://krtnradio.com/wp/advertising/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "KRTN Enchanted Air Radio",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://kspk.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://kspk.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "KSPK-FM 102.3",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://la-h-health.colorado.gov",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Las Animas-Huerfano Counties District Health Department",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://lasanimascounty.colorado.gov/",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Las Animas County Government",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://lavetafire.org",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://lavetafire.org",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "La Veta Fire Protection District",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://lvk12.org",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.lvk12.org/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "RE-2 La Veta School District",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://lvpl.org",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://lvpl.org",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "La Veta Public Library District",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://missionatthebell.com",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Mission at the Bell",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://msrhc.org",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.msrhc.org/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Mt. San Rafael Hospital",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://nmfamilyfriendlybusiness.org/premium-business-directory/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://nmfamilyfriendlybusiness.org/premium-business-directory/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "NM Family Friendly Business Directory",
+          "county": "Regional",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://nwwd.us",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://nwwd.us",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Navajo Western Water District",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://oedit.colorado.gov/category/rural-opportunity-office",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Colorado OEDIT Rural Opportunity Office",
+          "county": "Regional",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://oedit.colorado.gov/colorado-creative-industries",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Colorado Creative Industries",
+          "county": "Regional",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://oedit.colorado.gov/colorado-small-business-development-center-network",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Colorado SBDC Network",
+          "county": "Regional",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "RAIN Colfax Business Licenses",
+          "county": "Colfax",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://ratonmainstreet.org/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://ratonmainstreet.org/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Raton MainStreet",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://ratonnm.gov",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://ratonnm.gov",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Colfax County, NM Raton, Springer, Angel Fire, Cimarron, Eagle Nest, Maxwell & Ute Park",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "resource_row",
+          "label": "City of Raton",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://redriver.org/events/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://redriver.org/events/",
+      "references": [
+        {
+          "source_type": "amplifier_channel",
+          "label": "Red River Chamber / RedRiver.org Events",
+          "area_served": "Red River / Colfax",
+          "status": "Verified calendar, event submission, and newsletter/signup evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://redriver.org/plan-your-trip/vacation-guide/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://redriver.org/plan-your-trip/vacation-guide/",
+      "references": [
+        {
+          "source_type": "amplifier_channel",
+          "label": "Red River Chamber Vacation Guide",
+          "area_served": "Red River / Colfax",
+          "status": "Verified visitor-guide channel"
+        }
+      ]
+    },
+    {
+      "url": "https://redriverbrewing.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://redriverbrewing.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Red River Brewing Company & Distillery",
+          "county": "Colfax",
+          "status": "Source-linked lead"
+        },
+        {
+          "source_type": "resource_row",
+          "label": "Red River Distillery Tasting Room",
+          "county": "Colfax",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://sccfcolorado.org/nonprofit-directory/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://sccfcolorado.org/nonprofit-directory/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Southern Colorado Community Foundation Nonprofit Directory",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://sharenm.org/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://sharenm.org/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "SHARE New Mexico",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://spanishpeakschamber.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://spanishpeakschamber.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Spanish Peaks Chamber of Commerce",
+          "county": "Huerfano",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://spanishpeakscountry.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://spanishpeakscountry.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Huerfano County (CO)",
+          "county": "Huerfano",
+          "status": "Source-linked lead"
+        },
+        {
+          "source_type": "resource_row",
+          "label": "Spanish Peaks Country Tourism",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "resource_row",
+          "label": "Huerfano",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://spanishpeakscountry.com/add-business-listing/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://spanishpeakscountry.com/add-business-listing/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Spanish Peaks Country Add Business Listing",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://spanishpeakscountry.com/business-directory",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://spanishpeakscountry.com/business-directory",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Spanish Peaks Country Business Directory",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "amplifier_channel",
+          "label": "Spanish Peaks Country Business Directory",
+          "area_served": "Huerfano County",
+          "status": "Verified directory"
+        }
+      ]
+    },
+    {
+      "url": "https://spanishpeakscountry.com/newsletter-signup/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://spanishpeakscountry.com/newsletter-signup/",
+      "references": [
+        {
+          "source_type": "amplifier_channel",
+          "label": "Spanish Peaks Country Newsletter",
+          "area_served": "Huerfano County / Walsenburg / La Veta / Cuchara",
+          "status": "Verified newsletter, calendar, directory, and submit-listing evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://spanishpeakscountry.com/spc-events/community/add/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Spanish Peaks Country Submit Event",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "amplifier_channel",
+          "label": "Spanish Peaks Country Submit Event",
+          "area_served": "Huerfano County",
+          "status": "Verified event submission path"
+        }
+      ]
+    },
+    {
+      "url": "https://spba.huerfano.org",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.spba.huerfano.org/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Spanish Peaks Business Alliance",
+          "county": "Huerfano",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://spld.org",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.spld.org/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Spanish Peaks Library District, Walsenburg Branch",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://sprhc.org",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.sprhc.org/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Spanish Peaks Regional Health Center",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "resource_row",
+          "label": "Spanish Peaks Veterans Community Living Center",
+          "county": "Huerfano",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://thechronicle-news.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.thechronicle-news.com/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Trinidad Chronicle-News",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://themonumentlakeresort.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://themonumentlakeresort.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Monument Lake Resort",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://tlacchamber.org/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://tlacchamber.org/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Colexico Alliance / TLAC Chamber",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://tower64motelandrv.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://tower64motelandrv.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Tower 64 Motel & RV Park",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://townoflaveta-co.gov/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://townoflaveta-co.gov/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Town of La Veta",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://townoflaveta-co.gov/business-directory/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://townoflaveta-co.gov/business-directory/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Town of La Veta Business Directory",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://trinidad.co.gov",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://trinidad.co.gov",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Las Animas County, CO Trinidad, Aguilar, Branson, Cokedale, Kim, Starkville & unincorporated communities",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "resource_row",
+          "label": "Las Animas / Trinidad",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://visitangelfirenm.com/events/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://visitangelfirenm.com/events/",
+      "references": [
+        {
+          "source_type": "amplifier_channel",
+          "label": "Visit Angel Fire Events",
+          "area_served": "Angel Fire / Colfax",
+          "status": "Verified event calendar and subscribe options"
+        }
+      ]
+    },
+    {
+      "url": "https://visitangelfirenm.com/get-listed/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://visitangelfirenm.com/get-listed/",
+      "references": [
+        {
+          "source_type": "amplifier_channel",
+          "label": "Visit Angel Fire NM Get Listed",
+          "area_served": "Angel Fire / Colfax",
+          "status": "Verified submission channel"
+        }
+      ]
+    },
+    {
+      "url": "https://visittrinidadcolorado.com/attraction/a-r-mitchell-museum-of-western-art/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://visittrinidadcolorado.com/attraction/a-r-mitchell-museum-of-western-art/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "A.R. Mitchell Museum of Western Art",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://visittrinidadcolorado.com/attraction/create-trinidad/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://visittrinidadcolorado.com/attraction/create-trinidad/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "CREATE Trinidad",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://visittrinidadcolorado.com/attraction/main-street-live/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://visittrinidadcolorado.com/attraction/main-street-live/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Main Street LIVE",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://visittrinidadcolorado.com/attraction/space-to-create/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://visittrinidadcolorado.com/attraction/space-to-create/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Space to Create",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://visittrinidadcolorado.com/attraction/trinidad-history-museum/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://visittrinidadcolorado.com/attraction/trinidad-history-museum/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Trinidad History Museum",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://visittrinidadcolorado.com/resources-for-locals/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Visit Trinidad Resources for Locals",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "amplifier_channel",
+          "label": "Visit Trinidad Tourism / Resources for Locals",
+          "area_served": "Trinidad / Las Animas",
+          "status": "Verified submission and co-promotion channel"
+        },
+        {
+          "source_type": "resource_row",
+          "label": "Visit Trinidad Tourism / Events Office",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Visit Trinidad Submit Your Event",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "amplifier_channel",
+          "label": "Visit Trinidad Submit Event",
+          "area_served": "Trinidad / Las Animas",
+          "status": "Verified reviewed submission pathway"
+        }
+      ]
+    },
+    {
+      "url": "https://wellhoteltrinidad.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://wellhoteltrinidad.com",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "The Well Hotel & Taproom",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://worldjournalnewspaper.com/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://worldjournalnewspaper.com/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "The World Journal",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "amplifier_channel",
+          "label": "World Journal",
+          "area_served": "Huerfano / Walsenburg",
+          "status": "Promotion possible - verify / paid ad status unknown"
+        }
+      ]
+    },
+    {
+      "url": "https://worldjournalnewspaper.com/services/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://worldjournalnewspaper.com/services/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "World Journal Services Directory",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.angelfireresort.com/events/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.angelfireresort.com/events/",
+      "references": [
+        {
+          "source_type": "amplifier_channel",
+          "label": "Angel Fire Resort Events",
+          "area_served": "Angel Fire / Colfax",
+          "status": "Verified calendar and newsletter/signup evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://www.angelfireresortvacationrentals.com/plan-your-trip/summer-events/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.angelfireresortvacationrentals.com/plan-your-trip/summer-events/",
+      "references": [
+        {
+          "source_type": "amplifier_channel",
+          "label": "Angel Fire Resort Vacation Rentals",
+          "area_served": "Angel Fire / Colfax",
+          "status": "Related proof - verify separately"
+        }
+      ]
+    },
+    {
+      "url": "https://www.bentcounty.net/businesses/business_development.php",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.bentcounty.net/businesses/business_development.php",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Bent County Business Development",
+          "county": "Las Animas",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://www.chamber.huerfano.org/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.chamber.huerfano.org/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Huerfano County Chamber",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.chamber.huerfano.org/resources",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.chamber.huerfano.org/resources",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Huerfano Chamber Resources",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.co.colfax.nm.us/business/index.php",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.co.colfax.nm.us/business/index.php",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Colfax County Business Resources",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.co.colfax.nm.us/government/county_clerk.php",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.co.colfax.nm.us/government/county_clerk.php",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Colfax County Clerk",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.coloradogives.org/",
+      "ok": false,
+      "status": "url_error",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Colorado Gives",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.discoverbachman.com/community-calendar/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.discoverbachman.com/community-calendar/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Bachman Community Calendar",
+          "county": "Huerfano",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "NM Creative Industries Resource Center",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "directory_source",
+          "label": "NM Creative Industries Resource Submission / Update",
+          "county": "Regional",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.edd.newmexico.gov/resource-map/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.edd.newmexico.gov/news-and-information/resource-map/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "NM EDD Business Resource Map",
+          "county": "Regional",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.elratonmediaworks.org/local-businesses",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.elratonmediaworks.org/local-businesses",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "El Raton Media Works Local Businesses",
+          "county": "Colfax",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://www.enigma.com/directory/nm/raton/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.enigma.com/directory/nm/raton/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Enigma Directory: Raton Business Entities",
+          "county": "Colfax",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://www.exploreraton.com/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.exploreraton.com/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Explore Raton",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.exploreraton.com/events",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.exploreraton.com/events",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Explore Raton Events",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.exploreraton.com/shop",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.exploreraton.com/shop",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Explore Raton Shopping",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.groundworksnm.org/nonprofit-directory/new-mexico-busin?combine=&order=city&page=32&sort=desc",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.groundworksnm.org/nonprofit-directory/new-mexico-busin?combine=&order=city&page=32&sort=desc",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Groundworks New Mexico Nonprofit Directory",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.growraton.org/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.growraton.org/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "GrowRaton",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.growraton.org/properties/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.growraton.org/properties/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "GrowRaton Commercial Properties",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.huerfano.org/support",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.huerfano.org/support",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Huerfano County Economic Development Support & Incentives",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.huerfano.us/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://huerfano.us/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Huerfano County Government",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.lavetacreativedistrict.org/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.lavetacreativedistrict.org/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "La Veta Creative District",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
+      "references": [
+        {
+          "source_type": "amplifier_channel",
+          "label": "La Veta Creative District",
+          "area_served": "La Veta / Huerfano",
+          "status": "Needs contact confirmation"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mainstreetlive.org/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.mainstreetlive.org/",
+      "references": [
+        {
+          "source_type": "amplifier_channel",
+          "label": "Main Street LIVE",
+          "area_served": "Trinidad / Las Animas",
+          "status": "Verified event lineup; newsletter not found"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mainstreetlive.org/2026-calendar",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.mainstreetlive.org/2026-calendar",
+      "references": [
+        {
+          "source_type": "amplifier_channel",
+          "label": "Main Street LIVE 2026 Calendar",
+          "area_served": "Trinidad / Las Animas",
+          "status": "Verified calendar page"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nmartsandculturaldistricts.org/raton/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.nmartsandculturaldistricts.org/raton/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Raton Arts and Cultural District",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nmsbdc.org/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.nmsbdc.org/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "New Mexico Small Business Development Center",
+          "county": "Regional",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.raton.info/business-directory.html",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.raton.info/business-directory.html",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Raton Chamber Business Directory",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ratonarts.org/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.ratonarts.org/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Raton Arts & Humanities Council",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ratonnm.gov",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.ratonnm.gov",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Colfax County (NM)",
+          "county": "Colfax",
+          "status": "Source-linked lead"
+        },
+        {
+          "source_type": "resource_row",
+          "label": "Colfax County / Raton",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ratonnm.gov/business/business_license_regulations.php",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.ratonnm.gov/business/business_license_regulations.php",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "City of Raton Business Licenses and Regulations",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ratonnm.gov/business/economic_development/local_business_resources.php",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.ratonnm.gov/business/economic_development/local_business_resources.php",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "City of Raton Local Business Support",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ratonnm.gov/business/index.php",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.ratonnm.gov/business/index.php",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "City of Raton Business Services",
+          "county": "Colfax",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ratonnm.gov/government/agendas_minutes.php",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.ratonnm.gov/government/agendas_minutes.php",
+      "references": [
+        {
+          "source_type": "posting_space",
+          "label": "Raton / Colfax",
+          "status": "Hybrid - verify current posting locations"
+        }
+      ]
+    },
+    {
+      "url": "https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "USDA Rural Business Development Grants",
+          "county": "Regional",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.redriverbrewing.com/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.redriverbrewing.com/",
+      "references": [
+        {
+          "source_type": "amplifier_channel",
+          "label": "Red River Brewing Company & Distillery",
+          "area_served": "Red River / Colfax",
+          "status": "Verified newsletter or signup evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://www.sba.gov/local-assistance/resource-partners/small-business-development-centers-sbdc",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.sba.gov/local-assistance/resource-partners/small-business-development-centers-sbdc",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "SBA SBDC Finder",
+          "county": "Regional",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.scedd.com/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://scedd.com/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Southern Colorado Economic Development District",
+          "county": "Regional",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://www.spld.org/connect/community-links/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.spld.org/connect/community-links/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Spanish Peaks Library Community Links",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.taxexemptworld.com/organizations/colfax-county-nm-new-mexico.asp",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.taxexemptworld.com/organizations/colfax-county-nm-new-mexico.asp",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Tax Exempt World Colfax County Organizations",
+          "county": "Colfax",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://www.thechronicle-news.com/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.thechronicle-news.com/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "The Chronicle-News",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.trinidad.co.gov",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.trinidad.co.gov",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Las Animas County / Trinidad",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.trinidad.co.gov/government/public_notice.php",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.trinidad.co.gov/government/public_notice.php",
+      "references": [
+        {
+          "source_type": "posting_space",
+          "label": "Trinidad / Las Animas",
+          "status": "Hybrid - verify board rules and deadlines"
+        }
+      ]
+    },
+    {
+      "url": "https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "City of Trinidad Economic Development Newsletter",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        },
+        {
+          "source_type": "amplifier_channel",
+          "label": "City of Trinidad Economic Development",
+          "area_served": "Trinidad / Las Animas",
+          "status": "Verified municipal newsletter page; signup pathway needs confirmation"
+        }
+      ]
+    },
+    {
+      "url": "https://www.trinidad.co.gov/services/grants.php",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.trinidad.co.gov/services/grants.php",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "City of Trinidad Grants",
+          "county": "Las Animas",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://www.trinidadcreativedistrict.org/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.trinidadcreativedistrict.org/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "CREATE Trinidad",
+          "county": "Las Animas",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.visittrinidadcolorado.com",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://visittrinidadcolorado.com/",
+      "references": [
+        {
+          "source_type": "resource_row",
+          "label": "Las Animas County (CO)",
+          "county": "Las Animas",
+          "status": "Source-linked lead"
+        }
+      ]
+    },
+    {
+      "url": "https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "source_type": "posting_space",
+          "label": "Walsenburg / Huerfano",
+          "status": "Hybrid - verify office-specific posting rules"
+        }
+      ]
+    },
+    {
+      "url": "https://www.wheelhouseincubator.org/",
+      "ok": true,
+      "status": "ok",
+      "status_code": 200,
+      "final_url": "https://www.wheelhouseincubator.org/",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Wheelhouse Retail Incubator & Makerspace",
+          "county": "Huerfano",
+          "status": "Official/public source checked"
+        }
+      ]
+    },
+    {
+      "url": "https://www.yellowpages.com/raton-nm/business-listings/1",
+      "ok": false,
+      "status": "http_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "source_type": "directory_source",
+          "label": "Yellow Pages Raton Business Listings",
+          "county": "Colfax",
+          "status": "Source-linked lead"
+        }
+      ]
+    }
+  ]
+}

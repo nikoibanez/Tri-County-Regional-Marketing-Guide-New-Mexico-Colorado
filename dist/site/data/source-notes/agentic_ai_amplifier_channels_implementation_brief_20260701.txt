@@ -1,0 +1,376 @@
+Agentic AI Implementation Brief
+Regional Amplifier Channels for the Tri-County Marketing & Business Support 
+Landing Site
+Prepared for implementation on the current Netlify landing site. Version date: 2026-06-13.
+Purpose
+This brief gives step-by-step instructions for an agentic AI to incorporate verified mailing-list, newsletter, events-calendar, 
+business-directory, visitor-guide, and regional promotion-channel research into the current landing site. The brief is written to 
+reduce inferential inaccuracies, false claims, and unsupported promotion promises.
+Terminology
+The page may be called a landing site if it functions as the entry point for a broader guide, resource directory, templates, forms, 
+and task workflows. If it remains a single static page, landing page is more precise. Public-facing recommendation: Tri-County 
+Regional Resource Landing Site or Tri-County Marketing & Business Support Landing Site.
+Non-Negotiable Constraint
+Do not infer advertising availability, submission acceptance, costs, deadlines, list ownership, 
+audience size, or endorsement.
+Only classify a channel by evidence that is visible in the source.
+If a source shows a newsletter signup, say newsletter/signup exists.
+If a source shows a calendar, say calendar exists.
+If a source shows a submit-event form, say submit-event pathway exists.
+If a source does not explicitly say it accepts outside advertisements, mark paid ad status as Unknown 
+- verify.
+1. Required Site Placement
+Add a new primary section to the landing site titled:
+Regional Amplifier Channels: Newsletters, Calendars, Directories, and Visitor Guides
+Place this section after the Start Here decision flow and before county-specific campaign recipes. This placement lets users first 
+identify their goal, then immediately find channels where their event, listing, or announcement may travel.
+Recommended Navigation Order
+Home
+Start Here
+Regional Amplifier Channels
+Promote an Event
+Media & Calendar Contacts
+Business Directories
+Flyer / Offline Outreach
+County Campaign Recipes
+Templates
+Metrics & Reporting
+Submit / Correct Information
+About / Methodology
+If the landing site remains one page
+# Regional Amplifier Channels
+# Event Calendars
+# Newsletters & Mailing Lists
+# Business Directories
+# Tourism Promotion
+# Anchor Venue Lineups
+# Ask About Advertising or Placement
+# Submission Templates
+2. Public-Facing Intro Copy
+Regional Amplifier Channels are newsletters, events calendars, tourism websites, business directories, 
+venue lineups, municipal update systems, and visitor-guide channels that can help a business, 
+nonprofit, artist, or event organizer reach more people.
+Some channels accept public event submissions. Some maintain business directories. Some offer 
+newsletter signups, visitor-guide pathways, social media co-promotion, or paid advertising. 
+Availability varies by organization, so each listing should be checked before use.
+Use this section to identify where to submit your event, request a listing, ask about newsletter 
+placement, or verify paid and free promotional opportunities.
+3. Classification Rules
+Tag Use only when evidence shows Do not claim
+Verified calendar A calendar, event page, or lineup exists. That outside events are accepted unless a 
+submission form/rule exists.
+Verified newsletter/signup The source uses subscribe, newsletter, sign up, 
+mailing list, or updates language.
+That third-party ads/submissions are accepted.
+Verified directory A business/member/listing directory exists. That any business can be listed unless an add-
+listing form/rule exists.
+Verified submission form A form or explicit instruction accepts 
+event/listing/marketing submissions.
+That submission guarantees publication.
+Promotion possible - verify The channel has relevant audience reach but rules 
+are unclear.
+Any availability, pricing, or deadline.
+Paid ad status unknown No explicit ad-rate or paid-placement evidence is That advertising is available.
+present.
+Needs contact confirmation Source exists but exact pathway is missing or stale. Operational details.
+4. Required Channel Table Format
+Create a visible table on the landing site using this schema. Do not remove the Source URL or Verification columns; they are the 
+anti-hallucination layer.
+Column Required content Allowed values / notes
+Channel Name of organization, venue, tourism site, city 
+page, or business.
+Use exact public-facing name from source.
+Area served Town/county/region. Use town + county where possible.
+Channel type Newsletter, event calendar, directory, visitor guide, 
+venue lineup, social media co-op, etc.
+Multiple values allowed.
+What users can ask/submit Plain-language action. Example: Submit event, request listing, ask about 
+ads, request calendar placement.
+Best for Use-case guidance. Events, tourism-facing business, arts, lodging, 
+nonprofit program, etc.
+Paid/free status Known status or uncertainty. Use Unknown - verify unless source explicitly 
+states.
+Verification status Evidence tag. Use only approved status tags.
+Source URL Direct source URL. Plain URL.
+Implementation note Caveat or instruction. Keep concise.
+5. Step-by-Step Implementation Instructions for Agent
+Step 1 - Create the section shell
+Add a page or anchor section named Regional Amplifier Channels. Place it after Start Here and before County Campaign 
+Recipes. Add short intro copy and a warning that advertising availability must be verified.
+Step 2 - Add filter/category cards
+Create cards or tabs for Event Calendars, Newsletters & Mailing Lists, Business Directories, Tourism/Visitor Guides, Anchor 
+Venue Lineups, and Ask About Advertising or Placement.
+Step 3 - Add the master channel table
+Use the required table schema. Populate only with verified rows in this brief. Do not add unsourced rows.
+Step 4 - Add evidence tags
+Each row must carry at least one evidence tag: Verified calendar, Verified newsletter/signup, Verified directory, Verified 
+submission form, Promotion possible - verify, Paid ad status unknown, or Needs contact confirmation.
+Step 5 - Add action language
+For each row, phrase the action as ask/submit/request/verify. Avoid promise language such as advertise here, get featured, or 
+guaranteed placement.
+Step 6 - Add the promotion packet checklist
+Insert the Before You Contact a Channel checklist below the table. This makes the section operational, not just informational.
+Step 7 - Add the Ask About Placement template
+Place the outreach email template below the checklist. Make it copy-paste ready.
+Step 8 - Add a verification warning
+Display a callout near the table: Paid advertising, free placement, editorial inclusion, deadlines, and approval rules must be 
+verified directly with each organization.
+Step 9 - Connect to templates
+Link each use case to existing or new templates: calendar listing, event blurb, radio PSA, social caption, press release, directory 
+listing request, and sponsor/funder recap.
+Step 10 - Add QA pass
+Check that no row says accepts ads, free ad, paid placement, newsletter submission, or guaranteed calendar listing unless the 
+source explicitly says that. Otherwise use ask about or verify directly.
+6. Before Contacting a Channel: Promotion Packet
+Prepare a small promotion packet before contacting any calendar, newsletter, directory, visitor guide, 
+or tourism partner.
+Include:
+- Event or business name
+- Date, time, and location, if event-based
+- One-sentence description
+- 50-word description
+- 100-word description
+- Website, ticket link, or contact link
+- Contact name, email, and phone
+- Square image
+- Vertical image
+- Printable flyer, if available
+- Accessibility notes
+- Whether the item is free, ticketed, nonprofit, youth-focused, tourism-facing, or business-related
+Do not send only a flyer image. Calendars and newsletters usually need plain text they can copy, 
+searchable details, and a direct contact.
+7. Submission Etiquette / Anti-Spam Note
+Use these channels respectfully. Submit only relevant events, listings, or announcements. Check each 
+organization's rules before sending materials. Do not assume a newsletter, calendar, or directory 
+accepts paid ads, free listings, or outside submissions unless the source says so directly. When in 
+doubt, ask what formats they accept.
+8. Verified Channel Data to Implement
+Populate the landing site table with the rows below. Keep source URLs visible or attached to each row. If space is limited on mobile, use expandable cards that preserve the same 
+fields.
+Channel Area Types Status Use Source URL
+Red River Brewing Company & Distillery Red River / Colfax Own-site newsletter / mailing list Verified newsletter/signup Direct proof of a business-originating 
+mailing list. Add to directory row as direct 
+mailing-list evidence.
+https://www.redriverbrewing.com/
+Angel Fire Resort Angel Fire / Colfax Events calendar; calendar subscription; 
+newsletter signup
+Verified calendar + verified 
+newsletter/signup
+Anchor venue/resort event lineup and 
+business-originating newsletter channel.
+https://www.angelfireresort.com/events/
+Angel Fire Resort Vacation Rentals Angel Fire / Colfax Events referral; newsletter signup Related proof - verify separately Treat as related to listed resort 
+ecosystem. Verify whether it is same 
+operator/contact list before merging.
+https://
+www.angelfireresortvacationrentals.com/
+plan-your-trip/summer-events/
+Red River Chamber / RedRiver.org Red River / Colfax Events calendar; submit event; 
+newsletter; vacation guide
+Verified calendar + submit event + 
+newsletter/signup
+High-priority regional amplifier. Do not 
+classify as individual business list unless 
+tied to a business profile.
+https://redriver.org/events/
+Red River Chamber / Vacation Guide Red River / Colfax Vacation guide request; visitor mailing 
+pathway; newsletter
+Verified visitor-guide channel Use for visitor-facing businesses and 
+events; label as tourism/visitor guide, not 
+guaranteed ad inventory.
+https://redriver.org/plan-your-trip/
+vacation-guide/
+Visit Angel Fire NM Angel Fire / Colfax Business listing intake; event submission; 
+newsletter signup
+Verified submission channel Key Angel Fire intake channel for 
+businesses, lodging/property listings, and 
+public events.
+https://visitangelfirenm.com/get-listed/
+Visit Angel Fire Events Angel Fire / Colfax Events calendar; calendar subscription; 
+newsletter
+Verified event calendar + subscribe 
+options
+Use for event promotion and calendar-
+subscription evidence.
+https://visitangelfirenm.com/events/
+Visit Trinidad Tourism / Events Office Trinidad / Las Animas Marketing support; social media co-op; 
+community calendar; business directory 
+request
+Verified submission + co-promotion 
+channel
+Highest-priority Trinidad regional 
+amplifier. Include review/eligibility caveat.
+https://visittrinidadcolorado.com/
+resources-for-locals/
+Visit Trinidad Submit Event Trinidad / Las Animas Event submission rules / approval 
+process
+Verified reviewed submission pathway Use to prevent overclaiming. Pair with 
+note that acceptance is not automatic.
+https://visittrinidadcolorado.com/
+resources-for-locals/submit-your-event/
+City of Trinidad Economic Development Trinidad / Las Animas Economic development newsletter; 
+business news/resources/events
+Verified municipal newsletter page; 
+signup pathway needs confirmation
+Add as municipal newsletter lead; mark 
+signup/submission process as Needs 
+verification until form/contact is 
+confirmed.
+https://www.trinidad.co.gov/services/
+economicdevelopment_newsletter.php
+Main Street LIVE Trinidad / Las Animas Events calendar; season lineup; special 
+events
+Verified event lineup; newsletter not 
+found
+Add as anchor venue/event-lineup 
+channel, not a list-serv unless 
+subscription evidence is found later.
+https://www.mainstreetlive.org/
+Main Street LIVE 2026 Calendar Trinidad / Las Animas 2026 calendar / ticketed event lineup Verified calendar page Use as event-lineup data source and co-
+promotion target for arts/performance 
+work.
+https://www.mainstreetlive.org/2026-
+calendar
+Spanish Peaks Country Huerfano County / Walsenburg / La 
+Veta / Cuchara
+Newsletter; events calendar; submit 
+event; business directory; add listing
+Verified newsletter + calendar + directory 
++ submit listing
+Core Huerfano County amplifier. Strong 
+for tourism, arts, lodging, dining, 
+shopping, and event promotion.
+https://spanishpeakscountry.com/
+newsletter-signup/
+Spanish Peaks Country Business 
+Directory
+Huerfano County Business directory; add business listing Verified directory Primary directory path for Huerfano 
+business visibility.
+https://spanishpeakscountry.com/
+business-directory
+Spanish Peaks Country Submit Event Huerfano County Submit event; event calendar Verified event submission path Use for events with Huerfano County 
+visitor/community relevance.
+https://spanishpeakscountry.com/spc-
+events/community/add/
+Spanish Peaks Country Add Business 
+Listing
+Huerfano County Business-directory intake form Verified directory-intake path Use for businesses, venues, galleries, 
+lodging, dining, shopping, museums, and 
+visitor-facing services.
+https://spanishpeakscountry.com/add-
+business-listing/
+Huerfano County Government Huerfano County County/civic calendar lead Needs direct pathway verification Include only as civic-calendar lead with 
+Needs verification label.
+https://huerfano.us/
+Town of La Veta La Veta / Huerfano News/update notifications; upcoming 
+events; subscribe to updates
+Verified municipal updates + events Municipal notification source; do not 
+assume outside advertising or open 
+event-submission unless confirmed.
+https://townoflaveta-co.gov/
+Town of La Veta Business Directory La Veta / Huerfano Business directory; licensed contractors 
+list; municipal calendar navigation
+Verified directory Local directory proof for La Veta; useful 
+for business verification and local-
+resource mapping.
+https://townoflaveta-co.gov/business-
+directory/
+La Veta / Spanish Peaks directory 
+category
+La Veta / Huerfano Directory category page Verified category listing Good source for La Veta business 
+records within the tourism directory 
+ecosystem.
+https://spanishpeakscountry.com/
+business-directory/categories/la-veta-
+shopping
+La Veta Creative District La Veta / Huerfano Festivals/signature events lineup Event-lineup source; mailing list not 
+verified
+Use as creative-district event-lineup 
+source; search separately for 
+subscribe/sign-up before classifying as 
+mailing list.
+https://www.lavetacreativedistrict.org/
+festivals-and-signature-events
+9. Best-Use Matrix
+User is trying to promote Best channel categories Implementation note
+Public event Event calendars; tourism calendars; venue lineups; 
+city/community calendars
+Use calendar listing template and event image 
+package.
+Visitor-facing business Tourism directories; visitor guides; chamber/tourism 
+sites; Google Business Profile
+Use directory listing request template.
+Restaurant/retail special Newsletter opportunities; social media co-op; paid 
+ad inquiry; local flyers
+Do not imply newsletters accept ads unless 
+confirmed.
+Art show/performance Venue lineups; arts calendars; tourism calendars; 
+local media
+Use event pitch plus square/vertical images.
+Nonprofit program City calendars; newsletters; radio PSA; partner 
+organizations
+Use community announcement language, not 
+commercial ad language.
+Grant-funded project Media coverage; newsletter mentions; partner 
+reposts; post-event reporting
+Track reach and screenshots for reports.
+Seasonal tourism campaign Tourism sites; visitor guides; lodging partners; 
+regional newsletters
+Ask about deadlines, eligibility, and paid/free status.
+10. Copy-Paste Outreach Template
+Subject: Question About Promotion / Advertising Opportunities
+Hello,
+I am reaching out to ask whether [organization/publication/site name] accepts event listings, 
+newsletter submissions, business directory updates, paid advertisements, social media co-promotion, 
+visitor-guide listings, or other community announcements.
+The item I am hoping to promote is:
+[Event/business/program name]
+[Date/time, if applicable]
+[Location]
+[Short description]
+[Website or contact link]
+Could you let me know which formats you accept, whether there are deadlines, and whether any options 
+are free or paid?
+Thank you,
+[Name]
+[Organization]
+[Phone/email]
+11. Required QA Checks Before Publishing
+ Every row has a source URL.
+ Every row has a verification status tag.
+ No row claims paid advertising is available unless source explicitly confirms it.
+ No row claims free placement unless source explicitly confirms it.
+ No row claims guaranteed publication or guaranteed event-calendar inclusion.
+ All uncertain details are marked Unknown - verify or Needs contact confirmation.
+ The public language says ask about advertising, request listing, submit event, or verify placement - not put your ads in these.
+ Mobile view preserves source and verification information, even if the table collapses into cards.
+ The methodology section explains how channels were found and classified.
+ The correction/intake form lets users submit new amplifier channels or report changed information.
+12. Minimal Agent Execution Order
+1. Insert Regional Amplifier Channels section after Start Here.
+2. Add category cards/tabs.
+3. Add intro and disclaimer copy.
+4. Add master channel table using required schema.
+5. Populate only verified rows from this brief.
+6. Add source URLs and verification tags.
+7. Add promotion packet checklist.
+8. Add outreach template.
+9. Link to relevant templates and forms.
+10. Run QA checks for unsupported claims.
+11. Mark remaining uncertain items as Needs verification.
+12. Publish only after checking all links.
+13. Known Follow-Up Work
+ Verify exact submission deadlines for each channel.
+ Verify whether each channel accepts paid ads, free announcements, editorial mentions, or only internal listings.
+ Verify current contact person or department for each submission path.
+ Find additional individual-business newsletters from businesses listed on the landing site.
+ Repeat keyword searches quarterly: subscribe, newsletter, sign up, mailing list, events, calendar, submit event, business 
+directory, get listed, visitor guide, advertising, media kit.
+ Add confirmed channel rows only after source URL, proof type, and status tag are recorded.
+Appendix: Methodology Language for the Site
+This section identifies regional amplifier channels found through source-page review. A channel is 
+listed when public page content shows evidence of a newsletter/signup system, event calendar, event 
+submission pathway, business directory, business listing intake, visitor guide, social media co-op, 
+venue lineup, or municipal update system. Advertising availability, deadlines, pricing, and acceptance 
+rules are not assumed. Users should verify those details directly with each organization.
+End of brief

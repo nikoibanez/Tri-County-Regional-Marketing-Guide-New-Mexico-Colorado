@@ -1,0 +1,16 @@
+[build]
+  command = "echo 'Publishing prebuilt Stateline Guide from dist/site'"
+  publish = "dist/site"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"

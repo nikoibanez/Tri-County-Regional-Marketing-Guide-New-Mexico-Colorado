@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="ctaLoopTitle">
+  <title id="ctaLoopTitle">Forward loop marker</title>
+  <defs>
+    <style>
+      .cta-pulse {
+        animation: cta-pulse 4.2s ease-in-out infinite;
+        transform-origin: 60px 60px;
+      }
+      .orbit {
+        fill: none;
+        stroke: rgba(23,48,71,0.22);
+        stroke-width: 4;
+      }
+      .arrow {
+        fill: none;
+        stroke: #173047;
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .node {
+        fill: #d8bb68;
+        stroke: #173047;
+        stroke-width: 3;
+      }
+      @keyframes cta-pulse {
+        0%, 100% { transform: translateX(0) scale(1); opacity: 0.84; }
+        50% { transform: translateX(4px) scale(1.04); opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .cta-pulse {
+          animation: none !important;
+        }
+      }
+    </style>
+  </defs>
+  <circle class="orbit" cx="60" cy="60" r="42"/>
+  <g class="cta-pulse">
+    <path class="arrow" d="M42 60h34"/>
+    <path class="arrow" d="M66 43l18 17-18 17"/>
+    <circle class="node" cx="36" cy="60" r="8"/>
+  </g>
+</svg>

@@ -1,0 +1,130 @@
+# Vague Listing Cleanup - 2026-06-27
+
+Removed 122 non-entity rows from the shared directory data and pruned 194 rendered listing blocks from HTML pages.
+
+These rows were planning notes, demographic/context buckets, hashtag starters, route maps, timeline markers, or other abstract items rather than actual organizations, businesses, programs, directories, or public placement sources.
+
+## Removed rows
+
+- Age and income | Colfax County, NM | Colfax | age-and-income-colfax-colfax-county-nm
+- Broadband gaps | Colfax County, NM | Colfax | broadband-gaps-colfax-colfax-county-nm
+- Home-based businesses, trades, contractors, guides, artists, wellness providers, seasonal vendors | Colfax local follow-up | Colfax | home-based-businesses-trades-contractors-guides-artists-wellness-provide
+- Red River | Colfax County Outreach Targets by Town | Colfax | red-river-colfax-colfax-county-outreach-targets-by-town
+- Red River Main Street | Colfax County Retail & Entrepreneurship Cross-Promotion Examples | Colfax | red-river-main-street-colfax-colfax-county-retail-entrepreneurship-cross
+- Red River lodging, nightly rentals, construction, and retail | Colfax local follow-up | Colfax | red-river-lodging-nightly-rentals-construction-and-retail-colfax-colfax-
+- Red River town and tourism pages | Published business-count context | Colfax | red-river-town-and-tourism-pages-colfax-published-business-count-context
+- Angel Fire | Colfax County Outreach Targets by Town | Colfax | angel-fire-colfax-colfax-county-outreach-targets-by-town
+- Angel Fire deeper partner-directory records | Colfax local follow-up | Colfax | angel-fire-deeper-partner-directory-records-colfax-colfax-county-invento
+- Angel Fire resort corridor | Colfax County Retail & Entrepreneurship Cross-Promotion Examples | Colfax | angel-fire-resort-corridor-colfax-colfax-county-retail-entrepreneurship-
+- Angel Fire visitor directory | Published business-count context | Colfax | angel-fire-visitor-directory-colfax-published-business-count-context
+- Cimarron | Colfax County Outreach Targets by Town | Colfax | cimarron-colfax-colfax-county-outreach-targets-by-town
+- Cimarron current merchant directory | Colfax local follow-up | Colfax | cimarron-current-merchant-directory-colfax-colfax-county-inventory-gaps-
+- Cimarron heritage route | Colfax County Retail & Entrepreneurship Cross-Promotion Examples | Colfax | cimarron-heritage-route-colfax-colfax-county-retail-entrepreneurship-cro
+- Eagle Nest | Colfax County Outreach Targets by Town | Colfax | eagle-nest-colfax-colfax-county-outreach-targets-by-town
+- Eagle Nest lake corridor | Colfax County Retail & Entrepreneurship Cross-Promotion Examples | Colfax | eagle-nest-lake-corridor-colfax-colfax-county-retail-entrepreneurship-cr
+- Eagle Nest registered-business roster | Published business-count context | Colfax | eagle-nest-registered-business-roster-colfax-published-business-count-co
+- Maxwell, Des Moines, Ute Park, and unincorporated communities | Colfax local follow-up | Colfax | maxwell-des-moines-ute-park-and-unincorporated-communities-colfax-colfax
+- 1. Amplifiers | Recommended outreach waves | Colfax | 1-amplifiers-colfax-recommended-outreach-waves
+- 2. Anchor consumer businesses | Recommended outreach waves | Colfax | 2-anchor-consumer-businesses-colfax-recommended-outreach-waves
+- 3. Lodging and gateway businesses | Recommended outreach waves | Colfax | 3-lodging-and-gateway-businesses-colfax-recommended-outreach-waves
+- 4. Local service firms | Recommended outreach waves | Colfax | 4-local-service-firms-colfax-recommended-outreach-waves
+- Business sectors | Colfax County, NM | Colfax | business-sectors-colfax-colfax-county-nm
+- Clayton Road / I-25 gateway | Business geography for physical outreach | Colfax | clayton-road-i-25-gateway-colfax-business-geography-for-physical-outreac
+- Colfax | Top Channels by County | Colfax | colfax-colfax-top-channels-by-county
+- Colfax County, NM | County audience profiles for outreach planning | Colfax | colfax-county-nm-colfax-county-audience-profiles-for-outreach-planning
+- Colfax, NM | County-Specific Resources Overview | Colfax | colfax-nm-colfax-county-specific-resources-overview
+- Downtown Revitalization | Needs Met & Remaining Gaps | Colfax | downtown-revitalization-colfax-needs-met-remaining-gaps
+- Downtown core: 1st Street / Park Avenue / Cook Avenue | Business geography for physical outreach | Colfax | downtown-core-1st-street-park-avenue-cook-avenue-colfax-business-geograp
+- Explore Raton | First-call outreach contacts | Colfax | explore-raton-colfax-first-call-outreach-contacts
+- GrowRaton | First-call outreach contacts | Colfax | growraton-colfax-first-call-outreach-contacts
+- Hospital / York Canyon services cluster | Business geography for physical outreach | Colfax | hospital-york-canyon-services-cluster-colfax-business-geography-for-phys
+- Raton | Colfax County Outreach Targets by Town | Colfax | raton-colfax-colfax-county-outreach-targets-by-town
+- Raton / Colfax County | Local Hashtag Starters | Colfax | raton-colfax-county-colfax-local-hashtag-starters
+- Raton 2nd Street + downtown core | Colfax County Retail & Entrepreneurship Cross-Promotion Examples | Colfax | raton-2nd-street-downtown-core-colfax-colfax-county-retail-entrepreneurs
+- Raton MainStreet | First-call outreach contacts | Colfax | raton-mainstreet-colfax-first-call-outreach-contacts
+- Raton event post | Suggested Hashtag Sets by Use Case | Colfax | raton-event-post-colfax-suggested-hashtag-sets-by-use-case
+- Raton lodging + downtown | Colfax County Retail & Entrepreneurship Cross-Promotion Examples | Colfax | raton-lodging-downtown-colfax-colfax-county-retail-entrepreneurship-cros
+- Raton retail or restaurant post | Suggested Hashtag Sets by Use Case | Colfax | raton-retail-or-restaurant-post-colfax-suggested-hashtag-sets-by-use-cas
+- Raton checked inventory | Published business-count context | Colfax | raton-checked-inventory-colfax-published-business-count-context
+- Raton vs resort/outdoor visitor nodes | Colfax County, NM | Colfax | raton-vs-resort-outdoor-visitor-nodes-colfax-colfax-county-nm
+- South/North 2nd Street corridor | Business geography for physical outreach | Colfax | south-north-2nd-street-corridor-colfax-business-geography-for-physical-o
+- US 64 / outlying tourism cluster | Business geography for physical outreach | Colfax | us-64-outlying-tourism-cluster-colfax-business-geography-for-physical-ou
+- Tri-county / regional | Local Hashtag Starters | Colfax | tri-county-regional-colfax-local-hashtag-starters
+- Springer | Colfax County Outreach Targets by Town | Colfax | springer-colfax-colfax-county-outreach-targets-by-town
+- Springer Economic Development page | Published business-count context | Colfax | springer-economic-development-page-colfax-published-business-count-conte
+- Springer current operating status | Colfax local follow-up | Colfax | springer-current-operating-status-colfax-colfax-county-inventory-gaps-ve
+- Springer service node | Colfax County Retail & Entrepreneurship Cross-Promotion Examples | Colfax | springer-service-node-colfax-colfax-county-retail-entrepreneurship-cross
+- Older and rural audience | Huerfano County, CO | Huerfano | older-and-rural-audience-huerfano-huerfano-county-co
+- Physical posting network | Huerfano County, CO | Huerfano | physical-posting-network-huerfano-huerfano-county-co
+- Retail Diversification & Entrepreneurship | Needs Met & Remaining Gaps | Huerfano | retail-diversification-entrepreneurship-huerfano-needs-met-remaining-gap
+- Retail and service gaps | Huerfano County, CO | Huerfano | retail-and-service-gaps-huerfano-huerfano-county-co
+- Badito | Rural community lead | Huerfano | badito-huerfano-rural-source check-nodes
+- Calumet / Delcarbon / Malachite / Tioga | Rural community lead | Huerfano | calumet-delcarbon-malachite-tioga-huerfano-rural-source check-nodes
+- Chama | Rural community lead | Huerfano | chama-huerfano-rural-source check-nodes
+- Week 3 | Huerfano Three-Week Campaign Timeline | Huerfano | week-3-huerfano-huerfano-three-week-campaign-timeline
+- Farisita | Rural community lead | Huerfano | farisita-huerfano-rural-source check-nodes
+- Rural unincorporated nodes | County Market Context & Outreach Geography | Huerfano | rural-unincorporated-nodes-huerfano-county-market-context-outreach-geogr
+- Cuchara / Gardner valley | County Market Context & Outreach Geography | Huerfano | cuchara-gardner-valley-huerfano-county-market-context-outreach-geography
+- Huerfano, CO | County-Specific Resources Overview | Huerfano | huerfano-co-huerfano-county-specific-resources-overview
+- La Veta town and arts hub | County Market Context & Outreach Geography | Huerfano | la-veta-town-and-arts-hub-huerfano-county-market-context-outreach-geogra
+- Tourism nodes | Huerfano County, CO | Huerfano | tourism-nodes-huerfano-huerfano-county-co
+- Pictou | Rural community lead | Huerfano | pictou-huerfano-rural-source check-nodes
+- Pryor | Rural community lead | Huerfano | pryor-huerfano-rural-source check-nodes
+- Red Wing | Rural community lead | Huerfano | red-wing-huerfano-rural-source check-nodes
+- Tri-county regional campaign | Suggested Hashtag Sets by Use Case | Huerfano | tri-county-regional-campaign-huerfano-suggested-hashtag-sets-by-use-case
+- Huerfano | Top Channels by County | Huerfano | huerfano-huerfano-top-channels-by-county
+- Huerfano County, CO | County audience profiles for outreach planning | Huerfano | huerfano-county-co-huerfano-county-audience-profiles-for-outreach-planni
+- Huerfano tourism or event post | Suggested Hashtag Sets by Use Case | Huerfano | huerfano-tourism-or-event-post-huerfano-suggested-hashtag-sets-by-use-ca
+- Walsenburg / Huerfano County | Local Hashtag Starters | Huerfano | walsenburg-huerfano-county-huerfano-local-hashtag-starters
+- Walsenburg county hub | County Market Context & Outreach Geography | Huerfano | walsenburg-county-hub-huerfano-county-market-context-outreach-geography
+- Week 1 | Huerfano Three-Week Campaign Timeline | Huerfano | week-1-huerfano-huerfano-three-week-campaign-timeline
+- Week 2 | Huerfano Three-Week Campaign Timeline | Huerfano | week-2-huerfano-huerfano-three-week-campaign-timeline
+- Ethnicity/language/community trust | Las Animas County, CO | Las Animas | ethnicity-language-community-trust-las-animas-las-animas-county-co
+- Media reach | Las Animas County, CO | Las Animas | media-reach-las-animas-las-animas-county-co
+- SH 389: Branson and Trinchera area | Outreach Route & Priority Map | Las Animas | sh-389-branson-and-trinchera-area-las-animas-outreach-route-priority-map
+- County roads / northeast: Hoehne | Outreach Route & Priority Map | Las Animas | county-roads-northeast-hoehne-las-animas-outreach-route-priority-map
+- US 350: Model and Kim | Outreach Route & Priority Map | Las Animas | us-350-model-and-kim-las-animas-outreach-route-priority-map
+- South / rural corridor nodes | Outreach Route & Priority Map | Las Animas | south-rural-corridor-nodes-las-animas-outreach-route-priority-map
+- Directory, itinerary & listing maintenance | Peer Models & Strategy Crosswalk | Las Animas | directory-itinerary-listing-maintenance-las-animas-peer-models-strategy-
+- Highway 12 west: Trinidad Lake, Weston, Stonewall | Outreach Route & Priority Map | Las Animas | highway-12-west-trinidad-lake-weston-stonewall-las-animas-outreach-route
+- I-25 north: Cokedale and Aguilar | Outreach Route & Priority Map | Las Animas | i-25-north-cokedale-and-aguilar-las-animas-outreach-route-priority-map
+- Las Animas | Top Channels by County | Las Animas | las-animas-las-animas-top-channels-by-county
+- Las Animas County, CO | County audience profiles for outreach planning | Las Animas | las-animas-county-co-las-animas-county-audience-profiles-for-outreach-pl
+- Las Animas, CO | County-Specific Resources Overview | Las Animas | las-animas-co-las-animas-county-specific-resources-overview
+- Marketing & Visibility | Needs Met & Remaining Gaps | Las Animas | marketing-visibility-las-animas-needs-met-remaining-gaps
+- Measurement & reporting | Peer Models & Strategy Crosswalk | Las Animas | measurement-reporting-las-animas-peer-models-strategy-crosswalk
+- Shared promotional intake & co-op amplification | Peer Models & Strategy Crosswalk | Las Animas | shared-promotional-intake-co-op-amplification-las-animas-peer-models-str
+- Trinidad / Las Animas County | Local Hashtag Starters | Las Animas | trinidad-las-animas-county-las-animas-local-hashtag-starters
+- Trinidad arts or culture post | Suggested Hashtag Sets by Use Case | Las Animas | trinidad-arts-or-culture-post-las-animas-suggested-hashtag-sets-by-use-c
+- Trinidad business post | Suggested Hashtag Sets by Use Case | Las Animas | trinidad-business-post-las-animas-suggested-hashtag-sets-by-use-case
+- Trinidad hub | Outreach Route & Priority Map | Las Animas | trinidad-hub-las-animas-outreach-route-priority-map
+- Trinidad hub vs rural settlements | Las Animas County, CO | Las Animas | trinidad-hub-vs-rural-settlements-las-animas-las-animas-county-co
+- Trinidad supplemental flyer circuit | Outreach Route & Priority Map | Las Animas | trinidad-supplemental-flyer-circuit-las-animas-outreach-route-priority-m
+- 1 week out | Promotion Timeline, Automation, and Streamlining | Regional | 1-week-out-regional-promotion-timeline-automation-and-streamlining
+- 2 weeks out | Promotion Timeline, Automation, and Streamlining | Regional | 2-weeks-out-regional-promotion-timeline-automation-and-streamlining
+- 3 days out | Promotion Timeline, Automation, and Streamlining | Regional | 3-days-out-regional-promotion-timeline-automation-and-streamlining
+- 3-4 weeks out | Promotion Timeline, Automation, and Streamlining | Regional | 3-4-weeks-out-regional-promotion-timeline-automation-and-streamlining
+- Access to Capital | Needs Met & Remaining Gaps | Regional | access-to-capital-regional-needs-met-remaining-gaps
+- Accessibility & visitor readiness | Peer Models & Strategy Crosswalk | Regional | accessibility-visitor-readiness-regional-peer-models-strategy-crosswalk
+- Active participation | How individual businesses and organizers participate | Regional | active-participation-regional-how-individual-businesses-and-organizers-p
+- Arts, culture, and creative-district partners | Arts, culture, and creative-district partners | Regional | arts-culture-and-creative-district-partners-regional-arts-culture-and-cr
+- Brand governance with partner access | Peer Models & Strategy Crosswalk | Regional | brand-governance-with-partner-access-regional-peer-models-strategy-cross
+- Broadband, computer, and mobile access | Research sources by data type | Regional | broadband-computer-and-mobile-access-regional-research-sources-by-data-t
+- Business counts by sector | Research sources by data type | Regional | business-counts-by-sector-regional-research-sources-by-data-type
+- Business planning and feasibility | Training & Technical Assistance: How to Use Support Before You Need Rescue | Regional | business-planning-and-feasibility-regional-training-technical-assistance
+- Compliance and operations | Training & Technical Assistance: How to Use Support Before You Need Rescue | Regional | compliance-and-operations-regional-training-technical-assistance-how-to-
+- Consumer segmentation and paid-media planning | Research sources by data type | Regional | consumer-segmentation-and-paid-media-planning-regional-research-sources-
+- Day of | Promotion Timeline, Automation, and Streamlining | Regional | day-of-regional-promotion-timeline-automation-and-streamlining
+- Documentation participation | How individual businesses and organizers participate | Regional | documentation-participation-regional-how-individual-businesses-and-organ
+- Grant & technical-assistance layer | Peer Models & Strategy Crosswalk | Regional | grant-technical-assistance-layer-regional-peer-models-strategy-crosswalk
+- Grant and loan readiness | Training & Technical Assistance: How to Use Support Before You Need Rescue | Regional | grant-and-loan-readiness-regional-training-technical-assistance-how-to-u
+- Heritage & downtown narrative | Peer Models & Strategy Crosswalk | Regional | heritage-downtown-narrative-regional-peer-models-strategy-crosswalk
+- Industry, employment, commuting, workforce | Research sources by data type | Regional | industry-employment-commuting-workforce-regional-research-sources-by-dat
+- Marketing and digital presence | Training & Technical Assistance: How to Use Support Before You Need Rescue | Regional | marketing-and-digital-presence-regional-training-technical-assistance-ho
+- Marketplace & onboarding standards | Peer Models & Strategy Crosswalk | Regional | marketplace-onboarding-standards-regional-peer-models-strategy-crosswalk
+- Passive participation | How individual businesses and organizers participate | Regional | passive-participation-regional-how-individual-businesses-and-organizers-
+- Population, age, households, income, poverty, education | Research sources by data type | Regional | population-age-households-income-poverty-education-regional-research-sou
+- Training & Guidance | Needs Met & Remaining Gaps | Regional | training-guidance-regional-needs-met-remaining-gaps
+- Visitor and tourism patterns | Research sources by data type | Regional | visitor-and-tourism-patterns-regional-research-sources-by-data-type
+- Within 24 hours after | Promotion Timeline, Automation, and Streamlining | Regional | within-24-hours-after-regional-promotion-timeline-automation-and-streaml
+- Workforce and hiring | Training & Technical Assistance: How to Use Support Before You Need Rescue | Regional | workforce-and-hiring-regional-training-technical-assistance-how-to-use-s

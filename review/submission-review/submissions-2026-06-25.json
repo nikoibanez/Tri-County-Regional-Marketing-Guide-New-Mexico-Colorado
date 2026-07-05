@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-06-25",
+  "submissions": [
+    {
+      "received_at": "",
+      "submission_type": "New business or organization listing",
+      "guide_section": "Network directory",
+      "county_or_region": "Regional",
+      "community": "",
+      "listing_name": "Example Listing",
+      "category": "Example category",
+      "source_url": "https://example.org",
+      "contact_email": "contact@example.org",
+      "short_description": "",
+      "reader_action": "",
+      "verification_notes": "",
+      "submitter_email": "reviewer@example.org",
+      "review_bucket": "listing",
+      "recommended_status": "user_submitted_pending_review"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision">
+<title id="title">Tri-County Route Nodes</title>
+<desc id="desc">A tri-county route-node diagram with centered county and cross-county resource cards.</desc>
+<defs>
+<style>
+  .title { font: 800 38px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .subtitle { font: 700 16px Arial, sans-serif; fill: #736646; letter-spacing: 0; }
+  .card-title { font: 800 19px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .card-title-sm { font: 800 16px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .card-body { font: 600 14px Arial, sans-serif; fill: #4A5563; letter-spacing: 0; }
+  .card-body-sm { font: 600 13px Arial, sans-serif; fill: #4A5563; letter-spacing: 0; }
+  .invert-title { font: 800 22px Arial, sans-serif; fill: #F7F3EA; letter-spacing: 0; }
+  .invert-body { font: 600 14px Arial, sans-serif; fill: #F7F3EA; opacity: .86; letter-spacing: 0; }
+  .micro { font: 700 12px Arial, sans-serif; fill: #736646; letter-spacing: 0; }
+  .card { fill: #FFFFFF; stroke: #DED6C6; stroke-width: 2; vector-effect: non-scaling-stroke; }
+  .soft { fill: #FFFFFF; opacity: .68; stroke: #DED6C6; stroke-width: 1.6; vector-effect: non-scaling-stroke; }
+  .line { fill: none; stroke: #B9A36A; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+  .line-soft { fill: none; stroke: #142B44; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: .22; vector-effect: non-scaling-stroke; }
+</style>
+<marker id="arrow" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+  <path d="M2 2 L11 7 L2 12 Z" fill="#B9A36A"/>
+</marker>
+</defs>
+<rect width="1200" height="720" fill="#F7F3EA"/>
+<text x="72" y="80" class="title">Tri-County Route Nodes</text>
+<text x="74" y="116" class="subtitle">Use this to choose a local door while keeping cross-county options visible.</text>
+<line x1="72" y1="148" x2="1128" y2="148" stroke="#B9A36A" stroke-width="3" stroke-linecap="round"/>
+
+<path d="M600 352 L290 252 M600 352 L910 252 M600 352 L290 520 M600 352 L910 520" class="line-soft"/>
+<rect x="462" y="290" width="276" height="124" rx="24" fill="#142B44"/>
+<text x="600" y="338" text-anchor="middle" class="invert-title">Stateline core</text>
+<text x="600" y="368" text-anchor="middle" class="invert-body">Network page plus</text>
+<text x="600" y="386" text-anchor="middle" class="invert-body">county entry points.</text>
+
+<g>
+  <rect x="112" y="188" width="300" height="138" rx="18" class="card"/>
+  <rect x="130" y="206" width="34" height="8" rx="4" fill="#6F8FC9"/>
+  <text x="262" y="244" text-anchor="middle" class="card-title">Colfax / Raton</text>
+  <text x="262" y="274" text-anchor="middle" class="card-body">Start with city, chamber,</text>
+<text x="262" y="292" text-anchor="middle" class="card-body">MainStreet, media, and NM tools.</text>
+</g>
+
+<g>
+  <rect x="788" y="188" width="300" height="138" rx="18" class="card"/>
+  <rect x="806" y="206" width="34" height="8" rx="4" fill="#6CB894"/>
+  <text x="938" y="244" text-anchor="middle" class="card-title">Las Animas / Trinidad</text>
+  <text x="938" y="274" text-anchor="middle" class="card-body">Start with county, city,</text>
+<text x="938" y="292" text-anchor="middle" class="card-body">tourism, arts, and media.</text>
+</g>
+
+<g>
+  <rect x="112" y="456" width="300" height="138" rx="18" class="card"/>
+  <rect x="130" y="474" width="34" height="8" rx="4" fill="#D48964"/>
+  <text x="262" y="512" text-anchor="middle" class="card-title">Huerfano / Walsenburg</text>
+  <text x="262" y="542" text-anchor="middle" class="card-body">Start with chamber, HCED,</text>
+<text x="262" y="560" text-anchor="middle" class="card-body">tourism, arts, and news.</text>
+</g>
+
+<g>
+  <rect x="788" y="456" width="300" height="138" rx="18" class="card"/>
+  <rect x="806" y="474" width="34" height="8" rx="4" fill="#B9A36A"/>
+  <text x="938" y="512" text-anchor="middle" class="card-title">Cross-county partners</text>
+  <text x="938" y="542" text-anchor="middle" class="card-body">Use directories, funders,</text>
+<text x="938" y="560" text-anchor="middle" class="card-body">creative and nonprofit hubs.</text>
+</g>
+
+</svg>

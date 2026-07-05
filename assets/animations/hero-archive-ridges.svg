@@ -1,0 +1,179 @@
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
+          <title id="title">Animated layered ridges and public source paths</title>
+          <desc id="desc">An animated layered ridge scene with a subtle path motif for templates, sources, and guide maintenance pages.</desc>
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#c2e0e5"/>
+              <stop offset="0.58" stop-color="#efe5ca"/>
+              <stop offset="1" stop-color="#f6f2df"/>
+            </linearGradient>
+            <radialGradient id="sunwash" cx="0.72" cy="0.34" r="0.42">
+              <stop offset="0" stop-color="#fff7d7" stop-opacity="0.9"/>
+              <stop offset="0.52" stop-color="#f4b06f" stop-opacity="0.28"/>
+              <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="farTone" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#8ca8a7" stop-opacity="0.70"/>
+              <stop offset="1" stop-color="#b7a48c" stop-opacity="0.68"/>
+            </linearGradient>
+            <linearGradient id="nearTone" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#557372"/>
+              <stop offset="1" stop-color="#88765b"/>
+            </linearGradient>
+
+  <linearGradient id="yuccaLeaf" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#203d43"/>
+    <stop offset="0.48" stop-color="#66806a"/>
+    <stop offset="1" stop-color="#c6c58a"/>
+  </linearGradient>
+  <linearGradient id="flower" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fff8db"/>
+    <stop offset="0.62" stop-color="#f4ecd0"/>
+    <stop offset="1" stop-color="#d6bd80"/>
+  </linearGradient>
+  <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+    <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#173047" flood-opacity="0.13"/>
+  </filter>
+
+            <style>
+  .sun-glow { animation: geo-sun 28s ease-in-out infinite alternate; }
+  .cloud-bank { animation: geo-clouds 82s linear infinite; }
+  .far-range { animation: geo-far 44s ease-in-out infinite alternate; }
+  .mid-range { animation: geo-mid 38s ease-in-out infinite alternate; }
+  .near-feature { animation: geo-near 34s ease-in-out infinite alternate; }
+  .wind-line {
+    fill: none;
+    stroke: rgba(255,255,255,0.42);
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-dasharray: 210 90;
+    animation: geo-wind 28s linear infinite;
+  }
+  .wind-line.thin { stroke-width: 0.9; opacity: 0.38; animation-duration: 34s; }
+  .wind-line.gold { stroke: rgba(216,187,104,0.28); animation-duration: 31s; }
+  .yucca-sway {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: geo-yucca 10.5s ease-in-out infinite alternate;
+  }
+  .yucca-sway.slow { animation-duration: 13s; animation-delay: -1.2s; }
+  .leaf-sway {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: geo-leaf 12s ease-in-out infinite alternate;
+  }
+  .blossom {
+    transform-box: fill-box;
+    transform-origin: 50% 18%;
+    animation: geo-blossom 9s ease-in-out infinite alternate;
+  }
+  .blossom.d2 { animation-delay: -1.6s; }
+  .blossom.d3 { animation-delay: -3.1s; }
+  .seed {
+    transform-box: fill-box;
+    transform-origin: 0 0;
+    animation: geo-seed 24s ease-in-out infinite;
+  }
+  .seed.s2 { animation-delay: -4s; }
+  .seed.s3 { animation-delay: -8s; }
+  @keyframes geo-sun {
+    from { transform: translate(-3px, 1px) scale(0.99); opacity: 0.54; }
+    to { transform: translate(4px, -2px) scale(1.01); opacity: 0.68; }
+  }
+  @keyframes geo-clouds {
+    from { transform: translateX(-220px); }
+    to { transform: translateX(1700px); }
+  }
+  @keyframes geo-far {
+    from { transform: translateX(-4px); }
+    to { transform: translateX(5px); }
+  }
+  @keyframes geo-mid {
+    from { transform: translateX(6px); }
+    to { transform: translateX(-5px); }
+  }
+  @keyframes geo-near {
+    from { transform: translateX(-3px) translateY(0.5px); }
+    to { transform: translateX(3px) translateY(-0.5px); }
+  }
+  @keyframes geo-wind {
+    from { stroke-dashoffset: 180; transform: translateX(-18px); }
+    to { stroke-dashoffset: -180; transform: translateX(26px); }
+  }
+  @keyframes geo-yucca {
+    from { transform: rotate(-0.8deg) translateX(-1px); }
+    to { transform: rotate(1.1deg) translateX(1.5px); }
+  }
+  @keyframes geo-leaf {
+    from { transform: rotate(-0.45deg); }
+    to { transform: rotate(0.75deg); }
+  }
+  @keyframes geo-blossom {
+    from { transform: rotate(-1.2deg) translateY(0); }
+    to { transform: rotate(1deg) translateY(1px); }
+  }
+  @keyframes geo-seed {
+    0%, 100% { transform: translate(0, 0) rotate(-3deg); opacity: 0.54; }
+    50% { transform: translate(14px, 4px) rotate(4deg); opacity: 0.36; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sun-glow,
+    .cloud-bank,
+    .far-range,
+    .mid-range,
+    .near-feature,
+    .wind-line,
+    .yucca-sway,
+    .leaf-sway,
+    .blossom,
+    .seed {
+      animation: none !important;
+    }
+  }
+</style>
+          </defs>
+          <rect width="1600" height="720" fill="url(#sky)"/>
+          <rect width="1600" height="720" fill="url(#sunwash)" class="sun-glow"/>
+          <g class="cloud-bank" opacity="0.42">
+            <path d="M-160 162c22-39 76-46 104-20 22-44 90-56 122-18 24-18 68-17 92 3 32 27 16 68-42 68h-276z" fill="#fff8ee"/>
+            <path d="M-520 238c16-30 54-37 76-16 15-34 64-46 89-18 18-14 54-13 72 4 25 23 14 54-30 54h-207z" fill="#fff8ee" opacity="0.78"/>
+          </g>
+          <path class="wind-line thin" d="M515 126c168 48 292 50 436 2 126-42 236-38 364 7"/>
+          <path class="wind-line" d="M356 178c190 76 384 80 566 20 192-63 342-45 536 24"/>
+          <path class="wind-line gold" d="M660 246c142 30 288 20 422-28 102-37 192-24 286 22"/>
+          <g class="far-range"><path d="M0 434l120-46 128 26 160-68 156 76 148-52 180 70 162-60 182 76 364-82v346H0z" fill="url(#farTone)" opacity="0.54"/></g>
+          <g class="mid-range"><path d="M0 510c182-64 360-72 534-24 144 39 282 24 414-44 204-104 422-84 652 48v230H0z" fill="url(#nearTone)" opacity="0.44"/></g>
+          <g class="near-feature"><path d="M380 602c160-76 304-76 432 0 106 62 230 72 372 30 104-30 216-18 336 36" fill="none" stroke="#d8bb68" stroke-width="18" stroke-linecap="round" opacity="0.24"/><path d="M420 590c154-56 296-46 428 28 114 64 240 70 378 18 86-32 182-20 288 36" fill="none" stroke="#173047" stroke-width="5" stroke-linecap="round" stroke-dasharray="18 20" opacity="0.18"/></g>
+          <g id="plains" opacity="0.95">
+            <path d="M0 542c155-30 300-28 438 8 122 31 265 36 426 10 182-30 355-18 520 42 85 31 155 37 216 18v100H0z" fill="#d8bb68" opacity="0.34"/>
+            <path d="M0 626c184-22 324-23 446-5 176 26 318 17 460-28 188-58 388-46 694 40v87H0z" fill="#95a777" opacity="0.32"/>
+            <path d="M0 680c250-34 465-34 642 0 190 36 336 38 528 3 170-31 316-22 430 22v15H0z" fill="#173047" opacity="0.10"/>
+          </g>
+
+    <g filter="url(#softShadow)" opacity="0.88" transform="translate(1212 330) scale(0.58)">
+      <g class="leaf-sway">
+        <path d="M150 520l62-260 30 270z" fill="url(#yuccaLeaf)"/>
+        <path d="M148 524l-66-220 120 222z" fill="#173047" opacity="0.9"/>
+        <path d="M178 520l148-194-80 204z" fill="#59786a"/>
+        <path d="M190 523l214-120-148 130z" fill="#2d5557"/>
+        <path d="M116 526L0 370l168 154z" fill="#24474d"/>
+        <path d="M206 526l58-158 10 164z" fill="#9baa72"/>
+      </g>
+      <g class="yucca-sway slow" transform="translate(202 54)">
+        <path d="M0 430C24 320 36 213 24 0" fill="none" stroke="#4f623d" stroke-width="10" stroke-linecap="round"/>
+        <path d="M24 58c24-24 52-42 82-55" fill="none" stroke="#60723e" stroke-width="7" stroke-linecap="round"/>
+        <path d="M24 114c-25-25-48-39-75-49" fill="none" stroke="#60723e" stroke-width="7" stroke-linecap="round"/>
+        <path d="M30 186c34-24 65-37 104-43" fill="none" stroke="#60723e" stroke-width="7" stroke-linecap="round"/>
+        <path d="M26 252c-28-22-59-38-94-46" fill="none" stroke="#60723e" stroke-width="7" stroke-linecap="round"/>
+        <g class="blossom"><ellipse cx="112" cy="4" rx="17" ry="33" fill="url(#flower)" transform="rotate(25 112 4)"/><ellipse cx="88" cy="8" rx="15" ry="30" fill="url(#flower)" transform="rotate(-12 88 8)"/></g>
+        <g class="blossom d2"><ellipse cx="-54" cy="68" rx="17" ry="34" fill="url(#flower)" transform="rotate(-24 -54 68)"/><ellipse cx="-26" cy="76" rx="15" ry="29" fill="url(#flower)" transform="rotate(12 -26 76)"/></g>
+        <g class="blossom d3"><ellipse cx="132" cy="144" rx="15" ry="32" fill="url(#flower)" transform="rotate(26 132 144)"/><ellipse cx="104" cy="151" rx="14" ry="28" fill="url(#flower)" transform="rotate(-10 104 151)"/></g>
+      </g>
+    </g>
+
+          <g opacity="0.72">
+            <path class="seed" d="M545 238c34-18 54-14 78 14-32 18-57 12-78-14z" fill="#fff3d3"/>
+            <path class="seed s2" d="M884 154c26-13 43-9 62 12-26 15-45 10-62-12z" fill="#fff3d3"/>
+            <path class="seed s3" d="M1016 312c28-16 47-11 68 13-29 16-50 11-68-13z" fill="#fff3d3"/>
+          </g>
+        </svg>

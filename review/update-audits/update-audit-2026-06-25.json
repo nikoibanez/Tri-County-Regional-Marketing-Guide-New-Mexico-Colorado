@@ -1,0 +1,534 @@
+{
+  "generated_at": "2026-06-25",
+  "registry": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\data\\update-source-registry.json",
+  "summary": {
+    "checked": 20,
+    "counts": {
+      "manual_review": 1,
+      "missing_url": 1,
+      "ok": 18
+    },
+    "needs_attention": 2,
+    "human_approval_required": 6
+  },
+  "results": [
+    {
+      "record": {
+        "id": "directory-colfax-county-clerk-55cee7eb",
+        "source_group": "directory_sources",
+        "title": "Colfax County Clerk",
+        "county": "Colfax",
+        "category": "County clerk / records",
+        "url": "https://www.co.colfax.nm.us/government/county_clerk.php",
+        "host": "co.colfax.nm.us",
+        "update_domain": "civic",
+        "cadence_days": 90,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for official-record questions and to verify county office contact pathways."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.co.colfax.nm.us/government/county_clerk.php",
+        "elapsed_ms": 1809,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "posting-general-regional-pattern-15f23190",
+        "source_group": "posting_spaces",
+        "title": "General regional pattern",
+        "county": "Regional",
+        "category": "Posting pathway",
+        "url": "",
+        "host": "",
+        "update_domain": "civic",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Field-check needed",
+        "review_level": "manual_verification_needed",
+        "public_claim_boundary": "Verify physical board access, posting permission, office hours, and public-notice rules directly.",
+        "reader_action": ""
+      },
+      "check": {
+        "status": "missing_url",
+        "status_code": null,
+        "final_url": "",
+        "error": "No source URL is attached."
+      }
+    },
+    {
+      "record": {
+        "id": "posting-raton-colfax-18bb3c19",
+        "source_group": "posting_spaces",
+        "title": "Raton / Colfax",
+        "county": "Regional",
+        "category": "Posting pathway",
+        "url": "https://www.ratonnm.gov/government/agendas_minutes.php",
+        "host": "ratonnm.gov",
+        "update_domain": "civic",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Hybrid - verify current posting locations",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify physical board access, posting permission, office hours, and public-notice rules directly.",
+        "reader_action": ""
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.ratonnm.gov/government/agendas_minutes.php",
+        "elapsed_ms": 1670,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "posting-trinidad-las-animas-883818f0",
+        "source_group": "posting_spaces",
+        "title": "Trinidad / Las Animas",
+        "county": "Regional",
+        "category": "Posting pathway",
+        "url": "https://www.trinidad.co.gov/government/public_notice.php",
+        "host": "trinidad.co.gov",
+        "update_domain": "civic",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Hybrid - verify board rules and deadlines",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify physical board access, posting permission, office hours, and public-notice rules directly.",
+        "reader_action": ""
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.trinidad.co.gov/government/public_notice.php",
+        "elapsed_ms": 791,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "posting-walsenburg-huerfano-84a3f091",
+        "source_group": "posting_spaces",
+        "title": "Walsenburg / Huerfano",
+        "county": "Regional",
+        "category": "Posting pathway",
+        "url": "https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes",
+        "host": "walsenburg.org",
+        "update_domain": "civic",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Hybrid - verify office-specific posting rules",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify physical board access, posting permission, office hours, and public-notice rules directly.",
+        "reader_action": ""
+      },
+      "check": {
+        "status": "manual_review",
+        "status_code": 403,
+        "final_url": "https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-raton-arts-humanities-council-44345608",
+        "source_group": "directory_sources",
+        "title": "Raton Arts & Humanities Council",
+        "county": "Colfax",
+        "category": "Arts organization",
+        "url": "https://www.ratonarts.org/",
+        "host": "ratonarts.org",
+        "update_domain": "creative",
+        "cadence_days": 90,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for artist visibility, exhibit questions, and cultural partnerships."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.ratonarts.org/",
+        "elapsed_ms": 682,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-city-of-raton-business-licenses-and-regulations-e63ba348",
+        "source_group": "directory_sources",
+        "title": "City of Raton Business Licenses and Regulations",
+        "county": "Colfax",
+        "category": "Licensing / compliance",
+        "url": "https://www.ratonnm.gov/business/business_license_regulations.php",
+        "host": "ratonnm.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use before publishing a startup checklist for Raton-based ventures."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.ratonnm.gov/business/business_license_regulations.php",
+        "elapsed_ms": 413,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-city-of-raton-business-services-56b4736e",
+        "source_group": "directory_sources",
+        "title": "City of Raton Business Services",
+        "county": "Colfax",
+        "category": "Municipal business resources",
+        "url": "https://www.ratonnm.gov/business/index.php",
+        "host": "ratonnm.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as the official city business hub; if a direct directory path changes, start here."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.ratonnm.gov/business/index.php",
+        "elapsed_ms": 424,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-city-of-raton-local-business-support-42043643",
+        "source_group": "directory_sources",
+        "title": "City of Raton Local Business Support",
+        "county": "Colfax",
+        "category": "Business support",
+        "url": "https://www.ratonnm.gov/business/economic_development/local_business_resources.php",
+        "host": "ratonnm.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a new venture needs the first phone call or support form."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.ratonnm.gov/business/economic_development/local_business_resources.php",
+        "elapsed_ms": 425,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-colfax-county-business-resources-8ae3ba30",
+        "source_group": "directory_sources",
+        "title": "Colfax County Business Resources",
+        "county": "Colfax",
+        "category": "County business resources",
+        "url": "https://www.co.colfax.nm.us/business/index.php",
+        "host": "co.colfax.nm.us",
+        "update_domain": "directory",
+        "cadence_days": 7,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for county procurement, notices, and official Colfax business context."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.co.colfax.nm.us/business/index.php",
+        "elapsed_ms": 809,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-enigma-directory-raton-business-entities-817a5a3b",
+        "source_group": "directory_sources",
+        "title": "Enigma Directory: Raton Business Entities",
+        "county": "Colfax",
+        "category": "Business data aggregator",
+        "url": "https://www.enigma.com/directory/nm/raton/",
+        "host": "enigma.com",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for research leads only; do not treat as an official directory or endorsement."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.enigma.com/directory/nm/raton/",
+        "elapsed_ms": 802,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-explore-raton-shopping-bfb0e270",
+        "source_group": "directory_sources",
+        "title": "Explore Raton Shopping",
+        "county": "Colfax",
+        "category": "Visitor business directory",
+        "url": "https://www.exploreraton.com/shop",
+        "host": "exploreraton.com",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a business, maker, or artist can serve travelers or day-trip visitors."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.exploreraton.com/shop",
+        "elapsed_ms": 636,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-groundworks-new-mexico-nonprofit-directory-8ebb838e",
+        "source_group": "directory_sources",
+        "title": "Groundworks New Mexico Nonprofit Directory",
+        "county": "Colfax",
+        "category": "Nonprofit directory",
+        "url": "https://www.groundworksnm.org/nonprofit-directory/new-mexico-busin?combine=&order=city&page=32&sort=desc",
+        "host": "groundworksnm.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use before manually collecting New Mexico nonprofit names."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.groundworksnm.org/nonprofit-directory/new-mexico-busin?combine=&order=city&page=32&sort=desc",
+        "elapsed_ms": 1062,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-growraton-cad019b0",
+        "source_group": "directory_sources",
+        "title": "GrowRaton",
+        "county": "Colfax",
+        "category": "Economic development",
+        "url": "https://www.growraton.org/",
+        "host": "growraton.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use for entrepreneurs and existing businesses trying to grow in Raton/Colfax."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.growraton.org/",
+        "elapsed_ms": 2420,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-growraton-commercial-properties-c488abb5",
+        "source_group": "directory_sources",
+        "title": "GrowRaton Commercial Properties",
+        "county": "Colfax",
+        "category": "Property / expansion",
+        "url": "https://www.growraton.org/properties/",
+        "host": "growraton.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a growth path needs physical space, not just promotion."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.growraton.org/properties/",
+        "elapsed_ms": 749,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-new-mexico-small-business-assistance-program-bb7f381d",
+        "source_group": "directory_sources",
+        "title": "New Mexico Small Business Assistance Program",
+        "county": "Colfax",
+        "category": "Technical assistance / noncash support",
+        "url": "https://nmsbaprogram.org/",
+        "host": "nmsbaprogram.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when a product, process, testing, design, or technical barrier is blocking business growth; note that this is assistance, not cash."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://nmsbaprogram.org/",
+        "elapsed_ms": 1145,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-nm-creative-industries-resource-center-32b3dd8b",
+        "source_group": "directory_sources",
+        "title": "NM Creative Industries Resource Center",
+        "county": "Colfax",
+        "category": "Creative economy directory",
+        "url": "https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
+        "host": "edd.newmexico.gov",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use when artists or creative ventures need a statewide directory and listing path."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
+        "elapsed_ms": 4300,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-rain-colfax-business-licenses-349f76e7",
+        "source_group": "directory_sources",
+        "title": "RAIN Colfax Business Licenses",
+        "county": "Colfax",
+        "category": "Business license support",
+        "url": "https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/",
+        "host": "raincolfax.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use as a support pointer, then verify with the responsible official office."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/",
+        "elapsed_ms": 1896,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-raton-arts-and-cultural-district-3d2e95b3",
+        "source_group": "directory_sources",
+        "title": "Raton Arts and Cultural District",
+        "county": "Colfax",
+        "category": "Creative district",
+        "url": "https://www.nmartsandculturaldistricts.org/raton/",
+        "host": "nmartsandculturaldistricts.org",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use to frame Raton as a creative-economy path, not only a business path."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.nmartsandculturaldistricts.org/raton/",
+        "elapsed_ms": 691,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-raton-chamber-business-directory-bac4788d",
+        "source_group": "directory_sources",
+        "title": "Raton Chamber Business Directory",
+        "county": "Colfax",
+        "category": "Business directory",
+        "url": "https://www.raton.info/business-directory.html",
+        "host": "raton.info",
+        "update_domain": "directory",
+        "cadence_days": 30,
+        "last_checked": null,
+        "next_check": "2026-06-25",
+        "verification_status": "Official/public source checked",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Check this before building a fresh Raton contact list."
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.raton.info/business-directory.html",
+        "elapsed_ms": 1119,
+        "error": ""
+      }
+    }
+  ]
+}

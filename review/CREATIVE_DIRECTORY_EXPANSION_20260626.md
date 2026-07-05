@@ -1,0 +1,201 @@
+# Creative Directory Expansion - 2026-06-26
+
+## Summary
+
+- Rows before: 588
+- Rows after: 588
+- New rows added: 0
+- Existing rows updated: 149
+- Duplicate rows folded into existing stable IDs: 0
+- Total creative entries processed in this pass: 149
+
+## County Mix
+
+- Huerfano: 114
+- Las Animas: 22
+- Colfax: 12
+- Regional: 1
+
+## Resource-Type Mix
+
+- Maker / Artist Vendor: 68
+- Creative / Artist: 43
+- Maker retail / Creative business: 5
+- Creative education / venue: 4
+- Food / Creative Business: 4
+- Venue / Performing Arts: 3
+- Venue / Live Music: 3
+- Museum / Creative: 2
+- Tattoo / Body art: 2
+- Creative education / community programs: 2
+- Media / Creative: 1
+- Creative nonprofit / Artist support: 1
+- Venue / Creative Space: 1
+- Creative retail / Artist supply: 1
+- Creative retail / Maker supply: 1
+- Photography / Creative: 1
+- Maker space / Creative business support: 1
+- Creative community / Music: 1
+- Creative directory: 1
+- Creative nonprofit / Gallery: 1
+- Creative / Local Business: 1
+- Heritage / Creative: 1
+- Maker marketplace / Creative directory: 1
+
+## Method
+
+Searched current public/local source pages for artist, gallery, maker, tattoo, bakery, creative retail, performing arts, creative-space, and artisan leads across Raton, Angel Fire, Eagle Nest, Trinidad, La Veta, Walsenburg, Cuchara, and surrounding tri-county corridors. Smaller municipalities were included in the search intent, but rows were only added where a public source provided a usable lead.
+
+All new individual entries are source-linked leads or local-check leads. They should be confirmed before direct outreach, publication as active businesses, or any claim about rates, eligibility, event acceptance, or availability.
+
+## Entries Processed
+
+- Raton Arts & Cultural District - Raton, Colfax - https://www.nmartsandculturaldistricts.org/raton/
+- Raton Arts & Humanities Council / Old Pass Gallery - Raton, Colfax - https://www.ratonnm.gov/business_detail_T7_R18.php
+- Old Pass Gallery - Raton, Colfax - https://www.ratonnm.gov/business_detail_T7_R18.php
+- Carl Swanson Gallery - Raton, Colfax - https://www.exploreraton.com/arts-culture
+- El Raton Media Works - Raton, Colfax - https://www.exploreraton.com/arts-culture
+- The Isabel Castillo School for the Performing Arts - Raton, Colfax - https://www.exploreraton.com/arts-culture
+- The Shuler Theater - Raton, Colfax - https://www.exploreraton.com/arts-culture
+- Eagle Nest Mercantile - Eagle Nest, Colfax - https://angelfirechamber.org/business/category/artists-galleries-studios/
+- Art Up Northern New Mexico - Angel Fire, Colfax - https://angelfirechamber.org/business/category/artists-galleries-studios/
+- J. Binford-Bell Studio & Gallery - Angel Fire, Colfax - https://angelfirechamber.org/business/category/artists-galleries-studios/
+- Enchanted Circle Pottery - Angel Fire corridor, Regional - https://angelfirechamber.org/business/category/artists-galleries-studios/
+- The Bakery & Cafe @ Angel Fire - Angel Fire, Colfax - https://angelfirechamber.org/business/the-bakery-cafe-angel-fire/
+- Taty @ the Bump - Angel Fire, Colfax - https://angelfirechamber.org/business/category/artists-galleries-studios/
+- Corazon Gallery - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- The Commons @ Space to Create - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- East Street School - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- Doug and Lori Holdread's Art Gallery - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- A.R. Mitchell Museum of Western Art - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- Marketplace Gallery - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- Tabula Rasa Gallery and Art Supply - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- Pack Mule Mercantile - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- 221B Gallery - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- Lucky Blue Tattoo - Trinidad, Las Animas - https://www.luckybluetattootrinidad.com/
+- Brick City Tattoo - Trinidad, Las Animas - https://visittrinidadcolorado.com/shop/
+- Brick Road Bakery - Trinidad, Las Animas - https://visittrinidadcolorado.com/shop/
+- Curly's Beads and Gift Shop - Trinidad, Las Animas - https://visittrinidadcolorado.com/shop/
+- Frank Images - Trinidad, Las Animas - https://visittrinidadcolorado.com/shop/
+- Mt. Carmel Wellness & Community Center - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- Heritage School at Trinidad State - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- Trinidad State Collaboratory - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- Main Street LIVE - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- Trinidad Lounge - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- The Well Hotel & Taproom - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- The Royal Tavern - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- Trinidad Colorado Music Scene - Trinidad, Las Animas - https://www.trinidadcreativedistrict.org/arts-in-the-trinidad-colorado-community
+- La Veta Creative District creative spaces - La Veta, Huerfano - https://www.lavetacreativedistrict.org/creative-spaces
+- La Veta Mercantile - La Veta, Huerfano - https://spanishpeakscountry.com/business-directory/categories/galleries
+- Walsenburg Studio - Walsenburg, Huerfano - https://spanishpeakscountry.com/business-directory/categories/galleries
+- Museum of Friends - Walsenburg, Huerfano - https://spanishpeakscountry.com/business-directory/categories/galleries
+- Kathy Hills Studio Gallery / Spanish Peaks Art - La Veta, Huerfano - https://spanishpeakscountry.com/business-directory/categories/galleries
+- Artisans on Main - La Veta, Huerfano - https://spanishpeakscountry.com/business-directory/categories/galleries
+- Spanish Peaks Arts Council / SPACe Gallery - La Veta, Huerfano - https://spanishpeakscountry.com/business-directory/categories/galleries
+- Shalawalla Gallery, Gift Shop, & School - La Veta, Huerfano - https://spanishpeakscountry.com/business-directory/categories/galleries
+- Judith Baker Montano - La Veta, Huerfano - https://www.lavetacreativedistrict.org/creative-spaces
+- Crafted in Colorado - La Veta, Huerfano - https://www.lavetacreativedistrict.org/creative-spaces
+- Estelle Center for Creative Arts - La Veta, Huerfano - https://www.lavetacreativedistrict.org/creative-spaces
+- Francisco Center for the Performing Arts - La Veta, Huerfano - https://www.lavetacreativedistrict.org/creative-spaces
+- La Veta School of the Arts - La Veta, Huerfano - https://www.lavetacreativedistrict.org/creative-spaces
+- Nicole Copel Ceramics - La Veta, Huerfano - https://www.lavetacreativedistrict.org/creative-spaces
+- Grasshopper Studio / Grasshopper Co. - La Veta, Huerfano - https://www.lavetacreativedistrict.org/creative-spaces
+- H's Place - La Veta, Huerfano - https://www.lavetacreativedistrict.org/creative-spaces
+- Huajatolla Heritage Foundation - La Veta, Huerfano - https://www.lavetacreativedistrict.org/creative-spaces
+- Silvershoe - La Veta, Huerfano - https://www.lavetacreativedistrict.org/creative-spaces
+- Two Mountain Treasures - La Veta, Huerfano - https://www.lavetacreativedistrict.org/creative-spaces
+- Lighthouse Coffee & His Majesty's Bakery - Walsenburg, Huerfano - https://spanishpeakscountry.com/business-directory
+- Cuchara Mountain Mercantile - Cuchara, Huerfano - https://spanishpeakscountry.com/business-directory
+- Walsenburg Mercantile makers directory - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Shawn Bridges / Shawn K. Bridges Art - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Lyle Clift - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Sandy Dolak - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Cathy Fowler - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Bob Hoffman / Artisans on Main - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Jennifer Peterson / Estelle Center for Creative Arts - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Anjillee Schwarz / Grasshopper Co. - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Wayne Stewart Fine Art - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Maria Battista - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Nancy Carroll / Artisans on Main - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Beth Evans / Shalawalla Studio & Gallery - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Cathryn Gladyshev - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Kate McCabe / Artisans on Main - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Steve Riley Limited Editions - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Mary Scott / Nevermore Fiber Fabrications - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Gary Alan Weston Studios - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Lynn Bower Andrews / SPACe Gallery - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Jolynn Chappell / Nature Canyon Arts - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Heather Curtis - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Jonathan Evans / Shalawalla Studio & Gallery - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Marta Moore Art - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Kenny Schneider / Kenetics - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Arthur Short Bull - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- Peggy Zehring / La Veta School of the Arts - La Veta, Huerfano - https://www.lavetacreativedistrict.org/artists
+- 2K Design - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Andreatta Beef - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Bob Bader Custom Wood Products - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Centennial Cuts - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Colorado Crunch - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Customization By Elizabeth - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Donovans Creations - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Eves Crafts and Creations - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Fox Canyon Knives - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Ink By Bink - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Lisa Lynn - Wildlife Artist - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Mimi's Merch - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Mountain View Sanctuary - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- SOCO Chili - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Silver Mountain Pottery - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Southern Colorado Crafts - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Suzy's Salsa - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- 3rd Times A Charm - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Artist Vicky De Taos - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Boonelicious LLC - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Centennial Jewelry - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- CostaCustoms - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- DeWitt Enterprises - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Dreaming Frog - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Fancy - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Heart Song - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- JC CREATIONS - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Mallory's Treehouse - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Moon Mountain Studio - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Nickell Designs - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Scotty B's Custom T's - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Simply Gray Boutique - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Stardust Farm & Flowers - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Too Cool Chicks - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- 719 Tines - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Between the Knotted Lines - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Borrowed Blooms - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Chae Organics - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Cowgirl Style - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Desert Salt Rainbow Woman - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- E-Z P-Z Woodworking Art - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Flamingo Book Club - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Hearts & Crafts - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- JV Jungle Cuts - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Mike Snoddy - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Mountain Bubbles - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Odie Art - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Scrap Happy - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Simply Stitchz - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Studio Katie - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Two Hare Trading - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Amber Schalla Silver - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Blue Hemp Honey - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Botanical Creations - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Chollafire - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Craftsman Cottage Artisans - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Designs By Dustbunny - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Ecozoica Apothecary - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Flyda - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Huerfano County Historical Society - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Kissed By Katie - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Mimi's Creations - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Mountain Escapes - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Redhyl Welding - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Second Chance - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Sofia Sugar Shack - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Sunrise Mesa Design - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors
+- Vanishing Horizons - Walsenburg, Huerfano - https://www.walsenburgmercantile.com/meet-our-vendors

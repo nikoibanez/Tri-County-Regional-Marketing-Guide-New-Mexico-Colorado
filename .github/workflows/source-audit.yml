@@ -1,0 +1,40 @@
+name: Grants source audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 15 * * 2"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build site data
+        run: python tools/build_netlify_deep_guide.py
+
+      - name: Build update registry
+        run: python scripts/build_update_source_registry.py
+
+      - name: Audit grants and funding sources
+        run: python scripts/audit_update_sources.py --domain funding
+
+      - name: Upload audit reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: tri-county-grants-source-audit
+          path: |
+            data/update-source-registry.json
+            data/update-source-registry.md
+            review/update-audits/update-audit-latest.json
+            review/update-audits/update-audit-latest.md

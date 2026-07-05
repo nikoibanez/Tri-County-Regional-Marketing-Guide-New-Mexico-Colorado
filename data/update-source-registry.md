@@ -1,0 +1,135 @@
+# Update Source Registry
+
+Generated: 2026-06-27
+
+Automation may propose updates. Human approval is required for public claims, eligibility, rates, deadlines, contact changes, listing removal, and civic/legal guidance.
+
+## Counts
+
+- Records: 121
+- Human approval required: 53
+- Manual verification needed: 1
+
+## Records
+
+- [Colfax County Clerk](https://www.co.colfax.nm.us/government/county_clerk.php) - Colfax; civic; every 90 days; standard_review
+- General regional pattern - Regional; civic; every 7 days; manual_verification_needed
+- [Raton / Colfax](https://www.ratonnm.gov/government/agendas_minutes.php) - Regional; civic; every 7 days; human_approval_required
+- [Trinidad / Las Animas](https://www.trinidad.co.gov/government/public_notice.php) - Regional; civic; every 7 days; human_approval_required
+- [Walsenburg / Huerfano](https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes) - Regional; civic; every 7 days; human_approval_required
+- [Raton Arts & Humanities Council](https://www.ratonarts.org/) - Colfax; creative; every 90 days; standard_review
+- [Angel Fire Chamber Member Business Directory](https://angelfirechamber.org/local-businesses/) - Colfax; directory; every 30 days; standard_review
+- [City of Raton Business Licenses and Regulations](https://www.ratonnm.gov/business/business_license_regulations.php) - Colfax; directory; every 30 days; human_approval_required
+- [City of Raton Business Services](https://www.ratonnm.gov/business/index.php) - Colfax; directory; every 30 days; human_approval_required
+- [City of Raton Economic Development Programs](https://www.ratonnm.gov/business/economic_development/index.php) - Colfax; directory; every 30 days; standard_review
+- [City of Raton Local Business Support](https://www.ratonnm.gov/business/economic_development/local_business_resources.php) - Colfax; directory; every 30 days; standard_review
+- [Colfax County Business Resources](https://www.co.colfax.nm.us/business/index.php) - Colfax; directory; every 7 days; standard_review
+- [Enigma Directory: Raton Business Entities](https://www.enigma.com/directory/nm/raton/) - Colfax; directory; every 30 days; standard_review
+- [Explore Raton Shopping](https://www.exploreraton.com/shop) - Colfax; directory; every 30 days; standard_review
+- [Groundworks New Mexico Nonprofit Directory](https://www.groundworksnm.org/nonprofit-directory/new-mexico-busin?combine=&order=city&page=32&sort=desc) - Colfax; directory; every 30 days; standard_review
+- [GrowRaton](https://www.growraton.org/) - Colfax; directory; every 30 days; standard_review
+- [GrowRaton Commercial Properties](https://www.growraton.org/properties/) - Colfax; directory; every 30 days; standard_review
+- [New Mexico Small Business Assistance Program](https://nmsbaprogram.org/) - Colfax; directory; every 30 days; standard_review
+- [NM Creative Industries Resource Center](https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/) - Colfax; directory; every 30 days; standard_review
+- [RAIN Colfax Business Licenses](https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/) - Colfax; directory; every 30 days; human_approval_required
+- [Raton Arts and Cultural District](https://www.nmartsandculturaldistricts.org/raton/) - Colfax; directory; every 30 days; standard_review
+- [Raton Chamber Business Directory](https://www.raton.info/business-directory.html) - Colfax; directory; every 30 days; standard_review
+- [ROAMS Local Resources](https://roamsnm.org/) - Colfax; directory; every 30 days; standard_review
+- [Village of Eagle Nest Business Directory](https://www.eaglenest.org/water_waste_water/businessdirectory) - Colfax; directory; every 30 days; standard_review
+- [Yellow Pages Raton Business Listings](https://www.yellowpages.com/raton-nm/business-listings/1) - Colfax; directory; every 30 days; standard_review
+- [Huerfano Chamber Resources](https://www.chamber.huerfano.org/resources) - Huerfano; directory; every 30 days; standard_review
+- [Spanish Peaks Country Add Business Listing](https://spanishpeakscountry.com/add-business-listing/) - Huerfano; directory; every 30 days; standard_review
+- [Spanish Peaks Country Add Business Listing](https://spanishpeakscountry.com/add-business-listing/) - Huerfano; directory; every 30 days; standard_review
+- [Spanish Peaks Country Business Directory](https://spanishpeakscountry.com/business-directory) - Huerfano; directory; every 30 days; standard_review
+- [Town of La Veta Business Directory](https://townoflaveta-co.gov/business-directory/) - Huerfano; directory; every 30 days; standard_review
+- [Wheelhouse Retail Incubator & Makerspace](https://www.wheelhouseincubator.org/) - Huerfano; directory; every 30 days; standard_review
+- [Spanish Peaks Country Business Directory](https://spanishpeakscountry.com/business-directory) - Huerfano County; directory; every 30 days; standard_review
+- [Bent County Business Development](https://www.bentcounty.net/businesses/business_development.php) - Las Animas; directory; every 30 days; standard_review
+- [Colorado Gives](https://www.coloradogives.org/) - Las Animas; directory; every 30 days; standard_review
+- [Artists Sunday Artist Directory](https://artistssunday.com/directory/) - Regional; directory; every 30 days; standard_review
+- [Colexico Alliance / TLAC Chamber Regional Hub](https://tlacchamber.org/) - Regional; directory; every 30 days; standard_review
+- [Colorado Nonprofit Association Directory](https://coloradononprofits.org/member-resources/nonprofit-member-directory/) - Regional; directory; every 30 days; standard_review
+- [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; every 30 days; standard_review
+- [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; every 30 days; standard_review
+- [Finance New Mexico Regional Economic Development Organizations](https://financenewmexico.org/resources/general-business-assistance/regional-economic-development-organizations/) - Regional; directory; every 30 days; standard_review
+- [New Mexico Business Portal](https://biz.nm.gov/business-navigator/licenses-and-permits/) - Regional; directory; every 30 days; human_approval_required
+- [New Mexico Small Business Development Center](https://www.nmsbdc.org/) - Regional; directory; every 30 days; standard_review
+- [NM Family Friendly Business Directory](https://nmfamilyfriendlybusiness.org/premium-business-directory/) - Regional; directory; every 30 days; standard_review
+- [SBA SBDC Finder](https://www.sba.gov/local-assistance/resource-partners/small-business-development-centers-sbdc) - Regional; directory; every 30 days; standard_review
+- [Southern Colorado Economic Development District](https://www.scedd.com/) - Regional; directory; every 30 days; standard_review
+- [Angel Fire Resort Events](https://www.angelfireresort.com/events/) - Angel Fire / Colfax; events; every 7 days; human_approval_required
+- [Angel Fire Resort Vacation Rentals](https://www.angelfireresortvacationrentals.com/plan-your-trip/summer-events/) - Angel Fire / Colfax; events; every 7 days; standard_review
+- [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; every 7 days; standard_review
+- [Visit Angel Fire NM Get Listed](https://visitangelfirenm.com/get-listed/) - Angel Fire / Colfax; events; every 7 days; standard_review
+- [Explore Raton](https://www.exploreraton.com/) - Colfax; events; every 7 days; standard_review
+- [Explore Raton Events](https://www.exploreraton.com/events) - Colfax; events; every 7 days; standard_review
+- [KRTN Enchanted Air Radio](https://krtnradio.com/wp/advertising/) - Colfax; events; every 7 days; human_approval_required
+- [Raton MainStreet](https://ratonmainstreet.org/) - Colfax; events; every 7 days; standard_review
+- [Bachman Community Calendar](https://www.discoverbachman.com/community-calendar/) - Huerfano; events; every 7 days; standard_review
+- [Huerfano County Chamber](https://www.chamber.huerfano.org/) - Huerfano; events; every 7 days; standard_review
+- [Huerfano County Government](https://huerfano.us/) - Huerfano; events; every 7 days; human_approval_required
+- [Huerfano County Government Calendar](https://huerfano.us/) - Huerfano; events; every 7 days; standard_review
+- [La Veta Creative District](https://www.lavetacreativedistrict.org/) - Huerfano; events; every 7 days; standard_review
+- [Spanish Peaks Country Submit Event](https://spanishpeakscountry.com/spc-events/community/add/) - Huerfano; events; every 7 days; standard_review
+- [The World Journal](https://worldjournalnewspaper.com/) - Huerfano; events; every 7 days; human_approval_required
+- [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; every 7 days; human_approval_required
+- [World Journal](https://worldjournalnewspaper.com/) - Huerfano / Walsenburg; events; every 7 days; human_approval_required
+- [Spanish Peaks Country Submit Event](https://spanishpeakscountry.com/spc-events/community/add/) - Huerfano County; events; every 7 days; standard_review
+- [Spanish Peaks Country Newsletter](https://spanishpeakscountry.com/newsletter-signup/) - Huerfano County / Walsenburg / La Veta / Cuchara; events; every 7 days; standard_review
+- [La Veta Creative District](https://www.lavetacreativedistrict.org/festivals-and-signature-events) - La Veta / Huerfano; events; every 7 days; standard_review
+- [City of Trinidad Economic Development Newsletter](https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php) - Las Animas; events; every 7 days; standard_review
+- [Colexico Alliance / TLAC Chamber](https://tlacchamber.org/) - Las Animas; events; every 7 days; standard_review
+- [CREATE Trinidad](https://www.trinidadcreativedistrict.org/) - Las Animas; events; every 7 days; standard_review
+- [Visit Trinidad Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Las Animas; events; every 7 days; standard_review
+- [Visit Trinidad Submit Your Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Las Animas; events; every 7 days; human_approval_required
+- [Red River Brewing Company & Distillery](https://www.redriverbrewing.com/) - Red River / Colfax; events; every 7 days; standard_review
+- [Red River Chamber / RedRiver.org Events](https://redriver.org/events/) - Red River / Colfax; events; every 7 days; standard_review
+- [NM Creative Industries Resource Submission / Update](https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/) - Regional; events; every 7 days; standard_review
+- [City of Trinidad Economic Development](https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php) - Trinidad / Las Animas; events; every 7 days; standard_review
+- [Main Street LIVE](https://www.mainstreetlive.org/) - Trinidad / Las Animas; events; every 7 days; standard_review
+- [Main Street LIVE 2026 Calendar](https://www.mainstreetlive.org/2026-calendar) - Trinidad / Las Animas; events; every 7 days; standard_review
+- [Visit Trinidad Submit Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Trinidad / Las Animas; events; every 7 days; standard_review
+- [Visit Trinidad Tourism / Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Trinidad / Las Animas; events; every 7 days; standard_review
+- [New Mexico Arts Grants](https://nmarts.org/grants/grants-information/) - Colfax; funding; every 7 days; human_approval_required
+- [New Mexico Business Portal Financial Assistance](https://biz.nm.gov/financial-assistance/) - Colfax; funding; every 7 days; human_approval_required
+- [New Mexico Creative Industries Division Grants](https://www.edd.newmexico.gov/grants/cid-grants/) - Colfax; funding; every 7 days; human_approval_required
+- [New Mexico Finance Authority Opportunity Enterprise](https://www.nmfinance.com/project/opportunity-enterprise-commercial-development/) - Colfax; funding; every 30 days; human_approval_required
+- [New Mexico Finance Authority SSBCI](https://www.nmfinance.com/project/state-small-business-credit-initiative-ssbci/) - Colfax; funding; every 30 days; human_approval_required
+- [New Mexico Job Training Incentive Program](https://www.edd.newmexico.gov/programs-and-services/business-development/job-training-incentive-program/) - Colfax; funding; every 7 days; human_approval_required
+- [New Mexico Local Economic Development Act](https://www.edd.newmexico.gov/local-economic-development-act/) - Colfax; funding; every 30 days; human_approval_required
+- [SHARE New Mexico](https://sharenm.org/) - Colfax; funding; every 7 days; human_approval_required
+- [WESST Lending](https://www.wesst.org/lending) - Colfax; funding; every 30 days; human_approval_required
+- [Huerfano County Economic Development Support & Incentives](https://www.huerfano.org/support) - Huerfano; funding; every 30 days; human_approval_required
+- [Spanish Peaks Community Foundation](https://www.spanishpeaks.foundation/) - Huerfano; funding; every 7 days; human_approval_required
+- [Bar NI Community Fund](https://barnicommunityfund.org/) - Las Animas; funding; every 7 days; human_approval_required
+- [City of Trinidad Grants](https://www.trinidad.co.gov/services/grants.php) - Las Animas; funding; every 7 days; human_approval_required
+- [Southern Colorado Community Foundation Nonprofit Directory](https://sccfcolorado.org/nonprofit-directory/) - Las Animas; funding; every 7 days; human_approval_required
+- [Trinidad Community Foundation](https://www.trinidadcf.org/board.html) - Las Animas; funding; every 7 days; human_approval_required
+- [Trinidad Community Foundation Grant Process](https://www.trinidadcf.org/grants.html) - Las Animas; funding; every 7 days; human_approval_required
+- [Arts in Society Grant](https://oedit.colorado.gov/arts-in-society-grant) - Regional; funding; every 7 days; human_approval_required
+- [Colorado Advanced Industries Accelerator Programs](https://oedit.colorado.gov/advanced-industries-accelerator-programs) - Regional; funding; every 7 days; human_approval_required
+- [Colorado Business Funding and Incentives](https://oedit.colorado.gov/business-funding-and-incentives) - Regional; funding; every 7 days; human_approval_required
+- [Colorado Community Revitalization Grant](https://oedit.colorado.gov/colorado-community-revitalization-grant) - Regional; funding; every 7 days; human_approval_required
+- [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - Regional; funding; every 7 days; human_approval_required
+- [Colorado Creative Industries](https://oedit.colorado.gov/colorado-creative-industries) - Regional; funding; every 7 days; human_approval_required
+- [Colorado Rural Jump-Start Program](https://oedit.colorado.gov/rural-jump-start-program) - Regional; funding; every 7 days; human_approval_required
+- [Folk and Traditional Arts Project Grant](https://oedit.colorado.gov/folk-and-traditional-arts-project-grant) - Regional; funding; every 7 days; human_approval_required
+- [Gates Family Foundation Capital Grants](https://gatesfamilyfoundation.org/types-of-support/capital-grants/) - Regional; funding; every 7 days; human_approval_required
+- [Grants.gov](https://www.grants.gov/) - Regional; funding; every 7 days; human_approval_required
+- [History Colorado State Historical Fund](https://www.historycolorado.org/state-historical-fund) - Regional; funding; every 7 days; human_approval_required
+- [National Endowment for the Arts Grants](https://www.arts.gov/grants) - Regional; funding; every 7 days; human_approval_required
+- [NM EDD Business Resource Map](https://www.edd.newmexico.gov/resource-map/) - Regional; funding; every 7 days; human_approval_required
+- [SBA Funding Programs](https://www.sba.gov/funding-programs) - Regional; funding; every 7 days; human_approval_required
+- [SBA Lender Match](https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders) - Regional; funding; every 7 days; human_approval_required
+- [Southern Colorado Community Foundation Grants](https://sccfcolorado.org/for-grantseekers/grants/) - Regional; funding; every 7 days; human_approval_required
+- [Southern Colorado Community Foundation Scholarship](https://sccfcolorado.org/madeline-mellers-memorial-girls-golf-scholarship/) - Regional; funding; every 7 days; human_approval_required
+- [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; funding; every 7 days; human_approval_required
+- [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; every 7 days; human_approval_required
+- [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; every 7 days; human_approval_required
+- [Tax Exempt World Colfax County Organizations](https://www.taxexemptworld.com/organizations/colfax-county-nm-new-mexico.asp) - Colfax; general; every 30 days; standard_review
+- [Spanish Peaks Library Community Links](https://www.spld.org/connect/community-links/) - Huerfano; general; every 30 days; standard_review
+- [Las Animas County Government](https://lasanimascounty.colorado.gov/) - Las Animas; general; every 90 days; standard_review
+- [El Raton Media Works Local Businesses](https://www.elratonmediaworks.org/local-businesses) - Colfax; media; every 30 days; standard_review
+- [World Journal Services Directory](https://worldjournalnewspaper.com/services/) - Huerfano; media; every 30 days; human_approval_required
+- [The Chronicle-News](https://www.thechronicle-news.com/) - Las Animas; media; every 7 days; human_approval_required
+- [Red River Chamber Vacation Guide](https://redriver.org/plan-your-trip/vacation-guide/) - Red River / Colfax; media; every 7 days; human_approval_required

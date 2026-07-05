@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision">
+<title id="title">Growth Cycle</title>
+<desc id="desc">A six-step growth cycle with centered boxes and descriptions for goals, audience, sources, packets, channels, and replies.</desc>
+<defs>
+<style>
+  .title { font: 800 38px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .subtitle { font: 700 16px Arial, sans-serif; fill: #736646; letter-spacing: 0; }
+  .card-title { font: 800 19px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .card-title-sm { font: 800 16px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .card-body { font: 600 14px Arial, sans-serif; fill: #4A5563; letter-spacing: 0; }
+  .card-body-sm { font: 600 13px Arial, sans-serif; fill: #4A5563; letter-spacing: 0; }
+  .invert-title { font: 800 22px Arial, sans-serif; fill: #F7F3EA; letter-spacing: 0; }
+  .invert-body { font: 600 14px Arial, sans-serif; fill: #F7F3EA; opacity: .86; letter-spacing: 0; }
+  .micro { font: 700 12px Arial, sans-serif; fill: #736646; letter-spacing: 0; }
+  .card { fill: #FFFFFF; stroke: #DED6C6; stroke-width: 2; vector-effect: non-scaling-stroke; }
+  .soft { fill: #FFFFFF; opacity: .68; stroke: #DED6C6; stroke-width: 1.6; vector-effect: non-scaling-stroke; }
+  .line { fill: none; stroke: #B9A36A; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+  .line-soft { fill: none; stroke: #142B44; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: .22; vector-effect: non-scaling-stroke; }
+</style>
+<marker id="arrow" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+  <path d="M2 2 L11 7 L2 12 Z" fill="#B9A36A"/>
+</marker>
+</defs>
+<rect width="1200" height="720" fill="#F7F3EA"/>
+<text x="72" y="80" class="title">Growth Cycle</text>
+<text x="74" y="116" class="subtitle">Use this to turn promotion from a one-time task into a repeatable loop.</text>
+<line x1="72" y1="148" x2="1128" y2="148" stroke="#B9A36A" stroke-width="3" stroke-linecap="round"/>
+
+<path d="M600 212 C822 212 990 330 990 398 C990 466 822 584 600 584 C378 584 210 466 210 398 C210 330 378 212 600 212" class="line" marker-end="url(#arrow)" opacity=".48"/>
+
+<g>
+  <rect x="486" y="176" width="228" height="100" rx="18" class="card"/>
+  <rect x="504" y="194" width="34" height="8" rx="4" fill="#6CB894"/>
+  <text x="600" y="213" text-anchor="middle" class="card-title">Define goal</text>
+  <text x="600" y="243" text-anchor="middle" class="card-body">Pick customers, partners,</text>
+<text x="600" y="261" text-anchor="middle" class="card-body">funding, trust, or visits.</text>
+</g>
+
+<g>
+  <rect x="762" y="252" width="228" height="100" rx="18" class="card"/>
+  <rect x="780" y="270" width="34" height="8" rx="4" fill="#6F8FC9"/>
+  <text x="876" y="289" text-anchor="middle" class="card-title">Name audience</text>
+  <text x="876" y="319" text-anchor="middle" class="card-body">Decide who needs to</text>
+<text x="876" y="337" text-anchor="middle" class="card-body">notice or respond.</text>
+</g>
+
+<g>
+  <rect x="762" y="448" width="228" height="100" rx="18" class="card"/>
+  <rect x="780" y="466" width="34" height="8" rx="4" fill="#5BAEAD"/>
+  <text x="876" y="485" text-anchor="middle" class="card-title">Check sources</text>
+  <text x="876" y="515" text-anchor="middle" class="card-body">Start with existing</text>
+<text x="876" y="533" text-anchor="middle" class="card-body">directories and calendars.</text>
+</g>
+
+<g>
+  <rect x="486" y="572" width="228" height="100" rx="18" class="card"/>
+  <rect x="504" y="590" width="34" height="8" rx="4" fill="#B9A36A"/>
+  <text x="600" y="609" text-anchor="middle" class="card-title">Build packet</text>
+  <text x="600" y="639" text-anchor="middle" class="card-body">Prepare one reusable</text>
+<text x="600" y="657" text-anchor="middle" class="card-body">blurb, image, and ask.</text>
+</g>
+
+<g>
+  <rect x="210" y="448" width="228" height="100" rx="18" class="card"/>
+  <rect x="228" y="466" width="34" height="8" rx="4" fill="#D48964"/>
+  <text x="324" y="485" text-anchor="middle" class="card-title">Send through</text>
+  <text x="324" y="515" text-anchor="middle" class="card-body">Submit to matched</text>
+<text x="324" y="533" text-anchor="middle" class="card-body">media and partner routes.</text>
+</g>
+
+<g>
+  <rect x="210" y="252" width="228" height="100" rx="18" class="card"/>
+  <rect x="228" y="270" width="34" height="8" rx="4" fill="#695674"/>
+  <text x="324" y="289" text-anchor="middle" class="card-title">Track reply</text>
+  <text x="324" y="319" text-anchor="middle" class="card-body">Log where it went</text>
+<text x="324" y="337" text-anchor="middle" class="card-body">and what came back.</text>
+</g>
+<rect x="462" y="338" width="276" height="112" rx="22" fill="#142B44"/>
+<text x="600" y="384" text-anchor="middle" class="invert-title">Refine and repeat</text>
+<text x="600" y="414" text-anchor="middle" class="invert-body">The response changes</text>
+<text x="600" y="432" text-anchor="middle" class="invert-body">the next cycle.</text>
+
+</svg>

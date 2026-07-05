@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision">
+<title id="title">Cross-Promotion Loop</title>
+<desc id="desc">A cross-promotion loop with six centered steps and a central follow-up log.</desc>
+<defs>
+<style>
+  .title { font: 800 38px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .subtitle { font: 700 16px Arial, sans-serif; fill: #736646; letter-spacing: 0; }
+  .card-title { font: 800 19px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .card-title-sm { font: 800 16px Arial, sans-serif; fill: #142B44; letter-spacing: 0; }
+  .card-body { font: 600 14px Arial, sans-serif; fill: #4A5563; letter-spacing: 0; }
+  .card-body-sm { font: 600 13px Arial, sans-serif; fill: #4A5563; letter-spacing: 0; }
+  .invert-title { font: 800 22px Arial, sans-serif; fill: #F7F3EA; letter-spacing: 0; }
+  .invert-body { font: 600 14px Arial, sans-serif; fill: #F7F3EA; opacity: .86; letter-spacing: 0; }
+  .micro { font: 700 12px Arial, sans-serif; fill: #736646; letter-spacing: 0; }
+  .card { fill: #FFFFFF; stroke: #DED6C6; stroke-width: 2; vector-effect: non-scaling-stroke; }
+  .soft { fill: #FFFFFF; opacity: .68; stroke: #DED6C6; stroke-width: 1.6; vector-effect: non-scaling-stroke; }
+  .line { fill: none; stroke: #B9A36A; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+  .line-soft { fill: none; stroke: #142B44; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: .22; vector-effect: non-scaling-stroke; }
+</style>
+<marker id="arrow" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+  <path d="M2 2 L11 7 L2 12 Z" fill="#B9A36A"/>
+</marker>
+</defs>
+<rect width="1200" height="720" fill="#F7F3EA"/>
+<text x="72" y="80" class="title">Cross-Promotion Loop</text>
+<text x="74" y="116" class="subtitle">Use this to make collaboration a repeatable exchange, not a one-off favor.</text>
+<line x1="72" y1="148" x2="1128" y2="148" stroke="#B9A36A" stroke-width="3" stroke-linecap="round"/>
+<path d="M600 262 C770 262 900 350 900 430 C900 510 770 598 600 598 C430 598 300 510 300 430 C300 350 430 262 600 262" class="line" marker-end="url(#arrow)" opacity=".55"/>
+<g>
+  <rect x="486" y="178" width="228" height="98" rx="18" class="card"/>
+  <rect x="504" y="196" width="34" height="8" rx="4" fill="#6CB894"/>
+  <text x="600" y="214" text-anchor="middle" class="card-title-sm">Identify partner</text>
+  <text x="600" y="244" text-anchor="middle" class="card-body-sm">Find a nearby business,</text>
+<text x="600" y="262" text-anchor="middle" class="card-body-sm">venue, program, or office.</text>
+</g>
+
+<g>
+  <rect x="762" y="286" width="228" height="98" rx="18" class="card"/>
+  <rect x="780" y="304" width="34" height="8" rx="4" fill="#6F8FC9"/>
+  <text x="876" y="322" text-anchor="middle" class="card-title-sm">Share asset</text>
+  <text x="876" y="352" text-anchor="middle" class="card-body-sm">Send one blurb, image,</text>
+<text x="876" y="370" text-anchor="middle" class="card-body-sm">date, link, and ask.</text>
+</g>
+
+<g>
+  <rect x="762" y="500" width="228" height="98" rx="18" class="card"/>
+  <rect x="780" y="518" width="34" height="8" rx="4" fill="#5BAEAD"/>
+  <text x="876" y="536" text-anchor="middle" class="card-title-sm">Publish or tag</text>
+  <text x="876" y="566" text-anchor="middle" class="card-body-sm">Make the exchange</text>
+<text x="876" y="584" text-anchor="middle" class="card-body-sm">visible and easy to share.</text>
+</g>
+
+<g>
+  <rect x="486" y="584" width="228" height="98" rx="18" class="card"/>
+  <rect x="504" y="602" width="34" height="8" rx="4" fill="#B9A36A"/>
+  <text x="600" y="620" text-anchor="middle" class="card-title-sm">Thank and recap</text>
+  <text x="600" y="650" text-anchor="middle" class="card-body-sm">Report the result and</text>
+<text x="600" y="668" text-anchor="middle" class="card-body-sm">credit the partner.</text>
+</g>
+
+<g>
+  <rect x="210" y="500" width="228" height="98" rx="18" class="card"/>
+  <rect x="228" y="518" width="34" height="8" rx="4" fill="#D48964"/>
+  <text x="324" y="536" text-anchor="middle" class="card-title-sm">Log outcome</text>
+  <text x="324" y="566" text-anchor="middle" class="card-body-sm">Track visits, replies,</text>
+<text x="324" y="584" text-anchor="middle" class="card-body-sm">sales, or signups.</text>
+</g>
+
+<g>
+  <rect x="210" y="286" width="228" height="98" rx="18" class="card"/>
+  <rect x="228" y="304" width="34" height="8" rx="4" fill="#695674"/>
+  <text x="324" y="322" text-anchor="middle" class="card-title-sm">Repeat better</text>
+  <text x="324" y="352" text-anchor="middle" class="card-body-sm">Use what worked in</text>
+<text x="324" y="370" text-anchor="middle" class="card-body-sm">the next small cycle.</text>
+</g>
+<rect x="472" y="372" width="256" height="92" rx="20" fill="#142B44"/>
+<text x="600" y="408" text-anchor="middle" class="invert-title">Follow-up log</text>
+<text x="600" y="436" text-anchor="middle" class="invert-body">Keep the relationship</text>
+<text x="600" y="454" text-anchor="middle" class="invert-body">visible and useful.</text>
+
+</svg>

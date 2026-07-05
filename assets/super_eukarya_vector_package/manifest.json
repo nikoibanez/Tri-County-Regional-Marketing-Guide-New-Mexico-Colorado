@@ -1,0 +1,23 @@
+{
+  "palette": {
+    "navy": "#0B1F3B",
+    "cream": "#F4F1EA",
+    "gold": "#C8A96A",
+    "teal": "#0EA5A8",
+    "blue": "#2563EB",
+    "orange": "#FF671F",
+    "green": "#10B981",
+    "red": "#C62828"
+  },
+  "assets": [
+    "se_system_map.svg",
+    "se_persona_finder_diagram.svg",
+    "se_tri_county_route_nodes.svg",
+    "se_visibility_stack.svg",
+    "se_accessibility_contrast.svg",
+    "se_bulletin_media_network.svg",
+    "se_funding_pipeline.svg",
+    "se_cross_promotion_loop.svg"
+  ],
+  "notes": "SVGs are flat, editable, web-ready, and use Super Eukarya system principles."
+}
