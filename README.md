@@ -2,6 +2,16 @@
 
 Static Netlify-ready guide for businesses, nonprofits, artists, creators, programs, and service providers working across Colfax County, Las Animas County, and Huerfano County.
 
+## GitHub Pages
+
+This repository can publish the prebuilt static site in `dist/site` with GitHub Pages.
+
+- Publish workflow: `.github/workflows/deploy-github-pages.yml`
+- Trigger: every push to `master`
+- Published folder: `dist/site`
+
+If GitHub Pages is enabled for the repository, pushes to `master` will automatically update the live site without Netlify production deploy credits.
+
 ## Build
 
 ```powershell
