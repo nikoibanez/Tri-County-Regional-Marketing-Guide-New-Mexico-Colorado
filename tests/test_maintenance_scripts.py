@@ -8,9 +8,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
+sys.path.insert(0, str(ROOT / "tools"))
 
 from audit_directory_quality import duplicate_groups, normalize_name  # noqa: E402
 from audit_internal_links import audit_site  # noqa: E402
+from build_netlify_deep_guide import inferred_listing_type  # noqa: E402
 from sweep_listing_keywords import (  # noqa: E402
     KeywordSignalParser,
     canonical_signal,
@@ -32,6 +34,14 @@ class DirectoryQualityTests(unittest.TestCase):
             {"name": "Example Studio", "town": "Trinidad", "county": "Las Animas"},
         ]
         self.assertEqual(len(duplicate_groups(rows, "name")), 1)
+
+    def test_catering_directory_is_classified_as_food_and_drink(self) -> None:
+        row = {
+            "resource_name": "Visit Angel Fire Catering and Event-Service Directory",
+            "category": "Catering and event-service listing directory",
+            "notes": "Useful for food, hospitality, event, and creative-service routing.",
+        }
+        self.assertEqual(inferred_listing_type(row), "Food & drink")
 
 
 class InternalLinkTests(unittest.TestCase):

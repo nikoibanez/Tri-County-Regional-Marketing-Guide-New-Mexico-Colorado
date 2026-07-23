@@ -2295,6 +2295,11 @@ def dedupe_resource_rows(rows: list[dict]) -> list[dict]:
 def inferred_listing_type(row: dict) -> str:
     name = clean_text(row.get("resource_name"))
     note = "" if generic_note(row) else clean_text(row.get("notes"))
+    name_category = " ".join([name, clean_text(row.get("category"))]).casefold()
+    if "catering" in name_category and not any(
+        term in name_category for term in ("grant", "funding", "scholarship", "stipend")
+    ):
+        return "Food & drink"
     text = " ".join(
         [
             name,
@@ -4097,7 +4102,7 @@ def page_shell(
                 </div>
                 <button class="directory-assistant__close" type="button" aria-label="Close directory assistant">Close</button>
               </div>
-              <p class="directory-assistant__intro" id="directory-assistant-intro">Search by need, county, town, audience, or task. Results include useful links and update reminders so users can act without treating old details as final.</p>
+              <p class="directory-assistant__intro" id="directory-assistant-intro">Search local listings, funding, calendars, media, and places to ask about flyers. Add a town or county to narrow the results.</p>
               <p class="sr-only" id="directory-assistant-hint">Results update after submitting the form or after a short pause while typing. Press Escape to close this panel.</p>
               <form class="directory-assistant__form" role="search">
                 <label for="directory-assistant-query">What are you trying to find?</label>
@@ -4106,20 +4111,21 @@ def page_shell(
                   <button class="button button-primary" type="submit">Search</button>
                 </div>
               </form>
+              <p class="directory-assistant__prompt-label">Popular searches</p>
               <div class="directory-assistant__chips" role="group" aria-label="Suggested searches">
-                <button type="button" data-assistant-prompt="funding grants scholarships stipends">Funding</button>
-                <button type="button" data-assistant-prompt="artists creative galleries makers">Artists</button>
-                <button type="button" data-assistant-prompt="event calendar submit event">Events</button>
-                <button type="button" data-assistant-prompt="nonprofit community services">Nonprofits</button>
-                <button type="button" data-assistant-prompt="Raton Colfax">Raton</button>
-                <button type="button" data-assistant-prompt="Trinidad Las Animas">Trinidad</button>
-                <button type="button" data-assistant-prompt="Walsenburg Huerfano La Veta">Huerfano</button>
+                <button type="button" data-assistant-prompt="funding">Funding</button>
+                <button type="button" data-assistant-prompt="events">Events</button>
+                <button type="button" data-assistant-prompt="flyers">Flyer locations</button>
+                <button type="button" data-assistant-prompt="artists">Artists</button>
+                <button type="button" data-assistant-prompt="catering">Food &amp; catering</button>
+                <button type="button" data-assistant-prompt="nonprofit">Nonprofits</button>
+                <button type="button" data-assistant-prompt="business support">Business help</button>
               </div>
               <div class="directory-assistant__status" id="directory-assistant-status" role="status" aria-live="polite" aria-atomic="true"></div>
               <div class="directory-assistant__results" id="directory-assistant-results" data-assistant-results role="list" aria-label="Directory assistant results"></div>
               <div class="directory-assistant__footer">
-                <a class="button button-soft" href="{rel('network/index.html', depth)}">Open full directory</a>
-                <a class="button button-soft" href="{rel('submit/index.html', depth)}">Submit a correction</a>
+                <a class="button button-soft" href="{rel('network/index.html', depth)}#resource-results" data-assistant-full-directory>Open full directory</a>
+                <a class="button button-soft" href="{rel('submit/index.html', depth)}">Submit an update</a>
               </div>
             </dialog>
           </section>
@@ -6597,7 +6603,13 @@ def write_static_assets() -> None:
       color: var(--ink);
       font: inherit;
     }
-    .directory-assistant__chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 12px 0; }
+    .directory-assistant__prompt-label {
+      margin: 12px 0 7px;
+      color: var(--ink);
+      font-size: 0.76rem;
+      font-weight: 900;
+    }
+    .directory-assistant__chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 12px; }
     .directory-assistant__chips button {
       border: 1px solid rgba(47,103,128,0.18);
       border-radius: 999px;
@@ -6609,11 +6621,12 @@ def write_static_assets() -> None:
       font-size: 0.74rem;
       font-weight: 900;
     }
-    .directory-assistant__results { display: grid; gap: 10px; margin-top: 10px; }
+    .directory-assistant__results { display: grid; gap: 8px; margin-top: 8px; }
+    .directory-assistant__results:empty { display: none; margin-top: 0; }
     .assistant-result {
       display: grid;
-      gap: 7px;
-      padding: 12px;
+      gap: 5px;
+      padding: 10px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: rgba(246,248,244,0.86);
@@ -6622,7 +6635,10 @@ def write_static_assets() -> None:
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
+      color: var(--ink-soft);
+      font-size: 0.72rem;
+      font-weight: 800;
     }
     .assistant-result__type {
       border-radius: 999px;
@@ -6631,10 +6647,26 @@ def write_static_assets() -> None:
       font-size: 0.72rem;
       font-weight: 900;
     }
-    .assistant-result h3 { margin: 0; font-size: 0.98rem; }
-    .assistant-result p { margin: 0; font-size: 0.86rem; }
+    .assistant-result h3 { margin: 0; font-size: 0.96rem; line-height: 1.25; }
+    .assistant-result p { margin: 0; font-size: 0.82rem; line-height: 1.4; }
+    .assistant-result__description {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+    .assistant-result__next {
+      display: -webkit-box;
+      overflow: hidden;
+      padding-top: 2px;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    .assistant-result__next strong { color: var(--ink); }
     .assistant-result__actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-    .assistant-result__actions a { font-size: 0.82rem; font-weight: 900; text-underline-offset: 3px; }
+    .assistant-result__actions .resource-links { margin-top: 2px; }
+    .assistant-result__actions .resource-contact-link { min-height: 34px; padding: 6px 9px; font-size: 0.78rem; }
+    .assistant-result__actions .source-note { font-size: 0.78rem; }
     .directory-assistant__footer {
       display: flex;
       flex-wrap: wrap;
@@ -7024,9 +7056,30 @@ def write_static_assets() -> None:
       }
     }
 
+    const SEARCH_STOP_WORDS = new Set(["a", "an", "and", "for", "in", "near", "of", "the", "to"]);
+
+    function normalizedSearchTerms(query) {
+      return String(query || "")
+        .toLowerCase()
+        .split(/\s+/)
+        .map(term => term.replace(/[^a-z0-9+&-]/g, ""))
+        .filter(term => term.length > 1 && !SEARCH_STOP_WORDS.has(term))
+        .map(term => {
+          if (term.length > 5 && term.endsWith("ies")) return `${term.slice(0, -3)}y`;
+          if (term.length > 4 && term.endsWith("s") && !term.endsWith("ss")) return term.slice(0, -1);
+          return term;
+        });
+    }
+
+    function matchesSearchTerms(blob, query) {
+      const terms = normalizedSearchTerms(query);
+      if (!terms.length) return true;
+      const text = String(blob || "").toLowerCase();
+      return terms.every(term => text.includes(term));
+    }
+
     function textMatch(item, query) {
-      const blob = searchableText(item).toLowerCase();
-      return blob.includes(query.toLowerCase());
+      return matchesSearchTerms(searchableText(item), query);
     }
 
     function resourceTextMatch(item, query) {
@@ -7046,8 +7099,8 @@ def write_static_assets() -> None:
         item.goal_relevance,
         item.audience_served,
         item.public_description
-      ]).toLowerCase();
-      return blob.includes(query.toLowerCase());
+      ]);
+      return matchesSearchTerms(blob, query);
     }
 
     function uniqueValues(items, field) {
@@ -7134,7 +7187,7 @@ def write_static_assets() -> None:
     function contactLinkMarkup(item, { compact = false } = {}) {
       const links = contactLinks(item);
       if (!links.length) return `<span class="source-note">Send an update if you have a public contact path.</span>`;
-      const visible = compact ? links.slice(0, 3) : links.slice(0, 7);
+      const visible = compact ? links.slice(0, 2) : links.slice(0, 7);
       return `<div class="resource-links">${visible.map(link => `
         <a class="resource-contact-link" href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>
       `).join("")}</div>`;
@@ -7233,40 +7286,123 @@ def write_static_assets() -> None:
       `;
     }
 
+    function assistantTitle(item) {
+      return item.title || item.resource_name || item.channel || item.place || "Directory result";
+    }
+
+    function assistantCategory(item) {
+      return item.public_listing_type || item.kind || item.resource_type || item.channel_type || item.type || "Directory route";
+    }
+
+    function assistantTypeLabel(item, category) {
+      return {
+        "Current item": "Featured route",
+        "Shortcut group": "Directory shortcut",
+        "Shortcut": "Directory shortcut",
+        "Listing": category,
+        "Amplifier": "Promotion channel",
+        "Physical ad location": "Flyer location",
+        "Posting path": "Posting route"
+      }[item.assistant_type] || category;
+    }
+
+    function assistantDescription(item) {
+      return item.public_description
+        || item.posting_fit
+        || item.best_for
+        || item.short_description
+        || item.asks
+        || "Local route for finding a relevant organization, program, service, or promotion channel.";
+    }
+
+    function assistantNextStep(item) {
+      const action = String(item.posting_note || item.action || item.reader_action || "").trim();
+      if (!action || /^(open the link|use this route|send an update)/i.test(action)) return "";
+      return action;
+    }
+
+    function assistantContactMarkup(item) {
+      const sourceUrls = [
+        ...splitList(item.source_url),
+        ...splitList(item.url),
+        ...(item.links || []).map(link => link.url).filter(Boolean)
+      ];
+      return contactLinkMarkup({ ...item, source_url: sourceUrls.join("; ") }, { compact: true });
+    }
+
     function assistantCard(item) {
-      const title = item.title || item.resource_name || item.channel || item.place || "Directory result";
-      const url = splitList(item.url || item.website || item.source_url)[0] || "";
+      const title = assistantTitle(item);
       const county = item.county || item.area_served || [item.town, item.state].filter(Boolean).join(", ") || "Regional";
-      const category = item.kind || item.resource_type || item.channel_type || item.type || "Directory route";
-      const description = item.posting_fit || item.best_for || item.public_description || item.asks || item.short_description || "Use this route when it fits the task, place, and audience.";
-      const action = item.posting_note || item.action || item.reader_action || "Open the link, then submit a correction if details have changed.";
-      const typeLabel = item.assistant_type || "Directory";
-      const sourceLink = url
-        ? `<a href="${escapeHtml(normalUrl(url))}" target="_blank" rel="noreferrer" aria-label="${escapeHtml(linkLabel(url, "Open page"))} for ${escapeHtml(title)}">${escapeHtml(linkLabel(url, "Open page"))}</a>`
-        : contactLinkMarkup(item, { compact: true });
+      const category = assistantCategory(item);
+      const typeLabel = assistantTypeLabel(item, category);
+      const description = assistantDescription(item);
+      const nextStep = assistantNextStep(item);
+      const metaLabels = [...new Set([typeLabel, county].filter(Boolean))];
       return `
         <article class="assistant-result" role="listitem">
           <div class="assistant-result__meta">
-            <span class="assistant-result__type">${escapeHtml(typeLabel)}</span>
-            <span>${escapeHtml(county)}</span>
-            <span>${escapeHtml(category)}</span>
+            ${metaLabels.map((label, index) => `<span${index === 0 ? ' class="assistant-result__type"' : ""}>${escapeHtml(label)}</span>`).join("")}
           </div>
-          <h3>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>` : escapeHtml(title)}</h3>
+          <h3>${escapeHtml(title)}</h3>
           ${physicalIndicatorMarkup(item)}
-          <p>${escapeHtml(description)}</p>
-          ${item.public_best_for ? `<p class="resource-best"><strong>Best fit:</strong> ${escapeHtml(item.public_best_for)}</p>` : ""}
-          <p class="action-line">${escapeHtml(action)}</p>
+          <p class="assistant-result__description">${escapeHtml(description)}</p>
+          ${nextStep ? `<p class="assistant-result__next"><strong>Next:</strong> ${escapeHtml(nextStep)}</p>` : ""}
           <div class="assistant-result__actions">
-            ${sourceLink}
-            <a href="network/index.html" aria-label="Search the full directory for results related to ${escapeHtml(title)}">Search full directory</a>
+            ${assistantContactMarkup(item)}
           </div>
         </article>
       `;
     }
 
+    function assistantSearchFields(item) {
+      const title = assistantTitle(item);
+      const location = searchableText([item.county, item.area_served, item.town, item.state]);
+      const category = searchableText([
+        item.kind,
+        item.public_listing_type,
+        item.resource_type,
+        item.channel_type,
+        item.type,
+        item.category
+      ]);
+      const description = searchableText([
+        item.public_description,
+        item.posting_fit,
+        item.best_for,
+        item.short_description,
+        item.asks,
+        item.public_best_for
+      ]);
+      const keywords = searchableText([
+        item.public_keywords,
+        item.public_audience_tags,
+        item.public_org_tags,
+        item.audience_served,
+        item.goal_relevance,
+        item.action,
+        item.posting_note,
+        item.reader_action
+      ]);
+      return {
+        title: title.toLowerCase(),
+        location: location.toLowerCase(),
+        category: category.toLowerCase(),
+        description: description.toLowerCase(),
+        keywords: keywords.toLowerCase(),
+        all: searchableText([title, location, category, description, keywords]).toLowerCase()
+      };
+    }
+
+    function assistantIdentity(item) {
+      const title = assistantTitle(item).toLowerCase().replace(/[^a-z0-9]+/g, "");
+      const county = String(item.county || item.area_served || item.town || "regional").toLowerCase().replace(/[^a-z0-9]+/g, "");
+      return `${title}|${county}`;
+    }
+
     function assistantSearch(query) {
       const normalized = String(query || "").trim().toLowerCase();
-      const terms = normalized.split(/\s+/).filter(Boolean);
+      const terms = normalizedSearchTerms(normalized);
+      if (!terms.length) return [];
       const pools = [
         ...(DATA.current_leads || []).map(item => ({ ...item, assistant_type: "Current item" })),
         ...((DATA.directory_source_groups || DATA.directory_sources || [])).map(item => ({ ...item, assistant_type: "Shortcut group" })),
@@ -7276,37 +7412,53 @@ def write_static_assets() -> None:
         ...(DATA.posting_spaces || []).map(item => ({ ...item, assistant_type: "Posting path" }))
       ];
       const scored = pools.map(item => {
-        const blob = Object.values(item).join(" ").toLowerCase();
-        let score = 0;
+        const fields = assistantSearchFields(item);
+        if (!terms.every(term => fields.all.includes(term))) return null;
+        let score = fields.title.includes(normalized) ? 20 : 0;
         for (const term of terms) {
-          if (!term) continue;
-          if (blob.includes(term)) score += 3;
-          if (String(item.title || item.resource_name || item.channel || item.place || "").toLowerCase().includes(term)) score += 5;
-          if (String(item.county || item.area_served || "").toLowerCase().includes(term)) score += 2;
+          if (fields.title.includes(term)) score += 10;
+          if (fields.category.includes(term)) score += 6;
+          if (fields.location.includes(term)) score += 6;
+          if (fields.description.includes(term)) score += 3;
+          if (fields.keywords.includes(term)) score += 2;
         }
-        if (!terms.length) {
-          score += {
-            "Current item": 8,
-            "Shortcut group": 6,
-            "Shortcut": 6,
-            "Amplifier": 5,
-            "Posting path": 4,
-            "Listing": 2
-          }[item.assistant_type] || 1;
-        }
+        score += {
+          "Shortcut group": 6,
+          "Shortcut": 6,
+          "Amplifier": 5,
+          "Physical ad location": 5,
+          "Posting path": 5,
+          "Current item": 4,
+          "Listing": 3
+        }[item.assistant_type] || 1;
         return { item, score };
-      }).filter(entry => entry.score > 0);
+      }).filter(Boolean);
 
-      return scored
-        .sort((a, b) => b.score - a.score || String(a.item.title || a.item.resource_name || a.item.channel || "").localeCompare(String(b.item.title || b.item.resource_name || b.item.channel || "")))
-        .slice(0, 6)
-        .map(entry => entry.item);
+      const unique = [];
+      const seen = new Set();
+      scored
+        .sort((a, b) => b.score - a.score || assistantTitle(a.item).localeCompare(assistantTitle(b.item)))
+        .forEach(entry => {
+          const key = assistantIdentity(entry.item);
+          if (seen.has(key)) return;
+          seen.add(key);
+          unique.push(entry.item);
+        });
+      return unique.slice(0, 5);
     }
 
     function assistantUrl(key) {
       const root = document.querySelector("[data-directory-assistant]");
       if (!root) return key === "submit" ? "submit/index.html" : "network/index.html";
       return key === "submit" ? root.dataset.submitUrl : root.dataset.networkUrl;
+    }
+
+    function assistantNetworkUrl(query = "") {
+      const base = assistantUrl("network");
+      const search = String(query || "").trim();
+      return search
+        ? `${base}${base.includes("?") ? "&" : "?"}q=${encodeURIComponent(search)}#resource-results`
+        : `${base}#resource-results`;
     }
 
     const bubbleAnimationTimers = new WeakMap();
@@ -7324,12 +7476,6 @@ def write_static_assets() -> None:
       }, 360));
     }
 
-    function assistantCardWithUrls(item) {
-      return assistantCard(item)
-        .replaceAll('href="network/index.html"', `href="${escapeHtml(assistantUrl("network"))}"`)
-        .replaceAll('href="submit/index.html"', `href="${escapeHtml(assistantUrl("submit"))}"`);
-    }
-
     function initDirectoryAssistant() {
       const root = document.querySelector("[data-directory-assistant]");
       if (!root) return;
@@ -7340,6 +7486,7 @@ def write_static_assets() -> None:
       const input = root.querySelector("#directory-assistant-query");
       const results = root.querySelector("[data-assistant-results]");
       const status = root.querySelector(".directory-assistant__status");
+      const fullDirectory = root.querySelector("[data-assistant-full-directory]");
       const chips = [...root.querySelectorAll("[data-assistant-prompt]")];
       if (!toggle || !panel || !form || !input || !results || !status) return;
       let renderTimer = null;
@@ -7385,29 +7532,30 @@ def write_static_assets() -> None:
 
       function render(query) {
         const search = String(query || "").trim();
-        const displayQuery = search || "starter routes";
+        if (fullDirectory) {
+          const hasSearch = search.length >= 2;
+          fullDirectory.href = assistantNetworkUrl(hasSearch ? search : "");
+          fullDirectory.textContent = hasSearch ? "See all matching listings" : "Open full directory";
+          fullDirectory.setAttribute("aria-label", hasSearch ? `See all directory listings matching ${search}` : "Open the full directory");
+        }
+        if (search.length < 2) {
+          status.textContent = search
+            ? "Keep typing: enter at least two letters."
+            : "Choose a popular search or enter at least two letters.";
+          results.innerHTML = "";
+          return;
+        }
         const matches = assistantSearch(search);
         status.textContent = matches.length
-          ? (search
-            ? `Showing ${matches.length} route${matches.length === 1 ? "" : "s"} for "${displayQuery}".`
-            : `Showing ${matches.length} starter routes from current items, directories, channels, and posting paths.`)
-          : `No close match for "${displayQuery}". Try a county, town, or need like funding, events, artist, nonprofit, or media.`;
-        results.innerHTML = matches.map(assistantCardWithUrls).join("") || `
-          <article class="assistant-result" role="listitem">
-            <h3>No direct match yet</h3>
-            <p>Open the full directory or submit a correction if a resource should be added.</p>
-            <div class="assistant-result__actions">
-              <a href="${escapeHtml(assistantUrl("network"))}">Open full directory</a>
-              <a href="${escapeHtml(assistantUrl("submit"))}">Submit a correction</a>
-            </div>
-          </article>
-        `;
+          ? `Showing ${matches.length} result${matches.length === 1 ? "" : "s"} for "${search}".`
+          : `No close match for "${search}". Try a town, county, or a broader word such as funding, events, artist, nonprofit, or media.`;
+        results.innerHTML = matches.map(assistantCard).join("");
       }
 
       toggle.addEventListener("click", () => {
         const shouldOpen = !panel.open;
         setOpen(shouldOpen);
-        if (shouldOpen && !results.innerHTML.trim()) {
+        if (shouldOpen && !status.textContent.trim()) {
           render(input.value);
         }
       });
@@ -7425,8 +7573,10 @@ def write_static_assets() -> None:
       });
       input.addEventListener("input", () => {
         if (renderTimer) window.clearTimeout(renderTimer);
-        if (input.value.trim().length >= 2) {
-          renderTimer = window.setTimeout(() => render(input.value), 220);
+        if (input.value.trim().length < 2) {
+          render(input.value);
+        } else {
+          renderTimer = window.setTimeout(() => render(input.value), 150);
         }
       });
       chips.forEach(chip => chip.addEventListener("click", () => {
@@ -7535,6 +7685,8 @@ def write_static_assets() -> None:
       let county = "All";
       let locationMode = "All";
       let visibleCount = directoryPageSize(18, 36);
+      const incomingQuery = new URLSearchParams(window.location.search).get("q");
+      if (incomingQuery) input.value = incomingQuery;
       populateSelect(typeSelect, uniqueValues(DATA.resources, "public_listing_type"), "All types");
       populateSelect(accessSelect, uniqueValues(DATA.resources, "access_mode"), "All access modes");
       function resetVisibleCount() {
