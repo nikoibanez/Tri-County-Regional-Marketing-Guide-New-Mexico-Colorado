@@ -6536,6 +6536,25 @@ def write_static_assets() -> None:
       box-shadow: 0 24px 64px rgba(23,48,71,0.20);
       backdrop-filter: blur(18px);
     }
+    .directory-assistant__panel.is-bubble-opening {
+      transform-origin: left bottom;
+      animation: interface-bubble-pop 300ms cubic-bezier(.2,.82,.24,1.18) both;
+    }
+    .resource-item.is-bubble-opening,
+    .source-card.is-bubble-opening {
+      transform-origin: center top;
+      animation: listing-bubble-pop 280ms cubic-bezier(.2,.82,.24,1.14) both;
+    }
+    @keyframes interface-bubble-pop {
+      0% { opacity: 0; transform: translateY(8px) scale(0.94); }
+      68% { opacity: 1; transform: translateY(-1px) scale(1.012); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes listing-bubble-pop {
+      0% { transform: scale(0.985); box-shadow: 0 7px 18px rgba(23,48,71,0.05); }
+      64% { transform: scale(1.006); box-shadow: 0 14px 30px rgba(23,48,71,0.10); }
+      100% { transform: scale(1); box-shadow: 0 10px 28px rgba(23,48,71,0.06); }
+    }
     .directory-assistant__panel::backdrop {
       background: rgba(16,40,61,0.12);
       backdrop-filter: blur(1px);
@@ -6836,7 +6855,8 @@ def write_static_assets() -> None:
         scroll-behavior: auto !important;
         transition-duration: 0.001ms !important;
       }
-      [data-animated="true"], .intro-curtain, .hero-accent, .hero-route, .hero-node, .submit-success-card, .sparkle {
+      [data-animated="true"], .intro-curtain, .hero-accent, .hero-route, .hero-node, .submit-success-card, .sparkle,
+      .directory-assistant__panel.is-bubble-opening, .resource-item.is-bubble-opening, .source-card.is-bubble-opening {
         animation: none !important;
         transform: none !important;
       }
@@ -7289,6 +7309,21 @@ def write_static_assets() -> None:
       return key === "submit" ? root.dataset.submitUrl : root.dataset.networkUrl;
     }
 
+    const bubbleAnimationTimers = new WeakMap();
+
+    function replayBubbleOpen(element) {
+      if (!element || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const previousTimer = bubbleAnimationTimers.get(element);
+      if (previousTimer) window.clearTimeout(previousTimer);
+      element.classList.remove("is-bubble-opening");
+      void element.offsetWidth;
+      element.classList.add("is-bubble-opening");
+      bubbleAnimationTimers.set(element, window.setTimeout(() => {
+        element.classList.remove("is-bubble-opening");
+        bubbleAnimationTimers.delete(element);
+      }, 360));
+    }
+
     function assistantCardWithUrls(item) {
       return assistantCard(item)
         .replaceAll('href="network/index.html"', `href="${escapeHtml(assistantUrl("network"))}"`)
@@ -7321,6 +7356,7 @@ def write_static_assets() -> None:
               panel.setAttribute("open", "");
             }
           }
+          replayBubbleOpen(panel);
           toggle.setAttribute("aria-expanded", "true");
           root.dataset.open = "true";
           window.setTimeout(() => input.focus(), 40);
@@ -7403,6 +7439,20 @@ def write_static_assets() -> None:
           event.preventDefault();
           setOpen(false);
         }
+      });
+    }
+
+    function initDirectoryOpenAnimations() {
+      document.addEventListener("click", event => {
+        if (!(event.target instanceof Element)) return;
+        const summary = event.target.closest(".resource-more > summary, .source-group-links > summary");
+        if (!summary) return;
+        const details = summary.parentElement;
+        if (!(details instanceof HTMLDetailsElement) || details.open) return;
+        window.requestAnimationFrame(() => {
+          if (!details.open) return;
+          replayBubbleOpen(details.closest(".resource-item, .source-card"));
+        });
       });
     }
 
@@ -7875,6 +7925,7 @@ def write_static_assets() -> None:
 
     initSourceSearch();
     initResourceSearch();
+    initDirectoryOpenAnimations();
     initDirectoryAssistant();
     initCopyButtons();
     initSubmissionForms();
