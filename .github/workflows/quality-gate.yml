@@ -1,0 +1,84 @@
+name: Build and quality gate
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PUBLIC_SITE_ORIGIN: ${{ vars.PUBLIC_SITE_ORIGIN }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build canonical site
+        run: python tools/build_netlify_deep_guide.py
+
+      - name: Compile maintenance scripts
+        run: >-
+          python -m py_compile
+          tools/build_netlify_deep_guide.py
+          scripts/audit_update_sources.py
+          scripts/weekly_directory_query_check.py
+          scripts/audit_ui_accessibility.py
+          scripts/audit_seo_static.py
+          scripts/audit_directory_quality.py
+          scripts/audit_internal_links.py
+          scripts/build_maintenance_dashboard.py
+          scripts/smoke_test_site.py
+
+      - name: Run maintenance unit checks
+        run: python -m unittest discover -s tests -p "test_*.py"
+
+      - name: Check generated JavaScript
+        run: node --check dist/tri-county-netlify-guide-deep/assets/app.js
+
+      - name: Audit accessibility markers
+        run: python scripts/audit_ui_accessibility.py
+
+      - name: Audit SEO structure
+        run: python scripts/audit_seo_static.py
+
+      - name: Audit directory quality
+        run: python scripts/audit_directory_quality.py --fail-on-blocking
+
+      - name: Audit internal routes and anchors
+        run: python scripts/audit_internal_links.py --fail-on-broken
+
+      - name: Smoke-test the local build
+        run: python scripts/smoke_test_site.py
+
+      - name: Build maintenance dashboard
+        if: always()
+        run: python scripts/build_maintenance_dashboard.py
+
+      - name: Upload quality reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tri-county-quality-${{ github.run_id }}
+          retention-days: 14
+          path: |
+            dist/tri-county-netlify-guide-deep/QA_REPORT.md
+            review/UI_ACCESSIBILITY_STATIC_AUDIT_*.md
+            review/maintenance/

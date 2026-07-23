@@ -38,4 +38,10 @@ After connecting the repo:
 
 ## Later
 
-After the custom/final domain is chosen, update `SITE_URL` in `tools/build_netlify_deep_guide.py`, rebuild, and submit the new sitemap in Google Search Console.
+Set `PUBLIC_SITE_ORIGIN` to the final public origin in both Netlify environment variables and GitHub repository variables. Example:
+
+```text
+https://statelineguide.org
+```
+
+The generator uses that value for canonical links, structured data, social metadata, `robots.txt`, and the sitemap. It defaults to `https://statelineguide.org` when the variable is absent. After the final domain is connected, rebuild and submit the sitemap in Google Search Console.

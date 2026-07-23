@@ -1,16 +1,28 @@
-name: Grants source audit
+name: Source registry audit
 
 on:
   workflow_dispatch:
+    inputs:
+      domain:
+        description: "Optional domain: funding, events, directory, civic, media, creative, or general"
+        required: false
+        type: string
   schedule:
     - cron: "23 15 * * 2"
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: source-registry-audit
+  cancel-in-progress: false
 
 jobs:
   audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
@@ -26,15 +38,67 @@ jobs:
       - name: Build update registry
         run: python scripts/build_update_source_registry.py
 
-      - name: Audit grants and funding sources
-        run: python scripts/audit_update_sources.py --domain funding
+      - name: Audit registered sources
+        env:
+          AUDIT_DOMAIN: ${{ inputs.domain }}
+        run: |
+          if [ -n "$AUDIT_DOMAIN" ]; then
+            python scripts/audit_update_sources.py --domain "$AUDIT_DOMAIN"
+          else
+            python scripts/audit_update_sources.py
+          fi
+
+      - name: Refresh registry summary with check history
+        run: python scripts/build_update_source_registry.py
+
+      - name: Audit directory quality
+        run: python scripts/audit_directory_quality.py --fail-on-blocking
+
+      - name: Audit internal routes and anchors
+        run: python scripts/audit_internal_links.py --fail-on-broken
+
+      - name: Build maintenance dashboard
+        run: python scripts/build_maintenance_dashboard.py
+
+      - name: Prepare review pull request
+        id: review
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/update-source-registry.json data/update-source-registry.md
+          git add review/update-audits/update-audit-latest.json review/update-audits/update-audit-latest.md
+          git add review/maintenance/maintenance-dashboard-latest.json review/maintenance/maintenance-dashboard-latest.md
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            branch="automation/source-audit-${GITHUB_RUN_ID}"
+            git switch -c "$branch"
+            git commit -m "Refresh source audit review queue"
+            git push --set-upstream origin "$branch"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open source-audit review pull request
+        if: steps.review.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEW_BRANCH: ${{ steps.review.outputs.branch }}
+        run: |
+          body="This automated pull request refreshes source status, the latest audit report, and the private maintenance dashboard. Review failures in a normal browser. Do not merge public claims, contact changes, eligibility, deadlines, rates, civic guidance, or directory additions without human confirmation."
+          if ! gh pr create --base master --head "$REVIEW_BRANCH" --title "Review scheduled source-audit results" --body "$body"; then
+            gh issue create --title "Source-audit review branch is ready" --body "$body Branch: $REVIEW_BRANCH"
+          fi
 
       - name: Upload audit reports
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: tri-county-grants-source-audit
+          name: tri-county-source-audit-${{ github.run_id }}
+          retention-days: 30
           path: |
             data/update-source-registry.json
             data/update-source-registry.md
             review/update-audits/update-audit-latest.json
             review/update-audits/update-audit-latest.md
+            review/maintenance/

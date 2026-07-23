@@ -184,10 +184,28 @@ def normalize_posting(item: dict) -> dict:
 
 def load_registry() -> dict:
     data = json.loads(GUIDE_DATA.read_text(encoding="utf-8"))
+    previous_records: dict[str, dict] = {}
+    if OUTPUT.exists():
+        try:
+            previous_payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            previous_payload = {}
+        previous_records = {
+            item.get("id", ""): item
+            for item in previous_payload.get("records", [])
+            if item.get("id")
+        }
     records = []
     records.extend(normalize_directory_source(item) for item in data.get("directory_sources", []))
     records.extend(normalize_amplifier(item) for item in data.get("amplifier_channels", []))
     records.extend(normalize_posting(item) for item in data.get("posting_spaces", []))
+    for record in records:
+        previous = previous_records.get(record["id"])
+        if not previous or previous.get("url") != record.get("url"):
+            continue
+        for field in ("last_checked", "next_check", "last_check_status", "last_status_code"):
+            if field in previous:
+                record[field] = previous[field]
     records = sorted(records, key=lambda item: (item["update_domain"], item["county"], item["title"].casefold()))
     return {
         "generated_at": date.today().isoformat(),
@@ -224,7 +242,13 @@ def write_markdown(registry: dict) -> None:
         label = item["title"]
         url = item["url"]
         linked = f"[{label}]({url})" if url else label
-        lines.append(f"- {linked} - {item['county']}; {item['update_domain']}; every {item['cadence_days']} days; {item['review_level']}")
+        check_note = "not checked yet"
+        if item.get("last_checked"):
+            check_note = f"last checked {item['last_checked']}; {item.get('last_check_status') or 'status not recorded'}; next {item.get('next_check') or 'unscheduled'}"
+        lines.append(
+            f"- {linked} - {item['county']}; {item['update_domain']}; every {item['cadence_days']} days; "
+            f"{item['review_level']}; {check_note}"
+        )
     MARKDOWN_OUTPUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 

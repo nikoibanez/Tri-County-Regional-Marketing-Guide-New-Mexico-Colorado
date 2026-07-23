@@ -4,11 +4,11 @@ Static Netlify-ready guide for businesses, nonprofits, artists, creators, progra
 
 ## GitHub Pages
 
-This repository can publish the prebuilt static site in `dist/site` with GitHub Pages.
+This repository can build and publish the static site in `dist/tri-county-netlify-guide-deep` with GitHub Pages.
 
 - Publish workflow: `.github/workflows/deploy-github-pages.yml`
 - Trigger: every push to `master`
-- Published folder: `dist/site`
+- Published folder: `dist/tri-county-netlify-guide-deep`
 
 If GitHub Pages is enabled for the repository, pushes to `master` will automatically update the live site without Netlify production deploy credits.
 
@@ -24,18 +24,29 @@ Generated site:
 dist/tri-county-netlify-guide-deep
 ```
 
-## Update Automation Scaffold
+## Maintenance Automation
 
-This repo includes a conservative agentic-update scaffold:
+This repo includes a no-secret maintenance system. Deterministic scripts build, test, watch sources, and prepare review queues. They do not silently promote uncertain public claims into the guide.
 
 - `data/update-source-registry.json` - generated source monitoring registry.
 - `scripts/build_update_source_registry.py` - builds the monitoring registry from public guide data.
 - `scripts/audit_update_sources.py` - checks monitored URLs and writes review reports.
+- `scripts/weekly_directory_query_check.py` - checks fifteen high-signal directory, tourism, events, food, venue, and chamber sources and writes an internal candidate-review queue.
 - `scripts/audit_ui_accessibility.py` - checks generated HTML/CSS/JS for accessibility regressions in the assistant, skip link, images, and music bar.
 - `scripts/normalize_netlify_submissions.py` - turns exported Netlify form submissions into a human review report.
-- `.github/workflows/source-audit.yml` - scheduled non-AI grants/funding source audit.
+- `scripts/audit_directory_quality.py` - blocks duplicate, non-entity, placeholder-description, and missing-metadata regressions.
+- `scripts/audit_internal_links.py` - checks generated routes, fragments, assets, and duplicate HTML IDs.
+- `scripts/build_maintenance_dashboard.py` - combines audit counts into a private action queue.
+- `scripts/smoke_test_site.py` - checks critical local or live routes without browser dependencies.
+- `.github/workflows/quality-gate.yml` - builds and runs all deterministic checks on pull requests and pushes.
+- `.github/workflows/source-audit.yml` - checks the complete source registry and opens a review pull request.
+- `.github/workflows/weekly-directory-query-check.yml` - checks fifteen high-signal source groups and opens a candidate-review pull request.
+- `.github/workflows/live-site-smoke-test.yml` - checks the configured live site and opens or updates a failure issue.
+- `.github/workflows/monthly-maintenance-snapshot.yml` - stores a canonical deploy zip, checksum, data files, and reports as a 90-day artifact.
 - `.github/workflows/codex-update-proposal.yml` - disabled-by-default Codex proposal workflow.
 - `docs/command-checklist.md` - local build, QA, grants-audit, GitHub, and Netlify commands.
+- `docs/weekly-directory-query-check.md` - weekly business-directory watcher documentation.
+- `docs/maintenance-automation.md` - schedules, review boundaries, and account settings for the no-secret maintenance system.
 - `docs/agentic-update-methodology.md` - governance and operating model.
 - `docs/netlify-github-deploy.md` - Netlify-from-GitHub deployment path.
 - `docs/openai-source-audit-summarization.md` - first OpenAI-backed feature plan.
@@ -46,6 +57,8 @@ This repo includes a conservative agentic-update scaffold:
 ## Safe Rule
 
 The guide should use automation to find and propose updates. It should not silently publish uncertain civic, legal, funding, contact, eligibility, or advertising claims without human approval.
+
+GitHub Actions can autonomously rebuild the site, run checks, archive snapshots, open review pull requests, and report live failures. Merging public data changes remains a human decision.
 
 ## Immediate Directory Assistant
 

@@ -1,6 +1,6 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
-          <title id="title">Animated layered ridges and public source paths</title>
-          <desc id="desc">An animated layered ridge scene with a subtle path motif for templates, sources, and guide maintenance pages.</desc>
+          <title id="title">Animated layered ridges and public page paths</title>
+          <desc id="desc">An animated layered ridge scene with a subtle path motif for templates, page indexes, and guide maintenance pages.</desc>
           <defs>
             <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stop-color="#c2e0e5"/>

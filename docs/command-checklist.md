@@ -22,10 +22,15 @@ dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip
 ## Local QA
 
 ```powershell
-python -m py_compile tools/build_netlify_deep_guide.py scripts/audit_update_sources.py scripts/audit_ui_accessibility.py scripts/audit_seo_static.py
+python -m py_compile tools/build_netlify_deep_guide.py scripts/audit_update_sources.py scripts/weekly_directory_query_check.py scripts/audit_ui_accessibility.py scripts/audit_seo_static.py scripts/audit_directory_quality.py scripts/audit_internal_links.py scripts/build_maintenance_dashboard.py scripts/smoke_test_site.py
+python -m unittest discover -s tests -p "test_*.py"
 node --check dist/tri-county-netlify-guide-deep/assets/app.js
 python scripts/audit_ui_accessibility.py
 python scripts/audit_seo_static.py
+python scripts/audit_directory_quality.py --fail-on-blocking
+python scripts/audit_internal_links.py --fail-on-broken
+python scripts/smoke_test_site.py
+python scripts/build_maintenance_dashboard.py
 ```
 
 ## Grants Monitor
@@ -50,6 +55,40 @@ review/update-audits/update-audit-latest.md
 review/update-audits/update-audit-latest.json
 ```
 
+## Full Source Registry Monitor
+
+Check every registered directory, funding, event, civic, media, and creative source and persist its last-check state:
+
+```powershell
+python scripts/build_update_source_registry.py
+python scripts/audit_update_sources.py
+python scripts/build_maintenance_dashboard.py
+```
+
+Use `--no-update-registry` when testing URL checks without advancing source-maintenance dates.
+
+## Weekly Directory Query Check
+
+Check the fifteen high-signal directory, tourism, events, food, venue, and chamber sources and write a review queue:
+
+```powershell
+python scripts/weekly_directory_query_check.py
+```
+
+For a dry run without live URL checks:
+
+```powershell
+python scripts/weekly_directory_query_check.py --no-network
+```
+
+Reports:
+
+```text
+review/directory-watch/directory-watch-latest.md
+review/directory-watch/directory-watch-latest.json
+data/directory-auto-update-candidates.json
+```
+
 ## GitHub Push
 
 Only after reviewing changes:
@@ -68,6 +107,20 @@ Netlify should deploy from GitHub with:
 ```text
 Build command: python tools/build_netlify_deep_guide.py
 Publish directory: dist/tri-county-netlify-guide-deep
+```
+
+Set the same final public origin in Netlify and GitHub:
+
+```text
+PUBLIC_SITE_ORIGIN=https://statelineguide.org
+```
+
+To test a live deployment locally without changing files:
+
+```powershell
+$env:PUBLIC_SITE_ORIGIN="https://your-live-site.example"
+python scripts/smoke_test_site.py
+Remove-Item Env:PUBLIC_SITE_ORIGIN
 ```
 
 ## Human Approval Gate

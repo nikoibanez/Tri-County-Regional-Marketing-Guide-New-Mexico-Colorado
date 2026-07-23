@@ -1,6 +1,6 @@
 [build]
-  command = "echo 'Publishing prebuilt Stateline Guide from dist/site'"
-  publish = "dist/site"
+  command = "python tools/build_netlify_deep_guide.py"
+  publish = "dist/tri-county-netlify-guide-deep"
 
 [build.environment]
   PYTHON_VERSION = "3.11"

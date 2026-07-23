@@ -1,0 +1,63 @@
+name: Live site smoke test
+
+on:
+  workflow_dispatch:
+    inputs:
+      site_url:
+        description: Optional live URL; otherwise the PUBLIC_SITE_ORIGIN repository variable is used
+        required: false
+        type: string
+  schedule:
+    - cron: "17 16 * * *"
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: live-site-smoke-test
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    if: ${{ inputs.site_url != '' || vars.PUBLIC_SITE_ORIGIN != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PUBLIC_SITE_ORIGIN: ${{ inputs.site_url || vars.PUBLIC_SITE_ORIGIN }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Test critical live routes
+        id: smoke
+        continue-on-error: true
+        run: python scripts/smoke_test_site.py --base-url "$PUBLIC_SITE_ORIGIN"
+
+      - name: Open an issue for a live failure
+        if: steps.smoke.outcome == 'failure'
+        run: |
+          existing=$(gh issue list --state open --search 'Live site smoke test failed in:title' --json number --jq '.[0].number // empty')
+          if [ -z "$existing" ]; then
+            gh issue create --title "Live site smoke test failed" --body "The scheduled smoke test could not load or validate one or more critical routes at $PUBLIC_SITE_ORIGIN. Open the workflow artifact for route-level details, then check the latest Netlify deployment and canonical domain settings."
+          else
+            gh issue comment "$existing" --body "The live smoke test failed again in workflow run $GITHUB_RUN_ID for $PUBLIC_SITE_ORIGIN."
+          fi
+
+      - name: Upload smoke-test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tri-county-live-smoke-${{ github.run_id }}
+          retention-days: 30
+          path: review/maintenance/live-smoke-test-latest.*
+
+      - name: Fail after recording the alert
+        if: steps.smoke.outcome == 'failure'
+        run: exit 1

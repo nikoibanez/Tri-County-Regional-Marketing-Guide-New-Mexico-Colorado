@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-07-22T18:24:24-06:00",
+  "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
+  "inventory": {
+    "canonical_resource_rows": 1491,
+    "consolidated_directory_entries": 688,
+    "registered_update_sources": 123,
+    "deep_watch_sources": 15
+  },
+  "latest_checks": {
+    "directory_quality": "pass",
+    "internal_links": "pass",
+    "source_urls_checked": 123,
+    "source_urls_needing_attention": 22,
+    "watch_pages_checked": 32,
+    "watch_pages_failed": 0,
+    "priority_new_leads": 12
+  },
+  "action_queue": [
+    {
+      "priority": "high",
+      "count": 22,
+      "label": "monitored sources needing attention",
+      "next_action": "Open the latest source-audit report and confirm failures in a normal browser."
+    },
+    {
+      "priority": "high",
+      "count": 12,
+      "label": "priority directory candidates",
+      "next_action": "Confirm each linked listing page before adding it to canonical data."
+    },
+    {
+      "priority": "medium",
+      "count": 175,
+      "label": "canonical rows without a website or source URL",
+      "next_action": "Enrich high-value entries first; do not invent contact paths."
+    },
+    {
+      "priority": "low",
+      "count": 127,
+      "label": "low-confidence text candidates",
+      "next_action": "Review only after the linked priority queue; do not publish from page text alone."
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "generated_for": "Tri-County Regional Marketing Guide weekly directory, travel, events, food, and venue query check",
+  "review_policy": "Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.",
+  "sources": [
+    {
+      "id": "colfax-raton-chamber-business-directory",
+      "title": "Raton Chamber Business Directory",
+      "county": "Colfax",
+      "state": "NM",
+      "source_type": "Chamber business directory",
+      "source_role": "Business directory, local services, restaurants, visitor-facing businesses",
+      "why_watch": "Raton-area chamber source for business names, local service anchors, restaurants, and potential outreach contacts.",
+      "seed_urls": [
+        "https://www.raton.info/business_directory.html",
+        "https://www.raton.info/business-directory.html"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/directory-page", "/about", "/contact"]
+    },
+    {
+      "id": "colfax-angel-fire-chamber-member-directory",
+      "title": "Angel Fire Chamber Member Business Directory",
+      "county": "Colfax",
+      "state": "NM",
+      "source_type": "Chamber member directory",
+      "source_role": "Business directory, lodging, dining, services, arts, nonprofits",
+      "why_watch": "Angel Fire and Moreno Valley chamber source for member businesses, nonprofits, artists, lodging, dining, and services.",
+      "seed_urls": [
+        "https://angelfirechamber.org/local-businesses/"
+      ],
+      "allow_link_candidates": true,
+      "allow_text_candidates": false,
+      "priority_link_candidates": true,
+      "include_url_path_contains": ["/business/"],
+      "exclude_url_path_contains": ["/business/category/", "/business/categories/", "/event/", "/my-account", "/cart"]
+    },
+    {
+      "id": "colfax-angel-fire-food-catering-events",
+      "title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
+      "county": "Colfax",
+      "state": "NM",
+      "source_type": "Food, catering, and event-service directory categories",
+      "source_role": "Restaurants, catering, event services, food-service leads",
+      "why_watch": "Useful for expanding food, catering, and event-service entries around Angel Fire and the Moreno Valley.",
+      "seed_urls": [
+        "https://angelfirechamber.org/business/category/restaurants/",
+        "https://angelfirechamber.org/business/tags/catering/",
+        "https://angelfirechamber.org/business/category/catering/"
+      ],
+      "allow_link_candidates": true,
+      "allow_text_candidates": false,
+      "priority_link_candidates": true,
+      "include_url_path_contains": ["/business/"],
+      "exclude_url_path_contains": ["/business/category/", "/business/categories/", "/business/tags/", "/event/", "/my-account", "/cart"]
+    },
+    {
+      "id": "colfax-visit-angel-fire-tourism-events",
+      "title": "Visit Angel Fire Tourism, Dining, and Events",
+      "county": "Colfax",
+      "state": "NM",
+      "source_type": "Tourism, events, dining, and travel source",
+      "source_role": "Tourist/travel spots, restaurants, events, lodging, visitor-facing listings",
+      "why_watch": "Tourism-facing source for Angel Fire visitor pages, dining discovery, lodging, activities, and events.",
+      "seed_urls": [
+        "https://angelfirechamber.org/visitor/",
+        "https://angelfirechamber.org/annual-calendar-of-events/",
+        "https://angelfirechamber.org/visitor/arts-and-culture/"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/privacy", "/contact"]
+    },
+    {
+      "id": "colfax-explore-raton-tourism-events",
+      "title": "Explore Raton Tourism and Event Pages",
+      "county": "Colfax",
+      "state": "NM",
+      "source_type": "Tourism, visitor guide, events, and local travel source",
+      "source_role": "Tourist/travel spots, visitor-guide ads, event listings, Raton-facing promotion",
+      "why_watch": "Raton visitor-facing source for events, visitor guide updates, attractions, lodging, and travel promotion.",
+      "seed_urls": [
+        "https://www.exploreraton.com/",
+        "https://www.exploreraton.com/events",
+        "https://www.exploreraton.com/blog"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/privacy", "/contact"]
+    },
+    {
+      "id": "las-animas-visit-trinidad-business-visitor-pages",
+      "title": "Visit Trinidad Business and Visitor Listings",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_type": "Tourism business and visitor directory",
+      "source_role": "Restaurants, lodging, shopping, visitor-facing businesses, local listing support",
+      "why_watch": "High-signal Trinidad tourism pages for visitor-facing businesses and listing-support routes.",
+      "seed_urls": [
+        "https://visittrinidadcolorado.com/dine/",
+        "https://visittrinidadcolorado.com/stay/",
+        "https://visittrinidadcolorado.com/shop/",
+        "https://visittrinidadcolorado.com/resources-for-locals/"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/author/", "/news", "/privacy"]
+    },
+    {
+      "id": "las-animas-visit-trinidad-events",
+      "title": "Visit Trinidad Events and Submit-Event Routes",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_type": "Tourism event calendar and submission source",
+      "source_role": "Event spots, event calendar, event submission, visitor-facing programs",
+      "why_watch": "Primary visitor-facing source for Trinidad events and event submission routes.",
+      "seed_urls": [
+        "https://visittrinidadcolorado.com/upcoming-events/",
+        "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/author/", "/privacy"]
+    },
+    {
+      "id": "las-animas-visit-trinidad-meetings-venues",
+      "title": "Visit Trinidad Meetings, Weddings, and Venue Routes",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_type": "Meetings, conventions, weddings, and venue tourism source",
+      "source_role": "Venues, event facilities, travel groups, catering-adjacent planning routes",
+      "why_watch": "Useful for venues, event spaces, group travel, weddings, and catering-adjacent outreach.",
+      "seed_urls": [
+        "https://visittrinidadcolorado.com/meetings-conventions/",
+        "https://visittrinidadcolorado.com/weddings/"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/author/", "/privacy"]
+    },
+    {
+      "id": "las-animas-localstash-trinidad",
+      "title": "LocalStash Trinidad",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_type": "Digital local guide and business/event listings",
+      "source_role": "Digital-only business listings, events, restaurants, shops, visitor-facing local guide",
+      "why_watch": "LocalStash is the current digital successor route to the Weekender-style local guide model and can surface Trinidad businesses, events, restaurants, and shops.",
+      "seed_urls": [
+        "https://colorado.localstash.com/trinidad-co/",
+        "https://weekender.pub/"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/privacy", "/contact"]
+    },
+    {
+      "id": "las-animas-southern-colorado-tourism-events",
+      "title": "Southern Colorado Tourism Event and Travel Pages",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_type": "Regional tourism and event source",
+      "source_role": "Events, travel spots, regional visitor-facing listings",
+      "why_watch": "Regional Southern Colorado event and tourism source that can surface Las Animas County travel and event leads.",
+      "seed_urls": [
+        "https://southerncoloradotourism.com/events/",
+        "https://southerncoloradotourism.com/"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/privacy", "/contact"]
+    },
+    {
+      "id": "huerfano-spanish-peaks-business-directory",
+      "title": "Spanish Peaks Country Business Directory",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_type": "Tourism business directory",
+      "source_role": "Business directory, tourism listings, galleries, restaurants, shopping, services",
+      "why_watch": "High-signal Huerfano visitor-facing directory for Walsenburg, La Veta, Cuchara, Gardner, dining, lodging, shopping, galleries, and attractions.",
+      "seed_urls": [
+        "https://spanishpeakscountry.com/business-directory"
+      ],
+      "allow_link_candidates": true,
+      "allow_text_candidates": false,
+      "priority_link_candidates": true,
+      "include_url_path_contains": ["/business-directory/listing/"],
+      "exclude_url_path_contains": ["/category/", "/spc-events/", "/add-business-listing"]
+    },
+    {
+      "id": "huerfano-spanish-peaks-dining-lodging-venues",
+      "title": "Spanish Peaks Country Dining, Lodging, and Venue Categories",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_type": "Dining, lodging, venue, and visitor-service categories",
+      "source_role": "Restaurants, lodging, venues, catering-adjacent services, visitor services",
+      "why_watch": "Useful for expanding restaurants, lodging, venues, and visitor-service leads across Huerfano County.",
+      "seed_urls": [
+        "https://spanishpeakscountry.com/business-directory/categories/dining",
+        "https://spanishpeakscountry.com/business-directory/categories/lodging",
+        "https://spanishpeakscountry.com/business-directory/categories/venue"
+      ],
+      "allow_link_candidates": true,
+      "allow_text_candidates": false,
+      "priority_link_candidates": true,
+      "include_url_path_contains": ["/business-directory/listing/"],
+      "exclude_url_path_contains": ["/category/", "/spc-events/", "/add-business-listing"]
+    },
+    {
+      "id": "huerfano-spanish-peaks-events",
+      "title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_type": "Tourism event calendar and submission source",
+      "source_role": "Event spots, community calendar, event submission, visitor-facing activities",
+      "why_watch": "Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.",
+      "seed_urls": [
+        "https://spanishpeakscountry.com/spc-events/",
+        "https://spanishpeakscountry.com/spc-events/community/add/"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/wp-admin", "/privacy"]
+    },
+    {
+      "id": "huerfano-la-veta-business-directory",
+      "title": "Town of La Veta Business Directory",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_type": "Municipal business directory",
+      "source_role": "Local businesses, restaurants, lodging, galleries, catering, services",
+      "why_watch": "Municipal business directory for La Veta-area businesses, including restaurants, galleries, lodging, services, and catering-style entries.",
+      "seed_urls": [
+        "https://townoflaveta-co.gov/business-directory/"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/privacy", "/contact"]
+    },
+    {
+      "id": "huerfano-chamber-member-directory",
+      "title": "Huerfano County Chamber Directory",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_type": "Chamber member directory",
+      "source_role": "Business directory, member exposure, events, local services",
+      "why_watch": "Countywide chamber source for business collaboration, member exposure, events, and local business updates.",
+      "seed_urls": [
+        "https://www.chamber.huerfano.org/membership-directory"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/cart", "/about", "/contact", "/calendar", "/submit"]
+    }
+  ]
+}

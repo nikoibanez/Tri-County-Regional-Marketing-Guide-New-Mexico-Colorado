@@ -1,0 +1,80 @@
+{
+  "generated_at": "2026-07-22",
+  "status": "pass",
+  "blocking": [],
+  "warnings": [
+    "175 canonical rows lack both a website and source URL; prioritize contact enrichment.",
+    "3 names occur in more than one place; review aliases before merging across towns.",
+    "The legacy 688-row consolidated export still contains structural cleanup work. It is not the active Network data source; keep it internal until rebuilt from published rows."
+  ],
+  "canonical_source": {
+    "path": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\data\\tri_county_persona_resources.csv",
+    "rows": 1491,
+    "blank_names": 0,
+    "exact_name_place_duplicate_groups": 0,
+    "without_website_or_source": 175,
+    "without_phone": 1301,
+    "without_email": 1464,
+    "without_address": 1026,
+    "contact_enrichment_sample": [
+      "111 Park Espresso Bar / Enchanted Grounds Espresso Bar",
+      "A Taylor Made Haircut",
+      "Ace-Hi Tavern",
+      "Aguilar Bakery & Cafe",
+      "Aguilar Bar & Grill",
+      "Angel Fire",
+      "Angel Nest RV Retreat",
+      "Angel's Attic",
+      "Arts/culture/tourism audiences",
+      "Bachman & Associates Real Estate",
+      "Bank of America",
+      "Best Western Plus Raton Hotel",
+      "Big R La Veta",
+      "Boncarbo",
+      "Bonnee's Unisex Styling Salon / New Moon Salon",
+      "Book Nook",
+      "Branson Bike Club / Branson Hi-Lo Gravel Grinder",
+      "Branson Community Church",
+      "Branson-Trinchera Reunion",
+      "Brown Hotel & Cafe"
+    ]
+  },
+  "published_directory": {
+    "path": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
+    "rows": 1434,
+    "blank_names": 0,
+    "exact_name_place_duplicate_groups": 0,
+    "generalized_idea_rows": 0,
+    "generic_descriptions": 0,
+    "missing_descriptions": 0,
+    "missing_keywords": 0,
+    "missing_entry_type": 0,
+    "generalized_idea_sample": [],
+    "generic_description_sample": []
+  },
+  "consolidated_directory": {
+    "path": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\data\\directory_of_absolutely_everything.csv",
+    "rows": 688,
+    "blank_names": 0,
+    "exact_name_place_duplicate_groups": 1,
+    "name_only_duplicate_groups": 3,
+    "generalized_idea_rows": 6,
+    "generic_descriptions": 0,
+    "missing_descriptions": 0,
+    "missing_keywords": 0,
+    "missing_audiences": 0,
+    "missing_marketing_channels": 0,
+    "missing_entry_type": 0,
+    "without_direct_contact": 0,
+    "without_contact_or_source": 0,
+    "generalized_idea_sample": [
+      "Community groups and digital bulletin boards",
+      "Main Street/chamber pages",
+      "Official city/county pages",
+      "Tourism offices and visitor-facing pages",
+      "Tourism pages",
+      "Tourism websites, Google Business Profiles, social pages, and email newsletters"
+    ],
+    "generic_description_sample": []
+  }
+}

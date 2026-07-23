@@ -1,0 +1,78 @@
+name: Weekly directory query check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 15 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: weekly-directory-query-check
+  cancel-in-progress: false
+
+jobs:
+  directory-watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run weekly directory query check
+        run: python scripts/weekly_directory_query_check.py
+
+      - name: Audit directory quality
+        run: python scripts/audit_directory_quality.py --fail-on-blocking
+
+      - name: Build maintenance dashboard
+        run: python scripts/build_maintenance_dashboard.py
+
+      - name: Prepare directory-candidate review pull request
+        id: review
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/directory-auto-update-candidates.json
+          git add review/directory-watch/directory-watch-latest.json review/directory-watch/directory-watch-latest.md
+          git add review/maintenance/maintenance-dashboard-latest.json review/maintenance/maintenance-dashboard-latest.md
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            branch="automation/directory-watch-${GITHUB_RUN_ID}"
+            git switch -c "$branch"
+            git commit -m "Refresh weekly directory candidates"
+            git push --set-upstream origin "$branch"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open directory-candidate review pull request
+        if: steps.review.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEW_BRANCH: ${{ steps.review.outputs.branch }}
+        run: |
+          body="This automated pull request refreshes candidate listings from fifteen high-signal regional source groups. Candidate rows are not approved directory additions. Open the linked listing page and confirm relevance, identity, place, and contact details before merging any candidate into canonical public data."
+          if ! gh pr create --base master --head "$REVIEW_BRANCH" --title "Review weekly directory candidates" --body "$body"; then
+            gh issue create --title "Directory-candidate review branch is ready" --body "$body Branch: $REVIEW_BRANCH"
+          fi
+
+      - name: Upload directory-watch report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tri-county-weekly-directory-query-check-${{ github.run_id }}
+          retention-days: 30
+          path: |
+            review/directory-watch/directory-watch-latest.json
+            review/directory-watch/directory-watch-latest.md
+            review/maintenance/

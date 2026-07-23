@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Grant opportunities in Southern Colorado and Northern New Mexico</title>
+<desc id="desc">Stateline Guide infographic summarizing active and recurring grant opportunity paths for rural businesses, nonprofits, artists, food systems, local governments, and community projects in Southern Colorado and Northern New Mexico.</desc>
+<rect width="1600" height="1000" fill="#F4F1EA"/>
+<defs>
+  <style>
+    .h{font:900 58px Arial,sans-serif;fill:#0B1F3B;letter-spacing:.02em}
+    .k{font:700 17px Consolas,monospace;fill:#C8A96A;letter-spacing:.04em}
+    .eyebrow{font:800 16px Arial,sans-serif;fill:#F4F1EA;letter-spacing:.08em}
+    .label{font:900 28px Arial,sans-serif;fill:#0B1F3B;letter-spacing:.01em}
+    .smallLabel{font:800 19px Arial,sans-serif;fill:#0B1F3B}
+    .body{font:600 18px Arial,sans-serif;fill:#0B1F3B}
+    .fine{font:14px Consolas,monospace;fill:#0B1F3B;opacity:.76}
+    .source{font:13px Consolas,monospace;fill:#0B1F3B;opacity:.68}
+    .paper{fill:#FFFDF7;stroke:#0B1F3B;stroke-width:2}
+    .node{stroke:#0B1F3B;stroke-width:3}
+    .thin{stroke:#0B1F3B;stroke-width:2;fill:none;opacity:.35}
+    .goldLine{stroke:#C8A96A;stroke-width:4;fill:none;stroke-linecap:round}
+    .grid{stroke:#0B1F3B;stroke-width:1.2;opacity:.08}
+  </style>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" class="grid" fill="none"/>
+  </pattern>
+</defs>
+<rect x="0" y="0" width="1600" height="1000" fill="url(#grid)"/>
+
+<text x="72" y="90" class="h">GRANT OPPORTUNITY MAP</text>
+<text x="76" y="126" class="k">SOUTHERN COLORADO + NORTHERN NEW MEXICO / REVIEWED JULY 6, 2026</text>
+<line x1="72" y1="158" x2="1528" y2="158" class="goldLine"/>
+
+<g transform="translate(1180 52)">
+  <circle cx="84" cy="52" r="48" fill="#0B1F3B"/>
+  <circle cx="84" cy="52" r="25" fill="none" stroke="#C8A96A" stroke-width="4"/>
+  <circle cx="84" cy="52" r="9" fill="#0EA5A8"/>
+  <text x="150" y="45" class="smallLabel">STATELINE GUIDE</text>
+  <text x="150" y="72" class="fine">grant routing lens</text>
+</g>
+
+<g transform="translate(84 210)">
+  <rect x="0" y="0" width="310" height="110" rx="10" fill="#0B1F3B"/>
+  <text x="24" y="38" class="eyebrow">WHERE THIS FITS</text>
+  <text x="24" y="72" fill="#F4F1EA" font-family="Arial" font-size="22" font-weight="900">Raton, Trinidad, Walsenburg</text>
+  <text x="24" y="96" fill="#C8A96A" font-family="Consolas,monospace" font-size="14">plus Colfax NM, Las Animas CO, Huerfano CO</text>
+</g>
+
+<g transform="translate(460 208)">
+  <path d="M0 70 C120 18, 245 125, 366 70 S612 23, 728 70" class="thin"/>
+  <circle cx="0" cy="70" r="18" fill="#0EA5A8" class="node"/>
+  <circle cx="240" cy="105" r="18" fill="#2563EB" class="node"/>
+  <circle cx="488" cy="54" r="18" fill="#FF671F" class="node"/>
+  <circle cx="728" cy="70" r="18" fill="#10B981" class="node"/>
+  <text x="-34" y="128" class="fine">local need</text>
+  <text x="194" y="160" class="fine">eligible project</text>
+  <text x="438" y="112" class="fine">application</text>
+  <text x="685" y="128" class="fine">award + report</text>
+</g>
+
+<g id="cards">
+  <g transform="translate(72 372)">
+    <rect class="paper" x="0" y="0" width="340" height="196" rx="10"/>
+    <rect x="0" y="0" width="340" height="42" rx="10" fill="#0EA5A8"/>
+    <text x="22" y="28" class="eyebrow">01 / SOUTHERN CO</text>
+    <text x="22" y="78" class="label">Community Grants</text>
+    <text x="22" y="112" class="body">Southern Colorado Community</text>
+    <text x="22" y="136" class="body">Foundation: most awards</text>
+    <text x="22" y="160" class="body">$2K-$5K; spring and fall cycles.</text>
+    <text x="22" y="184" class="fine">Best for: nonprofits + civic projects</text>
+  </g>
+  <g transform="translate(444 372)">
+    <rect class="paper" x="0" y="0" width="340" height="196" rx="10"/>
+    <rect x="0" y="0" width="340" height="42" rx="10" fill="#2563EB"/>
+    <text x="22" y="28" class="eyebrow">02 / RURAL BUSINESS</text>
+    <text x="22" y="78" class="label">Jump-Start + Loans</text>
+    <text x="22" y="112" class="body">OEDIT Rural Jump-Start offers</text>
+    <text x="22" y="136" class="body">tax relief and reimbursable grants;</text>
+    <text x="22" y="160" class="body">USDA REDLG funds job projects.</text>
+    <text x="22" y="184" class="fine">Best for: startups, employers, utilities</text>
+  </g>
+  <g transform="translate(816 372)">
+    <rect class="paper" x="0" y="0" width="340" height="196" rx="10"/>
+    <rect x="0" y="0" width="340" height="42" rx="10" fill="#FF671F"/>
+    <text x="22" y="28" class="eyebrow">03 / CREATIVE ECONOMY</text>
+    <text x="22" y="78" class="label">Arts + Culture</text>
+    <text x="22" y="112" class="body">Colorado Creates reopens in 2026;</text>
+    <text x="22" y="136" class="body">NM MainStreet lists NEA, historic,</text>
+    <text x="22" y="160" class="body">Route 66 and cultural deadlines.</text>
+    <text x="22" y="184" class="fine">Best for: artists, venues, districts</text>
+  </g>
+  <g transform="translate(1188 372)">
+    <rect class="paper" x="0" y="0" width="340" height="196" rx="10"/>
+    <rect x="0" y="0" width="340" height="42" rx="10" fill="#10B981"/>
+    <text x="22" y="28" class="eyebrow">04 / NEW MEXICO</text>
+    <text x="22" y="78" class="label">EDD Grant Menu</text>
+    <text x="22" y="112" class="body">NMEDD points to LEDA, HFFF,</text>
+    <text x="22" y="136" class="body">Creative Industries, S&amp;T startup,</text>
+    <text x="22" y="160" class="body">SBIR match and outdoor grants.</text>
+    <text x="22" y="184" class="fine">Best for: business + local gov paths</text>
+  </g>
+  <g transform="translate(72 616)">
+    <rect class="paper" x="0" y="0" width="340" height="196" rx="10"/>
+    <rect x="0" y="0" width="340" height="42" rx="10" fill="#C8A96A"/>
+    <text x="22" y="28" fill="#0B1F3B" font-family="Arial" font-size="16" font-weight="900" letter-spacing=".08em">05 / FOOD + LAND</text>
+    <text x="22" y="78" class="label">Ag Micro-Grants</text>
+    <text x="22" y="112" class="body">NM Rural and Tribal Agriculture</text>
+    <text x="22" y="136" class="body">Micro-Grants: up to $20K,</text>
+    <text x="22" y="160" class="body">deadline July 27, 2026.</text>
+    <text x="22" y="184" class="fine">Best for: producers + food access</text>
+  </g>
+  <g transform="translate(444 616)">
+    <rect class="paper" x="0" y="0" width="340" height="196" rx="10"/>
+    <rect x="0" y="0" width="340" height="42" rx="10" fill="#695674"/>
+    <text x="22" y="28" class="eyebrow">06 / NONPROFITS</text>
+    <text x="22" y="78" class="label">PNM Power Grant</text>
+    <text x="22" y="112" class="body">2026 statewide New Mexico</text>
+    <text x="22" y="136" class="body">nonprofit grant for education,</text>
+    <text x="22" y="160" class="body">environment and economic vitality.</text>
+    <text x="22" y="184" class="fine">Best for: NM 501(c)(3) organizations</text>
+  </g>
+  <g transform="translate(816 616)">
+    <rect class="paper" x="0" y="0" width="340" height="196" rx="10"/>
+    <rect x="0" y="0" width="340" height="42" rx="10" fill="#0B1F3B"/>
+    <text x="22" y="28" class="eyebrow">07 / NAVIGATOR</text>
+    <text x="22" y="78" class="label">SCEDD Support</text>
+    <text x="22" y="112" class="body">SCEDD serves Huerfano and</text>
+    <text x="22" y="136" class="body">Las Animas with grant, loan,</text>
+    <text x="22" y="160" class="body">planning and reporting support.</text>
+    <text x="22" y="184" class="fine">Best for: public + partner projects</text>
+  </g>
+  <g transform="translate(1188 616)">
+    <rect class="paper" x="0" y="0" width="340" height="196" rx="10"/>
+    <rect x="0" y="0" width="340" height="42" rx="10" fill="#D34B3F"/>
+    <text x="22" y="28" class="eyebrow">08 / FAST FILTER</text>
+    <text x="22" y="78" class="label">Apply Smarter</text>
+    <text x="22" y="112" class="body">Match the funder to proof:</text>
+    <text x="22" y="136" class="body">need, budget, partner letter,</text>
+    <text x="22" y="160" class="body">timeline, impact and reporting.</text>
+    <text x="22" y="184" class="fine">Best for: first-pass readiness checks</text>
+  </g>
+</g>
+
+<g transform="translate(112 862)">
+  <rect x="0" y="0" width="1376" height="72" rx="8" fill="#0B1F3B"/>
+  <text x="28" y="31" fill="#F4F1EA" font-family="Arial" font-size="20" font-weight="900">NEXT BEST MOVE</text>
+  <text x="238" y="31" fill="#F4F1EA" font-family="Arial" font-size="18" font-weight="700">Choose one lane, confirm eligibility this week, then assemble a one-page project brief with budget, photos, partners and measurable local impact.</text>
+  <text x="28" y="58" fill="#C8A96A" font-family="Consolas,monospace" font-size="14">NOTE / deadlines and availability change. Verify every program page before applying.</text>
+</g>
+
+<text x="72" y="956" class="source">Sources reviewed: OEDIT Rural Jump-Start + Colorado Creates; Southern Colorado Community Foundation; SCEDD; USDA Rural Development; NMEDD Grants;</text>
+<text x="72" y="976" class="source">NM MainStreet Opportunities; PNM Foundation; NM Grown.</text>
+</svg>

@@ -4,10 +4,13 @@ import csv
 import html
 import json
 import os
+import re
 import shutil
-from collections import Counter
+from collections import Counter, defaultdict
+from datetime import date
 from pathlib import Path
 from textwrap import dedent
+from urllib.parse import quote_plus, urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,9 +27,10 @@ if not SOURCE_CSV.exists():
 SOURCE_JSON = REPO_DATA / "tri_county_persona_resources.json"
 if not SOURCE_JSON.exists():
     SOURCE_JSON = DOWNLOADS / "tri_county_persona_resources.json"
+EVERYTHING_DIRECTORY_JSON = REPO_DATA / "directory_of_absolutely_everything.json"
 REAUDIT_NOTES = DOWNLOADS / "tri_county_reaudit" / "comprehensive_reaudit_source_notes.md"
 NEW_PDF_EXTRACT_DIR = DOWNLOADS / "tri_county_new_pdf_extract_20260621"
-BUILD_DATE = "2026-06-27"
+BUILD_DATE = os.environ.get("BUILD_DATE", date.today().isoformat())
 
 
 def normalize_origin(value: str) -> str:
@@ -50,6 +54,8 @@ ACTIVE_PATHS = {
     "submit": "submit/",
     "appendix": "appendix/",
     "about": "about/",
+    "funding": "resources/funding/",
+    "arts-culture": "resources/arts-culture/",
     "post-raton": "post-events-raton/",
     "post-trinidad": "post-events-trinidad/",
     "post-huerfano": "post-events-huerfano/",
@@ -74,6 +80,8 @@ HERO_ART_BY_ACTIVE = {
     "submit": "hero-canyon-submit.svg",
     "appendix": "hero-archive-ridges.svg",
     "about": "hero-raton-mesa.svg",
+    "funding": "hero-plains-valley.svg",
+    "arts-culture": "hero-garden-gods.svg",
     "post-raton": "hero-volcanic-field.svg",
     "post-trinidad": "hero-fishers-canyon.svg",
     "post-huerfano": "hero-spanish-peaks.svg",
@@ -121,7 +129,123 @@ SOURCE_NOTE_EXPORTS = [
 COUNTIES = ["Colfax", "Las Animas", "Huerfano", "Regional"]
 
 
+HOME_TASK_GROUPS = [
+    {
+        "title": "Post an event",
+        "href": "posting/",
+        "summary": "Find the calendar, tourism, venue, media, or public-office route that fits the event before sending materials everywhere.",
+        "action": "Choose an event route",
+    },
+    {
+        "title": "Promote or advertise",
+        "href": "regional-channels/",
+        "summary": "Compare visitor guides, newsletters, media outlets, chamber channels, and partner pages before asking about placement.",
+        "action": "Find promotion channels",
+    },
+    {
+        "title": "Get listed",
+        "href": "network/",
+        "summary": "Search public directories and local inventory entries, then submit updates when a listing is missing or stale.",
+        "action": "Search the directory",
+    },
+    {
+        "title": "Find funding",
+        "href": "resources/funding/",
+        "summary": "Start with grant, incentive, scholarship, stipend, loan, and technical-assistance entries that match the applicant and project.",
+        "action": "Search funding entries",
+    },
+    {
+        "title": "Arts & culture",
+        "href": "resources/arts-culture/",
+        "summary": "Use arts, gallery, maker, music, creative-district, venue, and visitor-facing channels without burying the audience in process notes.",
+        "action": "Open arts routes",
+    },
+    {
+        "title": "County starting points",
+        "href": "region/",
+        "summary": "Begin with the most useful local hubs in Colfax, Las Animas, or Huerfano, then widen across the region when it helps.",
+        "action": "Choose a county",
+    },
+]
+
+
+CURRENT_LEADS = [
+    {
+        "title": "New Mexico Local Economic Development Act",
+        "county": "Colfax",
+        "kind": "Public economic-development funding",
+        "group": "Funding",
+        "url": "https://www.edd.newmexico.gov/grants/local-economic-development-act/",
+        "best_for": "Colfax projects that may need a formal public economic-development path, infrastructure support, or a city/county conversation before funding is realistic.",
+        "action": "Use as an official starting gate, then confirm eligibility, public-process requirements, and the local applicant pathway.",
+    },
+    {
+        "title": "New Mexico Trails+ Grant",
+        "county": "Colfax",
+        "kind": "Outdoor recreation / trail funding",
+        "group": "Funding",
+        "url": "https://www.edd.newmexico.gov/press-releases/state-opens-trails-grant-for-outdoor-recreation-projects/",
+        "best_for": "Trail, outdoor recreation, visitor-economy, and community access projects that need a state funding lead to evaluate.",
+        "action": "Check the current cycle, eligible applicants, match rules, and deadlines before building a project promise around it.",
+    },
+    {
+        "title": "New Mexico Job Training Incentive Program",
+        "county": "Colfax",
+        "kind": "Workforce training reimbursement",
+        "group": "Funding",
+        "url": "https://www.edd.newmexico.gov/programs-and-services/business-development/job-training-incentive-program/",
+        "best_for": "New Mexico businesses planning expansion hires and training costs before those positions are filled.",
+        "action": "Use early in hiring planning; verify eligible jobs, wages, timing, and approval steps before promising reimbursement.",
+    },
+    {
+        "title": "Explore Raton Visitors Guide advertising",
+        "county": "Colfax",
+        "kind": "Visitor guide / promotion inquiry",
+        "group": "Directory source",
+        "url": "https://www.exploreraton.com/post/purchase-your-2026-raton-visitors-guide-ad",
+        "best_for": "Raton and Colfax visitor-facing businesses, attractions, lodging, dining, galleries, recreation, and event campaigns.",
+        "action": "Ask about the current visitor-guide deadline, ad sizes, rate card, placement rules, and whether the listing also appears online.",
+    },
+    {
+        "title": "Town of La Veta Business Directory",
+        "county": "Huerfano",
+        "kind": "Municipal business directory",
+        "group": "Directory source",
+        "url": "https://townoflaveta-co.gov/business-directory/",
+        "best_for": "La Veta businesses, galleries, lodging, dining, services, and local referrals that should be findable from a municipal source.",
+        "action": "Check whether a listing is present, then use the town contact path to ask about additions or corrections.",
+    },
+    {
+        "title": "Walsenburg Mercantile vendors",
+        "county": "Huerfano",
+        "kind": "Maker / retail vendor directory",
+        "group": "Directory source",
+        "url": "https://www.walsenburgmercantile.com/meet-our-vendors",
+        "best_for": "Artists, makers, craftspeople, food producers, and retailers looking for local vendor visibility and cross-promotion examples.",
+        "action": "Use as a discovery lead, then contact the venue directly before assuming vendor availability or terms.",
+    },
+    {
+        "title": "Meditating Monkey Art Emporium relocation watch",
+        "county": "Huerfano",
+        "kind": "Arts venue / listing update watch",
+        "group": "Update watch",
+        "url": "https://www.facebook.com/meditatingmonkeyartemporium/",
+        "best_for": "Arts-directory cleanup, visitor-facing gallery updates, and avoiding stale address or venue references.",
+        "action": "Confirm the current address and status before publishing or printing a gallery, event, or shopping recommendation.",
+    },
+]
+
+
 DIRECTORY_SOURCES = [
+    {
+        "title": "LocalStash / Weekender regional events",
+        "county": "Regional",
+        "kind": "Regional event list / visitor channel",
+        "url": "https://weekender.pub/",
+        "best_for": "Cross-county event visibility for Las Animas, Huerfano, Colfax, and nearby southern Colorado / northern New Mexico audiences.",
+        "action": "Use to review regional event listings, then ask LocalStash or Weekender directly about current submission, magazine, sponsor, or advertising options.",
+        "confidence": "High",
+    },
     {
         "title": "Raton Chamber Business Directory",
         "county": "Colfax",
@@ -174,6 +298,15 @@ DIRECTORY_SOURCES = [
         "url": "https://www.exploreraton.com/events",
         "best_for": "Signature events, local happenings, seasonal activity, and tourism timing.",
         "action": "Check before scheduling a launch, show, promotion, or fundraiser.",
+        "confidence": "High",
+    },
+    {
+        "title": "Explore Raton Visitors Guide Advertising",
+        "county": "Colfax",
+        "kind": "Visitor guide / promotion inquiry",
+        "url": "https://www.exploreraton.com/post/purchase-your-2026-raton-visitors-guide-ad",
+        "best_for": "Visitor-facing Raton and Colfax businesses, attractions, lodging, dining, galleries, recreation, and event campaigns.",
+        "action": "Ask about the current visitor-guide deadline, ad sizes, rate card, placement rules, and whether the listing also appears online.",
         "confidence": "High",
     },
     {
@@ -255,15 +388,6 @@ DIRECTORY_SOURCES = [
         "url": "https://www.edd.newmexico.gov/resource-map/",
         "best_for": "Finding and submitting New Mexico business-support resources, funding assistance, services, and regional economic-development contacts.",
         "action": "Use this alongside city and chamber resources when a Colfax user needs a statewide business-support path or a resource needs to be submitted for review.",
-        "confidence": "High",
-    },
-    {
-        "title": "Colexico Alliance / TLAC Chamber",
-        "county": "Las Animas",
-        "kind": "Regional chamber",
-        "url": "https://tlacchamber.org/",
-        "best_for": "Member directory, community articles, event calendar, local products, and the cross-state regional chamber frame.",
-        "action": "Use as the first regional business network shortcut for Trinidad and neighboring counties.",
         "confidence": "High",
     },
     {
@@ -667,6 +791,15 @@ FUNDING_DIRECTORY_ADDITIONS = [
         "confidence": "High",
     },
     {
+        "title": "New Mexico Trails+ Grant",
+        "county": "Colfax",
+        "kind": "Outdoor recreation / trail funding",
+        "url": "https://www.edd.newmexico.gov/press-releases/state-opens-trails-grant-for-outdoor-recreation-projects/",
+        "best_for": "Trail, outdoor recreation, visitor-economy, and community-access projects that need a state funding lead to evaluate.",
+        "action": "Use for Colfax outdoor recreation concepts, then verify the current cycle, eligible applicants, match rules, and deadlines.",
+        "confidence": "High",
+    },
+    {
         "title": "New Mexico Small Business Assistance Program",
         "county": "Colfax",
         "kind": "Technical assistance / noncash support",
@@ -891,15 +1024,6 @@ DIRECTORY_SOURCES.extend(
             "confidence": "High",
         },
         {
-            "title": "Spanish Peaks Country Add Business Listing",
-            "county": "Huerfano",
-            "kind": "Directory submission",
-            "url": "https://spanishpeakscountry.com/add-business-listing/",
-            "best_for": "Visitor-facing businesses that may belong in the Spanish Peaks Country directory.",
-            "action": "Use to request a listing; do not promise acceptance without review.",
-            "confidence": "High",
-        },
-        {
             "title": "Spanish Peaks Country Submit Event",
             "county": "Huerfano",
             "kind": "Event submission",
@@ -1020,7 +1144,7 @@ DIRECTORY_SOURCES.extend(
             "title": "New Mexico Local Economic Development Act",
             "county": "Colfax",
             "kind": "Economic-development incentive / state program",
-            "url": "https://www.edd.newmexico.gov/local-economic-development-act/",
+            "url": "https://www.edd.newmexico.gov/grants/local-economic-development-act/",
             "best_for": "New Mexico communities and qualifying economic-development projects, including Colfax County and several local municipalities.",
             "action": "Use for larger business-expansion or project-support questions; verify eligibility with the state and local government before advising.",
             "confidence": "High",
@@ -1039,6 +1163,17 @@ DIRECTORY_SOURCES.extend(
 
 
 AMPLIFIER_CHANNELS = [
+    {
+        "channel": "LocalStash / Weekender regional events",
+        "area_served": "Las Animas, Huerfano, Colfax, and nearby SoCO / NoNM communities",
+        "channel_type": "Regional event list; visitor guide; magazine or sponsor inquiry",
+        "asks": "Review current regional event listings and ask directly about event submission, magazine inclusion, sponsorship, or advertising options.",
+        "best_for": "Events, arts and music listings, visitor-facing businesses, nonprofit programs, community happenings, and cross-county awareness.",
+        "paid_free_status": "Unknown - verify",
+        "verification_status": "Live Weekender page and LocalStash transition evidence checked July 2026",
+        "source_url": "https://weekender.pub/",
+        "implementation_note": "Use as a regional discovery and promotion route; confirm deadlines, rates, and submission rules before planning around placement.",
+    },
     {
         "channel": "Red River Brewing Company & Distillery",
         "area_served": "Red River / Colfax",
@@ -1301,6 +1436,109 @@ POSTING_SPACES = [
     },
 ]
 
+PHYSICAL_AD_PLACE_TYPES = [
+    {
+        "title": "Libraries and community boards",
+        "best_for": "Classes, nonprofit programs, arts events, workshops, support services, and local announcements.",
+        "ask": "Ask the front desk or branch contact about flyer size, dates, political material, commercial material, and removal rules.",
+    },
+    {
+        "title": "Visitor and tourism centers",
+        "best_for": "Events, galleries, lodging-adjacent offers, visitor services, tours, food, retail, and destination-facing rack cards.",
+        "ask": "Ask whether the location accepts brochures, rack cards, posters, or event flyers and whether materials must be visitor-facing.",
+    },
+    {
+        "title": "City halls, courts, and public offices",
+        "best_for": "Official notices, public meetings, civic programs, public hearings, and government-adjacent information.",
+        "ask": "Use these for public information routes, not casual advertising. Ask the clerk, office, or department about current posting rules.",
+    },
+    {
+        "title": "Downtown and high-traffic businesses",
+        "best_for": "Local events, art shows, classes, services, hiring, restaurant specials, and cross-promotion near foot traffic.",
+        "ask": "Ask the owner or manager before leaving materials. Bring a small stack and offer to remove flyers after the date passes.",
+    },
+    {
+        "title": "Galleries, venues, museums, and cultural spaces",
+        "best_for": "Openings, performances, artist calls, workshops, talks, music, festivals, and creative-sector promotion.",
+        "ask": "Ask whether the event fits the venue's audience and whether they prefer a poster, digital image, calendar link, or press blurb.",
+    },
+    {
+        "title": "Transit, travel, lodging, and visitor stops",
+        "best_for": "Visitor-facing events, maps, tours, transportation notices, lodging-adjacent services, and regional travel ideas.",
+        "ask": "Ask about lobby, kiosk, front-desk, or brochure-rack rules before printing large quantities.",
+    },
+]
+
+PHYSICAL_AD_LOCATION_TERMS = (
+    "library",
+    "visitor center",
+    "visitors center",
+    "welcome center",
+    "tourism",
+    "tourist",
+    "chamber",
+    "mainstreet",
+    "creative district",
+    "city hall",
+    "town hall",
+    "county clerk",
+    "courthouse",
+    "court",
+    "public office",
+    "community center",
+    "senior center",
+    "recreation center",
+    "gallery",
+    "museum",
+    "venue",
+    "theater",
+    "theatre",
+    "arts",
+    "cultural",
+    "coffee",
+    "cafe",
+    "espresso",
+    "bakery",
+    "restaurant",
+    "bar",
+    "brewery",
+    "distillery",
+    "market",
+    "grocery",
+    "food store",
+    "mercantile",
+    "shop",
+    "store",
+    "rail",
+    "train",
+    "station",
+    "depot",
+    "bus",
+    "transit",
+    "hotel",
+    "motel",
+    "inn",
+    "lodging",
+    "campground",
+    "rv",
+    "resort",
+    "school",
+    "college",
+    "campus",
+)
+
+PHYSICAL_AD_LISTING_TYPES = {
+    "Arts & culture",
+    "Education & learning",
+    "Events & venues",
+    "Food & drink",
+    "Lodging & stays",
+    "Nonprofit & community",
+    "Public offices",
+    "Retail & local goods",
+    "Tourism & visitor info",
+}
+
 
 PERSONA_ROUTES = [
     {
@@ -1353,7 +1591,7 @@ PATHS = [
         "name": "Find the Network",
         "slug": "network",
         "summary": "Use existing directories, calendars, media channels, chambers, and support orgs first.",
-        "cta": "Search shortcuts and leads",
+        "cta": "Search shortcuts and listings",
     },
     {
         "name": "Understand the Region",
@@ -1377,7 +1615,9 @@ ROUTE_LABELS = {
     "templates": "Templates",
     "submit": "Submit",
     "appendix": "Appendix",
-    "about": "Creation Process",
+    "about": "About",
+    "funding": "Funding",
+    "arts-culture": "Arts & Culture",
     "post-raton": "Post Events in Raton",
     "post-trinidad": "Post Events in Trinidad",
     "post-huerfano": "Post Events in Walsenburg and La Veta",
@@ -1394,10 +1634,10 @@ TASK_PAGE_DEFS = [
     {
         "active": "post-raton",
         "title": "Where to Post Events in Raton NM | Stateline Guide",
-        "description": "Find starting points for Raton event visibility, including city pages, tourism routes, media, calendars, public boards, partners, and verification steps.",
+        "description": "Find starting points for Raton event visibility, including city pages, tourism routes, media, calendars, public boards, partners, and practical next steps.",
         "eyebrow": "Raton event visibility",
         "h1": "Where to post events in Raton, New Mexico",
-        "intro": "Use this page when a public event, class, fundraiser, art opening, business launch, civic program, performance, or community activity needs visibility in Raton or Colfax County. Start with the source that best matches the event: city or county channels for official/public information, tourism and visitor-facing routes for events that serve travelers, media for public-interest announcements, and partner channels for aligned audiences. Verify the current rules before printing materials or promising placement.",
+        "intro": "Use this page when a public event, class, fundraiser, art opening, business launch, civic program, performance, or community activity needs visibility in Raton or Colfax County. Start with the page or channel that best matches the event: city or county channels for official/public information, tourism and visitor-facing routes for events that serve travelers, media for public-interest announcements, and partner channels for aligned audiences. Check current rules before printing materials or promising placement.",
         "source_terms": ["Raton", "Colfax", "Events", "Tourism", "Media", "Arts", "MainStreet"],
         "row_terms": ["Raton", "Colfax", "event", "calendar", "media", "artist", "gallery", "theater", "tourism"],
         "primary_links": [("Use regional amplifier channels", "amplifiers/"), ("Separate official notices from community visibility", "posting/"), ("Use copy-ready outreach templates", "templates/")],
@@ -1405,7 +1645,7 @@ TASK_PAGE_DEFS = [
     {
         "active": "post-trinidad",
         "title": "Where to Post Events in Trinidad CO | Stateline Guide",
-        "description": "Use Trinidad tourism, city, chamber, creative district, venue, media, and community routes to submit or promote public events after verifying rules.",
+        "description": "Use Trinidad tourism, city, chamber, creative district, venue, media, and community routes to submit or promote public events after checking rules.",
         "eyebrow": "Trinidad event visibility",
         "h1": "Where to post events in Trinidad, Colorado",
         "intro": "Use this page when a public event, art show, performance, market, workshop, nonprofit program, business announcement, or visitor-facing activity needs visibility in Trinidad or Las Animas County. Start with tourism and city-facing routes when the event is public or visitor-relevant. Use chamber, creative-district, venue, media, and partner channels when the event fits their audience. Confirm submission rules, review time, image requirements, and whether placement is editorial, free, paid, or member-only.",
@@ -1419,7 +1659,7 @@ TASK_PAGE_DEFS = [
         "description": "Find Huerfano County event routes through Spanish Peaks Country, Walsenburg, La Veta, libraries, media, arts, and tourism channels.",
         "eyebrow": "Huerfano event visibility",
         "h1": "Where to post events in Walsenburg and La Veta",
-        "intro": "Use this page when a Huerfano County event, art show, farmers market, workshop, nonprofit program, visitor activity, gallery reception, performance, or local announcement needs public visibility. Start with Spanish Peaks Country, town/city routes, libraries, chamber or economic-development contacts, arts channels, and regional media. Treat public boards and calendars as owner-controlled channels. Verify current rules, review time, and whether the event fits before assuming placement.",
+        "intro": "Use this page when a Huerfano County event, art show, farmers market, workshop, nonprofit program, visitor activity, gallery reception, performance, or local announcement needs public visibility. Start with Spanish Peaks Country, town/city routes, libraries, chamber or economic-development contacts, arts channels, and regional media. Treat public boards and calendars as owner-controlled channels. Check current rules, review time, and whether the event fits before assuming placement.",
         "source_terms": ["Huerfano", "Walsenburg", "La Veta", "Spanish Peaks", "Event", "Tourism", "Arts", "Media"],
         "row_terms": ["Huerfano", "Walsenburg", "La Veta", "event", "calendar", "media", "artist", "gallery", "music", "tourism"],
         "primary_links": [("Find Huerfano amplifier channels", "amplifiers/"), ("Open the Huerfano county page", "counties/huerfano/"), ("Submit a changed event route", "submit/")],
@@ -1433,7 +1673,7 @@ TASK_PAGE_DEFS = [
         "intro": "Use this page when a business, artist, nonprofit, venue, program, or service needs more visibility in Trinidad or nearby Las Animas County communities. Start by deciding whether the item belongs in tourism, chamber, media, creative-district, venue, or partner channels. Ask directly before assuming free placement, paid ad availability, deadline timing, audience size, or editorial coverage.",
         "source_terms": ["Trinidad", "Las Animas", "Advertising", "Media", "Chamber", "Tourism", "Newsletter"],
         "row_terms": ["Trinidad", "Las Animas", "advertising", "media", "newsletter", "tourism", "business", "artist"],
-        "primary_links": [("Compare calendars, media, directories, and visitor guides", "amplifiers/"), ("Prepare an advertising inquiry", "templates/"), ("Search Las Animas leads", "network/")],
+        "primary_links": [("Compare calendars, media, directories, and visitor guides", "amplifiers/"), ("Prepare an advertising inquiry", "templates/"), ("Search Las Animas entries", "network/")],
     },
     {
         "active": "colfax-business",
@@ -1444,18 +1684,18 @@ TASK_PAGE_DEFS = [
         "intro": "Use this page when a new or existing Colfax County business needs a practical first path for support, listings, promotion, tourism exposure, licensing context, downtown partnerships, or New Mexico statewide resources. Start with official and public directories before building a contact list by hand.",
         "source_terms": ["Colfax", "Raton", "Business", "MainStreet", "GrowRaton", "SBDC", "New Mexico"],
         "row_terms": ["Colfax", "Raton", "business", "support", "funding", "directory", "economic"],
-        "primary_links": [("Open the Colfax county page", "counties/colfax/"), ("Search business and support leads", "network/"), ("Plan the outreach cycle first", "plan/")],
+        "primary_links": [("Open the Colfax county page", "counties/colfax/"), ("Search business and support entries", "network/"), ("Plan the outreach cycle first", "plan/")],
     },
     {
         "active": "las-animas-nonprofit",
         "title": "Las Animas County Nonprofit Resources | Stateline Guide",
-        "description": "Find Trinidad and Las Animas nonprofit visibility, grant, partner, media, chamber, and community-resource routes with verification reminders.",
+        "description": "Find Trinidad and Las Animas nonprofit visibility, grant, partner, media, chamber, and community-resource routes with clear next steps.",
         "eyebrow": "Las Animas nonprofit routes",
         "h1": "Las Animas County nonprofit resources",
-        "intro": "Use this page when a nonprofit, fiscally sponsored project, community program, class, service, or volunteer effort needs visibility, partners, funding paths, public calendars, or source-backed local referrals in Las Animas County. Verify eligibility, deadlines, rates, and acceptance with the source before promising participation or publication.",
+        "intro": "Use this page when a nonprofit, fiscally sponsored project, community program, class, service, or volunteer effort needs visibility, partners, funding paths, public calendars, or public local referrals in Las Animas County. Check eligibility, deadlines, rates, and acceptance with the page or organization before promising participation or publication.",
         "source_terms": ["Las Animas", "Trinidad", "Nonprofit", "Grant", "Community", "Foundation", "Chamber"],
         "row_terms": ["Las Animas", "Trinidad", "nonprofit", "foundation", "grant", "community", "partner"],
-        "primary_links": [("Open the Las Animas county page", "counties/las-animas/"), ("Search nonprofit and funding leads", "network/"), ("Submit a source-backed correction", "submit/")],
+        "primary_links": [("Open the Las Animas county page", "counties/las-animas/"), ("Search nonprofit and funding entries", "network/"), ("Submit a correction", "submit/")],
     },
     {
         "active": "huerfano-calendars",
@@ -1488,9 +1728,118 @@ TASK_PAGE_DEFS = [
         "intro": "Use this page when a business, artist, nonprofit, event organizer, program, or service needs to compare the channels that already gather public attention across the tri-county region. Treat these as routing starts, not guarantees. Confirm deadlines, formats, acceptance, rates, and review timing with each channel owner.",
         "source_terms": ["Regional", "Calendar", "Newsletter", "Visitor", "Directory", "Media", "Tourism"],
         "row_terms": ["Regional", "calendar", "newsletter", "media", "visitor", "directory", "tourism"],
-        "primary_links": [("Open the full amplifier page", "amplifiers/"), ("Search public directories and local leads", "network/"), ("Submit a changed channel", "submit/")],
+        "primary_links": [("Open the full amplifier page", "amplifiers/"), ("Search public directories and local entries", "network/"), ("Submit a changed channel", "submit/")],
     },
 ]
+
+
+TASK_CATEGORY_META = {
+    "post-raton": {
+        "label": "Events",
+        "class": "cat-events",
+        "summary": "Public events, classes, fundraisers, markets, openings, and performances.",
+        "next": "Start with public calendars and visitor-facing routes, then widen to partners.",
+    },
+    "post-trinidad": {
+        "label": "Events",
+        "class": "cat-events",
+        "summary": "Public events, art shows, performances, workshops, and visitor-facing activities.",
+        "next": "Start with tourism, city, venue, and arts routes when the event is public.",
+    },
+    "post-huerfano": {
+        "label": "Events",
+        "class": "cat-events",
+        "summary": "County events, markets, gallery receptions, workshops, performances, and announcements.",
+        "next": "Start with Spanish Peaks, Walsenburg, La Veta, libraries, arts, and local media.",
+    },
+    "advertise-trinidad": {
+        "label": "Promotion",
+        "class": "cat-promotion",
+        "summary": "Advertising, sponsorship, paid placement, media, newsletter, and partner visibility.",
+        "next": "Ask which placements are free, paid, editorial, member-only, or unavailable.",
+    },
+    "colfax-business": {
+        "label": "Business",
+        "class": "cat-business",
+        "summary": "Business support, licensing context, downtown routes, tourism visibility, and statewide help.",
+        "next": "Start with official public pages and local business-support routes before cold outreach.",
+    },
+    "las-animas-nonprofit": {
+        "label": "Nonprofits",
+        "class": "cat-nonprofit",
+        "summary": "Community programs, fiscal sponsorship, funding paths, partner referrals, and visibility.",
+        "next": "Check eligibility, deadlines, and program fit before promising participation.",
+    },
+    "huerfano-calendars": {
+        "label": "Calendars",
+        "class": "cat-events",
+        "summary": "Event calendars, visitor listings, community announcements, and local tourism routes.",
+        "next": "Start with the channel that already gathers the audience you need.",
+    },
+    "artist-gallery": {
+        "label": "Arts & Culture",
+        "class": "cat-arts",
+        "summary": "Artists, galleries, makers, performers, creative classes, exhibitions, and arts nonprofits.",
+        "next": "Pair arts channels with tourism, venue, media, and partner routes when the audience overlaps.",
+    },
+    "regional-channels": {
+        "label": "Regional",
+        "class": "cat-regional",
+        "summary": "Newsletters, calendars, visitor guides, directories, partner pages, and multi-county visibility.",
+        "next": "Use the broad channel only after the local fit and action are clear.",
+    },
+}
+
+
+ROUTE_TYPE_CARDS = [
+    {
+        "label": "Events",
+        "class": "cat-events",
+        "use": "Public event, class, fundraiser, market, opening, performance, or visitor activity.",
+        "prepare": "Name, date, time, place, short blurb, image, cost, and public contact.",
+        "check": "Eligibility, lead time, image size, deadline, and whether the calendar owner reviews submissions.",
+    },
+    {
+        "label": "Promotion",
+        "class": "cat-promotion",
+        "use": "Ad inquiry, newsletter blurb, partner share, flyer placement, or media pitch.",
+        "prepare": "One-sentence hook, audience fit, call to action, image, link, and contact.",
+        "check": "Free or paid status, rates, deadline, audience fit, and whether placement is guaranteed.",
+    },
+    {
+        "label": "Business",
+        "class": "cat-business",
+        "use": "Business listing, service-area update, shop-local route, or downtown/tourism visibility.",
+        "prepare": "Business name, category, address or service area, website, hours, phone, and short description.",
+        "check": "Listing requirements, membership rules, current contact route, and update process.",
+    },
+    {
+        "label": "Nonprofits",
+        "class": "cat-nonprofit",
+        "use": "Program, mentorship, class, service, volunteer route, grant path, or community referral.",
+        "prepare": "Who is served, what is offered, eligibility, dates, location, contact, and referral action.",
+        "check": "Eligibility, privacy limits, deadlines, and whether the partner wants public promotion.",
+    },
+    {
+        "label": "Arts & Culture",
+        "class": "cat-arts",
+        "use": "Artist, gallery, venue, maker, exhibition, performance, workshop, or cultural resource.",
+        "prepare": "Artist or organization name, medium, event details, portfolio/listing link, image, and public action.",
+        "check": "Submission style, image credit, permission, commission or sales terms, and audience fit.",
+    },
+]
+
+
+def task_category_meta(active: str) -> dict:
+    return TASK_CATEGORY_META.get(
+        active,
+        {
+            "label": "Guide route",
+            "class": "cat-support",
+            "summary": "A focused starting path for a regional visibility task.",
+            "next": "Start with the owner-controlled public page, then widen if the fit is clear.",
+        },
+    )
 
 
 COUNTY_INTENT_BLOCKS = {
@@ -1599,6 +1948,664 @@ def clean_text(value: str | None) -> str:
     return (value or "").replace("\u2019", "'").replace("\u2013", "-").replace("\u2014", "-").strip()
 
 
+PLACE_ONLY_LISTING_NAMES = {
+    "aguilar",
+    "angel fire",
+    "cimarron",
+    "cuchara",
+    "eagle nest",
+    "gardner",
+    "la veta",
+    "raton",
+    "red river",
+    "trinidad",
+    "walsenburg",
+}
+
+
+NON_ENTITY_RESOURCE_NAMES = {
+    "community groups and digital bulletin boards",
+    "main street/chamber pages",
+    "official city/county pages",
+    "tourism offices and visitor-facing pages",
+    "tourism pages",
+    "tourism websites, google business profiles, social pages, and email newsletters",
+}
+
+
+GENERIC_NOTE_PATTERNS = (
+    "Commercial-directory-only lead from the July 2026 sweep",
+    "Creative-directory lead added from a public local arts",
+    "Use as a launch/outreach lead; verify details before",
+    "Visitor-facing listing pulled from public travel/vacation guide source",
+    "Use this as a starting contact",
+    "Treat as unverified",
+    "Verify before using",
+    "review before publishing",
+    "Open a source link when available",
+    "Commercial-directory-only",
+    "Visitor-facing listing pulled",
+    "YellowPages.com bulk listing",
+    "bulk listing",
+    "source-check candidate",
+    "starting contact",
+)
+
+
+GENERIC_RESOURCE_TYPES = {
+    "outreach lead / source-check candidate",
+    "promotion",
+    "visitor-facing listing",
+    "resource",
+}
+
+
+GENERIC_CATEGORIES = {
+    "commercial directory lead / local business",
+    "all tourism directory listings",
+    "vacation directory listings and attractions",
+    "travel guide businesses and attractions",
+    "local listing to confirm",
+}
+
+
+BUSINESS_TYPE_KEYWORDS = [
+    ("accounting", "accounting and bookkeeping service"),
+    ("appraiser", "property or business appraisal service"),
+    ("architect", "architecture or design service"),
+    ("auto", "auto service or repair business"),
+    ("bbq", "restaurant or food business"),
+    ("bakery", "bakery or cafe"),
+    ("bank", "banking or financial service"),
+    ("baptist", "faith-based community organization"),
+    ("bar", "bar, restaurant, or hospitality business"),
+    ("beauty", "beauty or personal-care business"),
+    ("brew", "brewery or hospitality business"),
+    ("cafe", "cafe or food business"),
+    ("camp", "campground or outdoor recreation business"),
+    ("car wash", "auto service business"),
+    ("church", "faith-based community organization"),
+    ("clinic", "health or wellness service"),
+    ("coffee", "coffee shop or cafe"),
+    ("construction", "construction or contracting business"),
+    ("dent", "dental or health service"),
+    ("electric", "electrical or contracting business"),
+    ("gallery", "gallery, studio, or creative venue"),
+    ("gift", "gift shop or retail business"),
+    ("golf", "recreation or visitor-facing business"),
+    ("grocery", "grocery or food retail business"),
+    ("hotel", "lodging or hospitality business"),
+    ("inn", "lodging or hospitality business"),
+    ("landscap", "landscaping or property service"),
+    ("lodge", "lodging or hospitality business"),
+    ("market", "retail, grocery, or local market"),
+    ("mercantile", "retail, maker, or local goods business"),
+    ("museum", "museum or cultural organization"),
+    ("pizza", "restaurant or food business"),
+    ("plumb", "plumbing or contracting business"),
+    ("real estate", "real estate or property service"),
+    ("resort", "lodging, recreation, or visitor-facing business"),
+    ("restaurant", "restaurant or food business"),
+    ("salon", "beauty or personal-care business"),
+    ("school", "school, class, or education program"),
+    ("studio", "studio, gallery, or creative business"),
+    ("tire", "auto service or repair business"),
+    ("vacation", "lodging or visitor-facing business"),
+    ("winery", "winery or hospitality business"),
+]
+
+
+PUBLIC_TYPE_RULES = [
+    (("grant", "funding", "loan", "scholarship", "stipend", "incentive", "foundation"), "Funding & support"),
+    (("gallery", "artist", "arts", "creative", "maker", "museum", "studio", "craft", "ceramic", "painting", "photography", "sculpture", "fiber", "jewelry"), "Arts & culture"),
+    (("newspaper", "radio", "media", "broadcast", "news", "magazine", "local page", "social page", "channels to watch"), "Media & news"),
+    (("calendar", "event", "festival", "venue", "theater", "theatre", "performance", "live music"), "Events & venues"),
+    (("hotel", "motel", "inn", "lodge", "lodging", "vacation rental", "rv", "resort", "campground", "camping"), "Lodging & stays"),
+    (("restaurant", "dining", "food", "cafe", "coffee", "bakery", "bar", "brewery", "winery", "taqueria", "pizza", "catering"), "Food & drink"),
+    (("shop", "shopping", "retail", "gift", "mercantile", "grocery", "market", "boutique", "apparel", "hardware"), "Retail & local goods"),
+    (("tourism", "visitor", "chamber", "mainstreet", "main street", "destination", "travel guide"), "Tourism & visitor info"),
+    (("outdoor", "recreation", "trail", "golf", "ski", "snowboard", "park", "state park", "guide"), "Outdoor recreation"),
+    (("sbdc", "economic", "business support", "startup", "entrepreneur", "workforce", "training", "technical assistance", "job training"), "Business support"),
+    (("school", "education", "college", "library", "class", "workshop"), "Education & learning"),
+    (("hospital", "clinic", "health", "wellness", "dental", "therapy", "medical", "pharmacy", "beauty", "salon", "personal-care"), "Health & wellness"),
+    (("church", "ministry", "nonprofit", "community", "service organization", "arts council"), "Nonprofit & community"),
+    (("city", "county", "town", "village", "government", "municipal", "public office", "district"), "Public offices"),
+    (("auto", "tire", "car wash", "fuel", "gas", "transport", "rv service"), "Auto & transportation"),
+    (("home & garden", "home and garden", "garden", "construction", "contractor", "plumbing", "electric", "landscap", "excavation", "welding", "woodwork"), "Home, land & contracting"),
+    (("bank", "credit union", "finance", "financial", "real estate", "property", "storage", "appraisal", "insurance", "accounting", "bookkeeping", "legal", "professional"), "Professional services"),
+]
+
+PUBLIC_TYPE_LABELS = {label for _, label in PUBLIC_TYPE_RULES}
+
+
+AUDIENCE_DISPLAY_LABELS = {
+    "For-Profit": "Businesses",
+    "Non-Profit": "Nonprofits",
+    "Artist": "Artists",
+    "Creative business": "Creative businesses",
+    "Entrepreneur": "Entrepreneurs",
+    "Program": "Programs",
+    "Visitors / tourists": "Visitors",
+    "Arts / culture audiences": "Arts and culture",
+    "Rural residents": "Rural residents",
+    "Health / service audiences": "Health and service audiences",
+    "Youth / families": "Youth and families",
+}
+
+
+def split_semicolon(value: object) -> list[str]:
+    return [part.strip() for part in str(value or "").split(";") if part.strip()]
+
+
+def normalize_goal_relevance(value: object) -> str:
+    goals = []
+    for part in split_semicolon(value):
+        normalized = "Find Money or Help" if part in {"Find Money / Help", "Find Money or Help"} else part
+        if normalized not in goals:
+            goals.append(normalized)
+    return "; ".join(goals)
+
+
+def concrete_listing_name(row: dict) -> bool:
+    name = clean_text(row.get("resource_name")).lower()
+    return bool(name) and name not in PLACE_ONLY_LISTING_NAMES
+
+
+def normalized_resource_name_key(value: str) -> str:
+    value = clean_text(value).casefold().replace("&", " and ")
+    value = re.sub(r"\b(llc|inc|co|company|corp|corporation)\b", " ", value)
+    value = re.sub(r"[^a-z0-9]+", " ", value)
+    return " ".join(value.split())
+
+
+def split_resource_alias_names(value: str) -> list[str]:
+    name = clean_text(value)
+    if not name:
+        return []
+    parts = re.split(r"\s+(?:/|a/k/a|aka|formerly|dba|doing business as)\s+", name, flags=re.IGNORECASE)
+    return [part.strip() for part in parts if part.strip()]
+
+
+def duplicate_resource_score(row: dict) -> int:
+    score = 0
+    for field in ["website", "source_url", "contact_phone", "contact_email", "physical_address"]:
+        if clean_text(row.get(field)):
+            score += 12
+    if clean_text(row.get("category")).casefold() not in GENERIC_CATEGORIES:
+        score += 2
+    if clean_text(row.get("resource_type")).casefold() not in GENERIC_RESOURCE_TYPES:
+        score += 2
+    if not generic_note(row):
+        score += 4
+    score += min(len(clean_text(row.get("notes"))) // 120, 3)
+    return score
+
+
+def merge_public_resource_group(group: list[dict]) -> dict:
+    winner = max(group, key=duplicate_resource_score)
+    merged = dict(winner)
+    aliases = split_semicolon(merged.get("alternate_names"))
+    merged_name = clean_text(merged.get("resource_name"))
+    source_urls = split_semicolon(merged.get("source_url"))
+    for row in group:
+        row_name = clean_text(row.get("resource_name"))
+        for alias in split_resource_alias_names(row_name):
+            if alias and alias != merged_name and alias not in aliases:
+                aliases.append(alias)
+        for key, value in row.items():
+            if key == "source_url":
+                for url in split_semicolon(value):
+                    if url not in source_urls:
+                        source_urls.append(url)
+            elif not clean_text(merged.get(key)) and clean_text(value):
+                merged[key] = clean_text(value)
+    merged["source_url"] = "; ".join(source_urls)
+    if aliases:
+        merged["alternate_names"] = "; ".join(aliases)
+    return merged
+
+
+def dedupe_resource_rows(rows: list[dict]) -> list[dict]:
+    exact_keys = {
+        (
+            clean_text(row.get("county")).casefold(),
+            clean_text(row.get("town")).casefold(),
+            clean_text(row.get("state")).casefold(),
+            normalized_resource_name_key(row.get("resource_name")),
+        )
+        for row in rows
+    }
+    groups: dict[tuple[str, str, str, str], list[dict]] = {}
+    for row in rows:
+        location = (
+            clean_text(row.get("county")).casefold(),
+            clean_text(row.get("town")).casefold(),
+            clean_text(row.get("state")).casefold(),
+        )
+        name_key = normalized_resource_name_key(row.get("resource_name"))
+        group_key = (*location, name_key)
+        for alias in split_resource_alias_names(row.get("resource_name")):
+            alias_key = normalized_resource_name_key(alias)
+            if alias_key and alias_key != name_key and (*location, alias_key) in exact_keys:
+                group_key = (*location, alias_key)
+                break
+        groups.setdefault(group_key, []).append(row)
+    return [merge_public_resource_group(group) for group in groups.values()]
+
+
+def inferred_listing_type(row: dict) -> str:
+    name = clean_text(row.get("resource_name"))
+    text = " ".join(
+        [
+            name,
+            clean_text(row.get("category")),
+            clean_text(row.get("resource_type")),
+            clean_text(row.get("notes")),
+        ]
+    ).casefold()
+    category = clean_text(row.get("category"))
+    resource_type = clean_text(row.get("resource_type"))
+    for needles, label in PUBLIC_TYPE_RULES:
+        if any(needle in text for needle in needles):
+            return label
+    for candidate in [category, resource_type]:
+        if candidate in PUBLIC_TYPE_LABELS:
+            return candidate
+        candidate_text = candidate.casefold()
+        if candidate_text:
+            for needles, label in PUBLIC_TYPE_RULES:
+                if any(needle in candidate_text for needle in needles):
+                    return label
+    for needle, label in BUSINESS_TYPE_KEYWORDS:
+        if needle in text:
+            label_text = label.casefold()
+            for needles, public_label in PUBLIC_TYPE_RULES:
+                if any(rule in label_text or rule in needle for rule in needles):
+                    return public_label
+            return "Local business or service"
+    return "Local business or service"
+
+
+def public_place(row: dict) -> str:
+    parts = [clean_text(row.get("town")), clean_text(row.get("county")), clean_text(row.get("state"))]
+    parts = [part for part in parts if part]
+    return ", ".join(parts) if parts else "the tri-county region"
+
+
+def organization_tags(row: dict) -> list[str]:
+    tags = []
+    for audience in split_semicolon(row.get("audience_served")):
+        label = AUDIENCE_DISPLAY_LABELS.get(audience, audience)
+        if label and label not in tags:
+            tags.append(label)
+    return tags[:6] or ["Regional users"]
+
+
+def public_search_keywords(row: dict) -> str:
+    keywords = []
+    for field in ["resource_name", "alternate_names", "town", "county", "state", "category", "resource_type", "access_mode"]:
+        value = clean_text(row.get(field))
+        if value and value not in keywords:
+            keywords.append(value)
+    for value in [inferred_listing_type(row), public_best_for(row)]:
+        if value and value not in keywords:
+            keywords.append(value)
+    for part in split_semicolon(normalize_goal_relevance(row.get("goal_relevance"))) + split_semicolon(row.get("audience_served")) + organization_tags(row):
+        if part and part not in keywords:
+            keywords.append(part)
+    if is_physical_ad_candidate(row):
+        for part in ["Ask about flyers", "physical ads", "posters", "rack cards", "bulletin boards", "front-desk referrals"]:
+            if part not in keywords:
+                keywords.append(part)
+    elif has_physical_location(row):
+        for part in ["Physical location", "map", "in-person"]:
+            if part not in keywords:
+                keywords.append(part)
+    return "; ".join(keywords)
+
+
+def generic_note(row: dict) -> bool:
+    note = clean_text(row.get("notes"))
+    note_lower = note.casefold()
+    return any(pattern.casefold() in note_lower for pattern in GENERIC_NOTE_PATTERNS)
+
+
+def load_everything_description_index() -> dict[tuple[str, str, str], str]:
+    if hasattr(load_everything_description_index, "_cache"):
+        return getattr(load_everything_description_index, "_cache")
+    index: dict[tuple[str, str, str], str] = {}
+    if EVERYTHING_DIRECTORY_JSON.exists():
+        try:
+            payload = json.loads(EVERYTHING_DIRECTORY_JSON.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            payload = []
+        if isinstance(payload, list):
+            for item in payload:
+                if not isinstance(item, dict):
+                    continue
+                name_key = normalized_resource_name_key(item.get("name", ""))
+                if not name_key:
+                    continue
+                town_key = clean_text(item.get("town")).casefold()
+                county_key = clean_text(item.get("county")).casefold()
+                description = clean_text(item.get("description"))
+                if useful_public_description(description):
+                    index.setdefault((name_key, town_key, county_key), description)
+                    index.setdefault((name_key, "", county_key), description)
+                    index.setdefault((name_key, town_key, ""), description)
+    setattr(load_everything_description_index, "_cache", index)
+    return index
+
+
+def everything_description_for(row: dict) -> str:
+    name_key = normalized_resource_name_key(row.get("resource_name", ""))
+    town_key = clean_text(row.get("town")).casefold()
+    county_key = clean_text(row.get("county")).casefold()
+    if not name_key:
+        return ""
+    index = load_everything_description_index()
+    return (
+        index.get((name_key, town_key, county_key))
+        or index.get((name_key, "", county_key))
+        or index.get((name_key, town_key, ""))
+        or ""
+    )
+
+
+def useful_public_description(value: str) -> bool:
+    text = clean_text(value)
+    if len(text) < 35:
+        return False
+    lowered = text.casefold()
+    process_phrases = (
+        "use it to find the public page",
+        "open a source link",
+        "starting contact",
+        "before assuming",
+        "source-check",
+        "verify",
+        "verification",
+        "recommended outreach waves",
+        "promotion timeline",
+        "automation",
+        "remaining gaps",
+        "research sources by data type",
+        "professional or service business in regional",
+    )
+    return not any(phrase in lowered for phrase in process_phrases)
+
+
+def public_safe_note(row: dict) -> str:
+    note = public_text_without_partner_names(clean_text(row.get("notes")))
+    if note and not generic_note(row) and useful_public_description(note):
+        return note
+    return ""
+
+
+def compact_category_label(row: dict, listing_type: str) -> str:
+    category = clean_text(row.get("category"))
+    resource_type = clean_text(row.get("resource_type"))
+    for value in [category, resource_type]:
+        lowered = value.casefold()
+        if value and lowered not in GENERIC_CATEGORIES and lowered not in GENERIC_RESOURCE_TYPES:
+            return value
+    return listing_type
+
+
+def listing_description_from_context(row: dict, listing_type: str, place: str) -> str:
+    name = clean_text(row.get("resource_name")) or "This listing"
+    category = compact_category_label(row, listing_type)
+    base_by_type = {
+        "Funding & support": "Funding, grant, scholarship, stipend, loan, training, or support resource",
+        "Arts & culture": "Artist, gallery, studio, maker, venue, cultural group, or creative-sector listing",
+        "Media & news": "Media, newspaper, radio, newsletter, social page, or public information channel",
+        "Events & venues": "Event, venue, calendar, festival, performance, or public gathering route",
+        "Lodging & stays": "Lodging, campground, vacation rental, inn, hotel, or visitor-stay listing",
+        "Food & drink": "Restaurant, cafe, bakery, bar, brewery, catering, or food-related listing",
+        "Retail & local goods": "Retail, shop-local, mercantile, market, gift, grocery, or local goods listing",
+        "Tourism & visitor info": "Visitor-facing tourism, travel, chamber, destination, or local discovery listing",
+        "Outdoor recreation": "Outdoor recreation, trail, guide, park, ski, golf, camping, or visitor activity listing",
+        "Business support": "Business-support, entrepreneurship, workforce, training, technical-assistance, or economic-development route",
+        "Education & learning": "School, library, workshop, class, training, or education listing",
+        "Health & wellness": "Health, wellness, medical, dental, pharmacy, beauty, salon, or personal-care listing",
+        "Nonprofit & community": "Nonprofit, faith, civic, service, community, or referral organization",
+        "Public offices": "City, county, town, village, district, public office, or civic-information route",
+        "Auto & transportation": "Auto, transportation, fuel, tire, car wash, or travel-service listing",
+        "Home, land & contracting": "Construction, contractor, home, land, garden, repair, welding, or property-service listing",
+        "Professional services": "Professional, financial, real-estate, insurance, accounting, legal, property, or business-service listing",
+    }.get(listing_type, "Local business, organization, program, service, or regional resource")
+    best_for = public_best_for(row)
+    best_phrase = best_for.replace("; ", ", ")
+    category_sentence = f" Listed category: {category}." if category and category != listing_type else ""
+    return f"{name} is listed as a {base_by_type.lower()} in {place}.{category_sentence} Useful for {best_phrase} when the fit and contact path make sense."
+
+
+def public_best_for(row: dict) -> str:
+    goals = split_semicolon(normalize_goal_relevance(row.get("goal_relevance")))
+    tags = organization_tags(row)
+    listing_type = inferred_listing_type(row)
+    access_mode = clean_text(row.get("access_mode")).casefold()
+    uses = []
+    if "Promote Something" in goals:
+        uses.append("promotion")
+    if "Improve Online Visibility" in goals:
+        uses.append("online listing cleanup")
+    if "Reach People Offline" in goals or "physical" in access_mode:
+        uses.append("flyers or in-person referrals")
+    if "Find Money or Help" in goals or listing_type == "Funding & support":
+        uses.append("funding or support research")
+    if "Get Media Coverage" in goals or listing_type == "Media & news":
+        uses.append("media or calendar outreach")
+    if "Add / Correct Info" in goals:
+        uses.append("listing updates")
+    if "Visitors" in tags or listing_type in {"Tourism & visitor info", "Lodging & stays", "Food & drink", "Outdoor recreation"}:
+        uses.append("visitor-facing visibility")
+    if "Nonprofits" in tags or listing_type == "Nonprofit & community":
+        uses.append("partner or referral outreach")
+    if "Arts and culture" in tags or listing_type == "Arts & culture":
+        uses.append("arts and culture visibility")
+    deduped = []
+    for item in uses:
+        if item not in deduped:
+            deduped.append(item)
+    return "; ".join(deduped[:4]) if deduped else "regional discovery; contact-list building"
+
+
+def public_description(row: dict) -> str:
+    listing_type = inferred_listing_type(row)
+    place = public_place(row)
+    source_note = public_safe_note(row)
+    if source_note:
+        return source_note
+    directory_note = everything_description_for(row)
+    if directory_note:
+        return public_text_without_partner_names(directory_note)
+    return listing_description_from_context(row, listing_type, place)
+
+
+def physical_ad_location_score(row: dict) -> int:
+    listing_type = inferred_listing_type(row)
+    access_mode = clean_text(row.get("access_mode")).casefold()
+    goals = normalize_goal_relevance(row.get("goal_relevance")).casefold()
+    blob = " ".join(
+        clean_text(row.get(field)).casefold()
+        for field in [
+            "resource_name",
+            "resource_type",
+            "category",
+            "public_listing_type",
+            "physical_address",
+            "notes",
+            "audience_served",
+        ]
+    )
+    term_hits = sum(1 for term in PHYSICAL_AD_LOCATION_TERMS if term in blob)
+    score = term_hits * 2
+    if "physical" in access_mode:
+        score += 4
+    if "reach people offline" in goals:
+        score += 2
+    if listing_type in PHYSICAL_AD_LISTING_TYPES:
+        score += 2
+    if has_physical_location(row):
+        score += 2
+    if resource_url(row):
+        score += 1
+    if "online lead" in access_mode and not has_physical_location(row):
+        score -= 2
+    if not term_hits and listing_type not in PHYSICAL_AD_LISTING_TYPES:
+        return 0
+    return max(score, 0)
+
+
+def physical_ad_location_fit(row: dict) -> str:
+    blob = " ".join(
+        clean_text(row.get(field)).casefold()
+        for field in ["resource_name", "category", "resource_type", "public_listing_type", "public_description"]
+    )
+    listing_type = inferred_listing_type(row)
+    if listing_type == "Public offices" or any(term in blob for term in ("city hall", "town hall", "county clerk", "courthouse", "court", "public office")):
+        return "Official notices, public meetings, civic information, public hearings, and department-approved announcements."
+    if any(term in blob for term in ("library", "community center", "senior center", "recreation center")):
+        return "Community flyers, classes, nonprofit programs, support services, and local events."
+    if any(term in blob for term in ("gallery", "museum", "venue", "theater", "theatre", "arts", "creative district", "cultural")):
+        return "Art openings, performances, workshops, creative calls, festivals, classes, and cultural events."
+    if any(term in blob for term in ("coffee", "cafe", "espresso", "bakery", "restaurant", "bar", "brewery", "distillery", "market", "grocery", "shop", "store", "mercantile")):
+        return "Neighborhood flyers, local offers, hiring, events, classes, specials, and downtown cross-promotion."
+    if any(term in blob for term in ("rail", "train", "station", "depot", "bus", "transit", "hotel", "motel", "inn", "lodging", "campground", "rv", "resort")):
+        return "Visitor-facing flyers, travel information, event handouts, maps, tours, and lodging-adjacent services."
+    if any(term in blob for term in ("visitor", "tourism", "tourist", "welcome center", "chamber", "mainstreet")):
+        return "Visitor-facing events, rack cards, brochures, business listings, tours, lodging, food, retail, and attractions."
+    return "Flyers, posters, brochures, rack cards, or front-desk referrals when the location owner says the material fits."
+
+
+def physical_ad_location_note(row: dict) -> str:
+    listing_type = inferred_listing_type(row)
+    blob = " ".join(
+        clean_text(row.get(field)).casefold()
+        for field in ["resource_name", "category", "resource_type", "public_listing_type", "public_description"]
+    )
+    if listing_type == "Public offices":
+        return "Ask the correct office first. Public offices may separate official notices from community flyers or commercial advertising."
+    if "library" in blob:
+        return "Ask staff about bulletin-board rules. Some libraries limit political, for-profit, oversized, or undated materials."
+    if any(term in blob for term in ("school", "college", "campus")):
+        return "Ask the office or department. Schools and campuses may require approval before materials can be posted."
+    if any(term in blob for term in ("restaurant", "cafe", "coffee", "bar", "brewery", "market", "shop", "store")):
+        return "Ask the owner or manager, bring a small stack, and offer to remove the flyer after the event or deadline."
+    if any(term in blob for term in ("visitor", "tourism", "tourist", "welcome center", "chamber")):
+        return "Ask whether they accept public-facing brochures, rack cards, posters, or calendar submissions."
+    return "Ask before posting. Note who approved it, where it was placed, and when it should come down."
+
+
+def has_physical_location(row: dict) -> bool:
+    address = clean_text(row.get("physical_address"))
+    if not address:
+        return False
+    lowered = address.casefold()
+    if any(term in lowered for term in ("virtual", "online only", "no public location")):
+        return False
+    po_box = re.search(r"\bp\.?\s*o\.?\s*box\b|\bpo\s+box\b", lowered)
+    streetish = re.search(
+        r"\b(?:st|street|ave|avenue|rd|road|blvd|boulevard|dr|drive|ln|lane|way|hwy|highway|route|nm-|us-|co-|county road|cr|mile marker|main|broadway|commercial|plaza|terrace|camino|park)\b",
+        lowered,
+    )
+    return not (po_box and not streetish)
+
+
+def is_physical_ad_candidate(row: dict) -> bool:
+    if not has_physical_location(row):
+        return False
+    return physical_ad_location_score(row) >= 19
+
+
+def physical_ad_location_rows(rows: list[dict], limit: int = 96) -> list[dict]:
+    scored: list[tuple[int, dict]] = []
+    for row in rows:
+        score = physical_ad_location_score(row)
+        if score:
+            scored.append((score, row))
+    ranked = sorted(scored, key=lambda item: (-item[0], clean_text(item[1].get("resource_name")).casefold()))
+    by_county: dict[str, list[tuple[int, dict]]] = defaultdict(list)
+    for item in ranked:
+        by_county[clean_text(item[1].get("county")) or "Regional"].append(item)
+    county_order = ["Colfax", "Las Animas", "Huerfano", "Regional"]
+    county_cap = max(24, limit // 3)
+    town_cap = 16
+    chosen: list[dict] = []
+    chosen_ids: set[str] = set()
+    town_counts: Counter[str] = Counter()
+
+    def choose_from(items: list[tuple[int, dict]], cap: int) -> None:
+        added = 0
+        for _, row in items:
+            key = clean_text(row.get("id")) or clean_text(row.get("resource_name")).casefold()
+            town_key = f"{clean_text(row.get('county'))}|{clean_text(row.get('town'))}".casefold()
+            if key in chosen_ids or town_counts[town_key] >= town_cap:
+                continue
+            chosen.append(row)
+            chosen_ids.add(key)
+            town_counts[town_key] += 1
+            added += 1
+            if added >= cap or len(chosen) >= limit:
+                return
+
+    for county in county_order:
+        choose_from(by_county.get(county, []), county_cap)
+    if len(chosen) < limit:
+        choose_from(ranked, limit - len(chosen))
+    return sorted(
+        chosen,
+        key=lambda row: (
+            clean_text(row.get("county")).casefold(),
+            clean_text(row.get("town")).casefold(),
+            clean_text(row.get("resource_name")).casefold(),
+        ),
+    )
+
+
+def contact_links_for_row(row: dict) -> str:
+    links: list[str] = []
+    website_urls = split_semicolon(row.get("website"))
+    source_urls = split_semicolon(row.get("source_url"))
+    if website_urls:
+        url = website_urls[0]
+        links.append(f'<a href="{html_escape(url)}" target="_blank" rel="noreferrer">{html_escape(resource_url_label(url))}</a>')
+    first_source = next((url for url in source_urls if url not in website_urls), "")
+    if first_source:
+        links.append(f'<a href="{html_escape(first_source)}" target="_blank" rel="noreferrer">{html_escape(resource_url_label(first_source, "Listing page"))}</a>')
+    phone = clean_text(row.get("contact_phone"))
+    if phone:
+        phone_href = re.sub(r"[^0-9+]", "", phone)
+        links.append(f'<a href="tel:{html_escape(phone_href)}">Phone</a>')
+    email = clean_text(row.get("contact_email"))
+    if email:
+        links.append(f'<a href="mailto:{html_escape(email)}">Email</a>')
+    address = clean_text(row.get("physical_address"))
+    if address:
+        map_url = "https://www.google.com/maps/search/?api=1&query=" + quote_plus(address)
+        links.append(f'<a href="{html_escape(map_url)}" target="_blank" rel="noreferrer">Map</a>')
+    return " ".join(links[:5]) or '<span class="source-note">Search the directory or submit a contact update.</span>'
+
+
+def resource_physical_indicator_badges(row: dict) -> str:
+    if clean_text(row.get("physical_ad_candidate")) == "true" or is_physical_ad_candidate(row):
+        note = clean_text(row.get("physical_ad_note")) or physical_ad_location_note(row)
+        return (
+            '<div class="listing-indicators" aria-label="Physical location indicators">'
+            f'<span class="listing-marker listing-marker--ad" title="{html_escape(note)}">Ask about flyers</span>'
+            "</div>"
+        )
+    if clean_text(row.get("has_physical_location")) == "true" or has_physical_location(row):
+        note = clean_text(row.get("physical_ad_note")) or "This listing has a real-world location."
+        return (
+            '<div class="listing-indicators" aria-label="Physical location indicators">'
+            f'<span class="listing-marker listing-marker--physical" title="{html_escape(note)}">Physical location</span>'
+            "</div>"
+        )
+    return ""
+
+
 def public_text_without_partner_names(value: str) -> str:
     replacements = {
         "Super Eukarya / Tri-County Marketing Guide implementation pack": "Tri-County Marketing Guide implementation pack",
@@ -1668,6 +2675,44 @@ def is_creation_process_note(row: dict) -> bool:
     )
 
 
+def malformed_listing_name(row: dict) -> bool:
+    name = clean_text(row.get("resource_name"))
+    if not name:
+        return True
+    lowered = name.casefold()
+    compact = re.sub(r"[^a-z0-9]+", " ", lowered).strip()
+    if lowered.startswith("+"):
+        return True
+    if compact in {
+        "email",
+        "website",
+        "phone",
+        "address",
+        "contact",
+        "learn more",
+        "read more",
+        "view details",
+        "registered businesses",
+        "all listings",
+    }:
+        return True
+    if "email" in compact and "website" in compact and len(compact.split()) <= 5:
+        return True
+    if re.fullmatch(r"(?:email|website|phone|address|contact|fax|map|details|view|more|and|or|\d|\s)+", compact):
+        return True
+    return False
+
+
+def publishable_resource_row(row: dict) -> bool:
+    name = clean_text(row.get("resource_name")).casefold()
+    return (
+        concrete_listing_name(row)
+        and name not in NON_ENTITY_RESOURCE_NAMES
+        and not is_creation_process_note(row)
+        and not malformed_listing_name(row)
+    )
+
+
 def infer_verification_key(row: dict) -> str:
     if is_creation_process_note(row):
         return "process-note"
@@ -1710,6 +2755,24 @@ def enrich_resource_row(row: dict) -> dict:
     status = infer_verification_key(row)
     layer = infer_public_layer(row)
     enriched = dict(row)
+    enriched["goal_relevance"] = normalize_goal_relevance(enriched.get("goal_relevance"))
+    enriched["public_description"] = public_description(enriched)
+    enriched["public_keywords"] = public_search_keywords(enriched)
+    enriched["public_audience_tags"] = "; ".join(organization_tags(enriched))
+    enriched["public_org_tags"] = enriched["public_audience_tags"]
+    enriched["public_listing_type"] = inferred_listing_type(enriched)
+    enriched["public_best_for"] = public_best_for(enriched)
+    enriched["has_physical_location"] = as_bool_text(has_physical_location(enriched))
+    enriched["physical_ad_candidate"] = as_bool_text(is_physical_ad_candidate(enriched))
+    if enriched["physical_ad_candidate"] == "true":
+        enriched["physical_ad_label"] = "Ask about flyers"
+        enriched["physical_ad_note"] = physical_ad_location_note(enriched)
+    elif enriched["has_physical_location"] == "true":
+        enriched["physical_ad_label"] = "Physical location"
+        enriched["physical_ad_note"] = "This listing has a real-world location; ask directly before leaving flyers, posters, brochures, or rack cards."
+    else:
+        enriched["physical_ad_label"] = ""
+        enriched["physical_ad_note"] = ""
     enriched["verification_key"] = status
     enriched["verification_label"] = VERIFICATION_LABELS[status]
     enriched["verification_class"] = VERIFICATION_CLASSES[status]
@@ -1738,17 +2801,25 @@ def load_resources() -> list[dict]:
     for row in rows:
         for key, value in list(row.items()):
             row[key] = clean_text(value)
+    rows = [row for row in rows if publishable_resource_row(row)]
+    rows = dedupe_resource_rows(rows)
     return [enrich_resource_row(row) for row in rows]
 
 
 def summarize(rows: list[dict]) -> dict:
     county = Counter(row.get("county") or "Unknown" for row in rows)
-    rtype = Counter(row.get("resource_type") or "Unknown" for row in rows)
+    rtype = Counter(row.get("public_listing_type") or public_text_value(row.get("resource_type")) or "Resource" for row in rows)
     verification = Counter(row.get("verification_label") or "Unknown" for row in rows)
     layer = Counter(row.get("public_layer_label") or "Unknown" for row in rows)
     goal = Counter()
     audience = Counter()
+    physical_location_count = 0
+    physical_ad_candidate_count = 0
     for row in rows:
+        if has_physical_location(row):
+            physical_location_count += 1
+        if is_physical_ad_candidate(row):
+            physical_ad_candidate_count += 1
         for part in (row.get("goal_relevance") or "").split(";"):
             part = part.strip()
             if part:
@@ -1765,6 +2836,8 @@ def summarize(rows: list[dict]) -> dict:
         "public_layer": dict(layer.most_common()),
         "goal": dict(goal.most_common(12)),
         "audience": dict(audience.most_common(12)),
+        "physical_location_count": physical_location_count,
+        "physical_ad_candidate_count": physical_ad_candidate_count,
     }
 
 
@@ -1792,6 +2865,13 @@ def copy_assets() -> None:
             shutil.rmtree(audio_dest)
         shutil.copytree(audio_src, audio_dest)
 
+    infographics_src = ROOT / "assets" / "infographics"
+    if infographics_src.exists():
+        infographics_dest = ASSET_OUT / "infographics"
+        if infographics_dest.exists():
+            shutil.rmtree(infographics_dest)
+        shutil.copytree(infographics_src, infographics_dest)
+
     if SOURCE_CSV.exists():
         shutil.copy2(SOURCE_CSV, DATA_OUT / "tri_county_persona_resources.csv")
     if SOURCE_JSON.exists():
@@ -1815,6 +2895,13 @@ def copy_site_extras() -> None:
 PUBLIC_DATA_EXCLUDE_FIELDS = {
     "confidence",
     "confidence_level",
+    "directory_sweep_source_file",
+    "has_public_source",
+    "last_verified_date",
+    "needs_follow_up",
+    "source_status",
+    "source_type",
+    "travel_listing_sources",
     "verification_key",
     "verification_label",
     "verification_class",
@@ -1825,6 +2912,14 @@ PUBLIC_DATA_EXCLUDE_FIELDS = {
     "public_layer",
     "public_layer_label",
     "paid_free_status",
+    "yellowpages_digital_distribution_likelihood",
+    "yellowpages_end_user_warning",
+    "yellowpages_flyer_likelihood",
+    "yellowpages_outreach_score",
+    "yellowpages_policy_risk",
+    "yellowpages_recommended_action",
+    "yellowpages_review_reason",
+    "yellowpages_verification_status",
 }
 
 
@@ -1833,28 +2928,53 @@ PUBLIC_TEXT_REPLACEMENTS = {
     "Colfax County Inventory Gaps & Verification Agenda": "Colfax local follow-up",
     "Rural Verification Nodes": "Rural community lead",
     "Verification-Priority Sparse Nodes": "Sparse-area community lead",
-    "verification-priority": "source-check",
-    "manual-verification": "manual-confirmation",
-    "verification": "source check",
-    "Verification": "Source check",
-    "Field-check needed": "Local check needed",
-    "field check needed": "local check needed",
-    "verified": "checked",
-    "Verified": "Checked",
+    "verification-priority": "local follow-up",
+    "manual-verification": "local update",
+    "source-check": "local listing",
+    "Source-check": "Local listing",
+    "source check": "local review",
+    "Source check": "Local review",
+    "verification": "review",
+    "Verification": "Review",
+    "verify ": "check ",
+    "Verify ": "Check ",
+    "Field-check needed": "Local update needed",
+    "field check needed": "local update needed",
+    "field-check needed": "local update needed",
+    "verified": "current",
+    "Verified": "Current",
+    "verify": "check",
+    "Verify": "Check",
+    "unchecked": "needs an update",
+    "Unchecked": "Needs an update",
 }
 
 
 def public_text_value(value: object) -> object:
+    if isinstance(value, dict):
+        return {key: public_text_value(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [public_text_value(item) for item in value]
     if not isinstance(value, str):
         return value
     cleaned = value
     for source, replacement in PUBLIC_TEXT_REPLACEMENTS.items():
         cleaned = cleaned.replace(source, replacement)
+    cleaned = cleaned.replace("; Check", "; check").replace(", Check", ", check")
     return cleaned
 
 
 def public_data_item(item: dict) -> dict:
-    return {key: public_text_value(value) for key, value in item.items() if key not in PUBLIC_DATA_EXCLUDE_FIELDS}
+    public_item = {}
+    for key, value in item.items():
+        if key in PUBLIC_DATA_EXCLUDE_FIELDS or key.startswith("yellowpages_"):
+            continue
+        if key == "notes" and clean_text(item.get("public_description")):
+            value = item["public_description"]
+        if key == "resource_type" and clean_text(item.get("public_listing_type")):
+            value = item["public_listing_type"]
+        public_item[key] = public_text_value(value)
+    return public_item
 
 
 def metadata_id(value: object, fallback: str) -> str:
@@ -1901,7 +3021,7 @@ def compact_properties(items: list[dict | None]) -> list[dict]:
 
 
 def resource_url(row: dict) -> str:
-    return clean_text(row.get("website")) or clean_text(row.get("source_url"))
+    return (split_semicolon(row.get("website")) or split_semicolon(row.get("source_url")) or [""])[0]
 
 
 def directory_resource_metadata(row: dict, position: int) -> dict:
@@ -1920,27 +3040,31 @@ def directory_resource_metadata(row: dict, position: int) -> dict:
     website = clean_text(public_row.get("website"))
     metadata = {
         "entry_id": entry_id,
-        "entry_kind": "local_inventory_lead",
+        "entry_kind": "local_inventory_entry",
         "name": name,
         "county": county,
         "town": town,
         "state": state,
         "category": clean_text(public_row.get("category")),
-        "resource_type": clean_text(public_row.get("resource_type")),
+        "resource_type": clean_text(public_row.get("public_listing_type")) or clean_text(public_row.get("resource_type")),
         "access_mode": clean_text(public_row.get("access_mode")),
         "audience_served": audiences,
         "goal_relevance": goals,
         "website": website,
         "source_url": source_url,
-        "source_type": clean_text(public_row.get("source_type")),
         "contact_phone": clean_text(public_row.get("contact_phone")),
         "contact_email": clean_text(public_row.get("contact_email")),
         "physical_address": clean_text(public_row.get("physical_address")),
+        "has_physical_location": clean_text(public_row.get("has_physical_location")),
+        "physical_ad_candidate": clean_text(public_row.get("physical_ad_candidate")),
+        "physical_ad_label": clean_text(public_row.get("physical_ad_label")),
+        "physical_ad_note": clean_text(public_row.get("physical_ad_note")),
         "cost_level": clean_text(public_row.get("cost_level")),
-        "needs_follow_up": as_bool_text(public_row.get("needs_follow_up")),
-        "has_public_source": as_bool_text(public_row.get("has_public_source")),
-        "description": clean_text(public_row.get("notes")) or "Use as a directory lead and confirm current details before action.",
-        "metadata_note": "Directory metadata is a routing aid. Confirm details with the listed source or contact path before spending, printing, promising eligibility, or publishing claims.",
+        "audience_tags": split_public_list(public_row.get("public_audience_tags") or public_row.get("public_org_tags")),
+        "search_keywords": split_public_list(public_row.get("public_keywords")),
+        "best_for": split_public_list(public_row.get("public_best_for")),
+        "description": clean_text(public_row.get("public_description")) or clean_text(public_row.get("category")) or "Local directory listing for regional discovery and outreach.",
+        "metadata_note": "Details may change; use the listed contact path or update form when information is outdated.",
     }
     return {key: value for key, value in metadata.items() if value not in ("", [], None)}
 
@@ -1958,7 +3082,7 @@ def directory_shortcut_metadata(item: dict, position: int) -> dict:
         "url": clean_text(public_item.get("url")),
         "description": clean_text(public_item.get("best_for")),
         "recommended_action": clean_text(public_item.get("action")),
-        "metadata_note": "Shortcut metadata points to an existing source. Open the source before assuming current rules, rates, deadlines, eligibility, or acceptance.",
+        "metadata_note": "Shortcut details point readers to existing public pages and contact routes. Details may change.",
     }
     return {key: value for key, value in metadata.items() if value not in ("", [], None)}
 
@@ -1979,7 +3103,7 @@ def directory_metadata_payload(rows: list[dict]) -> dict:
     return {
         "generated_at": BUILD_DATE,
         "metadata_type": "stateline_guide_directory_metadata",
-        "publication_note": "These entries are routing metadata for directory discovery. Treat local inventory rows as leads unless a current public source confirms them.",
+        "publication_note": "These entries help readers find directory shortcuts and local inventory entries. Details may change; use update pathways when information is outdated.",
         "entry_count": len(entries),
         "shortcut_count": len(shortcuts),
         "local_inventory_count": len(resources),
@@ -1994,7 +3118,7 @@ def metadata_schema_item(entry: dict) -> dict:
         "identifier": entry["entry_id"],
         "name": entry["name"],
         "description": entry.get("description") or entry.get("metadata_note"),
-        "additionalType": "Directory shortcut" if entry.get("entry_kind") == "directory_shortcut" else "Local inventory lead",
+        "additionalType": "Directory shortcut" if entry.get("entry_kind") == "directory_shortcut" else "Local inventory entry",
         "category": entry.get("category") or entry.get("resource_type"),
         "areaServed": {
             "@type": "AdministrativeArea",
@@ -2010,13 +3134,13 @@ def metadata_schema_item(entry: dict) -> dict:
                 property_value("access_mode", entry.get("access_mode")),
                 property_value("audience_served", entry.get("audience_served")),
                 property_value("goal_relevance", entry.get("goal_relevance")),
-                property_value("source_type", entry.get("source_type")),
                 property_value("contact_phone", entry.get("contact_phone")),
                 property_value("contact_email", entry.get("contact_email")),
                 property_value("physical_address", entry.get("physical_address")),
                 property_value("cost_level", entry.get("cost_level")),
-                property_value("needs_follow_up", entry.get("needs_follow_up")),
-                property_value("has_public_source", entry.get("has_public_source")),
+                property_value("organization_tags", entry.get("organization_tags")),
+                property_value("search_keywords", entry.get("search_keywords")),
+                property_value("best_for", entry.get("best_for")),
                 property_value("recommended_action", entry.get("recommended_action")),
                 property_value("metadata_note", entry.get("metadata_note")),
             ]
@@ -2036,7 +3160,7 @@ def directory_item_list_schema(rows: list[dict]) -> dict:
         "@type": "ItemList",
         "@id": SITE_URL + "network/#directory-entry-metadata",
         "name": "Stateline Guide directory entries",
-        "description": "Machine-readable metadata for every directory shortcut and local inventory entry in the Stateline Guide. Entries are routing aids and should be confirmed before action.",
+        "description": "Machine-readable metadata for directory shortcuts and local inventory entries in the Stateline Guide. Details may change.",
         "numberOfItems": payload["entry_count"],
         "itemListElement": [
             {
@@ -2052,9 +3176,17 @@ def directory_item_list_schema(rows: list[dict]) -> dict:
 def write_data_files(rows: list[dict], summary: dict) -> None:
     DATA_OUT.mkdir(parents=True, exist_ok=True)
     directory_sources = [public_data_item(item) for item in sorted_sources(DIRECTORY_SOURCES)]
+    directory_source_groups = [public_data_item(item) for item in grouped_directory_sources(DIRECTORY_SOURCES)]
+    top_source_groups = [public_data_item(item) for item in top_directory_source_groups()]
     amplifier_channels = [public_data_item(item) for item in AMPLIFIER_CHANNELS]
     public_rows = [public_data_item(row) for row in rows]
-    public_summary = {key: value for key, value in summary.items() if key not in {"verification", "public_layer"}}
+    physical_ad_locations = []
+    for row in physical_ad_location_rows(rows, limit=120):
+        item = public_data_item(row)
+        item["posting_fit"] = physical_ad_location_fit(row)
+        item["posting_note"] = physical_ad_location_note(row)
+        physical_ad_locations.append(item)
+    public_summary = public_text_value({key: value for key, value in summary.items() if key not in {"verification", "public_layer"}})
     directory_metadata = directory_metadata_payload(rows)
     data = {
         "generated_at": BUILD_DATE,
@@ -2066,9 +3198,14 @@ def write_data_files(rows: list[dict], summary: dict) -> None:
             "local_inventory_count": directory_metadata["local_inventory_count"],
         },
         "directory_sources": directory_sources,
+        "directory_source_groups": directory_source_groups,
+        "top_directory_source_groups": top_source_groups,
+        "current_leads": [public_data_item(item) for item in CURRENT_LEADS],
+        "home_task_groups": HOME_TASK_GROUPS,
         "amplifier_channels": amplifier_channels,
-        "posting_spaces": POSTING_SPACES,
-        "persona_routes": PERSONA_ROUTES,
+        "posting_spaces": [public_data_item(item) for item in POSTING_SPACES],
+        "physical_ad_locations": physical_ad_locations,
+        "persona_routes": [public_data_item(item) for item in PERSONA_ROUTES],
         "resources": public_rows,
     }
     public_fieldnames = sorted({key for row in public_rows for key in row.keys()})
@@ -2091,6 +3228,203 @@ def sorted_sources(sources: list[dict]) -> list[dict]:
     return sorted(sources, key=lambda item: (item.get("title") or item.get("channel") or "").casefold())
 
 
+SOURCE_GROUP_OVERRIDES = {
+    "angelfirechamber.org": "Angel Fire Chamber directory and member routes",
+    "biz.nm.gov": "New Mexico Business Portal resources",
+    "chamber.huerfano.org": "Huerfano Chamber business and resource routes",
+    "co.colfax.nm.us": "Colfax County official business and civic routes",
+    "edd.newmexico.gov": "New Mexico EDD funding, business, and creative-economy programs",
+    "exploreraton.com": "Explore Raton tourism, events, and visitor-guide routes",
+    "growraton.org": "GrowRaton business support and property routes",
+    "huerfano.us": "Huerfano County government routes",
+    "nmfinance.com": "New Mexico Finance Authority capital programs",
+    "oedit.colorado.gov": "Colorado OEDIT funding and creative-economy programs",
+    "ratonnm.gov": "Raton municipal business and civic routes",
+    "rd.usda.gov": "USDA Rural Development programs",
+    "sba.gov": "SBA funding and lender routes",
+    "sccfcolorado.org": "Southern Colorado Community Foundation grants, scholarships, and directory",
+    "spanishpeakscountry.com": "Spanish Peaks Country tourism, event, and business routes",
+    "tlacchamber.org": "Colexico / TLAC Chamber regional hub",
+    "trinidad.co.gov": "Trinidad municipal civic and economic-development routes",
+    "trinidadcf.org": "Trinidad Community Foundation grantmaker routes",
+    "visittrinidadcolorado.com": "Visit Trinidad tourism, local resources, and event routes",
+    "worldjournalnewspaper.com": "World Journal media and advertising routes",
+}
+
+
+SOURCE_GROUP_PRIORITY_DOMAINS = {
+    "exploreraton.com": 45,
+    "spanishpeakscountry.com": 45,
+    "visittrinidadcolorado.com": 45,
+    "tlacchamber.org": 42,
+    "chamber.huerfano.org": 42,
+    "growraton.org": 40,
+    "ratonnm.gov": 40,
+    "trinidad.co.gov": 40,
+    "huerfano.us": 38,
+    "oedit.colorado.gov": 36,
+    "edd.newmexico.gov": 36,
+    "sccfcolorado.org": 34,
+    "sba.gov": 32,
+    "rd.usda.gov": 30,
+}
+
+
+def source_domain(url: object) -> str:
+    parsed = urlparse(str(url or ""))
+    return parsed.netloc.lower().removeprefix("www.")
+
+
+def source_link_label(item: dict) -> str:
+    blob = " ".join(str(item.get(field) or "") for field in ["title", "kind", "url", "best_for", "action"]).casefold()
+    if "submit" in blob and "event" in blob:
+        return "Submit event"
+    if "add business" in blob or "business listing" in blob or "listing update" in blob or "resource submission" in blob:
+        return "Add listing"
+    if "visitor guide" in blob and ("ad" in blob or "advertis" in blob):
+        return "Visitor guide ads"
+    if "newsletter" in blob:
+        return "Newsletter"
+    if "advertis" in blob or "placement" in blob:
+        return "Advertising"
+    if "calendar" in blob or "events" in blob:
+        return "Calendar"
+    if "grant" in blob or "scholarship" in blob or "stipend" in blob or "incentive" in blob or "funding" in blob or "loan" in blob:
+        return "Grant page"
+    if "directory" in blob:
+        return "Directory"
+    if "license" in blob or "permit" in blob or "forms" in blob:
+        return "Forms"
+    if "economic" in blob or "business support" in blob or "sbdc" in blob:
+        return "Support"
+    if "media" in blob or "radio" in blob or "newspaper" in blob:
+        return "Media"
+    return clean_text(item.get("kind")) or "Open"
+
+
+def resource_url_label(url: str, fallback: str = "Website") -> str:
+    parsed = urlparse(url)
+    host = parsed.netloc.lower().removeprefix("www.")
+    lowered = url.casefold()
+    if "facebook.com" in host:
+        return "Facebook"
+    if "instagram.com" in host:
+        return "Instagram"
+    if "youtube.com" in host or "youtu.be" in host:
+        return "YouTube"
+    if "maps.google" in host or "google.com/maps" in lowered or "maps.app.goo.gl" in lowered:
+        return "Map"
+    if "tripadvisor.com" in host:
+        return "Travel profile"
+    if "yelp.com" in host or "yellowpages.com" in host:
+        return "Business profile"
+    if "tourism" in host or "travel" in host or "visit" in host or "explore" in host:
+        return "Tourism listing"
+    if "chamber" in host or "businessdirectory" in host:
+        return "Directory page"
+    return fallback
+
+
+def source_group_key(item: dict) -> str:
+    domain = source_domain(item.get("url"))
+    if domain:
+        return domain
+    return clean_text(item.get("title")).casefold()
+
+
+def source_group_title(item: dict) -> str:
+    domain = source_domain(item.get("url"))
+    return SOURCE_GROUP_OVERRIDES.get(domain) or clean_text(item.get("title")) or "Directory shortcut"
+
+
+def source_group_priority(group: dict) -> tuple[int, str]:
+    domain = clean_text(group.get("domain"))
+    source_count = int(group.get("source_count") or 1)
+    text = " ".join(
+        [
+            clean_text(group.get("title")),
+            clean_text(group.get("kind")),
+            clean_text(group.get("best_for")),
+            clean_text(group.get("action")),
+        ]
+    ).casefold()
+    score = SOURCE_GROUP_PRIORITY_DOMAINS.get(domain, 0) + min(source_count, 6) * 4
+    if "tourism" in text or "visitor" in text:
+        score += 12
+    if "chamber" in text or "economic" in text or "business" in text:
+        score += 10
+    if "grant" in text or "funding" in text or "scholarship" in text:
+        score += 8
+    if "event" in text or "calendar" in text:
+        score += 8
+    if "directory" in text:
+        score += 6
+    return (-score, clean_text(group.get("title")).casefold())
+
+
+def grouped_directory_sources(sources: list[dict]) -> list[dict]:
+    groups: dict[str, dict] = {}
+    seen_urls: dict[str, set[str]] = {}
+    for item in sorted_sources(sources):
+        key = source_group_key(item)
+        group = groups.setdefault(
+            key,
+            {
+                "title": source_group_title(item),
+                "domain": source_domain(item.get("url")),
+                "county": clean_text(item.get("county")),
+                "counties": [],
+                "kind": clean_text(item.get("kind")) or "Directory shortcut",
+                "best_for": clean_text(item.get("best_for")),
+                "action": clean_text(item.get("action")),
+                "source_count": 0,
+                "links": [],
+                "url": clean_text(item.get("url")),
+            },
+        )
+        county = clean_text(item.get("county"))
+        if county and county not in group["counties"]:
+            group["counties"].append(county)
+        url = clean_text(item.get("url"))
+        seen = seen_urls.setdefault(key, set())
+        if url and url in seen:
+            continue
+        seen.add(url)
+        group["source_count"] += 1
+        group["links"].append(
+            {
+                "label": source_link_label(item),
+                "title": clean_text(item.get("title")),
+                "url": url,
+                "county": county,
+                "kind": clean_text(item.get("kind")),
+                "best_for": clean_text(item.get("best_for")),
+                "action": clean_text(item.get("action")),
+            }
+        )
+
+    normalized = []
+    for group in groups.values():
+        counties = group["counties"] or [group["county"]]
+        group["county"] = "Regional" if len(set(counties)) > 1 else counties[0]
+        group["county_label"] = " / ".join(counties)
+        if group["source_count"] > 1:
+            kinds = []
+            for link in group["links"]:
+                kind = link.get("kind")
+                if kind and kind not in kinds:
+                    kinds.append(kind)
+            group["kind"] = " + ".join(kinds[:3]) + (" + more" if len(kinds) > 3 else "")
+            group["best_for"] = f"Grouped routes for {group['title']}. Use the sublinks below for the specific directory, grant, event, listing, advertising, or support task."
+            group["action"] = "Pick the sublink that matches the job, then confirm current rules, deadlines, eligibility, rates, or acceptance with the source."
+        normalized.append(group)
+    return sorted(normalized, key=source_group_priority)
+
+
+def top_directory_source_groups(limit: int = 30) -> list[dict]:
+    return grouped_directory_sources(DIRECTORY_SOURCES)[:limit]
+
+
 def source_cards(sources: list[dict], limit: int | None = None) -> str:
     cards = []
     ordered_sources = sorted_sources(sources)
@@ -2105,11 +3439,77 @@ def source_cards(sources: list[dict], limit: int | None = None) -> str:
               <h3><a href="{html_escape(item['url'])}" target="_blank" rel="noreferrer">{html_escape(item['title'])}</a></h3>
               <p>{html_escape(public_text_value(item['best_for']))}</p>
               <p class="action-line">{html_escape(public_text_value(item['action']))}</p>
-              <p class="source-note">Details can change. Open the source, then submit a correction if this pathway is outdated.</p>
+              <p class="source-note">Details can change. Use the page, then submit an update if this pathway is outdated.</p>
             </article>
             """
         )
     return "\n".join(cards)
+
+
+def source_group_cards(sources: list[dict], limit: int | None = None) -> str:
+    groups = grouped_directory_sources(sources)
+    if limit is not None:
+        groups = groups[:limit]
+    cards = []
+    for group in groups:
+        links = "\n".join(
+            f"""
+            <a class="source-sublink" href="{html_escape(link['url'])}" target="_blank" rel="noreferrer">
+              <span>{html_escape(link['label'])}</span>
+              <strong>{html_escape(link['title'])}</strong>
+            </a>
+            """
+            for link in group["links"]
+            if link.get("url")
+        )
+        route_word = "route" if group["source_count"] == 1 else "routes"
+        cards.append(
+            f"""
+            <article class="source-card source-group-card" data-county="{html_escape(group['county'])}" data-kind="{html_escape(group['kind'])}">
+              <div class="source-card__meta">
+                <span>{html_escape(group['county_label'])}</span>
+                <span>{html_escape(group['source_count'])} {route_word}</span>
+              </div>
+              <h3><a href="{html_escape(group['url'])}" target="_blank" rel="noreferrer">{html_escape(group['title'])}</a></h3>
+              <p>{html_escape(public_text_value(group['best_for']))}</p>
+              <p class="action-line">{html_escape(public_text_value(group['action']))}</p>
+              <div class="source-link-list">{links}</div>
+            </article>
+            """
+        )
+    return "\n".join(cards)
+
+
+def home_task_group_cards(depth: int = 0) -> str:
+    return "\n".join(
+        f"""
+        <a class="mini-card task-link-card task-group-card" href="{rel(route_href(item['href']), depth)}">
+          <h3>{html_escape(item['title'])}</h3>
+          <p>{html_escape(item['summary'])}</p>
+          <strong>{html_escape(item['action'])}</strong>
+        </a>
+        """
+        for item in HOME_TASK_GROUPS
+    )
+
+
+def current_lead_cards(depth: int = 0, group: str | None = None) -> str:
+    leads = [item for item in CURRENT_LEADS if group is None or item["group"] == group]
+    return "\n".join(
+        f"""
+        <article class="lead-card" data-lead-group="{html_escape(item['group'])}" data-county="{html_escape(item['county'])}">
+          <div class="source-card__meta">
+            <span>{html_escape(item['group'])}</span>
+            <span>{html_escape(item['county'])}</span>
+            <span>{html_escape(item['kind'])}</span>
+          </div>
+          <h3><a href="{html_escape(item['url'])}" target="_blank" rel="noreferrer">{html_escape(item['title'])}</a></h3>
+          <p>{html_escape(public_text_value(item['best_for']))}</p>
+          <p class="action-line">{html_escape(public_text_value(item['action']))}</p>
+        </article>
+        """
+        for item in leads
+    )
 
 
 def download_buttons(depth: int = 0) -> str:
@@ -2117,7 +3517,7 @@ def download_buttons(depth: int = 0) -> str:
     <div class="download-row" aria-label="Download guide data">
       <a class="button button-soft" href="{rel('data/tri_county_persona_resources.csv', depth)}" download data-analytics="download_inventory_csv">Download CSV</a>
       <a class="button button-soft" href="{rel('data/guide-data.json', depth)}" download data-analytics="download_inventory_json">Download JSON</a>
-      <a class="button button-soft" href="{rel('SOURCES.md', depth)}" download data-analytics="download_sources">Download Sources</a>
+      <a class="button button-soft" href="{rel('SOURCES.md', depth)}" download data-analytics="download_sources">Download page index</a>
       <button class="button button-soft print-button" type="button">Print page</button>
     </div>
     """
@@ -2128,23 +3528,23 @@ def submit_listing_panel(depth: int = 0, context: str = "directory") -> str:
         "directory": ("Submit or correct a listing", "Use this when a business, nonprofit, gallery, program, service, venue, event series, or resource should be added, updated, corrected, or removed."),
         "amplifier": ("Suggest a channel", "Use this when a calendar, newsletter, visitor guide, media outlet, directory, venue lineup, or partner channel should be added or corrected."),
         "county": ("Add a local listing", "Use this when a county page is missing a business, organization, program, service, gallery, or resource that helps people find local visibility paths."),
-        "appendix": ("Update the appendix", "Use this when the contact table needs a new row, a correction, a better source link, or a note that a listing may be outdated."),
+        "appendix": ("Update the appendix", "Use this when the contact table needs a new row, a correction, a better link, or a note that a listing may be outdated."),
     }.get(context, ("Submit or correct a listing", "Use this when a listing should be added, updated, corrected, or removed."))
     return f"""
     <section class="section submit-band" aria-labelledby="submit-listing-title">
       <div class="section-heading">
-        <p class="eyebrow">Listing updates</p>
+        <p class="eyebrow">Help keep it useful</p>
         <h2 id="submit-listing-title">{html_escape(context_copy[0])}</h2>
         <p class="section-note">{html_escape(context_copy[1])} Submissions are starting points for review, not automatic publication.</p>
       </div>
       <div class="submit-card">
         <div>
-          <h3>What to include</h3>
-          <p>Name, county, community, website or source link, contact route, short description, audience served, and what action a reader should take.</p>
+          <h3>Best source to include</h3>
+          <p>Send the public page, form, listing, event page, social profile, flyer, or contact route a reviewer can open.</p>
         </div>
         <div>
-          <h3>Placeholder intake contact</h3>
-          <p>Email: updates@statelineguide.example<br>Phone: (575) 000-0000<br>Mail: 000 Main Street, Raton, NM 87740</p>
+          <h3>What helps most</h3>
+          <p>Name, county, community, category, short description, contact path, and what a reader should do next.</p>
         </div>
         <a class="button button-primary" href="{rel('submit/index.html', depth)}" data-analytics="submit_correction_click">Open submission form</a>
       </div>
@@ -2153,7 +3553,19 @@ def submit_listing_panel(depth: int = 0, context: str = "directory") -> str:
 
 
 def route_href(path: str) -> str:
-    return f"{path}index.html" if path else "index.html"
+    if not path:
+        return "index.html"
+    if path.startswith(("http://", "https://", "mailto:", "tel:", "#")):
+        return path
+    for separator in ("#", "?"):
+        if separator in path:
+            base, suffix = path.split(separator, 1)
+            return f"{route_href(base)}{separator}{suffix}"
+    if path.endswith(".html"):
+        return path
+    if path.endswith("/"):
+        return f"{path}index.html"
+    return f"{path}/index.html"
 
 
 def route_url(active: str) -> str:
@@ -2226,9 +3638,9 @@ def organization_json_ld() -> dict:
 def next_action_block(depth: int = 1, links: list[tuple[str, str]] | None = None) -> str:
     links = links or [
         ("Plan the right outreach cycle before collecting links", "plan/"),
-        ("Search public directories and local leads", "network/"),
+        ("Search public directories and local entries", "network/"),
         ("Find event calendars, newsletters, visitor guides, and directory channels", "amplifiers/"),
-        ("Submit a correction with a public source link", "submit/"),
+        ("Submit a correction with a public page link", "submit/"),
     ]
     items = "\n".join(
         f'<li><a href="{rel(route_href(href), depth)}">{html_escape(label)}</a></li>'
@@ -2278,7 +3690,7 @@ def page_shell(
             [
                 ("Plan", "plan/index.html", "plan"),
                 ("Region", "region/index.html", "region"),
-                ("Creation", "about/index.html", "about"),
+                ("About", "about/index.html", "about"),
             ],
         ),
         (
@@ -2286,6 +3698,8 @@ def page_shell(
             "Find",
             [
                 ("Network", "network/index.html", "network"),
+                ("Funding", route_href(ACTIVE_PATHS["funding"]), "funding"),
+                ("Arts & Culture", route_href(ACTIVE_PATHS["arts-culture"]), "arts-culture"),
                 ("Amplifiers", "amplifiers/index.html", "amplifiers"),
                 ("Regional channels", route_href(ACTIVE_PATHS["regional-channels"]), "regional-channels"),
                 ("Appendix", "appendix/index.html", "appendix"),
@@ -2348,13 +3762,15 @@ def page_shell(
                 ("Home", "index.html"),
                 ("Plan", "plan/index.html"),
                 ("Region", "region/index.html"),
-                ("Creation process", "about/index.html"),
+                ("About / process", "about/index.html"),
             ],
         ),
         (
             "Find",
             [
                 ("Directory", "network/index.html"),
+                ("Funding", route_href(ACTIVE_PATHS["funding"])),
+                ("Arts & Culture", route_href(ACTIVE_PATHS["arts-culture"])),
                 ("Amplifiers", "amplifiers/index.html"),
                 ("Regional channels", route_href(ACTIVE_PATHS["regional-channels"])),
                 ("Appendix", "appendix/index.html"),
@@ -2455,27 +3871,33 @@ def page_shell(
         for label, href in (extra_json_alternates or [])
     )
     music_bar = f"""
-          <div class="music-bar" data-music-bar aria-label="Local copyright-free music player">
-            <div class="music-bar__top">
-              <button class="music-toggle" type="button" aria-pressed="false" data-state="stopped">Play</button>
-              <label class="music-track-label">Track
-                <select class="music-track-select" aria-label="Choose local music track">
-                  <option value="{rel('assets/audio/loc-rael-nm-valse.mp3', depth)}" data-track-id="rael-arroyo-hondo">Rael Waltz - Arroyo Hondo, NM</option>
-                  <option value="{rel('assets/audio/loc-rael-co-valse.mp3', depth)}" data-track-id="rael-antonito">Rael Waltz - Antonito, CO</option>
-                </select>
-              </label>
+          <details class="music-bar" data-music-bar aria-label="Regional sound player">
+            <summary class="music-summary">
+              <span>Regional sound</span>
+              <span class="music-status" data-music-status>Off</span>
+            </summary>
+            <div class="music-panel">
+              <div class="music-bar__top">
+                <button class="music-toggle" type="button" aria-pressed="false" data-state="stopped">Play</button>
+                <label class="music-track-label">Track
+                  <select class="music-track-select" aria-label="Choose regional sound track">
+                    <option value="{rel('assets/audio/loc-rael-nm-valse.mp3', depth)}" data-track-id="rael-arroyo-hondo">Rael Waltz - Arroyo Hondo, NM</option>
+                    <option value="{rel('assets/audio/loc-rael-co-valse.mp3', depth)}" data-track-id="rael-antonito">Rael Waltz - Antonito, CO</option>
+                  </select>
+                </label>
+              </div>
+              <div class="music-bar__middle">
+                <input class="music-progress" type="range" min="0" max="1000" value="0" aria-label="Regional sound progress">
+                <span class="music-time" aria-live="polite">0:00</span>
+              </div>
+              <div class="music-bar__bottom">
+                <span>Optional archival audio from the Library of Congress.</span>
+                <label>Volume
+                  <input class="music-volume" type="range" min="0" max="100" value="42" aria-label="Regional sound volume">
+                </label>
+              </div>
             </div>
-            <div class="music-bar__middle">
-              <input class="music-progress" type="range" min="0" max="1000" value="0" aria-label="Music progress">
-              <span class="music-time" aria-live="polite">0:00</span>
-            </div>
-            <div class="music-bar__bottom">
-              <span>Regional archival audio from the Library of Congress.</span>
-              <label>Volume
-                <input class="music-volume" type="range" min="0" max="100" value="58" aria-label="Music volume">
-              </label>
-            </div>
-          </div>
+          </details>
     """
     intro_curtain = (
         '<div class="intro-curtain" aria-hidden="true" data-intro-state="ready"></div>'
@@ -2483,7 +3905,7 @@ def page_shell(
         else ""
     )
     audio_markup = f"""
-          <audio id="site-music-loop" preload="auto" loop src="{rel('assets/audio/loc-rael-nm-valse.mp3', depth)}"></audio>
+          <audio id="site-music-loop" preload="metadata" loop src="{rel('assets/audio/loc-rael-nm-valse.mp3', depth)}"></audio>
     """
     return dedent(
         f"""\
@@ -2555,7 +3977,7 @@ def page_shell(
                 </div>
                 <button class="directory-assistant__close" type="button" aria-label="Close directory assistant">Close</button>
               </div>
-              <p class="directory-assistant__intro" id="directory-assistant-intro">Search by need, county, town, audience, or task. Results include source links and update reminders so users can act without treating old details as final.</p>
+              <p class="directory-assistant__intro" id="directory-assistant-intro">Search by need, county, town, audience, or task. Results include useful links and update reminders so users can act without treating old details as final.</p>
               <p class="sr-only" id="directory-assistant-hint">Results update after submitting the form or after a short pause while typing. Press Escape to close this panel.</p>
               <form class="directory-assistant__form" role="search">
                 <label for="directory-assistant-query">What are you trying to find?</label>
@@ -2662,25 +4084,7 @@ def home_page(summary: dict) -> str:
         f"<div class=\"stat\"><strong>{count}</strong><span>{html_escape(name)}</span></div>"
         for name, count in summary["county"].items()
     )
-    persona_cards = "\n".join(
-        f"""
-        <article class="mini-card">
-          <h3>{html_escape(item['persona'])}</h3>
-          <p>{html_escape(item['start'])}</p>
-          <p class="action-line">{html_escape(item['pages'])}</p>
-        </article>
-        """
-        for item in PERSONA_ROUTES
-    )
-    task_cards = "\n".join(
-        f"""
-        <a class="mini-card task-link-card" href="{route_href(ACTIVE_PATHS[item['active']])}">
-          <h3>{html_escape(item['h1'])}</h3>
-          <p>{html_escape(item['description'])}</p>
-        </a>
-        """
-        for item in TASK_PAGE_DEFS
-    )
+    task_cards = home_task_group_cards(0)
     content = (
         mountain_banner()
         + f"""
@@ -2700,62 +4104,40 @@ def home_page(summary: dict) -> str:
         <section class="section tinted">
           <div class="section-heading">
             <p class="eyebrow">Quick task guides</p>
-            <h2>Start with the search question people actually type.</h2>
-            <p class="section-note">These pages turn common local questions into next actions: where to post, where to advertise, what county page to use, and which channels to verify first.</p>
+            <h2>Start with the job in front of you.</h2>
+            <p class="section-note">Each card goes to a practical page or search path. Use it to post, list, promote, fund, route by county, or find arts and culture channels without reading the site front to back.</p>
           </div>
           <div class="mini-grid task-grid">{task_cards}</div>
         </section>
         <section class="section">
-          <div class="two-col">
-            <div>
-              <p class="eyebrow">Pick your door</p>
-              <h2>Use the guide by need, not by reading order.</h2>
-              <p>Open a gallery, fix an old listing, plan a fundraiser, or expand a rural service from the page that fits the task. The same useful loop still applies: list, post, partner, follow up, repeat.</p>
-              <a class="button button-primary" href="amplifiers/index.html">Find amplifier channels</a>
-            </div>
-            <div>
-              <p class="eyebrow">Routing logic</p>
-              <h2>The same loop works across roles.</h2>
-              <p>New businesses, long-running organizations, artists, mentors, venues, and service providers can start from different pages because the guide is organized around tasks: getting listed, posting something, finding partners, preparing materials, and verifying the path.</p>
-            </div>
-          </div>
-        </section>
-        <section class="section tinted">
           <div class="section-heading">
-            <p class="eyebrow">Use by role</p>
-            <h2>Six quick starts for the people this guide is meant to serve.</h2>
+            <p class="eyebrow">Current funding and directory entries</p>
+            <h2>Fast-moving items to check before building a new list.</h2>
+            <p class="section-note">Use these time-sensitive entries as starting points. Open the linked page before assuming eligibility, rates, deadlines, listing approval, or current location details.</p>
           </div>
-          <div class="mini-grid">{persona_cards}</div>
+          <div class="current-leads-grid">{current_lead_cards(0)}</div>
+          <figure class="grant-map-figure">
+            <img class="grant-map-image" src="assets/infographics/grant-opportunity-map.svg" alt="Grant routing infographic for Southern Colorado and Northern New Mexico">
+            <figcaption>Use the grant map as a visual starting point, then confirm current applicant rules and deadlines with the original program.</figcaption>
+          </figure>
         </section>
         <section class="section tinted">
           <div class="section-heading">
             <p class="eyebrow">Inventory backbone</p>
-            <h2>{summary['row_count']} local listings and leads, organized beside existing directory shortcuts.</h2>
+            <h2>{summary['row_count']} local listings, organized beside existing directory shortcuts.</h2>
           </div>
           <div class="stats-grid">
-            <div class="stat hero-stat"><strong>{summary['row_count']}</strong><span>local listings and leads</span></div>
+            <div class="stat hero-stat"><strong>{summary['row_count']}</strong><span>local listings</span></div>
             {stats}
           </div>
-          <p class="section-note">Use the local inventory for outreach and discovery. Details can change, so open the source when available and submit a correction when a listing, link, or contact route is outdated.</p>
+          <p class="section-note">Use the local inventory for outreach and discovery. Details can change, so open the linked page when available and submit a correction when a listing, link, or contact route is outdated.</p>
           {download_buttons(0)}
-        </section>
-        <section class="section">
-          <div class="section-heading">
-            <p class="eyebrow">Existing shortcuts</p>
-            <h2>Start with places that already collect the information.</h2>
+          <div class="section-actions">
+            <a class="button button-primary" href="network/index.html">Open the full directory</a>
+            <a class="button button-soft" href="regional-channels/index.html">Find channel shortcuts</a>
           </div>
-          <div class="source-grid compact">
-            {source_cards(DIRECTORY_SOURCES, 12)}
-          </div>
-          <div class="section-actions"><a class="button button-primary" href="network/index.html">Open the full shortcut directory</a></div>
         </section>
         {submit_listing_panel(0, "directory")}
-        {next_action_block(0, [
-            ("Plan the right outreach cycle before collecting links", "plan/"),
-            ("Search public directories and local leads", "network/"),
-            ("Find event calendars, newsletters, visitor guides, and directory channels", "amplifiers/"),
-            ("Choose a county starting point", "region/"),
-        ])}
         """
     )
     return page_shell(
@@ -2797,25 +4179,7 @@ def plan_page() -> str:
         <article class="step-card"><span>5</span><h3>Test matched channels</h3><p>Use a small set of calendars, media outlets, partners, or public channels that fit the job.</p></article>
         <article class="step-card"><span>6</span><h3>Track and repeat</h3><p>Record what happened, thank the channel, and reuse what worked.</p></article>
       </div>
-      <div class="section-actions"><a class="button button-primary" href="../network/index.html">Find directories and leads</a></div>
-    </section>
-    <section class="section tinted">
-      <div class="section-heading">
-        <p class="eyebrow">Use by need</p>
-        <h2>Start with the job, then choose the section.</h2>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Need</th><th>Start here</th><th>First action</th></tr></thead>
-          <tbody>
-            <tr><td>Get listed</td><td>Network</td><td>Use existing directories first.</td></tr>
-            <tr><td>Post an event</td><td>Amplify + Post</td><td>Choose calendar, venue, media, or notice path.</td></tr>
-            <tr><td>Find partners</td><td>Region</td><td>Use county hubs and referral nodes.</td></tr>
-            <tr><td>Prepare outreach</td><td>Templates</td><td>Make one packet, then adapt it.</td></tr>
-            <tr><td>Correct data</td><td>Submit</td><td>Send source link plus correction.</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <div class="section-actions"><a class="button button-primary" href="../network/index.html">Find directories and listings</a></div>
     </section>
     <section class="section">
       <div class="section-heading">
@@ -2825,14 +4189,14 @@ def plan_page() -> str:
       </div>
       <div class="section-actions">
         <a class="button button-primary" href="../templates/index.html">Use copy-ready templates</a>
-        <a class="button button-soft" href="../amplifiers/index.html">Find places to send them</a>
+        <a class="button button-soft" href="../regional-channels/index.html">Find places to send them</a>
       </div>
     </section>
     <section class="section tinted">
       <div class="section-heading">
         <p class="eyebrow">Free and freemium tools</p>
         <h2>Build the packet with tools people already recognize.</h2>
-        <p class="section-note">Plan limits change. Treat these as popular online starting points and verify current free-tier limits before relying on them for a campaign.</p>
+        <p class="section-note">Plan limits change. Treat these as popular online starting points and check current free-tier limits before relying on them for a campaign.</p>
       </div>
       <div class="tool-grid">{tool_cards}</div>
     </section>
@@ -2842,7 +4206,7 @@ def plan_page() -> str:
         <h2>Visibility work can create proof for later asks.</h2>
         <p class="section-note">Grantors, lenders, sponsors, and partner organizations usually need more than enthusiasm. Track where you posted, who shared, what response arrived, and which partner can confirm the public benefit before using outreach results in a funding conversation.</p>
       </div>
-      <a class="button button-soft" href="../network/index.html">Find funding and support leads</a>
+      <a class="button button-soft" href="../network/index.html">Find funding and support entries</a>
     </section>
     <section class="section">
       <div class="section-heading">
@@ -2851,12 +4215,6 @@ def plan_page() -> str:
         <p class="section-note">Submit the item, share the published result, thank the channel owner, report useful response, and reuse the relationship when it fits again.</p>
       </div>
     </section>
-    {next_action_block(1, [
-        ("Search directories and support leads", "network/"),
-        ("Find event calendars, newsletters, visitor guides, and directory channels", "amplifiers/"),
-        ("Use copy-ready outreach templates", "templates/"),
-        ("Submit a correction with a public source link", "submit/"),
-    ])}
     """
     return page_shell(
         "Plan Local Growth Across Colfax, Las Animas & Huerfano | Stateline Guide",
@@ -2869,11 +4227,15 @@ def plan_page() -> str:
 
 def network_page(rows: list[dict]) -> str:
     row_count = len(rows)
+    source_group_count = len(grouped_directory_sources(DIRECTORY_SOURCES))
+    top_group_count = len(top_directory_source_groups())
+    physical_location_count = sum(1 for row in rows if has_physical_location(row))
+    physical_ad_count = sum(1 for row in rows if is_physical_ad_candidate(row))
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">Find the Network</p>
       <h1>Use the directories that already save time.</h1>
-      <p class="lede">Search high-value public shortcuts first, then use the {row_count}-entry local inventory as a working list to confirm before outreach.</p>
+      <p class="lede">Search high-value public shortcuts first, then filter {row_count} local listings by county, place, type, or access.</p>
     </section>
     <section class="section">
       <div class="section-heading">
@@ -2890,15 +4252,15 @@ def network_page(rows: list[dict]) -> str:
         <h2>If something has changed, send the update path.</h2>
       </div>
       <div class="two-col">
-        <p>The guide keeps source links and contact routes visible so users have a starting point. Before spending money, printing materials, or promising placement, open the source and confirm current rules.</p>
-        <p>If a link is outdated, a business moved, or a better submission path exists, use the correction form and include the public source to check.</p>
+        <p>The guide keeps useful links and contact routes visible so users have a starting point. Before spending money, printing materials, or promising placement, use the listed page or contact route for current rules.</p>
+        <p>If a link is outdated, a business moved, or a better submission path exists, use the correction form and include the public page that should be used.</p>
       </div>
       <div class="section-actions"><a class="button button-primary" href="../submit/index.html">Submit a correction</a></div>
     </section>
     <section class="section">
       <div class="tool-panel">
         <div>
-          <label for="source-search">Search directory shortcuts</label>
+          <label for="source-search">Search grouped directory shortcuts</label>
           <input id="source-search" class="search-input" type="search" placeholder="Try chamber, event, media, nonprofit, artist, funding...">
         </div>
         <div class="filter-row" aria-label="County filters">
@@ -2909,17 +4271,19 @@ def network_page(rows: list[dict]) -> str:
           <button class="chip" data-source-filter="Regional">Regional</button>
         </div>
       </div>
+      <p id="source-results-note" class="section-note">{top_group_count} priority shortcut groups are shown first. Search or choose a county to inspect all {source_group_count} grouped cards covering {len(DIRECTORY_SOURCES)} individual shortcut routes.</p>
       <div id="source-results" class="source-grid"></div>
     </section>
     <section class="section tinted">
       <div class="section-heading">
-        <p class="eyebrow">Lead bank</p>
-        <h2>Search the local inventory, but verify before using.</h2>
+        <p class="eyebrow">Listings</p>
+        <h2>Search the local inventory by name, place, audience, and task.</h2>
+        <p class="section-note">Use the physical filters when you need places a person can visit, call, map, or ask about leaving a flyer, poster, brochure, rack card, or small stack of handouts.</p>
       </div>
       <div class="tool-panel">
         <div>
           <label for="resource-search">Search {row_count} local entries</label>
-          <input id="resource-search" class="search-input" type="search" placeholder="Try gallery, radio, grant, Raton, Walsenburg, Trinidad...">
+          <input id="resource-search" class="search-input" type="search" placeholder="Try flyer, library, visitor center, gallery, cafe, Raton, Trinidad...">
         </div>
         <div class="advanced-filters" aria-label="Detailed resource filters">
           <div>
@@ -2931,6 +4295,11 @@ def network_page(rows: list[dict]) -> str:
             <select id="access-mode-filter"><option value="All">All access modes</option></select>
           </div>
         </div>
+        <div id="physical-location-filter" class="filter-row" aria-label="Physical location filters">
+          <button class="chip is-active" data-location-filter="All">All listings</button>
+          <button class="chip" data-location-filter="Physical">Physical locations</button>
+          <button class="chip" data-location-filter="Flyers">Ask about flyers</button>
+        </div>
         <div class="filter-row" aria-label="Resource filters">
           <button class="chip is-active" data-resource-filter="All">All</button>
           <button class="chip" data-resource-filter="Colfax">Colfax</button>
@@ -2939,7 +4308,13 @@ def network_page(rows: list[dict]) -> str:
           <button class="chip" data-resource-filter="Regional">Regional</button>
         </div>
       </div>
-      <p class="section-note">Search by town, county, resource type, or access mode. Open the source when available and submit corrections when details have changed.</p>
+      <div class="marker-legend" aria-label="Directory marker legend">
+        <span class="listing-marker listing-marker--physical">Physical location</span>
+        <span>{physical_location_count} listings include a map-able or street-style location.</span>
+        <span class="listing-marker listing-marker--ad">Ask about flyers</span>
+        <span>{physical_ad_count} listings look like stronger places to ask about physical materials. Ask first; the guide does not imply permission.</span>
+      </div>
+      <p id="resource-results-note" class="section-note">Search by town, county, resource type, audience, keyword, or task. If a detail has changed, send an update so the listing can stay useful.</p>
       <div id="resource-results" class="resource-list"></div>
       <p class="section-note">Need a table view? Open the public-contact appendix for county/community grouping.</p>
       <div class="section-actions"><a class="button button-primary" href="../appendix/index.html">Open the appendix</a></div>
@@ -2948,18 +4323,182 @@ def network_page(rows: list[dict]) -> str:
     {next_action_block(1, [
         ("Find regional newsletters, calendars, visitor guides, and directory channels", "amplifiers/"),
         ("Use copy-ready outreach templates", "templates/"),
-        ("Submit a correction with a public source link", "submit/"),
+        ("Submit a correction with a public page link", "submit/"),
         ("Open the public contact appendix", "appendix/"),
     ])}
     """
     return page_shell(
-        "Find Local Directories, Media, Funding & Support Leads | Stateline Guide",
-        f"Search public shortcuts and a {row_count}-entry regional inventory of directories, media, funding, business, nonprofit, arts, and support leads.",
+        "Find Local Directories, Physical Ad Locations, Media & Support Entries | Stateline Guide",
+        f"Search public shortcuts and a {row_count}-entry regional inventory of directories, physical locations, media, funding, business, nonprofit, arts, and support entries.",
         "network",
         content,
         depth=1,
         main_entity=directory_item_list_schema(rows),
         extra_json_alternates=[("Full directory metadata", "data/directory-metadata.json")],
+        schema_type="CollectionPage",
+    )
+
+
+def row_matches_terms(row: dict, terms: list[str]) -> bool:
+    blob = " ".join(str(value or "") for value in row.values()).lower()
+    return any(term in blob for term in terms)
+
+
+def resource_preview_cards(rows: list[dict], terms: list[str], limit: int = 18) -> str:
+    matched = [
+        row for row in sorted(rows, key=lambda item: (item.get("resource_name") or "", item.get("county") or "", item.get("town") or ""))
+        if row_matches_terms(row, terms)
+    ][:limit]
+    if not matched:
+        return '<p class="section-note">No matching local inventory rows are available in this build.</p>'
+    cards = []
+    for row in matched:
+        url = (split_semicolon(row.get("website")) or split_semicolon(row.get("source_url")) or [""])[0]
+        link = f'<a class="resource-contact-link" href="{html_escape(url)}" target="_blank" rel="noreferrer">{html_escape(resource_url_label(url))}</a>' if url else '<span class="source-note">Send an update if you have a public contact path.</span>'
+        tags = "".join(f'<span class="badge">{html_escape(tag)}</span>' for tag in organization_tags(row))
+        cards.append(
+            f"""
+            <article class="resource-item">
+              <div class="source-card__meta">
+                <span>{html_escape(row.get('county'))}</span>
+                <span>{html_escape(row.get('town'))}</span>
+                <span>{html_escape(row.get('public_listing_type') or row.get('resource_type'))}</span>
+              </div>
+              <h3>{html_escape(row.get('resource_name') or 'Unnamed resource')}</h3>
+              <p class="resource-tags"><strong>Useful for:</strong> {tags}</p>
+              {resource_physical_indicator_badges(row)}
+              <p>{html_escape(public_text_value(row.get('public_description') or row.get('category') or 'Local directory listing for regional discovery and outreach.'))}</p>
+              <p class="resource-best"><strong>Best fit:</strong> {html_escape(public_text_value(row.get('public_best_for') or public_best_for(row)))}</p>
+              <p class="action-line">{html_escape(public_text_value(row.get('goal_relevance') or 'Choose the route that fits, then contact the listed page or organization.'))}</p>
+              <div class="resource-links">{link}</div>
+            </article>
+            """
+        )
+    return "\n".join(cards)
+
+
+def sources_matching_terms(terms: list[str]) -> list[dict]:
+    return [
+        item for item in DIRECTORY_SOURCES
+        if any(
+            term in " ".join(str(item.get(field) or "") for field in ["title", "kind", "best_for", "action", "county"]).lower()
+            for term in terms
+        )
+    ]
+
+
+def funding_page(rows: list[dict]) -> str:
+    terms = ["fund", "grant", "scholarship", "stipend", "loan", "incentive", "foundation", "capital", "training reimbursement", "technical assistance"]
+    funding_sources = sources_matching_terms(terms)
+    content = f"""
+    <section class="page-hero">
+      <p class="eyebrow">Funding</p>
+      <h1>Funding, grants, incentives, and support entries.</h1>
+      <p class="lede">Use this page to find likely starting points for business, nonprofit, arts, culture, outdoor recreation, workforce, and community projects. Check eligibility, deadlines, applicant type, match rules, and award status with the original program.</p>
+    </section>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Check first</p>
+        <h2>Current funding entries from the latest review.</h2>
+        <p class="section-note">These are not guarantees of eligibility or open cycles. They are useful routes to check before starting a funding search from scratch.</p>
+      </div>
+      <div class="current-leads-grid">{current_lead_cards(2, "Funding")}</div>
+    </section>
+    <section class="section tinted">
+      <div class="section-heading">
+        <p class="eyebrow">Grant routing map</p>
+        <h2>Match the project type before chasing applications.</h2>
+      </div>
+      <figure class="grant-map-figure">
+        <img class="grant-map-image" src="../../assets/infographics/grant-opportunity-map.svg" alt="Grant routing infographic for Southern Colorado and Northern New Mexico">
+        <figcaption>Use the map to frame the search, then open the program source for current applicant rules, deadlines, match requirements, and contact instructions.</figcaption>
+      </figure>
+    </section>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Funding directory shortcuts</p>
+        <h2>Programs and pages to open directly.</h2>
+      </div>
+      <div class="source-grid compact">{source_group_cards(funding_sources)}</div>
+    </section>
+    <section class="section tinted">
+      <div class="section-heading">
+        <p class="eyebrow">Local inventory entries</p>
+        <h2>Additional rows that may connect to money, training, or support.</h2>
+        <p class="section-note">Use these as starting entries, not final eligibility statements. Open the link or contact path before including a program in public advice.</p>
+      </div>
+      <div class="resource-list">{resource_preview_cards(rows, terms)}</div>
+      {download_buttons(2)}
+    </section>
+    {submit_listing_panel(2, "directory")}
+    """
+    return page_shell(
+        "Funding, Grants & Support Entries | Stateline Guide",
+        "Find grant, incentive, scholarship, stipend, loan, workforce, arts, nonprofit, and business-support starting points for Colfax, Las Animas, and Huerfano counties.",
+        "funding",
+        content,
+        depth=2,
+        schema_type="CollectionPage",
+    )
+
+
+def arts_culture_page(rows: list[dict]) -> str:
+    terms = ["art", "artist", "gallery", "creative", "maker", "music", "theater", "theatre", "museum", "cultural", "craft", "mural", "performance", "dance", "film", "literary"]
+    arts_sources = sources_matching_terms(terms)
+    arts_leads = [item for item in CURRENT_LEADS if item["title"] in {"Walsenburg Mercantile vendors", "Meditating Monkey Art Emporium relocation watch"}]
+    lead_markup = "\n".join(
+        f"""
+        <article class="lead-card" data-lead-group="{html_escape(item['group'])}" data-county="{html_escape(item['county'])}">
+          <div class="source-card__meta"><span>{html_escape(item['county'])}</span><span>{html_escape(item['kind'])}</span></div>
+          <h3><a href="{html_escape(item['url'])}" target="_blank" rel="noreferrer">{html_escape(item['title'])}</a></h3>
+          <p>{html_escape(item['best_for'])}</p>
+          <p class="action-line">{html_escape(item['action'])}</p>
+        </article>
+        """
+        for item in arts_leads
+    )
+    content = f"""
+    <section class="page-hero">
+      <p class="eyebrow">Arts & Culture</p>
+      <h1>Artists, galleries, makers, venues, and cultural routes.</h1>
+      <p class="lede">Use this page when creative work needs to be findable: listings, shows, vendor visibility, visitor-facing promotion, venue calendars, media, creative districts, and partner channels.</p>
+    </section>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Fast arts entries</p>
+        <h2>Useful arts-directory items to check now.</h2>
+        <p class="section-note">These entries help keep arts pages practical: who may list creative work, where makers appear, and what needs an address or status check.</p>
+      </div>
+      <div class="current-leads-grid">{lead_markup}</div>
+      <div class="section-actions">
+        <a class="button button-primary" href="../../artist-gallery-promotion/index.html">Open artist promotion guide</a>
+        <a class="button button-soft" href="../../network/index.html">Search all creative entries</a>
+      </div>
+    </section>
+    <section class="section tinted">
+      <div class="section-heading">
+        <p class="eyebrow">Arts and culture shortcuts</p>
+        <h2>Pages that already gather creative visibility.</h2>
+      </div>
+      <div class="source-grid compact">{source_group_cards(arts_sources)}</div>
+    </section>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Local creative inventory</p>
+        <h2>Artists, venues, galleries, makers, and cultural entries.</h2>
+        <p class="section-note">Use these rows for discovery and outreach. Confirm current details before publishing a recommendation or sending visitors to a location.</p>
+      </div>
+      <div class="resource-list">{resource_preview_cards(rows, terms, 24)}</div>
+      {download_buttons(2)}
+    </section>
+    {submit_listing_panel(2, "directory")}
+    """
+    return page_shell(
+        "Arts & Culture Directory Routes | Stateline Guide",
+        "Find artist, gallery, maker, music, venue, creative-district, cultural, visitor-facing, and partner visibility routes across the tri-county region.",
+        "arts-culture",
+        content,
+        depth=2,
         schema_type="CollectionPage",
     )
 
@@ -2978,8 +4517,8 @@ def amplifiers_page() -> str:
     matrix = "\n".join(
         f"""
         <tr>
-          <td>{html_escape(use_case)}</td>
-          <td>{html_escape(channels)}</td>
+          <td>{html_escape(public_text_value(use_case))}</td>
+          <td>{html_escape(public_text_value(channels))}</td>
         </tr>
         """
         for use_case, channels in BEST_USE_MATRIX
@@ -3008,7 +4547,7 @@ Could you point me to the right form, deadline, rate card, eligibility rule, or 
     <section class="page-hero">
       <p class="eyebrow">Regional Amplifier Channels</p>
       <h1>Newsletters, calendars, directories, and visitor guides.</h1>
-      <p class="lede">Use this page to decide where an event, listing, announcement, partnership ask, or visitor-facing update may belong. Open the source before assuming current rates, deadlines, or acceptance rules.</p>
+      <p class="lede">Use this page to decide where an event, listing, announcement, partnership ask, or visitor-facing update may belong. Open the linked page before assuming current rates, deadlines, or acceptance rules.</p>
     </section>
     <section class="section">
       <div class="section-heading">
@@ -3016,39 +4555,7 @@ Could you point me to the right form, deadline, rate card, eligibility rule, or 
         <h2>Choose the channel by the job it can actually do.</h2>
       </div>
       <div class="mini-grid">{categories}</div>
-      <p class="section-note">Do not promise ad availability, free placement, deadlines, audience size, endorsement, or acceptance unless the source says so. Ask the channel directly when those details matter.</p>
-    </section>
-    <section class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Channel table</p>
-        <h2>Places to check before submitting or pitching.</h2>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Channel</th><th>Area served</th><th>Channel type</th><th>What users can ask/submit</th><th>Best for</th><th>How to use it</th>
-            </tr>
-          </thead>
-          <tbody>{rows}</tbody>
-        </table>
-      </div>
-      <p class="section-note">Before paying for ads or promising placement, ask the source about current rates, deadlines, acceptance, and submission rules.</p>
-    </section>
-    <section class="section">
-      <div class="two-col">
-        <div>
-          <p class="eyebrow">Promotion packet</p>
-          <h2>Prepare once, submit many times.</h2>
-          <ul class="check-list">{packet}</ul>
-        </div>
-        <div>
-          <p class="eyebrow">Anti-spam rule</p>
-          <h2>Ask like a neighbor, not like a blast campaign.</h2>
-          <p>Send only to channels where the item fits, use the channel owner's preferred form, avoid repeated messages, and stop when a page says submissions are closed or not accepted. For nonprofits and community programs, lead with public benefit rather than sales language.</p>
-          <pre>{html_escape(outreach)}</pre>
-        </div>
-      </div>
+      <p class="section-note">Do not promise ad availability, free placement, deadlines, audience size, endorsement, or acceptance unless the page or organization says so. Ask the channel directly when those details matter.</p>
     </section>
     <section class="section tinted">
       <div class="section-heading">
@@ -3069,17 +4576,43 @@ Could you point me to the right form, deadline, rate card, eligibility rule, or 
       </div>
       <div class="mini-grid">
         <article class="mini-card"><h3>Where should I post a public event first?</h3><p>Start with event calendars, tourism calendars, venue lineups, city or community calendars, and partner channels that already serve the event's audience.</p></article>
-        <article class="mini-card"><h3>Can I assume a newsletter accepts outside promotions?</h3><p>No. Ask first. Do not assume ad availability, free placement, deadlines, audience size, endorsement, or acceptance unless the source confirms it.</p></article>
+        <article class="mini-card"><h3>Can I assume a newsletter accepts outside promotions?</h3><p>No. Ask first. Do not assume ad availability, free placement, deadlines, audience size, endorsement, or acceptance unless the page or organization confirms it.</p></article>
         <article class="mini-card"><h3>What should I prepare before submitting an event?</h3><p>Prepare the event name, date, time, location, short description, contact link, images, flyer, accessibility notes, and whether the event is free, ticketed, nonprofit, youth, tourism, business, or community-oriented.</p></article>
       </div>
     </section>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Channel table</p>
+        <h2>Places to check before submitting or pitching.</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Channel</th><th>Area served</th><th>Channel type</th><th>What users can ask/submit</th><th>Best for</th><th>How to use it</th>
+            </tr>
+          </thead>
+          <tbody>{rows}</tbody>
+        </table>
+      </div>
+      <p class="section-note">Before paying for ads or promising placement, ask the channel about current rates, deadlines, acceptance, and submission rules.</p>
+    </section>
+    <section class="section">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow">Promotion packet</p>
+          <h2>Prepare once, submit many times.</h2>
+          <ul class="check-list">{packet}</ul>
+        </div>
+        <div>
+          <p class="eyebrow">Anti-spam rule</p>
+          <h2>Ask like a neighbor, not like a blast campaign.</h2>
+          <p>Send only to channels where the item fits, use the channel owner's preferred form, avoid repeated messages, and stop when a page says submissions are closed or not accepted. For nonprofits and community programs, lead with public benefit rather than sales language.</p>
+          <pre>{html_escape(outreach)}</pre>
+        </div>
+      </div>
+    </section>
     {submit_listing_panel(1, "amplifier")}
-    {next_action_block(1, [
-        ("Search public directories and local leads", "network/"),
-        ("Separate official notices from community visibility", "posting/"),
-        ("Use copy-ready outreach templates", "templates/"),
-        ("Submit a changed channel with a public source link", "submit/"),
-    ])}
     """
     return page_shell(
         "Regional Newsletters, Calendars, Directories & Visitor Guides | Stateline Guide",
@@ -3091,8 +4624,8 @@ Could you point me to the right form, deadline, rate card, eligibility rule, or 
     )
 
 
-def posting_page() -> str:
-    rows = "\n".join(
+def posting_page(rows: list[dict]) -> str:
+    posting_rows = "\n".join(
         f"""
         <tr>
           <td>{html_escape(item['place'])}</td>
@@ -3100,29 +4633,75 @@ def posting_page() -> str:
           <td>{html_escape(item['digital'])}</td>
           <td>{html_escape(public_text_value(item['use_for']))}</td>
           <td>{html_escape(public_text_value(item['status']))}</td>
-          <td>{f'<a href="{html_escape(item["source_url"])}" target="_blank" rel="noreferrer">Open source</a>' if item['source_url'] else 'Local check needed'}</td>
+          <td>{f'<a href="{html_escape(item["source_url"])}" target="_blank" rel="noreferrer">Open page</a>' if item['source_url'] else 'Local update needed'}</td>
         </tr>
         """
         for item in POSTING_SPACES
     )
+    type_cards = "\n".join(
+        f"""
+        <article class="mini-card">
+          <h3>{html_escape(item['title'])}</h3>
+          <p>{html_escape(item['best_for'])}</p>
+          <p class="resource-best"><strong>Ask:</strong> {html_escape(item['ask'])}</p>
+        </article>
+        """
+        for item in PHYSICAL_AD_PLACE_TYPES
+    )
+    candidate_rows = physical_ad_location_rows(rows)
+    candidate_table = "\n".join(
+        f"""
+        <tr>
+          <td><strong>{html_escape(row.get('resource_name') or 'Unnamed place')}</strong><span class="table-subtle">{html_escape(public_place(row))}</span></td>
+          <td>{html_escape(row.get('public_listing_type') or inferred_listing_type(row))}</td>
+          <td>{html_escape(physical_ad_location_fit(row))}</td>
+          <td>{html_escape(physical_ad_location_note(row))}</td>
+          <td><div class="resource-links">{contact_links_for_row(row)}</div></td>
+        </tr>
+        """
+        for row in candidate_rows
+    )
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">Where To Post</p>
-      <h1>Separate official notices from community visibility.</h1>
-      <p class="lede">Small communities have physical boards, public offices, digital public-notice pages, calendars, newsletters, and informal partner channels. Use this page to verify the right channel without treating every board as an ad space.</p>
+      <h1>Find physical places to ask about flyers, posters, and local ads.</h1>
+      <p class="lede">Use this page when you need real-world visibility: library boards, visitor centers, public-office posting routes, downtown businesses, galleries, venues, travel stops, and other local places where a flyer, poster, rack card, or small stack may fit.</p>
+    </section>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Physical ad finder</p>
+        <h2>Start with the places people already pass through.</h2>
+        <p class="section-note">These are places to ask, not guaranteed ad spaces. Libraries, visitor centers, city halls, courts, downtown shops, restaurants, galleries, community spaces, bus or train stops, and lodging desks often have owner-controlled boards, brochure racks, front desks, or public-information areas. Some limit political, for-profit, oversized, expired, or unaffiliated materials.</p>
+      </div>
+      <div class="mini-grid">{type_cards}</div>
+    </section>
+    <section id="physical-ad-locations" class="section tinted">
+      <div class="section-heading">
+        <p class="eyebrow">Physical locations</p>
+        <h2>Directory rows that may help with flyers, posters, rack cards, or front-desk referrals.</h2>
+        <p class="section-note">This shortlist is pulled from the guide's local directory rows that look most useful for offline promotion. Ask the location owner or office before posting, leaving materials, or implying sponsorship.</p>
+      </div>
+      <div class="table-wrap physical-posting-table">
+        <table>
+          <thead><tr><th>Place</th><th>Type</th><th>Useful for</th><th>Before you post</th><th>Contact</th></tr></thead>
+          <tbody>{candidate_table}</tbody>
+        </table>
+      </div>
+      <p class="section-note">Need more than this shortlist? Search the Network or Appendix for terms like library, visitor center, chamber, gallery, cafe, restaurant, market, depot, city hall, courthouse, college, and community center.</p>
     </section>
     <section class="section tinted">
       <div class="section-heading">
         <p class="eyebrow">Posting map</p>
-        <h2>Physical plus digital channels to verify by community.</h2>
+        <h2>Official notices and community visibility are different routes.</h2>
+        <p class="section-note">Use official public-office routes for civic notices and public information. Use owner-controlled boards, counters, racks, venues, and downtown partners for ordinary event or business visibility.</p>
       </div>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Community</th><th>Physical pathway</th><th>Digital pathway</th><th>Use for</th><th>Status</th><th>Source</th></tr></thead>
-          <tbody>{rows}</tbody>
+          <thead><tr><th>Community</th><th>Physical pathway</th><th>Digital pathway</th><th>Use for</th><th>Status</th><th>Link</th></tr></thead>
+          <tbody>{posting_rows}</tbody>
         </table>
       </div>
-      <p class="section-note">Use "field-check needed" entries as details to confirm, not as a claim that posting is already allowed.</p>
+      <p class="section-note">Ask the page owner or office about current rules, deadlines, acceptable materials, and whether a request should be handled as a notice, calendar item, ad, flyer, or partner share.</p>
     </section>
     <section class="section">
       <div class="section-heading">
@@ -3130,7 +4709,7 @@ def posting_page() -> str:
         <h2>A simple sequence for offline and online visibility.</h2>
       </div>
       <div class="steps-grid">
-        <article class="step-card"><span>1</span><h3>Verify the owner</h3><p>Identify who controls the board, calendar, newsletter, or directory before preparing materials.</p></article>
+        <article class="step-card"><span>1</span><h3>Find the owner</h3><p>Identify who controls the board, calendar, newsletter, or directory before preparing materials.</p></article>
         <article class="step-card"><span>2</span><h3>Match the purpose</h3><p>Official notice, public event, business listing, and paid advertisement are different requests.</p></article>
         <article class="step-card"><span>3</span><h3>Use clear assets</h3><p>Keep a short blurb, accessible flyer, square image, date, location, and contact ready.</p></article>
         <article class="step-card"><span>4</span><h3>Track proof</h3><p>Record where it was posted, who approved it, when it expires, and what response it produced.</p></article>
@@ -3140,12 +4719,13 @@ def posting_page() -> str:
         ("Find event calendars, newsletters, visitor guides, and directory channels", "amplifiers/"),
         ("Use copy-ready outreach templates", "templates/"),
         ("Submit a corrected posting route", "submit/"),
-        ("Search public directories and local leads", "network/"),
+        ("Filter the directory for physical locations", "network/#physical-location-filter"),
+        ("Open the spreadsheet-style appendix", "appendix/"),
     ])}
     """
     return page_shell(
         "Where to Post Events, Notices & Listings in the Tri-County Area | Stateline Guide",
-        "Separate official notices from community visibility, then verify boards, calendars, newsletters, directories, and public office posting routes.",
+        "Separate official notices from community visibility, then check boards, calendars, newsletters, directories, and public office posting routes.",
         "posting",
         content,
         depth=1,
@@ -3161,13 +4741,13 @@ def appendix_page(rows: list[dict]) -> str:
           <td>{html_escape(row.get('town'))}</td>
           <td>{html_escape(row.get('resource_name'))}</td>
           <td>{html_escape(public_text_value(row.get('category')))}</td>
-          <td>{html_escape(row.get('resource_type'))}</td>
+          <td>{html_escape(row.get('public_listing_type') or row.get('resource_type'))}</td>
           <td>{html_escape(row.get('access_mode'))}</td>
           <td>{html_escape(row.get('contact_phone'))}</td>
           <td>{html_escape(row.get('contact_email'))}</td>
           <td>{html_escape(row.get('physical_address'))}</td>
-          <td>{f'<a href="{html_escape(row.get("website") or row.get("source_url"))}" target="_blank" rel="noreferrer">Open</a>' if (row.get('website') or row.get('source_url')) else 'Verify manually'}</td>
-          <td>{html_escape(public_text_value(row.get('notes')))}</td>
+          <td>{f'<a href="{html_escape(resource_url(row))}" target="_blank" rel="noreferrer">{html_escape(resource_url_label(resource_url(row)))}</a>' if resource_url(row) else 'Send update'}</td>
+          <td>{html_escape(public_text_value(row.get('public_description') or row.get('category') or 'Local directory listing.'))}</td>
         </tr>
         """
         for row in sorted_rows
@@ -3216,13 +4796,13 @@ def appendix_page(rows: list[dict]) -> str:
     {next_action_block(1, [
         ("Search by need instead of table order", "network/"),
         ("Find event calendars, newsletters, visitor guides, and directory channels", "amplifiers/"),
-        ("Submit an appendix correction with a public source link", "submit/"),
+        ("Submit an appendix correction with a public page link", "submit/"),
         ("Understand how the three counties connect", "region/"),
     ])}
     """
     return page_shell(
         "Tri-County Public Contact Appendix | Stateline Guide",
-        "Browse public-contact appendix entries by county, community, source, access mode, resource type, and update status.",
+        "Browse public-contact appendix entries by county, community, access mode, resource type, and listing details.",
         "appendix",
         content,
         depth=1,
@@ -3257,7 +4837,7 @@ def region_page(summary: dict) -> str:
       <div class="section-heading">
         <p class="eyebrow">Inventory coverage</p>
         <h2>The data is strongest for visibility, media, resources, and funding paths.</h2>
-        <p class="section-note">These counts describe the guide's current source coverage. Do not treat them as audience size, market demand, economic value, or verified reach.</p>
+        <p class="section-note">These counts describe the guide's current coverage. Do not treat them as audience size, market demand, economic value, or actual reach.</p>
       </div>
       <ul class="type-list">{type_stats}</ul>
     </section>
@@ -3277,7 +4857,7 @@ def region_page(summary: dict) -> str:
         ("Open the Colfax county starting point", "counties/colfax/"),
         ("Open the Las Animas county starting point", "counties/las-animas/"),
         ("Open the Huerfano county starting point", "counties/huerfano/"),
-        ("Search public directories and local leads", "network/"),
+        ("Search public directories and local entries", "network/"),
     ])}
     """
     return page_shell(
@@ -3299,7 +4879,7 @@ def county_page(county: str, slug: str, summary_text: str, rows: list[dict]) -> 
         f"""
         <li>
           <strong>{html_escape(row.get('resource_name'))}</strong>
-          <span>{html_escape(row.get('resource_type'))} - {html_escape(row.get('town') or county)}</span>
+          <span>{html_escape(row.get('public_listing_type') or row.get('resource_type'))} - {html_escape(row.get('town') or county)}</span>
         </li>
         """
         for row in top_rows
@@ -3310,7 +4890,7 @@ def county_page(county: str, slug: str, summary_text: str, rows: list[dict]) -> 
     <section class="page-hero county-hero">
       <p class="eyebrow">{html_escape(county)} County</p>
       <h1>{html_escape(summary_text)}</h1>
-      <p class="lede">Start with public directories and support organizations, then use local inventory entries as outreach leads to confirm before action.</p>
+      <p class="lede">Start with public directories and support organizations, then use local inventory entries as outreach paths to confirm before action.</p>
     </section>
     <section class="section">
       <div class="two-col">
@@ -3334,8 +4914,8 @@ def county_page(county: str, slug: str, summary_text: str, rows: list[dict]) -> 
     </section>
     <section class="section tinted">
       <div class="section-heading">
-        <p class="eyebrow">Local lead sample</p>
-        <h2>Inventory examples to verify and use carefully.</h2>
+        <p class="eyebrow">Local listing sample</p>
+        <h2>Inventory examples to check before outreach.</h2>
       </div>
       <ul class="lead-list">{leads}</ul>
       <p class="section-note">The full inventory is searchable from the Network page and downloadable as CSV in the data folder.</p>
@@ -3353,35 +4933,137 @@ def county_page(county: str, slug: str, summary_text: str, rows: list[dict]) -> 
 
 def templates_page() -> str:
     templates = [
-        ("Directory listing request", "Hello, I am requesting an update or listing for [business/program name]. We serve [audience] in [town/county]. Our current details are: [website], [phone], [address], [hours], [short description]. Please let me know if there is a preferred form or review process."),
-        ("Event calendar submission", "Event name: [name]. Date/time: [date]. Location: [place]. Cost: [free/price]. Who it is for: [audience]. Short description: [45-75 words]. Image/flyer attached. Contact: [name/email/phone]."),
-        ("Media pitch", "[Organization] is launching [thing] for [audience] on [date]. It matters locally because [one concrete reason]. We can provide photos, a short interview, and event details. The public call to action is [register/visit/share/contact]."),
-        ("Promotion or advertising question", "Hello, I am reaching out to ask whether [organization/publication/site name] accepts event listings, newsletter submissions, business directory updates, paid advertisements, social media co-promotion, visitor-guide listings, or other community announcements. The item is [business/event/program name] for [audience] in [town/county]. Could you point me to the right form, deadline, rate card, eligibility rule, or contact person?"),
-        ("Partner ask", "We are trying to reach [audience] across [counties]. Would your organization be open to sharing [listing/event/resource], referring people who need it, or suggesting the best local channel? I can send a short blurb and image sized for your usual format."),
-        ("Follow-up tracker", "Track: date, channel, contact, message sent, response, next action, result, whether the source should be reused."),
+        (
+            "Directory listing request",
+            "Use for chambers, tourism pages, arts directories, business directories, and public resource lists.",
+            "Mention why that exact directory fits: town, audience, industry, visitor use, member status, or service area.",
+            "Hello [name/team], I am requesting a listing or update for [business/program]. We serve [audience] in [town/county]. Public details: [website], [phone], [address or service area], [hours if relevant], [1-sentence description]. If there is a preferred form, membership rule, or review process, would you point me to it?",
+        ),
+        (
+            "Event calendar submission",
+            "Use for public calendars, visitor sites, community boards, libraries, venue calendars, and newsletters.",
+            "Lead with the public value: family-friendly, visitor-facing, local arts, downtown business, fundraiser, class, or service.",
+            "Event: [name]\nDate/time: [date/time]\nLocation: [place]\nCost: [free/price]\nAudience: [who it is for]\nShort description: [45-75 words]\nPublic action: [register/attend/call/visit]\nContact: [name/email/phone]\nImage/flyer: [attached or link]\nPlease let me know if a different format or lead time is required.",
+        ),
+        (
+            "Newsletter or mailing-list note",
+            "Use when sending to a list you own or a partner who accepts community announcements.",
+            "Segment the list before sending. A gallery list, business list, volunteer list, and visitor list should not get the same wording.",
+            "Subject: [specific local action]\nHi [first name/community], [one local sentence that proves this is meant for them]. [Organization] is sharing [event/resource/service] for [audience] in [town/region]. The useful detail is [why this matters now]. Learn more: [link]. If this is not a fit for your inbox, reply with 'remove' and I will update the list.",
+        ),
+        (
+            "Media pitch",
+            "Use for newspapers, radio, local magazines, podcasts, or public-interest editorial contacts.",
+            "Do not send only a flyer. Add the local reason, a human angle, and a clean public action.",
+            "[Organization] is launching [thing] for [audience] on [date]. It matters locally because [one concrete reason]. We can provide photos, a short interview, and event details. The public call to action is [register/visit/share/contact]. If this is not the right desk, would you point me to the best contact?",
+        ),
+        (
+            "Promotion or advertising inquiry",
+            "Use when a site, publication, venue, radio station, chamber, or visitor guide may offer ads or paid placement.",
+            "Ask for the current option instead of assuming placement exists.",
+            "Hello [name/team], does [organization/publication/site] currently accept event listings, directory updates, newsletter submissions, paid ads, social media co-promotion, visitor-guide listings, or other community announcements? The item is [business/event/program] for [audience] in [town/county]. Could you share the right form, deadline, rate card, eligibility rule, or contact person?",
+        ),
+        (
+            "Partner share request",
+            "Use for aligned organizations, venues, galleries, nonprofits, schools, public programs, and local businesses.",
+            "Make it easy to say yes, easy to say no, and clear why their audience might care.",
+            "We are trying to reach [audience] across [counties]. Would your organization be open to sharing [listing/event/resource], referring people who need it, or suggesting the best local channel? I can send a short blurb and image sized for your usual format. No pressure if this is not a fit.",
+        ),
+        (
+            "Flyer rack or community board ask",
+            "Use for physical posting spots, front desks, visitor centers, cafes, libraries, shops, and venue bulletin boards.",
+            "Ask permission first and include dates so outdated materials can be removed.",
+            "Hello [name/team], may I leave a small flyer for [event/service/program] at [location]? It is for [audience] and runs through [date]. I can bring [quantity] copies and remove them after [date]. If you have posting rules, size limits, or a preferred contact, I am happy to follow them.",
+        ),
+        (
+            "Arts, venue, or gallery ask",
+            "Use for artist listings, openings, calls, performances, workshop announcements, and venue calendars.",
+            "Include medium, dates, image credit, access needs, and whether sales or registration are involved.",
+            "Hello [name/team], I am sharing [artist/show/workshop/performance] in [town/region]. The work/program is [short description] and may fit [their audience or calendar] because [specific reason]. Public details: [date/place/link/contact]. Please let me know if you need image credit, a shorter blurb, or a different submission path.",
+        ),
+        (
+            "Funding or referral introduction",
+            "Use when asking a funder, SBDC, foundation, chamber, or public office where to begin.",
+            "State the stage, need, county, and deadline. Do not make them decode the project.",
+            "Hello [name/team], I am looking for the best starting point for [business/nonprofit/artist/program] in [county]. We are trying to [goal] and need [grant/loan/training/referral/technical help] by [timeline if any]. Could you suggest the right program, eligibility page, or contact route?",
+        ),
+        (
+            "Correction or update request",
+            "Use when your own listing is wrong or a public guide entry has changed.",
+            "Make the correction easy to check by providing the exact page and replacement text.",
+            "Hello [name/team], I noticed [page/listing] may be outdated. Current public details should be: [name], [website], [phone], [address/service area], [short description], [contact]. The source page I am using is [link]. Please let me know if another update path is preferred.",
+        ),
+        (
+            "Follow-up and thank-you",
+            "Use after a submission, referral, meeting, or shared post.",
+            "Keep it short. Thank them, name the action, and make the next step optional.",
+            "Thank you for [sharing/listing/referring/responding]. I appreciate it. If helpful, here is the final public link or blurb: [link/text]. I will keep future updates brief and only send them when they fit your audience.",
+        ),
+        (
+            "Please update or remove me",
+            "Use when honoring list preferences or correcting accidental outreach.",
+            "This is part of being a decent regional neighbor. Make the off-ramp clean.",
+            "Thanks for letting me know. I have updated this contact/listing preference for [organization/name]. You should not receive this type of outreach again unless you ask to be added back or there is a direct correction request.",
+        ),
     ]
     items = "\n".join(
         f"""
         <article class="template-card">
           <h3>{html_escape(title)}</h3>
+          <p>{html_escape(purpose)}</p>
+          <p class="template-meta"><strong>Personalize:</strong> {html_escape(personalize)}</p>
           <pre>{html_escape(body)}</pre>
           <button class="copy-button" type="button">Copy</button>
         </article>
         """
-        for title, body in templates
+        for title, purpose, personalize, body in templates
+    )
+    tools = "\n".join(
+        f"""
+        <article class="tool-card">
+          <h3><a href="{html_escape(tool['url'])}" target="_blank" rel="noreferrer">{html_escape(tool['name'])}</a></h3>
+          <p>{html_escape(tool['use'])}</p>
+          <p class="source-note">{html_escape(tool['note'])}</p>
+        </article>
+        """
+        for tool in PROMOTION_TOOLS
     )
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">Templates</p>
-      <h1>Make the next action easy to send.</h1>
-      <p class="lede">Use these as plain starting copy for a business listing, event, grant path, nonprofit referral, gallery show, class, market, or mentorship program.</p>
+      <h1>Send clearer messages without sounding mass-produced.</h1>
+      <p class="lede">Use these as plain starting copy for listings, events, grants, nonprofit referrals, gallery shows, classes, markets, services, mentorships, and partner asks. The goal is not volume. The goal is the right message to the right channel.</p>
     </section>
     <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Before sending</p>
+        <h2>Personalize the first sentence and keep the ask small.</h2>
+      </div>
+      <div class="template-rules">
+        <article class="step-card"><span>1</span><h3>Segment the list</h3><p>Separate visitors, artists, businesses, nonprofits, public offices, media, funders, and partners before writing.</p></article>
+        <article class="step-card"><span>2</span><h3>Name the fit</h3><p>Say why that channel or person is relevant. County, audience, topic, venue, or program fit is enough.</p></article>
+        <article class="step-card"><span>3</span><h3>Use one ask</h3><p>Ask for one action: list it, share it, refer it, quote rates, correct it, or point you to the right form.</p></article>
+        <article class="step-card"><span>4</span><h3>Leave an easy no</h3><p>Do not imply obligation. Offer to stop, remove, correct, or use a different channel.</p></article>
+      </div>
+    </section>
+    <section class="section tinted">
+      <div class="section-heading">
+        <p class="eyebrow">Copy-ready starts</p>
+        <h2>Adapt the message to the route.</h2>
+      </div>
       <div class="template-grid">{items}</div>
+    </section>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Useful free or freemium tools</p>
+        <h2>Build the packet, list, form, or flyer without adding unnecessary software.</h2>
+        <p class="section-note">Check current free-plan limits before relying on any tool for a public campaign or mailing list.</p>
+      </div>
+      <div class="tool-grid">{tools}</div>
     </section>
     {next_action_block(1, [
         ("Find places to send outreach packets", "amplifiers/"),
-        ("Search directories and local leads", "network/"),
+        ("Search directories and local entries", "network/"),
         ("Submit a correction or new channel", "submit/"),
         ("Plan the outreach cycle first", "plan/"),
     ])}
@@ -3396,11 +5078,11 @@ def templates_page() -> str:
 
 
 def submit_page() -> str:
-    content = """
+    content = f"""
     <section class="page-hero">
       <p class="eyebrow">Submit a Listing</p>
       <h1>Send enough information for a useful review.</h1>
-      <p class="lede">Use this page to suggest a new listing, correct an existing entry, submit an event path, or recommend a directory, calendar, newsletter, visitor guide, or media channel. A submission is a review request, not automatic publication.</p>
+      <p class="lede">Use this page to suggest a new listing, correct an existing entry, submit an event path, or recommend a directory, calendar, newsletter, visitor guide, funding source, arts listing, or media channel.</p>
     </section>
     <section class="section">
       <div class="section-heading">
@@ -3410,17 +5092,17 @@ def submit_page() -> str:
       <div class="steps-grid">
         <article class="step-card"><span>1</span><h3>Name the listing</h3><p>Use the public name of the business, organization, program, service, gallery, event, venue, or resource.</p></article>
         <article class="step-card"><span>2</span><h3>Pick the section</h3><p>Choose the county page, network directory, appendix, amplifier channel list, posting map, or templates/resources area.</p></article>
-        <article class="step-card"><span>3</span><h3>Add proof</h3><p>Include a website, form, social page, public directory link, flyer, official page, or contact route that can be checked.</p></article>
-        <article class="step-card"><span>4</span><h3>State the use</h3><p>Say whether readers should list, post, contact, visit, register, ask about advertising, verify public information, or request a correction.</p></article>
+        <article class="step-card"><span>3</span><h3>Add the public link</h3><p>Include a website, form, social page, public directory link, flyer, official page, or contact route that can be checked.</p></article>
+        <article class="step-card"><span>4</span><h3>State the use</h3><p>Say whether readers should list, post, contact, visit, register, ask about advertising, check public information, or request a correction.</p></article>
       </div>
     </section>
     <section class="section tinted" id="submission-form">
       <div class="section-heading">
         <p class="eyebrow">Submission form</p>
         <h2>Listing, correction, channel, or event update.</h2>
-        <p class="section-note">Use this form to send details for review. Replace the placeholder contact details before publishing if a real intake inbox is available.</p>
+        <p class="section-note">Send the clearest public link you have. A person should still review public claims, contact details, rates, eligibility, and civic guidance before publication.</p>
       </div>
-      <form class="submission-form" name="listing-submission" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#submission-received">
+      <form class="submission-form" name="listing-submission" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-submit-form action="/submit/">
         <input type="hidden" name="form-name" value="listing-submission">
         <p class="hidden-field"><label>Do not fill this out: <input name="bot-field"></label></p>
         <div class="form-grid">
@@ -3433,6 +5115,7 @@ def submit_page() -> str:
               <option>Amplifier channel or media resource</option>
               <option>Creative business, gallery, or venue</option>
               <option>Nonprofit, service, program, or mentorship</option>
+              <option>Funding, grant, stipend, scholarship, or training source</option>
               <option>Remove or flag an outdated listing</option>
             </select>
           </label>
@@ -3445,6 +5128,8 @@ def submit_page() -> str:
               <option>Colfax County page</option>
               <option>Las Animas County page</option>
               <option>Huerfano County page</option>
+              <option>Funding page</option>
+              <option>Arts & Culture page</option>
               <option>Appendix contact table</option>
               <option>Templates or planning resources</option>
             </select>
@@ -3468,8 +5153,8 @@ def submit_page() -> str:
           <label>Category
             <input name="category" type="text" placeholder="Business, nonprofit, arts, event, tourism, funding, media, service...">
           </label>
-          <label>Website or public source link
-            <input name="source_url" type="url" placeholder="https://example.org/listing-or-source">
+          <label>Website or public page link
+            <input name="source_url" type="url" placeholder="https://example.org/listing-or-page">
           </label>
           <label>Contact email
             <input name="contact_email" type="email" placeholder="contact@example.org">
@@ -3485,10 +5170,10 @@ def submit_page() -> str:
           <textarea name="short_description" rows="4" required placeholder="What should a reader know in 1-3 plain sentences?"></textarea>
         </label>
         <label>Reader action
-          <textarea name="reader_action" rows="3" placeholder="Should someone visit, register, call, submit an event, ask about advertising, verify a listing, or contact a partner?"></textarea>
+          <textarea name="reader_action" rows="3" placeholder="Should someone visit, register, call, submit an event, ask about advertising, check a listing, or contact a partner?"></textarea>
         </label>
         <label>Update notes
-          <textarea name="update_notes" rows="4" placeholder="What source should be checked? What is outdated, missing, or needs confirmation?"></textarea>
+          <textarea name="update_notes" rows="4" placeholder="What page should be checked? What is outdated, missing, or needs confirmation?"></textarea>
         </label>
         <div class="form-grid">
           <label>Your name
@@ -3498,40 +5183,50 @@ def submit_page() -> str:
             <input name="submitter_email" type="email" placeholder="you@example.org">
           </label>
         </div>
-        <button class="button button-primary" type="submit" data-analytics="submit_correction_click">Submit listing for review</button>
+        <button class="button button-primary" type="submit" data-submit-button data-analytics="submit_correction_click">Submit listing for review</button>
+        <div class="submit-success-card" data-submit-success hidden aria-live="polite" tabindex="-1">
+          <div class="submit-sparkles" aria-hidden="true">
+            <span class="sparkle sparkle-one"></span>
+            <span class="sparkle sparkle-two"></span>
+            <span class="sparkle sparkle-three"></span>
+          </div>
+          <p class="eyebrow">Received</p>
+          <h3>Absurdly grateful. Truly.</h3>
+          <p><strong data-submitted-name>This update</strong> is now packaged for review. Thank you for helping make the guide more useful for someone who is trying to get found, get help, or get a local thing off the ground.</p>
+          <p class="source-note">Next step: the public link and contact details should be checked before the listing changes on the site.</p>
+        </div>
       </form>
     </section>
     <section class="section" id="submission-received">
       <div class="section-heading">
-        <p class="eyebrow">Placeholder contact</p>
-        <h2>Manual intake path until final contacts are confirmed.</h2>
+        <p class="eyebrow">What happens next</p>
+        <h2>Good updates include a source someone can open.</h2>
       </div>
       <div class="submit-card">
         <div>
-          <h3>Email</h3>
-          <p>updates@statelineguide.example</p>
+          <h3>Review the page</h3>
+          <p>The public page, form, listing, social profile, flyer, or contact route should be checked before publication.</p>
         </div>
         <div>
-          <h3>Phone</h3>
-          <p>(575) 000-0000</p>
+          <h3>Update the right section</h3>
+          <p>Directory rows, calendars, funding sources, arts listings, appendix contacts, and templates can all be corrected from the same submission path.</p>
         </div>
         <div>
-          <h3>Mail</h3>
-          <p>000 Main Street<br>Raton, NM 87740</p>
+          <h3>Keep it plain</h3>
+          <p>The best public listing tells readers what the entity is, where it serves, how to contact it, and what action makes sense.</p>
         </div>
       </div>
-      <p class="section-note">Replace these placeholders before public launch if submissions should go to a real inbox, department, partner, or shared review queue.</p>
     </section>
     {next_action_block(1, [
         ("Search the current directory before submitting", "network/"),
         ("Open the public contact appendix", "appendix/"),
-        ("Find amplifier channels to verify", "amplifiers/"),
-        ("Read the creation process and source method", "about/"),
+        ("Find amplifier channels to check", "amplifiers/"),
+        ("Read the creation process and page method", "about/"),
     ])}
     """
     return page_shell(
         "Submit a Correction or Suggest a Regional Channel | Stateline Guide",
-        "Send source-backed corrections, listing updates, new channel suggestions, or changed contact paths for review.",
+        "Send public-page corrections, listing updates, new channel suggestions, or changed contact paths for review.",
         "submit",
         content,
         depth=1,
@@ -3545,7 +5240,7 @@ def about_page(summary: dict) -> str:
           <td><a href="{html_escape(item['url'])}" target="_blank" rel="noreferrer">{html_escape(item['title'])}</a></td>
           <td>{html_escape(item['county'])}</td>
           <td>{html_escape(item['kind'])}</td>
-          <td>{html_escape(item['best_for'])}</td>
+          <td>{html_escape(public_text_value(item['best_for']))}</td>
         </tr>
         """
         for item in DIRECTORY_SOURCES
@@ -3565,7 +5260,7 @@ def about_page(summary: dict) -> str:
     <section class="page-hero">
       <p class="eyebrow">How the guide works</p>
       <h1>A routing layer for regional visibility.</h1>
-      <p class="lede">Use this guide when you need to know which existing channel fits the job: getting listed, posting an event, asking about advertising, reaching visitors, finding partners, or verifying public information.</p>
+      <p class="lede">Use this guide when you need to know which existing channel fits the job: getting listed, posting an event, asking about advertising, reaching visitors, finding partners, or checking public information.</p>
     </section>
     <section class="section">
       <div class="section-heading">
@@ -3584,9 +5279,9 @@ def about_page(summary: dict) -> str:
         <h2>Keep the guide useful by checking the details that change.</h2>
       </div>
       <div class="steps-grid">
-        <article class="step-card"><span>1</span><h3>Open the source</h3><p>Use the linked page, form, directory, or public contact route before spending time or money.</p></article>
+        <article class="step-card"><span>1</span><h3>Open the page</h3><p>Use the linked page, form, directory, or public contact route before spending time or money.</p></article>
         <article class="step-card"><span>2</span><h3>Confirm the current rule</h3><p>Ask about rates, deadlines, acceptance, eligibility, and the preferred submission format when those details matter.</p></article>
-        <article class="step-card"><span>3</span><h3>Submit changes</h3><p>If a link, listing, office, or route has changed, send the correction with the source that should be checked.</p></article>
+        <article class="step-card"><span>3</span><h3>Submit changes</h3><p>If a link, listing, office, or route has changed, send the correction with the page that should be checked.</p></article>
         <article class="step-card"><span>4</span><h3>Review before publication</h3><p>New public claims and civic/legal guidance should be approved by a human reviewer before they go live.</p></article>
       </div>
     </section>
@@ -3600,34 +5295,34 @@ def about_page(summary: dict) -> str:
         <article class="step-card"><span>2</span><h3>Start with official directories</h3><p>Collect city, county, chamber, tourism, creative-district, library, newspaper, nonprofit, and economic-development pages before making a new directory.</p></article>
         <article class="step-card"><span>3</span><h3>Add self-submission paths</h3><p>Look for add-a-business, submit-an-event, update-a-resource, newsletter, visitor-guide, public-notice, and contact-us paths. Record what users can reasonably ask for.</p></article>
         <article class="step-card"><span>4</span><h3>Keep a review trail</h3><p>Keep notes about where each route came from, but write the public page around what a user can do next.</p></article>
-        <article class="step-card"><span>5</span><h3>Write action copy</h3><p>Explain what the source is for, who should use it, what to prepare, and what must be verified first.</p></article>
+        <article class="step-card"><span>5</span><h3>Write action copy</h3><p>Explain what the page or channel is for, who should use it, what to prepare, and what should be checked first.</p></article>
         <article class="step-card"><span>6</span><h3>Keep updates open</h3><p>Give users a correction path, a submission path, and a review date so the guide can keep improving.</p></article>
       </div>
     </section>
     <section class="section tinted">
       <div class="section-heading">
         <p class="eyebrow">Before relying on a listing</p>
-        <h2>Verify the details that can change.</h2>
+        <h2>Check the details that can change.</h2>
       </div>
       <ul class="check-list">
         <li>Confirm directory and submission links before sending people to them.</li>
-        <li>Verify business phone numbers, addresses, eligibility, and update processes before printing or promising anything.</li>
+        <li>Check business phone numbers, addresses, eligibility, and update processes before printing or promising anything.</li>
         <li>Ask chambers, city offices, newspapers, creative districts, and economic-development organizations whether they want wording changed.</li>
         <li>Do not assume free placement, ad availability, endorsement, deadlines, audience size, or acceptance unless the source confirms it.</li>
       </ul>
     </section>
     <section class="section">
       <div class="section-heading">
-        <p class="eyebrow">Source index</p>
+        <p class="eyebrow">Page index</p>
         <h2>Public directories and resource hubs used by the guide.</h2>
       </div>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Source</th><th>County</th><th>Type</th><th>Best for</th></tr></thead>
+          <thead><tr><th>Page or organization</th><th>County</th><th>Type</th><th>Best for</th></tr></thead>
           <tbody>{source_rows}</tbody>
         </table>
       </div>
-      <p class="section-note">Downloadable data files are available for users who need a spreadsheet or source list.</p>
+      <p class="section-note">Downloadable data files are available for users who need a spreadsheet or page list.</p>
     </section>
     <section class="section tinted">
       <div class="section-heading">
@@ -3642,15 +5337,15 @@ def about_page(summary: dict) -> str:
       </div>
     </section>
     {next_action_block(1, [
-        ("Search public directories and local leads", "network/"),
+        ("Search public directories and local entries", "network/"),
         ("Find event calendars, newsletters, visitor guides, and directory channels", "amplifiers/"),
-        ("Submit a correction with a public source link", "submit/"),
+        ("Submit a correction with a public page link", "submit/"),
         ("Open the public contact appendix", "appendix/"),
     ])}
     """
     return page_shell(
         "How This Manual Works | Stateline Guide",
-        "Purpose, update guidance, and source-routing logic for the tri-county regional marketing guide.",
+        "Purpose, update guidance, and page-routing logic for the tri-county regional marketing guide.",
         "about",
         content,
         depth=1,
@@ -3664,6 +5359,7 @@ def match_terms(item: dict, terms: list[str]) -> bool:
 
 
 def task_page(definition: dict, rows: list[dict]) -> str:
+    meta = task_category_meta(definition["active"])
     source_matches = [item for item in DIRECTORY_SOURCES if match_terms(item, definition["source_terms"])]
     if not source_matches:
         source_matches = DIRECTORY_SOURCES[:8]
@@ -3676,44 +5372,41 @@ def task_page(definition: dict, rows: list[dict]) -> str:
         f"""
         <li>
           <strong>{html_escape(row.get('resource_name'))}</strong>
-          <span>{html_escape(row.get('town') or row.get('county') or 'Regional')} - {html_escape(row.get('resource_type') or 'Resource')}</span>
+          <span>{html_escape(row.get('town') or row.get('county') or 'Regional')} - {html_escape(row.get('public_listing_type') or row.get('resource_type') or 'Resource')}</span>
         </li>
         """
         for row in row_matches
     )
     if not lead_items:
-        lead_items = "<li><strong>Start with the source cards above.</strong><span>No close inventory lead matched this task yet; submit one when a better local route is confirmed.</span></li>"
-    route_rows = [
-        ("Tourism or event calendar", "The item is public and visitor-facing", "Name, date, time, location, image, short description", "Confirm eligibility and lead time"),
-        ("City or county source", "The item involves official notices, permits, public meetings, or civic timing", "Source link, official contact, legal name if needed", "Confirm rules with the office owner"),
-        ("Chamber or business directory", "The item is a business, member update, or partner ask", "Business name, category, website, address or service area", "Confirm listing or member requirements"),
-        ("Media or newsletter", "The item has public interest, event relevance, or community benefit", "50-word blurb, image, contact, deadline", "Ask about editorial versus paid placement"),
-        ("Venue or partner channel", "The item fits an existing audience or lineup", "Flyer, description, target audience, public action", "Ask before sending promotional assets"),
-    ]
-    route_table = "\n".join(
-        f"<tr><td>{html_escape(kind)}</td><td>{html_escape(use)}</td><td>{html_escape(prepare)}</td><td>{html_escape(note)}</td></tr>"
-        for kind, use, prepare, note in route_rows
+        lead_items = "<li><strong>Start with the shortcut cards above.</strong><span>No close inventory entry matched this task yet; submit one when a better local route is confirmed.</span></li>"
+    route_cards = "\n".join(
+        f"""
+        <article class="route-type-card {html_escape(card['class'])}">
+          <span class="category-badge {html_escape(card['class'])}">{html_escape(card['label'])}</span>
+          <h3>{html_escape(card['use'])}</h3>
+          <p><strong>Prepare:</strong> {html_escape(card['prepare'])}</p>
+          <p><strong>Check:</strong> {html_escape(card['check'])}</p>
+        </article>
+        """
+        for card in ROUTE_TYPE_CARDS
     )
     next_links = definition["primary_links"] + [
-        ("Submit a correction with a public source link", "submit/"),
+        ("Submit a correction with a public page link", "submit/"),
     ]
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">{html_escape(definition['eyebrow'])}</p>
+      <span class="category-badge {html_escape(meta['class'])}">{html_escape(meta['label'])}</span>
       <h1>{html_escape(definition['h1'])}</h1>
       <p class="lede">{html_escape(definition['intro'])}</p>
+      <p class="section-note">{html_escape(meta['summary'])} {html_escape(meta['next'])}</p>
     </section>
     <section class="section">
       <div class="section-heading">
-        <p class="eyebrow">Best first routes</p>
-        <h2>Choose the route by what the item needs to do.</h2>
+        <p class="eyebrow">Route colors</p>
+        <h2>Choose the first path by what the item needs to do.</h2>
       </div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Route type</th><th>Use first when</th><th>What to prepare</th><th>Verification note</th></tr></thead>
-          <tbody>{route_table}</tbody>
-        </table>
-      </div>
+      <div class="route-type-grid">{route_cards}</div>
       <p class="section-note">Open the source before spending money, printing materials, or promising placement.</p>
     </section>
     <section class="section tinted">
@@ -3725,24 +5418,22 @@ def task_page(definition: dict, rows: list[dict]) -> str:
     </section>
     <section class="section">
       <div class="section-heading">
-        <p class="eyebrow">Inventory leads to verify</p>
-        <h2>Use these as starting points, not final proof.</h2>
-        <p class="section-note">These rows come from the working inventory. They help users find likely routes quickly, but details should be checked at the source before action.</p>
+        <p class="eyebrow">Local inventory entries</p>
+        <h2>Use these as starting points for the next contact or link.</h2>
+        <p class="section-note">These rows come from the working inventory. They help users find likely routes quickly, but details should be checked on the linked page or contact path before action.</p>
       </div>
       <ul class="lead-list">{lead_items}</ul>
     </section>
     <section class="section tinted">
       <div class="section-heading">
-        <p class="eyebrow">Use this sequence</p>
-        <h2>Move from fit to proof.</h2>
+        <p class="eyebrow">Short sequence</p>
+        <h2>Move from fit to next action.</h2>
       </div>
       <div class="steps-grid">
-        <article class="step-card"><span>1</span><h3>Classify the item</h3><p>Decide whether it is public, private, official, paid, nonprofit, visitor-facing, or partner-facing.</p></article>
-        <article class="step-card"><span>2</span><h3>Prepare one packet</h3><p>Make a short blurb, contact route, date or service area, image, link, and plain public action.</p></article>
-        <article class="step-card"><span>3</span><h3>Use the owner path</h3><p>Submit through the source owner's preferred form or contact path before sending broad requests.</p></article>
-        <article class="step-card"><span>4</span><h3>Ask what is unclear</h3><p>Confirm deadlines, rates, acceptance, membership rules, editorial review, and image requirements when the page does not say.</p></article>
-        <article class="step-card"><span>5</span><h3>Save proof</h3><p>Record the submission, response, published link, or reason it did not fit.</p></article>
-        <article class="step-card"><span>6</span><h3>Update the guide</h3><p>Submit a correction if a source changed or a better route is now available.</p></article>
+        <article class="step-card"><span>1</span><h3>Match the route</h3><p>Pick the category that fits: event, promotion, business, nonprofit, arts, or regional.</p></article>
+        <article class="step-card"><span>2</span><h3>Prepare one packet</h3><p>Make the blurb, image, link, contact, location or service area, and public action easy to copy.</p></article>
+        <article class="step-card"><span>3</span><h3>Use the owner path</h3><p>Submit through the page owner's form or contact route, then ask only about what is unclear.</p></article>
+        <article class="step-card"><span>4</span><h3>Record the result</h3><p>Save the response, published link, deadline, rate, or reason the route was not a fit.</p></article>
       </div>
     </section>
     {next_action_block(1, next_links)}
@@ -3779,7 +5470,7 @@ def write_static_assets() -> None:
       --focus-ring: #d8bb68;
       --route: #2f6780;
       --route-soft: rgba(47,103,128,0.42);
-      --verified: #4d8a5c;
+      --status-ok: #4d8a5c;
       --linked: #4e7f9c;
       --field: #9a7a2a;
       --manual: #695674;
@@ -3809,7 +5500,7 @@ def write_static_assets() -> None:
       pointer-events: none;
       background: #000;
       opacity: 1;
-      animation: introReveal 10000ms cubic-bezier(.22,.72,.18,1) forwards;
+      animation: introReveal 2800ms cubic-bezier(.22,.72,.18,1) forwards;
     }
     .intro-curtain::before {
       content: "";
@@ -3820,7 +5511,7 @@ def write_static_assets() -> None:
         linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0.94));
       opacity: 0;
       transform: scale(0.92);
-      animation: introGlow 10000ms cubic-bezier(.22,.72,.18,1) forwards;
+      animation: introGlow 2800ms cubic-bezier(.22,.72,.18,1) forwards;
     }
     .intro-curtain[data-intro-state="skipped"],
     .intro-curtain[data-intro-state="complete"] {
@@ -3828,16 +5519,16 @@ def write_static_assets() -> None:
       animation: none;
     }
     @keyframes introReveal {
-      0%, 30% { background: #000; opacity: 1; }
-      70% { background: #fff; opacity: 1; }
-      82% { background: #fff; opacity: 0.92; }
+      0%, 22% { background: #000; opacity: 1; }
+      62% { background: #fff; opacity: 1; }
+      78% { background: #fff; opacity: 0.82; }
       100% { background: #fff; opacity: 0; visibility: hidden; }
     }
     @keyframes introGlow {
-      0%, 30% { opacity: 0; transform: scale(0.82); }
-      48% { opacity: 0.42; transform: scale(0.96); }
-      70% { opacity: 1; transform: scale(1.08); }
-      100% { opacity: 0.68; transform: scale(1.18); }
+      0%, 22% { opacity: 0; transform: scale(0.84); }
+      44% { opacity: 0.44; transform: scale(0.98); }
+      66% { opacity: 0.94; transform: scale(1.08); }
+      100% { opacity: 0.2; transform: scale(1.16); }
     }
     .site-header {
       position: sticky;
@@ -4044,7 +5735,7 @@ def write_static_assets() -> None:
     .steps-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
     .template-grid { grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
     .stats-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
-    .path-card, .source-card, .mini-card, .step-card, .template-card, .tool-card, .resource-item, .stat, figure {
+    .path-card, .source-card, .mini-card, .step-card, .template-card, .tool-card, .resource-item, .lead-card, .stat, figure {
       background: rgba(255,255,255,0.86);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -4055,8 +5746,35 @@ def write_static_assets() -> None:
     .path-card span, .step-card span { color: var(--clay); font-weight: 900; }
     .path-card p { color: var(--ink-soft); }
     .path-card strong { margin-top: auto; }
-    .source-card, .mini-card, .step-card, .template-card, .tool-card, .resource-item { padding: 18px; }
-    .path-card, .mini-card, .step-card, .template-card, .tool-card, .button, .chip, .persona-route {
+    .source-card, .mini-card, .step-card, .template-card, .tool-card, .resource-item, .lead-card { padding: 18px; }
+    .current-leads-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 14px;
+    }
+    .lead-card {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+    }
+    .lead-card .action-line {
+      margin-top: auto;
+    }
+    .task-group-card strong {
+      display: block;
+      margin-top: 14px;
+    }
+    .grant-map-figure {
+      margin-top: 20px;
+      padding: 18px;
+      background: rgba(255,255,255,0.78);
+    }
+    .grant-map-image {
+      display: block;
+      width: 100%;
+      border-radius: 6px;
+    }
+    .path-card, .mini-card, .step-card, .template-card, .tool-card, .lead-card, .route-type-card, .button, .chip, .persona-route {
       transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
     }
     .path-card:hover,
@@ -4068,7 +5786,11 @@ def write_static_assets() -> None:
     .template-card:hover,
     .template-card:focus-within,
     .tool-card:hover,
-    .tool-card:focus-within {
+    .tool-card:focus-within,
+    .lead-card:hover,
+    .lead-card:focus-within,
+    .route-type-card:hover,
+    .route-type-card:focus-within {
       transform: translateY(-1px);
       box-shadow: 0 12px 24px rgba(23,48,71,0.08);
       border-color: rgba(47,103,128,0.18);
@@ -4107,17 +5829,194 @@ def write_static_assets() -> None:
       border-color: rgba(47,103,128,0.22);
       box-shadow: 0 12px 24px rgba(23,48,71,0.08);
     }
-    .submit-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,0.84); box-shadow: var(--shadow); }
+    .submit-card { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: center; padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,0.84); box-shadow: var(--shadow); }
     .submit-card p { margin-bottom: 0; color: var(--ink-soft); }
     .submission-form { display: grid; gap: 18px; max-width: 1040px; }
     .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
     .submission-form input, .submission-form select, .submission-form textarea { width: 100%; margin-top: 8px; padding: 11px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,0.94); color: var(--ink); font: inherit; }
     .submission-form textarea { resize: vertical; }
     .hidden-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .submit-success-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      gap: 8px;
+      margin-top: 6px;
+      padding: 18px;
+      border: 1px solid rgba(216,187,104,0.45);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(255,255,255,0.94), rgba(220,238,232,0.84));
+      box-shadow: 0 18px 42px rgba(23,48,71,0.12);
+      animation: gratitude-pop 560ms ease both;
+    }
+    .submit-success-card[hidden] { display: none; }
+    .submit-success-card h3 { margin: 0; font-size: clamp(1.35rem, 3vw, 2.1rem); }
+    .submit-success-card p { margin: 0; }
+    .submit-sparkles { position: absolute; inset: 0; pointer-events: none; }
+    .sparkle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 8px rgba(216,187,104,0.16);
+      animation: sparkle-rise 1400ms ease-out infinite;
+    }
+    .sparkle-one { left: 8%; bottom: 18%; animation-delay: 0ms; }
+    .sparkle-two { left: 82%; bottom: 24%; background: var(--sage); animation-delay: 240ms; }
+    .sparkle-three { left: 52%; bottom: 12%; background: var(--clay); animation-delay: 480ms; }
+    @keyframes gratitude-pop {
+      from { opacity: 0; transform: translateY(8px) scale(0.985); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes sparkle-rise {
+      0% { opacity: 0; transform: translateY(16px) scale(0.7); }
+      25% { opacity: 1; }
+      100% { opacity: 0; transform: translateY(-46px) scale(1.3); }
+    }
     .source-card__meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
     .source-card__meta span, .badge { background: rgba(216,187,104,0.24); border: 1px solid rgba(216,187,104,0.36); border-radius: 999px; padding: 3px 8px; font-size: 0.74rem; font-weight: 800; }
     .source-card p, .mini-card p, .step-card p, .resource-item p { color: var(--ink-soft); }
+    .resource-best {
+      margin-top: 2px;
+      padding: 8px 10px;
+      border-radius: var(--radius);
+      background: rgba(220,238,232,0.48);
+      color: rgba(23,48,71,0.78) !important;
+      font-size: 0.88rem;
+    }
+    .resource-best strong { color: var(--ink); }
+    .resource-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .listing-indicators {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 8px 0 2px;
+    }
+    .listing-marker {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid rgba(92,138,99,0.38);
+      border-radius: 999px;
+      background: rgba(220,238,232,0.62);
+      color: #173047;
+      padding: 5px 9px;
+      font-size: 0.76rem;
+      font-weight: 850;
+      line-height: 1.15;
+    }
+    .listing-marker::before {
+      content: "";
+      display: inline-block;
+      flex: 0 0 auto;
+    }
+    .listing-marker--ad {
+      border-color: rgba(179,107,79,0.38);
+      background: rgba(199,127,97,0.16);
+    }
+    .listing-marker--ad::before {
+      width: 9px;
+      height: 9px;
+      border-radius: 50% 50% 50% 0;
+      background: #8f4f3a;
+      transform: rotate(-45deg);
+      box-shadow: 0 0 0 2px rgba(143,79,58,0.13);
+    }
+    .listing-marker--physical::before {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      border: 2px solid #2f6780;
+      background: rgba(255,255,255,0.7);
+      box-shadow: 3px 3px 0 rgba(47,103,128,0.22);
+    }
+    .marker-legend {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 10px;
+      margin: 14px 0 10px;
+      color: var(--ink-soft);
+      font-size: 0.91rem;
+    }
+    .marker-legend .listing-marker {
+      margin-right: 2px;
+    }
+    .resource-contact-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 6px 10px;
+      border: 1px solid rgba(23,48,71,0.13);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.74);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 850;
+    }
+    .resource-contact-link:hover,
+    .resource-contact-link:focus-visible {
+      background: rgba(220,238,232,0.68);
+      border-color: rgba(47,103,128,0.24);
+    }
+    .source-group-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .source-link-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+    .source-sublink {
+      display: grid;
+      gap: 2px;
+      padding: 9px 10px;
+      border: 1px solid rgba(23,48,71,0.10);
+      border-radius: 7px;
+      background: rgba(246,248,244,0.72);
+      text-decoration: none;
+    }
+    .source-sublink span {
+      color: var(--plum);
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .source-sublink strong {
+      color: var(--ink);
+      font-size: 0.9rem;
+      line-height: 1.25;
+    }
+    .source-sublink:hover,
+    .source-sublink:focus-visible {
+      border-color: rgba(47,103,128,0.24);
+      background: rgba(255,255,255,0.94);
+    }
     .source-note { font-size: 0.9rem; color: rgba(23,48,71,0.68) !important; }
+    .source-refresh-details {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.72);
+      overflow: hidden;
+    }
+    .source-refresh-details summary {
+      cursor: pointer;
+      padding: 12px 14px;
+      font-weight: 900;
+    }
+    .source-refresh-details .table-wrap { border: 0; border-top: 1px solid var(--line); border-radius: 0; }
     .action-line { font-weight: 700; color: var(--ink) !important; }
     .stat { padding: 18px; display: grid; gap: 4px; }
     .stat strong { font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1; }
@@ -4127,6 +6026,58 @@ def write_static_assets() -> None:
     .check-list { padding-left: 1.1rem; color: var(--ink-soft); }
     .check-list li { margin: 8px 0; }
     .tool-panel { display: grid; gap: 14px; margin-bottom: 20px; }
+    .template-rules,
+    .route-type-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+      gap: 14px;
+    }
+    .template-meta {
+      padding: 9px 10px;
+      border-radius: var(--radius);
+      background: rgba(220,238,232,0.52);
+      color: rgba(23,48,71,0.78);
+      font-size: 0.9rem;
+    }
+    .category-badge {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(23,48,71,0.12);
+      font-size: 0.74rem;
+      font-weight: 950;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .route-type-card {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-left-width: 8px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.82);
+      box-shadow: 0 12px 28px rgba(23,48,71,0.06);
+    }
+    .route-type-card h3 { margin: 0; font-size: 1.02rem; }
+    .route-type-card p { margin: 0; color: var(--ink-soft); }
+    .cat-events { --cat: #3b7f8f; border-color: rgba(59,127,143,0.34); background: rgba(183,219,228,0.38); }
+    .cat-promotion { --cat: #b36b4f; border-color: rgba(179,107,79,0.35); background: rgba(199,127,97,0.18); }
+    .cat-business { --cat: #5c8a63; border-color: rgba(92,138,99,0.36); background: rgba(139,170,124,0.22); }
+    .cat-nonprofit { --cat: #6f5f91; border-color: rgba(111,95,145,0.34); background: rgba(105,86,116,0.15); }
+    .cat-arts { --cat: #a58339; border-color: rgba(165,131,57,0.38); background: rgba(216,187,104,0.22); }
+    .cat-regional { --cat: #2f6780; border-color: rgba(47,103,128,0.34); background: rgba(220,238,232,0.52); }
+    .cat-support { --cat: #173047; border-color: rgba(23,48,71,0.22); background: rgba(23,48,71,0.06); }
+    .route-type-card.cat-events,
+    .route-type-card.cat-promotion,
+    .route-type-card.cat-business,
+    .route-type-card.cat-nonprofit,
+    .route-type-card.cat-arts,
+    .route-type-card.cat-regional,
+    .route-type-card.cat-support { border-left-color: var(--cat); }
     label { display: block; font-weight: 800; margin-bottom: 8px; }
     .search-input { width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius); font: inherit; background: rgba(255,255,255,0.9); }
     .advanced-filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
@@ -4152,6 +6103,8 @@ def write_static_assets() -> None:
     table { width: 100%; border-collapse: collapse; min-width: 720px; }
     th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
     th { background: rgba(220,238,232,0.7); }
+    .physical-posting-table table { min-width: 1040px; }
+    .table-subtle { display: block; margin-top: 4px; color: var(--ink-soft); font-size: 0.9rem; }
     .appendix-table table { min-width: 1240px; }
     .noscript { margin: 20px clamp(18px, 6vw, 86px) 0; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(216,187,104,0.2); font-weight: 700; }
     .sr-only {
@@ -4178,7 +6131,7 @@ def write_static_assets() -> None:
       width: min(370px, calc(100vw - 32px));
       pointer-events: none;
     }
-    .back-to-top, .music-toggle {
+    .back-to-top, .music-summary, .music-toggle {
       pointer-events: auto;
       min-height: 34px;
       text-decoration: none;
@@ -4193,27 +6146,59 @@ def write_static_assets() -> None:
       box-shadow: 0 8px 18px rgba(23,48,71,0.08);
       transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
     }
+    .back-to-top {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(4px);
+      pointer-events: none;
+      transition: opacity 160ms ease, visibility 160ms ease, transform 160ms ease, background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+    body[data-scroll-state="scrolled"] .back-to-top {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
     .back-to-top:hover,
     .back-to-top:focus-visible,
+    .music-summary:hover,
+    .music-summary:focus-visible,
     .music-toggle:hover,
     .music-toggle:focus-visible {
       background: rgba(16,40,61,0.82);
       border-color: rgba(255,255,255,0.34);
       box-shadow: 0 10px 22px rgba(23,48,71,0.14);
     }
-    .music-toggle { background: rgba(255,255,255,0.40); color: var(--ink); border-color: rgba(23,48,71,0.10); }
+    .music-summary { list-style: none; display: inline-flex; align-items: center; justify-content: space-between; gap: 10px; align-self: flex-end; min-width: 150px; cursor: pointer; }
+    .music-summary::-webkit-details-marker { display: none; }
+    .music-status {
+      border-radius: 999px;
+      padding: 2px 7px;
+      background: rgba(255,255,255,0.22);
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .music-toggle { background: rgba(255,255,255,0.56); color: var(--ink); border-color: rgba(23,48,71,0.10); }
     .music-toggle:hover, .music-toggle:focus-visible { color: #fff; }
-    .music-toggle[data-state="playing"] { background: rgba(216,187,104,0.40); color: #173047; }
+    .music-toggle[data-state="playing"] { background: rgba(216,187,104,0.56); color: #173047; }
     .music-toggle[data-state="playing"]:hover, .music-toggle[data-state="playing"]:focus-visible { background: rgba(216,187,104,0.82); color: #173047; }
     .music-bar {
       pointer-events: auto;
-      width: 100%;
+      width: auto;
+      max-width: min(320px, calc(100vw - 32px));
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+    }
+    .music-panel {
+      margin-top: 7px;
+      width: min(320px, calc(100vw - 32px));
       padding: 10px;
       border: 1px solid rgba(23,48,71,0.14);
       border-radius: 12px;
-      background: rgba(255,255,255,0.62);
-      color: var(--ink);
-      box-shadow: 0 12px 30px rgba(23,48,71,0.12);
+      background: rgba(255,255,255,0.78);
+      box-shadow: 0 14px 32px rgba(23,48,71,0.13);
       backdrop-filter: blur(18px);
     }
     .music-bar__top,
@@ -4467,13 +6452,13 @@ def write_static_assets() -> None:
       .next-action-list { grid-template-columns: 1fr; }
       .lead-list { columns: 1; }
       h1 { max-width: 12ch; }
-      .back-to-top, .music-toggle { min-height: 38px; padding: 7px 10px; font-size: 0.74rem; }
+      .back-to-top, .music-summary, .music-toggle { min-height: 38px; padding: 7px 10px; font-size: 0.74rem; }
       .corner-controls { width: min(360px, calc(100vw - 24px)); }
-      .music-bar { padding: 9px; }
+      .music-panel { padding: 9px; }
       .music-track-select { width: 140px; }
-      .directory-assistant { width: min(390px, calc(100vw - 24px)); left: 12px; bottom: 112px; }
+      .directory-assistant { width: min(390px, calc(100vw - 24px)); left: 12px; bottom: 74px; }
       .directory-assistant__toggle { min-height: 40px; padding: 8px 11px; font-size: 0.78rem; }
-      .directory-assistant__panel { left: 12px; bottom: 166px; width: min(390px, calc(100vw - 24px)); max-height: min(76vh, 580px); padding: 13px; }
+      .directory-assistant__panel { left: 12px; bottom: 128px; width: min(390px, calc(100vw - 24px)); max-height: min(76vh, 580px); padding: 13px; }
     }
     @media (max-width: 640px) {
       body { overflow-x: hidden; }
@@ -4490,20 +6475,40 @@ def write_static_assets() -> None:
       .nav-group:nth-of-type(4) .nav-menu { left: 50%; right: auto; translate: -50% 0; }
       .nav-group:nth-of-type(5) .nav-menu { right: 0; left: auto; translate: none; }
       .nav-menu a { white-space: normal; justify-content: center; }
+      .hero {
+        min-height: calc(100svh - 92px);
+        padding-bottom: 150px;
+      }
+      .hero-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        max-width: 360px;
+        margin-top: 18px;
+      }
+      .hero-actions .button {
+        min-height: 40px;
+        padding: 8px 10px;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      .hero-actions .button:nth-child(3) { grid-column: 1 / -1; }
       .page-hero-art { width: 540px; max-width: none; right: -240px; top: 42%; opacity: 0.34; }
       .corner-controls { left: 12px; right: 12px; bottom: 12px; width: auto; max-width: none; flex-direction: column; align-items: stretch; justify-content: flex-end; }
-      .back-to-top, .music-toggle { font-size: 0.74rem; min-height: 40px; padding: 7px 10px; background-color: rgba(16,40,61,0.48); max-width: none; white-space: nowrap; }
+      .back-to-top, .music-summary, .music-toggle { font-size: 0.74rem; min-height: 40px; padding: 7px 10px; background-color: rgba(16,40,61,0.48); max-width: none; white-space: nowrap; }
       .music-toggle { position: static; left: auto; right: auto; bottom: auto; }
       .back-to-top { position: static; left: auto; right: auto; bottom: auto; align-self: flex-end; }
-      .music-toggle { background-color: rgba(255,255,255,0.52); }
+      .music-summary { align-self: flex-end; min-width: 146px; }
+      .music-toggle { background-color: rgba(255,255,255,0.60); }
       .music-toggle[data-state="playing"] { background-color: rgba(216,187,104,0.52); }
-      .music-bar { width: 100%; }
+      .music-bar { width: auto; max-width: calc(100vw - 24px); align-self: flex-end; }
+      .music-panel { width: min(320px, calc(100vw - 24px)); }
       .music-bar__top { align-items: flex-start; }
       .music-track-label { flex: 1; }
       .music-track-select { width: 100%; }
       .music-bar__bottom { align-items: flex-start; gap: 6px; }
       .music-volume { width: 76px; }
-      .directory-assistant { width: calc(100vw - 24px); left: 12px; bottom: 176px; }
+      .directory-assistant { width: calc(100vw - 24px); left: 12px; bottom: 72px; }
       .directory-assistant__panel { inset: auto 12px 12px 12px; width: auto; max-width: none; max-height: calc(100vh - 24px); }
       .directory-assistant__search-row { grid-template-columns: 1fr; }
       .directory-assistant__footer .button { width: 100%; justify-content: center; }
@@ -4527,7 +6532,7 @@ def write_static_assets() -> None:
         scroll-behavior: auto !important;
         transition-duration: 0.001ms !important;
       }
-      [data-animated="true"], .intro-curtain, .hero-accent, .hero-route, .hero-node {
+      [data-animated="true"], .intro-curtain, .hero-accent, .hero-route, .hero-node, .submit-success-card, .sparkle {
         animation: none !important;
         transform: none !important;
       }
@@ -4538,6 +6543,11 @@ def write_static_assets() -> None:
 
     js = r"""
     const DATA = window.TRI_COUNTY_GUIDE_DATA || { directory_sources: [], resources: [] };
+    const GUIDE_SOUND_CHOICE_KEY = "triCountyRegionalSoundChoiceV3";
+    const GUIDE_SOUND_VOLUME_KEY = "triCountyRegionalSoundVolumeV3";
+    let guideAudioContext = null;
+    let guideSfxArmed = false;
+
     function escapeHtml(value) {
       return String(value ?? "").replace(/[&<>"']/g, char => ({
         "&": "&amp;",
@@ -4548,8 +6558,150 @@ def write_static_assets() -> None:
       })[char]);
     }
 
+    function searchableText(value) {
+      if (Array.isArray(value)) return value.map(searchableText).join(" ");
+      if (value && typeof value === "object") return Object.values(value).map(searchableText).join(" ");
+      return String(value ?? "");
+    }
+
+    function soundEffectsAllowed() {
+      return localStorage.getItem(GUIDE_SOUND_CHOICE_KEY) !== "stopped";
+    }
+
+    function guideSfxVolume() {
+      const saved = Number(localStorage.getItem(GUIDE_SOUND_VOLUME_KEY));
+      const base = Number.isFinite(saved) ? saved : 42;
+      return Math.max(0.04, Math.min(0.28, (base / 100) * 0.32));
+    }
+
+    function getGuideAudioContext() {
+      const AudioCtor = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtor) return null;
+      if (!guideAudioContext) {
+        guideAudioContext = new AudioCtor();
+      }
+      return guideAudioContext;
+    }
+
+    function playFilteredNoise(ctx, when, duration, gain, frequency = 2600) {
+      const sampleRate = ctx.sampleRate;
+      const length = Math.max(1, Math.floor(sampleRate * duration));
+      const buffer = ctx.createBuffer(1, length, sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < length; i += 1) {
+        const t = i / length;
+        const envelope = Math.pow(1 - t, 2.6);
+        data[i] = (Math.random() * 2 - 1) * envelope;
+      }
+      const source = ctx.createBufferSource();
+      const filter = ctx.createBiquadFilter();
+      const amp = ctx.createGain();
+      filter.type = "bandpass";
+      filter.frequency.setValueAtTime(frequency, when);
+      filter.Q.setValueAtTime(4.4, when);
+      amp.gain.setValueAtTime(0.0001, when);
+      amp.gain.exponentialRampToValueAtTime(gain, when + 0.012);
+      amp.gain.exponentialRampToValueAtTime(0.0001, when + duration);
+      source.buffer = buffer;
+      source.connect(filter);
+      filter.connect(amp);
+      amp.connect(ctx.destination);
+      source.start(when);
+      source.stop(when + duration + 0.02);
+    }
+
+    function playPluckedNote(ctx, when, frequency, duration, gain, pan = 0) {
+      const oscillator = ctx.createOscillator();
+      const harmonic = ctx.createOscillator();
+      const filter = ctx.createBiquadFilter();
+      const amp = ctx.createGain();
+      const stereo = ctx.createStereoPanner ? ctx.createStereoPanner() : null;
+      oscillator.type = "triangle";
+      harmonic.type = "sine";
+      oscillator.frequency.setValueAtTime(frequency, when);
+      harmonic.frequency.setValueAtTime(frequency * 2.01, when);
+      filter.type = "lowpass";
+      filter.frequency.setValueAtTime(2100, when);
+      filter.frequency.exponentialRampToValueAtTime(720, when + duration);
+      filter.Q.setValueAtTime(0.55, when);
+      amp.gain.setValueAtTime(0.0001, when);
+      amp.gain.exponentialRampToValueAtTime(gain, when + 0.018);
+      amp.gain.exponentialRampToValueAtTime(0.0001, when + duration);
+      oscillator.connect(filter);
+      harmonic.connect(filter);
+      filter.connect(amp);
+      if (stereo) {
+        stereo.pan.setValueAtTime(pan, when);
+        amp.connect(stereo);
+        stereo.connect(ctx.destination);
+      } else {
+        amp.connect(ctx.destination);
+      }
+      oscillator.start(when);
+      harmonic.start(when);
+      oscillator.stop(when + duration + 0.04);
+      harmonic.stop(when + duration + 0.04);
+    }
+
+    function scheduleGuideSfx(kind) {
+      const ctx = getGuideAudioContext();
+      if (!ctx) return false;
+      const now = ctx.currentTime + 0.018;
+      const volume = guideSfxVolume();
+      if (kind === "submit") {
+        playFilteredNoise(ctx, now, 0.11, volume * 0.22, 3200);
+        [
+          [329.63, 0.00, 0.40, -0.22],
+          [440.00, 0.08, 0.42, 0.10],
+          [523.25, 0.17, 0.46, 0.24],
+          [659.25, 0.31, 0.62, 0.05]
+        ].forEach(([freq, offset, dur, pan]) => playPluckedNote(ctx, now + offset, freq, dur, volume * 0.34, pan));
+        return true;
+      }
+      playFilteredNoise(ctx, now + 0.04, 0.16, volume * 0.18, 1800);
+      [
+        [220.00, 0.00, 0.55, -0.18],
+        [277.18, 0.13, 0.58, 0.08],
+        [329.63, 0.28, 0.64, 0.18],
+        [392.00, 0.48, 0.78, -0.02]
+      ].forEach(([freq, offset, dur, pan]) => playPluckedNote(ctx, now + offset, freq, dur, volume * 0.25, pan));
+      return true;
+    }
+
+    function armGuideSfx(kind) {
+      if (guideSfxArmed) return;
+      guideSfxArmed = true;
+      const trigger = () => {
+        guideSfxArmed = false;
+        document.removeEventListener("pointerdown", trigger);
+        document.removeEventListener("keydown", trigger);
+        playGuideSfx(kind, { userInitiated: true });
+      };
+      document.addEventListener("pointerdown", trigger, { once: true, passive: true });
+      document.addEventListener("keydown", trigger, { once: true });
+    }
+
+    async function playGuideSfx(kind, { armOnGesture = false, userInitiated = false } = {}) {
+      if (!soundEffectsAllowed()) return false;
+      const ctx = getGuideAudioContext();
+      if (!ctx) return false;
+      try {
+        if (ctx.state === "suspended") {
+          await ctx.resume();
+        }
+        if (ctx.state === "suspended") {
+          if (armOnGesture && !userInitiated) armGuideSfx(kind);
+          return false;
+        }
+        return scheduleGuideSfx(kind);
+      } catch {
+        if (armOnGesture && !userInitiated) armGuideSfx(kind);
+        return false;
+      }
+    }
+
     function textMatch(item, query) {
-      const blob = Object.values(item).join(" ").toLowerCase();
+      const blob = searchableText(item).toLowerCase();
       return blob.includes(query.toLowerCase());
     }
 
@@ -4562,6 +6714,90 @@ def write_static_assets() -> None:
       select.innerHTML = `<option value="All">${allLabel}</option>` + values.map(value => `<option value="${value}">${value}</option>`).join("");
     }
 
+    function splitList(value) {
+      return String(value || "")
+        .split(";")
+        .map(part => part.trim())
+        .filter(Boolean);
+    }
+
+    function normalUrl(value) {
+      const url = String(value || "").trim();
+      if (!url) return "";
+      if (/^https?:\/\//i.test(url) || /^mailto:/i.test(url) || /^tel:/i.test(url)) return url;
+      if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(url)) return `mailto:${url}`;
+      return `https://${url}`;
+    }
+
+    function urlHost(value) {
+      try {
+        return new URL(normalUrl(value)).hostname.replace(/^www\./, "").toLowerCase();
+      } catch {
+        return "";
+      }
+    }
+
+    function linkLabel(url, fallback = "Website") {
+      const host = urlHost(url);
+      const lower = String(url || "").toLowerCase();
+      if (lower.startsWith("mailto:")) return "Email";
+      if (lower.startsWith("tel:")) return "Phone";
+      if (host.includes("facebook.com")) return "Facebook";
+      if (host.includes("instagram.com")) return "Instagram";
+      if (host.includes("youtube.com") || host.includes("youtu.be")) return "YouTube";
+      if (host.includes("google.com/maps") || lower.includes("maps.app.goo.gl")) return "Map";
+      if (host.includes("tripadvisor.com")) return "Travel profile";
+      if (host.includes("yelp.com")) return "Business profile";
+      if (host.includes("yellowpages.com")) return "Business profile";
+      if (host.includes("chamber") || host.includes("businessdirectory")) return "Directory page";
+      if (host.includes("tourism") || host.includes("travel") || host.includes("visit") || host.includes("explore")) return "Tourism listing";
+      return fallback;
+    }
+
+    function contactLinks(item) {
+      const links = [];
+      const seen = new Set();
+      function add(label, href) {
+        const normalized = normalUrl(href);
+        if (!normalized || seen.has(normalized)) return;
+        seen.add(normalized);
+        links.push({ label, href: normalized });
+      }
+      splitList(item.website).forEach(url => add(linkLabel(url, "Website"), url));
+      splitList(item.contact_email).forEach(email => add("Email", `mailto:${email}`));
+      splitList(item.contact_phone).forEach(phone => {
+        const dial = phone.replace(/[^0-9+]/g, "");
+        if (dial.length >= 7) add("Phone", `tel:${dial}`);
+      });
+      splitList(item.physical_address).forEach(address => add("Map", `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`));
+      splitList(item.source_url).forEach(url => add(linkLabel(url, item.website ? "Listing page" : "Website"), url));
+      return links;
+    }
+
+    function contactLinkMarkup(item, { compact = false } = {}) {
+      const links = contactLinks(item);
+      if (!links.length) return `<span class="source-note">Send an update if you have a public contact path.</span>`;
+      const visible = compact ? links.slice(0, 3) : links.slice(0, 7);
+      return `<div class="resource-links">${visible.map(link => `
+        <a class="resource-contact-link" href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>
+      `).join("")}</div>`;
+    }
+
+    function truthyFlag(value) {
+      return value === true || String(value || "").toLowerCase() === "true";
+    }
+
+    function physicalIndicatorMarkup(item) {
+      const note = item.physical_ad_note || "Ask the location directly before leaving flyers, posters, brochures, or rack cards.";
+      if (truthyFlag(item.physical_ad_candidate)) {
+        return `<div class="listing-indicators" aria-label="Physical location indicators"><span class="listing-marker listing-marker--ad" title="${escapeHtml(note)}">Ask about flyers</span></div>`;
+      }
+      if (truthyFlag(item.has_physical_location)) {
+        return `<div class="listing-indicators" aria-label="Physical location indicators"><span class="listing-marker listing-marker--physical" title="${escapeHtml(note)}">Physical location</span></div>`;
+      }
+      return "";
+    }
+
     function sourceCard(item) {
       return `
         <article class="source-card" data-county="${escapeHtml(item.county)}" data-kind="${escapeHtml(item.kind)}">
@@ -4572,37 +6808,70 @@ def write_static_assets() -> None:
           <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a></h3>
           <p>${escapeHtml(item.best_for)}</p>
           <p class="action-line">${escapeHtml(item.action)}</p>
-          <p class="source-note">Details can change. Open the source, then submit a correction if this pathway is outdated.</p>
+          <p class="source-note">Details can change. Use the page, then submit an update if this pathway is outdated.</p>
+        </article>
+      `;
+    }
+
+    function sourceGroupCard(item) {
+      const links = (item.links || [])
+        .filter(link => link.url)
+        .map(link => `
+          <a class="source-sublink" href="${escapeHtml(link.url)}" target="_blank" rel="noreferrer">
+            <span>${escapeHtml(link.label || "Open")}</span>
+            <strong>${escapeHtml(link.title || link.url)}</strong>
+          </a>
+        `).join("");
+      const sourceCount = Number(item.source_count || (item.links || []).length || 1);
+      const routeWord = sourceCount === 1 ? "route" : "routes";
+      return `
+        <article class="source-card source-group-card" data-county="${escapeHtml(item.county)}" data-kind="${escapeHtml(item.kind)}">
+          <div class="source-card__meta">
+            <span>${escapeHtml(item.county_label || item.county || "Regional")}</span>
+            <span>${escapeHtml(sourceCount)} ${routeWord}</span>
+          </div>
+          <h3><a href="${escapeHtml(item.url || (item.links && item.links[0] ? item.links[0].url : "#"))}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a></h3>
+          <p>${escapeHtml(item.best_for)}</p>
+          <p class="action-line">${escapeHtml(item.action)}</p>
+          <div class="source-link-list">${links}</div>
         </article>
       `;
     }
 
     function resourceCard(item) {
-      const url = item.website || item.source_url || "";
-      const link = url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">Open source</a>` : `<span class="source-note">Source link needed</span>`;
+      const tags = String(item.public_audience_tags || item.public_org_tags || "")
+        .split(";")
+        .map(tag => tag.trim())
+        .filter(Boolean)
+        .map(tag => `<span class="badge">${escapeHtml(tag)}</span>`)
+        .join(" ");
       return `
         <article class="resource-item">
           <div class="resource-item__head">
             <h3>${escapeHtml(item.resource_name || "Unnamed resource")}</h3>
           </div>
-          <p>${escapeHtml([item.town, item.county, item.state].filter(Boolean).join(", "))} - ${escapeHtml(item.resource_type || "Resource")} - ${escapeHtml(item.category || "General")}</p>
-          <p><span class="badge">${escapeHtml(item.access_mode || "Unknown access")}</span> <span class="badge">${escapeHtml(item.source_type || "Unknown source")}</span></p>
-          <p>${escapeHtml(item.notes || "Use as a lead and confirm details before action.")}</p>
+          <p>${escapeHtml([item.town, item.county, item.state].filter(Boolean).join(", "))} - ${escapeHtml(item.public_listing_type || item.resource_type || "Resource")} - ${escapeHtml(item.category || "General")}</p>
+          <p class="resource-tags"><strong>Useful for:</strong> ${tags}</p>
+          ${physicalIndicatorMarkup(item)}
+          <p>${escapeHtml(item.public_description || "Local directory listing for regional discovery and outreach.")}</p>
+          <p class="resource-best"><strong>Best fit:</strong> ${escapeHtml(item.public_best_for || "regional discovery; contact-list building")}</p>
           <p class="source-note">If this looks outdated, use the correction form so the guide can be updated.</p>
-          ${link}
+          ${contactLinkMarkup(item)}
         </article>
       `;
     }
 
     function assistantCard(item) {
       const title = item.title || item.resource_name || item.channel || item.place || "Directory result";
-      const url = item.url || item.website || item.source_url || "";
+      const url = splitList(item.url || item.website || item.source_url)[0] || "";
       const county = item.county || item.area_served || [item.town, item.state].filter(Boolean).join(", ") || "Regional";
       const category = item.kind || item.resource_type || item.channel_type || item.type || "Directory route";
-      const description = item.best_for || item.notes || item.asks || item.short_description || "Use this as a starting point, then confirm current details.";
-      const action = item.action || item.reader_action || "Open the source, then submit a correction if details have changed.";
+      const description = item.posting_fit || item.best_for || item.public_description || item.asks || item.short_description || "Use this route when it fits the task, place, and audience.";
+      const action = item.posting_note || item.action || item.reader_action || "Open the link, then submit a correction if details have changed.";
       const typeLabel = item.assistant_type || "Directory";
-      const sourceLink = url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer" aria-label="Open source for ${escapeHtml(title)}">Open source</a>` : `<span class="source-note">Source link needed</span>`;
+      const sourceLink = url
+        ? `<a href="${escapeHtml(normalUrl(url))}" target="_blank" rel="noreferrer" aria-label="${escapeHtml(linkLabel(url, "Open page"))} for ${escapeHtml(title)}">${escapeHtml(linkLabel(url, "Open page"))}</a>`
+        : contactLinkMarkup(item, { compact: true });
       return `
         <article class="assistant-result" role="listitem">
           <div class="assistant-result__meta">
@@ -4611,7 +6880,9 @@ def write_static_assets() -> None:
             <span>${escapeHtml(category)}</span>
           </div>
           <h3>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>` : escapeHtml(title)}</h3>
+          ${physicalIndicatorMarkup(item)}
           <p>${escapeHtml(description)}</p>
+          ${item.public_best_for ? `<p class="resource-best"><strong>Best fit:</strong> ${escapeHtml(item.public_best_for)}</p>` : ""}
           <p class="action-line">${escapeHtml(action)}</p>
           <div class="assistant-result__actions">
             ${sourceLink}
@@ -4625,9 +6896,11 @@ def write_static_assets() -> None:
       const normalized = String(query || "").trim().toLowerCase();
       const terms = normalized.split(/\s+/).filter(Boolean);
       const pools = [
-        ...(DATA.directory_sources || []).map(item => ({ ...item, assistant_type: "Shortcut" })),
-        ...(DATA.resources || []).map(item => ({ ...item, assistant_type: "Lead bank" })),
+        ...(DATA.current_leads || []).map(item => ({ ...item, assistant_type: "Current item" })),
+        ...((DATA.directory_source_groups || DATA.directory_sources || [])).map(item => ({ ...item, assistant_type: "Shortcut group" })),
+        ...(DATA.resources || []).map(item => ({ ...item, assistant_type: "Listing" })),
         ...(DATA.amplifier_channels || []).map(item => ({ ...item, assistant_type: "Amplifier" })),
+        ...(DATA.physical_ad_locations || []).map(item => ({ ...item, assistant_type: "Physical ad location" })),
         ...(DATA.posting_spaces || []).map(item => ({ ...item, assistant_type: "Posting path" }))
       ];
       const scored = pools.map(item => {
@@ -4639,7 +6912,16 @@ def write_static_assets() -> None:
           if (String(item.title || item.resource_name || item.channel || item.place || "").toLowerCase().includes(term)) score += 5;
           if (String(item.county || item.area_served || "").toLowerCase().includes(term)) score += 2;
         }
-        if (!terms.length && item.assistant_type === "Shortcut") score += 1;
+        if (!terms.length) {
+          score += {
+            "Current item": 8,
+            "Shortcut group": 6,
+            "Shortcut": 6,
+            "Amplifier": 5,
+            "Posting path": 4,
+            "Listing": 2
+          }[item.assistant_type] || 1;
+        }
         return { item, score };
       }).filter(entry => entry.score > 0);
 
@@ -4715,10 +6997,12 @@ def write_static_assets() -> None:
 
       function render(query) {
         const search = String(query || "").trim();
-        const displayQuery = search || "regional help";
-        const matches = assistantSearch(displayQuery);
+        const displayQuery = search || "starter routes";
+        const matches = assistantSearch(search);
         status.textContent = matches.length
-          ? `Showing ${matches.length} route${matches.length === 1 ? "" : "s"} for "${displayQuery}".`
+          ? (search
+            ? `Showing ${matches.length} route${matches.length === 1 ? "" : "s"} for "${displayQuery}".`
+            : `Showing ${matches.length} starter routes from current items, directories, channels, and posting paths.`)
           : `No close match for "${displayQuery}". Try a county, town, or need like funding, events, artist, nonprofit, or media.`;
         results.innerHTML = matches.map(assistantCardWithUrls).join("") || `
           <article class="assistant-result" role="listitem">
@@ -4736,7 +7020,7 @@ def write_static_assets() -> None:
         const shouldOpen = !panel.open;
         setOpen(shouldOpen);
         if (shouldOpen && !results.innerHTML.trim()) {
-          render(input.value || "funding events business support");
+          render(input.value);
         }
       });
       close && close.addEventListener("click", () => setOpen(false));
@@ -4774,14 +7058,24 @@ def write_static_assets() -> None:
       const host = document.querySelector("#source-results");
       if (!host) return;
       const input = document.querySelector("#source-search");
+      const note = document.querySelector("#source-results-note");
       const chips = [...document.querySelectorAll("[data-source-filter]")];
       let county = "All";
       function render() {
         const query = input.value.trim();
-        const filtered = DATA.directory_sources
-          .filter(item => (county === "All" || item.county === county) && (!query || textMatch(item, query)))
+        const allGroups = DATA.directory_source_groups || DATA.directory_sources || [];
+        const topGroups = DATA.top_directory_source_groups || allGroups.slice(0, 30);
+        const showingPriority = county === "All" && !query;
+        const pool = showingPriority ? topGroups : allGroups;
+        const filtered = pool
+          .filter(item => (county === "All" || item.county === county || (item.counties || []).includes(county)) && (!query || textMatch(item, query)))
           .sort((a, b) => String(a.title || "").localeCompare(String(b.title || "")));
-        host.innerHTML = filtered.map(sourceCard).join("") || `<p class="section-note">No shortcuts match that search yet.</p>`;
+        if (note) {
+          note.textContent = showingPriority
+            ? `Showing ${filtered.length} priority shortcut groups. Search or choose a county to inspect all ${allGroups.length} grouped cards covering ${(DATA.directory_sources || []).length} individual shortcut routes.`
+            : `Showing ${filtered.length} grouped shortcut card${filtered.length === 1 ? "" : "s"} from the full shortcut layer.`;
+        }
+        host.innerHTML = filtered.map(item => item.links ? sourceGroupCard(item) : sourceCard(item)).join("") || `<p class="section-note">No shortcuts match that search yet.</p>`;
       }
       input.addEventListener("input", render);
       chips.forEach(chip => chip.addEventListener("click", () => {
@@ -4797,25 +7091,46 @@ def write_static_assets() -> None:
       if (!host) return;
       const input = document.querySelector("#resource-search");
       const chips = [...document.querySelectorAll("[data-resource-filter]")];
+      const locationChips = [...document.querySelectorAll("[data-location-filter]")];
       const typeSelect = document.querySelector("#resource-type-filter");
       const accessSelect = document.querySelector("#access-mode-filter");
+      const note = document.querySelector("#resource-results-note");
       let county = "All";
-      populateSelect(typeSelect, uniqueValues(DATA.resources, "resource_type"), "All types");
+      let locationMode = "All";
+      populateSelect(typeSelect, uniqueValues(DATA.resources, "public_listing_type"), "All types");
       populateSelect(accessSelect, uniqueValues(DATA.resources, "access_mode"), "All access modes");
       function render() {
         const query = input.value.trim();
         const resourceType = typeSelect ? typeSelect.value : "All";
         const accessMode = accessSelect ? accessSelect.value : "All";
-        const filtered = DATA.resources
+        const matched = DATA.resources
           .filter(item => (county === "All" || item.county === county) && (!query || textMatch(item, query)))
-          .filter(item => resourceType === "All" || item.resource_type === resourceType)
+          .filter(item => resourceType === "All" || item.public_listing_type === resourceType)
           .filter(item => accessMode === "All" || item.access_mode === accessMode)
-          .sort((a, b) => String(a.resource_name || "").localeCompare(String(b.resource_name || "")))
-          .slice(0, 80);
+          .filter(item => (
+            locationMode === "All"
+            || (locationMode === "Physical" && truthyFlag(item.has_physical_location))
+            || (locationMode === "Flyers" && truthyFlag(item.physical_ad_candidate))
+          ))
+          .sort((a, b) => String(a.resource_name || "").localeCompare(String(b.resource_name || "")));
+        const filtered = matched.slice(0, 80);
+        if (note) {
+          const locationLabel = {
+            All: "all matching listings",
+            Physical: "listings with physical locations",
+            Flyers: "places to ask about flyers or posters"
+          }[locationMode] || "matching listings";
+          note.textContent = `Showing ${filtered.length} of ${matched.length} ${locationLabel}. Search by town, county, resource type, audience, keyword, or task.`;
+        }
         host.innerHTML = filtered.map(resourceCard).join("") || `<p class="section-note">No local inventory entries match that search.</p>`;
       }
       input.addEventListener("input", render);
       [typeSelect, accessSelect].forEach(select => select && select.addEventListener("change", render));
+      locationChips.forEach(chip => chip.addEventListener("click", () => {
+        locationMode = chip.dataset.locationFilter;
+        locationChips.forEach(c => c.classList.toggle("is-active", c === chip));
+        render();
+      }));
       chips.forEach(chip => chip.addEventListener("click", () => {
         county = chip.dataset.resourceFilter;
         chips.forEach(c => c.classList.toggle("is-active", c === chip));
@@ -4841,6 +7156,53 @@ def write_static_assets() -> None:
       });
     }
 
+    function initSubmissionForms() {
+      document.querySelectorAll("[data-submit-form]").forEach(form => {
+        const button = form.querySelector("[data-submit-button]");
+        const success = form.querySelector("[data-submit-success]");
+        const submittedName = form.querySelector("[data-submitted-name]");
+        const isLocalPreview = ["", "localhost", "127.0.0.1"].includes(window.location.hostname) || window.location.protocol === "file:";
+        let submitted = false;
+
+        function showSuccess() {
+          const listingName = form.elements.listing_name ? String(form.elements.listing_name.value || "").trim() : "";
+          if (submittedName) submittedName.textContent = listingName || "This update";
+          playGuideSfx("submit", { userInitiated: true });
+          if (success) {
+            success.hidden = false;
+            success.focus({ preventScroll: true });
+            success.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+          }
+          if (button) {
+            button.textContent = "Submitted for review";
+            button.disabled = true;
+          }
+        }
+
+        form.addEventListener("submit", async event => {
+          if (!form.checkValidity() || submitted) return;
+          event.preventDefault();
+          submitted = true;
+          showSuccess();
+          if (isLocalPreview || !window.fetch) return;
+          const data = new FormData(form);
+          try {
+            await fetch(form.getAttribute("action") || window.location.pathname, {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(data).toString()
+            });
+          } catch {
+            if (button) {
+              button.textContent = "Saved on this page";
+              button.disabled = false;
+            }
+            submitted = false;
+          }
+        });
+      });
+    }
+
     function initPrintButtons() {
       document.querySelectorAll(".print-button").forEach(button => {
         button.addEventListener("click", () => window.print());
@@ -4849,6 +7211,11 @@ def write_static_assets() -> None:
 
     function initCornerControls() {
       const backToTop = document.querySelector(".back-to-top");
+      const updateScrollState = () => {
+        document.body.dataset.scrollState = window.scrollY > 240 ? "scrolled" : "top";
+      };
+      updateScrollState();
+      window.addEventListener("scroll", updateScrollState, { passive: true });
       if (backToTop) {
         backToTop.addEventListener("click", event => {
           event.preventDefault();
@@ -4861,26 +7228,27 @@ def write_static_assets() -> None:
     }
 
     function initAmbientMusic() {
+      const musicShell = document.querySelector("[data-music-bar]");
       const toggle = document.querySelector(".music-toggle");
       const trackSelect = document.querySelector(".music-track-select");
       const progress = document.querySelector(".music-progress");
       const timeLabel = document.querySelector(".music-time");
       const volume = document.querySelector(".music-volume");
+      const status = document.querySelector("[data-music-status]");
       const intro = document.querySelector(".intro-curtain");
       const loopAudio = document.getElementById("site-music-loop");
       if (!toggle || !loopAudio) return;
 
-      const MUSIC_KEY = "triCountyPianoMusicV2";
-      const TIME_KEY = "triCountyPianoLoopTimeV2";
-      const INTRO_KEY = "triCountyLandingIntroSeenV2";
-      const TRACK_KEY = "triCountyPianoTrackV2";
-      const VOLUME_KEY = "triCountyPianoVolumeV2";
+      const MUSIC_KEY = "triCountyRegionalSoundChoiceV3";
+      const TIME_KEY = "triCountyRegionalSoundTimeV3";
+      const INTRO_KEY = "triCountyLandingIntroSeenV3";
+      const TRACK_KEY = "triCountyRegionalSoundTrackV3";
+      const VOLUME_KEY = "triCountyRegionalSoundVolumeV3";
       const savedChoice = localStorage.getItem(MUSIC_KEY);
-      const hasSeenIntro = localStorage.getItem(INTRO_KEY) === "seen";
+      const hasSeenIntro = sessionStorage.getItem(INTRO_KEY) === "seen";
       const saveData = Boolean(navigator.connection && navigator.connection.saveData);
       const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       let isPlaying = false;
-      let delayedStartId = null;
       let timeSaveId = null;
 
       loopAudio.loop = true;
@@ -4924,7 +7292,7 @@ def write_static_assets() -> None:
 
       function applyVolume({ save = false } = {}) {
         const savedVolume = Number(localStorage.getItem(VOLUME_KEY));
-        const fallback = Number.isFinite(savedVolume) ? savedVolume : 58;
+        const fallback = Number.isFinite(savedVolume) ? savedVolume : 42;
         const raw = volume ? Number(volume.value || fallback) : fallback;
         const clamped = Math.max(0, Math.min(100, Number.isFinite(raw) ? raw : fallback));
         if (volume) volume.value = String(clamped);
@@ -4941,9 +7309,16 @@ def write_static_assets() -> None:
         if (state === "playing") {
           toggle.textContent = "Stop";
           toggle.setAttribute("aria-pressed", "true");
+          if (status) status.textContent = "On";
+          if (musicShell) musicShell.open = true;
+        } else if (state === "blocked") {
+          toggle.textContent = "Play";
+          toggle.setAttribute("aria-pressed", "false");
+          if (status) status.textContent = "Tap play";
         } else {
           toggle.textContent = "Play";
           toggle.setAttribute("aria-pressed", "false");
+          if (status) status.textContent = "Off";
         }
       }
 
@@ -4989,24 +7364,12 @@ def write_static_assets() -> None:
         }
       }
 
-      async function startMusic({ userInitiated = false, withIntro = false } = {}) {
-        if (withIntro) {
-          if (delayedStartId) window.clearTimeout(delayedStartId);
-          delayedStartId = window.setTimeout(() => {
-            delayedStartId = null;
-            startLoop({ userInitiated, fromBeginning: true, resume: false });
-          }, 2600);
-          return;
-        }
+      async function startMusic({ userInitiated = false } = {}) {
         await startLoop({ userInitiated, resume: true });
       }
 
       function stopMusic() {
         rememberTime({ force: true });
-        if (delayedStartId) {
-          window.clearTimeout(delayedStartId);
-          delayedStartId = null;
-        }
         if (timeSaveId) {
           window.clearInterval(timeSaveId);
           timeSaveId = null;
@@ -5069,13 +7432,7 @@ def write_static_assets() -> None:
       function markIntroComplete() {
         if (!intro) return;
         intro.dataset.introState = "complete";
-        localStorage.setItem(INTRO_KEY, "seen");
-      }
-
-      function startAfterFirstGesture(event) {
-        if (event.target && event.target.closest && event.target.closest(".music-bar")) return;
-        if (isPlaying || localStorage.getItem(MUSIC_KEY) === "stopped" || prefersReducedMotion || saveData) return;
-        startMusic({ userInitiated: true });
+        sessionStorage.setItem(INTRO_KEY, "seen");
       }
 
       window.addEventListener("beforeunload", () => rememberTime({ force: true }));
@@ -5089,12 +7446,8 @@ def write_static_assets() -> None:
           }
         } else {
           intro.dataset.introState = "playing";
-          window.setTimeout(markIntroComplete, 10300);
-          if (savedChoice !== "stopped" && !saveData) {
-            window.setTimeout(() => startMusic({ withIntro: true }), 120);
-            document.addEventListener("pointerdown", startAfterFirstGesture, { once: true });
-            document.addEventListener("keydown", startAfterFirstGesture, { once: true });
-          }
+          window.setTimeout(() => playGuideSfx("intro", { armOnGesture: true }), 180);
+          window.setTimeout(markIntroComplete, 3000);
         }
       } else if (savedChoice === "playing" && !saveData && !prefersReducedMotion) {
         window.setTimeout(() => startMusic(), 250);
@@ -5105,6 +7458,7 @@ def write_static_assets() -> None:
     initResourceSearch();
     initDirectoryAssistant();
     initCopyButtons();
+    initSubmissionForms();
     initPrintButtons();
     initCornerControls();
     initAmbientMusic();
@@ -5130,8 +7484,8 @@ Upload the contents of this folder to Netlify, or upload the generated zip file 
 - `index.html` - homepage
 - `plan/` - step-by-step growth methodology
 - `amplifiers/` - newsletters, calendars, directories, visitor guides, and promotion channels
-- `network/` - searchable directory shortcuts and {summary['row_count']}-row local lead bank
-- `posting/` - physical/digital posting and public-notice guidance
+- `network/` - searchable directory shortcuts, physical-location filters, and {summary['row_count']}-row local inventory
+- `posting/` - physical flyer/poster location finder plus digital posting and public-notice guidance
 - `region/` - regional routing model
 - `counties/` - Colfax, Las Animas, and Huerfano county pages
 - task-intent pages:
@@ -5139,14 +7493,14 @@ Upload the contents of this folder to Netlify, or upload the generated zip file 
 - `templates/` - copy-ready outreach templates
 - `submit/` - listing and channel-update intake form
 - `appendix/` - public contact/resource appendix grouped by county and community
-- `about/` - creation process, method, caveats, and source index
+- `about/` - creation process, method, caveats, and page index
 - `assets/animations/` - layered animated yucca SVG banner, CTA marker, and preview files
 - `assets/audio/` - Library of Congress public-domain regional MP3 tracks used by the site music bar
-- `data/tri_county_persona_resources.csv` - source lead bank
-- `data/guide-data.json` - directory shortcuts plus source data
+- `data/tri_county_persona_resources.csv` - public local inventory
+- `data/guide-data.json` - directory shortcuts plus public site data
 - `data/directory-metadata.json` - full machine-readable metadata for every directory shortcut and local inventory entry
-- `SOURCES.md` - directory, amplifier, and posting source manifest
-- Global `Ask directory` assistant - client-side search across shortcuts, lead-bank rows, amplifier channels, and posting pathways
+- `SOURCES.md` - directory, amplifier, and posting page manifest
+- Global `Ask directory` assistant - client-side search across shortcuts, local inventory rows, amplifier channels, and posting pathways
 - Global music bar - Library of Congress public-domain regional audio with play/stop, track choice, progress, and volume controls
 
 ## Data summary
@@ -5157,13 +7511,13 @@ Upload the contents of this folder to Netlify, or upload the generated zip file 
 
 ## Caveat
 
-The local resource inventory is a lead bank. Verify phone numbers, eligibility, listing status, and submission rules before publication, printing, outreach, or spending.
+The local resource inventory is a working directory. Check phone numbers, eligibility, listing status, and submission rules before publication, printing, outreach, or spending.
 
 ## QA notes
 
 - Local HTML/asset references were checked after generation.
 - SEO metadata is generated from the page shell: title, description, canonical URL, robots tag, social preview tags, JSON-LD, sitemap, and robots.txt.
-- Public pages distinguish directory shortcuts, amplifier channels, public-notice/posting pathways, and lead-bank rows.
+- Public pages distinguish directory shortcuts, amplifier channels, public-notice/posting pathways, and local inventory rows.
 - Network page JSON-LD includes machine-readable metadata for every directory shortcut and local inventory entry.
 - Unknown paid/free placement, ad availability, approval, deadlines, and audience size are left as direct-contact follow-up tasks.
 - A bounded automated external-link check may flag official sites because of bot blocking or local certificate handling. Treat `QA_REPORT.md` as a launch checklist, not a proof that every listed official page is broken.
@@ -5193,7 +7547,7 @@ def write_research_notes(summary: dict) -> None:
     for county in ["Colfax", "Las Animas", "Huerfano", "Regional"]:
         rows = by_county.get(county, [])
         items = "\n".join(
-            f"- [{item['title']}]({item['url']}) - {item['kind']}. {item['best_for']} Action: {item['action']}"
+            f"- [{item['title']}]({item['url']}) - {item['kind']}. {public_text_value(item['best_for'])} Action: {public_text_value(item['action'])}"
             for item in rows
         )
         county_sections.append(f"## {county}\n\n{items}")
@@ -5212,42 +7566,42 @@ This file records the researched directory layer used by the Netlify draft. The 
 - County mix: {summary['county']}
 - Resource type mix: {summary['resource_type']}
 
-The {summary['row_count']}-row inventory is a lead bank. It is useful for discovery, outreach planning, and finding patterns. It should not be presented as a fully verified public business directory without additional confirmation.
+The {summary['row_count']}-row inventory is a working directory. It is useful for discovery, outreach planning, and finding patterns. Check current details before publishing contact, eligibility, or placement claims.
 
 ## What The Site Incorporates
 
 - A three-path homepage: Plan Your Growth, Find the Network, Understand the Region.
-- A searchable shortcut directory with {len(DIRECTORY_SOURCES)} researched sources.
-- A regional amplifier page with {len(AMPLIFIER_CHANNELS)} channel rows and practical source-follow-up guidance.
-- A posting page separating official notices, physical boards, digital calendars, and field-check tasks.
+- A searchable shortcut directory with {len(DIRECTORY_SOURCES)} researched pages.
+- A regional amplifier page with {len(AMPLIFIER_CHANNELS)} channel rows and practical follow-up guidance.
+- A posting page separating official notices, physical boards, flyer/poster/rack-card locations, digital calendars, and local update tasks.
 - A public contact appendix grouped by county and community.
 - A searchable local inventory using the existing CSV/JSON data.
 - County pages that point to local first stops instead of burying users in one long HTML document.
 - Templates for listing requests, event calendar submissions, media pitches, partner asks, and follow-up tracking.
 - About/method language moved away from the homepage to reduce the "AI report" feel.
 
-## Directory Source Map
+## Directory Page Map
 
 {chr(10).join(county_sections)}
 
 ## Publication Priorities
 
-1. Verify official submission links and preferred contact paths with each chamber, city/tourism office, creative district, newspaper, and economic-development office.
+1. Check official submission links and preferred contact paths with each chamber, city/tourism office, creative district, newspaper, and economic-development office.
 2. Ask whether public wording should say "partner", "resource", "directory", or "referral" for each organization.
 3. Keep commercial scraping out of the public guide. Point users to official directories instead.
 4. Maintain update dates beside data-heavy inventory sections.
 """
     (OUT / "RESEARCH_DIVE.md").write_text(notes, encoding="utf-8")
 
-    source_manifest = f"""# Source Manifest
+    source_manifest = f"""# Page Manifest
 
 Generated: {BUILD_DATE}
 
-This manifest preserves the source layer used by the Netlify guide. Source entries are practical routing leads, not endorsements, guarantees, or proof of acceptance.
+This manifest preserves the public page layer used by the Netlify guide. Entries are practical routing paths, not endorsements, guarantees, or proof of acceptance.
 
 ## Directory Shortcuts
 
-{chr(10).join(f"- [{item['title']}]({item['url']}) - {item['county']}; {item['kind']}; {item['best_for']}" for item in DIRECTORY_SOURCES)}
+{chr(10).join(f"- [{item['title']}]({item['url']}) - {item['county']}; {item['kind']}; {public_text_value(item['best_for'])}" for item in DIRECTORY_SOURCES)}
 
 ## Amplifier Channels
 
@@ -5255,7 +7609,7 @@ This manifest preserves the source layer used by the Netlify guide. Source entri
 
 ## Posting And Public-Notice Pathways
 
-{chr(10).join(f"- {item['place']} - {item['status']}" + (f"; source: {item['source_url']}" if item['source_url'] else "; source: field check needed") for item in POSTING_SPACES)}
+{chr(10).join(f"- {item['place']} - {public_text_value(item['status'])}" + (f"; link: {item['source_url']}" if item['source_url'] else "; link: local update needed") for item in POSTING_SPACES)}
 
 ## Data Files
 
@@ -5286,9 +7640,9 @@ Generated: {BUILD_DATE}
 ## Known Caveats
 
 - Any automated external-link check can produce false failures for government/tourism sites that block scripted requests.
-- Paid/free status, advertising availability, approval rules, print deadlines, and audience size remain direct-contact follow-up tasks unless explicitly stated in a source.
-- Fresh scripted link verification is exported separately after build as `data/live_link_verification_20260622.json` and `data/LIVE_LINK_VERIFICATION_20260622.md` when the verification script is run.
-- The stale Raton/Colfax directory paths from the added PDF sources were replaced with working official parent/category pages in the public shortcut layer.
+- Paid/free status, advertising availability, approval rules, print deadlines, and audience size remain direct-contact follow-up tasks unless explicitly stated on a page.
+- Fresh scripted link checks may be exported separately when the link-check script is run.
+- The stale Raton/Colfax directory paths from the added PDF materials were replaced with working official parent/category pages in the public shortcut layer.
 
 ## Manual Publication Check
 
@@ -5297,19 +7651,20 @@ Before public launch, open the deployed Netlify preview and check:
 - Home hero yucca/mountain animation, reduced-motion behavior, and mobile title wrapping.
 - Network search for `chamber`, `artist`, `media`, `grant`, `Raton`, `Trinidad`, and `Walsenburg`.
 - Network filters for resource type and access mode.
-- Amplifier page rows for source URL and practical channel use.
-- Posting page language: no board, calendar, newsletter, or newspaper should be framed as guaranteed ad placement.
+- Network physical-location filters for `Physical locations` and `Ask about flyers`.
+- Amplifier page rows for link URL and practical channel use.
+- Posting page language: physical flyer/poster locations should be framed as places to ask, not guaranteed ad placement.
 - County page nav paths.
 - Footer logo scale.
 - All high-priority external links.
-- `data/LIVE_LINK_VERIFICATION_20260622.md` for bot-blocked, timed-out, or manually-confirmed URLs.
+- any link-check report for bot-blocked, timed-out, or manually-confirmed URLs.
 """
     (OUT / "QA_REPORT.md").write_text(qa, encoding="utf-8")
 
 
 def write_pages(rows: list[dict], summary: dict) -> None:
     (OUT / "index.html").write_text(home_page(summary), encoding="utf-8")
-    for folder in ["plan", "amplifiers", "network", "posting", "region", "templates", "submit", "appendix", "about"]:
+    for folder in ["plan", "amplifiers", "network", "posting", "region", "templates", "submit", "appendix", "about", "resources/funding", "resources/arts-culture"]:
         (OUT / folder).mkdir(parents=True, exist_ok=True)
     for item in TASK_PAGE_DEFS:
         path = OUT / ACTIVE_PATHS[item["active"]]
@@ -5317,7 +7672,9 @@ def write_pages(rows: list[dict], summary: dict) -> None:
     (OUT / "plan" / "index.html").write_text(plan_page(), encoding="utf-8")
     (OUT / "amplifiers" / "index.html").write_text(amplifiers_page(), encoding="utf-8")
     (OUT / "network" / "index.html").write_text(network_page(rows), encoding="utf-8")
-    (OUT / "posting" / "index.html").write_text(posting_page(), encoding="utf-8")
+    (OUT / "resources" / "funding" / "index.html").write_text(funding_page(rows), encoding="utf-8")
+    (OUT / "resources" / "arts-culture" / "index.html").write_text(arts_culture_page(rows), encoding="utf-8")
+    (OUT / "posting" / "index.html").write_text(posting_page(rows), encoding="utf-8")
     (OUT / "region" / "index.html").write_text(region_page(summary), encoding="utf-8")
     (OUT / "templates" / "index.html").write_text(templates_page(), encoding="utf-8")
     (OUT / "submit" / "index.html").write_text(submit_page(), encoding="utf-8")

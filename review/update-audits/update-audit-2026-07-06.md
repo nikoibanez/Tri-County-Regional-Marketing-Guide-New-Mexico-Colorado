@@ -1,21 +1,21 @@
 # Update Source Audit
 
-Generated: 2026-07-22
+Generated: 2026-07-06
 
 This report is a review queue. A failure here does not automatically mean a public source is invalid; some official sites block scripted checks.
 
 ## Summary
 
-- Checked: 123
+- Checked: 120
 - Needs attention: 22
-- Human approval required: 57
+- Human approval required: 54
 
 ## Status Counts
 
 - manual_review: 19
 - missing_url: 1
 - network_error: 2
-- ok: 99
+- ok: 96
 - redirect: 2
 
 ## Needs Attention
@@ -60,8 +60,6 @@ This report is a review queue. A failure here does not automatically mean a publ
 - [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; Municipal forms / vendor permits; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [World Journal](https://worldjournalnewspaper.com/) - Huerfano / Walsenburg; Newspaper, events, classifieds, advertising inquiry possible; Do not infer free placement, ad availability, acceptance, audience size, or endorsement.
 - [Visit Trinidad Submit Your Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Las Animas; Event submission; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
-- [LocalStash / Weekender regional events](https://weekender.pub/) - Las Animas, Huerfano, Colfax, and nearby SoCO / NoNM communities; Regional event list; visitor guide; magazine or sponsor inquiry; Do not infer free placement, ad availability, acceptance, audience size, or endorsement.
-- [LocalStash / Weekender regional events](https://weekender.pub/) - Regional; Regional event list / visitor channel; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [New Mexico Arts Grants](https://nmarts.org/grants/grants-information/) - Colfax; Arts organization grants; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [New Mexico Business Portal Financial Assistance](https://biz.nm.gov/financial-assistance/) - Colfax; Business funding directory; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [New Mexico Creative Industries Division Grants](https://www.edd.newmexico.gov/grants/cid-grants/) - Colfax; Creative business / organization grants; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
@@ -101,4 +99,3 @@ This report is a review queue. A failure here does not automatically mean a publ
 - [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; Agriculture / producer grants; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [World Journal Services Directory](https://worldjournalnewspaper.com/services/) - Huerfano; Services directory; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [The Chronicle-News](https://www.thechronicle-news.com/) - Las Animas; Media / classifieds; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
-- [Red River Chamber Vacation Guide](https://redriver.org/plan-your-trip/vacation-guide/) - Red River / Colfax; Vacation guide request; visitor mailing pathway; newsletter; Do not infer free placement, ad availability, acceptance, audience size, or endorsement.

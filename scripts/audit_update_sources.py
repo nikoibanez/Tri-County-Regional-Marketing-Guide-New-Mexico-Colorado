@@ -5,7 +5,7 @@ import json
 import shutil
 import ssl
 import time
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -22,7 +22,7 @@ def check_url(url: str, timeout: int) -> dict:
 
     context = ssl.create_default_context()
     headers = {
-        "User-Agent": "TriCountyGuideSourceAudit/1.0 (+https://wonderful-kashata-6ed008.netlify.app/)",
+        "User-Agent": "TriCountyGuideSourceAudit/1.1 (+https://statelineguide.org)",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     }
 
@@ -112,6 +112,29 @@ def write_markdown(payload: dict, path: Path) -> None:
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def update_registry_state(registry: dict, results: list[dict], registry_path: Path) -> int:
+    checked_by_id = {
+        item["record"].get("id"): item["check"]
+        for item in results
+        if item["record"].get("id") and item["check"].get("status") != "not_checked"
+    }
+    today = date.today()
+    updated = 0
+    for record in registry.get("records", []):
+        check = checked_by_id.get(record.get("id"))
+        if not check:
+            continue
+        record["last_checked"] = today.isoformat()
+        record["next_check"] = (today + timedelta(days=int(record.get("cadence_days") or 30))).isoformat()
+        record["last_check_status"] = check.get("status", "")
+        record["last_status_code"] = check.get("status_code")
+        updated += 1
+    if updated:
+        registry["maintenance_updated_at"] = today.isoformat()
+        registry_path.write_text(json.dumps(registry, indent=2), encoding="utf-8")
+    return updated
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Audit Tri-County Guide monitored source URLs.")
     parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
@@ -120,6 +143,7 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=0, help="Limit records checked. 0 checks all records.")
     parser.add_argument("--domain", action="append", default=[], help="Only check records with this update_domain. Can be repeated or comma-separated.")
     parser.add_argument("--no-network", action="store_true", help="Generate a due report without checking URLs.")
+    parser.add_argument("--no-update-registry", action="store_true", help="Do not persist last-checked status and next-check dates.")
     parser.add_argument("--fail-on-broken", action="store_true", help="Exit nonzero if checked sources need attention.")
     args = parser.parse_args()
 
@@ -146,6 +170,11 @@ def main() -> None:
         "results": results,
     }
 
+    state_updates = 0
+    if not args.no_network and not args.no_update_registry:
+        state_updates = update_registry_state(registry, results, args.registry)
+    payload["registry_state_updates"] = state_updates
+
     args.out_dir.mkdir(parents=True, exist_ok=True)
     json_path = args.out_dir / f"update-audit-{date.today().isoformat()}.json"
     md_path = args.out_dir / f"update-audit-{date.today().isoformat()}.md"
@@ -155,7 +184,12 @@ def main() -> None:
     write_markdown(payload, md_path)
     shutil.copy2(md_path, latest_md)
     shutil.copy2(json_path, latest_json)
-    print(json.dumps({"json": str(json_path), "markdown": str(md_path), "summary": payload["summary"]}, indent=2))
+    print(
+        json.dumps(
+            {"json": str(json_path), "markdown": str(md_path), "summary": payload["summary"], "registry_state_updates": state_updates},
+            indent=2,
+        )
+    )
 
     if args.fail_on_broken and payload["summary"]["needs_attention"]:
         raise SystemExit(1)

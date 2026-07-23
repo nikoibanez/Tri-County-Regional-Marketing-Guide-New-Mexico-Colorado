@@ -1,0 +1,54 @@
+name: Monthly maintenance snapshot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 16 1 * *"
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      PUBLIC_SITE_ORIGIN: ${{ vars.PUBLIC_SITE_ORIGIN }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build canonical site and deploy zip
+        run: python tools/build_netlify_deep_guide.py
+
+      - name: Run deterministic checks
+        run: |
+          python scripts/audit_ui_accessibility.py
+          python scripts/audit_seo_static.py
+          python scripts/audit_directory_quality.py --fail-on-blocking
+          python scripts/audit_internal_links.py --fail-on-broken
+          python scripts/smoke_test_site.py
+          python scripts/build_maintenance_dashboard.py
+
+      - name: Write deploy checksum
+        run: sha256sum dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip > dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip.sha256
+
+      - name: Upload canonical maintenance snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: tri-county-maintenance-snapshot-${{ github.run_number }}
+          retention-days: 90
+          path: |
+            dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip
+            dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip.sha256
+            data/tri_county_persona_resources.csv
+            data/tri_county_persona_resources.json
+            data/directory_of_absolutely_everything.csv
+            data/directory_of_absolutely_everything.json
+            review/maintenance/
+            review/UI_ACCESSIBILITY_STATIC_AUDIT_*.md
