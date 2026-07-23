@@ -1389,12 +1389,36 @@ AMPLIFIER_CHANNELS = [
 
 
 AMPLIFIER_CATEGORIES = [
-    ("Event Calendars", "Best for public, time-sensitive things: performances, markets, workshops, launches, fundraisers, and visitor-facing events."),
-    ("Newsletters & Mailing Lists", "Best for opt-in audiences; ask before assuming outside announcements or ads are accepted."),
-    ("Business Directories", "Best for being findable after the first announcement has passed."),
-    ("Tourism/Visitor Guides", "Best for lodging, dining, shopping, galleries, attractions, recreation, and visitor services."),
-    ("Anchor Venue Lineups", "Best for arts, music, theater, food, and event-adjacent cross-promotion."),
-    ("Ask About Advertising or Placement", "Best when a channel may sell ads or placements but the public page does not confirm terms."),
+    {
+        "title": "Event Calendars",
+        "body": "Best for public, time-sensitive things: performances, markets, workshops, launches, fundraisers, and visitor-facing events.",
+        "query": "event",
+    },
+    {
+        "title": "Newsletters & Mailing Lists",
+        "body": "Best for opt-in audiences; ask before assuming outside announcements or ads are accepted.",
+        "query": "newsletter",
+    },
+    {
+        "title": "Business Directories",
+        "body": "Best for being findable after the first announcement has passed.",
+        "query": "business",
+    },
+    {
+        "title": "Tourism/Visitor Guides",
+        "body": "Best for lodging, dining, shopping, galleries, attractions, recreation, and visitor services.",
+        "query": "tourism",
+    },
+    {
+        "title": "Anchor Venue Lineups",
+        "body": "Best for arts, music, theater, food, and event-adjacent cross-promotion.",
+        "query": "venue",
+    },
+    {
+        "title": "Ask About Advertising or Placement",
+        "body": "Best when a channel may sell ads or placements but the public page does not confirm terms.",
+        "query": "advertising",
+    },
 ]
 
 
@@ -1465,31 +1489,37 @@ PHYSICAL_AD_PLACE_TYPES = [
         "title": "Libraries and community boards",
         "best_for": "Classes, nonprofit programs, arts events, workshops, support services, and local announcements.",
         "ask": "Ask the front desk or branch contact about flyer size, dates, political material, commercial material, and removal rules.",
+        "query": "library",
     },
     {
         "title": "Visitor and tourism centers",
         "best_for": "Events, galleries, lodging-adjacent offers, visitor services, tours, food, retail, and destination-facing rack cards.",
         "ask": "Ask whether the location accepts brochures, rack cards, posters, or event flyers and whether materials must be visitor-facing.",
+        "query": "visitor",
     },
     {
         "title": "City halls, courts, and public offices",
         "best_for": "Official notices, public meetings, civic programs, public hearings, and government-adjacent information.",
         "ask": "Use these for public information routes, not casual advertising. Ask the clerk, office, or department about current posting rules.",
+        "query": "public office",
     },
     {
         "title": "Downtown and high-traffic businesses",
         "best_for": "Local events, art shows, classes, services, hiring, restaurant specials, and cross-promotion near foot traffic.",
         "ask": "Ask the owner or manager before leaving materials. Bring a small stack and offer to remove flyers after the date passes.",
+        "query": "retail",
     },
     {
         "title": "Galleries, venues, museums, and cultural spaces",
         "best_for": "Openings, performances, artist calls, workshops, talks, music, festivals, and creative-sector promotion.",
         "ask": "Ask whether the event fits the venue's audience and whether they prefer a poster, digital image, calendar link, or press blurb.",
+        "query": "arts",
     },
     {
         "title": "Transit, travel, lodging, and visitor stops",
         "best_for": "Visitor-facing events, maps, tours, transportation notices, lodging-adjacent services, and regional travel ideas.",
         "ask": "Ask about lobby, kiosk, front-desk, or brochure-rack rules before printing large quantities.",
+        "query": "lodging",
     },
 ]
 
@@ -1824,6 +1854,7 @@ ROUTE_TYPE_CARDS = [
     {
         "label": "Events",
         "class": "cat-events",
+        "query": "event",
         "use": "Public event, class, fundraiser, market, opening, performance, or visitor activity.",
         "prepare": "Name, date, time, place, short blurb, image, cost, and public contact.",
         "check": "Eligibility, lead time, image size, deadline, and whether the calendar owner reviews submissions.",
@@ -1831,6 +1862,7 @@ ROUTE_TYPE_CARDS = [
     {
         "label": "Promotion",
         "class": "cat-promotion",
+        "query": "advertising",
         "use": "Ad inquiry, newsletter blurb, partner share, flyer placement, or media pitch.",
         "prepare": "One-sentence hook, audience fit, call to action, image, link, and contact.",
         "check": "Free or paid status, rates, deadline, audience fit, and whether placement is guaranteed.",
@@ -1838,6 +1870,7 @@ ROUTE_TYPE_CARDS = [
     {
         "label": "Business",
         "class": "cat-business",
+        "query": "business",
         "use": "Business listing, service-area update, shop-local route, or downtown/tourism visibility.",
         "prepare": "Business name, category, address or service area, website, hours, phone, and short description.",
         "check": "Listing requirements, membership rules, current contact route, and update process.",
@@ -1845,6 +1878,7 @@ ROUTE_TYPE_CARDS = [
     {
         "label": "Nonprofits",
         "class": "cat-nonprofit",
+        "query": "nonprofit",
         "use": "Program, mentorship, class, service, volunteer route, grant path, or community referral.",
         "prepare": "Who is served, what is offered, eligibility, dates, location, contact, and referral action.",
         "check": "Eligibility, privacy limits, deadlines, and whether the partner wants public promotion.",
@@ -1852,6 +1886,7 @@ ROUTE_TYPE_CARDS = [
     {
         "label": "Arts & Culture",
         "class": "cat-arts",
+        "query": "artist",
         "use": "Artist, gallery, venue, maker, exhibition, performance, workshop, or cultural resource.",
         "prepare": "Artist or organization name, medium, event details, portfolio/listing link, image, and public action.",
         "check": "Submission style, image credit, permission, commission or sales terms, and audience fit.",
@@ -2687,28 +2722,126 @@ def physical_ad_location_rows(rows: list[dict], limit: int = 96) -> list[dict]:
     )
 
 
+def normalized_contact_destination(value: object) -> str:
+    destination = clean_text(str(value or ""))
+    if not destination:
+        return ""
+    lowered = destination.casefold()
+    if lowered.startswith(("https://", "http://", "mailto:", "tel:")):
+        return destination
+    if lowered.startswith("www.") or re.match(r"^[a-z0-9][a-z0-9.-]+\.[a-z]{2,}(?:/|$)", lowered):
+        return "https://" + destination
+    return ""
+
+
+def best_entity_contact_url(row: dict, name: str | None = None) -> str:
+    for field in ("website", "source_url", "url"):
+        for value in split_semicolon(row.get(field)):
+            destination = normalized_contact_destination(value)
+            if destination:
+                return destination
+
+    for email in split_semicolon(row.get("contact_email")):
+        email = clean_text(email)
+        if "@" in email:
+            return "mailto:" + email
+
+    for phone in split_semicolon(row.get("contact_phone")):
+        dial = re.sub(r"[^0-9+]", "", phone)
+        if len(re.sub(r"\D", "", dial)) >= 7:
+            return "tel:" + dial
+
+    address = next(iter(split_semicolon(row.get("physical_address"))), "")
+    if address:
+        return "https://www.google.com/maps/search/?api=1&query=" + quote_plus(address)
+
+    entity_name = clean_text(
+        name
+        or row.get("resource_name")
+        or row.get("title")
+        or row.get("channel")
+        or row.get("place")
+        or "regional resource"
+    )
+    place = " ".join(
+        part
+        for part in [
+            clean_text(row.get("town")),
+            clean_text(row.get("county")),
+            clean_text(row.get("state")),
+        ]
+        if part
+    )
+    query = " ".join(part for part in [entity_name, place, "contact"] if part)
+    return "https://www.google.com/search?q=" + quote_plus(query)
+
+
+def entity_name_link(row: dict, name: str | None = None, class_name: str = "entity-name-link") -> str:
+    label = clean_text(
+        name
+        or row.get("resource_name")
+        or row.get("title")
+        or row.get("channel")
+        or row.get("place")
+        or "Unnamed resource"
+    )
+    href = best_entity_contact_url(row, label)
+    external = not href.casefold().startswith(("mailto:", "tel:"))
+    external_attrs = ' target="_blank" rel="noreferrer"' if external else ""
+    return (
+        f'<a class="{html_escape(class_name)}" href="{html_escape(href)}"'
+        f'{external_attrs} aria-label="Find contact information for {html_escape(label)}">'
+        f"{html_escape(label)}</a>"
+    )
+
+
 def contact_links_for_row(row: dict) -> str:
-    links: list[str] = []
+    destinations: list[tuple[str, str]] = []
+    seen: set[str] = set()
+
+    def add(label: str, value: object) -> None:
+        destination = normalized_contact_destination(value)
+        if not destination or destination in seen:
+            return
+        seen.add(destination)
+        destinations.append((label, destination))
+
     website_urls = split_semicolon(row.get("website"))
     source_urls = split_semicolon(row.get("source_url"))
-    if website_urls:
-        url = website_urls[0]
-        links.append(f'<a href="{html_escape(url)}" target="_blank" rel="noreferrer">{html_escape(resource_url_label(url))}</a>')
-    first_source = next((url for url in source_urls if url not in website_urls), "")
-    if first_source:
-        links.append(f'<a href="{html_escape(first_source)}" target="_blank" rel="noreferrer">{html_escape(resource_url_label(first_source, "Listing page"))}</a>')
-    phone = clean_text(row.get("contact_phone"))
-    if phone:
+    for url in website_urls:
+        add(resource_url_label(url), url)
+    for url in source_urls:
+        if url not in website_urls:
+            add(resource_url_label(url, "Listing page"), url)
+    for email in split_semicolon(row.get("contact_email")):
+        email = clean_text(email)
+        if "@" in email:
+            add("Email", "mailto:" + email)
+    for phone in split_semicolon(row.get("contact_phone")):
         phone_href = re.sub(r"[^0-9+]", "", phone)
-        links.append(f'<a href="tel:{html_escape(phone_href)}">Phone</a>')
-    email = clean_text(row.get("contact_email"))
-    if email:
-        links.append(f'<a href="mailto:{html_escape(email)}">Email</a>')
-    address = clean_text(row.get("physical_address"))
-    if address:
+        if len(re.sub(r"\D", "", phone_href)) >= 7:
+            add("Phone", "tel:" + phone_href)
+    for address in split_semicolon(row.get("physical_address")):
         map_url = "https://www.google.com/maps/search/?api=1&query=" + quote_plus(address)
-        links.append(f'<a href="{html_escape(map_url)}" target="_blank" rel="noreferrer">Map</a>')
-    return " ".join(links[:5]) or '<span class="source-note">Search the directory or submit a contact update.</span>'
+        add("Map", map_url)
+
+    label_counts = Counter(label for label, _ in destinations)
+    label_indexes: Counter[str] = Counter()
+    links: list[str] = []
+    for label, destination in destinations:
+        label_indexes[label] += 1
+        display_label = label
+        if label_counts[label] > 1:
+            host = source_domain(destination)
+            suffix = host or str(label_indexes[label])
+            display_label = f"{label}: {suffix}"
+        external = not destination.casefold().startswith(("mailto:", "tel:"))
+        external_attrs = ' target="_blank" rel="noreferrer"' if external else ""
+        links.append(
+            f'<a class="resource-contact-link" href="{html_escape(destination)}"{external_attrs}>'
+            f"{html_escape(display_label)}</a>"
+        )
+    return " ".join(links) or '<span class="source-note">Search for contact details or submit a contact update.</span>'
 
 
 def resource_physical_indicator_badges(row: dict) -> str:
@@ -4507,8 +4640,7 @@ def resource_preview_cards(rows: list[dict], terms: list[str], limit: int = 18) 
         return '<p class="section-note">No matching local inventory rows are available in this build.</p>'
     cards = []
     for row in matched:
-        url = (split_semicolon(row.get("website")) or split_semicolon(row.get("source_url")) or [""])[0]
-        link = f'<a class="resource-contact-link" href="{html_escape(url)}" target="_blank" rel="noreferrer">{html_escape(resource_url_label(url))}</a>' if url else '<span class="source-note">Send an update if you have a public contact path.</span>'
+        links = contact_links_for_row(row)
         tags = "".join(f'<span class="badge">{html_escape(tag)}</span>' for tag in organization_tags(row))
         cards.append(
             f"""
@@ -4518,13 +4650,13 @@ def resource_preview_cards(rows: list[dict], terms: list[str], limit: int = 18) 
                 <span>{html_escape(row.get('town'))}</span>
                 <span>{html_escape(row.get('public_listing_type') or row.get('resource_type'))}</span>
               </div>
-              <h3>{html_escape(row.get('resource_name') or 'Unnamed resource')}</h3>
+              <h3>{entity_name_link(row)}</h3>
               <p class="resource-tags"><strong>Useful for:</strong> {tags}</p>
               {resource_physical_indicator_badges(row)}
               <p>{html_escape(public_text_value(row.get('public_description') or row.get('category') or 'Local directory listing for regional discovery and outreach.'))}</p>
               <p class="resource-best"><strong>Best fit:</strong> {html_escape(public_text_value(row.get('public_best_for') or public_best_for(row)))}</p>
               <p class="action-line">{html_escape(public_text_value(row.get('goal_relevance') or 'Choose the route that fits, then contact the listed page or organization.'))}</p>
-              <div class="resource-links">{link}</div>
+              <div class="resource-links">{links}</div>
             </article>
             """
         )
@@ -4660,12 +4792,14 @@ def arts_culture_page(rows: list[dict]) -> str:
 def amplifiers_page() -> str:
     categories = "\n".join(
         f"""
-        <article class="mini-card">
-          <h3>{html_escape(title)}</h3>
-          <p>{html_escape(body)}</p>
-        </article>
+        <a class="mini-card category-route-card" href="../network/index.html?q={quote_plus(item['query'])}#resource-results"
+           aria-label="Search the comprehensive directory for {html_escape(item['title'])}">
+          <h3>{html_escape(item['title'])}</h3>
+          <p>{html_escape(item['body'])}</p>
+          <strong>Search this directory category</strong>
+        </a>
         """
-        for title, body in AMPLIFIER_CATEGORIES
+        for item in AMPLIFIER_CATEGORIES
     )
     packet = "\n".join(f"<li>{html_escape(item)}</li>" for item in PROMOTION_PACKET)
     matrix = "\n".join(
@@ -4782,7 +4916,7 @@ def posting_page(rows: list[dict]) -> str:
     posting_rows = "\n".join(
         f"""
         <tr>
-          <td>{html_escape(item['place'])}</td>
+          <td>{entity_name_link(item, item['place'])}</td>
           <td>{html_escape(item['physical'])}</td>
           <td>{html_escape(item['digital'])}</td>
           <td>{html_escape(public_text_value(item['use_for']))}</td>
@@ -4794,11 +4928,13 @@ def posting_page(rows: list[dict]) -> str:
     )
     type_cards = "\n".join(
         f"""
-        <article class="mini-card">
+        <a class="mini-card category-route-card" href="../network/index.html?q={quote_plus(item['query'])}&amp;location=Flyers#resource-results"
+           aria-label="Find {html_escape(item['title'])} in the comprehensive directory">
           <h3>{html_escape(item['title'])}</h3>
           <p>{html_escape(item['best_for'])}</p>
           <p class="resource-best"><strong>Ask:</strong> {html_escape(item['ask'])}</p>
-        </article>
+          <strong>Find matching physical locations</strong>
+        </a>
         """
         for item in PHYSICAL_AD_PLACE_TYPES
     )
@@ -4806,7 +4942,7 @@ def posting_page(rows: list[dict]) -> str:
     candidate_table = "\n".join(
         f"""
         <tr>
-          <td><strong>{html_escape(row.get('resource_name') or 'Unnamed place')}</strong><span class="table-subtle">{html_escape(public_place(row))}</span></td>
+          <td><strong>{entity_name_link(row, row.get('resource_name') or 'Unnamed place')}</strong><span class="table-subtle">{html_escape(public_place(row))}</span></td>
           <td>{html_escape(row.get('public_listing_type') or inferred_listing_type(row))}</td>
           <td>{html_escape(physical_ad_location_fit(row))}</td>
           <td>{html_escape(physical_ad_location_note(row))}</td>
@@ -4893,7 +5029,7 @@ def appendix_page(rows: list[dict]) -> str:
         <tr>
           <td>{html_escape(row.get('county'))}</td>
           <td>{html_escape(row.get('town'))}</td>
-          <td>{html_escape(row.get('resource_name'))}</td>
+          <td>{entity_name_link(row)}</td>
           <td>{html_escape(public_text_value(row.get('category')))}</td>
           <td>{html_escape(row.get('public_listing_type') or row.get('resource_type'))}</td>
           <td>{html_escape(row.get('access_mode'))}</td>
@@ -5032,7 +5168,7 @@ def county_page(county: str, slug: str, summary_text: str, rows: list[dict]) -> 
     leads = "\n".join(
         f"""
         <li>
-          <strong>{html_escape(row.get('resource_name'))}</strong>
+          <strong>{entity_name_link(row)}</strong>
           <span>{html_escape(row.get('public_listing_type') or row.get('resource_type'))} - {html_escape(row.get('town') or county)}</span>
         </li>
         """
@@ -5525,7 +5661,7 @@ def task_page(definition: dict, rows: list[dict]) -> str:
     lead_items = "\n".join(
         f"""
         <li>
-          <strong>{html_escape(row.get('resource_name'))}</strong>
+          <strong>{entity_name_link(row)}</strong>
           <span>{html_escape(row.get('town') or row.get('county') or 'Regional')} - {html_escape(row.get('public_listing_type') or row.get('resource_type') or 'Resource')}</span>
         </li>
         """
@@ -5535,12 +5671,15 @@ def task_page(definition: dict, rows: list[dict]) -> str:
         lead_items = "<li><strong>Start with the shortcut cards above.</strong><span>No close inventory entry matched this task yet; submit one when a better local route is confirmed.</span></li>"
     route_cards = "\n".join(
         f"""
-        <article class="route-type-card {html_escape(card['class'])}">
+        <a class="route-type-card {html_escape(card['class'])}"
+           href="../network/index.html?q={quote_plus(card['query'])}#resource-results"
+           aria-label="Search the comprehensive {html_escape(card['label'])} directory">
           <span class="category-badge {html_escape(card['class'])}">{html_escape(card['label'])}</span>
           <h3>{html_escape(card['use'])}</h3>
           <p><strong>Prepare:</strong> {html_escape(card['prepare'])}</p>
           <p><strong>Check:</strong> {html_escape(card['check'])}</p>
-        </article>
+          <span class="route-type-card__action">Search {html_escape(card['label'])}</span>
+        </a>
         """
         for card in ROUTE_TYPE_CARDS
     )
@@ -5906,6 +6045,14 @@ def write_static_assets() -> None:
     }
     .path-card { padding: 24px; min-height: 260px; display: flex; flex-direction: column; text-decoration: none; }
     .task-link-card { min-height: 220px; }
+    .category-route-card {
+      display: flex;
+      min-height: 210px;
+      flex-direction: column;
+      color: inherit;
+      text-decoration: none;
+    }
+    .category-route-card > strong { margin-top: auto; color: var(--linked); }
     .path-card span, .step-card span { color: var(--clay); font-weight: 900; }
     .path-card p { color: var(--ink-soft); }
     .path-card strong { margin-top: auto; }
@@ -6299,9 +6446,17 @@ def write_static_assets() -> None:
       border-radius: var(--radius);
       background: rgba(255,255,255,0.82);
       box-shadow: 0 12px 28px rgba(23,48,71,0.06);
+      color: inherit;
+      text-decoration: none;
     }
     .route-type-card h3 { margin: 0; font-size: 1.02rem; }
     .route-type-card p { margin: 0; color: var(--ink-soft); }
+    .route-type-card__action {
+      align-self: end;
+      color: var(--linked);
+      font-size: 0.86rem;
+      font-weight: 900;
+    }
     .cat-events { --cat: #3b7f8f; border-color: rgba(59,127,143,0.34); background: rgba(183,219,228,0.38); }
     .cat-promotion { --cat: #b36b4f; border-color: rgba(179,107,79,0.35); background: rgba(199,127,97,0.18); }
     .cat-business { --cat: #5c8a63; border-color: rgba(92,138,99,0.36); background: rgba(139,170,124,0.22); }
@@ -6332,6 +6487,17 @@ def write_static_assets() -> None:
     .resource-more__body { display: grid; gap: 8px; }
     .resource-more__body > * { margin-top: 0; margin-bottom: 0; }
     .resource-item a { font-weight: 800; }
+    .entity-name-link {
+      color: inherit;
+      text-decoration-color: rgba(78,127,156,0.62);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .entity-name-link:hover,
+    .entity-name-link:focus-visible {
+      color: #315f79;
+      text-decoration-color: currentColor;
+    }
     .lead-list { columns: 2; gap: 40px; padding-left: 1.1rem; }
     .lead-list li { break-inside: avoid; margin: 0 0 12px; }
     .lead-list span { display: block; color: var(--ink-soft); }
@@ -7193,13 +7359,17 @@ def write_static_assets() -> None:
         links.push({ label, href: normalized });
       }
       splitList(item.website).forEach(url => add(linkLabel(url, "Website"), url));
+      splitList(item.source_url).forEach(url => add(linkLabel(url, item.website ? "Listing page" : "Website"), url));
+      splitList(item.url).forEach(url => add(linkLabel(url, "Listing page"), url));
+      (item.links || []).forEach(link => {
+        if (link && link.url) add(link.label || linkLabel(link.url, "Listing page"), link.url);
+      });
       splitList(item.contact_email).forEach(email => add("Email", `mailto:${email}`));
       splitList(item.contact_phone).forEach(phone => {
         const dial = phone.replace(/[^0-9+]/g, "");
         if (dial.length >= 7) add("Phone", `tel:${dial}`);
       });
       splitList(item.physical_address).forEach(address => add("Map", `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`));
-      splitList(item.source_url).forEach(url => add(linkLabel(url, item.website ? "Listing page" : "Website"), url));
       const labelTotals = links.reduce((counts, link) => {
         counts[link.label] = (counts[link.label] || 0) + 1;
         return counts;
@@ -7215,12 +7385,32 @@ def write_static_assets() -> None:
       });
     }
 
+    function bestEntityContact(item, explicitTitle = "") {
+      const direct = contactLinks(item)[0];
+      if (direct) return direct;
+      const title = explicitTitle || item.resource_name || item.title || item.channel || item.place || "regional resource";
+      const place = [item.town, item.county, item.state].filter(Boolean).join(" ");
+      const query = [title, place, "contact"].filter(Boolean).join(" ");
+      return {
+        label: "Search",
+        href: `https://www.google.com/search?q=${encodeURIComponent(query)}`
+      };
+    }
+
+    function entityNameMarkup(item, explicitTitle = "") {
+      const title = explicitTitle || item.resource_name || item.title || item.channel || item.place || "Unnamed resource";
+      const destination = bestEntityContact(item, title);
+      const opensNewWindow = !/^(mailto:|tel:)/i.test(destination.href);
+      const targetAttrs = opensNewWindow ? ' target="_blank" rel="noreferrer"' : "";
+      return `<a class="entity-name-link" href="${escapeHtml(destination.href)}"${targetAttrs} aria-label="Find contact information for ${escapeHtml(title)}">${escapeHtml(title)}</a>`;
+    }
+
     function contactLinkMarkup(item, { compact = false } = {}) {
       const links = contactLinks(item);
       if (!links.length) return `<span class="source-note">Send an update if you have a public contact path.</span>`;
       const visible = compact ? links.slice(0, 2) : links.slice(0, 7);
       return `<div class="resource-links">${visible.map(link => `
-        <a class="resource-contact-link" href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>
+        <a class="resource-contact-link" href="${escapeHtml(link.href)}"${/^(mailto:|tel:)/i.test(link.href) ? "" : ' target="_blank" rel="noreferrer"'}>${escapeHtml(link.label)}</a>
       `).join("")}</div>`;
     }
 
@@ -7299,7 +7489,7 @@ def write_static_assets() -> None:
       return `
         <article class="resource-item">
           <div class="resource-item__head">
-            <h3>${escapeHtml(item.resource_name || "Unnamed resource")}</h3>
+            <h3>${entityNameMarkup(item)}</h3>
           </div>
           <p class="resource-meta-line">${escapeHtml(metaParts.join(" - "))}</p>
           ${physicalIndicatorMarkup(item)}
@@ -7374,7 +7564,7 @@ def write_static_assets() -> None:
           <div class="assistant-result__meta">
             ${metaLabels.map((label, index) => `<span${index === 0 ? ' class="assistant-result__type"' : ""}>${escapeHtml(label)}</span>`).join("")}
           </div>
-          <h3>${escapeHtml(title)}</h3>
+          <h3>${entityNameMarkup(item, title)}</h3>
           ${physicalIndicatorMarkup(item)}
           <p class="assistant-result__description">${escapeHtml(description)}</p>
           ${nextStep ? `<p class="assistant-result__next"><strong>Next:</strong> ${escapeHtml(nextStep)}</p>` : ""}
@@ -8048,8 +8238,14 @@ def write_static_assets() -> None:
       let county = "All";
       let locationMode = "All";
       let visibleCount = directoryPageSize(18, 36);
-      const incomingQuery = new URLSearchParams(window.location.search).get("q");
+      const incomingParams = new URLSearchParams(window.location.search);
+      const incomingQuery = incomingParams.get("q");
+      const incomingLocation = incomingParams.get("location");
       if (incomingQuery) input.value = incomingQuery;
+      if (["Physical", "Flyers"].includes(incomingLocation)) {
+        locationMode = incomingLocation;
+        locationChips.forEach(chip => chip.classList.toggle("is-active", chip.dataset.locationFilter === locationMode));
+      }
       populateSelect(typeSelect, uniqueValues(DATA.resources, "public_listing_type"), "All types");
       populateSelect(accessSelect, uniqueValues(DATA.resources, "access_mode"), "All access modes");
       function resetVisibleCount() {

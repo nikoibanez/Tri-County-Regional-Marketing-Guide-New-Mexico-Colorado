@@ -5,7 +5,7 @@ Generated: 2026-07-23
 Status: **PASS**
 
 - HTML files: 25
-- Local references checked: 1857
+- Local references checked: 1914
 - Missing targets: 0
 - Missing anchors: 0
 - Targets escaping the publish directory: 0

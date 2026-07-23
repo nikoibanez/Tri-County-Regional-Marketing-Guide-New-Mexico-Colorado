@@ -12,7 +12,12 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 from audit_directory_quality import duplicate_groups, normalize_name  # noqa: E402
 from audit_internal_links import audit_site  # noqa: E402
-from build_netlify_deep_guide import inferred_listing_type, publishable_resource_row  # noqa: E402
+from build_netlify_deep_guide import (  # noqa: E402
+    ROUTE_TYPE_CARDS,
+    best_entity_contact_url,
+    inferred_listing_type,
+    publishable_resource_row,
+)
 from directory_exclusions import (  # noqa: E402
     filter_excluded_directory_rows,
     references_excluded_directory_entity,
@@ -81,6 +86,41 @@ class DirectoryQualityTests(unittest.TestCase):
 
         self.assertEqual([candidate["name"] for candidate in candidates], ["Allowed Gallery"])
 
+    def test_entity_contact_prefers_website_then_listing_page(self) -> None:
+        row = {
+            "resource_name": "Example Studio",
+            "website": "https://example-studio.org",
+            "source_url": "https://directory.example.org/example-studio",
+            "contact_email": "hello@example-studio.org",
+        }
+        self.assertEqual(best_entity_contact_url(row), "https://example-studio.org")
+        row["website"] = ""
+        self.assertEqual(best_entity_contact_url(row), "https://directory.example.org/example-studio")
+
+    def test_entity_contact_falls_back_through_email_phone_map_and_search(self) -> None:
+        self.assertEqual(
+            best_entity_contact_url({"resource_name": "Example Artist", "contact_email": "artist@example.org"}),
+            "mailto:artist@example.org",
+        )
+        self.assertEqual(
+            best_entity_contact_url({"resource_name": "Example Artist", "contact_phone": "(575) 555-0199"}),
+            "tel:5755550199",
+        )
+        self.assertIn(
+            "google.com/maps/search",
+            best_entity_contact_url({"resource_name": "Example Artist", "physical_address": "100 Main St, Raton, NM"}),
+        )
+        search_url = best_entity_contact_url(
+            {"resource_name": "Example Artist", "town": "Raton", "county": "Colfax", "state": "NM"}
+        )
+        self.assertIn("google.com/search", search_url)
+        self.assertIn("Example+Artist", search_url)
+
+    def test_every_route_color_card_opens_a_filtered_directory(self) -> None:
+        self.assertEqual(len(ROUTE_TYPE_CARDS), 5)
+        for card in ROUTE_TYPE_CARDS:
+            self.assertTrue(card.get("query"), card["label"])
+
 
 class InternalLinkTests(unittest.TestCase):
     def test_audit_site_detects_missing_target(self) -> None:
@@ -101,7 +141,10 @@ class InternalLinkTests(unittest.TestCase):
 
 class SiteSmokeTests(unittest.TestCase):
     def test_directory_assistant_asset_requires_guided_search_logic(self) -> None:
-        complete = "const ASSISTANT_INTENTS = []; assistantInterpretation(); data-assistant-followup"
+        complete = (
+            "const ASSISTANT_INTENTS = []; assistantInterpretation(); data-assistant-followup "
+            "bestEntityContact(); entityNameMarkup();"
+        )
         incomplete = "const ASSISTANT_INTENTS = []; assistantInterpretation();"
 
         self.assertEqual(validate_body("assets/app.js", complete), "")

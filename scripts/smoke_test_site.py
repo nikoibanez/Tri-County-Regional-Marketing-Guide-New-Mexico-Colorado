@@ -89,7 +89,13 @@ def validate_body(route: str, body: str) -> str:
     if suffix == ".csv":
         return "" if "," in body and "\n" in body else "CSV output is empty or malformed."
     if suffix == ".js":
-        required = ("const ASSISTANT_INTENTS", "assistantInterpretation", "data-assistant-followup")
+        required = (
+            "const ASSISTANT_INTENTS",
+            "assistantInterpretation",
+            "data-assistant-followup",
+            "bestEntityContact",
+            "entityNameMarkup",
+        )
         missing = [marker for marker in required if marker not in body]
         return f"Directory assistant JavaScript is missing: {', '.join(missing)}" if missing else ""
     lowered = body.casefold()
