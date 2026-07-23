@@ -33,6 +33,7 @@ def build_dashboard() -> dict:
     candidates = load_json(ROOT / "data" / "directory-auto-update-candidates.json")
     source_audit = load_json(ROOT / "review" / "update-audits" / "update-audit-latest.json")
     directory_watch = load_json(ROOT / "review" / "directory-watch" / "directory-watch-latest.json")
+    keyword_sweep = load_json(ROOT / "review" / "keyword-sweep" / "keyword-sweep-latest.json")
     quality = load_json(DEFAULT_OUT_DIR / "directory-quality-latest.json")
     link_audit = load_json(DEFAULT_OUT_DIR / "internal-link-audit-latest.json")
 
@@ -41,6 +42,7 @@ def build_dashboard() -> dict:
     quality_summary = quality.get("canonical_source") or {}
     public_quality = quality.get("published_directory") or quality.get("consolidated_directory") or {}
     link_summary = link_audit.get("summary") or {}
+    keyword_summary = keyword_sweep.get("summary") or {}
     action_queue = []
 
     def add_action(count: int, label: str, next_action: str, priority: str) -> None:
@@ -83,6 +85,18 @@ def build_dashboard() -> dict:
         "Review only after the linked priority queue; do not publish from page text alone.",
         "low",
     )
+    add_action(
+        int(keyword_summary.get("entries_changed") or 0),
+        "listing keyword sets proposed for review",
+        "Review additions and removals in the latest keyword-sweep report before merging the keyword index.",
+        "medium",
+    )
+    add_action(
+        int(keyword_summary.get("urls_failed") or 0),
+        "keyword source pages needing attention",
+        "Open failed pages normally before removing retained source-derived keywords.",
+        "low",
+    )
 
     return {
         "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -92,6 +106,7 @@ def build_dashboard() -> dict:
             "consolidated_directory_entries": count_csv(ROOT / "data" / "directory_of_absolutely_everything.csv"),
             "registered_update_sources": int((registry.get("counts") or {}).get("records") or 0),
             "deep_watch_sources": int(candidate_summary.get("sources_watched") or candidate_summary.get("sources") or 0),
+            "keyword_index_entries": len((load_json(ROOT / "data" / "listing-keyword-index.json").get("entries") or {})),
         },
         "latest_checks": {
             "directory_quality": quality.get("status") or "not run",
@@ -101,6 +116,8 @@ def build_dashboard() -> dict:
             "watch_pages_checked": int(candidate_summary.get("pages_checked") or 0),
             "watch_pages_failed": int(candidate_summary.get("pages_failed") or 0),
             "priority_new_leads": int(candidate_summary.get("priority_new_leads") or 0),
+            "keyword_urls_checked": int(keyword_summary.get("urls_checked") or 0),
+            "keyword_entries_changed": int(keyword_summary.get("entries_changed") or 0),
         },
         "action_queue": sorted(action_queue, key=lambda item: ({"high": 0, "medium": 1, "low": 2}[item["priority"]], -item["count"])),
     }
@@ -122,6 +139,7 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- Consolidated directory entries: {inventory['consolidated_directory_entries']}",
         f"- Registered update sources: {inventory['registered_update_sources']}",
         f"- Deep-watch source groups: {inventory['deep_watch_sources']}",
+        f"- Listing keyword index entries: {inventory['keyword_index_entries']}",
         "",
         "## Latest Checks",
         "",
@@ -132,6 +150,8 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- Deep-watch pages checked: {checks['watch_pages_checked']}",
         f"- Deep-watch pages failed: {checks['watch_pages_failed']}",
         f"- Priority new leads: {checks['priority_new_leads']}",
+        f"- Keyword source URLs checked: {checks['keyword_urls_checked']}",
+        f"- Keyword sets proposed for review: {checks['keyword_entries_changed']}",
         "",
         "## Action Queue",
         "",

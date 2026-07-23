@@ -6,7 +6,7 @@ Automation may propose updates. Human approval is required for public claims, el
 
 ## Counts
 
-- Records: 123
+- Records: 126
 - Human approval required: 57
 - Manual verification needed: 1
 
@@ -30,6 +30,7 @@ Automation may propose updates. Human approval is required for public claims, el
 - [GrowRaton](https://www.growraton.org/) - Colfax; directory; every 30 days; standard_review; last checked 2026-07-22; ok; next 2026-08-21
 - [GrowRaton Commercial Properties](https://www.growraton.org/properties/) - Colfax; directory; every 30 days; standard_review; last checked 2026-07-22; ok; next 2026-08-21
 - [New Mexico Small Business Assistance Program](https://nmsbaprogram.org/) - Colfax; directory; every 30 days; standard_review; last checked 2026-07-22; ok; next 2026-08-21
+- [New Mexico True Northeast and Raton Guide](https://www.newmexico.org/places-to-visit/regions/northeast/raton/) - Colfax; directory; every 30 days; standard_review; not checked yet
 - [NM Creative Industries Resource Center](https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/) - Colfax; directory; every 30 days; standard_review; last checked 2026-07-22; ok; next 2026-08-21
 - [RAIN Colfax Business Licenses](https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-07-22; ok; next 2026-08-21
 - [Raton Arts and Cultural District](https://www.nmartsandculturaldistricts.org/raton/) - Colfax; directory; every 30 days; standard_review; last checked 2026-07-22; ok; next 2026-08-21
@@ -50,6 +51,7 @@ Automation may propose updates. Human approval is required for public claims, el
 - [Colorado Nonprofit Association Directory](https://coloradononprofits.org/member-resources/nonprofit-member-directory/) - Regional; directory; every 30 days; standard_review; last checked 2026-07-22; ok; next 2026-08-21
 - [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; every 30 days; standard_review; last checked 2026-07-22; manual_review; next 2026-08-21
 - [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; every 30 days; standard_review; last checked 2026-07-22; manual_review; next 2026-08-21
+- [Colorado Vacation Directory](https://www.coloradodirectory.com/) - Regional; directory; every 30 days; standard_review; not checked yet
 - [Finance New Mexico Regional Economic Development Organizations](https://financenewmexico.org/resources/general-business-assistance/regional-economic-development-organizations/) - Regional; directory; every 30 days; standard_review; last checked 2026-07-22; ok; next 2026-08-21
 - [New Mexico Business Portal](https://biz.nm.gov/business-navigator/licenses-and-permits/) - Regional; directory; every 30 days; human_approval_required; last checked 2026-07-22; ok; next 2026-08-21
 - [New Mexico Small Business Development Center](https://www.nmsbdc.org/) - Regional; directory; every 30 days; standard_review; last checked 2026-07-22; ok; next 2026-08-21
@@ -131,6 +133,7 @@ Automation may propose updates. Human approval is required for public claims, el
 - [Tax Exempt World Colfax County Organizations](https://www.taxexemptworld.com/organizations/colfax-county-nm-new-mexico.asp) - Colfax; general; every 30 days; standard_review; last checked 2026-07-22; ok; next 2026-08-21
 - [Spanish Peaks Library Community Links](https://www.spld.org/connect/community-links/) - Huerfano; general; every 30 days; standard_review; last checked 2026-07-22; ok; next 2026-08-21
 - [Las Animas County Government](https://lasanimascounty.colorado.gov/) - Las Animas; general; every 90 days; standard_review; last checked 2026-07-22; manual_review; next 2026-10-20
+- [Visit Trinidad Outdoor Recreation](https://visittrinidadcolorado.com/outdoor-recreation/) - Las Animas; general; every 30 days; standard_review; not checked yet
 - [El Raton Media Works Local Businesses](https://www.elratonmediaworks.org/local-businesses) - Colfax; media; every 30 days; standard_review; last checked 2026-07-22; ok; next 2026-08-21
 - [World Journal Services Directory](https://worldjournalnewspaper.com/services/) - Huerfano; media; every 30 days; human_approval_required; last checked 2026-07-22; ok; next 2026-08-21
 - [The Chronicle-News](https://www.thechronicle-news.com/) - Las Animas; media; every 7 days; human_approval_required; last checked 2026-07-22; ok; next 2026-07-29

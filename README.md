@@ -32,6 +32,7 @@ This repo includes a no-secret maintenance system. Deterministic scripts build, 
 - `scripts/build_update_source_registry.py` - builds the monitoring registry from public guide data.
 - `scripts/audit_update_sources.py` - checks monitored URLs and writes review reports.
 - `scripts/weekly_directory_query_check.py` - checks fifteen high-signal directory, tourism, events, food, venue, and chamber sources and writes an internal candidate-review queue.
+- `scripts/sweep_listing_keywords.py` - refreshes controlled search-keyword suggestions from canonical fields and current public-page title, metadata, and heading signals.
 - `scripts/audit_ui_accessibility.py` - checks generated HTML/CSS/JS for accessibility regressions in the assistant, skip link, images, and music bar.
 - `scripts/normalize_netlify_submissions.py` - turns exported Netlify form submissions into a human review report.
 - `scripts/audit_directory_quality.py` - blocks duplicate, non-entity, placeholder-description, and missing-metadata regressions.
@@ -41,11 +42,13 @@ This repo includes a no-secret maintenance system. Deterministic scripts build, 
 - `.github/workflows/quality-gate.yml` - builds and runs all deterministic checks on pull requests and pushes.
 - `.github/workflows/source-audit.yml` - checks the complete source registry and opens a review pull request.
 - `.github/workflows/weekly-directory-query-check.yml` - checks fifteen high-signal source groups and opens a candidate-review pull request.
+- `.github/workflows/weekly-listing-keyword-sweep.yml` - rotates through public listing pages and opens a review pull request for search-keyword changes.
 - `.github/workflows/live-site-smoke-test.yml` - checks the configured live site and opens or updates a failure issue.
 - `.github/workflows/monthly-maintenance-snapshot.yml` - stores a canonical deploy zip, checksum, data files, and reports as a 90-day artifact.
 - `.github/workflows/codex-update-proposal.yml` - disabled-by-default Codex proposal workflow.
 - `docs/command-checklist.md` - local build, QA, grants-audit, GitHub, and Netlify commands.
 - `docs/weekly-directory-query-check.md` - weekly business-directory watcher documentation.
+- `docs/weekly-listing-keyword-sweep.md` - keyword taxonomy, rotation, review, and failure-retention rules.
 - `docs/maintenance-automation.md` - schedules, review boundaries, and account settings for the no-secret maintenance system.
 - `docs/agentic-update-methodology.md` - governance and operating model.
 - `docs/netlify-github-deploy.md` - Netlify-from-GitHub deployment path.

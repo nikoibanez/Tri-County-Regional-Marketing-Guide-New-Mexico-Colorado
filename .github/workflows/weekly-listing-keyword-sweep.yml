@@ -1,0 +1,88 @@
+name: Weekly listing keyword sweep
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_limit:
+        description: Maximum distinct public pages to inspect
+        required: false
+        default: "120"
+        type: string
+  schedule:
+    - cron: "41 15 * * 3"
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: weekly-listing-keyword-sweep
+  cancel-in-progress: false
+
+jobs:
+  keyword-sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Refresh controlled listing keywords
+        env:
+          SOURCE_LIMIT: ${{ inputs.source_limit || '120' }}
+        run: python scripts/sweep_listing_keywords.py --limit "$SOURCE_LIMIT" --write-index
+
+      - name: Build and validate the proposed search index
+        run: |
+          python tools/build_netlify_deep_guide.py
+          python scripts/audit_directory_quality.py --fail-on-blocking
+          python scripts/audit_internal_links.py --fail-on-broken
+          python scripts/smoke_test_site.py
+          python scripts/build_maintenance_dashboard.py
+
+      - name: Prepare keyword-review pull request
+        id: review
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/listing-keyword-index.json
+          git add review/keyword-sweep/keyword-sweep-latest.json review/keyword-sweep/keyword-sweep-latest.md
+          git add review/maintenance/maintenance-dashboard-latest.json review/maintenance/maintenance-dashboard-latest.md
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            branch="automation/keyword-sweep-${GITHUB_RUN_ID}"
+            git switch -c "$branch"
+            git commit -m "Refresh listing search keywords"
+            git push --set-upstream origin "$branch"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open keyword-review pull request
+        if: steps.review.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEW_BRANCH: ${{ steps.review.outputs.branch }}
+        run: |
+          body="This automated pull request refreshes controlled search keywords from canonical listing fields and current public-page title, metadata, and heading signals. It does not rewrite listing names, descriptions, contacts, eligibility, rates, deadlines, or legal guidance. Review noisy additions and removals before merging."
+          if ! gh pr create --base master --head "$REVIEW_BRANCH" --title "Review refreshed listing search keywords" --body "$body"; then
+            gh issue create --title "Listing keyword review branch is ready" --body "$body Branch: $REVIEW_BRANCH"
+          fi
+
+      - name: Upload keyword-sweep report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tri-county-keyword-sweep-${{ github.run_id }}
+          retention-days: 30
+          path: |
+            review/keyword-sweep/keyword-sweep-latest.json
+            review/keyword-sweep/keyword-sweep-latest.md
+            review/maintenance/

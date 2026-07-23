@@ -46,9 +46,13 @@ jobs:
           scripts/audit_internal_links.py
           scripts/build_maintenance_dashboard.py
           scripts/smoke_test_site.py
+          scripts/sweep_listing_keywords.py
 
       - name: Run maintenance unit checks
         run: python -m unittest discover -s tests -p "test_*.py"
+
+      - name: Validate keyword sweep without network access
+        run: python scripts/sweep_listing_keywords.py --no-network
 
       - name: Check generated JavaScript
         run: node --check dist/tri-county-netlify-guide-deep/assets/app.js

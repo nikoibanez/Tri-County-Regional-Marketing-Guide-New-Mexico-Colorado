@@ -15,6 +15,7 @@ Run:
 python tools/build_netlify_deep_guide.py
 python scripts/build_update_source_registry.py
 python scripts/audit_update_sources.py --limit 120
+python scripts/sweep_listing_keywords.py --no-network
 ```
 
 ## Publication Rules
@@ -44,6 +45,8 @@ Automations should default to:
 3. Write a report.
 4. Open or draft a reviewable change.
 5. Wait for human approval before production publication.
+
+Listing keyword automation may update the review index from controlled public-page signals, but it must preserve previous source keywords on fetch failure and use a review pull request before changing production search behavior.
 
 ## Ponytail Review Rule
 

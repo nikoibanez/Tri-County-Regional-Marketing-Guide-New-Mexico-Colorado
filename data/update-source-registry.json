@@ -3,7 +3,7 @@
   "source": "dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
   "review_policy": "Automation may propose updates. Human approval is required for public claims, eligibility, rates, deadlines, contact changes, listing removal, and civic/legal guidance.",
   "counts": {
-    "records": 123,
+    "records": 126,
     "human_approval_required": 57,
     "manual_verification_needed": 1
   },
@@ -347,6 +347,25 @@
       "review_level": "standard_review",
       "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
       "reader_action": "Use when a product, process, testing, design, or technical barrier is blocking business growth; note that this is assistance, not cash.",
+      "last_check_status": "ok",
+      "last_status_code": 200
+    },
+    {
+      "id": "directory-new-mexico-true-northeast-and-raton-guide-6d31bcbc",
+      "source_group": "directory_sources",
+      "title": "New Mexico True Northeast and Raton Guide",
+      "county": "Colfax",
+      "category": "State tourism guide",
+      "url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
+      "host": "newmexico.org",
+      "update_domain": "directory",
+      "cadence_days": 30,
+      "last_checked": "2026-07-22",
+      "next_check": "2026-08-21",
+      "verification_status": "Source-linked lead",
+      "review_level": "standard_review",
+      "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+      "reader_action": "Use it as a visitor-discovery route, then open the named attraction or business page for current contact information.",
       "last_check_status": "ok",
       "last_status_code": 200
     },
@@ -729,6 +748,25 @@
       "reader_action": "Use for Las Animas and Huerfano businesses needing technical assistance.",
       "last_check_status": "manual_review",
       "last_status_code": 403
+    },
+    {
+      "id": "directory-colorado-vacation-directory-d6477c77",
+      "source_group": "directory_sources",
+      "title": "Colorado Vacation Directory",
+      "county": "Regional",
+      "category": "Visitor and recreation directory",
+      "url": "https://www.coloradodirectory.com/",
+      "host": "coloradodirectory.com",
+      "update_domain": "directory",
+      "cadence_days": 30,
+      "last_checked": "2026-07-22",
+      "next_check": "2026-08-21",
+      "verification_status": "Source-linked lead",
+      "review_level": "standard_review",
+      "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+      "reader_action": "Use the directory to discover possible visitor channels, then confirm each business or destination through its own current website before outreach.",
+      "last_check_status": "ok",
+      "last_status_code": 200
     },
     {
       "id": "directory-finance-new-mexico-regional-economic-development-organ-e0ac24fd",
@@ -2270,6 +2308,23 @@
       "last_status_code": 403
     },
     {
+      "id": "directory-visit-trinidad-outdoor-recreation-76636c83",
+      "source_group": "directory_sources",
+      "title": "Visit Trinidad Outdoor Recreation",
+      "county": "Las Animas",
+      "category": "Tourism activity guide",
+      "url": "https://visittrinidadcolorado.com/outdoor-recreation/",
+      "host": "visittrinidadcolorado.com",
+      "update_domain": "general",
+      "cadence_days": 30,
+      "last_checked": null,
+      "next_check": "2026-07-22",
+      "verification_status": "Source-linked lead",
+      "review_level": "standard_review",
+      "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+      "reader_action": "Use the guide to identify activity categories, then contact the named operator, park, or public office directly."
+    },
+    {
       "id": "directory-el-raton-media-works-local-businesses-5668309c",
       "source_group": "directory_sources",
       "title": "El Raton Media Works Local Businesses",
@@ -2345,5 +2400,6 @@
       "last_check_status": "ok",
       "last_status_code": 200
     }
-  ]
+  ],
+  "maintenance_updated_at": "2026-07-22"
 }

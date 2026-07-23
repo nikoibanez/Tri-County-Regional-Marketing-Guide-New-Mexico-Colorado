@@ -28,6 +28,7 @@ SOURCE_JSON = REPO_DATA / "tri_county_persona_resources.json"
 if not SOURCE_JSON.exists():
     SOURCE_JSON = DOWNLOADS / "tri_county_persona_resources.json"
 EVERYTHING_DIRECTORY_JSON = REPO_DATA / "directory_of_absolutely_everything.json"
+LISTING_KEYWORD_INDEX_JSON = REPO_DATA / "listing-keyword-index.json"
 REAUDIT_NOTES = DOWNLOADS / "tri_county_reaudit" / "comprehensive_reaudit_source_notes.md"
 NEW_PDF_EXTRACT_DIR = DOWNLOADS / "tri_county_new_pdf_extract_20260621"
 BUILD_DATE = os.environ.get("BUILD_DATE", date.today().isoformat())
@@ -237,6 +238,33 @@ CURRENT_LEADS = [
 
 
 DIRECTORY_SOURCES = [
+    {
+        "title": "Colorado Vacation Directory",
+        "county": "Regional",
+        "kind": "Visitor and recreation directory",
+        "url": "https://www.coloradodirectory.com/",
+        "best_for": "Finding visitor-oriented lodging, recreation, dining, and attraction pages that may include Huerfano and Las Animas County destinations.",
+        "action": "Use the directory to discover possible visitor channels, then confirm each business or destination through its own current website before outreach.",
+        "confidence": "Medium",
+    },
+    {
+        "title": "New Mexico True Northeast and Raton Guide",
+        "county": "Colfax",
+        "kind": "State tourism guide",
+        "url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
+        "best_for": "Finding state tourism context, attractions, scenic routes, and visitor ideas connected to Raton and northeastern New Mexico.",
+        "action": "Use it as a visitor-discovery route, then open the named attraction or business page for current contact information.",
+        "confidence": "High",
+    },
+    {
+        "title": "Visit Trinidad Outdoor Recreation",
+        "county": "Las Animas",
+        "kind": "Tourism activity guide",
+        "url": "https://visittrinidadcolorado.com/outdoor-recreation/",
+        "best_for": "Finding Trinidad-area parks, trails, riding, cycling, fishing, camping, and other outdoor visitor interests.",
+        "action": "Use the guide to identify activity categories, then contact the named operator, park, or public office directly.",
+        "confidence": "High",
+    },
     {
         "title": "LocalStash / Weekender regional events",
         "county": "Regional",
@@ -1964,12 +1992,61 @@ PLACE_ONLY_LISTING_NAMES = {
 
 
 NON_ENTITY_RESOURCE_NAMES = {
+    "adventure guide",
+    "architecture",
+    "atv/utving",
+    "calendars of events",
+    "camping",
     "community groups and digital bulletin boards",
+    "contact us",
+    "cross-country ski",
+    "cross-country skiing",
+    "downhill skiing & snowboarding",
+    "entertainment",
+    "fishing",
+    "fishing & fly fishing",
+    "get your new mexico true",
+    "golf",
+    "golfing",
+    "gravel cycling",
+    "greenhorn valley",
+    "hiking",
+    "horse riding",
+    "horseback riding",
+    "hot springs",
+    "hunting",
+    "hunting & land leases",
+    "jeeping & 4wd",
+    "links",
+    "local parks",
     "main street/chamber pages",
+    "more attractions",
+    "mountain biking",
+    "national parks",
+    "national parks, monuments & historic sites",
     "official city/county pages",
+    "other sports",
+    "outdoor adventures",
+    "rafting/kayaking",
+    "restaurants",
+    "restaurants & dining",
+    "skiing/boarding",
+    "snowmobiling",
+    "snowshoeing",
+    "stonewall",
+    "subscribe for fresh",
+    "tap into creativity",
+    "the colorado directory, inc.",
     "tourism offices and visitor-facing pages",
     "tourism pages",
     "tourism websites, google business profiles, social pages, and email newsletters",
+    "vacation ideas",
+    "visual arts",
+    "water sports",
+    "weddings & elope",
+    "weddings & elopements",
+    "whitewater rafting & kayaking",
+    "winter lodging",
 }
 
 
@@ -2097,6 +2174,28 @@ def split_semicolon(value: object) -> list[str]:
     return [part.strip() for part in str(value or "").split(";") if part.strip()]
 
 
+def load_listing_keyword_index() -> dict[str, dict]:
+    if hasattr(load_listing_keyword_index, "_cache"):
+        return getattr(load_listing_keyword_index, "_cache")
+    entries: dict[str, dict] = {}
+    if LISTING_KEYWORD_INDEX_JSON.exists():
+        try:
+            payload = json.loads(LISTING_KEYWORD_INDEX_JSON.read_text(encoding="utf-8"))
+            raw_entries = payload.get("entries", {})
+            if isinstance(raw_entries, dict):
+                entries = {str(key): value for key, value in raw_entries.items() if isinstance(value, dict)}
+        except (OSError, json.JSONDecodeError):
+            entries = {}
+    setattr(load_listing_keyword_index, "_cache", entries)
+    return entries
+
+
+def listing_keyword_terms(row: dict) -> list[str]:
+    entry = load_listing_keyword_index().get(clean_text(row.get("id")), {})
+    keywords = entry.get("keywords", [])
+    return [clean_text(keyword) for keyword in keywords if clean_text(keyword)]
+
+
 def normalize_goal_relevance(value: object) -> str:
     goals = []
     for part in split_semicolon(value):
@@ -2195,12 +2294,14 @@ def dedupe_resource_rows(rows: list[dict]) -> list[dict]:
 
 def inferred_listing_type(row: dict) -> str:
     name = clean_text(row.get("resource_name"))
+    note = "" if generic_note(row) else clean_text(row.get("notes"))
     text = " ".join(
         [
             name,
             clean_text(row.get("category")),
             clean_text(row.get("resource_type")),
-            clean_text(row.get("notes")),
+            " ".join(listing_keyword_terms(row)),
+            note,
         ]
     ).casefold()
     category = clean_text(row.get("category"))
@@ -2243,15 +2344,30 @@ def organization_tags(row: dict) -> list[str]:
 
 def public_search_keywords(row: dict) -> str:
     keywords = []
-    for field in ["resource_name", "alternate_names", "town", "county", "state", "category", "resource_type", "access_mode"]:
-        value = clean_text(row.get(field))
+    listing_type = clean_text(row.get("public_listing_type")) or inferred_listing_type(row)
+    category = clean_text(row.get("public_category")) or compact_category_label(row, listing_type)
+    values = [
+        row.get("resource_name"),
+        row.get("alternate_names"),
+        row.get("town"),
+        row.get("county"),
+        row.get("state"),
+        category,
+        listing_type,
+        row.get("access_mode"),
+    ]
+    for raw_value in values:
+        value = clean_text(raw_value)
         if value and value not in keywords:
             keywords.append(value)
-    for value in [inferred_listing_type(row), public_best_for(row)]:
+    for value in [listing_type, public_best_for(row)]:
         if value and value not in keywords:
             keywords.append(value)
     for part in split_semicolon(normalize_goal_relevance(row.get("goal_relevance"))) + split_semicolon(row.get("audience_served")) + organization_tags(row):
         if part and part not in keywords:
+            keywords.append(part)
+    for part in listing_keyword_terms(row):
+        if part not in keywords:
             keywords.append(part)
     if is_physical_ad_candidate(row):
         for part in ["Ask about flyers", "physical ads", "posters", "rack cards", "bulletin boards", "front-desk referrals"]:
@@ -2356,23 +2472,24 @@ def listing_description_from_context(row: dict, listing_type: str, place: str) -
     name = clean_text(row.get("resource_name")) or "This listing"
     category = compact_category_label(row, listing_type)
     base_by_type = {
-        "Funding & support": "Funding, grant, scholarship, stipend, loan, training, or support resource",
-        "Arts & culture": "Artist, gallery, studio, maker, venue, cultural group, or creative-sector listing",
-        "Media & news": "Media, newspaper, radio, newsletter, social page, or public information channel",
-        "Events & venues": "Event, venue, calendar, festival, performance, or public gathering route",
-        "Lodging & stays": "Lodging, campground, vacation rental, inn, hotel, or visitor-stay listing",
-        "Food & drink": "Restaurant, cafe, bakery, bar, brewery, catering, or food-related listing",
-        "Retail & local goods": "Retail, shop-local, mercantile, market, gift, grocery, or local goods listing",
-        "Tourism & visitor info": "Visitor-facing tourism, travel, chamber, destination, or local discovery listing",
-        "Outdoor recreation": "Outdoor recreation, trail, guide, park, ski, golf, camping, or visitor activity listing",
-        "Business support": "Business-support, entrepreneurship, workforce, training, technical-assistance, or economic-development route",
-        "Education & learning": "School, library, workshop, class, training, or education listing",
-        "Health & wellness": "Health, wellness, medical, dental, pharmacy, beauty, salon, or personal-care listing",
-        "Nonprofit & community": "Nonprofit, faith, civic, service, community, or referral organization",
-        "Public offices": "City, county, town, village, district, public office, or civic-information route",
-        "Auto & transportation": "Auto, transportation, fuel, tire, car wash, or travel-service listing",
-        "Home, land & contracting": "Construction, contractor, home, land, garden, repair, welding, or property-service listing",
-        "Professional services": "Professional, financial, real-estate, insurance, accounting, legal, property, or business-service listing",
+        "Funding & support": "Funding or support resource",
+        "Arts & culture": "Arts, culture, or creative-sector listing",
+        "Media & news": "Media or public-information channel",
+        "Events & venues": "Event, venue, or calendar listing",
+        "Lodging & stays": "Lodging or visitor-stay listing",
+        "Food & drink": "Food or drink business",
+        "Retail & local goods": "Retail or local-goods business",
+        "Tourism & visitor info": "Tourism or visitor-information listing",
+        "Outdoor recreation": "Outdoor recreation or visitor-activity listing",
+        "Business support": "Business or workforce-support resource",
+        "Education & learning": "Education or learning resource",
+        "Health & wellness": "Health, wellness, or personal-care listing",
+        "Nonprofit & community": "Nonprofit or community organization",
+        "Public offices": "Public office or civic-information route",
+        "Auto & transportation": "Auto or transportation listing",
+        "Home, land & contracting": "Home, land, or contracting service",
+        "Professional services": "Professional or business-service listing",
+        "Local business or service": "Local business or service",
     }.get(listing_type, "Local business, organization, program, service, or regional resource")
     best_for = public_best_for(row)
     best_phrase = best_for.replace("; ", ", ")
@@ -2756,11 +2873,12 @@ def enrich_resource_row(row: dict) -> dict:
     layer = infer_public_layer(row)
     enriched = dict(row)
     enriched["goal_relevance"] = normalize_goal_relevance(enriched.get("goal_relevance"))
+    enriched["public_listing_type"] = inferred_listing_type(enriched)
+    enriched["public_category"] = compact_category_label(enriched, enriched["public_listing_type"])
     enriched["public_description"] = public_description(enriched)
     enriched["public_keywords"] = public_search_keywords(enriched)
     enriched["public_audience_tags"] = "; ".join(organization_tags(enriched))
     enriched["public_org_tags"] = enriched["public_audience_tags"]
-    enriched["public_listing_type"] = inferred_listing_type(enriched)
     enriched["public_best_for"] = public_best_for(enriched)
     enriched["has_physical_location"] = as_bool_text(has_physical_location(enriched))
     enriched["physical_ad_candidate"] = as_bool_text(is_physical_ad_candidate(enriched))
@@ -2973,6 +3091,8 @@ def public_data_item(item: dict) -> dict:
             value = item["public_description"]
         if key == "resource_type" and clean_text(item.get("public_listing_type")):
             value = item["public_listing_type"]
+        if key == "category" and clean_text(item.get("public_category")):
+            value = item["public_category"]
         public_item[key] = public_text_value(value)
     return public_item
 
@@ -3873,7 +3993,7 @@ def page_shell(
     music_bar = f"""
           <details class="music-bar" data-music-bar aria-label="Regional sound player">
             <summary class="music-summary">
-              <span>Regional sound</span>
+              <span><span class="music-label-prefix">Regional </span>sound</span>
               <span class="music-status" data-music-status>Off</span>
             </summary>
             <div class="music-panel">
@@ -3942,7 +4062,7 @@ def page_shell(
           <script defer src="{rel('assets/app.js', depth)}"></script>
           <script type="application/ld+json">{structured_data}</script>
         </head>
-        <body>
+        <body class="page-{html_escape(active)}">
           <a class="skip-link" href="#main">Skip to content</a>
           {audio_markup}
           {intro_curtain}
@@ -4234,33 +4354,86 @@ def network_page(rows: list[dict]) -> str:
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">Find the Network</p>
-      <h1>Use the directories that already save time.</h1>
-      <p class="lede">Search high-value public shortcuts first, then filter {row_count} local listings by county, place, type, or access.</p>
+      <h1>Search the regional directory.</h1>
+      <p class="lede">Search {row_count} local listings, or use a directory shortcut to widen the search.</p>
+      <nav class="directory-jumpbar" aria-label="Directory page sections">
+        <a class="button button-primary" href="#local-listings">Local listings</a>
+        <a class="button button-soft" href="#directory-shortcuts">Directory shortcuts</a>
+      </nav>
     </section>
-    <section class="section">
+    <section id="local-listings" class="section tinted">
       <div class="section-heading">
-        <p class="eyebrow">Persona routes</p>
-        <h2>Start from the person doing the work.</h2>
-        <p class="section-note">A new business, a gallery, a nonprofit, and a mentor program do not need the same first contact. Use these role shortcuts first, then narrow the local list by county, resource type, or access mode.</p>
+        <p class="eyebrow">Local listings</p>
+        <h2>Find a local listing.</h2>
+        <p class="section-note">Search by name, town, county, service, audience, or task. Results are alphabetical until you apply another filter.</p>
       </div>
-      {persona_route_controls(1)}
-      {download_buttons(1)}
+      <div class="tool-panel directory-search-panel">
+        <div>
+          <label for="resource-search">Search {row_count} local entries</label>
+          <input id="resource-search" class="search-input" type="search" placeholder="Try bakery, gallery, grant, library, Raton, Trinidad...">
+        </div>
+        <details class="directory-filter-details" open>
+          <summary>Filters <span id="resource-filter-summary">All listings</span></summary>
+          <div class="directory-filter-body">
+            <div class="advanced-filters" aria-label="Detailed resource filters">
+              <div>
+                <label for="resource-type-filter">Resource type</label>
+                <select id="resource-type-filter"><option value="All">All types</option></select>
+              </div>
+              <div>
+                <label for="access-mode-filter">Access mode</label>
+                <select id="access-mode-filter"><option value="All">All access modes</option></select>
+              </div>
+            </div>
+            <div>
+              <span class="filter-label">Location access</span>
+              <div id="physical-location-filter" class="filter-row" aria-label="Physical location filters">
+                <button class="chip is-active" data-location-filter="All">All listings</button>
+                <button class="chip" data-location-filter="Physical">Physical locations</button>
+                <button class="chip" data-location-filter="Flyers">Ask about flyers</button>
+              </div>
+            </div>
+            <div>
+              <span class="filter-label">County</span>
+              <div class="filter-row" aria-label="Resource filters">
+                <button class="chip is-active" data-resource-filter="All">All</button>
+                <button class="chip" data-resource-filter="Colfax">Colfax</button>
+                <button class="chip" data-resource-filter="Las Animas">Las Animas</button>
+                <button class="chip" data-resource-filter="Huerfano">Huerfano</button>
+                <button class="chip" data-resource-filter="Regional">Regional</button>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+      <details class="marker-help">
+        <summary>What the location labels mean</summary>
+        <div class="marker-legend" aria-label="Directory marker legend">
+          <span class="listing-marker listing-marker--physical">Physical location</span>
+          <span>{physical_location_count} listings include a map-able or street-style location.</span>
+          <span class="listing-marker listing-marker--ad">Ask about flyers</span>
+          <span>{physical_ad_count} listings may be useful places to ask about physical materials. Ask first; the guide does not imply permission.</span>
+        </div>
+      </details>
+      <p id="resource-results-note" class="section-note" aria-live="polite">Search by town, county, resource type, audience, keyword, or task.</p>
+      <div id="resource-results" class="resource-list"></div>
+      <div class="directory-more-row">
+        <button id="resource-load-more" class="button button-soft" type="button" hidden>Show more listings</button>
+      </div>
+      <div class="section-actions directory-secondary-actions">
+        <a class="button button-soft" href="../appendix/index.html">Open table view</a>
+        <a class="button button-soft" href="../submit/index.html">Correct a listing</a>
+      </div>
     </section>
-    <section class="section tinted">
+    <section id="directory-shortcuts" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Keep it current</p>
-        <h2>If something has changed, send the update path.</h2>
+        <p class="eyebrow">Directory shortcuts</p>
+        <h2>Use an existing regional source instead of rebuilding its list.</h2>
+        <p class="section-note">{source_group_count} grouped cards connect to {len(DIRECTORY_SOURCES)} chamber, calendar, visitor, funding, media, arts, and public-information routes.</p>
       </div>
-      <div class="two-col">
-        <p>The guide keeps useful links and contact routes visible so users have a starting point. Before spending money, printing materials, or promising placement, use the listed page or contact route for current rules.</p>
-        <p>If a link is outdated, a business moved, or a better submission path exists, use the correction form and include the public page that should be used.</p>
-      </div>
-      <div class="section-actions"><a class="button button-primary" href="../submit/index.html">Submit a correction</a></div>
-    </section>
-    <section class="section">
       <div class="tool-panel">
         <div>
-          <label for="source-search">Search grouped directory shortcuts</label>
+          <label for="source-search">Search directory shortcuts</label>
           <input id="source-search" class="search-input" type="search" placeholder="Try chamber, event, media, nonprofit, artist, funding...">
         </div>
         <div class="filter-row" aria-label="County filters">
@@ -4271,53 +4444,21 @@ def network_page(rows: list[dict]) -> str:
           <button class="chip" data-source-filter="Regional">Regional</button>
         </div>
       </div>
-      <p id="source-results-note" class="section-note">{top_group_count} priority shortcut groups are shown first. Search or choose a county to inspect all {source_group_count} grouped cards covering {len(DIRECTORY_SOURCES)} individual shortcut routes.</p>
+      <p id="source-results-note" class="section-note" aria-live="polite">{top_group_count} priority shortcut groups are available. Search or choose a county to inspect all {source_group_count} groups.</p>
       <div id="source-results" class="source-grid"></div>
+      <div class="directory-more-row">
+        <button id="source-load-more" class="button button-soft" type="button" hidden>Show more shortcuts</button>
+      </div>
     </section>
-    <section class="section tinted">
-      <div class="section-heading">
-        <p class="eyebrow">Listings</p>
-        <h2>Search the local inventory by name, place, audience, and task.</h2>
-        <p class="section-note">Use the physical filters when you need places a person can visit, call, map, or ask about leaving a flyer, poster, brochure, rack card, or small stack of handouts.</p>
-      </div>
-      <div class="tool-panel">
-        <div>
-          <label for="resource-search">Search {row_count} local entries</label>
-          <input id="resource-search" class="search-input" type="search" placeholder="Try flyer, library, visitor center, gallery, cafe, Raton, Trinidad...">
+    <section class="section tinted directory-support-section">
+      <details class="directory-support-details">
+        <summary>Browse by role or download directory data</summary>
+        <div class="directory-support-body">
+          <p class="section-note">Role shortcuts connect to the most useful starting page for a new business, existing business, nonprofit, artist, event organizer, or rural service.</p>
+          {persona_route_controls(1)}
+          {download_buttons(1)}
         </div>
-        <div class="advanced-filters" aria-label="Detailed resource filters">
-          <div>
-            <label for="resource-type-filter">Resource type</label>
-            <select id="resource-type-filter"><option value="All">All types</option></select>
-          </div>
-          <div>
-            <label for="access-mode-filter">Access mode</label>
-            <select id="access-mode-filter"><option value="All">All access modes</option></select>
-          </div>
-        </div>
-        <div id="physical-location-filter" class="filter-row" aria-label="Physical location filters">
-          <button class="chip is-active" data-location-filter="All">All listings</button>
-          <button class="chip" data-location-filter="Physical">Physical locations</button>
-          <button class="chip" data-location-filter="Flyers">Ask about flyers</button>
-        </div>
-        <div class="filter-row" aria-label="Resource filters">
-          <button class="chip is-active" data-resource-filter="All">All</button>
-          <button class="chip" data-resource-filter="Colfax">Colfax</button>
-          <button class="chip" data-resource-filter="Las Animas">Las Animas</button>
-          <button class="chip" data-resource-filter="Huerfano">Huerfano</button>
-          <button class="chip" data-resource-filter="Regional">Regional</button>
-        </div>
-      </div>
-      <div class="marker-legend" aria-label="Directory marker legend">
-        <span class="listing-marker listing-marker--physical">Physical location</span>
-        <span>{physical_location_count} listings include a map-able or street-style location.</span>
-        <span class="listing-marker listing-marker--ad">Ask about flyers</span>
-        <span>{physical_ad_count} listings look like stronger places to ask about physical materials. Ask first; the guide does not imply permission.</span>
-      </div>
-      <p id="resource-results-note" class="section-note">Search by town, county, resource type, audience, keyword, or task. If a detail has changed, send an update so the listing can stay useful.</p>
-      <div id="resource-results" class="resource-list"></div>
-      <p class="section-note">Need a table view? Open the public-contact appendix for county/community grouping.</p>
-      <div class="section-actions"><a class="button button-primary" href="../appendix/index.html">Open the appendix</a></div>
+      </details>
     </section>
     {submit_listing_panel(1, "directory")}
     {next_action_block(1, [
@@ -5687,8 +5828,17 @@ def write_static_assets() -> None:
       text-decoration: underline;
     }
     .section, .page-hero { padding: clamp(42px, 7vw, 94px) clamp(18px, 6vw, 86px); }
+    #local-listings, #directory-shortcuts { scroll-margin-top: 92px; }
     .page-hero { position: relative; overflow: hidden; isolation: isolate; background: linear-gradient(135deg, rgba(220,238,232,0.86), rgba(183,219,228,0.5)); border-bottom: 1px solid var(--line); }
     .page-hero > :not(.page-hero-art) { position: relative; z-index: 1; }
+    .page-network .page-hero {
+      padding-top: clamp(42px, 5vw, 64px);
+      padding-bottom: clamp(38px, 4vw, 56px);
+    }
+    .page-network .page-hero h1 {
+      max-width: 16ch;
+      font-size: clamp(2.7rem, 5.4vw, 4.6rem);
+    }
     .page-hero-art {
       position: absolute;
       z-index: 0;
@@ -5886,6 +6036,78 @@ def write_static_assets() -> None:
       font-size: 0.88rem;
     }
     .resource-best strong { color: var(--ink); }
+    .directory-jumpbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+    .directory-search-panel {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.72);
+    }
+    .directory-filter-details,
+    .marker-help,
+    .directory-support-details,
+    .resource-more,
+    .source-group-links {
+      border: 0;
+    }
+    .directory-filter-details > summary,
+    .resource-more > summary,
+    .source-group-links > summary {
+      display: none;
+    }
+    .directory-filter-body {
+      display: grid;
+      gap: 14px;
+      padding-top: 2px;
+    }
+    .filter-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-weight: 850;
+    }
+    .marker-help {
+      margin: 12px 0 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.54);
+    }
+    .marker-help > summary,
+    .directory-support-details > summary {
+      cursor: pointer;
+      padding: 12px 14px;
+      color: var(--ink);
+      font-weight: 900;
+    }
+    .marker-help .marker-legend {
+      margin: 0;
+      padding: 0 14px 14px;
+    }
+    .directory-more-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 18px;
+    }
+    .directory-secondary-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .directory-support-details {
+      max-width: 980px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.72);
+    }
+    .directory-support-body {
+      padding: 0 16px 16px;
+    }
     .resource-links {
       display: flex;
       flex-wrap: wrap;
@@ -5969,6 +6191,9 @@ def write_static_assets() -> None:
     .source-group-card {
       display: flex;
       flex-direction: column;
+    }
+    .source-group-links {
+      margin-top: auto;
     }
     .source-link-list {
       display: grid;
@@ -6085,8 +6310,14 @@ def write_static_assets() -> None:
     .filter-row { display: flex; flex-wrap: wrap; gap: 8px; }
     .chip, .copy-button { min-height: 38px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.85); color: var(--ink); padding: 8px 12px; font: inherit; font-weight: 800; cursor: pointer; }
     .chip.is-active { background: var(--ink); color: #fff; }
-    .resource-list { display: grid; gap: 12px; }
+    .resource-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(430px, 1fr)); gap: 12px; }
+    .resource-item { display: flex; flex-direction: column; min-width: 0; }
     .resource-item__head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .resource-item__head h3 { margin-bottom: 0; }
+    .resource-meta-line { margin: 8px 0; font-size: 0.9rem; }
+    .resource-description { margin: 10px 0; }
+    .resource-more__body { display: grid; gap: 8px; }
+    .resource-more__body > * { margin-top: 0; margin-bottom: 0; }
     .resource-item a { font-weight: 800; }
     .lead-list { columns: 2; gap: 40px; padding-left: 1.1rem; }
     .lead-list li { break-inside: avoid; margin: 0 0 12px; }
@@ -6147,6 +6378,7 @@ def write_static_assets() -> None:
       transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
     }
     .back-to-top {
+      display: none;
       opacity: 0;
       visibility: hidden;
       transform: translateY(4px);
@@ -6154,6 +6386,7 @@ def write_static_assets() -> None:
       transition: opacity 160ms ease, visibility 160ms ease, transform 160ms ease, background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
     }
     body[data-scroll-state="scrolled"] .back-to-top {
+      display: inline-flex;
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
@@ -6274,6 +6507,11 @@ def write_static_assets() -> None:
       font-weight: 900;
       box-shadow: 0 12px 26px rgba(23,48,71,0.16);
       backdrop-filter: blur(14px);
+    }
+    .page-network:not([data-scroll-state="scrolled"]) .directory-assistant__toggle {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
     }
     .assistant-dot {
       width: 10px;
@@ -6494,11 +6732,76 @@ def write_static_assets() -> None:
       }
       .hero-actions .button:nth-child(3) { grid-column: 1 / -1; }
       .page-hero-art { width: 540px; max-width: none; right: -240px; top: 42%; opacity: 0.34; }
-      .corner-controls { left: 12px; right: 12px; bottom: 12px; width: auto; max-width: none; flex-direction: column; align-items: stretch; justify-content: flex-end; }
-      .back-to-top, .music-summary, .music-toggle { font-size: 0.74rem; min-height: 40px; padding: 7px 10px; background-color: rgba(16,40,61,0.48); max-width: none; white-space: nowrap; }
+      .page-network .page-hero { padding-top: 20px; padding-bottom: 24px; }
+      .page-network .page-hero h1 { max-width: 11ch; font-size: 2.55rem; line-height: 1.02; }
+      .page-network .section { padding: 32px 18px; }
+      .page-network .section-heading { margin-bottom: 18px; }
+      .directory-jumpbar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 18px; }
+      .directory-jumpbar .button { min-height: 40px; padding: 8px; text-align: center; }
+      .directory-search-panel { padding: 12px; gap: 10px; }
+      .directory-filter-details {
+        border-top: 1px solid var(--line);
+      }
+      .directory-filter-details > summary,
+      .resource-more > summary,
+      .source-group-links > summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        cursor: pointer;
+        color: var(--ink);
+        font-weight: 850;
+      }
+      .directory-filter-details > summary { padding: 12px 0 2px; }
+      .directory-filter-details > summary span { color: var(--ink-soft); font-size: 0.78rem; font-weight: 750; }
+      .directory-filter-body { padding-top: 12px; }
+      .filter-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+      .filter-row .chip { width: 100%; min-height: 40px; padding: 7px 8px; font-size: 0.78rem; }
+      #physical-location-filter .chip:first-child,
+      [aria-label="Resource filters"] .chip:first-child { grid-column: 1 / -1; }
+      .marker-help > summary { padding: 10px 12px; font-size: 0.86rem; }
+      .marker-help .marker-legend { display: grid; grid-template-columns: auto 1fr; gap: 7px; padding: 0 12px 12px; font-size: 0.8rem; }
+      .resource-list, .source-grid { grid-template-columns: 1fr; gap: 10px; }
+      .resource-item, .source-card { padding: 14px; box-shadow: 0 7px 18px rgba(23,48,71,0.05); }
+      .resource-item__head h3 { font-size: 1.08rem; line-height: 1.18; }
+      .resource-meta-line { margin: 7px 0; font-size: 0.82rem; line-height: 1.4; }
+      .resource-description {
+        display: -webkit-box;
+        overflow: hidden;
+        margin: 8px 0;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        font-size: 0.9rem;
+        line-height: 1.45;
+      }
+      .resource-more, .source-group-links { margin-top: 8px; border-top: 1px solid var(--line); }
+      .resource-more > summary, .source-group-links > summary { padding: 10px 0 2px; font-size: 0.82rem; }
+      .resource-more__body { padding-top: 9px; }
+      .resource-tags .badge { font-size: 0.68rem; padding: 2px 6px; }
+      .resource-links { gap: 6px; margin-top: 9px; }
+      .resource-contact-link { min-height: 38px; padding: 7px 10px; font-size: 0.8rem; }
+      .source-group-links .source-link-list { margin-top: 8px; padding-top: 8px; }
+      .directory-more-row .button { width: 100%; justify-content: center; }
+      .directory-secondary-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .directory-secondary-actions .button { padding: 8px; text-align: center; }
+      .directory-support-details > summary { font-size: 0.9rem; }
+      .corner-controls { left: auto; right: 12px; bottom: 12px; width: auto; max-width: calc(100vw - 156px); flex-direction: column; align-items: flex-end; justify-content: flex-end; }
+      .back-to-top, .music-summary, .music-toggle { font-size: 0.72rem; min-height: 38px; padding: 6px 9px; background-color: rgba(16,40,61,0.48); max-width: none; white-space: nowrap; }
       .music-toggle { position: static; left: auto; right: auto; bottom: auto; }
       .back-to-top { position: static; left: auto; right: auto; bottom: auto; align-self: flex-end; }
-      .music-summary { align-self: flex-end; min-width: 146px; }
+      .music-summary { align-self: flex-end; min-width: 116px; }
+      .music-label-prefix { display: none; }
+      .page-network:not([data-music-state="playing"]) .music-bar {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .page-network:not([data-scroll-state="scrolled"]) .directory-assistant__toggle {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
       .music-toggle { background-color: rgba(255,255,255,0.60); }
       .music-toggle[data-state="playing"] { background-color: rgba(216,187,104,0.52); }
       .music-bar { width: auto; max-width: calc(100vw - 24px); align-self: flex-end; }
@@ -6508,7 +6811,8 @@ def write_static_assets() -> None:
       .music-track-select { width: 100%; }
       .music-bar__bottom { align-items: flex-start; gap: 6px; }
       .music-volume { width: 76px; }
-      .directory-assistant { width: calc(100vw - 24px); left: 12px; bottom: 72px; }
+      .directory-assistant { width: auto; max-width: calc(100vw - 156px); left: 12px; bottom: 12px; }
+      .directory-assistant__toggle { min-height: 38px; padding: 7px 10px; background: rgba(23,48,71,0.56); font-size: 0.75rem; }
       .directory-assistant__panel { inset: auto 12px 12px 12px; width: auto; max-width: none; max-height: calc(100vh - 24px); }
       .directory-assistant__search-row { grid-template-columns: 1fr; }
       .directory-assistant__footer .button { width: 100%; justify-content: center; }
@@ -6705,6 +7009,27 @@ def write_static_assets() -> None:
       return blob.includes(query.toLowerCase());
     }
 
+    function resourceTextMatch(item, query) {
+      const blob = searchableText([
+        item.resource_name,
+        item.alternate_names,
+        item.town,
+        item.county,
+        item.state,
+        item.category,
+        item.resource_type,
+        item.public_listing_type,
+        item.access_mode,
+        item.public_keywords,
+        item.public_audience_tags,
+        item.public_best_for,
+        item.goal_relevance,
+        item.audience_served,
+        item.public_description
+      ]).toLowerCase();
+      return blob.includes(query.toLowerCase());
+    }
+
     function uniqueValues(items, field) {
       return [...new Set(items.map(item => item[field]).filter(Boolean))].sort((a, b) => a.localeCompare(b));
     }
@@ -6771,7 +7096,19 @@ def write_static_assets() -> None:
       });
       splitList(item.physical_address).forEach(address => add("Map", `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`));
       splitList(item.source_url).forEach(url => add(linkLabel(url, item.website ? "Listing page" : "Website"), url));
-      return links;
+      const labelTotals = links.reduce((counts, link) => {
+        counts[link.label] = (counts[link.label] || 0) + 1;
+        return counts;
+      }, {});
+      const labelIndexes = {};
+      return links.map(link => {
+        if (labelTotals[link.label] < 2) return link;
+        labelIndexes[link.label] = (labelIndexes[link.label] || 0) + 1;
+        const host = urlHost(link.href).replace(/^www\./, "");
+        const suffix = host && link.label !== "Map" ? host : String(labelIndexes[link.label]);
+        const separator = link.label === "Map" ? " " : ": ";
+        return { ...link, label: `${link.label}${separator}${suffix}` };
+      });
     }
 
     function contactLinkMarkup(item, { compact = false } = {}) {
@@ -6833,7 +7170,10 @@ def write_static_assets() -> None:
           <h3><a href="${escapeHtml(item.url || (item.links && item.links[0] ? item.links[0].url : "#"))}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a></h3>
           <p>${escapeHtml(item.best_for)}</p>
           <p class="action-line">${escapeHtml(item.action)}</p>
-          <div class="source-link-list">${links}</div>
+          <details class="source-group-links" open>
+            <summary>Open ${escapeHtml(sourceCount)} ${routeWord}</summary>
+            <div class="source-link-list">${links}</div>
+          </details>
         </article>
       `;
     }
@@ -6845,17 +7185,29 @@ def write_static_assets() -> None:
         .filter(Boolean)
         .map(tag => `<span class="badge">${escapeHtml(tag)}</span>`)
         .join(" ");
+      const listingType = item.public_listing_type || item.resource_type || "Resource";
+      const category = item.category || "";
+      const metaParts = [
+        [item.town, item.county, item.state].filter(Boolean).join(", "),
+        listingType
+      ].filter(Boolean);
+      if (category && category !== listingType) metaParts.push(category);
       return `
         <article class="resource-item">
           <div class="resource-item__head">
             <h3>${escapeHtml(item.resource_name || "Unnamed resource")}</h3>
           </div>
-          <p>${escapeHtml([item.town, item.county, item.state].filter(Boolean).join(", "))} - ${escapeHtml(item.public_listing_type || item.resource_type || "Resource")} - ${escapeHtml(item.category || "General")}</p>
-          <p class="resource-tags"><strong>Useful for:</strong> ${tags}</p>
+          <p class="resource-meta-line">${escapeHtml(metaParts.join(" - "))}</p>
           ${physicalIndicatorMarkup(item)}
-          <p>${escapeHtml(item.public_description || "Local directory listing for regional discovery and outreach.")}</p>
-          <p class="resource-best"><strong>Best fit:</strong> ${escapeHtml(item.public_best_for || "regional discovery; contact-list building")}</p>
-          <p class="source-note">If this looks outdated, use the correction form so the guide can be updated.</p>
+          <p class="resource-description">${escapeHtml(item.public_description || "Local directory listing for regional discovery and outreach.")}</p>
+          <details class="resource-more" open>
+            <summary>Details and best use</summary>
+            <div class="resource-more__body">
+              <p class="resource-tags"><strong>Useful for:</strong> ${tags}</p>
+              <p class="resource-best"><strong>Best fit:</strong> ${escapeHtml(item.public_best_for || "regional discovery; contact-list building")}</p>
+              <p class="source-note">If this looks outdated, use the correction form so the guide can be updated.</p>
+            </div>
+          </details>
           ${contactLinkMarkup(item)}
         </article>
       `;
@@ -7054,13 +7406,31 @@ def write_static_assets() -> None:
       });
     }
 
+    function directoryPageSize(compactSize, wideSize) {
+      return window.matchMedia("(max-width: 640px)").matches ? compactSize : wideSize;
+    }
+
+    function syncDirectoryDetails(root = document) {
+      const compact = window.matchMedia("(max-width: 640px)").matches;
+      root.querySelectorAll(".resource-more, .source-group-links").forEach(details => {
+        details.toggleAttribute("open", !compact);
+      });
+      const filters = document.querySelector(".directory-filter-details");
+      if (filters) filters.toggleAttribute("open", !compact);
+    }
+
     function initSourceSearch() {
       const host = document.querySelector("#source-results");
       if (!host) return;
       const input = document.querySelector("#source-search");
       const note = document.querySelector("#source-results-note");
       const chips = [...document.querySelectorAll("[data-source-filter]")];
+      const moreButton = document.querySelector("#source-load-more");
       let county = "All";
+      let visibleCount = directoryPageSize(6, 12);
+      function resetVisibleCount() {
+        visibleCount = directoryPageSize(6, 12);
+      }
       function render() {
         const query = input.value.trim();
         const allGroups = DATA.directory_source_groups || DATA.directory_sources || [];
@@ -7070,19 +7440,34 @@ def write_static_assets() -> None:
         const filtered = pool
           .filter(item => (county === "All" || item.county === county || (item.counties || []).includes(county)) && (!query || textMatch(item, query)))
           .sort((a, b) => String(a.title || "").localeCompare(String(b.title || "")));
+        const visible = filtered.slice(0, visibleCount);
         if (note) {
           note.textContent = showingPriority
-            ? `Showing ${filtered.length} priority shortcut groups. Search or choose a county to inspect all ${allGroups.length} grouped cards covering ${(DATA.directory_sources || []).length} individual shortcut routes.`
-            : `Showing ${filtered.length} grouped shortcut card${filtered.length === 1 ? "" : "s"} from the full shortcut layer.`;
+            ? `Showing ${visible.length} of ${filtered.length} priority shortcut groups. Search or choose a county to inspect all ${allGroups.length} groups.`
+            : `Showing ${visible.length} of ${filtered.length} matching shortcut group${filtered.length === 1 ? "" : "s"}.`;
         }
-        host.innerHTML = filtered.map(item => item.links ? sourceGroupCard(item) : sourceCard(item)).join("") || `<p class="section-note">No shortcuts match that search yet.</p>`;
+        host.innerHTML = visible.map(item => item.links ? sourceGroupCard(item) : sourceCard(item)).join("") || `<p class="section-note">No shortcuts match that search yet.</p>`;
+        syncDirectoryDetails(host);
+        if (moreButton) {
+          const remaining = Math.max(0, filtered.length - visible.length);
+          moreButton.hidden = remaining === 0;
+          moreButton.textContent = remaining ? `Show ${Math.min(directoryPageSize(6, 12), remaining)} more shortcuts` : "All shortcuts shown";
+        }
       }
-      input.addEventListener("input", render);
+      input.addEventListener("input", () => {
+        resetVisibleCount();
+        render();
+      });
       chips.forEach(chip => chip.addEventListener("click", () => {
         county = chip.dataset.sourceFilter;
         chips.forEach(c => c.classList.toggle("is-active", c === chip));
+        resetVisibleCount();
         render();
       }));
+      moreButton && moreButton.addEventListener("click", () => {
+        visibleCount += directoryPageSize(6, 12);
+        render();
+      });
       render();
     }
 
@@ -7095,16 +7480,22 @@ def write_static_assets() -> None:
       const typeSelect = document.querySelector("#resource-type-filter");
       const accessSelect = document.querySelector("#access-mode-filter");
       const note = document.querySelector("#resource-results-note");
+      const filterSummary = document.querySelector("#resource-filter-summary");
+      const moreButton = document.querySelector("#resource-load-more");
       let county = "All";
       let locationMode = "All";
+      let visibleCount = directoryPageSize(18, 36);
       populateSelect(typeSelect, uniqueValues(DATA.resources, "public_listing_type"), "All types");
       populateSelect(accessSelect, uniqueValues(DATA.resources, "access_mode"), "All access modes");
+      function resetVisibleCount() {
+        visibleCount = directoryPageSize(18, 36);
+      }
       function render() {
         const query = input.value.trim();
         const resourceType = typeSelect ? typeSelect.value : "All";
         const accessMode = accessSelect ? accessSelect.value : "All";
         const matched = DATA.resources
-          .filter(item => (county === "All" || item.county === county) && (!query || textMatch(item, query)))
+          .filter(item => (county === "All" || item.county === county) && (!query || resourceTextMatch(item, query)))
           .filter(item => resourceType === "All" || item.public_listing_type === resourceType)
           .filter(item => accessMode === "All" || item.access_mode === accessMode)
           .filter(item => (
@@ -7113,29 +7504,56 @@ def write_static_assets() -> None:
             || (locationMode === "Flyers" && truthyFlag(item.physical_ad_candidate))
           ))
           .sort((a, b) => String(a.resource_name || "").localeCompare(String(b.resource_name || "")));
-        const filtered = matched.slice(0, 80);
+        const filtered = matched.slice(0, visibleCount);
         if (note) {
           const locationLabel = {
-            All: "all matching listings",
+            All: "matching listings",
             Physical: "listings with physical locations",
             Flyers: "places to ask about flyers or posters"
           }[locationMode] || "matching listings";
           note.textContent = `Showing ${filtered.length} of ${matched.length} ${locationLabel}. Search by town, county, resource type, audience, keyword, or task.`;
         }
+        if (filterSummary) {
+          const activeFilters = [
+            county !== "All" ? county : "",
+            resourceType !== "All" ? resourceType : "",
+            accessMode !== "All" ? accessMode : "",
+            locationMode !== "All" ? locationMode : "",
+          ].filter(Boolean);
+          filterSummary.textContent = activeFilters.length ? `${activeFilters.length} active` : "All listings";
+        }
         host.innerHTML = filtered.map(resourceCard).join("") || `<p class="section-note">No local inventory entries match that search.</p>`;
+        syncDirectoryDetails(host);
+        if (moreButton) {
+          const remaining = Math.max(0, matched.length - filtered.length);
+          moreButton.hidden = remaining === 0;
+          moreButton.textContent = remaining ? `Show ${Math.min(directoryPageSize(18, 36), remaining)} more listings` : "All listings shown";
+        }
       }
-      input.addEventListener("input", render);
-      [typeSelect, accessSelect].forEach(select => select && select.addEventListener("change", render));
+      input.addEventListener("input", () => {
+        resetVisibleCount();
+        render();
+      });
+      [typeSelect, accessSelect].forEach(select => select && select.addEventListener("change", () => {
+        resetVisibleCount();
+        render();
+      }));
       locationChips.forEach(chip => chip.addEventListener("click", () => {
         locationMode = chip.dataset.locationFilter;
         locationChips.forEach(c => c.classList.toggle("is-active", c === chip));
+        resetVisibleCount();
         render();
       }));
       chips.forEach(chip => chip.addEventListener("click", () => {
         county = chip.dataset.resourceFilter;
         chips.forEach(c => c.classList.toggle("is-active", c === chip));
+        resetVisibleCount();
         render();
       }));
+      moreButton && moreButton.addEventListener("click", () => {
+        visibleCount += directoryPageSize(18, 36);
+        render();
+      });
       render();
     }
 
@@ -7306,6 +7724,7 @@ def write_static_assets() -> None:
 
       function setButtonState(state) {
         toggle.dataset.state = state;
+        document.body.dataset.musicState = state;
         if (state === "playing") {
           toggle.textContent = "Stop";
           toggle.setAttribute("aria-pressed", "true");

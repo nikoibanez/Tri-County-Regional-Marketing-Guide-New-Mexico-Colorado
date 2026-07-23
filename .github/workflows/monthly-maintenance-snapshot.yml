@@ -50,5 +50,7 @@ jobs:
             data/tri_county_persona_resources.json
             data/directory_of_absolutely_everything.csv
             data/directory_of_absolutely_everything.json
+            data/listing-keyword-index.json
+            review/keyword-sweep/
             review/maintenance/
             review/UI_ACCESSIBILITY_STATIC_AUDIT_*.md

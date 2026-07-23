@@ -25,7 +25,7 @@ Status: **PASS**
 
 ## Published Network Directory
 
-- Entries: 1434
+- Entries: 1356
 - Exact name/place duplicate groups: 0
 - Generalized ideas presented as listings: 0
 - Generic descriptions: 0

@@ -9,6 +9,7 @@ The maintenance system uses Python, GitHub Actions, the built site, and reposito
 | Build and quality gate | Pull requests and pushes to `master` | Builds the site; checks Python, JavaScript, accessibility markers, SEO, directory quality, local links, anchors, and critical routes | Blocks a broken change; does not edit directory data |
 | Weekly directory query check | Monday at 15:00 UTC | Checks 15 high-signal source groups and compares candidates with canonical data | Opens a review pull request or fallback issue |
 | Source registry audit | Tuesday at 15:23 UTC | Checks all registered directory, funding, events, civic, media, and creative URLs; records source-check history | Opens a review pull request or fallback issue |
+| Listing keyword sweep | Wednesday at 15:41 UTC | Rotates through up to 120 public listing pages and maps current page signals to controlled search terms | Opens a review pull request or fallback issue |
 | Live site smoke test | Daily at 16:17 UTC | Loads critical public pages, data, sitemap, and robots routes | Opens or updates one GitHub issue on failure |
 | Monthly maintenance snapshot | First day of each month at 16:00 UTC | Builds the canonical deploy zip and stores data, reports, and a SHA-256 checksum | Creates a private GitHub Actions artifact retained for 90 days |
 
@@ -20,6 +21,7 @@ The system may autonomously:
 
 - build and test generated files;
 - compare public source pages with current data;
+- propose controlled search-keyword changes while retaining prior source terms when a page cannot be fetched;
 - record check dates and HTTP status;
 - produce maintenance reports and candidate queues;
 - open review pull requests and failure issues;
