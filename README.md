@@ -2,15 +2,15 @@
 
 Static Netlify-ready guide for businesses, nonprofits, artists, creators, programs, and service providers working across Colfax County, Las Animas County, and Huerfano County.
 
-## GitHub Pages
+## Optional GitHub Pages Fallback
 
-This repository can build and publish the static site in `dist/tri-county-netlify-guide-deep` with GitHub Pages.
+Netlify is the production deployment target. GitHub Pages remains available as a manually triggered fallback after Pages is enabled in the repository settings.
 
 - Publish workflow: `.github/workflows/deploy-github-pages.yml`
-- Trigger: every push to `master`
+- Trigger: manual `workflow_dispatch`
 - Published folder: `dist/tri-county-netlify-guide-deep`
 
-If GitHub Pages is enabled for the repository, pushes to `master` will automatically update the live site without Netlify production deploy credits.
+Routine pushes run the quality gate and let Netlify build from `master`; they do not attempt a second public deployment through GitHub Pages.
 
 ## Build
 
