@@ -3,7 +3,7 @@
   "target": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\dist\\tri-county-netlify-guide-deep",
   "mode": "local",
   "status": "pass",
-  "checked": 10,
+  "checked": 11,
   "failed": 0,
   "results": [
     {
@@ -38,6 +38,11 @@
     },
     {
       "route": "/about/",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/assets/app.js",
       "ok": true,
       "error": ""
     },

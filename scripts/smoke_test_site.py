@@ -22,6 +22,7 @@ DEFAULT_PATHS = (
     "posting/",
     "submit/",
     "about/",
+    "assets/app.js",
     "data/guide-data.json",
     "sitemap.xml",
     "robots.txt",
@@ -74,6 +75,10 @@ def validate_body(route: str, body: str) -> str:
         return "" if "<urlset" in body and "<loc>" in body else "Sitemap XML is missing urlset or loc elements."
     if suffix == ".txt":
         return "" if "Sitemap:" in body else "robots.txt is missing the Sitemap directive."
+    if suffix == ".js":
+        required = ("const ASSISTANT_INTENTS", "assistantInterpretation", "data-assistant-followup")
+        missing = [marker for marker in required if marker not in body]
+        return f"Directory assistant JavaScript is missing: {', '.join(missing)}" if missing else ""
     lowered = body.casefold()
     required = ("<title>", "<main", "</html>")
     missing = [marker for marker in required if marker not in lowered]

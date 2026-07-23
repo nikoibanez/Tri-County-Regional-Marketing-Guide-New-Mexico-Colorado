@@ -13,6 +13,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 from audit_directory_quality import duplicate_groups, normalize_name  # noqa: E402
 from audit_internal_links import audit_site  # noqa: E402
 from build_netlify_deep_guide import inferred_listing_type  # noqa: E402
+from smoke_test_site import validate_body  # noqa: E402
 from sweep_listing_keywords import (  # noqa: E402
     KeywordSignalParser,
     canonical_signal,
@@ -59,6 +60,15 @@ class InternalLinkTests(unittest.TestCase):
             (site / "index.html").write_text('<html><body><a href="#target">Jump</a><div id="target"></div></body></html>', encoding="utf-8")
             result = audit_site(site)
             self.assertEqual(result["status"], "pass")
+
+
+class SiteSmokeTests(unittest.TestCase):
+    def test_directory_assistant_asset_requires_guided_search_logic(self) -> None:
+        complete = "const ASSISTANT_INTENTS = []; assistantInterpretation(); data-assistant-followup"
+        incomplete = "const ASSISTANT_INTENTS = []; assistantInterpretation();"
+
+        self.assertEqual(validate_body("assets/app.js", complete), "")
+        self.assertIn("data-assistant-followup", validate_body("assets/app.js", incomplete))
 
 
 class KeywordSweepTests(unittest.TestCase):

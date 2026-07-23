@@ -14,6 +14,7 @@ Status: **PASS**
 | `/posting/` | PASS | Loaded and passed content checks. |
 | `/submit/` | PASS | Loaded and passed content checks. |
 | `/about/` | PASS | Loaded and passed content checks. |
+| `/assets/app.js` | PASS | Loaded and passed content checks. |
 | `/data/guide-data.json` | PASS | Loaded and passed content checks. |
 | `/sitemap.xml` | PASS | Loaded and passed content checks. |
 | `/robots.txt` | PASS | Loaded and passed content checks. |

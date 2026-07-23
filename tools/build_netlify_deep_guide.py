@@ -4107,7 +4107,7 @@ def page_shell(
               <form class="directory-assistant__form" role="search">
                 <label for="directory-assistant-query">What are you trying to find?</label>
                 <div class="directory-assistant__search-row">
-                  <input id="directory-assistant-query" name="directory_query" type="search" autocomplete="off" placeholder="grants, artist, event, Raton, nonprofit..." aria-describedby="directory-assistant-hint directory-assistant-status" aria-controls="directory-assistant-results">
+                  <input id="directory-assistant-query" name="directory_query" type="search" autocomplete="off" placeholder="I need more customers for my gallery in Raton..." aria-describedby="directory-assistant-hint directory-assistant-status" aria-controls="directory-assistant-results">
                   <button class="button button-primary" type="submit">Search</button>
                 </div>
               </form>
@@ -4122,6 +4122,11 @@ def page_shell(
                 <button type="button" data-assistant-prompt="business support">Business help</button>
               </div>
               <div class="directory-assistant__status" id="directory-assistant-status" role="status" aria-live="polite" aria-atomic="true"></div>
+              <div class="directory-assistant__guidance" data-assistant-guidance role="region" aria-label="Suggested next steps" hidden>
+                <p data-assistant-guidance-text></p>
+                <p class="directory-assistant__question" data-assistant-guidance-question></p>
+                <div class="directory-assistant__followups" data-assistant-followups role="group" aria-label="Suggested follow-up searches"></div>
+              </div>
               <div class="directory-assistant__results" id="directory-assistant-results" data-assistant-results role="list" aria-label="Directory assistant results"></div>
               <div class="directory-assistant__footer">
                 <a class="button button-soft" href="{rel('network/index.html', depth)}#resource-results" data-assistant-full-directory>Open full directory</a>
@@ -6623,6 +6628,30 @@ def write_static_assets() -> None:
     }
     .directory-assistant__results { display: grid; gap: 8px; margin-top: 8px; }
     .directory-assistant__results:empty { display: none; margin-top: 0; }
+    .directory-assistant__guidance {
+      display: grid;
+      gap: 7px;
+      margin-top: 9px;
+      padding: 10px;
+      border-left: 3px solid rgba(47,103,128,0.52);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      background: rgba(220,238,232,0.44);
+    }
+    .directory-assistant__guidance[hidden] { display: none; }
+    .directory-assistant__guidance p { margin: 0; color: var(--ink-soft); font-size: 0.82rem; line-height: 1.4; }
+    .directory-assistant__question { color: var(--ink) !important; font-weight: 850; }
+    .directory-assistant__followups { display: flex; flex-wrap: wrap; gap: 6px; }
+    .directory-assistant__followups button {
+      min-height: 34px;
+      border: 1px solid rgba(47,103,128,0.20);
+      border-radius: 999px;
+      padding: 6px 9px;
+      background: rgba(255,255,255,0.82);
+      color: var(--ink);
+      font: inherit;
+      font-size: 0.74rem;
+      font-weight: 850;
+    }
     .assistant-result {
       display: grid;
       gap: 5px;
@@ -7363,7 +7392,8 @@ def write_static_assets() -> None:
         item.resource_type,
         item.channel_type,
         item.type,
-        item.category
+        item.category,
+        assistantTypeLabel(item, assistantCategory(item))
       ]);
       const description = searchableText([
         item.public_description,
@@ -7389,6 +7419,7 @@ def write_static_assets() -> None:
         category: category.toLowerCase(),
         description: description.toLowerCase(),
         keywords: keywords.toLowerCase(),
+        strong: searchableText([title, category, description]).toLowerCase(),
         all: searchableText([title, location, category, description, keywords]).toLowerCase()
       };
     }
@@ -7399,10 +7430,297 @@ def write_static_assets() -> None:
       return `${title}|${county}`;
     }
 
-    function assistantSearch(query) {
+    const ASSISTANT_INTENTS = [
+      {
+        id: "flyers",
+        search: "flyer location",
+        signals: ["flyer", "flyers", "poster", "posters", "bulletin board", "rack card", "brochure", "physical advertising", "where can i post"],
+        guidance: "It sounds like you need physical places that may accept local promotional material.",
+        question: "Are you placing flyers, posters, brochures, or rack cards?",
+        suggestions: [
+          ["Public boards", "flyer location"],
+          ["Event promotion", "events"],
+          ["Media options", "media"],
+          ["Visitor channels", "tourism"]
+        ]
+      },
+      {
+        id: "funding",
+        search: "funding",
+        signals: ["grant", "grants", "funding", "money", "capital", "loan", "scholarship", "stipend", "startup costs", "start-up costs", "pay for"],
+        guidance: "It sounds like you need funding or financial support.",
+        question: "Is this for a business, nonprofit, artist, or community program?",
+        suggestions: [
+          ["Business funding", "funding business"],
+          ["Nonprofit funding", "funding nonprofit"],
+          ["Artist funding", "funding artist"],
+          ["Scholarships", "scholarship"]
+        ],
+        specific: [
+          ["scholarship", "scholarship"],
+          ["stipend", "stipend"],
+          ["loan", "loan"],
+          ["artist", "funding artist"],
+          ["nonprofit", "funding nonprofit"],
+          ["business", "funding business"],
+          ["grant", "grant"]
+        ]
+      },
+      {
+        id: "events",
+        search: "events",
+        signals: ["event", "events", "calendar", "festival", "concert", "workshop", "class", "performance", "submit my event", "post my event"],
+        guidance: "It sounds like you need to publish or promote an event.",
+        question: "Do you need a calendar, media coverage, physical flyers, or a partner venue?",
+        suggestions: [
+          ["Event calendars", "event calendar"],
+          ["Media coverage", "media event"],
+          ["Flyer locations", "flyer location"],
+          ["Venues", "event venue"]
+        ],
+        specific: [
+          ["calendar", "event calendar"],
+          ["venue", "event venue"],
+          ["festival", "festival"]
+        ]
+      },
+      {
+        id: "listing",
+        search: "directory",
+        signals: ["get listed", "add my business", "add my organization", "business listing", "directory listing", "not listed", "update my listing", "correct my listing", "showing up online"],
+        guidance: "It sounds like you need a listing, correction, or stronger directory presence.",
+        question: "Are you trying to reach local residents, visitors, arts audiences, or business partners?",
+        suggestions: [
+          ["Business directories", "business directory"],
+          ["Tourism listings", "tourism directory"],
+          ["Arts listings", "artist directory"],
+          ["Promotion channels", "promotion channel"]
+        ]
+      },
+      {
+        id: "visibility",
+        search: "promotion channel",
+        signals: ["more customers", "new customers", "more people", "get the word out", "promote", "promotion", "marketing", "advertise", "advertising", "visibility", "reach people", "reach visitors", "grow my audience", "expand my customer"],
+        guidance: "It sounds like you want to reach more people or attract customers.",
+        question: "Would media, event calendars, physical flyers, or directory listings fit the audience best?",
+        suggestions: [
+          ["Media and advertising", "media"],
+          ["Event calendars", "events"],
+          ["Flyer locations", "flyer location"],
+          ["Get listed", "directory"]
+        ]
+      },
+      {
+        id: "media",
+        search: "media",
+        signals: ["newspaper", "radio", "press", "media", "interview", "news coverage", "press release"],
+        guidance: "It sounds like you need a media or public-information channel.",
+        question: "Are you looking for news coverage, paid advertising, radio, or a community calendar?",
+        suggestions: [
+          ["Newspapers", "newspaper"],
+          ["Radio", "radio"],
+          ["Event calendars", "event calendar"],
+          ["Advertising routes", "advertising"]
+        ],
+        specific: [
+          ["newspaper", "newspaper"],
+          ["radio", "radio"],
+          ["press release", "media"]
+        ]
+      },
+      {
+        id: "partnership",
+        search: "partnership",
+        signals: ["partner", "partnership", "collaborate", "collaboration", "cross promote", "cross-promotion", "sponsor", "sponsorship", "referral partner"],
+        guidance: "It sounds like you need a partner, sponsor, referral, or cross-promotion route.",
+        question: "Would a chamber, nonprofit, tourism office, venue, or media partner make the most sense?",
+        suggestions: [
+          ["Chambers", "chamber"],
+          ["Nonprofits", "nonprofit"],
+          ["Tourism partners", "tourism"],
+          ["Venues", "event venue"]
+        ]
+      },
+      {
+        id: "business-support",
+        search: "business support",
+        signals: ["start a business", "starting a business", "startup", "business help", "need help", "where do i start", "not sure where", "mentor", "mentorship", "training", "technical assistance", "permit"],
+        guidance: "It sounds like you need a practical starting point or business support.",
+        question: "Do you need startup guidance, training, mentorship, funding, or permit help?",
+        suggestions: [
+          ["Startup help", "business support"],
+          ["Training", "training"],
+          ["Mentorship", "mentorship"],
+          ["Business funding", "funding business"]
+        ]
+      },
+      {
+        id: "nonprofit",
+        search: "nonprofit",
+        signals: ["nonprofit", "non-profit", "charity", "community organization", "community program"],
+        guidance: "It sounds like you are looking for nonprofit or community-program support.",
+        question: "Do you need funding, event promotion, partners, or a directory listing?",
+        suggestions: [
+          ["Nonprofit funding", "funding nonprofit"],
+          ["Promote an event", "events nonprofit"],
+          ["Find partners", "partnership nonprofit"],
+          ["Get listed", "nonprofit directory"]
+        ]
+      },
+      {
+        id: "arts",
+        search: "artist",
+        signals: ["artist", "artists", "gallery", "galleries", "musician", "writer", "maker", "creative business", "studio", "arts organization"],
+        guidance: "It sounds like you need an arts, culture, or creative-business route.",
+        question: "Do you need galleries, funding, event promotion, or an arts directory?",
+        suggestions: [
+          ["Galleries", "gallery"],
+          ["Artist funding", "funding artist"],
+          ["Arts events", "events artist"],
+          ["Arts listings", "artist directory"]
+        ],
+        specific: [
+          ["gallery", "gallery"],
+          ["galleries", "gallery"],
+          ["musician", "musician"],
+          ["writer", "writer"]
+        ]
+      },
+      {
+        id: "tourism",
+        search: "tourism",
+        signals: ["visitor", "visitors", "tourist", "tourists", "traveler", "travelers", "tourism", "visitor guide", "travel guide"],
+        guidance: "It sounds like you want to reach visitors or travel audiences.",
+        question: "Do you need a visitor guide, tourism listing, event calendar, or hospitality partner?",
+        suggestions: [
+          ["Visitor guides", "visitor guide"],
+          ["Tourism listings", "tourism directory"],
+          ["Visitor events", "events tourism"],
+          ["Hospitality partners", "lodging food"]
+        ]
+      },
+      {
+        id: "food",
+        search: "food",
+        signals: ["catering", "caterer", "restaurant", "bakery", "cafe", "coffee shop", "food business"],
+        guidance: "It sounds like you need a food, dining, or catering route.",
+        question: "Are you looking for a business listing, event work, promotion, or startup support?",
+        suggestions: [
+          ["Catering", "catering"],
+          ["Food businesses", "food"],
+          ["Event promotion", "events food"],
+          ["Business support", "business support food"]
+        ],
+        specific: [
+          ["catering", "catering"],
+          ["caterer", "catering"],
+          ["bakery", "bakery"],
+          ["restaurant", "food"],
+          ["cafe", "cafe"],
+          ["coffee shop", "cafe"]
+        ]
+      }
+    ];
+
+    const ASSISTANT_LOCATIONS = [...new Set(
+      (DATA.resources || [])
+        .flatMap(item => [item.town, item.county])
+        .map(value => String(value || "").trim())
+        .filter(value => value.length > 2 && value.toLowerCase() !== "regional")
+    )].sort((a, b) => b.length - a.length || a.localeCompare(b));
+
+    function assistantMatchesSignal(text, signal) {
+      const escaped = String(signal || "")
+        .trim()
+        .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+        .replace(/\s+/g, "\\s+");
+      return escaped ? new RegExp(`\\b${escaped}\\b`, "i").test(text) : false;
+    }
+
+    function assistantDetectedLocation(text) {
+      return ASSISTANT_LOCATIONS.find(location => assistantMatchesSignal(text, location)) || "";
+    }
+
+    function assistantIntentQuery(intent, text) {
+      const specific = (intent.specific || []).find(([signal]) => assistantMatchesSignal(text, signal));
+      return specific ? specific[1] : intent.search;
+    }
+
+    function assistantInterpretation(query) {
+      const text = String(query || "").trim();
+      const location = assistantDetectedLocation(text);
+      const ranked = ASSISTANT_INTENTS
+        .map((intent, index) => ({
+          intent,
+          index,
+          score: intent.signals.reduce(
+            (score, signal) => score + (assistantMatchesSignal(text, signal) ? (signal.includes(" ") ? 2 : 1) : 0),
+            0
+          )
+        }))
+        .filter(entry => entry.score > 0)
+        .sort((a, b) => b.score - a.score || a.index - b.index);
+      const intent = ranked[0]?.intent;
+      if (!intent) {
+        const conversational = /[?]|\b(i|we|my|our|how|where|what|need|want|trying|help)\b/i.test(text)
+          || normalizedSearchTerms(text).length >= 3;
+        return {
+          recognized: false,
+          location,
+          baseQuery: text,
+          searchQuery: text,
+          guidance: conversational ? "I could not tell which route fits yet." : "",
+          question: conversational ? "Are you trying to get listed, promote an event, find funding, reach visitors, or find local help?" : "",
+          suggestions: conversational
+            ? [
+                ["Get listed", "directory"],
+                ["Promote an event", "events"],
+                ["Find funding", "funding"],
+                ["Find local help", "business support"]
+              ].map(([label, value]) => ({ label, query: value }))
+            : []
+        };
+      }
+      const baseQuery = assistantIntentQuery(intent, text);
+      const searchQuery = location && !assistantMatchesSignal(baseQuery, location)
+        ? `${baseQuery} ${location}`
+        : baseQuery;
+      const locationNote = location
+        ? ` I found ${location} in your question.`
+        : " Add a town or county if location matters.";
+      return {
+        recognized: true,
+        intent: intent.id,
+        location,
+        baseQuery,
+        searchQuery,
+        guidance: `${intent.guidance}${locationNote}`,
+        question: intent.question,
+        suggestions: intent.suggestions.map(([label, value]) => ({
+          label,
+          query: location && !assistantMatchesSignal(value, location) ? `${value} ${location}` : value
+        }))
+      };
+    }
+
+    function assistantIntentAccepts(item, intent, fields) {
+      if (!intent) return true;
+      if (intent === "visibility") {
+        if (["Shortcut group", "Shortcut", "Amplifier"].includes(item.assistant_type)) {
+          return true;
+        }
+        return /\b(media|news|advertis|directory|tourism|visitor|chamber|business support|public office|promotion)\b/.test(fields.category);
+      }
+      return true;
+    }
+
+    function assistantSearch(query, intent = "") {
       const normalized = String(query || "").trim().toLowerCase();
       const terms = normalizedSearchTerms(normalized);
       if (!terms.length) return [];
+      const locationTerms = new Set(normalizedSearchTerms(assistantDetectedLocation(normalized)));
+      const audienceTerms = new Set(["artist", "business", "nonprofit", "program"]);
+      const coreTerms = terms.filter(term => !locationTerms.has(term) && !audienceTerms.has(term));
       const pools = [
         ...(DATA.current_leads || []).map(item => ({ ...item, assistant_type: "Current item" })),
         ...((DATA.directory_source_groups || DATA.directory_sources || [])).map(item => ({ ...item, assistant_type: "Shortcut group" })),
@@ -7413,7 +7731,9 @@ def write_static_assets() -> None:
       ];
       const scored = pools.map(item => {
         const fields = assistantSearchFields(item);
+        if (!assistantIntentAccepts(item, intent, fields)) return null;
         if (!terms.every(term => fields.all.includes(term))) return null;
+        if (coreTerms.length && !coreTerms.every(term => fields.strong.includes(term))) return null;
         let score = fields.title.includes(normalized) ? 20 : 0;
         for (const term of terms) {
           if (fields.title.includes(term)) score += 10;
@@ -7486,6 +7806,10 @@ def write_static_assets() -> None:
       const input = root.querySelector("#directory-assistant-query");
       const results = root.querySelector("[data-assistant-results]");
       const status = root.querySelector(".directory-assistant__status");
+      const guidance = root.querySelector("[data-assistant-guidance]");
+      const guidanceText = root.querySelector("[data-assistant-guidance-text]");
+      const guidanceQuestion = root.querySelector("[data-assistant-guidance-question]");
+      const followups = root.querySelector("[data-assistant-followups]");
       const fullDirectory = root.querySelector("[data-assistant-full-directory]");
       const chips = [...root.querySelectorAll("[data-assistant-prompt]")];
       if (!toggle || !panel || !form || !input || !results || !status) return;
@@ -7532,23 +7856,52 @@ def write_static_assets() -> None:
 
       function render(query) {
         const search = String(query || "").trim();
-        if (fullDirectory) {
-          const hasSearch = search.length >= 2;
-          fullDirectory.href = assistantNetworkUrl(hasSearch ? search : "");
-          fullDirectory.textContent = hasSearch ? "See all matching listings" : "Open full directory";
-          fullDirectory.setAttribute("aria-label", hasSearch ? `See all directory listings matching ${search}` : "Open the full directory");
-        }
         if (search.length < 2) {
+          if (guidance) guidance.hidden = true;
           status.textContent = search
             ? "Keep typing: enter at least two letters."
             : "Choose a popular search or enter at least two letters.";
           results.innerHTML = "";
+          if (fullDirectory) {
+            fullDirectory.href = assistantNetworkUrl();
+            fullDirectory.textContent = "Open full directory";
+            fullDirectory.setAttribute("aria-label", "Open the full directory");
+          }
           return;
         }
-        const matches = assistantSearch(search);
-        status.textContent = matches.length
-          ? `Showing ${matches.length} result${matches.length === 1 ? "" : "s"} for "${search}".`
-          : `No close match for "${search}". Try a town, county, or a broader word such as funding, events, artist, nonprofit, or media.`;
+        const interpretation = assistantInterpretation(search);
+        if (guidance && guidanceText && guidanceQuestion && followups) {
+          guidance.hidden = !interpretation.guidance;
+          guidanceText.textContent = interpretation.guidance;
+          guidanceQuestion.textContent = interpretation.question;
+          guidanceQuestion.hidden = !interpretation.question;
+          followups.innerHTML = interpretation.suggestions.map(suggestion => `
+            <button type="button" data-assistant-followup="${escapeHtml(suggestion.query)}">${escapeHtml(suggestion.label)}</button>
+          `).join("");
+        }
+        let matches = assistantSearch(interpretation.searchQuery, interpretation.intent);
+        let widened = false;
+        if (!matches.length && interpretation.location && interpretation.baseQuery !== interpretation.searchQuery) {
+          matches = assistantSearch(interpretation.baseQuery, interpretation.intent);
+          widened = matches.length > 0;
+        }
+        if (fullDirectory) {
+          const handoffQuery = widened ? interpretation.baseQuery : interpretation.searchQuery;
+          fullDirectory.href = assistantNetworkUrl(handoffQuery);
+          fullDirectory.textContent = "See all matching listings";
+          fullDirectory.setAttribute("aria-label", `See all directory listings matching ${handoffQuery}`);
+        }
+        if (interpretation.recognized) {
+          status.textContent = matches.length
+            ? (widened
+                ? `No exact ${interpretation.location} match. Showing ${matches.length} broader regional route${matches.length === 1 ? "" : "s"}.`
+                : `Showing ${matches.length} suggested route${matches.length === 1 ? "" : "s"}${interpretation.location ? ` for ${interpretation.location}` : ""}.`)
+            : "I understood the request, but found no close directory match. Try one of the suggested follow-up searches.";
+        } else {
+          status.textContent = matches.length
+            ? `Showing ${matches.length} result${matches.length === 1 ? "" : "s"} for "${search}".`
+            : `No close match for "${search}". Try a town, county, or one of the suggested next steps.`;
+        }
         results.innerHTML = matches.map(assistantCard).join("");
       }
 
@@ -7584,6 +7937,14 @@ def write_static_assets() -> None:
         render(input.value);
         input.focus();
       }));
+      guidance && guidance.addEventListener("click", event => {
+        if (!(event.target instanceof Element)) return;
+        const suggestion = event.target.closest("[data-assistant-followup]");
+        if (!suggestion) return;
+        input.value = suggestion.dataset.assistantFollowup || "";
+        render(input.value);
+        input.focus();
+      });
       document.addEventListener("keydown", event => {
         if (event.key === "Escape" && panel.open && typeof panel.close !== "function") {
           event.preventDefault();
