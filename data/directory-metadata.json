@@ -2,9 +2,9 @@
   "generated_at": "2026-07-01",
   "metadata_type": "directory_entry_metadata",
   "publication_note": "Directory metadata is a routing aid, not a replacement for source verification. Confirm details with the listed source or contact path before spending, printing, promising eligibility, or publishing claims.",
-  "entry_count": 1591,
+  "entry_count": 1590,
   "shortcut_count": 100,
-  "local_inventory_count": 1491,
+  "local_inventory_count": 1490,
   "entries": [
     {
       "entry_id": "angel-fire-chamber-member-business-directory",
@@ -6771,19 +6771,6 @@
       "category": "Healthcare / pharmacy",
       "url": "",
       "description": "Use as a launch/outreach lead; verify details before spending money, printing materials, or promising eligibility.",
-      "recommended_action": "Open the source or listing page, then verify current details before outreach or publication.",
-      "metadata_note": "Directory metadata is a routing aid. Confirm details with the listed source or contact path before spending, printing, promising eligibility, or publishing claims."
-    },
-    {
-      "entry_id": "meditating-monkey-art-emporium-raton-colfax-creative-retail-artist-gathering-space",
-      "entry_kind": "local_inventory_lead",
-      "name": "Meditating Monkey Art Emporium",
-      "county": "Colfax",
-      "town": "Raton",
-      "state": "NM",
-      "category": "Creative retail / artist gathering space",
-      "url": "https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200",
-      "description": "Digital listing/search snippets identify a Raton creative/art emporium. Confirm current activity, address, contact route, and listing status before publication or outreach.",
       "recommended_action": "Open the source or listing page, then verify current details before outreach or publication.",
       "metadata_note": "Directory metadata is a routing aid. Confirm details with the listed source or contact path before spending, printing, promising eligibility, or publishing claims."
     },

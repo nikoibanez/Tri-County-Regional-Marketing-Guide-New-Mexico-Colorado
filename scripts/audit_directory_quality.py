@@ -4,6 +4,7 @@ import argparse
 import csv
 import json
 import re
+import sys
 import unicodedata
 from collections import defaultdict
 from datetime import date
@@ -11,6 +12,10 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+
+from directory_exclusions import row_references_excluded_directory_entity  # noqa: E402
+
 DEFAULT_SOURCE = ROOT / "data" / "tri_county_persona_resources.csv"
 DEFAULT_DIRECTORY = ROOT / "data" / "directory_of_absolutely_everything.csv"
 DEFAULT_GUIDE_DATA = ROOT / "dist" / "tri-county-netlify-guide-deep" / "data" / "guide-data.json"
@@ -127,6 +132,10 @@ def assess(source_path: Path, directory_path: Path, guide_data_path: Path = DEFA
     public_rows, public_errors = load_public_resources(guide_data_path)
     blocking = source_errors + directory_errors + public_errors
 
+    excluded_source_rows = [row for row in source_rows if row_references_excluded_directory_entity(row)]
+    excluded_directory_rows = [row for row in directory_rows if row_references_excluded_directory_entity(row)]
+    excluded_public_rows = [row for row in public_rows if row_references_excluded_directory_entity(row)]
+
     blank_source_names = [row for row in source_rows if not clean(row.get("resource_name"))]
     source_duplicate_groups = duplicate_groups(source_rows, "resource_name")
     source_no_link = [row for row in source_rows if not clean(row.get("website")) and not clean(row.get("source_url"))]
@@ -166,6 +175,12 @@ def assess(source_path: Path, directory_path: Path, guide_data_path: Path = DEFA
 
     if blank_source_names:
         blocking.append(f"Canonical source has {len(blank_source_names)} blank resource names.")
+    if excluded_source_rows:
+        blocking.append(f"Canonical source contains {len(excluded_source_rows)} explicitly excluded organization rows.")
+    if excluded_directory_rows:
+        blocking.append(f"Consolidated directory contains {len(excluded_directory_rows)} explicitly excluded organization rows.")
+    if excluded_public_rows:
+        blocking.append(f"Published directory contains {len(excluded_public_rows)} explicitly excluded organization rows.")
     if source_duplicate_groups:
         blocking.append(f"Canonical source has {len(source_duplicate_groups)} exact name/place duplicate groups.")
     if blank_directory_names:
@@ -207,6 +222,7 @@ def assess(source_path: Path, directory_path: Path, guide_data_path: Path = DEFA
         "canonical_source": {
             "path": str(source_path),
             "rows": len(source_rows),
+            "excluded_organization_rows": len(excluded_source_rows),
             "blank_names": len(blank_source_names),
             "exact_name_place_duplicate_groups": len(source_duplicate_groups),
             "without_website_or_source": len(source_no_link),
@@ -218,6 +234,7 @@ def assess(source_path: Path, directory_path: Path, guide_data_path: Path = DEFA
         "published_directory": {
             "path": str(guide_data_path),
             "rows": len(public_rows),
+            "excluded_organization_rows": len(excluded_public_rows),
             "blank_names": len(blank_public_names),
             "exact_name_place_duplicate_groups": len(public_duplicate_groups),
             "generalized_idea_rows": len(public_concept_rows),
@@ -231,6 +248,7 @@ def assess(source_path: Path, directory_path: Path, guide_data_path: Path = DEFA
         "consolidated_directory": {
             "path": str(directory_path),
             "rows": len(directory_rows),
+            "excluded_organization_rows": len(excluded_directory_rows),
             "blank_names": len(blank_directory_names),
             "exact_name_place_duplicate_groups": len(directory_duplicate_groups),
             "name_only_duplicate_groups": len(directory_name_only_duplicates),
@@ -272,6 +290,7 @@ def write_markdown(payload: dict, path: Path) -> None:
             "## Canonical Resource Rows",
             "",
             f"- Rows: {canonical['rows']}",
+            f"- Explicitly excluded organization rows: {canonical['excluded_organization_rows']}",
             f"- Exact name/place duplicate groups: {canonical['exact_name_place_duplicate_groups']}",
             f"- Without website or source URL: {canonical['without_website_or_source']}",
             f"- Without phone: {canonical['without_phone']}",
@@ -281,6 +300,7 @@ def write_markdown(payload: dict, path: Path) -> None:
             "## Published Network Directory",
             "",
             f"- Entries: {published['rows']}",
+            f"- Explicitly excluded organization rows: {published['excluded_organization_rows']}",
             f"- Exact name/place duplicate groups: {published['exact_name_place_duplicate_groups']}",
             f"- Generalized ideas presented as listings: {published['generalized_idea_rows']}",
             f"- Generic descriptions: {published['generic_descriptions']}",
@@ -291,6 +311,7 @@ def write_markdown(payload: dict, path: Path) -> None:
             "## Legacy Consolidated Export",
             "",
             f"- Entries: {directory['rows']}",
+            f"- Explicitly excluded organization rows: {directory['excluded_organization_rows']}",
             f"- Exact name/place duplicate groups: {directory['exact_name_place_duplicate_groups']}",
             f"- Generalized ideas presented as listings: {directory['generalized_idea_rows']}",
             f"- Generic descriptions: {directory['generic_descriptions']}",

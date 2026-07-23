@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22",
+  "generated_at": "2026-07-23",
   "status": "pass",
   "blocking": [],
   "warnings": [
@@ -9,13 +9,14 @@
   ],
   "canonical_source": {
     "path": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\data\\tri_county_persona_resources.csv",
-    "rows": 1491,
+    "rows": 1490,
+    "excluded_organization_rows": 0,
     "blank_names": 0,
     "exact_name_place_duplicate_groups": 0,
     "without_website_or_source": 175,
-    "without_phone": 1301,
-    "without_email": 1464,
-    "without_address": 1026,
+    "without_phone": 1300,
+    "without_email": 1463,
+    "without_address": 1025,
     "contact_enrichment_sample": [
       "111 Park Espresso Bar / Enchanted Grounds Espresso Bar",
       "A Taylor Made Haircut",
@@ -41,7 +42,8 @@
   },
   "published_directory": {
     "path": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
-    "rows": 1356,
+    "rows": 1355,
+    "excluded_organization_rows": 0,
     "blank_names": 0,
     "exact_name_place_duplicate_groups": 0,
     "generalized_idea_rows": 0,
@@ -54,7 +56,8 @@
   },
   "consolidated_directory": {
     "path": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\data\\directory_of_absolutely_everything.csv",
-    "rows": 688,
+    "rows": 687,
+    "excluded_organization_rows": 0,
     "blank_names": 0,
     "exact_name_place_duplicate_groups": 1,
     "name_only_duplicate_groups": 3,

@@ -68,7 +68,6 @@ No row should be read as proof of grant eligibility, ad availability, acceptance
 - NM CreativeCon / Creative Industries Event Series - Raton, Colfax - https://www.edd.newmexico.gov/press-releases/state-launches-nm-creativecon-series-to-boost-creative-economy/
 - Startup Space Creative Assets Directory - Northeast New Mexico Search - Regional, Colfax - https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200
 - LK Creative - Angel Fire, Colfax - https://www.startupspace.app/resource?page=62
-- Meditating Monkey Art Emporium - Raton, Colfax - https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200
 - Colorado Creative Industries - Regional, Regional - https://oedit.colorado.gov/colorado-creative-industries
 - Colorado Creative Districts - Regional, Regional - https://oedit.colorado.gov/colorado-creative-districts
 - Call Yourself Creative Certified District Partners - Regional, Regional - https://callyourselfcreative.org/partners

@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import sys
 import time
 from datetime import date
 from pathlib import Path
@@ -12,6 +13,10 @@ from urllib.request import Request, urlopen
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+
+from directory_exclusions import references_excluded_directory_entity  # noqa: E402
+
 DEFAULT_SITE = ROOT / "dist" / "tri-county-netlify-guide-deep"
 DEFAULT_OUT_DIR = ROOT / "review" / "maintenance"
 DEFAULT_PATHS = (
@@ -24,6 +29,8 @@ DEFAULT_PATHS = (
     "about/",
     "assets/app.js",
     "data/guide-data.json",
+    "data/tri_county_persona_resources.csv",
+    "data/tri_county_persona_resources.json",
     "sitemap.xml",
     "robots.txt",
 )
@@ -62,12 +69,16 @@ def remote_fetch(base_url: str, route: str, timeout: int) -> tuple[bool, str, st
 
 
 def validate_body(route: str, body: str) -> str:
+    if references_excluded_directory_entity(body):
+        return "Public output contains an explicitly excluded organization."
     suffix = Path(route).suffix.casefold()
     if suffix == ".json":
         try:
             payload = json.loads(body)
         except json.JSONDecodeError as exc:
             return f"Invalid JSON: {exc}"
+        if route.endswith("tri_county_persona_resources.json"):
+            return "" if isinstance(payload, list) else "Expected a JSON array."
         if not isinstance(payload, dict):
             return "Expected a JSON object."
         return ""
@@ -75,6 +86,8 @@ def validate_body(route: str, body: str) -> str:
         return "" if "<urlset" in body and "<loc>" in body else "Sitemap XML is missing urlset or loc elements."
     if suffix == ".txt":
         return "" if "Sitemap:" in body else "robots.txt is missing the Sitemap directive."
+    if suffix == ".csv":
+        return "" if "," in body and "\n" in body else "CSV output is empty or malformed."
     if suffix == ".js":
         required = ("const ASSISTANT_INTENTS", "assistantInterpretation", "data-assistant-followup")
         missing = [marker for marker in required if marker not in body]

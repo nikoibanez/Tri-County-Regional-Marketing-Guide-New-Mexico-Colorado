@@ -37,6 +37,8 @@ jobs:
       - name: Compile maintenance scripts
         run: >-
           python -m py_compile
+          tools/directory_exclusions.py
+          tools/apply_directory_exclusions.py
           tools/build_netlify_deep_guide.py
           scripts/audit_update_sources.py
           scripts/weekly_directory_query_check.py
@@ -65,6 +67,9 @@ jobs:
 
       - name: Audit directory quality
         run: python scripts/audit_directory_quality.py --fail-on-blocking
+
+      - name: Enforce permanent directory exclusions
+        run: python tools/apply_directory_exclusions.py --check
 
       - name: Audit internal routes and anchors
         run: python scripts/audit_internal_links.py --fail-on-broken

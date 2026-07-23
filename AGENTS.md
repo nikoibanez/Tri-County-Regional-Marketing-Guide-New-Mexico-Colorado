@@ -13,6 +13,7 @@ Run:
 
 ```powershell
 python tools/build_netlify_deep_guide.py
+python tools/apply_directory_exclusions.py --check
 python scripts/build_update_source_registry.py
 python scripts/audit_update_sources.py --limit 120
 python scripts/sweep_listing_keywords.py --no-network
@@ -25,6 +26,7 @@ python scripts/sweep_listing_keywords.py --no-network
 - AI may propose changes, write review reports, update source metadata, and draft pull requests.
 - A human reviewer must approve changes to public claims, eligibility language, directory inclusion/removal, contact details, rates, deadlines, or civic/legal guidance.
 - Keep public copy practical and direct. Avoid internal audit language on public pages unless it appears in the About or creation-process section.
+- Never publish, suggest, import, or regenerate an entity blocked by `tools/directory_exclusions.py`. Run the exclusion check after every build and before every deploy.
 
 ## Review Labels
 

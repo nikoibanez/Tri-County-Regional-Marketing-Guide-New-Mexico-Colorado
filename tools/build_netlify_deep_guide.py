@@ -12,6 +12,11 @@ from pathlib import Path
 from textwrap import dedent
 from urllib.parse import quote_plus, urlparse
 
+from directory_exclusions import (
+    filter_excluded_directory_rows,
+    row_references_excluded_directory_entity,
+)
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DOWNLOADS = Path.home() / "Downloads"
@@ -224,15 +229,6 @@ CURRENT_LEADS = [
         "url": "https://www.walsenburgmercantile.com/meet-our-vendors",
         "best_for": "Artists, makers, craftspeople, food producers, and retailers looking for local vendor visibility and cross-promotion examples.",
         "action": "Use as a discovery lead, then contact the venue directly before assuming vendor availability or terms.",
-    },
-    {
-        "title": "Meditating Monkey Art Emporium relocation watch",
-        "county": "Huerfano",
-        "kind": "Arts venue / listing update watch",
-        "group": "Update watch",
-        "url": "https://www.facebook.com/meditatingmonkeyartemporium/",
-        "best_for": "Arts-directory cleanup, visitor-facing gallery updates, and avoiding stale address or venue references.",
-        "action": "Confirm the current address and status before publishing or printing a gallery, event, or shopping recommendation.",
     },
 ]
 
@@ -1607,6 +1603,11 @@ PERSONA_ROUTES = [
     },
 ]
 
+CURRENT_LEADS = filter_excluded_directory_rows(CURRENT_LEADS)
+DIRECTORY_SOURCES = filter_excluded_directory_rows(DIRECTORY_SOURCES)
+AMPLIFIER_CHANNELS = filter_excluded_directory_rows(AMPLIFIER_CHANNELS)
+POSTING_SPACES = filter_excluded_directory_rows(POSTING_SPACES)
+
 
 PATHS = [
     {
@@ -2830,6 +2831,7 @@ def publishable_resource_row(row: dict) -> bool:
     return (
         concrete_listing_name(row)
         and name not in NON_ENTITY_RESOURCE_NAMES
+        and not row_references_excluded_directory_entity(row)
         and not is_creation_process_note(row)
         and not malformed_listing_name(row)
     )
@@ -4597,7 +4599,7 @@ def funding_page(rows: list[dict]) -> str:
 def arts_culture_page(rows: list[dict]) -> str:
     terms = ["art", "artist", "gallery", "creative", "maker", "music", "theater", "theatre", "museum", "cultural", "craft", "mural", "performance", "dance", "film", "literary"]
     arts_sources = sources_matching_terms(terms)
-    arts_leads = [item for item in CURRENT_LEADS if item["title"] in {"Walsenburg Mercantile vendors", "Meditating Monkey Art Emporium relocation watch"}]
+    arts_leads = [item for item in CURRENT_LEADS if item["title"] == "Walsenburg Mercantile vendors"]
     lead_markup = "\n".join(
         f"""
         <article class="lead-card" data-lead-group="{html_escape(item['group'])}" data-county="{html_escape(item['county'])}">

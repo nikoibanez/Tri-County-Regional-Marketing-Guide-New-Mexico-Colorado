@@ -12,8 +12,13 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 from audit_directory_quality import duplicate_groups, normalize_name  # noqa: E402
 from audit_internal_links import audit_site  # noqa: E402
-from build_netlify_deep_guide import inferred_listing_type  # noqa: E402
+from build_netlify_deep_guide import inferred_listing_type, publishable_resource_row  # noqa: E402
+from directory_exclusions import (  # noqa: E402
+    filter_excluded_directory_rows,
+    references_excluded_directory_entity,
+)
 from smoke_test_site import validate_body  # noqa: E402
+from weekly_directory_query_check import extract_candidates  # noqa: E402
 from sweep_listing_keywords import (  # noqa: E402
     KeywordSignalParser,
     canonical_signal,
@@ -44,6 +49,38 @@ class DirectoryQualityTests(unittest.TestCase):
         }
         self.assertEqual(inferred_listing_type(row), "Food & drink")
 
+    def test_excluded_organizations_never_become_publishable_rows(self) -> None:
+        blocked_rows = [
+            {"resource_name": "Raton Art Space LLC", "town": "Raton", "county": "Colfax"},
+            {
+                "resource_name": "Example Gallery",
+                "town": "Raton",
+                "county": "Colfax",
+                "website": "https://example.org/meditatingmonkeyartemporium",
+            },
+        ]
+
+        self.assertTrue(references_excluded_directory_entity(blocked_rows[0]["resource_name"]))
+        self.assertEqual(filter_excluded_directory_rows(blocked_rows), [])
+        self.assertFalse(publishable_resource_row(blocked_rows[0]))
+
+    def test_weekly_directory_sweep_discards_excluded_candidates(self) -> None:
+        source = {
+            "id": "test-directory",
+            "title": "Test Directory",
+            "county": "Colfax",
+            "state": "NM",
+            "source_type": "Test",
+        }
+        html = (
+            '<a href="/listing/raton-art-space">Raton Art Space</a>'
+            '<a href="/listing/allowed-gallery">Allowed Gallery</a>'
+        )
+
+        candidates = extract_candidates(source, "https://example.org/directory/", html, {})
+
+        self.assertEqual([candidate["name"] for candidate in candidates], ["Allowed Gallery"])
+
 
 class InternalLinkTests(unittest.TestCase):
     def test_audit_site_detects_missing_target(self) -> None:
@@ -69,6 +106,13 @@ class SiteSmokeTests(unittest.TestCase):
 
         self.assertEqual(validate_body("assets/app.js", complete), "")
         self.assertIn("data-assistant-followup", validate_body("assets/app.js", incomplete))
+
+    def test_public_output_rejects_excluded_organization_names(self) -> None:
+        body = '{"resource_name": "Raton Art Space"}'
+        self.assertIn("explicitly excluded organization", validate_body("data/guide-data.json", body))
+
+    def test_public_resource_json_accepts_an_array(self) -> None:
+        self.assertEqual(validate_body("data/tri_county_persona_resources.json", "[]"), "")
 
 
 class KeywordSweepTests(unittest.TestCase):

@@ -1,6 +1,6 @@
 # Directory Quality Report
 
-Generated: 2026-07-22
+Generated: 2026-07-23
 
 Status: **PASS**
 
@@ -16,16 +16,18 @@ Status: **PASS**
 
 ## Canonical Resource Rows
 
-- Rows: 1491
+- Rows: 1490
+- Explicitly excluded organization rows: 0
 - Exact name/place duplicate groups: 0
 - Without website or source URL: 175
-- Without phone: 1301
-- Without email: 1464
-- Without address: 1026
+- Without phone: 1300
+- Without email: 1463
+- Without address: 1025
 
 ## Published Network Directory
 
-- Entries: 1356
+- Entries: 1355
+- Explicitly excluded organization rows: 0
 - Exact name/place duplicate groups: 0
 - Generalized ideas presented as listings: 0
 - Generic descriptions: 0
@@ -35,7 +37,8 @@ Status: **PASS**
 
 ## Legacy Consolidated Export
 
-- Entries: 688
+- Entries: 687
+- Explicitly excluded organization rows: 0
 - Exact name/place duplicate groups: 1
 - Generalized ideas presented as listings: 6
 - Generic descriptions: 0

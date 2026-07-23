@@ -7125,28 +7125,6 @@
       "content_hash": "",
       "error": ""
     },
-    "meditating-monkey-art-emporium-raton-colfax-creative-retail-artist-gathering-space": {
-      "resource_name": "Meditating Monkey Art Emporium",
-      "keywords": [
-        "artist",
-        "creative business",
-        "retail"
-      ],
-      "canonical_keywords": [
-        "artist",
-        "creative business",
-        "retail"
-      ],
-      "source_keywords": [],
-      "source_url": "https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200",
-      "final_url": "https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200",
-      "status": "pending_source_check",
-      "status_code": null,
-      "last_checked": "",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": ""
-    },
     "mesa-pharmacy-colfax-healthcare-pharmacy": {
       "resource_name": "Mesa Pharmacy",
       "keywords": [

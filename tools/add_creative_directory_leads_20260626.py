@@ -6,6 +6,8 @@ import re
 from collections import Counter
 from pathlib import Path
 
+from directory_exclusions import filter_excluded_directory_rows
+
 
 ROOT = Path(__file__).resolve().parents[1]
 CSV_PATH = ROOT / "data" / "tri_county_persona_resources.csv"
@@ -976,14 +978,15 @@ def write_rows(rows: list[dict[str, str]]) -> None:
 
 
 def main() -> None:
-    raw_rows = read_rows()
+    raw_rows = filter_excluded_directory_rows(read_rows())
+    entries = filter_excluded_directory_rows(ENTRIES)
     before_count = len(raw_rows)
     rows = [row for row in raw_rows if row.get("id") not in DROP_DUPLICATE_IDS]
     dropped_duplicate_count = before_count - len(rows)
     index = {item["id"]: item for item in rows}
     added = []
     updated = []
-    for entry in ENTRIES:
+    for entry in entries:
         current = index.get(entry["id"])
         if current:
             current.update({field: entry.get(field, "") for field in FIELDNAMES})
@@ -996,11 +999,11 @@ def main() -> None:
     rows.sort(key=lambda item: (item.get("county", ""), item.get("town", ""), item.get("resource_name", "")))
     write_rows(rows)
 
-    by_county = Counter(entry["county"] for entry in ENTRIES)
-    by_type = Counter(entry["resource_type"] for entry in ENTRIES)
+    by_county = Counter(entry["county"] for entry in entries)
+    by_type = Counter(entry["resource_type"] for entry in entries)
     source_rows = "\n".join(
         f"- {entry['resource_name']} - {entry['town']}, {entry['county']} - {entry['source_url']}"
-        for entry in ENTRIES
+        for entry in entries
     )
     review = f"""# Creative Directory Expansion - {TODAY}
 
@@ -1011,7 +1014,7 @@ def main() -> None:
 - New rows added: {len(added)}
 - Existing rows updated: {len(updated)}
 - Duplicate rows folded into existing stable IDs: {dropped_duplicate_count}
-- Total creative entries processed in this pass: {len(ENTRIES)}
+- Total creative entries processed in this pass: {len(entries)}
 
 ## County Mix
 
@@ -1041,7 +1044,7 @@ All new individual entries are source-linked leads or local-check leads. They sh
                 "added": len(added),
                 "updated": len(updated),
                 "dropped_duplicates": dropped_duplicate_count,
-                "processed": len(ENTRIES),
+                "processed": len(entries),
                 "review": str(REVIEW_PATH),
             },
             indent=2,

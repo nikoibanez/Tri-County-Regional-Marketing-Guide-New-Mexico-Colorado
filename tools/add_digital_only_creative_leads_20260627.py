@@ -6,6 +6,8 @@ import re
 from collections import Counter
 from pathlib import Path
 
+from directory_exclusions import filter_excluded_directory_rows
+
 
 ROOT = Path(__file__).resolve().parents[1]
 CSV_PATH = ROOT / "data" / "tri_county_persona_resources.csv"
@@ -381,21 +383,6 @@ ENTRIES: list[dict[str, str]] = [
         verification="Search-result source linked; needs manual verification",
     ),
     row(
-        "Meditating Monkey Art Emporium",
-        "Creative retail / artist gathering space",
-        "Raton",
-        "Colfax",
-        "NM",
-        website=STARTUPSPACE_CREATIVE_SEARCH,
-        source_url=STARTUPSPACE_CREATIVE_SEARCH,
-        source_type="Startup Space digital listing",
-        resource_type="Creative business / source-linked lead",
-        access_mode="Online + Physical / verify",
-        notes="Digital listing/search snippets identify a Raton creative/art emporium. Confirm current activity, address, contact route, and listing status before publication or outreach.",
-        confidence="Low",
-        verification="Search-result source linked; needs manual verification",
-    ),
-    row(
         "Colorado Creative Industries",
         "Statewide arts funding and creative-sector support",
         "Regional",
@@ -662,12 +649,13 @@ def write_rows(rows: list[dict[str, str]]) -> None:
 
 
 def main() -> None:
-    rows = read_rows()
+    rows = filter_excluded_directory_rows(read_rows())
+    entries = filter_excluded_directory_rows(ENTRIES)
     before_count = len(rows)
     index = {item["id"]: item for item in rows}
     added: list[str] = []
     updated: list[str] = []
-    for entry in ENTRIES:
+    for entry in entries:
         current = index.get(entry["id"])
         if current:
             current.update({field: entry.get(field, "") for field in FIELDNAMES})
@@ -680,11 +668,11 @@ def main() -> None:
     rows.sort(key=lambda item: (item.get("county", ""), item.get("town", ""), item.get("resource_name", "")))
     write_rows(rows)
 
-    by_county = Counter(entry["county"] for entry in ENTRIES)
-    by_type = Counter(entry["resource_type"] for entry in ENTRIES)
+    by_county = Counter(entry["county"] for entry in entries)
+    by_type = Counter(entry["resource_type"] for entry in entries)
     source_rows = "\n".join(
         f"- {entry['resource_name']} - {entry['town']}, {entry['county']} - {entry['source_url']}"
-        for entry in ENTRIES
+        for entry in entries
     )
     review = f"""# Digital-Only Creative Directory Expansion - {TODAY}
 
@@ -694,7 +682,7 @@ def main() -> None:
 - Rows after: {len(rows)}
 - New rows added: {len(added)}
 - Existing rows updated: {len(updated)}
-- Digital/source-linked creative entries processed: {len(ENTRIES)}
+- Digital/source-linked creative entries processed: {len(entries)}
 
 ## County Mix
 
@@ -725,7 +713,7 @@ No row should be read as proof of grant eligibility, ad availability, acceptance
                 "rows_after": len(rows),
                 "added": len(added),
                 "updated": len(updated),
-                "processed": len(ENTRIES),
+                "processed": len(entries),
                 "review": str(REVIEW_PATH),
             },
             indent=2,

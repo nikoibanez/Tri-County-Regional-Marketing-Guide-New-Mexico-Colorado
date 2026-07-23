@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-22",
+  "generated_at": "2026-07-23",
   "target": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\dist\\tri-county-netlify-guide-deep",
   "mode": "local",
   "status": "pass",
-  "checked": 11,
+  "checked": 13,
   "failed": 0,
   "results": [
     {
@@ -48,6 +48,16 @@
     },
     {
       "route": "/data/guide-data.json",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/data/tri_county_persona_resources.csv",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/data/tri_county_persona_resources.json",
       "ok": true,
       "error": ""
     },

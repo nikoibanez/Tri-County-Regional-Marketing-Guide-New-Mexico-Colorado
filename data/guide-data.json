@@ -1,10 +1,10 @@
 {
   "generated_at": "2026-07-01",
   "summary": {
-    "row_count": 632,
+    "row_count": 631,
     "county": {
       "Huerfano": 236,
-      "Colfax": 176,
+      "Colfax": 175,
       "Las Animas": 122,
       "Regional": 98
     },
@@ -27,7 +27,6 @@
       "Data Source": 3,
       "Venue / Performing Arts": 3,
       "Venue / Live Music": 3,
-      "Creative business / source-linked lead": 2,
       "Digital gallery directory": 2,
       "Museum / Creative": 2,
       "Tattoo / Body art": 2,
@@ -35,6 +34,7 @@
       "Creative education / community programs": 2,
       "Creative district directory": 2,
       "Creative nonprofit / Artist support": 1,
+      "Creative business / source-linked lead": 1,
       "Digital creative service directory": 1,
       "Media / Creative": 1,
       "Digital creative retail directory": 1,
@@ -64,35 +64,35 @@
       "Creative directory / listing path": 1
     },
     "goal": {
-      "Start Something": 594,
-      "Promote Something": 515,
-      "Improve Online Visibility": 466,
-      "Add / Correct Info": 395,
+      "Start Something": 593,
+      "Promote Something": 514,
+      "Improve Online Visibility": 465,
+      "Add / Correct Info": 394,
       "Get Media Coverage": 289,
       "Reach People Offline": 278,
       "Find Money / Help": 84,
-      "Track Results": 66,
-      "Find Money or Help": 35
+      "Track Results": 65,
+      "Find Money or Help": 34
     },
     "audience": {
-      "Program": 616,
-      "For-Profit": 597,
-      "Visitors / tourists": 475,
-      "Artist": 342,
-      "Non-Profit": 329,
-      "Arts / culture audiences": 233,
+      "Program": 615,
+      "For-Profit": 596,
+      "Visitors / tourists": 474,
+      "Artist": 341,
+      "Non-Profit": 328,
+      "Arts / culture audiences": 232,
       "Entrepreneur": 124,
       "Rural residents": 83,
-      "Creative business": 41,
+      "Creative business": 40,
       "Health / service audiences": 38,
       "Youth / families": 31
     }
   },
   "directory_metadata": {
     "href": "data/directory-metadata.json",
-    "entry_count": 732,
+    "entry_count": 743,
     "shortcut_count": 112,
-    "local_inventory_count": 632
+    "local_inventory_count": 631
   },
   "directory_sources": [
     {
@@ -4071,31 +4071,6 @@
       "has_public_source": false,
       "best_for": "Shop or local retail business in Raton, Colfax, NM. Use it to find existing public listings, visitor pages, and organization contacts before creating a new outreach list.",
       "description": "Shop or local retail business in Raton, Colfax, NM. Use it to find existing public listings, visitor pages, and organization contacts before creating a new outreach list."
-    },
-    {
-      "id": "meditating-monkey-art-emporium-raton-colfax-creative-retail-artist-gathering-space",
-      "resource_name": "Meditating Monkey Art Emporium",
-      "category": "Creative retail / artist gathering space",
-      "town": "Raton",
-      "county": "Colfax",
-      "state": "NM",
-      "website": "https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200",
-      "contact_email": "",
-      "contact_phone": "",
-      "physical_address": "",
-      "source_url": "https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200",
-      "source_type": "Startup Space digital listing",
-      "last_verified_date": "2026-06-27",
-      "notes": "Digital listing/search snippets identify a Raton creative/art emporium. Confirm current activity, address, contact route, and listing status before publication or outreach.",
-      "needs_follow_up": "true",
-      "resource_type": "Creative business / source-linked lead",
-      "audience_served": "Artist; Creative business; Arts / culture audiences; For-Profit; Non-Profit; Program; Visitors / tourists",
-      "cost_level": "Unknown / verify",
-      "access_mode": "Online + Physical / verify",
-      "goal_relevance": "Improve Online Visibility; Add / Correct Info; Promote Something; Find Money or Help; Start Something; Track Results",
-      "has_public_source": true,
-      "best_for": "Digital listing/search snippets identify a Raton creative/art emporium. Confirm current activity, address, contact route, and listing status before publication or outreach.",
-      "description": "Digital listing/search snippets identify a Raton creative/art emporium. Confirm current activity, address, contact route, and listing status before publication or outreach."
     },
     {
       "id": "mesa-pharmacy-colfax-healthcare-pharmacy",

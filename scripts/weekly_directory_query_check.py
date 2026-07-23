@@ -6,6 +6,7 @@ import hashlib
 import json
 import re
 import ssl
+import sys
 import time
 import unicodedata
 from collections import defaultdict
@@ -19,6 +20,10 @@ from urllib.request import Request, urlopen
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+
+from directory_exclusions import references_excluded_directory_entity  # noqa: E402
+
 DEFAULT_CONFIG = ROOT / "data" / "directory-watch-sources.json"
 DEFAULT_DIRECTORY_FILES = [
     ROOT / "data" / "directory_of_absolutely_everything.csv",
@@ -543,6 +548,8 @@ def extract_candidates(source: dict, page_url: str, html: str, existing_names: d
 
     def add_candidate(name: str, url: str, evidence_type: str, confidence: str) -> None:
         name = clean_text(name)
+        if references_excluded_directory_entity(name) or references_excluded_directory_entity(url):
+            return
         if not looks_like_listing_name(name):
             return
         key = normalize_name(name)
