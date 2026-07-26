@@ -19,6 +19,7 @@ from directory_exclusions import references_excluded_directory_entity  # noqa: E
 
 DEFAULT_SITE = ROOT / "dist" / "tri-county-netlify-guide-deep"
 DEFAULT_OUT_DIR = ROOT / "review" / "maintenance"
+MAX_REMOTE_BYTES = 12_000_000
 DEFAULT_PATHS = (
     "",
     "network/",
@@ -57,7 +58,10 @@ def remote_fetch(base_url: str, route: str, timeout: int) -> tuple[bool, str, st
     for attempt in range(2):
         try:
             with urlopen(request, timeout=timeout) as response:
-                body = response.read(3_000_000).decode(response.headers.get_content_charset() or "utf-8", errors="replace")
+                raw_body = response.read(MAX_REMOTE_BYTES + 1)
+                if len(raw_body) > MAX_REMOTE_BYTES:
+                    return False, "", f"Response exceeds the {MAX_REMOTE_BYTES:,}-byte smoke-test limit."
+                body = raw_body.decode(response.headers.get_content_charset() or "utf-8", errors="replace")
                 status = getattr(response, "status", 200)
                 return 200 <= status < 400, body, "" if status < 400 else f"HTTP {status}"
         except (HTTPError, URLError, TimeoutError, OSError) as exc:

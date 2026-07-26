@@ -20,15 +20,18 @@ jobs:
     timeout-minutes: 35
     steps:
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
       - name: Run weekly directory query check
         run: python scripts/weekly_directory_query_check.py
+
+      - name: Build generated directory for quality checks
+        run: python tools/build_netlify_deep_guide.py
 
       - name: Audit directory quality
         run: python scripts/audit_directory_quality.py --fail-on-blocking
@@ -68,7 +71,7 @@ jobs:
 
       - name: Upload directory-watch report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: tri-county-weekly-directory-query-check-${{ github.run_id }}
           retention-days: 30
