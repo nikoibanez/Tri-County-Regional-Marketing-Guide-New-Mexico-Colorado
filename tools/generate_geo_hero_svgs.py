@@ -23,7 +23,7 @@ STYLE = """
     animation: geo-wind 28s linear infinite;
   }
   .wind-line.thin { stroke-width: 0.9; opacity: 0.38; animation-duration: 34s; }
-  .wind-line.gold { stroke: rgba(216,187,104,0.28); animation-duration: 31s; }
+  .wind-line.gold { stroke: rgba(182,145,70,0.34); animation-duration: 31s; }
   .yucca-sway {
     transform-box: fill-box;
     transform-origin: 50% 100%;
@@ -108,14 +108,14 @@ STYLE = """
 
 COMMON_DEFS = """
   <linearGradient id="yuccaLeaf" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#203d43"/>
-    <stop offset="0.48" stop-color="#66806a"/>
-    <stop offset="1" stop-color="#c6c58a"/>
+    <stop offset="0" stop-color="#173047"/>
+    <stop offset="0.48" stop-color="#687665"/>
+    <stop offset="1" stop-color="#b69146"/>
   </linearGradient>
   <linearGradient id="flower" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#fff8db"/>
-    <stop offset="0.62" stop-color="#f4ecd0"/>
-    <stop offset="1" stop-color="#d6bd80"/>
+    <stop offset="0" stop-color="#fffdf8"/>
+    <stop offset="0.62" stop-color="#f1e4bf"/>
+    <stop offset="1" stop-color="#b69146"/>
   </linearGradient>
   <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
     <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#173047" flood-opacity="0.13"/>
@@ -135,10 +135,10 @@ def yucca(side: str = "right") -> str:
       <g class="leaf-sway">
         <path d="M150 520l62-260 30 270z" fill="url(#yuccaLeaf)"/>
         <path d="M148 524l-66-220 120 222z" fill="#173047" opacity="0.9"/>
-        <path d="M178 520l148-194-80 204z" fill="#59786a"/>
+        <path d="M178 520l148-194-80 204z" fill="#687665"/>
         <path d="M190 523l214-120-148 130z" fill="#2d5557"/>
         <path d="M116 526L0 370l168 154z" fill="#24474d"/>
-        <path d="M206 526l58-158 10 164z" fill="#9baa72"/>
+        <path d="M206 526l58-158 10 164z" fill="#8b956f"/>
       </g>
       <g class="yucca-sway slow" transform="translate(202 54)">
         <path d="M0 430C24 320 36 213 24 0" fill="none" stroke="#4f623d" stroke-width="10" stroke-linecap="round"/>
@@ -211,17 +211,17 @@ def svg_for(variant: dict[str, str]) -> str:
 
 
 BASE = {
-    "sky_top": "#b8dceb",
-    "sky_mid": "#f4dcc1",
-    "warm": "#f4b06f",
+    "sky_top": "#afcbd0",
+    "sky_mid": "#ead8c4",
+    "warm": "#a76149",
     "sun_x": "0.72",
     "sun_y": "0.34",
-    "far_a": "#7fa2b7",
-    "far_b": "#b9939a",
-    "near_a": "#557c90",
-    "near_b": "#9e6f72",
-    "plain_a": "#d8bb68",
-    "plain_b": "#9baa72",
+    "far_a": "#78929b",
+    "far_b": "#9a7d80",
+    "near_a": "#455f68",
+    "near_b": "#8c6656",
+    "plain_a": "#b69146",
+    "plain_b": "#7f8b6e",
     "wind1": "M515 126c168 48 292 50 436 2 126-42 236-38 364 7",
     "wind2": "M356 178c190 76 384 80 566 20 192-63 342-45 536 24",
     "wind3": "M660 246c142 30 288 20 422-28 102-37 192-24 286 22",

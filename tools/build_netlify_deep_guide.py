@@ -3109,6 +3109,13 @@ def copy_assets() -> None:
         if src.exists():
             shutil.copy2(src, dest)
 
+    texture_src = ROOT / "assets" / "textures"
+    if texture_src.exists():
+        texture_dest = ASSET_OUT / "textures"
+        if texture_dest.exists():
+            shutil.rmtree(texture_dest)
+        shutil.copytree(texture_src, texture_dest)
+
     animation_src = ROOT / "assets" / "animations"
     if animation_src.exists():
         animation_dest = ASSET_OUT / "animations"
@@ -4208,12 +4215,62 @@ def page_shell(
           {intro_curtain}
           <header class="site-header">
             <a class="brand" href="{rel('index.html', depth)}" aria-label="Stateline Guide home">
-              <span class="brand-mark">SG</span>
+              <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 44 36" focusable="false">
+                  <path class="brand-mark__mesa" d="M3 25 12 17h8l5-7 5 7h5l6 8H3Z"/>
+                  <path class="brand-mark__route" d="M7 28c7-5 13-6 19-3 5 2 9 1 13-2"/>
+                  <circle class="brand-mark__sun" cx="32" cy="7" r="2.6"/>
+                </svg>
+              </span>
               <span>Stateline Guide</span>
             </a>
             <nav class="site-nav" aria-label="Primary navigation">
               {nav}
             </nav>
+            <div class="nav-yucca-flourish" data-nav-yucca aria-hidden="true">
+              <svg viewBox="0 0 160 62" focusable="false">
+                <path class="nav-yucca__index-line" d="M7 55.5H157"/>
+                <g class="nav-yucca__plant nav-yucca__plant--left">
+                  <path class="nav-yucca__stem" style="--sprout-delay:80ms" d="M54 55C53 41 54 28 50 16"/>
+                  <path class="nav-yucca__branch" style="--sprout-delay:300ms" d="M52 33 43 26M52 27l9-8"/>
+                  <path class="nav-yucca__leaf" style="--sprout-delay:180ms" d="m52 55-12-13 9 14m5-1 12-14-8 15m-5-1-2-17"/>
+                  <g class="nav-yucca__flower" style="--sprout-delay:760ms" transform="translate(49 14)">
+                    <path d="M0 3c-5-1-7-4-6-8 5 0 8 2 9 6"/>
+                    <path d="M2 3c5-1 7-4 6-8-5 0-8 2-9 6"/>
+                  </g>
+                  <g class="nav-yucca__flower" style="--sprout-delay:930ms" transform="translate(42 24)">
+                    <path d="M0 3c-4-1-6-4-5-7 4 0 7 2 8 5"/>
+                    <path d="M2 3c4-1 6-4 5-7-4 0-7 2-8 5"/>
+                  </g>
+                </g>
+                <g class="nav-yucca__plant nav-yucca__plant--center">
+                  <path class="nav-yucca__stem" style="--sprout-delay:160ms" d="M102 55c0-18 2-34-2-49"/>
+                  <path class="nav-yucca__branch" style="--sprout-delay:390ms" d="m101 34-13-9m13 2 12-11m-12 3-8-9"/>
+                  <path class="nav-yucca__leaf" style="--sprout-delay:260ms" d="M101 55 84 38l12 18m7-1 17-19-11 20m-8-1-4-23m6 23 5-22"/>
+                  <g class="nav-yucca__flower" style="--sprout-delay:820ms" transform="translate(99 5)">
+                    <path d="M0 4c-6-1-8-5-7-9 6 0 9 3 10 7"/>
+                    <path d="M2 4c6-1 8-5 7-9-6 0-9 3-10 7"/>
+                  </g>
+                  <g class="nav-yucca__flower" style="--sprout-delay:1000ms" transform="translate(91 9)">
+                    <path d="M0 3c-4-1-6-4-5-7 4 0 7 2 8 5"/>
+                    <path d="M2 3c4-1 6-4 5-7-4 0-7 2-8 5"/>
+                  </g>
+                  <g class="nav-yucca__flower" style="--sprout-delay:1110ms" transform="translate(112 15)">
+                    <path d="M0 3c-4-1-6-4-5-7 4 0 7 2 8 5"/>
+                    <path d="M2 3c4-1 6-4 5-7-4 0-7 2-8 5"/>
+                  </g>
+                </g>
+                <g class="nav-yucca__plant nav-yucca__plant--right">
+                  <path class="nav-yucca__stem" style="--sprout-delay:240ms" d="M137 55c1-12 0-23 3-34"/>
+                  <path class="nav-yucca__branch" style="--sprout-delay:470ms" d="m139 37-9-7m9 0 8-7"/>
+                  <path class="nav-yucca__leaf" style="--sprout-delay:340ms" d="m138 55-12-12 8 13m5-1 13-13-9 14m-5-1 1-18"/>
+                  <g class="nav-yucca__flower" style="--sprout-delay:960ms" transform="translate(139 20)">
+                    <path d="M0 3c-5-1-7-4-6-8 5 0 8 2 9 6"/>
+                    <path d="M2 3c5-1 7-4 6-8-5 0-8 2-9 6"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
           </header>
           <main id="main">
             <noscript><section class="noscript">Search, filters, and copy buttons need JavaScript. The pages, tables, links, downloads, and appendix content still work without it.</section></noscript>
@@ -4323,7 +4380,10 @@ def mountain_banner() -> str:
       <div class="hero-copy">
         <p class="eyebrow">Stateline Guide</p>
         <h1>Tri-County Regional Marketing Guide</h1>
-        <p class="lede">For new and existing businesses, artists, nonprofits, galleries, programs, services, and mentorships trying to expand customers, visibility, partnerships, and usefulness across Colfax, Las Animas, and Huerfano counties.</p>
+        <p class="lede">
+          <span class="hero-lede-desktop">For new and existing businesses, artists, nonprofits, galleries, programs, services, and mentorships trying to expand customers, visibility, partnerships, and usefulness across Colfax, Las Animas, and Huerfano counties.</span>
+          <span class="hero-lede-mobile">For businesses, artists, nonprofits, and programs building visibility across Colfax, Las Animas, and Huerfano counties.</span>
+        </p>
         <div class="hero-actions">
           <a class="button button-primary" href="plan/index.html">Plan your growth</a>
           <a class="button button-soft" href="network/index.html">Find the network</a>
@@ -4749,6 +4809,20 @@ def arts_culture_page(rows: list[dict]) -> str:
       <h1>Artists, galleries, makers, venues, and cultural routes.</h1>
       <p class="lede">Use this page when creative work needs to be findable: listings, shows, vendor visibility, visitor-facing promotion, venue calendars, media, creative districts, and partner channels.</p>
     </section>
+    <nav class="arts-route-strip" aria-label="Creative directory routes by county">
+      <a class="arts-route-visual arts-route-visual--colfax" href="../../network/index.html?q=artist+gallery+maker+Colfax#resource-results">
+        <img src="../../assets/animations/hero-volcanic-field.svg" alt="" aria-hidden="true">
+        <span><strong>Colfax County</strong><small>Artists, studios, galleries, and makers</small></span>
+      </a>
+      <a class="arts-route-visual arts-route-visual--las-animas" href="../../network/index.html?q=artist+gallery+maker+Las+Animas#resource-results">
+        <img src="../../assets/animations/hero-fishers-peak.svg" alt="" aria-hidden="true">
+        <span><strong>Las Animas County</strong><small>Creative businesses, venues, and cultural programs</small></span>
+      </a>
+      <a class="arts-route-visual arts-route-visual--huerfano" href="../../network/index.html?q=artist+gallery+maker+Huerfano#resource-results">
+        <img src="../../assets/animations/hero-spanish-peaks.svg" alt="" aria-hidden="true">
+        <span><strong>Huerfano County</strong><small>Arts districts, performers, makers, and events</small></span>
+      </a>
+    </nav>
     <section class="section">
       <div class="section-heading">
         <p class="eyebrow">Fast arts entries</p>
@@ -5742,31 +5816,32 @@ def task_page(definition: dict, rows: list[dict]) -> str:
 
 
 def write_static_assets() -> None:
-    icon = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stateline Guide icon"><circle cx="32" cy="32" r="30" fill="#173047"/><path d="M15 38 C24 24 30 18 38 13 C36 23 35 31 48 44 C35 39 26 42 15 38Z" fill="#d8bb68"/><path d="M20 39 C30 33 38 28 47 18" fill="none" stroke="#f6f8f4" stroke-width="4" stroke-linecap="round"/></svg>"""
+    icon = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stateline Guide icon"><rect x="3" y="3" width="58" height="58" rx="9" fill="#f3efe5"/><path d="M8 43 21 31h10l7-12 8 12h5l7 12H8Z" fill="#173047"/><path d="M12 49c10-7 19-8 27-4 7 3 12 1 18-3" fill="none" stroke="#b69146" stroke-width="4" stroke-linecap="round"/><circle cx="48" cy="14" r="4" fill="#a76149"/></svg>"""
     (ASSET_OUT / "site-icon.svg").write_text(icon, encoding="utf-8")
 
     css = r"""
     :root {
       --ink: #173047;
       --ink-soft: rgba(23, 48, 71, 0.76);
-      --paper: #f6f8f4;
-      --panel: #ffffff;
-      --mist: #dceee8;
-      --sky: #b7dbe4;
-      --sage: #8baa7c;
-      --clay: #c77f61;
-      --gold: #d8bb68;
-      --plum: #695674;
-      --line: rgba(23, 48, 71, 0.14);
-      --shadow: 0 18px 50px rgba(23, 48, 71, 0.11);
-      --radius: 8px;
-      --focus-ring: #d8bb68;
+      --paper: #f3efe5;
+      --panel: #fffdf8;
+      --mist: #e5ebe2;
+      --sky: #afcbd0;
+      --sage: #687665;
+      --clay: #a76149;
+      --gold: #b69146;
+      --plum: #6d5262;
+      --line: rgba(23, 48, 71, 0.16);
+      --shadow: 0 16px 44px rgba(23, 48, 71, 0.10);
+      --radius: 6px;
+      --focus-ring: #b69146;
       --route: #2f6780;
       --route-soft: rgba(47,103,128,0.42);
       --status-ok: #4d8a5c;
       --linked: #4e7f9c;
       --field: #9a7a2a;
       --manual: #695674;
+      --page-accent: var(--clay);
       color-scheme: light;
     }
     * { box-sizing: border-box; }
@@ -5775,9 +5850,15 @@ def write_static_assets() -> None:
       margin: 0;
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
-      background: var(--paper);
+      background-color: var(--paper);
+      background-image: url("textures/high-desert-plaster.webp");
+      background-size: 640px 640px;
+      background-blend-mode: soft-light;
       line-height: 1.6;
     }
+    .page-colfax, .page-post-raton, .page-colfax-business { --page-accent: #455f68; }
+    .page-las-animas, .page-post-trinidad, .page-advertise-trinidad, .page-las-animas-nonprofit { --page-accent: var(--clay); }
+    .page-huerfano, .page-post-huerfano, .page-huerfano-calendars { --page-accent: var(--gold); }
     img { max-width: 100%; height: auto; }
     a { color: inherit; }
     @media (pointer: fine) {
@@ -5827,30 +5908,37 @@ def write_static_assets() -> None:
       position: sticky;
       top: 0;
       z-index: 10;
+      isolation: isolate;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 18px;
-      padding: 12px clamp(16px, 4vw, 56px);
-      border-bottom: 1px solid var(--line);
-      background: rgba(246, 248, 244, 0.9);
-      backdrop-filter: blur(16px);
+      min-height: 58px;
+      padding: 10px clamp(16px, 4vw, 56px);
+      border-bottom: 1px solid rgba(23,48,71,0.16);
+      background: rgba(243, 239, 229, 0.93);
+      box-shadow: inset 0 -2px 0 rgba(182,145,70,0.18);
+      backdrop-filter: blur(18px);
     }
-    .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; }
-    .brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 0.78rem; letter-spacing: 0; }
-    .site-nav { display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; align-items: center; overflow: visible; }
-    .site-nav a, .nav-trigger { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 34px; text-decoration: none; padding: 7px 10px; border: 0; border-radius: 999px; background: transparent; font: inherit; font-size: 0.82rem; color: var(--ink-soft); cursor: pointer; transition: background 160ms ease, color 160ms ease; }
-    .site-nav a:hover, .site-nav a.is-active, .site-nav a[aria-current="page"], .nav-group:hover > .nav-trigger, .nav-group:focus-within > .nav-trigger, .nav-group.is-active > .nav-trigger { background: rgba(23, 48, 71, 0.08); color: var(--ink); }
+    .brand { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; }
+    .brand-mark { display: grid; place-items: center; width: 38px; height: 32px; color: var(--ink); }
+    .brand-mark svg { display: block; width: 100%; height: 100%; overflow: visible; }
+    .brand-mark__mesa { fill: var(--ink); }
+    .brand-mark__route { fill: none; stroke: var(--gold); stroke-width: 2.4; stroke-linecap: round; }
+    .brand-mark__sun { fill: var(--clay); }
+    .site-nav { position: relative; z-index: 2; display: flex; gap: 3px; flex-wrap: wrap; justify-content: flex-end; align-items: center; overflow: visible; }
+    .site-nav a, .nav-trigger { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 34px; text-decoration: none; padding: 7px 9px; border: 0; border-radius: 4px; background: transparent; font: inherit; font-size: 0.8rem; color: var(--ink-soft); cursor: pointer; transition: background 160ms ease, color 160ms ease; }
+    .site-nav a:hover, .site-nav a.is-active, .site-nav a[aria-current="page"], .nav-group:hover > .nav-trigger, .nav-group:focus-within > .nav-trigger, .nav-group.is-active > .nav-trigger { background: rgba(167,97,73,0.075); color: var(--ink); }
     .site-nav a[aria-current="page"]::after,
     .nav-group.is-active > .nav-trigger::before {
       content: "";
       position: absolute;
       left: 12px;
       right: 12px;
-      bottom: -5px;
-      height: 3px;
-      border-radius: 999px;
-      background: currentColor;
+      bottom: -3px;
+      height: 2px;
+      border-radius: 1px;
+      background: var(--page-accent);
       animation: tabSettle 180ms ease-out;
     }
     .nav-group { position: relative; }
@@ -5879,13 +5967,84 @@ def write_static_assets() -> None:
       from { transform: scaleX(0.65); opacity: 0.35; }
       to { transform: scaleX(1); opacity: 1; }
     }
+    .nav-yucca-flourish {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: clamp(10px, 2.2vw, 34px);
+      width: 160px;
+      height: 62px;
+      overflow: visible;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      color: var(--sage);
+    }
+    .nav-yucca-flourish svg { display: block; width: 100%; height: 100%; overflow: visible; }
+    .nav-yucca__index-line,
+    .nav-yucca__stem,
+    .nav-yucca__branch,
+    .nav-yucca__leaf {
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .nav-yucca__index-line { stroke: var(--gold); stroke-width: 1; opacity: 0.42; }
+    .nav-yucca__stem { stroke-width: 2.25; stroke-dasharray: 70; stroke-dashoffset: 70; }
+    .nav-yucca__branch { stroke-width: 1.7; stroke-dasharray: 42; stroke-dashoffset: 42; }
+    .nav-yucca__leaf {
+      stroke: var(--ink);
+      stroke-width: 2.1;
+      stroke-dasharray: 78;
+      stroke-dashoffset: 78;
+      opacity: 0.88;
+    }
+    .nav-yucca__flower {
+      color: #f5e6b9;
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center bottom;
+    }
+    .nav-yucca__flower path {
+      fill: currentColor;
+      stroke: var(--gold);
+      stroke-width: 0.7;
+      stroke-linejoin: round;
+    }
+    .nav-yucca-flourish.is-growing {
+      visibility: visible;
+      animation: navYuccaVisit 3000ms linear both;
+    }
+    .nav-yucca-flourish.is-growing .nav-yucca__stem,
+    .nav-yucca-flourish.is-growing .nav-yucca__branch,
+    .nav-yucca-flourish.is-growing .nav-yucca__leaf {
+      animation: navYuccaDraw 720ms cubic-bezier(.2,.76,.3,1) var(--sprout-delay, 0ms) both;
+    }
+    .nav-yucca-flourish.is-growing .nav-yucca__flower {
+      animation: navYuccaBloom 520ms cubic-bezier(.17,.86,.32,1.28) var(--sprout-delay, 760ms) both;
+    }
+    @keyframes navYuccaVisit {
+      0% { opacity: 0; }
+      8%, 76% { opacity: 0.88; }
+      100% { opacity: 0; }
+    }
+    @keyframes navYuccaDraw {
+      from { stroke-dashoffset: 78; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes navYuccaBloom {
+      0% { opacity: 0; scale: 0.2; rotate: -8deg; }
+      72% { opacity: 1; scale: 1.12; rotate: 2deg; }
+      100% { opacity: 1; scale: 1; rotate: 0deg; }
+    }
     .hero {
       position: relative;
-      min-height: min(76vh, 760px);
+      min-height: min(72vh, 700px);
       overflow: hidden;
       display: grid;
       align-items: end;
-      padding: clamp(80px, 10vw, 140px) clamp(18px, 6vw, 86px) clamp(48px, 8vw, 90px);
+      padding: clamp(72px, 8vw, 112px) clamp(18px, 6vw, 86px) clamp(42px, 6vw, 72px);
       isolation: isolate;
     }
     .mountain-scene { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, #dff3f3, #f7faf3 74%); }
@@ -5908,7 +6067,7 @@ def write_static_assets() -> None:
     .cloud-b { top: 31%; left: -420px; animation-duration: 58s; transform: scale(0.72); opacity: 0.7; }
     .cloud-c { top: 12%; left: -360px; animation-duration: 70s; transform: scale(0.55); opacity: 0.6; }
     @keyframes drift { from { translate: -16vw 0; } to { translate: 130vw 0; } }
-    .hero-copy { max-width: 860px; }
+    .hero-copy { max-width: 1000px; }
     .hero-copy { position: relative; z-index: 2; }
     .hero-accent {
       position: absolute;
@@ -5946,15 +6105,15 @@ def write_static_assets() -> None:
     }
     .eyebrow { margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.76rem; font-weight: 800; color: var(--plum); }
     h1, h2, h3 { line-height: 1.08; letter-spacing: 0; }
-    h1 { margin: 0; font-family: Fraunces, Georgia, serif; font-size: clamp(3rem, 8vw, 6.9rem); max-width: 10ch; }
-    .page-hero h1 { font-size: clamp(2.5rem, 7vw, 5rem); max-width: 12ch; }
+    h1 { margin: 0; font-family: Fraunces, Georgia, serif; font-size: clamp(3rem, 6.2vw, 5.25rem); max-width: 18ch; }
+    .page-hero h1 { font-size: clamp(2.5rem, 5.5vw, 4.3rem); max-width: 13ch; }
     .county-hero h1 { font-size: clamp(2.1rem, 4vw, 3.55rem); max-width: 23ch; }
     .county-hero .lede { max-width: 52rem; }
-    h2 { margin: 0; font-size: clamp(1.8rem, 3.5vw, 3.2rem); }
+    h2 { margin: 0; font-size: clamp(1.8rem, 3vw, 2.8rem); }
     h3 { margin: 0 0 10px; font-size: 1.08rem; }
     .lede { max-width: 780px; font-size: clamp(1.05rem, 2vw, 1.35rem); color: var(--ink-soft); }
     .hero-actions, .section-actions, .download-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
-    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 10px 16px; border-radius: 999px; text-decoration: none; border: 1px solid var(--line); font-weight: 800; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 10px 16px; border-radius: 5px; text-decoration: none; border: 1px solid var(--line); font-weight: 800; }
     button.button { font: inherit; cursor: pointer; }
     .button-primary { background: var(--ink); color: #fff; border-color: var(--ink); }
     .button-soft { background: rgba(255,255,255,0.62); }
@@ -5979,13 +6138,24 @@ def write_static_assets() -> None:
     .breadcrumbs a:focus-visible {
       text-decoration: underline;
     }
-    .section, .page-hero { padding: clamp(42px, 7vw, 94px) clamp(18px, 6vw, 86px); }
+    .section, .page-hero { padding: clamp(38px, 5vw, 72px) clamp(18px, 6vw, 86px); }
     #local-listings, #directory-shortcuts { scroll-margin-top: 92px; }
-    .page-hero { position: relative; overflow: hidden; isolation: isolate; background: linear-gradient(135deg, rgba(220,238,232,0.86), rgba(183,219,228,0.5)); border-bottom: 1px solid var(--line); }
+    .page-hero {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      align-content: center;
+      min-height: clamp(340px, 46vh, 500px);
+      overflow: hidden;
+      background: linear-gradient(112deg, rgba(243,239,229,0.98) 0 36%, rgba(229,235,226,0.84) 63%, rgba(175,203,208,0.48));
+      border-bottom: 1px solid rgba(23,48,71,0.16);
+      box-shadow: inset 0 -3px 0 color-mix(in srgb, var(--page-accent) 18%, transparent);
+    }
     .page-hero > :not(.page-hero-art) { position: relative; z-index: 1; }
     .page-network .page-hero {
-      padding-top: clamp(42px, 5vw, 64px);
-      padding-bottom: clamp(38px, 4vw, 56px);
+      min-height: clamp(300px, 38vh, 410px);
+      padding-top: clamp(36px, 4vw, 52px);
+      padding-bottom: clamp(32px, 4vw, 48px);
     }
     .page-network .page-hero h1 {
       max-width: 16ch;
@@ -5996,23 +6166,23 @@ def write_static_assets() -> None:
       z-index: 0;
       right: clamp(-110px, 4vw, 80px);
       top: 50%;
-      width: min(760px, 62vw);
+      width: min(820px, 64vw);
       aspect-ratio: 1.88 / 1;
       height: auto;
       transform: translateY(-50%);
       object-fit: cover;
       object-position: center bottom;
       border-radius: 50%;
-      opacity: 0.38;
-      filter: saturate(0.78) contrast(0.94);
-      -webkit-mask-image: radial-gradient(ellipse at center, #000 42%, rgba(0,0,0,0.72) 62%, transparent 78%);
-      mask-image: radial-gradient(ellipse at center, #000 42%, rgba(0,0,0,0.72) 62%, transparent 78%);
+      opacity: 0.58;
+      filter: saturate(0.94) contrast(1.02);
+      -webkit-mask-image: radial-gradient(ellipse at center, #000 44%, rgba(0,0,0,0.78) 64%, transparent 82%);
+      mask-image: radial-gradient(ellipse at center, #000 44%, rgba(0,0,0,0.78) 64%, transparent 82%);
       pointer-events: none;
     }
-    .county-hero { background: linear-gradient(135deg, rgba(216,187,104,0.28), rgba(199,127,97,0.16), rgba(183,219,228,0.38)); }
-    .tinted { background: rgba(220, 238, 232, 0.48); }
-    .intro-band { background: #fff; }
-    .section-heading { position: relative; max-width: 870px; margin-bottom: 30px; }
+    .county-hero { background: linear-gradient(112deg, rgba(243,239,229,0.98), rgba(182,145,70,0.17), rgba(175,203,208,0.34)); }
+    .tinted { background: rgba(229, 235, 226, 0.58); }
+    .intro-band { background: rgba(255,253,248,0.88); }
+    .section-heading { position: relative; max-width: 870px; margin-bottom: 26px; }
     .section-heading::after {
       content: "";
       display: block;
@@ -6038,32 +6208,93 @@ def write_static_assets() -> None:
     .template-grid { grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
     .stats-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
     .path-card, .source-card, .mini-card, .step-card, .template-card, .tool-card, .resource-item, .lead-card, .stat, figure {
-      background: rgba(255,255,255,0.86);
+      background: rgba(255,253,248,0.90);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      box-shadow: 0 10px 28px rgba(23,48,71,0.06);
+      box-shadow: 0 6px 18px rgba(23,48,71,0.045);
     }
-    .path-card { padding: 24px; min-height: 260px; display: flex; flex-direction: column; text-decoration: none; }
-    .task-link-card { min-height: 220px; }
+    .path-card {
+      position: relative;
+      padding: 20px;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      text-decoration: none;
+      border-top: 3px solid var(--clay);
+    }
+    .path-card:nth-child(2), .task-link-card:nth-child(3n + 2) { border-top-color: var(--sage); }
+    .path-card:nth-child(3), .task-link-card:nth-child(3n) { border-top-color: var(--gold); }
+    .task-link-card { min-height: 188px; }
     .category-route-card {
       display: flex;
-      min-height: 210px;
+      min-height: 180px;
       flex-direction: column;
       color: inherit;
       text-decoration: none;
+      border-left: 3px solid var(--page-accent);
     }
     .category-route-card > strong { margin-top: auto; color: var(--linked); }
     .path-card span, .step-card span { color: var(--clay); font-weight: 900; }
     .path-card p { color: var(--ink-soft); }
     .path-card strong { margin-top: auto; }
-    .source-card, .mini-card, .step-card, .template-card, .tool-card, .resource-item, .lead-card { padding: 18px; }
+    .source-card, .mini-card, .step-card, .template-card, .tool-card, .resource-item, .lead-card { padding: 16px; }
+    .source-card, .resource-item { border-left: 3px solid color-mix(in srgb, var(--page-accent) 72%, var(--ink)); }
     .current-leads-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
       gap: 14px;
     }
+    .page-arts-culture .current-leads-grid {
+      grid-template-columns: repeat(auto-fit, minmax(270px, 420px));
+    }
+    .arts-route-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      padding: 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(23,48,71,0.16);
+    }
+    .arts-route-visual {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      align-items: end;
+      min-height: 214px;
+      overflow: hidden;
+      color: #fff;
+      text-decoration: none;
+    }
+    .arts-route-visual img {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.82) contrast(1.05);
+      transition: transform 480ms cubic-bezier(.2,.7,.25,1), filter 240ms ease;
+    }
+    .arts-route-visual::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 34% 0 0;
+      background: linear-gradient(180deg, transparent, rgba(16,40,61,0.84));
+    }
+    .arts-route-visual span {
+      display: grid;
+      gap: 2px;
+      padding: 22px clamp(16px, 3vw, 30px);
+    }
+    .arts-route-visual strong { font-family: Fraunces, Georgia, serif; font-size: clamp(1.25rem, 2vw, 1.7rem); line-height: 1.08; }
+    .arts-route-visual small { color: rgba(255,255,255,0.82); font-size: 0.82rem; }
+    .arts-route-visual:hover img,
+    .arts-route-visual:focus-visible img { transform: scale(1.025); filter: saturate(0.96) contrast(1.07); }
+    .arts-route-visual:focus-visible { z-index: 2; outline-offset: -4px; }
     .lead-card {
-      min-height: 250px;
+      min-height: 210px;
       display: flex;
       flex-direction: column;
     }
@@ -6186,6 +6417,7 @@ def write_static_assets() -> None:
     }
     .source-card__meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
     .source-card__meta span, .badge { background: rgba(216,187,104,0.24); border: 1px solid rgba(216,187,104,0.36); border-radius: 999px; padding: 3px 8px; font-size: 0.74rem; font-weight: 800; }
+    .resource-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
     .source-card p, .mini-card p, .step-card p, .resource-item p { color: var(--ink-soft); }
     .resource-best {
       margin-top: 2px;
@@ -6613,6 +6845,7 @@ def write_static_assets() -> None:
       box-shadow: 0 14px 32px rgba(23,48,71,0.13);
       backdrop-filter: blur(18px);
     }
+    .music-bar:not([open]) .music-panel { display: none; }
     .music-bar__top,
     .music-bar__middle,
     .music-bar__bottom {
@@ -6879,6 +7112,7 @@ def write_static_assets() -> None:
       align-items: start;
       padding: 42px clamp(18px, 6vw, 86px);
       background: #10283d;
+      border-top: 3px solid rgba(182,145,70,0.66);
       color: rgba(255,255,255,0.78);
     }
     .footer-summary { display: grid; gap: 14px; align-content: start; }
@@ -6929,10 +7163,15 @@ def write_static_assets() -> None:
       font-weight: 900;
     }
     :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    @media (min-width: 1200px) {
+      .site-header { padding-right: 198px; }
+      .nav-yucca-flourish { right: 24px; }
+    }
     @media (max-width: 860px) {
       .site-header { align-items: flex-start; flex-direction: column; }
       .site-nav { width: 100%; justify-content: flex-start; }
       .path-grid, .two-col, .site-footer, .advanced-filters, .form-grid, .submit-card { grid-template-columns: 1fr; }
+      .nav-yucca-flourish { top: 1px; right: 7px; width: 118px; height: 46px; }
       .footer-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .footer-logos { justify-content: flex-start; }
       .next-action-list { grid-template-columns: 1fr; }
@@ -6950,9 +7189,9 @@ def write_static_assets() -> None:
       body { overflow-x: hidden; }
       .site-header { width: 100%; max-width: 100vw; padding: 8px 12px; gap: 10px; }
       .brand { font-size: 0.9rem; gap: 8px; }
-      .brand-mark { width: 28px; height: 28px; font-size: 0.68rem; }
+      .brand-mark { width: 32px; height: 26px; }
       .site-nav { width: 100%; max-width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; justify-content: stretch; overflow: visible; padding-bottom: 0; }
-      .site-nav a, .nav-trigger { width: 100%; min-height: 32px; white-space: nowrap; text-align: center; padding: 5px 6px; font-size: 0.74rem; }
+      .site-nav a, .nav-trigger { width: 100%; min-height: 30px; white-space: nowrap; text-align: center; padding: 4px 5px; font-size: 0.72rem; }
       .nav-group { position: relative; }
       .nav-menu { position: absolute; top: calc(100% + 6px); min-width: 150px; width: max-content; max-width: calc(100vw - 24px); margin-top: 0; padding: 6px; box-shadow: var(--shadow); }
       .nav-group:nth-of-type(1) .nav-menu { left: 50%; right: auto; translate: -50% 0; }
@@ -6962,8 +7201,9 @@ def write_static_assets() -> None:
       .nav-group:nth-of-type(5) .nav-menu { right: 0; left: auto; translate: none; }
       .nav-menu a { white-space: normal; justify-content: center; }
       .hero {
-        min-height: calc(100svh - 92px);
-        padding-bottom: 150px;
+        min-height: min(64svh, 560px);
+        padding-top: clamp(64px, 15vw, 84px);
+        padding-bottom: 96px;
       }
       .hero-actions {
         display: grid;
@@ -6979,11 +7219,18 @@ def write_static_assets() -> None:
         text-align: center;
       }
       .hero-actions .button:nth-child(3) { grid-column: 1 / -1; }
-      .page-hero-art { width: 540px; max-width: none; right: -240px; top: 42%; opacity: 0.34; }
-      .page-network .page-hero { padding-top: 20px; padding-bottom: 24px; }
+      .page-hero { min-height: 218px; padding-top: 28px; padding-bottom: 28px; }
+      .page-hero h1 { max-width: 14ch; font-size: clamp(2.25rem, 10vw, 2.8rem); }
+      .page-hero .lede { display: none; }
+      .page-hero-art { width: 500px; max-width: none; right: -235px; top: 46%; opacity: 0.44; }
+      .page-network .page-hero { min-height: 230px; padding-top: 22px; padding-bottom: 24px; }
       .page-network .page-hero h1 { max-width: 11ch; font-size: 2.55rem; line-height: 1.02; }
       .page-network .section { padding: 32px 18px; }
       .page-network .section-heading { margin-bottom: 18px; }
+      .arts-route-visual { min-height: 122px; }
+      .arts-route-visual span { padding: 12px 9px; }
+      .arts-route-visual strong { font-size: 0.96rem; }
+      .arts-route-visual small { display: none; }
       .directory-jumpbar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 18px; }
       .directory-jumpbar .button { min-height: 40px; padding: 8px; text-align: center; }
       .directory-search-panel { padding: 12px; gap: 10px; }
@@ -7011,7 +7258,7 @@ def write_static_assets() -> None:
       .marker-help > summary { padding: 10px 12px; font-size: 0.86rem; }
       .marker-help .marker-legend { display: grid; grid-template-columns: auto 1fr; gap: 7px; padding: 0 12px 12px; font-size: 0.8rem; }
       .resource-list, .source-grid { grid-template-columns: 1fr; gap: 10px; }
-      .resource-item, .source-card { padding: 14px; box-shadow: 0 7px 18px rgba(23,48,71,0.05); }
+      .resource-item, .source-card { padding: 12px; box-shadow: none; }
       .resource-item__head h3 { font-size: 1.08rem; line-height: 1.18; }
       .resource-meta-line { margin: 7px 0; font-size: 0.82rem; line-height: 1.4; }
       .resource-description {
@@ -7019,7 +7266,7 @@ def write_static_assets() -> None:
         overflow: hidden;
         margin: 8px 0;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         font-size: 0.9rem;
         line-height: 1.45;
       }
@@ -7069,8 +7316,8 @@ def write_static_assets() -> None:
       .footer-placeholder { width: 118px; height: 62px; }
     }
     @media print {
-      .site-header, .hero-actions, .tool-panel, .copy-button, .corner-controls, .directory-assistant, .download-row { display: none; }
-      body { background: #fff; color: #111; }
+      .site-header, .hero-actions, .tool-panel, .copy-button, .corner-controls, .directory-assistant, .download-row, .nav-yucca-flourish { display: none; }
+      body { background: #fff; background-image: none; color: #111; }
       a::after { content: " (" attr(href) ")"; font-size: 0.86em; }
       .section, .page-hero { padding: 24px 0; }
       tr, figure, .source-card, .resource-item { break-inside: avoid; }
@@ -7085,11 +7332,12 @@ def write_static_assets() -> None:
         transition-duration: 0.001ms !important;
       }
       [data-animated="true"], .intro-curtain, .hero-accent, .hero-route, .hero-node, .submit-success-card, .sparkle,
-      .directory-assistant__panel.is-bubble-opening, .resource-item.is-bubble-opening, .source-card.is-bubble-opening {
+      .directory-assistant__panel.is-bubble-opening, .resource-item.is-bubble-opening, .source-card.is-bubble-opening,
+      .nav-yucca-flourish, .nav-yucca__stem, .nav-yucca__branch, .nav-yucca__leaf, .nav-yucca__flower {
         animation: none !important;
         transform: none !important;
       }
-      .intro-curtain { display: none; }
+      .intro-curtain, .nav-yucca-flourish { display: none; }
     }
     """
     (ASSET_OUT / "styles.css").write_text(dedent(css).strip() + "\n", encoding="utf-8")
@@ -7251,6 +7499,63 @@ def write_static_assets() -> None:
         if (armOnGesture && !userInitiated) armGuideSfx(kind);
         return false;
       }
+    }
+
+    const NAV_YUCCA_KEY = "statelineGuideNavYuccaV1";
+
+    function playNavigationYucca() {
+      const flourish = document.querySelector("[data-nav-yucca]");
+      if (!flourish || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      flourish.classList.remove("is-growing");
+      void flourish.offsetWidth;
+      flourish.classList.add("is-growing");
+      window.setTimeout(() => flourish.classList.remove("is-growing"), 3050);
+    }
+
+    function initNavigationYucca() {
+      const flourish = document.querySelector("[data-nav-yucca]");
+      if (!flourish) return;
+
+      try {
+        if (sessionStorage.getItem(NAV_YUCCA_KEY) === "show") {
+          sessionStorage.removeItem(NAV_YUCCA_KEY);
+          const intro = document.querySelector(".intro-curtain");
+          if (intro) {
+            intro.dataset.introState = "skipped";
+            sessionStorage.setItem("triCountyLandingIntroSeenV3", "seen");
+          }
+          window.requestAnimationFrame(() => window.requestAnimationFrame(playNavigationYucca));
+        }
+      } catch {}
+
+      document.addEventListener("click", event => {
+        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        if (!(event.target instanceof Element)) return;
+        const anchor = event.target.closest("a[href]");
+        if (!anchor || anchor.hasAttribute("download")) return;
+        const target = (anchor.getAttribute("target") || "").toLowerCase();
+        if (target && target !== "_self") return;
+        const href = anchor.getAttribute("href") || "";
+        if (!href || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("javascript:")) return;
+
+        let destination;
+        try {
+          destination = new URL(anchor.href, window.location.href);
+        } catch {
+          return;
+        }
+        if (destination.origin !== window.location.origin) return;
+
+        const sameDocument = destination.pathname === window.location.pathname && destination.search === window.location.search;
+        if (sameDocument) {
+          if (destination.hash && destination.hash !== window.location.hash) playNavigationYucca();
+          return;
+        }
+
+        try {
+          sessionStorage.setItem(NAV_YUCCA_KEY, "show");
+        } catch {}
+      });
     }
 
     const SEARCH_STOP_WORDS = new Set(["a", "an", "and", "for", "in", "near", "of", "the", "to"]);
@@ -8634,6 +8939,7 @@ def write_static_assets() -> None:
       }
     }
 
+    initNavigationYucca();
     initSourceSearch();
     initResourceSearch();
     initDirectoryOpenAnimations();

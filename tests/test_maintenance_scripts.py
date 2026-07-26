@@ -4,6 +4,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -12,6 +13,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 from audit_directory_quality import duplicate_groups, normalize_name  # noqa: E402
 from audit_internal_links import audit_site  # noqa: E402
+import build_netlify_deep_guide as guide_builder  # noqa: E402
 from build_netlify_deep_guide import (  # noqa: E402
     ROUTE_TYPE_CARDS,
     best_entity_contact_url,
@@ -140,6 +142,22 @@ class InternalLinkTests(unittest.TestCase):
 
 
 class SiteSmokeTests(unittest.TestCase):
+    def test_navigation_yucca_is_generated_with_motion_safeguards(self) -> None:
+        page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
+        self.assertIn('data-nav-yucca aria-hidden="true"', page)
+
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+            js = (asset_out / "app.js").read_text(encoding="utf-8")
+
+        self.assertIn("navYuccaVisit 3000ms", css)
+        self.assertIn("prefers-reduced-motion: reduce", css)
+        self.assertIn("NAV_YUCCA_KEY", js)
+        self.assertIn("initNavigationYucca();", js)
+
     def test_directory_assistant_asset_requires_guided_search_logic(self) -> None:
         complete = (
             "const ASSISTANT_INTENTS = []; assistantInterpretation(); data-assistant-followup "

@@ -1,9 +1,9 @@
 .yucca-banner-shell {
   position: relative;
-  min-height: clamp(420px, 68vh, 760px);
+  min-height: clamp(520px, 72vh, 700px);
   overflow: hidden;
   isolation: isolate;
-  background: #f6f2df;
+  background: #f3efe5;
 }
 
 .yucca-banner-shell::after {
@@ -12,8 +12,8 @@
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(246, 248, 244, 0.88) 0%, rgba(246, 248, 244, 0.58) 34%, rgba(246, 248, 244, 0.2) 78%),
-    linear-gradient(0deg, rgba(246, 248, 244, 0.72) 0%, rgba(246, 248, 244, 0) 38%);
+    linear-gradient(90deg, rgba(243, 239, 229, 0.92) 0%, rgba(243, 239, 229, 0.62) 34%, rgba(243, 239, 229, 0.12) 76%),
+    linear-gradient(0deg, rgba(243, 239, 229, 0.68) 0%, rgba(243, 239, 229, 0) 34%);
   pointer-events: none;
 }
 
@@ -82,11 +82,15 @@
 }
 
 .yucca-banner-shell h1 {
-  max-width: 10.2ch;
+  max-width: 18ch;
 }
 
 .yucca-banner-shell .lede {
   max-width: 40rem;
+}
+
+.hero-lede-mobile {
+  display: none;
 }
 
 .cta-pulse {
@@ -106,19 +110,27 @@
 
 @media (max-width: 640px) {
   .yucca-banner-shell {
-    min-height: auto;
-    padding-top: clamp(72px, 18vw, 96px);
-    padding-bottom: 48px;
+    min-height: min(64svh, 560px);
+    padding-top: 44px;
+    padding-bottom: 54px;
   }
 
   .yucca-banner-shell h1 {
-    max-width: 9.6ch;
-    font-size: clamp(2.75rem, 14vw, 3.55rem);
+    max-width: 11.5ch;
+    font-size: clamp(2.7rem, 13vw, 3.45rem);
   }
 
   .yucca-banner-shell .lede {
-    max-width: 30ch;
+    max-width: 34ch;
     font-size: 1rem;
+  }
+
+  .hero-lede-desktop {
+    display: none;
+  }
+
+  .hero-lede-mobile {
+    display: inline;
   }
 
   .yucca-banner-art {
