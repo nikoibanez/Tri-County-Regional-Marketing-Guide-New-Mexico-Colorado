@@ -40,11 +40,11 @@ BUILD_DATE = os.environ.get("BUILD_DATE", date.today().isoformat())
 
 
 def normalize_origin(value: str) -> str:
-    value = (value or "").strip() or "https://statelineguide.org"
+    value = (value or "").strip() or "https://newmexicocoloradoguide.netlify.app"
     return value.rstrip("/") + "/"
 
 
-SITE_URL = normalize_origin(os.environ.get("PUBLIC_SITE_ORIGIN", "https://statelineguide.org"))
+SITE_URL = normalize_origin(os.environ.get("PUBLIC_SITE_ORIGIN", "https://newmexicocoloradoguide.netlify.app"))
 
 ACTIVE_PATHS = {
     "home": "",

@@ -1,11 +1,11 @@
 # Internal Link Audit
 
-Generated: 2026-07-23
+Generated: 2026-07-26
 
 Status: **PASS**
 
 - HTML files: 25
-- Local references checked: 1914
+- Local references checked: 1920
 - Missing targets: 0
 - Missing anchors: 0
 - Targets escaping the publish directory: 0

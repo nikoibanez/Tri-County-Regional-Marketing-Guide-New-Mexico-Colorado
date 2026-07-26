@@ -23,6 +23,8 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    env:
+      PUBLIC_SITE_ORIGIN: ${{ vars.PUBLIC_SITE_ORIGIN }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
@@ -85,7 +87,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           REVIEW_BRANCH: ${{ steps.review.outputs.branch }}
         run: |
-          body="This automated pull request refreshes source status, the latest audit report, and the private maintenance dashboard. Review failures in a normal browser. Do not merge public claims, contact changes, eligibility, deadlines, rates, civic guidance, or directory additions without human confirmation."
+          body="This automated pull request refreshes source status, the latest audit report, and the private maintenance dashboard. The report separates confirmed broken links from pages that only block scripted checks. Review browser-check items normally, and do not merge public claims, contact changes, eligibility, deadlines, rates, civic guidance, or directory additions without human confirmation."
           if ! gh pr create --base master --head "$REVIEW_BRANCH" --title "Review scheduled source-audit results" --body "$body"; then
             gh issue create --title "Source-audit review branch is ready" --body "$body Branch: $REVIEW_BRANCH"
           fi

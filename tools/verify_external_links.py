@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import ssl
 import sys
 from collections import Counter
@@ -12,7 +13,8 @@ from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
 
-USER_AGENT = "TriCountyGuideLinkAudit/2026.06 (+https://wonderful-kashata-6ed008.netlify.app/)"
+PUBLIC_SITE_ORIGIN = (os.environ.get("PUBLIC_SITE_ORIGIN") or "https://newmexicocoloradoguide.netlify.app").rstrip("/")
+USER_AGENT = f"TriCountyGuideLinkAudit/2026.07 (+{PUBLIC_SITE_ORIGIN}/about/)"
 
 
 def collect_urls(data: dict) -> tuple[dict[str, list[dict]], Counter]:

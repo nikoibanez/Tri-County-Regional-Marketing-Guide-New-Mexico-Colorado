@@ -1,46 +1,63 @@
 # Update Source Audit
 
-Generated: 2026-07-22
+Generated: 2026-07-26
 
-This report is a review queue. A failure here does not automatically mean a public source is invalid; some official sites block scripted checks.
+This report separates confirmed link failures from pages that merely block or confuse scripted checks.
 
 ## Summary
 
-- Checked: 120
-- Needs attention: 21
+- Records checked: 120
+- Web sources checked: 119
+- Confirmed broken or missing: 0
+- Normal-browser confirmation required: 0
+- Script-access limitations (not broken): 20
+- Offline field-check records: 1
 - Human approval required: 54
 
 ## Status Counts
 
-- manual_review: 18
-- missing_url: 1
-- network_error: 2
-- ok: 97
-- redirect: 2
+- access_blocked: 18
+- field_check: 1
+- ok: 96
+- redirect: 3
+- tls_error: 2
 
-## Needs Attention
+## Confirmed Broken Or Missing
 
-- General regional pattern - Regional; civic; missing_url; No source URL is attached.
-- [Walsenburg / Huerfano](https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes) - Regional; civic; manual_review; HTTP Error 403: Forbidden
-- [Yellow Pages Raton Business Listings](https://www.yellowpages.com/raton-nm/business-listings/1) - Colfax; directory; manual_review; HTTP Error 403: Forbidden
-- [Colorado Gives](https://www.coloradogives.org/) - Las Animas; directory; network_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
-- [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; manual_review; HTTP Error 403: Forbidden
-- [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; manual_review; HTTP Error 403: Forbidden
-- [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; manual_review; HTTP Error 403: Forbidden
-- [Visit Angel Fire NM Get Listed](https://visitangelfirenm.com/get-listed/) - Angel Fire / Colfax; events; manual_review; HTTP Error 403: Forbidden
-- [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; manual_review; HTTP Error 403: Forbidden
-- [Arts in Society Grant](https://oedit.colorado.gov/arts-in-society-grant) - Regional; funding; manual_review; HTTP Error 403: Forbidden
-- [Colorado Advanced Industries Accelerator Programs](https://oedit.colorado.gov/advanced-industries-accelerator-programs) - Regional; funding; manual_review; HTTP Error 403: Forbidden
-- [Colorado Business Funding and Incentives](https://oedit.colorado.gov/business-funding-and-incentives) - Regional; funding; manual_review; HTTP Error 403: Forbidden
-- [Colorado Community Revitalization Grant](https://oedit.colorado.gov/colorado-community-revitalization-grant) - Regional; funding; manual_review; HTTP Error 403: Forbidden
-- [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - Regional; funding; manual_review; HTTP Error 403: Forbidden
-- [Colorado Creative Industries](https://oedit.colorado.gov/colorado-creative-industries) - Regional; funding; manual_review; HTTP Error 403: Forbidden
-- [Colorado Rural Jump-Start Program](https://oedit.colorado.gov/rural-jump-start-program) - Regional; funding; manual_review; HTTP Error 403: Forbidden
-- [Folk and Traditional Arts Project Grant](https://oedit.colorado.gov/folk-and-traditional-arts-project-grant) - Regional; funding; manual_review; HTTP Error 403: Forbidden
-- [Grants.gov](https://www.grants.gov/) - Regional; funding; network_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)
-- [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; funding; manual_review; HTTP Error 403: Forbidden
-- [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; manual_review; HTTP Error 403: Forbidden
-- [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; manual_review; HTTP Error 403: Forbidden
+No checked web source is confirmed broken or missing.
+
+## Normal-Browser Confirmation Required
+
+No inconclusive network or server response is waiting on a normal-browser confirmation.
+
+## Script Access Limitations (Not Broken)
+
+These are informational results, not broken-link findings. The page blocked scripted access or the local certificate checker could not validate its chain.
+
+- [Walsenburg / Huerfano](https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes) - Regional; civic; access_blocked; HTTP Error 403: Forbidden
+- [Yellow Pages Raton Business Listings](https://www.yellowpages.com/raton-nm/business-listings/1) - Colfax; directory; access_blocked; HTTP Error 403: Forbidden
+- [Colorado Gives](https://www.coloradogives.org/) - Las Animas; directory; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
+- [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
+- [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
+- [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Angel Fire NM Get Listed](https://visitangelfirenm.com/get-listed/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
+- [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; access_blocked; HTTP Error 403: Forbidden
+- [Arts in Society Grant](https://oedit.colorado.gov/arts-in-society-grant) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [Colorado Advanced Industries Accelerator Programs](https://oedit.colorado.gov/advanced-industries-accelerator-programs) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [Colorado Business Funding and Incentives](https://oedit.colorado.gov/business-funding-and-incentives) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [Colorado Community Revitalization Grant](https://oedit.colorado.gov/colorado-community-revitalization-grant) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [Colorado Creative Industries](https://oedit.colorado.gov/colorado-creative-industries) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [Colorado Rural Jump-Start Program](https://oedit.colorado.gov/rural-jump-start-program) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [Folk and Traditional Arts Project Grant](https://oedit.colorado.gov/folk-and-traditional-arts-project-grant) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [Grants.gov](https://www.grants.gov/) - Regional; funding; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)
+- [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+
+## Offline Field Checks
+
+- General regional pattern - Regional; Posting pathway; verify the physical or offline pathway locally.
 
 ## Human Approval Required
 

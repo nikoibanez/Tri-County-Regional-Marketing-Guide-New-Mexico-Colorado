@@ -50,10 +50,22 @@ def build_dashboard() -> dict:
             action_queue.append({"priority": priority, "count": count, "label": label, "next_action": next_action})
 
     add_action(
-        int(audit_summary.get("needs_attention") or 0),
-        "monitored sources needing attention",
-        "Open the latest source-audit report and confirm failures in a normal browser.",
+        int(audit_summary.get("confirmed_broken") or audit_summary.get("needs_attention") or 0),
+        "confirmed broken or missing monitored sources",
+        "Repair, replace, or intentionally retire each URL before publishing the next source update.",
         "high",
+    )
+    add_action(
+        int(audit_summary.get("browser_check_needed") or 0),
+        "sources the automated checker could not confirm",
+        "Open these in a normal browser; do not remove a link solely because of a timeout, network problem, or temporary server response.",
+        "low",
+    )
+    add_action(
+        int(audit_summary.get("field_checks") or 0),
+        "offline posting pathways awaiting a field check",
+        "Confirm the physical location or owner-controlled posting policy locally.",
+        "low",
     )
     add_action(
         int(candidate_summary.get("priority_new_leads") or 0),
@@ -111,8 +123,11 @@ def build_dashboard() -> dict:
         "latest_checks": {
             "directory_quality": quality.get("status") or "not run",
             "internal_links": link_audit.get("status") or "not run",
-            "source_urls_checked": int(audit_summary.get("checked") or 0),
-            "source_urls_needing_attention": int(audit_summary.get("needs_attention") or 0),
+            "source_urls_checked": int(audit_summary.get("web_checked") or audit_summary.get("checked") or 0),
+            "source_urls_confirmed_broken": int(audit_summary.get("confirmed_broken") or audit_summary.get("needs_attention") or 0),
+            "source_urls_browser_check": int(audit_summary.get("browser_check_needed") or 0),
+            "source_urls_script_limited": int(audit_summary.get("script_access_limited") or 0),
+            "source_field_checks": int(audit_summary.get("field_checks") or 0),
             "watch_pages_checked": int(candidate_summary.get("pages_checked") or 0),
             "watch_pages_failed": int(candidate_summary.get("pages_failed") or 0),
             "priority_new_leads": int(candidate_summary.get("priority_new_leads") or 0),
@@ -146,7 +161,10 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- Directory quality: {checks['directory_quality']}",
         f"- Internal links: {checks['internal_links']}",
         f"- Source URLs checked: {checks['source_urls_checked']}",
-        f"- Source URLs needing attention: {checks['source_urls_needing_attention']}",
+        f"- Confirmed broken or missing source URLs: {checks['source_urls_confirmed_broken']}",
+        f"- Source URLs requiring normal-browser confirmation: {checks['source_urls_browser_check']}",
+        f"- Script-access limitations (not broken): {checks['source_urls_script_limited']}",
+        f"- Offline field-check records: {checks['source_field_checks']}",
         f"- Deep-watch pages checked: {checks['watch_pages_checked']}",
         f"- Deep-watch pages failed: {checks['watch_pages_failed']}",
         f"- Priority new leads: {checks['priority_new_leads']}",

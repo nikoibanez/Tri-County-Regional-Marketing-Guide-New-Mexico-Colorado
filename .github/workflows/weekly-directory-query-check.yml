@@ -18,6 +18,8 @@ jobs:
   directory-watch:
     runs-on: ubuntu-latest
     timeout-minutes: 35
+    env:
+      PUBLIC_SITE_ORIGIN: ${{ vars.PUBLIC_SITE_ORIGIN }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v6

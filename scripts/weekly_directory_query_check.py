@@ -4,6 +4,7 @@ import argparse
 import csv
 import hashlib
 import json
+import os
 import re
 import ssl
 import sys
@@ -31,6 +32,7 @@ DEFAULT_DIRECTORY_FILES = [
 ]
 DEFAULT_OUT_DIR = ROOT / "review" / "directory-watch"
 DEFAULT_PUBLIC_CANDIDATES = ROOT / "data" / "directory-auto-update-candidates.json"
+PUBLIC_SITE_ORIGIN = (os.environ.get("PUBLIC_SITE_ORIGIN") or "https://newmexicocoloradoguide.netlify.app").rstrip("/")
 
 
 BLOCK_TAGS = {
@@ -458,7 +460,7 @@ class DirectoryHTMLParser(HTMLParser):
 
 def fetch_url(url: str, timeout: int) -> dict:
     headers = {
-        "User-Agent": "TriCountyGuideDirectoryWatch/1.1 (+https://statelineguide.org)",
+        "User-Agent": f"TriCountyGuideDirectoryWatch/1.2 (+{PUBLIC_SITE_ORIGIN}/about/)",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     }
     context = ssl.create_default_context()

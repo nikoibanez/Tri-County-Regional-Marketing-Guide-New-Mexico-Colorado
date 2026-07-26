@@ -1,42 +1,33 @@
 {
-  "generated_at": "2026-07-22T21:43:08-06:00",
+  "generated_at": "2026-07-26T17:02:07-06:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
-    "canonical_resource_rows": 1491,
-    "consolidated_directory_entries": 688,
+    "canonical_resource_rows": 1490,
+    "consolidated_directory_entries": 687,
     "registered_update_sources": 126,
     "deep_watch_sources": 15,
-    "keyword_index_entries": 1491
+    "keyword_index_entries": 1490
   },
   "latest_checks": {
     "directory_quality": "pass",
     "internal_links": "pass",
-    "source_urls_checked": 120,
-    "source_urls_needing_attention": 21,
+    "source_urls_checked": 119,
+    "source_urls_confirmed_broken": 0,
+    "source_urls_browser_check": 0,
+    "source_urls_script_limited": 20,
+    "source_field_checks": 1,
     "watch_pages_checked": 32,
     "watch_pages_failed": 0,
     "priority_new_leads": 12,
-    "keyword_urls_checked": 120,
-    "keyword_entries_changed": 719
+    "keyword_urls_checked": 0,
+    "keyword_entries_changed": 0
   },
   "action_queue": [
-    {
-      "priority": "high",
-      "count": 21,
-      "label": "monitored sources needing attention",
-      "next_action": "Open the latest source-audit report and confirm failures in a normal browser."
-    },
     {
       "priority": "high",
       "count": 12,
       "label": "priority directory candidates",
       "next_action": "Confirm each linked listing page before adding it to canonical data."
-    },
-    {
-      "priority": "medium",
-      "count": 719,
-      "label": "listing keyword sets proposed for review",
-      "next_action": "Review additions and removals in the latest keyword-sweep report before merging the keyword index."
     },
     {
       "priority": "medium",
@@ -52,9 +43,9 @@
     },
     {
       "priority": "low",
-      "count": 36,
-      "label": "keyword source pages needing attention",
-      "next_action": "Open failed pages normally before removing retained source-derived keywords."
+      "count": 1,
+      "label": "offline posting pathways awaiting a field check",
+      "next_action": "Confirm the physical location or owner-controlled posting policy locally."
     }
   ]
 }

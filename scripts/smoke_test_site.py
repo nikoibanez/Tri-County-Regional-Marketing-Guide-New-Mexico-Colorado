@@ -19,6 +19,7 @@ from directory_exclusions import references_excluded_directory_entity  # noqa: E
 
 DEFAULT_SITE = ROOT / "dist" / "tri-county-netlify-guide-deep"
 DEFAULT_OUT_DIR = ROOT / "review" / "maintenance"
+PUBLIC_SITE_ORIGIN = (os.environ.get("PUBLIC_SITE_ORIGIN") or "https://newmexicocoloradoguide.netlify.app").rstrip("/")
 MAX_REMOTE_BYTES = 12_000_000
 DEFAULT_PATHS = (
     "",
@@ -52,7 +53,7 @@ def remote_fetch(base_url: str, route: str, timeout: int) -> tuple[bool, str, st
     url = urljoin(base_url.rstrip("/") + "/", route)
     request = Request(
         url,
-        headers={"User-Agent": "StatelineGuideSmokeTest/1.0 (+https://statelineguide.org)"},
+        headers={"User-Agent": f"StatelineGuideSmokeTest/1.1 (+{PUBLIC_SITE_ORIGIN}/about/)"},
         method="GET",
     )
     for attempt in range(2):

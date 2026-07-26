@@ -13,7 +13,9 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 from audit_directory_quality import duplicate_groups, normalize_name  # noqa: E402
 from audit_internal_links import audit_site  # noqa: E402
+from audit_update_sources import check_record, check_url, summarize  # noqa: E402
 import build_netlify_deep_guide as guide_builder  # noqa: E402
+from build_update_source_registry import normalize_posting  # noqa: E402
 from build_netlify_deep_guide import (  # noqa: E402
     ROUTE_TYPE_CARDS,
     best_entity_contact_url,
@@ -138,7 +140,43 @@ class InternalLinkTests(unittest.TestCase):
             site = Path(folder)
             (site / "index.html").write_text('<html><body><a href="#target">Jump</a><div id="target"></div></body></html>', encoding="utf-8")
             result = audit_site(site)
-            self.assertEqual(result["status"], "pass")
+        self.assertEqual(result["status"], "pass")
+
+
+class SourceAuditTests(unittest.TestCase):
+    def test_offline_posting_guidance_is_not_a_broken_link(self) -> None:
+        record = normalize_posting(
+            {
+                "place": "General regional pattern",
+                "county": "Regional",
+                "status": "Field-check needed",
+                "source_url": "",
+            }
+        )
+
+        self.assertEqual(record["check_mode"], "field")
+        self.assertEqual(check_record(record, 1)["status"], "field_check")
+
+    def test_summary_separates_broken_links_from_automation_limits(self) -> None:
+        results = [
+            {"record": {"review_level": "standard_review"}, "check": {"status": "ok"}},
+            {"record": {"review_level": "standard_review"}, "check": {"status": "broken"}},
+            {"record": {"review_level": "standard_review"}, "check": {"status": "access_blocked"}},
+            {"record": {"review_level": "standard_review"}, "check": {"status": "tls_error"}},
+            {"record": {"review_level": "standard_review"}, "check": {"status": "field_check"}},
+        ]
+
+        summary = summarize(results)
+
+        self.assertEqual(summary["confirmed_broken"], 1)
+        self.assertEqual(summary["needs_attention"], 1)
+        self.assertEqual(summary["browser_check_needed"], 0)
+        self.assertEqual(summary["script_access_limited"], 2)
+        self.assertEqual(summary["field_checks"], 1)
+        self.assertEqual(summary["web_checked"], 4)
+
+    def test_url_without_web_scheme_is_a_confirmed_format_error(self) -> None:
+        self.assertEqual(check_url("example.org/directory", 1)["status"], "invalid_url")
 
 
 class SiteSmokeTests(unittest.TestCase):
