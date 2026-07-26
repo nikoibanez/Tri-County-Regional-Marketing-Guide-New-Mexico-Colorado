@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-22T21:43:08-06:00",
+  "generated_at": "2026-07-26T07:08:10+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
-    "canonical_resource_rows": 1491,
-    "consolidated_directory_entries": 688,
+    "canonical_resource_rows": 1490,
+    "consolidated_directory_entries": 687,
     "registered_update_sources": 126,
     "deep_watch_sources": 15,
-    "keyword_index_entries": 1491
+    "keyword_index_entries": 1490
   },
   "latest_checks": {
     "directory_quality": "pass",
     "internal_links": "pass",
-    "source_urls_checked": 120,
-    "source_urls_needing_attention": 21,
+    "source_urls_checked": 126,
+    "source_urls_needing_attention": 25,
     "watch_pages_checked": 32,
     "watch_pages_failed": 0,
     "priority_new_leads": 12,
@@ -22,7 +22,7 @@
   "action_queue": [
     {
       "priority": "high",
-      "count": 21,
+      "count": 25,
       "label": "monitored sources needing attention",
       "next_action": "Open the latest source-audit report and confirm failures in a normal browser."
     },

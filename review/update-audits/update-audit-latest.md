@@ -1,34 +1,37 @@
 # Update Source Audit
 
-Generated: 2026-07-22
+Generated: 2026-07-26
 
 This report is a review queue. A failure here does not automatically mean a public source is invalid; some official sites block scripted checks.
 
 ## Summary
 
-- Checked: 120
-- Needs attention: 21
-- Human approval required: 54
+- Checked: 126
+- Needs attention: 25
+- Human approval required: 57
 
 ## Status Counts
 
-- manual_review: 18
+- manual_review: 23
 - missing_url: 1
-- network_error: 2
-- ok: 97
+- network_error: 1
+- ok: 99
 - redirect: 2
 
 ## Needs Attention
 
 - General regional pattern - Regional; civic; missing_url; No source URL is attached.
 - [Walsenburg / Huerfano](https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes) - Regional; civic; manual_review; HTTP Error 403: Forbidden
-- [Yellow Pages Raton Business Listings](https://www.yellowpages.com/raton-nm/business-listings/1) - Colfax; directory; manual_review; HTTP Error 403: Forbidden
-- [Colorado Gives](https://www.coloradogives.org/) - Las Animas; directory; network_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
 - [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; manual_review; HTTP Error 403: Forbidden
 - [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; manual_review; HTTP Error 403: Forbidden
 - [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; manual_review; HTTP Error 403: Forbidden
 - [Visit Angel Fire NM Get Listed](https://visitangelfirenm.com/get-listed/) - Angel Fire / Colfax; events; manual_review; HTTP Error 403: Forbidden
 - [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; manual_review; HTTP Error 403: Forbidden
+- [Visit Trinidad Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Las Animas; events; manual_review; HTTP Error 403: Forbidden
+- [Visit Trinidad Submit Your Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Las Animas; events; manual_review; HTTP Error 403: Forbidden
+- [Visit Trinidad Submit Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Trinidad / Las Animas; events; manual_review; HTTP Error 403: Forbidden
+- [Visit Trinidad Tourism / Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Trinidad / Las Animas; events; manual_review; HTTP Error 403: Forbidden
+- [Bar NI Community Fund](https://barnicommunityfund.org/) - Las Animas; funding; network_error; timed out
 - [Arts in Society Grant](https://oedit.colorado.gov/arts-in-society-grant) - Regional; funding; manual_review; HTTP Error 403: Forbidden
 - [Colorado Advanced Industries Accelerator Programs](https://oedit.colorado.gov/advanced-industries-accelerator-programs) - Regional; funding; manual_review; HTTP Error 403: Forbidden
 - [Colorado Business Funding and Incentives](https://oedit.colorado.gov/business-funding-and-incentives) - Regional; funding; manual_review; HTTP Error 403: Forbidden
@@ -37,10 +40,11 @@ This report is a review queue. A failure here does not automatically mean a publ
 - [Colorado Creative Industries](https://oedit.colorado.gov/colorado-creative-industries) - Regional; funding; manual_review; HTTP Error 403: Forbidden
 - [Colorado Rural Jump-Start Program](https://oedit.colorado.gov/rural-jump-start-program) - Regional; funding; manual_review; HTTP Error 403: Forbidden
 - [Folk and Traditional Arts Project Grant](https://oedit.colorado.gov/folk-and-traditional-arts-project-grant) - Regional; funding; manual_review; HTTP Error 403: Forbidden
-- [Grants.gov](https://www.grants.gov/) - Regional; funding; network_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)
 - [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; funding; manual_review; HTTP Error 403: Forbidden
 - [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; manual_review; HTTP Error 403: Forbidden
 - [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; manual_review; HTTP Error 403: Forbidden
+- [Las Animas County Government](https://lasanimascounty.colorado.gov/) - Las Animas; general; manual_review; HTTP Error 403: Forbidden
+- [Visit Trinidad Outdoor Recreation](https://visittrinidadcolorado.com/outdoor-recreation/) - Las Animas; general; manual_review; HTTP Error 403: Forbidden
 
 ## Human Approval Required
 
@@ -98,3 +102,6 @@ This report is a review queue. A failure here does not automatically mean a publ
 - [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; Rural funding; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; Rural microbusiness loans / grants; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; Agriculture / producer grants; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [World Journal Services Directory](https://worldjournalnewspaper.com/services/) - Huerfano; Services directory; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [The Chronicle-News](https://www.thechronicle-news.com/) - Las Animas; Media / classifieds; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [Red River Chamber Vacation Guide](https://redriver.org/plan-your-trip/vacation-guide/) - Red River / Colfax; Vacation guide request; visitor mailing pathway; newsletter; Do not infer free placement, ad availability, acceptance, audience size, or endorsement.
