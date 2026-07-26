@@ -9,11 +9,16 @@ OUT = ROOT / "assets" / "animations"
 
 
 STYLE = """
-  .sun-glow { animation: geo-sun 28s ease-in-out infinite alternate; }
-  .cloud-bank { animation: geo-clouds 82s linear infinite; }
-  .far-range { animation: geo-far 44s ease-in-out infinite alternate; }
-  .mid-range { animation: geo-mid 38s ease-in-out infinite alternate; }
-  .near-feature { animation: geo-near 34s ease-in-out infinite alternate; }
+  .sun-glow { animation: geo-sun 30s ease-in-out infinite alternate; }
+  .cloud-bank { animation: geo-clouds 108s linear infinite; }
+  .far-range { animation: geo-far 52s ease-in-out infinite alternate; }
+  .mid-range { animation: geo-mid 44s ease-in-out infinite alternate; }
+  .near-feature { animation: geo-near 38s ease-in-out infinite alternate; }
+  .plains-layer {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: geo-plains 48s ease-in-out infinite alternate;
+  }
   .wind-line {
     fill: none;
     stroke: rgba(255,255,255,0.42);
@@ -69,6 +74,10 @@ STYLE = """
     from { transform: translateX(-3px) translateY(0.5px); }
     to { transform: translateX(3px) translateY(-0.5px); }
   }
+  @keyframes geo-plains {
+    from { transform: translateX(-2px) scaleX(1.001); }
+    to { transform: translateX(2px) translateY(-1px) scaleX(1.003); }
+  }
   @keyframes geo-wind {
     from { stroke-dashoffset: 180; transform: translateX(-18px); }
     to { stroke-dashoffset: -180; transform: translateX(26px); }
@@ -95,6 +104,7 @@ STYLE = """
     .far-range,
     .mid-range,
     .near-feature,
+    .plains-layer,
     .wind-line,
     .yucca-sway,
     .leaf-sway,
@@ -194,7 +204,7 @@ def svg_for(variant: dict[str, str]) -> str:
           <g class="far-range">{variant['far']}</g>
           <g class="mid-range">{variant['mid']}</g>
           <g class="near-feature">{variant['feature']}</g>
-          <g id="plains" opacity="0.95">
+          <g id="plains" class="plains-layer" opacity="0.95">
             <path d="{variant['plain1']}" fill="{variant['plain_a']}" opacity="0.34"/>
             <path d="{variant['plain2']}" fill="{variant['plain_b']}" opacity="0.32"/>
             <path d="M0 680c250-34 465-34 642 0 190 36 336 38 528 3 170-31 316-22 430 22v15H0z" fill="#173047" opacity="0.10"/>

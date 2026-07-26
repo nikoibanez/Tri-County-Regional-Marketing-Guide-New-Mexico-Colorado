@@ -36,11 +36,16 @@
   </filter>
 
             <style>
-  .sun-glow { animation: geo-sun 28s ease-in-out infinite alternate; }
-  .cloud-bank { animation: geo-clouds 82s linear infinite; }
-  .far-range { animation: geo-far 44s ease-in-out infinite alternate; }
-  .mid-range { animation: geo-mid 38s ease-in-out infinite alternate; }
-  .near-feature { animation: geo-near 34s ease-in-out infinite alternate; }
+  .sun-glow { animation: geo-sun 30s ease-in-out infinite alternate; }
+  .cloud-bank { animation: geo-clouds 108s linear infinite; }
+  .far-range { animation: geo-far 52s ease-in-out infinite alternate; }
+  .mid-range { animation: geo-mid 44s ease-in-out infinite alternate; }
+  .near-feature { animation: geo-near 38s ease-in-out infinite alternate; }
+  .plains-layer {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: geo-plains 48s ease-in-out infinite alternate;
+  }
   .wind-line {
     fill: none;
     stroke: rgba(255,255,255,0.42);
@@ -96,6 +101,10 @@
     from { transform: translateX(-3px) translateY(0.5px); }
     to { transform: translateX(3px) translateY(-0.5px); }
   }
+  @keyframes geo-plains {
+    from { transform: translateX(-2px) scaleX(1.001); }
+    to { transform: translateX(2px) translateY(-1px) scaleX(1.003); }
+  }
   @keyframes geo-wind {
     from { stroke-dashoffset: 180; transform: translateX(-18px); }
     to { stroke-dashoffset: -180; transform: translateX(26px); }
@@ -122,6 +131,7 @@
     .far-range,
     .mid-range,
     .near-feature,
+    .plains-layer,
     .wind-line,
     .yucca-sway,
     .leaf-sway,
@@ -144,7 +154,7 @@
           <g class="far-range"><path d="M0 430l142-68 160 36 210-114 116 98 180-82 134 94 144-88 128 92 138-70 248 114v278H0z" fill="url(#farTone)" opacity="0.50"/><path d="M920 378l86-92 76 92z" fill="#f5f1e2" opacity="0.48"/></g>
           <g class="mid-range"><path d="M0 522c160-48 306-58 438-28 122 28 256 19 402-24 210-61 442-42 760 52v198H0z" fill="#d7a66f" opacity="0.34"/></g>
           <g class="near-feature"><path d="M470 548l92-252 44 262z" fill="#c05d3d" opacity="0.90"/><path d="M570 566l138-330 56 342z" fill="#a94d3d" opacity="0.92"/><path d="M724 580l124-278 58 286z" fill="#dd8b5d" opacity="0.88"/><path d="M876 574l92-244 48 252z" fill="#b55742" opacity="0.88"/><path d="M1038 566l74-184 40 190z" fill="#d7895d" opacity="0.82"/><path d="M520 364l34 178M646 306l44 230M790 356l36 192M936 398l28 150" stroke="#f5c891" stroke-width="6" stroke-linecap="round" opacity="0.28"/></g>
-          <g id="plains" opacity="0.95">
+          <g id="plains" class="plains-layer" opacity="0.95">
             <path d="M0 542c155-30 300-28 438 8 122 31 265 36 426 10 182-30 355-18 520 42 85 31 155 37 216 18v100H0z" fill="#e3bc79" opacity="0.34"/>
             <path d="M0 626c184-22 324-23 446-5 176 26 318 17 460-28 188-58 388-46 694 40v87H0z" fill="#a6a979" opacity="0.32"/>
             <path d="M0 680c250-34 465-34 642 0 190 36 336 38 528 3 170-31 316-22 430 22v15H0z" fill="#173047" opacity="0.10"/>

@@ -158,6 +158,31 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("NAV_YUCCA_KEY", js)
         self.assertIn("initNavigationYucca();", js)
 
+    def test_landscapes_and_assistant_use_accessible_southwest_motion(self) -> None:
+        page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
+        self.assertIn('class="directory-assistant__desert-motion" aria-hidden="true"', page)
+
+        landscape_files = sorted((ROOT / "assets" / "animations").glob("hero-*.svg"))
+        self.assertEqual(len(landscape_files), 11)
+        for landscape_file in landscape_files:
+            svg = landscape_file.read_text(encoding="utf-8")
+            self.assertIn('class="plains-layer"', svg, landscape_file.name)
+            self.assertIn("@keyframes geo-plains", svg, landscape_file.name)
+            self.assertIn("prefers-reduced-motion: reduce", svg, landscape_file.name)
+
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+            js = (asset_out / "app.js").read_text(encoding="utf-8")
+
+        self.assertIn("assistant-desert-open", css)
+        self.assertIn("assistant-desert-close", css)
+        self.assertIn("replayAssistantMotion(panel, \"open\")", js)
+        self.assertIn('panel.addEventListener("cancel"', js)
+        self.assertIn('playGuideSfx("intro", { armOnGesture: true })', js)
+
     def test_directory_assistant_asset_requires_guided_search_logic(self) -> None:
         complete = (
             "const ASSISTANT_INTENTS = []; assistantInterpretation(); data-assistant-followup "

@@ -4287,6 +4287,30 @@ def page_shell(
               Ask directory
             </button>
             <dialog class="directory-assistant__panel" id="directory-assistant-panel" aria-labelledby="directory-assistant-title" aria-describedby="directory-assistant-intro directory-assistant-hint">
+              <div class="directory-assistant__desert-motion" aria-hidden="true">
+                <svg viewBox="0 0 430 58" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <rect class="assistant-desert__sky" width="430" height="58"/>
+                  <circle class="assistant-desert__sun" cx="344" cy="26" r="9"/>
+                  <path class="assistant-desert__far-ridge" d="M0 45 49 30l41 8 47-19 55 21 56-15 58 17 55-13 69 18v11H0Z"/>
+                  <path class="assistant-desert__near-ridge" d="M0 49c56-9 103-8 145 1 47 10 95 7 141-4 52-13 100-10 144 4v8H0Z"/>
+                  <path class="assistant-desert__wind" d="M218 16c34 9 66 8 96-2 29-9 56-7 83 5"/>
+                  <path class="assistant-desert__horizon" d="M0 50c78-5 147-4 207 2 79 8 151 7 223-2"/>
+                  <g class="assistant-desert__yucca assistant-desert__yucca--one" transform="translate(62 14)">
+                    <path class="assistant-desert__stem" d="M0 37C1 24 0 12-2 0"/>
+                    <path class="assistant-desert__leaves" d="m0 37-15-17 11 18m5-1 15-18L6 38M0 37l-2-23"/>
+                    <g class="assistant-desert__flowers" transform="translate(-2 1)">
+                      <circle cx="-5" cy="2" r="3"/><circle cx="4" cy="-1" r="3.3"/><circle cx="2" cy="7" r="2.7"/>
+                    </g>
+                  </g>
+                  <g class="assistant-desert__yucca assistant-desert__yucca--two" transform="translate(112 23)">
+                    <path class="assistant-desert__stem" d="M0 28C1 18 1 9 0 0"/>
+                    <path class="assistant-desert__leaves" d="m0 28-11-12 8 13m4-1 11-13-7 14M0 28V10"/>
+                    <g class="assistant-desert__flowers" transform="translate(0 1)">
+                      <circle cx="-4" cy="1" r="2.5"/><circle cx="4" cy="-1" r="2.8"/>
+                    </g>
+                  </g>
+                </svg>
+              </div>
               <div class="directory-assistant__header">
                 <div>
                   <p class="eyebrow">Immediate directory</p>
@@ -6948,24 +6972,139 @@ def write_static_assets() -> None:
       box-shadow: 0 24px 64px rgba(23,48,71,0.20);
       backdrop-filter: blur(18px);
     }
-    .directory-assistant__panel.is-bubble-opening {
+    .directory-assistant__panel.is-southwest-opening {
       transform-origin: left bottom;
-      animation: interface-bubble-pop 300ms cubic-bezier(.2,.82,.24,1.18) both;
+      animation: assistant-desert-open 460ms cubic-bezier(.2,.82,.24,1.08) both;
+    }
+    .directory-assistant__panel.is-southwest-closing {
+      pointer-events: none;
+      transform-origin: left bottom;
+      animation: assistant-desert-close 260ms cubic-bezier(.58,.08,.82,.38) both;
     }
     .resource-item.is-bubble-opening,
     .source-card.is-bubble-opening {
       transform-origin: center top;
       animation: listing-bubble-pop 280ms cubic-bezier(.2,.82,.24,1.14) both;
     }
-    @keyframes interface-bubble-pop {
-      0% { opacity: 0; transform: translateY(8px) scale(0.94); }
-      68% { opacity: 1; transform: translateY(-1px) scale(1.012); }
+    @keyframes assistant-desert-open {
+      0% { opacity: 0; transform: translateY(10px) scale(0.95); }
+      70% { opacity: 1; transform: translateY(-1px) scale(1.008); }
       100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes assistant-desert-close {
+      0% { opacity: 1; transform: translateY(0) scale(1); }
+      100% { opacity: 0; transform: translateY(8px) scale(0.97); }
     }
     @keyframes listing-bubble-pop {
       0% { transform: scale(0.985); box-shadow: 0 7px 18px rgba(23,48,71,0.05); }
       64% { transform: scale(1.006); box-shadow: 0 14px 30px rgba(23,48,71,0.10); }
       100% { transform: scale(1); box-shadow: 0 10px 28px rgba(23,48,71,0.06); }
+    }
+    .directory-assistant__desert-motion {
+      height: 48px;
+      margin: -16px -16px 12px;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(23,48,71,0.12);
+      border-radius: 9px 9px 0 0;
+      background: rgba(175,203,208,0.24);
+    }
+    .directory-assistant__desert-motion svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .assistant-desert__sky { fill: #dfe8df; }
+    .assistant-desert__sun {
+      fill: #d6bb68;
+      opacity: 0.82;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    .assistant-desert__far-ridge { fill: #9eb8b3; opacity: 0.58; }
+    .assistant-desert__near-ridge { fill: #6f7f6c; opacity: 0.72; }
+    .assistant-desert__wind,
+    .assistant-desert__horizon,
+    .assistant-desert__stem,
+    .assistant-desert__leaves {
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .assistant-desert__wind {
+      stroke: rgba(255,253,248,0.82);
+      stroke-width: 1.2;
+      stroke-dasharray: 24 12;
+    }
+    .assistant-desert__horizon {
+      stroke: rgba(167,97,73,0.54);
+      stroke-width: 1.4;
+      stroke-dasharray: 440;
+    }
+    .assistant-desert__yucca {
+      transform-box: fill-box;
+      transform-origin: 50% 100%;
+    }
+    .assistant-desert__stem { stroke: #556554; stroke-width: 2.2; }
+    .assistant-desert__leaves { stroke: #324f4d; stroke-width: 2.4; }
+    .assistant-desert__flowers circle {
+      fill: #fff8df;
+      stroke: #b69146;
+      stroke-width: 0.7;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    .directory-assistant__panel.is-southwest-opening .assistant-desert__sun {
+      animation: assistant-sunrise 720ms cubic-bezier(.18,.74,.28,1) both;
+    }
+    .directory-assistant__panel.is-southwest-opening .assistant-desert__horizon {
+      animation: assistant-horizon-draw 660ms ease-out both;
+    }
+    .directory-assistant__panel.is-southwest-opening .assistant-desert__wind {
+      animation: assistant-wind-drift 1100ms ease-out both;
+    }
+    .directory-assistant__panel.is-southwest-opening .assistant-desert__yucca--one {
+      animation: assistant-yucca-grow 620ms cubic-bezier(.16,.82,.25,1.12) 90ms both;
+    }
+    .directory-assistant__panel.is-southwest-opening .assistant-desert__yucca--two {
+      animation: assistant-yucca-grow 560ms cubic-bezier(.16,.82,.25,1.12) 170ms both;
+    }
+    .directory-assistant__panel.is-southwest-opening .assistant-desert__flowers circle {
+      animation: assistant-flower-open 380ms cubic-bezier(.18,.86,.24,1.22) 390ms both;
+    }
+    .directory-assistant__panel.is-southwest-closing .assistant-desert__sun {
+      animation: assistant-sunset 240ms ease-in both;
+    }
+    .directory-assistant__panel.is-southwest-closing .assistant-desert__yucca {
+      animation: assistant-yucca-rest 220ms ease-in both;
+    }
+    @keyframes assistant-sunrise {
+      from { opacity: 0; transform: translateY(13px) scale(0.72); }
+      to { opacity: 0.82; transform: translateY(0) scale(1); }
+    }
+    @keyframes assistant-sunset {
+      from { opacity: 0.82; transform: translateY(0) scale(1); }
+      to { opacity: 0; transform: translateY(12px) scale(0.78); }
+    }
+    @keyframes assistant-horizon-draw {
+      from { stroke-dashoffset: 440; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes assistant-wind-drift {
+      from { opacity: 0; stroke-dashoffset: 72; transform: translateX(-12px); }
+      45% { opacity: 0.84; }
+      to { opacity: 0.34; stroke-dashoffset: 0; transform: translateX(8px); }
+    }
+    @keyframes assistant-yucca-grow {
+      from { opacity: 0; transform: scaleY(0.16) rotate(-2deg); }
+      to { opacity: 1; transform: scaleY(1) rotate(0); }
+    }
+    @keyframes assistant-yucca-rest {
+      from { opacity: 1; transform: scaleY(1); }
+      to { opacity: 0; transform: scaleY(0.55); }
+    }
+    @keyframes assistant-flower-open {
+      from { opacity: 0; transform: scale(0.2); }
+      to { opacity: 1; transform: scale(1); }
     }
     .directory-assistant__panel::backdrop {
       background: rgba(16,40,61,0.12);
@@ -7184,6 +7323,7 @@ def write_static_assets() -> None:
       .directory-assistant { width: min(390px, calc(100vw - 24px)); left: 12px; bottom: 74px; }
       .directory-assistant__toggle { min-height: 40px; padding: 8px 11px; font-size: 0.78rem; }
       .directory-assistant__panel { left: 12px; bottom: 128px; width: min(390px, calc(100vw - 24px)); max-height: min(76vh, 580px); padding: 13px; }
+      .directory-assistant__desert-motion { margin: -13px -13px 10px; }
     }
     @media (max-width: 640px) {
       body { overflow-x: hidden; }
@@ -7332,7 +7472,10 @@ def write_static_assets() -> None:
         transition-duration: 0.001ms !important;
       }
       [data-animated="true"], .intro-curtain, .hero-accent, .hero-route, .hero-node, .submit-success-card, .sparkle,
-      .directory-assistant__panel.is-bubble-opening, .resource-item.is-bubble-opening, .source-card.is-bubble-opening,
+      .directory-assistant__panel.is-southwest-opening, .directory-assistant__panel.is-southwest-closing,
+      .assistant-desert__sun, .assistant-desert__horizon, .assistant-desert__wind,
+      .assistant-desert__yucca, .assistant-desert__flowers circle,
+      .resource-item.is-bubble-opening, .source-card.is-bubble-opening,
       .nav-yucca-flourish, .nav-yucca__stem, .nav-yucca__branch, .nav-yucca__leaf, .nav-yucca__flower {
         animation: none !important;
         transform: none !important;
@@ -8279,6 +8422,7 @@ def write_static_assets() -> None:
     }
 
     const bubbleAnimationTimers = new WeakMap();
+    const assistantMotionTimers = new WeakMap();
 
     function replayBubbleOpen(element) {
       if (!element || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -8291,6 +8435,22 @@ def write_static_assets() -> None:
         element.classList.remove("is-bubble-opening");
         bubbleAnimationTimers.delete(element);
       }, 360));
+    }
+
+    function replayAssistantMotion(panel, phase) {
+      if (!panel || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return 0;
+      const previousTimer = assistantMotionTimers.get(panel);
+      if (previousTimer) window.clearTimeout(previousTimer);
+      panel.classList.remove("is-southwest-opening", "is-southwest-closing");
+      void panel.offsetWidth;
+      const className = phase === "close" ? "is-southwest-closing" : "is-southwest-opening";
+      const duration = phase === "close" ? 260 : 760;
+      panel.classList.add(className);
+      assistantMotionTimers.set(panel, window.setTimeout(() => {
+        panel.classList.remove(className);
+        assistantMotionTimers.delete(panel);
+      }, duration + 40));
+      return duration;
     }
 
     function initDirectoryAssistant() {
@@ -8313,24 +8473,13 @@ def write_static_assets() -> None:
       let renderTimer = null;
       let lastFocusedElement = null;
       let returnFocusOnClose = true;
+      let closeTimer = null;
+      let isClosing = false;
 
-      function setOpen(open, { returnFocus = true } = {}) {
-        if (open) {
-          lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : toggle;
-          if (!panel.open) {
-            if (typeof panel.showModal === "function") {
-              panel.showModal();
-            } else {
-              panel.setAttribute("open", "");
-            }
-          }
-          replayBubbleOpen(panel);
-          toggle.setAttribute("aria-expanded", "true");
-          root.dataset.open = "true";
-          window.setTimeout(() => input.focus(), 40);
-          return;
-        }
-        returnFocusOnClose = returnFocus;
+      function finishClose() {
+        closeTimer = null;
+        isClosing = false;
+        panel.classList.remove("is-southwest-opening", "is-southwest-closing");
         if (panel.open && typeof panel.close === "function") {
           panel.close();
         } else {
@@ -8339,7 +8488,50 @@ def write_static_assets() -> None:
         }
       }
 
+      function setOpen(open, { returnFocus = true } = {}) {
+        if (open) {
+          if (closeTimer) {
+            window.clearTimeout(closeTimer);
+            closeTimer = null;
+          }
+          isClosing = false;
+          panel.classList.remove("is-southwest-closing");
+          lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : toggle;
+          if (!panel.open) {
+            if (typeof panel.showModal === "function") {
+              panel.showModal();
+            } else {
+              panel.setAttribute("open", "");
+            }
+          }
+          replayAssistantMotion(panel, "open");
+          toggle.setAttribute("aria-expanded", "true");
+          root.dataset.open = "true";
+          window.setTimeout(() => input.focus(), 40);
+          return;
+        }
+        returnFocusOnClose = returnFocus;
+        if (!panel.open) {
+          finishClose();
+          return;
+        }
+        if (isClosing) return;
+        isClosing = true;
+        const duration = replayAssistantMotion(panel, "close");
+        if (!duration) {
+          finishClose();
+          return;
+        }
+        closeTimer = window.setTimeout(finishClose, duration);
+      }
+
       function syncClosed() {
+        if (closeTimer) {
+          window.clearTimeout(closeTimer);
+          closeTimer = null;
+        }
+        isClosing = false;
+        panel.classList.remove("is-southwest-opening", "is-southwest-closing");
         toggle.setAttribute("aria-expanded", "false");
         root.dataset.open = "false";
         if (renderTimer) {
@@ -8403,13 +8595,17 @@ def write_static_assets() -> None:
       }
 
       toggle.addEventListener("click", () => {
-        const shouldOpen = !panel.open;
+        const shouldOpen = !panel.open || isClosing;
         setOpen(shouldOpen);
         if (shouldOpen && !status.textContent.trim()) {
           render(input.value);
         }
       });
       close && close.addEventListener("click", () => setOpen(false));
+      panel.addEventListener("cancel", event => {
+        event.preventDefault();
+        setOpen(false);
+      });
       panel.addEventListener("close", syncClosed);
       panel.addEventListener("click", event => {
         if (event.target !== panel) return;
@@ -8443,7 +8639,7 @@ def write_static_assets() -> None:
         input.focus();
       });
       document.addEventListener("keydown", event => {
-        if (event.key === "Escape" && panel.open && typeof panel.close !== "function") {
+        if (event.key === "Escape" && panel.open) {
           event.preventDefault();
           setOpen(false);
         }
@@ -8729,7 +8925,10 @@ def write_static_assets() -> None:
       const TRACK_KEY = "triCountyRegionalSoundTrackV3";
       const VOLUME_KEY = "triCountyRegionalSoundVolumeV3";
       const savedChoice = localStorage.getItem(MUSIC_KEY);
-      const hasSeenIntro = sessionStorage.getItem(INTRO_KEY) === "seen";
+      let hasSeenIntro = false;
+      try {
+        hasSeenIntro = sessionStorage.getItem(INTRO_KEY) === "seen";
+      } catch {}
       const saveData = Boolean(navigator.connection && navigator.connection.saveData);
       const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       let isPlaying = false;
@@ -8917,7 +9116,9 @@ def write_static_assets() -> None:
       function markIntroComplete() {
         if (!intro) return;
         intro.dataset.introState = "complete";
-        sessionStorage.setItem(INTRO_KEY, "seen");
+        try {
+          sessionStorage.setItem(INTRO_KEY, "seen");
+        } catch {}
       }
 
       window.addEventListener("beforeunload", () => rememberTime({ force: true }));
