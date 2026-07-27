@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-22",
+  "generated_at": "2026-07-27",
   "publication_note": "Automatically refreshed from watched public directory and tourism pages. Treat these as candidate updates, not official directory additions, until a human confirms the linked source.",
   "summary": {
     "sources_watched": 15,
     "pages_checked": 32,
-    "pages_failed": 0,
-    "already_represented": 270,
-    "possible_new_leads": 139,
+    "pages_failed": 8,
+    "already_represented": 216,
+    "possible_new_leads": 127,
     "priority_new_leads": 12,
-    "low_confidence_text_leads": 127
+    "low_confidence_text_leads": 115
   },
   "watched_sources": [
     {
@@ -74,7 +74,7 @@
       "source_role": "Restaurants, lodging, shopping, visitor-facing businesses, local listing support",
       "why_watch": "High-signal Trinidad tourism pages for visitor-facing businesses and listing-support routes.",
       "pages_checked": 4,
-      "possible_new_leads": 9,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -85,7 +85,7 @@
       "source_role": "Event spots, event calendar, event submission, visitor-facing programs",
       "why_watch": "Primary visitor-facing source for Trinidad events and event submission routes.",
       "pages_checked": 2,
-      "possible_new_leads": 4,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -96,7 +96,7 @@
       "source_role": "Venues, event facilities, travel groups, catering-adjacent planning routes",
       "why_watch": "Useful for venues, event spaces, group travel, weddings, and catering-adjacent outreach.",
       "pages_checked": 2,
-      "possible_new_leads": 2,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -151,7 +151,7 @@
       "source_role": "Event spots, community calendar, event submission, visitor-facing activities",
       "why_watch": "Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.",
       "pages_checked": 2,
-      "possible_new_leads": 13,
+      "possible_new_leads": 16,
       "priority_new_leads": 0
     },
     {
@@ -1116,6 +1116,28 @@
       "confidence": "low"
     },
     {
+      "name": "200 S Main, La Veta, CO, United States",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "23rd Annual Stonewall Century Ride",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "Become a Member",
       "county": "Huerfano",
       "state": "CO",
@@ -1160,7 +1182,7 @@
       "confidence": "low"
     },
     {
-      "name": "Dotsero",
+      "name": "David Starr",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -1266,6 +1288,17 @@
       "source_type": "Municipal business directory",
       "source_page": "https://townoflaveta-co.gov/business-directory/",
       "listing_url": "https://townoflaveta-co.gov/business-directory/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "La Veta",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -1376,39 +1409,6 @@
       "source_type": "Municipal business directory",
       "source_page": "https://townoflaveta-co.gov/business-directory/",
       "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Walsenburg Farm & Makers Market",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Walsenburg Farmers Market",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "420 Festival at Central Park",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     }

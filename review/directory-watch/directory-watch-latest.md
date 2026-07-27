@@ -1,6 +1,6 @@
 # Weekly Directory Query Check
 
-Generated: 2026-07-22
+Generated: 2026-07-27
 
 Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.
 
@@ -8,12 +8,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 
 - Sources watched: 15
 - Pages checked: 32
-- Pages failed: 0
-- Listing-like candidates found: 409
-- Already represented in guide: 270
-- Possible new leads: 139
+- Pages failed: 8
+- Listing-like candidates found: 343
+- Already represented in guide: 216
+- Possible new leads: 127
 - Priority new leads: 12
-- Low-confidence text leads: 127
+- Low-confidence text leads: 115
 
 ## Watch Sources
 
@@ -68,8 +68,14 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism business and visitor directory
 - Why watch: High-signal Trinidad tourism pages for visitor-facing businesses and listing-support routes.
 - Pages checked: 4
-- Possible new leads: 9
+- Possible new leads: 0
 - Priority new leads: 0
+
+Fetch issues:
+- [https://visittrinidadcolorado.com/dine/](https://visittrinidadcolorado.com/dine/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/stay/](https://visittrinidadcolorado.com/stay/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/shop/](https://visittrinidadcolorado.com/shop/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/resources-for-locals/](https://visittrinidadcolorado.com/resources-for-locals/) - HTTP Error 403: Forbidden
 
 ### Visit Trinidad Events and Submit-Event Routes
 
@@ -77,8 +83,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary visitor-facing source for Trinidad events and event submission routes.
 - Pages checked: 2
-- Possible new leads: 4
+- Possible new leads: 0
 - Priority new leads: 0
+
+Fetch issues:
+- [https://visittrinidadcolorado.com/upcoming-events/](https://visittrinidadcolorado.com/upcoming-events/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - HTTP Error 403: Forbidden
 
 ### Visit Trinidad Meetings, Weddings, and Venue Routes
 
@@ -86,8 +96,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Meetings, conventions, weddings, and venue tourism source
 - Why watch: Useful for venues, event spaces, group travel, weddings, and catering-adjacent outreach.
 - Pages checked: 2
-- Possible new leads: 2
+- Possible new leads: 0
 - Priority new leads: 0
+
+Fetch issues:
+- [https://visittrinidadcolorado.com/meetings-conventions/](https://visittrinidadcolorado.com/meetings-conventions/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/weddings/](https://visittrinidadcolorado.com/weddings/) - HTTP Error 403: Forbidden
 
 ### LocalStash Trinidad
 
@@ -131,7 +145,7 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.
 - Pages checked: 2
-- Possible new leads: 13
+- Possible new leads: 16
 - Priority new leads: 0
 
 ### Town of La Veta Business Directory
@@ -246,28 +260,26 @@ These came from directory page text rather than individual listing links. Review
 - |www.phillongraton.com - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business-directory.html
 - |www.ratonarts.org - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business-directory.html
 - 123’s - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
+- 200 S Main, La Veta, CO, United States - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- 23rd Annual Stonewall Century Ride - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Become a Member - Huerfano; Huerfano County Chamber Directory; source page: https://www.chamber.huerfano.org/membership-directory
 - Contact Information - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Cuchara Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Danae's Diner - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
-- Dotsero - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Forms & Permits - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
-- Frequently Asked Questions - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
-- Additional low-confidence candidates omitted from Markdown: 47. See JSON.
+- David Starr - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- Additional low-confidence candidates omitted from Markdown: 35. See JSON.
 
 ## Already Represented Sample
 
 - A Taylor Made Haircut -> A Taylor Made Haircut (exact_normalized)
 - A&W -> A&W (exact_normalized)
 - A&W -> A&W (exact_normalized)
-- AlMack's Kitchen -> AlMack's Kitchen (exact_normalized)
 - Alys' Restaurant -> Alys' Restaurant (exact_normalized)
 - Alys' Restaurant -> Alys' Restaurant (exact_normalized)
 - Alys' Restaurant -> Alys' Restaurant (exact_normalized)
 - Anchor Motel -> Anchor Motel (exact_normalized)
 - Anchor Motel -> Anchor Motel (exact_normalized)
 - Antique Avenue -> Antique Avenue (exact_normalized)
-- AR Mitchell Museum of Western Art -> AR Mitchell Museum of Western Art (exact_normalized)
 - Armidas -> Armidas (exact_normalized)
 - Artisans on Main -> Artisans on Main (exact_normalized)
 - Artisans on Main LLC -> Artisans on Main (exact_normalized)
@@ -278,22 +290,24 @@ These came from directory page text rather than individual listing links. Review
 - Best Western Rambler -> Best Western Rambler (exact_normalized)
 - Big "R" -> Big R (exact_normalized)
 - Big R -> Big R (exact_normalized)
-- Big R -> Big R (exact_normalized)
-- Bob & Earl's -> Bob & Earl's (exact_normalized)
 - Book Nook -> Book Nook (exact_normalized)
-- Books & More -> Books & More (exact_normalized)
-- Boom Noodles (Food Court at the Marketplace) -> Boom Noodles (Food Court at the Marketplace) (exact_normalized)
-- Brick City Tattoo -> Brick City Tattoo (exact_normalized)
-- Brick Road Bakery -> Brick Road Bakery (exact_normalized)
-- Brick Road Bakery -> Brick Road Bakery (exact_normalized)
 - Bud Hut -> Bud Hut (exact_normalized)
-- Budget Host & Summit RV Park -> Budget Host & Summit RV Park (exact_normalized)
 - C1B True Organics -> C1B True Organics (exact_normalized)
 - Canna City -> Canna City (exact_normalized)
 - Cannaco -> Cannaco (exact_normalized)
 - Capture Colorado -> Capture Colorado (exact_normalized)
 - Casa de Pajaros -> Casa de Pajaros (exact_normalized)
 - Casa de Pajaros -> Casa de Pajaros (exact_normalized)
-- Cawthon RV Park & Motel -> Cawthon RV Park & Motel (exact_normalized)
 - Chae Organics -> Chae Organics (exact_normalized)
 - Charlie's Market -> Charlie's Market (exact_normalized)
+- Charlie's Market -> Charlie's Market (exact_normalized)
+- Code of the West Real Estate -> Code of the West Real Estate (exact_normalized)
+- Corine’s Mexican Restaurant -> Corine’s Mexican Restaurant (exact_normalized)
+- Corine’s Mexican Restaurant -> Corine’s Mexican Restaurant (exact_normalized)
+- Corner Cottage Skin Care -> Corner Cottage Skin Care (exact_normalized)
+- Crafted in Colorado -> Crafted in Colorado (exact_normalized)
+- Crafted in Colorado -> Crafted in Colorado (exact_normalized)
+- Crafty Canary Brewery -> Crafty Canary Brewery (exact_normalized)
+- Crafty Canary Brewery -> Crafty Canary Brewery (exact_normalized)
+- Crown Lanes -> Crown Lanes (exact_normalized)
+- Cuchara Cabins & Condo Rentals -> Cuchara Cabins & Condo Rentals (exact_normalized)
