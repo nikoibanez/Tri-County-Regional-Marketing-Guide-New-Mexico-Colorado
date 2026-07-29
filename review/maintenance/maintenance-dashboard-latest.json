@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T17:02:07-06:00",
+  "generated_at": "2026-07-29T16:54:52+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1490,
@@ -19,8 +19,8 @@
     "watch_pages_checked": 32,
     "watch_pages_failed": 0,
     "priority_new_leads": 12,
-    "keyword_urls_checked": 0,
-    "keyword_entries_changed": 0
+    "keyword_urls_checked": 120,
+    "keyword_entries_changed": 26
   },
   "action_queue": [
     {
@@ -36,10 +36,22 @@
       "next_action": "Enrich high-value entries first; do not invent contact paths."
     },
     {
+      "priority": "medium",
+      "count": 26,
+      "label": "listing keyword sets proposed for review",
+      "next_action": "Review additions and removals in the latest keyword-sweep report before merging the keyword index."
+    },
+    {
       "priority": "low",
       "count": 127,
       "label": "low-confidence text candidates",
       "next_action": "Review only after the linked priority queue; do not publish from page text alone."
+    },
+    {
+      "priority": "low",
+      "count": 37,
+      "label": "keyword source pages needing attention",
+      "next_action": "Open failed pages normally before removing retained source-derived keywords."
     },
     {
       "priority": "low",
