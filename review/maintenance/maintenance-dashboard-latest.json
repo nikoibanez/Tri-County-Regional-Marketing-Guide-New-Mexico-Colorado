@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T17:02:07-06:00",
+  "generated_at": "2026-08-04T17:11:06+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1490,
@@ -11,16 +11,16 @@
   "latest_checks": {
     "directory_quality": "pass",
     "internal_links": "pass",
-    "source_urls_checked": 119,
+    "source_urls_checked": 125,
     "source_urls_confirmed_broken": 0,
-    "source_urls_browser_check": 0,
-    "source_urls_script_limited": 20,
+    "source_urls_browser_check": 4,
+    "source_urls_script_limited": 23,
     "source_field_checks": 1,
     "watch_pages_checked": 32,
     "watch_pages_failed": 0,
     "priority_new_leads": 12,
-    "keyword_urls_checked": 0,
-    "keyword_entries_changed": 0
+    "keyword_urls_checked": 120,
+    "keyword_entries_changed": 719
   },
   "action_queue": [
     {
@@ -28,6 +28,12 @@
       "count": 12,
       "label": "priority directory candidates",
       "next_action": "Confirm each linked listing page before adding it to canonical data."
+    },
+    {
+      "priority": "medium",
+      "count": 719,
+      "label": "listing keyword sets proposed for review",
+      "next_action": "Review additions and removals in the latest keyword-sweep report before merging the keyword index."
     },
     {
       "priority": "medium",
@@ -40,6 +46,18 @@
       "count": 127,
       "label": "low-confidence text candidates",
       "next_action": "Review only after the linked priority queue; do not publish from page text alone."
+    },
+    {
+      "priority": "low",
+      "count": 36,
+      "label": "keyword source pages needing attention",
+      "next_action": "Open failed pages normally before removing retained source-derived keywords."
+    },
+    {
+      "priority": "low",
+      "count": 4,
+      "label": "sources the automated checker could not confirm",
+      "next_action": "Open these in a normal browser; do not remove a link solely because of a timeout, network problem, or temporary server response."
     },
     {
       "priority": "low",

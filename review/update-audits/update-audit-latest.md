@@ -1,26 +1,26 @@
 # Update Source Audit
 
-Generated: 2026-07-26
+Generated: 2026-08-04
 
 This report separates confirmed link failures from pages that merely block or confuse scripted checks.
 
 ## Summary
 
-- Records checked: 120
-- Web sources checked: 119
+- Records checked: 126
+- Web sources checked: 125
 - Confirmed broken or missing: 0
-- Normal-browser confirmation required: 0
-- Script-access limitations (not broken): 20
+- Normal-browser confirmation required: 4
+- Script-access limitations (not broken): 23
 - Offline field-check records: 1
-- Human approval required: 54
+- Human approval required: 57
 
 ## Status Counts
 
-- access_blocked: 18
+- access_blocked: 23
 - field_check: 1
-- ok: 96
-- redirect: 3
-- tls_error: 2
+- network_error: 4
+- ok: 93
+- redirect: 5
 
 ## Confirmed Broken Or Missing
 
@@ -28,20 +28,27 @@ No checked web source is confirmed broken or missing.
 
 ## Normal-Browser Confirmation Required
 
-No inconclusive network or server response is waiting on a normal-browser confirmation.
+These pages are not classified as broken. A timeout, network problem, or temporary server response prevented a conclusive scripted check.
+
+- [Southern Colorado Economic Development District](https://www.scedd.com/) - Regional; directory; network_error; timed out
+- [Southern Colorado Community Foundation Nonprofit Directory](https://sccfcolorado.org/nonprofit-directory/) - Las Animas; funding; network_error; timed out
+- [Southern Colorado Community Foundation Grants](https://sccfcolorado.org/for-grantseekers/grants/) - Regional; funding; network_error; timed out
+- [Southern Colorado Community Foundation Scholarship](https://sccfcolorado.org/madeline-mellers-memorial-girls-golf-scholarship/) - Regional; funding; network_error; timed out
 
 ## Script Access Limitations (Not Broken)
 
 These are informational results, not broken-link findings. The page blocked scripted access or the local certificate checker could not validate its chain.
 
 - [Walsenburg / Huerfano](https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes) - Regional; civic; access_blocked; HTTP Error 403: Forbidden
-- [Yellow Pages Raton Business Listings](https://www.yellowpages.com/raton-nm/business-listings/1) - Colfax; directory; access_blocked; HTTP Error 403: Forbidden
-- [Colorado Gives](https://www.coloradogives.org/) - Las Animas; directory; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
 - [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
 - [Visit Angel Fire NM Get Listed](https://visitangelfirenm.com/get-listed/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
 - [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Las Animas; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Submit Your Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Las Animas; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Submit Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Tourism / Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
 - [Arts in Society Grant](https://oedit.colorado.gov/arts-in-society-grant) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Colorado Advanced Industries Accelerator Programs](https://oedit.colorado.gov/advanced-industries-accelerator-programs) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Colorado Business Funding and Incentives](https://oedit.colorado.gov/business-funding-and-incentives) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
@@ -50,10 +57,11 @@ These are informational results, not broken-link findings. The page blocked scri
 - [Colorado Creative Industries](https://oedit.colorado.gov/colorado-creative-industries) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Colorado Rural Jump-Start Program](https://oedit.colorado.gov/rural-jump-start-program) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Folk and Traditional Arts Project Grant](https://oedit.colorado.gov/folk-and-traditional-arts-project-grant) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
-- [Grants.gov](https://www.grants.gov/) - Regional; funding; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)
 - [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [Las Animas County Government](https://lasanimascounty.colorado.gov/) - Las Animas; general; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Outdoor Recreation](https://visittrinidadcolorado.com/outdoor-recreation/) - Las Animas; general; access_blocked; HTTP Error 403: Forbidden
 
 ## Offline Field Checks
 
@@ -115,3 +123,6 @@ These are informational results, not broken-link findings. The page blocked scri
 - [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; Rural funding; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; Rural microbusiness loans / grants; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; Agriculture / producer grants; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [World Journal Services Directory](https://worldjournalnewspaper.com/services/) - Huerfano; Services directory; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [The Chronicle-News](https://www.thechronicle-news.com/) - Las Animas; Media / classifieds; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [Red River Chamber Vacation Guide](https://redriver.org/plan-your-trip/vacation-guide/) - Red River / Colfax; Vacation guide request; visitor mailing pathway; newsletter; Do not infer free placement, ad availability, acceptance, audience size, or endorsement.
