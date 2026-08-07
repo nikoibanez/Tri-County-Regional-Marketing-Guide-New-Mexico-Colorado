@@ -31,6 +31,7 @@ jobs:
           python scripts/audit_ui_accessibility.py
           python scripts/audit_seo_static.py
           python scripts/audit_directory_quality.py --fail-on-blocking
+          python scripts/audit_directory_outreach_channels.py --fail-on-missing
           python scripts/audit_internal_links.py --fail-on-broken
           python scripts/smoke_test_site.py
           python scripts/build_maintenance_dashboard.py
@@ -51,6 +52,8 @@ jobs:
             data/directory_of_absolutely_everything.csv
             data/directory_of_absolutely_everything.json
             data/listing-keyword-index.json
+            data/directory-outreach-status.json
+            review/directory-outreach/
             review/keyword-sweep/
             review/maintenance/
             review/UI_ACCESSIBILITY_STATIC_AUDIT_*.md

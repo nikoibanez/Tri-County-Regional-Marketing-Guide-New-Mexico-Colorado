@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23",
+  "generated_at": "2026-08-07",
   "status": "pass",
   "blocking": [],
   "warnings": [
@@ -51,6 +51,7 @@
     "missing_descriptions": 0,
     "missing_keywords": 0,
     "missing_entry_type": 0,
+    "missing_outreach_review": 0,
     "generalized_idea_sample": [],
     "generic_description_sample": []
   },

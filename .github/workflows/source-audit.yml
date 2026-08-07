@@ -89,7 +89,8 @@ jobs:
         run: |
           body="This automated pull request refreshes source status, the latest audit report, and the private maintenance dashboard. The report separates confirmed broken links from pages that only block scripted checks. Review browser-check items normally, and do not merge public claims, contact changes, eligibility, deadlines, rates, civic guidance, or directory additions without human confirmation."
           if ! gh pr create --base master --head "$REVIEW_BRANCH" --title "Review scheduled source-audit results" --body "$body"; then
-            gh issue create --title "Source-audit review branch is ready" --body "$body Branch: $REVIEW_BRANCH"
+            compare_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/master...${REVIEW_BRANCH}?expand=1"
+            gh issue create --title "Source-audit review branch is ready" --body "$body Branch: $REVIEW_BRANCH One-click draft PR: $compare_url"
           fi
 
       - name: Upload audit reports

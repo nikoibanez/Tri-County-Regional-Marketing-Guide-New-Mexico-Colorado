@@ -73,7 +73,8 @@ jobs:
         run: |
           body="This automated pull request refreshes controlled search keywords from canonical listing fields and current public-page title, metadata, and heading signals. It does not rewrite listing names, descriptions, contacts, eligibility, rates, deadlines, or legal guidance. Review noisy additions and removals before merging."
           if ! gh pr create --base master --head "$REVIEW_BRANCH" --title "Review refreshed listing search keywords" --body "$body"; then
-            gh issue create --title "Listing keyword review branch is ready" --body "$body Branch: $REVIEW_BRANCH"
+            compare_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/master...${REVIEW_BRANCH}?expand=1"
+            gh issue create --title "Listing keyword review branch is ready" --body "$body Branch: $REVIEW_BRANCH One-click draft PR: $compare_url"
           fi
 
       - name: Upload keyword-sweep report
