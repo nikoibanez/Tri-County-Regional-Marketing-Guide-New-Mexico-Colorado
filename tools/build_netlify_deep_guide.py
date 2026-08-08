@@ -37,6 +37,8 @@ if not SOURCE_JSON.exists():
 EVERYTHING_DIRECTORY_JSON = REPO_DATA / "directory_of_absolutely_everything.json"
 LISTING_KEYWORD_INDEX_JSON = REPO_DATA / "listing-keyword-index.json"
 DIRECTORY_CONNECTIVITY_STATUS_JSON = REPO_DATA / "directory-connectivity-status.json"
+NATIONAL_FUNDING_JSON = REPO_DATA / "national-funding-opportunities.json"
+NATIONAL_FUNDING_WATCH_JSON = REPO_DATA / "national-funding-watch-sources.json"
 REAUDIT_NOTES = DOWNLOADS / "tri_county_reaudit" / "comprehensive_reaudit_source_notes.md"
 NEW_PDF_EXTRACT_DIR = DOWNLOADS / "tri_county_new_pdf_extract_20260621"
 BUILD_DATE = os.environ.get("BUILD_DATE", date.today().isoformat())
@@ -95,6 +97,21 @@ def normalize_origin(value: str) -> str:
 SITE_URL = normalize_origin(os.environ.get("PUBLIC_SITE_ORIGIN", "https://statelineguide.org"))
 
 
+def load_json_records(path: Path, key: str) -> list[dict]:
+    if not path.exists():
+        return []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return []
+    records = payload.get(key, []) if isinstance(payload, dict) else []
+    return [item for item in records if isinstance(item, dict)] if isinstance(records, list) else []
+
+
+NATIONAL_FUNDING_OPPORTUNITIES = load_json_records(NATIONAL_FUNDING_JSON, "opportunities")
+NATIONAL_FUNDING_WATCH_SOURCES = load_json_records(NATIONAL_FUNDING_WATCH_JSON, "sources")
+
+
 def build_asset_version() -> str:
     deploy_ref = re.sub(
         r"[^a-zA-Z0-9]+",
@@ -111,6 +128,8 @@ def build_asset_version() -> str:
         EVERYTHING_DIRECTORY_JSON,
         LISTING_KEYWORD_INDEX_JSON,
         DIRECTORY_CONNECTIVITY_STATUS_JSON,
+        NATIONAL_FUNDING_JSON,
+        NATIONAL_FUNDING_WATCH_JSON,
     ):
         if path.exists():
             digest.update(path.read_bytes())
@@ -3750,6 +3769,8 @@ def write_data_files(rows: list[dict], summary: dict) -> None:
     directory_source_groups = [public_data_item(item) for item in grouped_directory_sources(DIRECTORY_SOURCES)]
     top_source_groups = [public_data_item(item) for item in top_directory_source_groups()]
     amplifier_channels = [public_data_item(item) for item in AMPLIFIER_CHANNELS]
+    national_funding = [public_data_item(item) for item in NATIONAL_FUNDING_OPPORTUNITIES]
+    national_funding_sources = [public_data_item(item) for item in NATIONAL_FUNDING_WATCH_SOURCES]
     public_rows = [public_data_item(row) for row in rows]
     physical_ad_locations = []
     for row in physical_ad_location_rows(rows, limit=120):
@@ -3774,6 +3795,8 @@ def write_data_files(rows: list[dict], summary: dict) -> None:
         "current_leads": [public_data_item(item) for item in CURRENT_LEADS],
         "home_task_groups": HOME_TASK_GROUPS,
         "amplifier_channels": amplifier_channels,
+        "national_funding_opportunities": national_funding,
+        "national_funding_watch_sources": national_funding_sources,
         "posting_spaces": [public_data_item(item) for item in POSTING_SPACES],
         "physical_ad_locations": physical_ad_locations,
         "persona_routes": [public_data_item(item) for item in PERSONA_ROUTES],
@@ -3786,6 +3809,26 @@ def write_data_files(rows: list[dict], summary: dict) -> None:
         writer.writerows(public_rows)
     (DATA_OUT / "directory-metadata.json").write_text(json.dumps(directory_metadata, indent=2, ensure_ascii=False), encoding="utf-8")
     (DATA_OUT / "tri_county_persona_resources.json").write_text(json.dumps(public_rows, indent=2), encoding="utf-8")
+    funding_payload = {
+        "generated_at": BUILD_DATE,
+        "opportunity_count": len(national_funding),
+        "opportunities": national_funding,
+    }
+    (DATA_OUT / "national-funding-opportunities.json").write_text(
+        json.dumps(funding_payload, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    funding_fieldnames = sorted({key for item in national_funding for key in item.keys()})
+    with (DATA_OUT / "national-funding-opportunities.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=funding_fieldnames)
+        writer.writeheader()
+        for item in national_funding:
+            writer.writerow(
+                {
+                    key: "; ".join(str(value) for value in field_value) if isinstance(field_value, list) else field_value
+                    for key, field_value in item.items()
+                }
+            )
     (DATA_OUT / "guide-data.json").write_text(json.dumps(data, indent=2), encoding="utf-8")
     js_payload = "window.TRI_COUNTY_GUIDE_DATA = " + json.dumps(data, ensure_ascii=False) + ";\n"
     (ASSET_OUT / "site-data.js").write_text(js_payload, encoding="utf-8")
@@ -5152,6 +5195,138 @@ def sources_matching_terms(terms: list[str]) -> list[dict]:
     ]
 
 
+FUNDING_AUDIENCE_FILTERS = (
+    ("arts", "Arts and culture"),
+    ("creative", "Creative businesses"),
+    ("nonprofit", "Nonprofits"),
+    ("economic development", "Economic development"),
+    ("small business", "Small businesses"),
+    ("women", "Women-owned businesses"),
+    ("lgbtq", "LGBTQ-owned businesses"),
+    ("indigenous native tribal", "Indigenous-owned and tribal"),
+    ("hispanic latino latinx", "Hispanic- and Latino-owned"),
+)
+
+
+def funding_program_group(item: dict) -> str:
+    value = str(item.get("program_type") or "").casefold()
+    if "fellowship" in value:
+        return "Fellowships"
+    if "grant" in value and "research" not in value:
+        return "Cash grants"
+    if any(term in value for term in ("free", "accelerator", "education", "certification")):
+        return "Free support programs"
+    if any(term in value for term in ("match", "research", "directory")):
+        return "Funding search tools"
+    return "Other support"
+
+
+def funding_timing_group(item: dict) -> str:
+    status = str(item.get("status") or "").casefold()
+    if any(term in status for term in ("open", "available", "upcoming")):
+        return "Open or upcoming"
+    if "monitor" in status:
+        return "Monitor next cycle"
+    return "Check current availability"
+
+
+def funding_cost_group(item: dict) -> str:
+    value = str(item.get("free_to_apply_or_enroll") or "").casefold()
+    if value.startswith("yes") or "free" in value and not any(term in value for term in ("not free", "fee", "membership")):
+        return "Free"
+    if any(term in value for term in ("membership is required", "membership required", "application fee", "$15")):
+        return "Fee or membership"
+    return "Check cost"
+
+
+def css_token(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", value.casefold()).strip("-")
+
+
+def national_funding_card(item: dict) -> str:
+    audiences = "; ".join(str(value) for value in item.get("audiences") or [])
+    applicants = "; ".join(str(value) for value in item.get("applicant_types") or [])
+    keyword_blob = " ".join(str(value) for value in item.get("keywords") or [])
+    search_blob = " ".join(
+        str(value or "")
+        for value in (
+            item.get("name"),
+            item.get("provider"),
+            item.get("program_type"),
+            item.get("summary"),
+            item.get("geography"),
+            audiences,
+            applicants,
+            item.get("deadline_display"),
+            item.get("funding_range"),
+            item.get("requires_501c3"),
+            item.get("fiscal_sponsor_policy"),
+            item.get("advertising_marketing_eligibility"),
+            item.get("free_to_apply_or_enroll"),
+            keyword_blob,
+        )
+    ).casefold()
+    status_group = funding_timing_group(item)
+    program_group = funding_program_group(item)
+    cost_group = funding_cost_group(item)
+    application_url = str(item.get("application_url") or item.get("source_url") or "")
+    source_url = str(item.get("source_url") or application_url)
+    detail_link = (
+        f'<a class="button button-soft" href="{html_escape(source_url)}" target="_blank" rel="noreferrer">Program details</a>'
+        if source_url and source_url != application_url
+        else ""
+    )
+    return f"""
+    <article class="funding-card" data-funding-card
+      data-funding-search="{html_escape(search_blob)}"
+      data-funding-audiences="{html_escape((audiences + ' ' + keyword_blob).casefold())}"
+      data-funding-status="{html_escape(status_group)}"
+      data-funding-type="{html_escape(program_group)}"
+      data-funding-cost="{html_escape(cost_group)}">
+      <div class="funding-card__meta">
+        <span class="badge">{html_escape(item.get('program_type'))}</span>
+        <span class="funding-status funding-status--{html_escape(css_token(status_group))}">{html_escape(item.get('status'))}</span>
+      </div>
+      <h3><a href="{html_escape(source_url)}" target="_blank" rel="noreferrer">{html_escape(item.get('name'))}</a></h3>
+      <p class="funding-provider">{html_escape(item.get('provider'))}</p>
+      <p>{html_escape(public_text_value(item.get('summary')))}</p>
+      <div class="funding-card__essentials">
+        <p><strong>Deadline</strong><span>{html_escape(item.get('deadline_display'))}</span></p>
+        <p><strong>Funding or support</strong><span>{html_escape(item.get('funding_range'))}</span></p>
+      </div>
+      <details class="funding-details" open>
+        <summary>Eligibility, costs, and allowed uses</summary>
+        <dl class="funding-terms">
+          <div><dt>Applicant</dt><dd>{html_escape(applicants)}</dd></div>
+          <div><dt>501(c)(3)</dt><dd>{html_escape(item.get('requires_501c3'))}</dd></div>
+          <div><dt>Fiscal sponsor</dt><dd>{html_escape(item.get('fiscal_sponsor_policy'))}</dd></div>
+          <div><dt>Marketing or advertising costs</dt><dd>{html_escape(item.get('advertising_marketing_eligibility'))}</dd></div>
+          <div><dt>Cost to apply or enroll</dt><dd>{html_escape(item.get('free_to_apply_or_enroll'))}</dd></div>
+          <div><dt>Match</dt><dd>{html_escape(item.get('match_requirement'))}</dd></div>
+          <div><dt>Area served</dt><dd>{html_escape(item.get('geography'))}</dd></div>
+          <div><dt>Useful for</dt><dd>{html_escape(audiences)}</dd></div>
+        </dl>
+      </details>
+      <div class="section-actions funding-card__actions">
+        <a class="button button-primary" href="{html_escape(application_url)}" target="_blank" rel="noreferrer">Open application route</a>
+        {detail_link}
+      </div>
+    </article>
+    """
+
+
+def national_funding_cards() -> str:
+    ordered = sorted(
+        NATIONAL_FUNDING_OPPORTUNITIES,
+        key=lambda item: (
+            0 if funding_timing_group(item) == "Open or upcoming" else 1,
+            str(item.get("deadline_date") or "9999-12-31"),
+            str(item.get("name") or "").casefold(),
+        ),
+    )
+    return "\n".join(national_funding_card(item) for item in ordered)
+
+
 def funding_page(rows: list[dict]) -> str:
     terms = ["fund", "grant", "scholarship", "stipend", "loan", "incentive", "foundation", "capital", "training reimbursement", "technical assistance"]
     funding_sources = sources_matching_terms(terms)
@@ -5161,23 +5336,63 @@ def funding_page(rows: list[dict]) -> str:
       <h1>Funding, grants, incentives, and support entries.</h1>
       <p class="lede">Use this page to find likely starting points for business, nonprofit, arts, culture, outdoor recreation, workforce, and community projects. Check eligibility, deadlines, applicant type, match rules, and award status with the original program.</p>
     </section>
-    <section class="section">
+    <section class="section funding-finder" aria-labelledby="national-funding-title">
       <div class="section-heading">
-        <p class="eyebrow">Check first</p>
-        <h2>Current funding entries from the latest review.</h2>
-        <p class="section-note">Check these routes before starting a funding search. Eligibility, deadlines, and open cycles can change.</p>
+        <p class="eyebrow">National funding finder</p>
+        <h2 id="national-funding-title">Search {len(NATIONAL_FUNDING_OPPORTUNITIES)} grants and free support programs.</h2>
+        <p class="section-note">Filter by who can use the program, timing, support type, or application cost. Each entry states what the program does and what to confirm before applying.</p>
       </div>
-      <div class="current-leads-grid">{current_lead_cards(2, "Funding")}</div>
+      <div class="funding-filter-panel" role="search" aria-label="Filter national funding opportunities">
+        <label class="funding-search-label" for="funding-search">Search funding</label>
+        <input id="funding-search" class="search-input" type="search" placeholder="Try artist, nonprofit, women-owned, fiscal sponsor, rolling, advertising...">
+        <div class="funding-filter-grid">
+          <label>Audience
+            <select id="funding-audience-filter">
+              <option value="All">All audiences</option>
+              {''.join(f'<option value="{html_escape(value)}">{html_escape(label)}</option>' for value, label in FUNDING_AUDIENCE_FILTERS)}
+            </select>
+          </label>
+          <label>Timing
+            <select id="funding-status-filter">
+              <option value="All">All timing</option>
+              <option value="Open or upcoming">Open or upcoming</option>
+              <option value="Monitor next cycle">Monitor next cycle</option>
+              <option value="Check current availability">Check current availability</option>
+            </select>
+          </label>
+          <label>Support type
+            <select id="funding-type-filter">
+              <option value="All">All support types</option>
+              <option value="Cash grants">Cash grants</option>
+              <option value="Fellowships">Fellowships</option>
+              <option value="Free support programs">Free support programs</option>
+              <option value="Funding search tools">Funding search tools</option>
+            </select>
+          </label>
+          <label>Application cost
+            <select id="funding-cost-filter">
+              <option value="All">All cost information</option>
+              <option value="Free">Free to apply or enroll</option>
+              <option value="Fee or membership">Fee or membership required</option>
+              <option value="Check cost">Check current cost</option>
+            </select>
+          </label>
+        </div>
+        <p id="funding-results-note" class="results-note" role="status" aria-live="polite">Showing all {len(NATIONAL_FUNDING_OPPORTUNITIES)} opportunities.</p>
+      </div>
+      <div id="national-funding-results" class="funding-grid">{national_funding_cards()}</div>
+      <div class="download-row">
+        <a class="button button-soft" href="../../data/national-funding-opportunities.csv" download>Download funding CSV</a>
+        <a class="button button-soft" href="../../data/national-funding-opportunities.json" download>Download funding JSON</a>
+      </div>
     </section>
     <section class="section tinted">
       <div class="section-heading">
-        <p class="eyebrow">Grant routing map</p>
-        <h2>Match the project type before chasing applications.</h2>
+        <p class="eyebrow">Regional starting points</p>
+        <h2>Local and state funding routes.</h2>
+        <p class="section-note">Use these alongside the national directory when the project needs a local funder, lender, state incentive, training reimbursement, or technical-assistance contact.</p>
       </div>
-      <figure class="grant-map-figure">
-        <img class="grant-map-image" src="../../assets/infographics/grant-opportunity-map.svg" alt="Grant routing infographic for Southern Colorado and Northern New Mexico">
-        <figcaption>Use the map to frame the search, then open the program source for current applicant rules, deadlines, match requirements, and contact instructions.</figcaption>
-      </figure>
+      <div class="current-leads-grid">{current_lead_cards(2, "Funding")}</div>
     </section>
     <section class="section">
       <div class="section-heading">
@@ -5204,6 +5419,7 @@ def funding_page(rows: list[dict]) -> str:
         content,
         depth=2,
         schema_type="CollectionPage",
+        extra_json_alternates=[("National funding opportunities", "data/national-funding-opportunities.json")],
     )
 
 
@@ -7990,12 +8206,90 @@ def write_static_assets() -> None:
       .footer-logos img { width: 118px; height: 62px; padding: 6px; }
       .footer-placeholder { width: 118px; height: 62px; }
     }
+    .funding-filter-panel {
+      margin: 20px 0 24px;
+      padding: 18px 0;
+      border-block: 1px solid var(--line);
+    }
+    .funding-search-label { display: block; margin-bottom: 7px; color: var(--ink); font-weight: 800; }
+    .funding-filter-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .funding-filter-grid label { color: var(--ink-soft); font-size: 0.82rem; font-weight: 750; }
+    .funding-filter-grid select { width: 100%; min-height: 44px; margin-top: 5px; }
+    .funding-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .funding-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-top: 4px solid rgba(58, 111, 101, 0.72);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.72);
+    }
+    .funding-card[hidden] { display: none; }
+    .funding-card h3 { margin: 9px 0 2px; font-size: 1.18rem; line-height: 1.28; }
+    .funding-card h3 a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .funding-card__meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+    .funding-provider { margin: 0 0 10px; color: var(--ink-soft); font-size: 0.84rem; font-weight: 700; }
+    .funding-status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 8px;
+      border: 1px solid rgba(23,48,71,0.16);
+      border-radius: 999px;
+      background: rgba(74, 130, 107, 0.10);
+      color: var(--ink);
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
+    .funding-status--monitor-next-cycle { background: rgba(183, 139, 73, 0.11); }
+    .funding-status--check-current-availability { background: rgba(91, 92, 125, 0.10); }
+    .funding-card__essentials {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 8px 0 12px;
+      padding-block: 12px;
+      border-block: 1px solid var(--line);
+    }
+    .funding-card__essentials p { margin: 0; }
+    .funding-card__essentials strong,
+    .funding-card__essentials span { display: block; }
+    .funding-card__essentials strong { margin-bottom: 3px; color: var(--ink); font-size: 0.76rem; text-transform: uppercase; }
+    .funding-card__essentials span { color: var(--ink-soft); font-size: 0.9rem; line-height: 1.45; }
+    .funding-details { margin-top: 2px; }
+    .funding-details > summary { cursor: pointer; color: var(--ink); font-size: 0.86rem; font-weight: 800; }
+    .funding-terms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; margin: 12px 0 0; }
+    .funding-terms div { min-width: 0; padding: 9px 0; border-top: 1px solid rgba(23,48,71,0.10); }
+    .funding-terms dt { color: var(--ink); font-size: 0.74rem; font-weight: 800; text-transform: uppercase; }
+    .funding-terms dd { margin: 3px 0 0; color: var(--ink-soft); font-size: 0.84rem; line-height: 1.45; overflow-wrap: anywhere; }
+    .funding-card__actions { margin-top: auto; padding-top: 14px; }
+    @media (max-width: 900px) {
+      .funding-filter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .funding-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .funding-filter-panel { margin: 14px 0 18px; padding: 12px 0; }
+      .funding-filter-grid { grid-template-columns: 1fr; gap: 8px; }
+      .funding-card { padding: 13px; }
+      .funding-card h3 { font-size: 1.05rem; }
+      .funding-card__essentials, .funding-terms { grid-template-columns: 1fr; }
+      .funding-card__essentials { gap: 8px; }
+      .funding-card__actions { display: grid; grid-template-columns: 1fr; }
+      .funding-card__actions .button { width: 100%; justify-content: center; }
+    }
     @media print {
       .site-header, .hero-actions, .tool-panel, .copy-button, .corner-controls, .directory-assistant, .download-row, .nav-yucca-flourish { display: none; }
       body { background: #fff; background-image: none; color: #111; }
       a::after { content: " (" attr(href) ")"; font-size: 0.86em; }
       .section, .page-hero { padding: 24px 0; }
-      tr, figure, .source-card, .resource-item { break-inside: avoid; }
+      tr, figure, .source-card, .resource-item, .funding-card { break-inside: avoid; }
     }
     @media (prefers-reduced-motion: reduce) {
       *,
@@ -8347,6 +8641,7 @@ def write_static_assets() -> None:
         links.push({ label, href: normalized });
       }
       splitList(item.website).forEach(url => add(linkLabel(url, "Website"), url));
+      splitList(item.application_url).forEach(url => add("Apply or enroll", url));
       splitList(item.source_url).forEach(url => add(linkLabel(url, item.website ? "Listing page" : "Website"), url));
       splitList(item.url).forEach(url => add(linkLabel(url, "Listing page"), url));
       (item.links || []).forEach(link => {
@@ -8376,7 +8671,7 @@ def write_static_assets() -> None:
     function bestEntityContact(item, explicitTitle = "") {
       const direct = contactLinks(item)[0];
       if (direct) return direct;
-      const title = explicitTitle || item.resource_name || item.title || item.channel || item.place || "regional resource";
+      const title = explicitTitle || item.resource_name || item.title || item.name || item.channel || item.place || "regional resource";
       const place = [item.town, item.county, item.state].filter(Boolean).join(" ");
       const query = [title, place, "contact"].filter(Boolean).join(" ");
       return {
@@ -8386,7 +8681,7 @@ def write_static_assets() -> None:
     }
 
     function entityNameMarkup(item, explicitTitle = "") {
-      const title = explicitTitle || item.resource_name || item.title || item.channel || item.place || "Unnamed resource";
+      const title = explicitTitle || item.resource_name || item.title || item.name || item.channel || item.place || "Unnamed resource";
       const destination = bestEntityContact(item, title);
       const opensNewWindow = !/^(mailto:|tel:)/i.test(destination.href);
       const targetAttrs = opensNewWindow ? ' target="_blank" rel="noreferrer"' : "";
@@ -8553,11 +8848,11 @@ def write_static_assets() -> None:
     }
 
     function assistantTitle(item) {
-      return item.title || item.resource_name || item.channel || item.place || "Directory result";
+      return item.title || item.resource_name || item.name || item.channel || item.place || "Directory result";
     }
 
     function assistantCategory(item) {
-      return item.public_listing_type || item.kind || item.resource_type || item.channel_type || item.type || "Directory route";
+      return item.public_listing_type || item.kind || item.resource_type || item.channel_type || item.program_type || item.type || "Directory route";
     }
 
     function assistantTypeLabel(item, category) {
@@ -8568,12 +8863,14 @@ def write_static_assets() -> None:
         "Listing": category,
         "Amplifier": "Promotion channel",
         "Physical ad location": "Flyer location",
-        "Posting path": "Posting route"
+        "Posting path": "Posting route",
+        "Funding opportunity": "Funding"
       }[item.assistant_type] || category;
     }
 
     function assistantDescription(item) {
       return item.public_description
+        || item.summary
         || item.posting_fit
         || item.best_for
         || item.short_description
@@ -8630,21 +8927,33 @@ def write_static_assets() -> None:
         item.public_listing_type,
         item.resource_type,
         item.channel_type,
+        item.program_type,
         item.type,
         item.category,
         assistantTypeLabel(item, assistantCategory(item))
       ]);
       const description = searchableText([
         item.public_description,
+        item.summary,
         item.posting_fit,
         item.best_for,
         item.short_description,
         item.asks,
-        item.public_best_for
+        item.public_best_for,
+        item.funding_range,
+        item.deadline_display,
+        item.requires_501c3,
+        item.fiscal_sponsor_policy,
+        item.advertising_marketing_eligibility,
+        item.free_to_apply_or_enroll,
+        item.match_requirement
       ]);
       const keywords = searchableText([
         item.public_keywords,
+        item.keywords,
         item.public_audience_tags,
+        item.audiences,
+        item.applicant_types,
         item.public_org_tags,
         item.online_connection_group,
         item.online_connection_label,
@@ -8652,7 +8961,9 @@ def write_static_assets() -> None:
         item.goal_relevance,
         item.action,
         item.posting_note,
-        item.reader_action
+        item.reader_action,
+        item.status,
+        item.provider
       ]);
       return {
         title: title.toLowerCase(),
@@ -8702,6 +9013,16 @@ def write_static_assets() -> None:
           ["stipend", "stipend"],
           ["loan", "loan"],
           ["artist", "funding artist"],
+          ["women", "funding women"],
+          ["woman", "funding women"],
+          ["lgbtq", "funding lgbtq"],
+          ["indigenous", "funding indigenous"],
+          ["native", "funding indigenous"],
+          ["hispanic", "funding hispanic"],
+          ["latino", "funding latino"],
+          ["creative", "funding creative"],
+          ["economic development", "funding economic development"],
+          ["small business", "funding small business"],
           ["nonprofit", "funding nonprofit"],
           ["business", "funding business"],
           ["grant", "grant"]
@@ -8968,7 +9289,8 @@ def write_static_assets() -> None:
         ...(DATA.resources || []).map(item => ({ ...item, assistant_type: "Listing" })),
         ...(DATA.amplifier_channels || []).map(item => ({ ...item, assistant_type: "Amplifier" })),
         ...(DATA.physical_ad_locations || []).map(item => ({ ...item, assistant_type: "Physical ad location" })),
-        ...(DATA.posting_spaces || []).map(item => ({ ...item, assistant_type: "Posting path" }))
+        ...(DATA.posting_spaces || []).map(item => ({ ...item, assistant_type: "Posting path" })),
+        ...(DATA.national_funding_opportunities || []).map(item => ({ ...item, assistant_type: "Funding opportunity" }))
       ];
       const scored = pools.map(item => {
         const fields = assistantSearchFields(item);
@@ -8989,6 +9311,7 @@ def write_static_assets() -> None:
           "Amplifier": 5,
           "Physical ad location": 5,
           "Posting path": 5,
+          "Funding opportunity": 7,
           "Current item": 4,
           "Listing": 3
         }[item.assistant_type] || 1;
@@ -9272,6 +9595,61 @@ def write_static_assets() -> None:
       });
       const filters = document.querySelector(".directory-filter-details");
       if (filters) filters.toggleAttribute("open", !compact);
+    }
+
+    function initNationalFundingSearch() {
+      const host = document.querySelector("#national-funding-results");
+      if (!host) return;
+      const cards = [...host.querySelectorAll("[data-funding-card]")];
+      const input = document.querySelector("#funding-search");
+      const audience = document.querySelector("#funding-audience-filter");
+      const status = document.querySelector("#funding-status-filter");
+      const type = document.querySelector("#funding-type-filter");
+      const cost = document.querySelector("#funding-cost-filter");
+      const note = document.querySelector("#funding-results-note");
+
+      function syncDetails() {
+        const compact = window.matchMedia("(max-width: 640px)").matches;
+        cards.forEach(card => {
+          const details = card.querySelector(".funding-details");
+          if (details) details.toggleAttribute("open", !compact);
+        });
+      }
+
+      function matchesAudience(card, value) {
+        if (value === "All") return true;
+        const haystack = card.dataset.fundingAudiences || "";
+        return value.split(/\s+/).some(term => haystack.includes(term));
+      }
+
+      function render() {
+        const query = String(input?.value || "").trim().toLowerCase();
+        const audienceValue = audience?.value || "All";
+        const statusValue = status?.value || "All";
+        const typeValue = type?.value || "All";
+        const costValue = cost?.value || "All";
+        let shown = 0;
+        cards.forEach(card => {
+          const visible = (
+            (!query || (card.dataset.fundingSearch || "").includes(query))
+            && matchesAudience(card, audienceValue)
+            && (statusValue === "All" || card.dataset.fundingStatus === statusValue)
+            && (typeValue === "All" || card.dataset.fundingType === typeValue)
+            && (costValue === "All" || card.dataset.fundingCost === costValue)
+          );
+          card.hidden = !visible;
+          if (visible) shown += 1;
+        });
+        if (note) note.textContent = `Showing ${shown} of ${cards.length} funding ${cards.length === 1 ? "entry" : "entries"}.`;
+      }
+
+      [input, audience, status, type, cost].forEach(control => {
+        if (!control) return;
+        control.addEventListener(control === input ? "input" : "change", render);
+      });
+      syncDetails();
+      window.addEventListener("resize", syncDetails, { passive: true });
+      render();
     }
 
     function initSourceSearch() {
@@ -9784,6 +10162,7 @@ def write_static_assets() -> None:
     }
 
     initNavigationYucca();
+    initNationalFundingSearch();
     initSourceSearch();
     initResourceSearch();
     initDirectoryOpenAnimations();
@@ -9828,6 +10207,8 @@ Upload the contents of this folder to Netlify, or upload the generated zip file 
 - `assets/animations/` - layered animated yucca SVG banner, CTA marker, and preview files
 - `assets/audio/` - Library of Congress public-domain regional MP3 tracks used by the site music bar
 - `data/tri_county_persona_resources.csv` - public local inventory
+- `data/national-funding-opportunities.csv` - national grants and free support programs with deadline, applicant, fiscal-sponsor, application-cost, and funding-range fields
+- `data/national-funding-opportunities.json` - machine-readable national funding directory
 - `data/guide-data.json` - directory shortcuts plus public site data
 - `data/directory-metadata.json` - full machine-readable metadata for every directory shortcut and local inventory entry
 - `SOURCES.md` - directory, amplifier, and posting page manifest
@@ -9837,6 +10218,7 @@ Upload the contents of this folder to Netlify, or upload the generated zip file 
 ## Data summary
 
 - Total local inventory rows: {summary['row_count']}
+- National funding opportunities: {len(NATIONAL_FUNDING_OPPORTUNITIES)}
 - County mix: {summary['county']}
 - Resource type mix: {summary['resource_type']}
 

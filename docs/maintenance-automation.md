@@ -9,6 +9,7 @@ The maintenance system uses Python, GitHub Actions, the built site, and reposito
 | Build and quality gate | Pull requests and pushes to `master` | Builds the site; checks Python, JavaScript, accessibility markers, SEO, directory quality, local links, anchors, and critical routes | Blocks a broken change; does not edit directory data |
 | Weekly directory query check | Monday at 15:00 UTC | Checks 15 high-signal source groups, compares candidates with canonical data, and refreshes listing-level physical and digital outreach classifications | Opens a review pull request or fallback issue |
 | Source registry audit | Tuesday at 15:23 UTC | Checks all registered directory, funding, events, civic, media, and creative URLs; records source-check history | Opens a review pull request or fallback issue |
+| National funding watch | Tuesday at 15:30 UTC | Compares ten national funding hubs with their last successful text fingerprints and extracts possible deadline, eligibility, fee, award, fiscal-sponsor, and allowed-use language | Opens a draft review pull request; never edits public opportunities |
 | Listing keyword sweep | Wednesday at 15:41 UTC | Rotates through up to 120 public listing pages and maps current page signals to controlled search terms | Opens a review pull request or fallback issue |
 | Live site smoke test | Daily at 16:17 UTC | Loads critical public pages, data, sitemap, and robots routes | Opens or updates one GitHub issue on failure |
 | Monthly maintenance snapshot | First day of each month at 16:00 UTC | Builds the canonical deploy zip and stores data, reports, and a SHA-256 checksum | Creates a private GitHub Actions artifact retained for 90 days |
@@ -85,6 +86,7 @@ Supporting reports live under:
 review/maintenance/
 review/directory-watch/
 review/directory-outreach/
+review/national-funding-watch/
 review/update-audits/
 ```
 

@@ -16,6 +16,8 @@ python tools/build_netlify_deep_guide.py
 python tools/apply_directory_exclusions.py --check
 python scripts/build_update_source_registry.py
 python scripts/audit_update_sources.py --limit 120
+python scripts/validate_national_funding_data.py
+python scripts/audit_national_funding_sources.py --no-network
 python scripts/sweep_listing_keywords.py --no-network
 ```
 

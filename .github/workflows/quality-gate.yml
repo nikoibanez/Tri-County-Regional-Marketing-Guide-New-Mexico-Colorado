@@ -42,6 +42,8 @@ jobs:
           tools/directory_outreach.py
           tools/build_netlify_deep_guide.py
           scripts/audit_update_sources.py
+          scripts/audit_national_funding_sources.py
+          scripts/validate_national_funding_data.py
           scripts/weekly_directory_query_check.py
           scripts/audit_ui_accessibility.py
           scripts/audit_seo_static.py
@@ -54,6 +56,12 @@ jobs:
 
       - name: Run maintenance unit checks
         run: python -m unittest discover -s tests -p "test_*.py"
+
+      - name: Validate national funding directory
+        run: python scripts/validate_national_funding_data.py
+
+      - name: Build national funding review report without network access
+        run: python scripts/audit_national_funding_sources.py --no-network
 
       - name: Validate keyword sweep without network access
         run: python scripts/sweep_listing_keywords.py --no-network
@@ -99,3 +107,4 @@ jobs:
             review/UI_ACCESSIBILITY_STATIC_AUDIT_*.md
             review/maintenance/
             review/directory-outreach/
+            review/national-funding-watch/

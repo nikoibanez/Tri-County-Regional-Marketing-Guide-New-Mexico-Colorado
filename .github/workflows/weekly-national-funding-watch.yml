@@ -1,0 +1,81 @@
+name: Weekly national funding watch
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 15 * * 2"
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: weekly-national-funding-watch
+  cancel-in-progress: false
+
+jobs:
+  funding-watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Validate curated funding data
+        run: python scripts/validate_national_funding_data.py
+
+      - name: Watch ten national funding pages
+        run: python scripts/audit_national_funding_sources.py --timeout 20
+
+      - name: Build private maintenance dashboard
+        run: python scripts/build_maintenance_dashboard.py
+
+      - name: Prepare funding review pull request
+        id: review
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/national-funding-watch-state.json
+          git add review/national-funding-watch/national-funding-watch-latest.json
+          git add review/national-funding-watch/national-funding-watch-latest.md
+          git add review/maintenance/maintenance-dashboard-latest.json review/maintenance/maintenance-dashboard-latest.md
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            branch="automation/national-funding-watch-${GITHUB_RUN_ID}"
+            git switch -c "$branch"
+            git commit -m "Refresh national funding watch report"
+            git push --set-upstream origin "$branch"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open human-review pull request
+        if: steps.review.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEW_BRANCH: ${{ steps.review.outputs.branch }}
+        shell: bash
+        run: |
+          body="This automated pull request reports changes on ten national funding pages. It does not modify public opportunity records. Review the official page and confirm deadline, applicant type, 501(c)(3) status, fiscal-sponsor policy, award range, application cost, and marketing-cost eligibility before editing or merging any public claim."
+          if ! gh pr create --draft --base master --head "$REVIEW_BRANCH" --title "Review national funding source changes" --body "$body"; then
+            compare_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/master...${REVIEW_BRANCH}?expand=1"
+            gh issue create --title "National funding review branch is ready" --body "$body Branch: $REVIEW_BRANCH One-click draft PR: $compare_url"
+          fi
+
+      - name: Upload funding-watch report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: national-funding-watch-${{ github.run_id }}
+          retention-days: 30
+          path: |
+            review/national-funding-watch/
+            review/maintenance/

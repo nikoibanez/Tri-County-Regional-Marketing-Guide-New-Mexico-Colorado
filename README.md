@@ -19,6 +19,7 @@ Routine pushes run the quality gate and let Netlify build from `master`; they do
 ```powershell
 python tools/build_netlify_deep_guide.py
 python tools/apply_directory_exclusions.py --check
+python scripts/validate_national_funding_data.py
 ```
 
 Generated site:
@@ -34,6 +35,9 @@ This repo includes a no-secret maintenance system. Deterministic scripts build, 
 - `data/update-source-registry.json` - generated source monitoring registry.
 - `scripts/build_update_source_registry.py` - builds the monitoring registry from public guide data.
 - `scripts/audit_update_sources.py` - checks monitored URLs and writes review reports.
+- `data/national-funding-opportunities.json` - curated national grants, fellowships, free support programs, deadlines, applicant rules, funding ranges, fiscal-sponsor notes, and marketing-cost guidance.
+- `scripts/audit_national_funding_sources.py` - compares ten national funding hubs with the previous successful snapshot and writes a human-review queue without changing public claims.
+- `scripts/validate_national_funding_data.py` - checks every funding record for required decision fields, searchable keywords, URLs, and sane funding ranges.
 - `scripts/weekly_directory_query_check.py` - checks fifteen high-signal directory, tourism, events, food, venue, and chamber sources and writes an internal candidate-review queue.
 - `scripts/sweep_listing_keywords.py` - refreshes controlled search-keyword suggestions from canonical fields and current public-page title, metadata, and heading signals.
 - `scripts/audit_ui_accessibility.py` - checks generated HTML/CSS/JS for accessibility regressions in the assistant, skip link, images, and music bar.
@@ -48,6 +52,7 @@ This repo includes a no-secret maintenance system. Deterministic scripts build, 
 - `scripts/smoke_test_site.py` - checks critical local or live routes without browser dependencies.
 - `.github/workflows/quality-gate.yml` - builds and runs all deterministic checks on pull requests and pushes.
 - `.github/workflows/source-audit.yml` - checks the complete source registry and opens a review pull request.
+- `.github/workflows/weekly-national-funding-watch.yml` - checks ten national funding hubs and opens a draft review pull request when the report changes.
 - `.github/workflows/weekly-directory-query-check.yml` - checks fifteen high-signal source groups and opens a candidate-review pull request.
 - `.github/workflows/weekly-listing-keyword-sweep.yml` - rotates through public listing pages and opens a review pull request for search-keyword changes.
 - `.github/workflows/live-site-smoke-test.yml` - checks the configured live site and opens or updates a failure issue.
