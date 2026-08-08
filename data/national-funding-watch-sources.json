@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "review_policy": "These pages are monitored for change. Automation may flag new language or changed deadlines, but a person must confirm all public funding claims before publication.",
+  "sources": [
+    {
+      "id": "grants-gov-search",
+      "name": "Grants.gov",
+      "url": "https://www.grants.gov/search-grants",
+      "focus": ["federal grants", "nonprofits", "tribes", "local government", "economic development"],
+      "cadence_days": 7
+    },
+    {
+      "id": "nea-grants",
+      "name": "National Endowment for the Arts Grants",
+      "url": "https://www.arts.gov/grants",
+      "focus": ["arts", "culture", "creative organizations", "local arts agencies"],
+      "cadence_days": 7
+    },
+    {
+      "id": "imls-funding",
+      "name": "Institute of Museum and Library Services Funding Opportunities",
+      "url": "https://www.imls.gov/find-funding/how-to-apply/funding-opportunities",
+      "focus": ["museums", "libraries", "Native communities", "American Latino history and culture"],
+      "cadence_days": 7
+    },
+    {
+      "id": "usda-rural-development",
+      "name": "USDA Rural Development Programs and Services",
+      "url": "https://www.rd.usda.gov/programs-services",
+      "focus": ["rural business", "community facilities", "economic development", "technical assistance"],
+      "cadence_days": 7
+    },
+    {
+      "id": "eda-funding",
+      "name": "U.S. Economic Development Administration Funding Opportunities",
+      "url": "https://www.eda.gov/funding/funding-opportunities",
+      "focus": ["economic development", "infrastructure", "regional planning", "entrepreneurship"],
+      "cadence_days": 7
+    },
+    {
+      "id": "candid-funding-search",
+      "name": "Candid Funding Search and Learning",
+      "url": "https://learning.candid.org/free-access-to-foundation-directory",
+      "focus": ["nonprofit grants", "foundation research", "free grant research access"],
+      "cadence_days": 14
+    },
+    {
+      "id": "ifundwomen-grants",
+      "name": "IFundWomen Grants",
+      "url": "https://www.ifundwomen.com/grants/apply-for-grants",
+      "focus": ["women-owned businesses", "small business", "sponsored grants"],
+      "cadence_days": 7
+    },
+    {
+      "id": "nglcc-grants",
+      "name": "NGLCC Scholarships and Grants",
+      "url": "https://nglcc.org/programs-initiatives/",
+      "focus": ["LGBTQ-owned businesses", "certification", "restaurants", "business support"],
+      "cadence_days": 7
+    },
+    {
+      "id": "first-peoples-fund",
+      "name": "First Peoples Fund Fellowships",
+      "url": "https://www.firstpeoplesfund.org/programs/fellowships",
+      "focus": ["Native artists", "culture bearers", "creative business", "fellowships"],
+      "cadence_days": 7
+    },
+    {
+      "id": "nalac-fund-for-the-arts",
+      "name": "NALAC Fund for the Arts",
+      "url": "https://www.nalac.org/grants/nalac-fund-for-the-arts/",
+      "focus": ["Latinx artists", "Hispanic arts organizations", "culture", "creative practice"],
+      "cadence_days": 7
+    }
+  ]
+}

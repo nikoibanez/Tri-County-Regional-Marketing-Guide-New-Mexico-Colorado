@@ -22,8 +22,9 @@ dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip
 ## Local QA
 
 ```powershell
-python -m py_compile tools/build_netlify_deep_guide.py tools/directory_outreach.py scripts/audit_update_sources.py scripts/weekly_directory_query_check.py scripts/sweep_listing_keywords.py scripts/audit_ui_accessibility.py scripts/audit_seo_static.py scripts/audit_directory_quality.py scripts/audit_directory_outreach_channels.py scripts/audit_internal_links.py scripts/build_maintenance_dashboard.py scripts/smoke_test_site.py
+python -m py_compile tools/build_netlify_deep_guide.py tools/directory_outreach.py scripts/audit_update_sources.py scripts/audit_national_funding_sources.py scripts/validate_national_funding_data.py scripts/weekly_directory_query_check.py scripts/sweep_listing_keywords.py scripts/audit_ui_accessibility.py scripts/audit_seo_static.py scripts/audit_directory_quality.py scripts/audit_directory_outreach_channels.py scripts/audit_internal_links.py scripts/build_maintenance_dashboard.py scripts/smoke_test_site.py
 python -m unittest discover -s tests -p "test_*.py"
+python scripts/validate_national_funding_data.py
 node --check dist/tri-county-netlify-guide-deep/assets/app.js
 python scripts/audit_ui_accessibility.py
 python scripts/audit_seo_static.py
@@ -54,6 +55,27 @@ Reports:
 ```text
 review/update-audits/update-audit-latest.md
 review/update-audits/update-audit-latest.json
+```
+
+Check the ten national funding hubs and preserve their last successful page fingerprints:
+
+```powershell
+python scripts/validate_national_funding_data.py
+python scripts/audit_national_funding_sources.py
+python scripts/build_maintenance_dashboard.py
+```
+
+For a deterministic dry run that does not use the network or advance source state:
+
+```powershell
+python scripts/audit_national_funding_sources.py --no-network
+```
+
+National funding reports:
+
+```text
+review/national-funding-watch/national-funding-watch-latest.md
+review/national-funding-watch/national-funding-watch-latest.json
 ```
 
 ## Full Source Registry Monitor
