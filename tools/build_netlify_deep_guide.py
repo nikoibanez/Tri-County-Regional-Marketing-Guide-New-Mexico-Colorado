@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import html
 import json
 import os
@@ -16,6 +17,7 @@ from directory_exclusions import (
     filter_excluded_directory_rows,
     row_references_excluded_directory_entity,
 )
+from directory_outreach import CHANNEL_DEFINITIONS, classify_outreach_channels
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,9 +36,55 @@ if not SOURCE_JSON.exists():
     SOURCE_JSON = DOWNLOADS / "tri_county_persona_resources.json"
 EVERYTHING_DIRECTORY_JSON = REPO_DATA / "directory_of_absolutely_everything.json"
 LISTING_KEYWORD_INDEX_JSON = REPO_DATA / "listing-keyword-index.json"
+DIRECTORY_CONNECTIVITY_STATUS_JSON = REPO_DATA / "directory-connectivity-status.json"
 REAUDIT_NOTES = DOWNLOADS / "tri_county_reaudit" / "comprehensive_reaudit_source_notes.md"
 NEW_PDF_EXTRACT_DIR = DOWNLOADS / "tri_county_new_pdf_extract_20260621"
 BUILD_DATE = os.environ.get("BUILD_DATE", date.today().isoformat())
+DEFAULT_LISTING_DESCRIPTION = "Tri-county business, nonprofit, arts, tourism, or service listing for local discovery and outreach."
+DIRECTORY_PROFILE_HOSTS = {
+    "artup-nnm.org",
+    "colorado.com",
+    "coloradodirectory.com",
+    "facebook.com",
+    "google.com",
+    "instagram.com",
+    "localstash.com",
+    "maps.app.goo.gl",
+    "mapquest.com",
+    "newmexico.org",
+    "startupspace.app",
+    "taos.org",
+    "tripadvisor.com",
+    "yellowpages.com",
+    "yelp.com",
+    "youtube.com",
+    "youtu.be",
+}
+SOCIAL_CHANNEL_HOSTS = {"facebook.com", "instagram.com", "youtube.com", "youtu.be"}
+
+
+def load_directory_connectivity_data() -> tuple[dict[str, dict], dict[str, dict]]:
+    if not DIRECTORY_CONNECTIVITY_STATUS_JSON.exists():
+        return {}, {}
+    try:
+        payload = json.loads(DIRECTORY_CONNECTIVITY_STATUS_JSON.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}, {}
+    entries = payload.get("entries", [])
+    checks = payload.get("checks", {})
+    if not isinstance(entries, list):
+        entries = []
+    if not isinstance(checks, dict):
+        checks = {}
+    entry_map = {
+        str(entry.get("entry_id") or ""): entry
+        for entry in entries
+        if isinstance(entry, dict) and entry.get("entry_id")
+    }
+    return entry_map, checks
+
+
+DIRECTORY_CONNECTIVITY_ENTRIES, DIRECTORY_CONNECTIVITY_CHECKS = load_directory_connectivity_data()
 
 
 def normalize_origin(value: str) -> str:
@@ -45,6 +93,31 @@ def normalize_origin(value: str) -> str:
 
 
 SITE_URL = normalize_origin(os.environ.get("PUBLIC_SITE_ORIGIN", "https://newmexicocoloradoguide.netlify.app"))
+
+
+def build_asset_version() -> str:
+    deploy_ref = re.sub(
+        r"[^a-zA-Z0-9]+",
+        "",
+        os.environ.get("COMMIT_REF") or os.environ.get("GITHUB_SHA") or "",
+    )
+    if deploy_ref:
+        return deploy_ref[:12]
+    digest = hashlib.sha256()
+    for path in (
+        Path(__file__),
+        SOURCE_CSV,
+        SOURCE_JSON,
+        EVERYTHING_DIRECTORY_JSON,
+        LISTING_KEYWORD_INDEX_JSON,
+        DIRECTORY_CONNECTIVITY_STATUS_JSON,
+    ):
+        if path.exists():
+            digest.update(path.read_bytes())
+    return digest.hexdigest()[:12]
+
+
+ASSET_VERSION = build_asset_version()
 
 ACTIVE_PATHS = {
     "home": "",
@@ -2210,6 +2283,120 @@ def split_semicolon(value: object) -> list[str]:
     return [part.strip() for part in str(value or "").split(";") if part.strip()]
 
 
+def host_matches(host: str, domains: set[str]) -> bool:
+    return any(host == domain or host.endswith("." + domain) for domain in domains)
+
+
+def normalized_listing_host(url: object) -> str:
+    try:
+        return urlparse(clean_text(url)).netloc.casefold().removeprefix("www.")
+    except ValueError:
+        return ""
+
+
+def outreach_capability_tags(row: dict) -> list[str]:
+    structured = row.get("outreach_channels")
+    if isinstance(structured, list):
+        labels = []
+        for item in structured:
+            if not isinstance(item, dict):
+                continue
+            label = clean_text(item.get("label"))
+            if label and label not in labels:
+                labels.append(label)
+        if labels:
+            return labels
+    text_blob = " ".join(
+        clean_text(row.get(field)).casefold()
+        for field in (
+            "notes",
+            "public_description",
+            "category",
+            "resource_type",
+            "public_listing_type",
+            "yellowpages_recommended_action",
+            "yellowpages_flyer_likelihood",
+            "yellowpages_digital_distribution_likelihood",
+        )
+    )
+    hosts = [
+        normalized_listing_host(url)
+        for url in split_semicolon(row.get("website")) + split_semicolon(row.get("source_url"))
+    ]
+    tags = []
+    if is_physical_ad_candidate(row) or any(term in text_blob for term in ("flyer", "bulletin board", "rack card", "front-desk")):
+        tags.append("Flyer-friendly")
+    if any(term in text_blob for term in ("newsletter", "mailing list", "email list", "newsletter signup")):
+        tags.append("Newsletter sharing")
+    if (
+        any(host and host_matches(host, SOCIAL_CHANNEL_HOSTS) for host in hosts)
+        or any(
+            term in text_blob
+            for term in (
+                "social media",
+                "social profile",
+                "digital share",
+                "share digital event graphic",
+                "partner share",
+                "cross-promotion",
+                "cross promotion",
+                "repost",
+                "digital distribution: medium",
+                "digital distribution: high",
+            )
+        )
+    ):
+        tags.append("Social sharing")
+    return tags
+
+
+def fallback_online_connection_fields(row: dict) -> dict[str, str]:
+    ordered_urls = []
+    for field in ("website", "source_url"):
+        for url in split_semicolon(row.get(field)):
+            if DIRECTORY_CONNECTIVITY_CHECKS.get(url, {}).get("status") == "broken":
+                continue
+            if url not in ordered_urls:
+                ordered_urls.append(url)
+    direct_urls = [
+        url
+        for url in ordered_urls
+        if normalized_listing_host(url) and not host_matches(normalized_listing_host(url), DIRECTORY_PROFILE_HOSTS)
+    ]
+    profile_urls = [url for url in ordered_urls if url not in direct_urls]
+    if direct_urls:
+        return {
+            "online_connection_status": "direct-unconfirmed",
+            "online_connection_group": "Direct website",
+            "online_connection_label": "Website link",
+            "online_connection_url": direct_urls[0],
+            "online_connection_animated": "false",
+        }
+    if profile_urls:
+        return {
+            "online_connection_status": "profile-unconfirmed",
+            "online_connection_group": "Hosted profile",
+            "online_connection_label": "Listing link",
+            "online_connection_url": profile_urls[0],
+            "online_connection_animated": "false",
+        }
+    if clean_text(row.get("contact_email")) or clean_text(row.get("contact_phone")) or clean_text(row.get("physical_address")):
+        return {
+            "online_connection_status": "contact-only",
+            "online_connection_group": "Contact only",
+            "online_connection_label": "No direct website listed",
+            "online_connection_url": "",
+            "online_connection_animated": "false",
+        }
+    return {
+        "online_connection_status": "no-online-link",
+        "online_connection_group": "No online link",
+        "online_connection_label": "No online link listed",
+        "online_connection_url": "",
+        "online_connection_animated": "false",
+    }
+
+
 def load_listing_keyword_index() -> dict[str, dict]:
     if hasattr(load_listing_keyword_index, "_cache"):
         return getattr(load_listing_keyword_index, "_cache")
@@ -2396,6 +2583,10 @@ def public_search_keywords(row: dict) -> str:
         category,
         listing_type,
         row.get("access_mode"),
+        row.get("online_connection_group"),
+        row.get("online_connection_label"),
+        row.get("outreach_channel_labels"),
+        row.get("outreach_channel_groups"),
     ]
     for raw_value in values:
         value = clean_text(raw_value)
@@ -2408,6 +2599,9 @@ def public_search_keywords(row: dict) -> str:
         if part and part not in keywords:
             keywords.append(part)
     for part in listing_keyword_terms(row):
+        if part not in keywords:
+            keywords.append(part)
+    for part in split_semicolon(row.get("outreach_channel_labels")):
         if part not in keywords:
             keywords.append(part)
     if is_physical_ad_candidate(row):
@@ -2535,12 +2729,13 @@ def listing_description_from_context(row: dict, listing_type: str, place: str) -
     best_for = public_best_for(row)
     best_phrase = best_for.replace("; ", ", ")
     category_sentence = f" Listed category: {category}." if category and category != listing_type else ""
-    return f"{name} is listed as a {base_by_type.lower()} in {place}.{category_sentence} Useful for {best_phrase} when the fit and contact path make sense."
+    return f"{name} is a {base_by_type.lower()} in {place}.{category_sentence} Search here for {best_phrase} when you need a local contact, listing update, or outreach route."
 
 
 def public_best_for(row: dict) -> str:
     goals = split_semicolon(normalize_goal_relevance(row.get("goal_relevance")))
     tags = organization_tags(row)
+    capability_tags = outreach_capability_tags(row)
     listing_type = inferred_listing_type(row)
     access_mode = clean_text(row.get("access_mode")).casefold()
     uses = []
@@ -2549,13 +2744,17 @@ def public_best_for(row: dict) -> str:
     if "Improve Online Visibility" in goals:
         uses.append("online listing cleanup")
     if "Reach People Offline" in goals or "physical" in access_mode:
-        uses.append("flyers or in-person referrals")
+        uses.append("flyer posting")
     if "Find Money or Help" in goals or listing_type == "Funding & support":
         uses.append("funding or support research")
     if "Get Media Coverage" in goals or listing_type == "Media & news":
         uses.append("media or calendar outreach")
     if "Add / Correct Info" in goals:
         uses.append("listing updates")
+    if "Newsletter sharing" in capability_tags:
+        uses.append("newsletter sharing")
+    if "Social sharing" in capability_tags:
+        uses.append("social promotion")
     if "Visitors" in tags or listing_type in {"Tourism & visitor info", "Lodging & stays", "Food & drink", "Outdoor recreation"}:
         uses.append("visitor-facing visibility")
     if "Nonprofits" in tags or listing_type == "Nonprofit & community":
@@ -2862,6 +3061,53 @@ def resource_physical_indicator_badges(row: dict) -> str:
     return ""
 
 
+def resource_outreach_channel_badges(row: dict, limit: int = 6) -> str:
+    channels = [item for item in (row.get("outreach_channels") or []) if isinstance(item, dict)]
+    if not channels:
+        return '<p class="outreach-empty">No advertising or cross-promotion route is listed yet.</p>'
+    visible = channels[:limit]
+    badges = []
+    for item in visible:
+        status = clean_text(item.get("status")) or "ask"
+        label = clean_text(item.get("label")) or clean_text(item.get("channel"))
+        note = clean_text(item.get("note"))
+        badges.append(
+            f'<span class="outreach-tag outreach-tag--{html_escape(status)}" '
+            f'data-outreach-channel="{html_escape(item.get("key"))}" title="{html_escape(note)}">'
+            f'{html_escape(label)}</span>'
+        )
+    remaining = len(channels) - len(visible)
+    if remaining:
+        badges.append(f'<span class="outreach-tag outreach-tag--more">+{remaining} more</span>')
+    return '<div class="outreach-tags" aria-label="Promotion and advertising paths">' + "".join(badges) + "</div>"
+
+
+def resource_online_connection_badge(row: dict) -> str:
+    status = clean_text(row.get("online_connection_status")) or "no-online-link"
+    label = clean_text(row.get("online_connection_label")) or "No online link listed"
+    destination = normalized_contact_destination(row.get("online_connection_url"))
+    animated = clean_text(row.get("online_connection_animated")) == "true"
+    if status.startswith("direct"):
+        style = "connected"
+    elif status.startswith("profile") or status == "link-listed":
+        style = "profile"
+    else:
+        style = "missing"
+    animation_class = " is-animated" if animated else ""
+    signal = '<span class="connection-label__signal" aria-hidden="true"></span>'
+    if destination:
+        return (
+            f'<div class="resource-connection" data-online-connection="{html_escape(status)}">'
+            f'<a class="connection-label connection-label--{style}{animation_class}" '
+            f'href="{html_escape(destination)}" target="_blank" rel="noreferrer">'
+            f"{signal}{html_escape(label)}</a></div>"
+        )
+    return (
+        f'<div class="resource-connection" data-online-connection="{html_escape(status)}">'
+        f'<span class="connection-label connection-label--missing">{signal}{html_escape(label)}</span></div>'
+    )
+
+
 def public_text_without_partner_names(value: str) -> str:
     replacements = {
         "Super Eukarya / Tri-County Marketing Guide implementation pack": "Tri-County Marketing Guide implementation pack",
@@ -3008,18 +3254,39 @@ def verification_summary(row: dict, status: str) -> str:
     return "No reliable public link is attached yet. Treat this as a lead for phone, email, website, or field verification."
 
 
+def online_connection_fields(row: dict) -> dict[str, str]:
+    entry_id = clean_text(row.get("id"))
+    audited = DIRECTORY_CONNECTIVITY_ENTRIES.get(entry_id, {})
+    if audited:
+        return {
+            "online_connection_status": clean_text(audited.get("connection_status")),
+            "online_connection_group": clean_text(audited.get("connection_group")),
+            "online_connection_label": clean_text(audited.get("public_label")),
+            "online_connection_url": clean_text(audited.get("public_url")),
+            "online_connection_animated": "true" if audited.get("animation_eligible") else "false",
+        }
+    return fallback_online_connection_fields(row)
+
+
+def without_confirmed_broken_urls(value: object) -> str:
+    return "; ".join(
+        url
+        for url in split_semicolon(value)
+        if DIRECTORY_CONNECTIVITY_CHECKS.get(url, {}).get("status") != "broken"
+    )
+
+
 def enrich_resource_row(row: dict) -> dict:
     status = infer_verification_key(row)
     layer = infer_public_layer(row)
     enriched = dict(row)
+    enriched["website"] = without_confirmed_broken_urls(enriched.get("website"))
+    enriched["source_url"] = without_confirmed_broken_urls(enriched.get("source_url"))
     enriched["goal_relevance"] = normalize_goal_relevance(enriched.get("goal_relevance"))
     enriched["public_listing_type"] = inferred_listing_type(enriched)
     enriched["public_category"] = compact_category_label(enriched, enriched["public_listing_type"])
+    enriched.update(online_connection_fields(enriched))
     enriched["public_description"] = public_description(enriched)
-    enriched["public_keywords"] = public_search_keywords(enriched)
-    enriched["public_audience_tags"] = "; ".join(organization_tags(enriched))
-    enriched["public_org_tags"] = enriched["public_audience_tags"]
-    enriched["public_best_for"] = public_best_for(enriched)
     enriched["has_physical_location"] = as_bool_text(has_physical_location(enriched))
     enriched["physical_ad_candidate"] = as_bool_text(is_physical_ad_candidate(enriched))
     if enriched["physical_ad_candidate"] == "true":
@@ -3031,6 +3298,21 @@ def enrich_resource_row(row: dict) -> dict:
     else:
         enriched["physical_ad_label"] = ""
         enriched["physical_ad_note"] = ""
+    outreach_channels = classify_outreach_channels(
+        enriched,
+        has_physical_location=enriched["has_physical_location"] == "true",
+        physical_ad_candidate=enriched["physical_ad_candidate"] == "true",
+    )
+    enriched["outreach_channels"] = outreach_channels
+    enriched["outreach_channel_keys"] = "; ".join(item["key"] for item in outreach_channels)
+    enriched["outreach_channel_labels"] = "; ".join(item["label"] for item in outreach_channels)
+    enriched["outreach_channel_groups"] = "; ".join(dict.fromkeys(item["group"] for item in outreach_channels))
+    enriched["outreach_listed_count"] = sum(item["status"] == "listed" for item in outreach_channels)
+    enriched["outreach_ask_count"] = sum(item["status"] == "ask" for item in outreach_channels)
+    enriched["public_keywords"] = public_search_keywords(enriched)
+    enriched["public_audience_tags"] = "; ".join(organization_tags(enriched))
+    enriched["public_org_tags"] = enriched["public_audience_tags"]
+    enriched["public_best_for"] = public_best_for(enriched)
     enriched["verification_key"] = status
     enriched["verification_label"] = VERIFICATION_LABELS[status]
     enriched["verification_class"] = VERIFICATION_CLASSES[status]
@@ -3071,6 +3353,9 @@ def summarize(rows: list[dict]) -> dict:
     layer = Counter(row.get("public_layer_label") or "Unknown" for row in rows)
     goal = Counter()
     audience = Counter()
+    online_connection = Counter()
+    outreach_channels = Counter()
+    outreach_status = Counter()
     physical_location_count = 0
     physical_ad_candidate_count = 0
     for row in rows:
@@ -3086,6 +3371,12 @@ def summarize(rows: list[dict]) -> dict:
             part = part.strip()
             if part:
                 audience[part] += 1
+        online_connection[row.get("online_connection_group") or "Unknown"] += 1
+        for channel in row.get("outreach_channels") or []:
+            if not isinstance(channel, dict):
+                continue
+            outreach_channels[channel.get("channel") or "Unknown"] += 1
+            outreach_status[channel.get("status_label") or "Unknown"] += 1
     return {
         "row_count": len(rows),
         "county": dict(county.most_common()),
@@ -3094,6 +3385,9 @@ def summarize(rows: list[dict]) -> dict:
         "public_layer": dict(layer.most_common()),
         "goal": dict(goal.most_common(12)),
         "audience": dict(audience.most_common(12)),
+        "online_connection": dict(online_connection.most_common()),
+        "outreach_channels": dict(outreach_channels.most_common()),
+        "outreach_status": dict(outreach_status.most_common()),
         "physical_location_count": physical_location_count,
         "physical_ad_candidate_count": physical_ad_candidate_count,
     }
@@ -3322,22 +3616,28 @@ def directory_resource_metadata(row: dict, position: int) -> dict:
         "contact_phone": clean_text(public_row.get("contact_phone")),
         "contact_email": clean_text(public_row.get("contact_email")),
         "physical_address": clean_text(public_row.get("physical_address")),
+        "online_connection_group": clean_text(public_row.get("online_connection_group")),
+        "online_connection_label": clean_text(public_row.get("online_connection_label")),
+        "online_connection_url": clean_text(public_row.get("online_connection_url")),
         "has_physical_location": clean_text(public_row.get("has_physical_location")),
         "physical_ad_candidate": clean_text(public_row.get("physical_ad_candidate")),
         "physical_ad_label": clean_text(public_row.get("physical_ad_label")),
         "physical_ad_note": clean_text(public_row.get("physical_ad_note")),
+        "outreach_channels": public_row.get("outreach_channels") or [],
+        "outreach_channel_keys": split_public_list(public_row.get("outreach_channel_keys")),
+        "outreach_channel_labels": split_public_list(public_row.get("outreach_channel_labels")),
         "cost_level": clean_text(public_row.get("cost_level")),
         "audience_tags": split_public_list(public_row.get("public_audience_tags") or public_row.get("public_org_tags")),
         "search_keywords": split_public_list(public_row.get("public_keywords")),
         "best_for": split_public_list(public_row.get("public_best_for")),
-        "description": clean_text(public_row.get("public_description")) or clean_text(public_row.get("category")) or "Local directory listing for regional discovery and outreach.",
-        "metadata_note": "Details may change; use the listed contact path or update form when information is outdated.",
+        "description": clean_text(public_row.get("public_description")) or clean_text(public_row.get("category")) or DEFAULT_LISTING_DESCRIPTION,
+        "metadata_note": "Local details can change. Use the listed website, directory page, social profile, phone, or update form when a listing needs a correction.",
     }
     return {key: value for key, value in metadata.items() if value not in ("", [], None)}
 
 
 def directory_shortcut_metadata(item: dict, position: int) -> dict:
-    public_item = public_data_item(item)
+    public_item = public_data_item(enrich_directory_source(item))
     title = clean_text(public_item.get("title")) or "Directory shortcut"
     entry_id = metadata_id(title, f"shortcut-{position}")
     metadata = {
@@ -3349,6 +3649,8 @@ def directory_shortcut_metadata(item: dict, position: int) -> dict:
         "url": clean_text(public_item.get("url")),
         "description": clean_text(public_item.get("best_for")),
         "recommended_action": clean_text(public_item.get("action")),
+        "outreach_channel_keys": split_public_list(public_item.get("outreach_channel_keys")),
+        "outreach_channel_labels": split_public_list(public_item.get("outreach_channel_labels")),
         "metadata_note": "Shortcut details point readers to existing public pages and contact routes. Details may change.",
     }
     return {key: value for key, value in metadata.items() if value not in ("", [], None)}
@@ -3404,6 +3706,7 @@ def metadata_schema_item(entry: dict) -> dict:
                 property_value("contact_phone", entry.get("contact_phone")),
                 property_value("contact_email", entry.get("contact_email")),
                 property_value("physical_address", entry.get("physical_address")),
+                property_value("outreach_channels", entry.get("outreach_channel_labels")),
                 property_value("cost_level", entry.get("cost_level")),
                 property_value("organization_tags", entry.get("organization_tags")),
                 property_value("search_keywords", entry.get("search_keywords")),
@@ -3491,8 +3794,31 @@ def html_escape(value: object) -> str:
     return html.escape(str(value or ""), quote=True)
 
 
+def enrich_directory_source(item: dict) -> dict:
+    enriched = dict(item)
+    if isinstance(enriched.get("outreach_channels"), list):
+        return enriched
+    channels = classify_outreach_channels(
+        {
+            "resource_name": enriched.get("title"),
+            "category": enriched.get("kind"),
+            "resource_type": enriched.get("kind"),
+            "public_description": " ".join(
+                part for part in (clean_text(enriched.get("best_for")), clean_text(enriched.get("action"))) if part
+            ),
+            "website": enriched.get("url"),
+            "source_url": enriched.get("url"),
+        }
+    )
+    enriched["outreach_channels"] = channels
+    enriched["outreach_channel_keys"] = "; ".join(channel["key"] for channel in channels)
+    enriched["outreach_channel_labels"] = "; ".join(channel["label"] for channel in channels)
+    return enriched
+
+
 def sorted_sources(sources: list[dict]) -> list[dict]:
-    return sorted(sources, key=lambda item: (item.get("title") or item.get("channel") or "").casefold())
+    enriched = (enrich_directory_source(item) for item in sources)
+    return sorted(enriched, key=lambda item: (item.get("title") or item.get("channel") or "").casefold())
 
 
 SOURCE_GROUP_OVERRIDES = {
@@ -3647,6 +3973,7 @@ def grouped_directory_sources(sources: list[dict]) -> list[dict]:
                 "source_count": 0,
                 "links": [],
                 "url": clean_text(item.get("url")),
+                "outreach_channels": [],
             },
         )
         county = clean_text(item.get("county"))
@@ -3657,6 +3984,24 @@ def grouped_directory_sources(sources: list[dict]) -> list[dict]:
         if url and url in seen:
             continue
         seen.add(url)
+        for channel in item.get("outreach_channels") or []:
+            if not isinstance(channel, dict):
+                continue
+            existing_index = next(
+                (
+                    index
+                    for index, existing in enumerate(group["outreach_channels"])
+                    if existing.get("key") == channel.get("key")
+                ),
+                None,
+            )
+            if existing_index is None:
+                group["outreach_channels"].append(channel)
+            elif (
+                group["outreach_channels"][existing_index].get("status") != "listed"
+                and channel.get("status") == "listed"
+            ):
+                group["outreach_channels"][existing_index] = channel
         group["source_count"] += 1
         group["links"].append(
             {
@@ -3667,6 +4012,7 @@ def grouped_directory_sources(sources: list[dict]) -> list[dict]:
                 "kind": clean_text(item.get("kind")),
                 "best_for": clean_text(item.get("best_for")),
                 "action": clean_text(item.get("action")),
+                "outreach_channels": item.get("outreach_channels") or [],
             }
         )
 
@@ -3706,6 +4052,7 @@ def source_cards(sources: list[dict], limit: int | None = None) -> str:
               <h3><a href="{html_escape(item['url'])}" target="_blank" rel="noreferrer">{html_escape(item['title'])}</a></h3>
               <p>{html_escape(public_text_value(item['best_for']))}</p>
               <p class="action-line">{html_escape(public_text_value(item['action']))}</p>
+              <div class="resource-outreach"><strong>Promotion paths:</strong>{resource_outreach_channel_badges(item, limit=4)}</div>
               <p class="source-note">Details can change. Use the page, then submit an update if this pathway is outdated.</p>
             </article>
             """
@@ -3740,6 +4087,7 @@ def source_group_cards(sources: list[dict], limit: int | None = None) -> str:
               <h3><a href="{html_escape(group['url'])}" target="_blank" rel="noreferrer">{html_escape(group['title'])}</a></h3>
               <p>{html_escape(public_text_value(group['best_for']))}</p>
               <p class="action-line">{html_escape(public_text_value(group['action']))}</p>
+              <div class="resource-outreach"><strong>Promotion paths:</strong>{resource_outreach_channel_badges(group, limit=4)}</div>
               <div class="source-link-list">{links}</div>
             </article>
             """
@@ -3802,7 +4150,7 @@ def submit_listing_panel(depth: int = 0, context: str = "directory") -> str:
       <div class="section-heading">
         <p class="eyebrow">Help keep it useful</p>
         <h2 id="submit-listing-title">{html_escape(context_copy[0])}</h2>
-        <p class="section-note">{html_escape(context_copy[1])} Submissions are starting points for review, not automatic publication.</p>
+        <p class="section-note">{html_escape(context_copy[1])} Submissions go through human review before publication.</p>
       </div>
       <div class="submit-card">
         <div>
@@ -3883,7 +4231,7 @@ def website_json_ld() -> dict:
         "name": "Stateline Guide",
         "alternateName": "Tri-County Regional Marketing Guide",
         "url": SITE_URL,
-        "description": "A regional visibility routing guide for businesses, artists, nonprofits, event organizers, services, and community programs across Colfax, Las Animas, and Huerfano counties.",
+        "description": "A tri-county guide for business listings, event calendars, newsletters, visitor guides, arts promotion, nonprofit outreach, and local support routes across Colfax, Las Animas, and Huerfano counties.",
         "inLanguage": "en-US",
     }
 
@@ -3893,7 +4241,7 @@ def organization_json_ld() -> dict:
         "@type": "Organization",
         "name": "Stateline Guide",
         "url": SITE_URL,
-        "description": "A regional visibility routing guide for businesses, artists, nonprofits, event organizers, services, and community programs across Colfax, Las Animas, and Huerfano counties.",
+        "description": "A tri-county guide for business listings, event calendars, newsletters, visitor guides, arts promotion, nonprofit outreach, and local support routes across Colfax, Las Animas, and Huerfano counties.",
         "areaServed": [
             {"@type": "AdministrativeArea", "name": "Colfax County, New Mexico"},
             {"@type": "AdministrativeArea", "name": "Las Animas County, Colorado"},
@@ -4203,10 +4551,10 @@ def page_shell(
           <link rel="icon" href="{rel('assets/site-icon.svg', depth)}" type="image/svg+xml">
           <link rel="alternate" type="application/json" href="{rel('data/guide-data.json', depth)}">
 {extra_alternates}
-          <link rel="stylesheet" href="{rel('assets/styles.css', depth)}">
-          <link rel="stylesheet" href="{rel('assets/animations/yucca-banner.css', depth)}">
-          <script src="{rel('assets/site-data.js', depth)}"></script>
-          <script defer src="{rel('assets/app.js', depth)}"></script>
+          <link rel="stylesheet" href="{rel('assets/styles.css', depth)}?v={ASSET_VERSION}">
+          <link rel="stylesheet" href="{rel('assets/animations/yucca-banner.css', depth)}?v={ASSET_VERSION}">
+          <script src="{rel('assets/site-data.js', depth)}?v={ASSET_VERSION}"></script>
+          <script defer src="{rel('assets/app.js', depth)}?v={ASSET_VERSION}"></script>
           <script type="application/ld+json">{structured_data}</script>
         </head>
         <body class="page-{html_escape(active)}">
@@ -4441,11 +4789,11 @@ def home_page(summary: dict) -> str:
         <section class="section intro-band">
           <div class="section-heading">
             <p class="eyebrow">Purpose of the guide</p>
-            <h2>Use this guide when you need a route, not just a search result.</h2>
+            <h2>Find the next local outreach route.</h2>
           </div>
           <div class="two-col">
-            <p>This guide does not replace chambers, tourism sites, newspapers, directories, calendars, or public offices. It helps people use those channels in the right order, for the right purpose, and with a clear next step.</p>
-            <p>Use it when you have a business, event, nonprofit, gallery, class, service, or program and need to know where to put it so people across Colfax, Las Animas, and Huerfano counties can find it.</p>
+            <p>This guide sorts chambers, tourism sites, newspapers, directories, calendars, newsletters, and public offices so people can use each channel with a clear purpose and a useful next step.</p>
+            <p>Use it when you have a business, event, nonprofit, gallery, class, service, or program and need the right directory, event calendar, visitor guide, media route, or flyer stop across Colfax, Las Animas, and Huerfano counties.</p>
           </div>
         </section>
         <section class="section">
@@ -4492,7 +4840,7 @@ def home_page(summary: dict) -> str:
     )
     return page_shell(
         "Tri-County Regional Marketing Guide | Stateline Guide",
-        "Find directories, calendars, media channels, tourism pages, public offices, and outreach routes for Colfax, Las Animas, and Huerfano counties.",
+        "Find business directories, event calendars, newsletters, visitor guides, flyer posting routes, media channels, and public offices across Colfax, Las Animas, and Huerfano counties.",
         "home",
         content,
     )
@@ -4534,7 +4882,7 @@ def plan_page() -> str:
     <section class="section">
       <div class="section-heading">
         <p class="eyebrow">Promotion packet</p>
-        <h2>Templates are time-savers, not the strategy.</h2>
+        <h2>Templates help once the channel and audience are set.</h2>
         <p class="section-note">The useful strategy is to prepare one clean packet: a short blurb, image, flyer, listing details, date, location, hours, contact route, and plain call to action. The templates help you adapt that packet for directories, calendars, media, partners, emails, and social posts.</p>
       </div>
       <div class="section-actions">
@@ -4568,7 +4916,7 @@ def plan_page() -> str:
     """
     return page_shell(
         "Plan Local Growth Across Colfax, Las Animas & Huerfano | Stateline Guide",
-        "Choose a goal, audience, outreach packet, channel set, and tracking loop before promoting a business, event, nonprofit, service, or program.",
+        "Choose the right business listing, event calendar, newsletter, partner, media, or flyer route before promoting a business, event, nonprofit, service, or program.",
         "plan",
         content,
         depth=1,
@@ -4581,11 +4929,26 @@ def network_page(rows: list[dict]) -> str:
     top_group_count = len(top_directory_source_groups())
     physical_location_count = sum(1 for row in rows if has_physical_location(row))
     physical_ad_count = sum(1 for row in rows if is_physical_ad_candidate(row))
+    direct_website_count = sum(1 for row in rows if row.get("online_connection_group") == "Direct website")
+    hosted_profile_count = sum(1 for row in rows if row.get("online_connection_group") == "Hosted profile")
+    no_online_count = sum(1 for row in rows if row.get("online_connection_group") == "No online link")
+    outreach_listed_count = sum(
+        any(item.get("status") == "listed" for item in (row.get("outreach_channels") or []) if isinstance(item, dict))
+        for row in rows
+    )
+    outreach_ask_count = sum(
+        any(item.get("status") == "ask" for item in (row.get("outreach_channels") or []) if isinstance(item, dict))
+        for row in rows
+    )
+    outreach_options = "".join(
+        f'<option value="{html_escape(item["key"])}">{html_escape(item["label"])}</option>'
+        for item in CHANNEL_DEFINITIONS
+    )
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">Find the Network</p>
       <h1>Search the regional directory.</h1>
-      <p class="lede">Search {row_count} local listings, or use a directory shortcut to widen the search.</p>
+      <p class="lede">Search {row_count} local listings for business directories, event calendars, visitor guides, social pages, newsletter routes, and flyer-friendly stops.</p>
       <nav class="directory-jumpbar" aria-label="Directory page sections">
         <a class="button button-primary" href="#local-listings">Local listings</a>
         <a class="button button-soft" href="#directory-shortcuts">Directory shortcuts</a>
@@ -4595,12 +4958,12 @@ def network_page(rows: list[dict]) -> str:
       <div class="section-heading">
         <p class="eyebrow">Local listings</p>
         <h2>Find a local listing.</h2>
-        <p class="section-note">Search by name, town, county, service, audience, or task. Results are alphabetical until you apply another filter.</p>
+        <p class="section-note">Search by business name, town, county, service, audience, flyer posting fit, social profile, or task. Results stay alphabetical until you add another filter.</p>
       </div>
       <div class="tool-panel directory-search-panel">
         <div>
           <label for="resource-search">Search {row_count} local entries</label>
-          <input id="resource-search" class="search-input" type="search" placeholder="Try bakery, gallery, grant, library, Raton, Trinidad...">
+          <input id="resource-search" class="search-input" type="search" placeholder="Try bakery, gallery, flyer posting, newsletter, grant, Raton, Trinidad...">
         </div>
         <details class="directory-filter-details" open>
           <summary>Filters <span id="resource-filter-summary">All listings</span></summary>
@@ -4613,6 +4976,22 @@ def network_page(rows: list[dict]) -> str:
               <div>
                 <label for="access-mode-filter">Access mode</label>
                 <select id="access-mode-filter"><option value="All">All access modes</option></select>
+              </div>
+              <div>
+                <label for="online-connection-filter">Online connection</label>
+                <select id="online-connection-filter"><option value="All">All connection types</option></select>
+              </div>
+              <div>
+                <label for="outreach-channel-filter">Promotion channel</label>
+                <select id="outreach-channel-filter"><option value="All">All promotion channels</option>{outreach_options}</select>
+              </div>
+              <div>
+                <label for="outreach-status-filter">Channel status</label>
+                <select id="outreach-status-filter">
+                  <option value="All">Listed routes and ask-first ideas</option>
+                  <option value="listed">Listed routes</option>
+                  <option value="ask">Ask first</option>
+                </select>
               </div>
             </div>
             <div>
@@ -4637,15 +5016,25 @@ def network_page(rows: list[dict]) -> str:
         </details>
       </div>
       <details class="marker-help">
-        <summary>What the location labels mean</summary>
+        <summary>What the listing labels mean</summary>
         <div class="marker-legend" aria-label="Directory marker legend">
           <span class="listing-marker listing-marker--physical">Physical location</span>
           <span>{physical_location_count} listings include a map-able or street-style location.</span>
           <span class="listing-marker listing-marker--ad">Ask about flyers</span>
           <span>{physical_ad_count} listings may be useful places to ask about physical materials. Ask first; the guide does not imply permission.</span>
+          <span class="connection-label connection-label--connected"><span class="connection-label__signal" aria-hidden="true"></span>Connect online</span>
+          <span>{direct_website_count} listings point to a business website or organization website. The animated treatment appears only when the latest check opens the site successfully.</span>
+          <span class="connection-label connection-label--profile"><span class="connection-label__signal" aria-hidden="true"></span>Online profile</span>
+          <span>{hosted_profile_count} listings use a hosted directory, tourism page, or social profile that helps with discovery, updates, and cross-promotion.</span>
+          <span class="connection-label connection-label--missing"><span class="connection-label__signal" aria-hidden="true"></span>No online link listed</span>
+          <span>{no_online_count} listings currently rely on phone, email, map, or update-form routes.</span>
+          <span class="outreach-tag outreach-tag--listed">Listed route</span>
+          <span>{outreach_listed_count} listings identify at least one directory, calendar, newsletter, media, advertising, sponsorship, or sharing route. Open the linked page to confirm current terms.</span>
+          <span class="outreach-tag outreach-tag--ask">Ask first</span>
+          <span>{outreach_ask_count} listings may suit a tailored outreach request, but the guide does not imply that placement or sharing is available.</span>
         </div>
       </details>
-      <p id="resource-results-note" class="section-note" aria-live="polite">Search by town, county, resource type, audience, keyword, or task.</p>
+      <p id="resource-results-note" class="section-note" aria-live="polite">Search by town, county, business type, audience, keyword, flyer posting fit, or outreach task.</p>
       <div id="resource-results" class="resource-list"></div>
       <div class="directory-more-row">
         <button id="resource-load-more" class="button button-soft" type="button" hidden>Show more listings</button>
@@ -4700,7 +5089,7 @@ def network_page(rows: list[dict]) -> str:
     """
     return page_shell(
         "Find Local Directories, Physical Ad Locations, Media & Support Entries | Stateline Guide",
-        f"Search public shortcuts and a {row_count}-entry regional inventory of directories, physical locations, media, funding, business, nonprofit, arts, and support entries.",
+        f"Search a {row_count}-entry tri-county directory for business listings, event calendars, newsletters, social pages, visitor guides, physical posting routes, funding leads, arts listings, and support services.",
         "network",
         content,
         depth=1,
@@ -4737,7 +5126,9 @@ def resource_preview_cards(rows: list[dict], terms: list[str], limit: int = 18) 
               <h3>{entity_name_link(row)}</h3>
               <p class="resource-tags"><strong>Useful for:</strong> {tags}</p>
               {resource_physical_indicator_badges(row)}
-              <p>{html_escape(public_text_value(row.get('public_description') or row.get('category') or 'Local directory listing for regional discovery and outreach.'))}</p>
+              {resource_online_connection_badge(row)}
+              <p>{html_escape(public_text_value(row.get('public_description') or row.get('category') or DEFAULT_LISTING_DESCRIPTION))}</p>
+              <div class="resource-outreach"><strong>Promotion paths:</strong>{resource_outreach_channel_badges(row)}</div>
               <p class="resource-best"><strong>Best fit:</strong> {html_escape(public_text_value(row.get('public_best_for') or public_best_for(row)))}</p>
               <p class="action-line">{html_escape(public_text_value(row.get('goal_relevance') or 'Choose the route that fits, then contact the listed page or organization.'))}</p>
               <div class="resource-links">{links}</div>
@@ -4770,7 +5161,7 @@ def funding_page(rows: list[dict]) -> str:
       <div class="section-heading">
         <p class="eyebrow">Check first</p>
         <h2>Current funding entries from the latest review.</h2>
-        <p class="section-note">These are not guarantees of eligibility or open cycles. They are useful routes to check before starting a funding search from scratch.</p>
+        <p class="section-note">Check these routes before starting a funding search. Eligibility, deadlines, and open cycles can change.</p>
       </div>
       <div class="current-leads-grid">{current_lead_cards(2, "Funding")}</div>
     </section>
@@ -4795,7 +5186,7 @@ def funding_page(rows: list[dict]) -> str:
       <div class="section-heading">
         <p class="eyebrow">Local inventory entries</p>
         <h2>Additional rows that may connect to money, training, or support.</h2>
-        <p class="section-note">Use these as starting entries, not final eligibility statements. Open the link or contact path before including a program in public advice.</p>
+        <p class="section-note">Use these as starting entries. Open the link or contact path before including a program in public advice.</p>
       </div>
       <div class="resource-list">{resource_preview_cards(rows, terms)}</div>
       {download_buttons(2)}
@@ -4992,7 +5383,7 @@ Could you point me to the right form, deadline, rate card, eligibility rule, or 
         </div>
         <div>
           <p class="eyebrow">Anti-spam rule</p>
-          <h2>Ask like a neighbor, not like a blast campaign.</h2>
+          <h2>Ask like a neighbor with a specific local fit.</h2>
           <p>Send only to channels where the item fits, use the channel owner's preferred form, avoid repeated messages, and stop when a page says submissions are closed or not accepted. For nonprofits and community programs, lead with public benefit rather than sales language.</p>
           <pre>{html_escape(outreach)}</pre>
         </div>
@@ -5656,7 +6047,7 @@ def about_page(summary: dict) -> str:
         <h2>What this guide does.</h2>
       </div>
       <div class="two-col">
-        <p>This guide does not replace chambers, tourism sites, newspapers, directories, calendars, or public offices. It helps people use those sources correctly, in a practical order, and with a clear next step.</p>
+        <p>This guide helps people sort chambers, tourism sites, newspapers, directories, calendars, newsletters, and public offices in a practical order with a clear next step.</p>
         <p>Use it when someone has a business, event, nonprofit, gallery, class, service, or program and needs to know where to put it so people across Colfax, Las Animas, and Huerfano counties can find it.</p>
       </div>
       {download_buttons(1)}
@@ -6574,6 +6965,144 @@ def write_static_assets() -> None:
       background: rgba(255,255,255,0.7);
       box-shadow: 3px 3px 0 rgba(47,103,128,0.22);
     }
+    .resource-outreach {
+      display: grid;
+      gap: 7px;
+    }
+    .resource-outreach > strong {
+      color: var(--ink);
+      font-size: 0.84rem;
+    }
+    .outreach-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      min-width: 0;
+    }
+    .outreach-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-width: 0;
+      border: 1px solid rgba(55,82,91,0.24);
+      border-radius: 4px;
+      padding: 4px 7px;
+      color: #173047;
+      background: rgba(255,255,255,0.62);
+      font-size: 0.72rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .outreach-tag::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: #60717a;
+    }
+    .outreach-tag--listed {
+      border-color: rgba(49,111,82,0.36);
+      background: rgba(213,235,223,0.7);
+    }
+    .outreach-tag--listed::before { background: #316f52; }
+    .outreach-tag--ask {
+      border-color: rgba(161,104,44,0.34);
+      background: rgba(244,226,194,0.6);
+    }
+    .outreach-tag--ask::before { background: #98632d; }
+    .outreach-tag--more {
+      color: var(--ink-soft);
+      background: rgba(235,239,236,0.68);
+    }
+    .outreach-tag--more::before { display: none; }
+    .outreach-empty {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 0.8rem;
+    }
+    .resource-connection {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 1px;
+      min-height: 28px;
+    }
+    .connection-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 28px;
+      padding: 4px 9px;
+      border: 1px solid rgba(23,48,71,0.18);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.72);
+      color: var(--ink);
+      font-size: 0.75rem;
+      font-weight: 850;
+      line-height: 1.2;
+      text-decoration: none;
+    }
+    .connection-label__signal {
+      position: relative;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: #6f7b78;
+    }
+    .connection-label__signal::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border: 1px solid currentColor;
+      border-radius: inherit;
+      opacity: 0;
+    }
+    .connection-label--connected {
+      border-color: rgba(67,112,87,0.34);
+      background: rgba(218,235,222,0.66);
+      color: #254f3a;
+    }
+    .connection-label--connected .connection-label__signal {
+      background: #437057;
+    }
+    .connection-label--profile {
+      border-color: rgba(47,103,128,0.28);
+      background: rgba(215,232,238,0.62);
+      color: #24566e;
+    }
+    .connection-label--profile .connection-label__signal {
+      background: #397d91;
+    }
+    .connection-label--missing {
+      border-color: rgba(90,91,86,0.20);
+      background: rgba(235,233,225,0.66);
+      color: #5a5b56;
+    }
+    .connection-label--missing .connection-label__signal {
+      background: #8a8a82;
+    }
+    .connection-label--connected.is-animated .connection-label__signal::after {
+      animation: connection-online-pulse 4.8s ease-out infinite;
+    }
+    .connection-label--connected:hover,
+    .connection-label--connected:focus-visible {
+      background: rgba(205,229,211,0.88);
+      border-color: rgba(67,112,87,0.52);
+    }
+    .connection-update-link {
+      color: var(--ink-soft);
+      font-size: 0.76rem;
+      font-weight: 800;
+    }
+    @keyframes connection-online-pulse {
+      0%, 70%, 100% { transform: scale(1); opacity: 0; }
+      78% { transform: scale(1); opacity: 0.52; }
+      92% { transform: scale(2.7); opacity: 0; }
+    }
     .marker-legend {
       display: flex;
       flex-wrap: wrap;
@@ -7414,6 +7943,8 @@ def write_static_assets() -> None:
       .resource-more > summary, .source-group-links > summary { padding: 10px 0 2px; font-size: 0.82rem; }
       .resource-more__body { padding-top: 9px; }
       .resource-tags .badge { font-size: 0.68rem; padding: 2px 6px; }
+      .outreach-tags { gap: 5px; }
+      .outreach-tag { padding: 4px 6px; font-size: 0.68rem; }
       .resource-links { gap: 6px; margin-top: 9px; }
       .resource-contact-link { min-height: 38px; padding: 7px 10px; font-size: 0.8rem; }
       .source-group-links .source-link-list { margin-top: 8px; padding-top: 8px; }
@@ -7741,6 +8272,11 @@ def write_static_assets() -> None:
         item.public_keywords,
         item.public_audience_tags,
         item.public_best_for,
+        item.online_connection_group,
+        item.online_connection_label,
+        item.outreach_channel_keys,
+        item.outreach_channel_labels,
+        (item.outreach_channels || []).map(channel => [channel.channel, channel.label, channel.status_label].filter(Boolean).join(" ")).join(" "),
         item.goal_relevance,
         item.audience_served,
         item.public_description
@@ -7877,6 +8413,59 @@ def write_static_assets() -> None:
       return "";
     }
 
+    function outreachChannelMarkup(item, { compact = false } = {}) {
+      const channels = Array.isArray(item.outreach_channels)
+        ? item.outreach_channels.filter(channel => channel && channel.key && channel.label)
+        : [];
+      if (!channels.length) {
+        return compact ? "" : `<p class="outreach-empty">No advertising or cross-promotion route is listed yet.</p>`;
+      }
+      const limit = compact ? 3 : 7;
+      const visible = channels.slice(0, limit);
+      const badges = visible.map(channel => {
+        const status = channel.status === "listed" ? "listed" : "ask";
+        const note = channel.note || (status === "listed"
+          ? "Open the linked page and confirm current terms."
+          : "Ask before planning around placement or sharing.");
+        return `<span class="outreach-tag outreach-tag--${status}" data-outreach-channel="${escapeHtml(channel.key)}" title="${escapeHtml(note)}">${escapeHtml(channel.label)}</span>`;
+      });
+      if (channels.length > visible.length) {
+        badges.push(`<span class="outreach-tag outreach-tag--more">+${channels.length - visible.length} more</span>`);
+      }
+      return `<div class="outreach-tags" aria-label="Promotion and advertising paths">${badges.join("")}</div>`;
+    }
+
+    function onlineConnectionMarkup(item) {
+      const status = String(item.online_connection_status || "no-online-link");
+      const label = String(item.online_connection_label || "No online link listed");
+      const href = normalUrl(item.online_connection_url || "");
+      const animated = truthyFlag(item.online_connection_animated);
+      const style = status.startsWith("direct")
+        ? "connected"
+        : status.startsWith("profile") || status === "link-listed"
+          ? "profile"
+          : "missing";
+      const signal = `<span class="connection-label__signal" aria-hidden="true"></span>`;
+      if (href) {
+        const title = item.resource_name || item.title || item.channel || item.place || "this listing";
+        return `
+          <div class="resource-connection" data-online-connection="${escapeHtml(status)}">
+            <a class="connection-label connection-label--${style}${animated ? " is-animated" : ""}"
+               href="${escapeHtml(href)}" target="_blank" rel="noreferrer"
+               aria-label="${escapeHtml(label)} for ${escapeHtml(title)}">
+              ${signal}${escapeHtml(label)}
+            </a>
+          </div>
+        `;
+      }
+      return `
+        <div class="resource-connection" data-online-connection="${escapeHtml(status)}">
+          <span class="connection-label connection-label--missing">${signal}${escapeHtml(label)}</span>
+          ${status === "no-online-link" ? '<a class="connection-update-link" href="/submit/">Add a link</a>' : ""}
+        </div>
+      `;
+    }
+
     function sourceCard(item) {
       return `
         <article class="source-card" data-county="${escapeHtml(item.county)}" data-kind="${escapeHtml(item.kind)}">
@@ -7887,6 +8476,7 @@ def write_static_assets() -> None:
           <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a></h3>
           <p>${escapeHtml(item.best_for)}</p>
           <p class="action-line">${escapeHtml(item.action)}</p>
+          <div class="resource-outreach"><strong>Promotion paths:</strong>${outreachChannelMarkup(item, { compact: true })}</div>
           <p class="source-note">Details can change. Use the page, then submit an update if this pathway is outdated.</p>
         </article>
       `;
@@ -7912,6 +8502,7 @@ def write_static_assets() -> None:
           <h3><a href="${escapeHtml(item.url || (item.links && item.links[0] ? item.links[0].url : "#"))}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a></h3>
           <p>${escapeHtml(item.best_for)}</p>
           <p class="action-line">${escapeHtml(item.action)}</p>
+          <div class="resource-outreach"><strong>Promotion paths:</strong>${outreachChannelMarkup(item, { compact: true })}</div>
           <details class="source-group-links" open>
             <summary>Open ${escapeHtml(sourceCount)} ${routeWord}</summary>
             <div class="source-link-list">${links}</div>
@@ -7941,12 +8532,14 @@ def write_static_assets() -> None:
           </div>
           <p class="resource-meta-line">${escapeHtml(metaParts.join(" - "))}</p>
           ${physicalIndicatorMarkup(item)}
-          <p class="resource-description">${escapeHtml(item.public_description || "Local directory listing for regional discovery and outreach.")}</p>
+          ${onlineConnectionMarkup(item)}
+          <p class="resource-description">${escapeHtml(item.public_description || "Tri-county business, nonprofit, arts, tourism, or service listing for local discovery and outreach.")}</p>
           <details class="resource-more" open>
             <summary>Details and best use</summary>
             <div class="resource-more__body">
               <p class="resource-tags"><strong>Useful for:</strong> ${tags}</p>
               <p class="resource-best"><strong>Best fit:</strong> ${escapeHtml(item.public_best_for || "regional discovery; contact-list building")}</p>
+              <div class="resource-outreach"><strong>Promotion paths:</strong>${outreachChannelMarkup(item)}</div>
               <p class="source-note">If this looks outdated, use the correction form so the guide can be updated.</p>
             </div>
           </details>
@@ -8014,6 +8607,8 @@ def write_static_assets() -> None:
           </div>
           <h3>${entityNameMarkup(item, title)}</h3>
           ${physicalIndicatorMarkup(item)}
+          ${onlineConnectionMarkup(item)}
+          ${outreachChannelMarkup(item, { compact: true })}
           <p class="assistant-result__description">${escapeHtml(description)}</p>
           ${nextStep ? `<p class="assistant-result__next"><strong>Next:</strong> ${escapeHtml(nextStep)}</p>` : ""}
           <div class="assistant-result__actions">
@@ -8047,6 +8642,8 @@ def write_static_assets() -> None:
         item.public_keywords,
         item.public_audience_tags,
         item.public_org_tags,
+        item.online_connection_group,
+        item.online_connection_label,
         item.audience_served,
         item.goal_relevance,
         item.action,
@@ -8733,6 +9330,10 @@ def write_static_assets() -> None:
       const locationChips = [...document.querySelectorAll("[data-location-filter]")];
       const typeSelect = document.querySelector("#resource-type-filter");
       const accessSelect = document.querySelector("#access-mode-filter");
+      const onlineSelect = document.querySelector("#online-connection-filter");
+      const outreachSelect = document.querySelector("#outreach-channel-filter");
+      const outreachStatusSelect = document.querySelector("#outreach-status-filter");
+      const filterDetails = document.querySelector(".directory-filter-details");
       const note = document.querySelector("#resource-results-note");
       const filterSummary = document.querySelector("#resource-filter-summary");
       const moreButton = document.querySelector("#resource-load-more");
@@ -8742,13 +9343,32 @@ def write_static_assets() -> None:
       const incomingParams = new URLSearchParams(window.location.search);
       const incomingQuery = incomingParams.get("q");
       const incomingLocation = incomingParams.get("location");
+      const incomingChannel = incomingParams.get("channel");
+      const incomingChannelStatus = incomingParams.get("channel_status");
       if (incomingQuery) input.value = incomingQuery;
+      if (
+        filterDetails
+        && window.matchMedia("(max-width: 640px)").matches
+        && !incomingQuery
+        && !incomingLocation
+        && !incomingChannel
+        && !incomingChannelStatus
+      ) {
+        filterDetails.open = false;
+      }
       if (["Physical", "Flyers"].includes(incomingLocation)) {
         locationMode = incomingLocation;
         locationChips.forEach(chip => chip.classList.toggle("is-active", chip.dataset.locationFilter === locationMode));
       }
       populateSelect(typeSelect, uniqueValues(DATA.resources, "public_listing_type"), "All types");
       populateSelect(accessSelect, uniqueValues(DATA.resources, "access_mode"), "All access modes");
+      populateSelect(onlineSelect, uniqueValues(DATA.resources, "online_connection_group"), "All connection types");
+      if (outreachSelect && incomingChannel && [...outreachSelect.options].some(option => option.value === incomingChannel)) {
+        outreachSelect.value = incomingChannel;
+      }
+      if (outreachStatusSelect && ["listed", "ask"].includes(incomingChannelStatus)) {
+        outreachStatusSelect.value = incomingChannelStatus;
+      }
       function resetVisibleCount() {
         visibleCount = directoryPageSize(18, 36);
       }
@@ -8756,10 +9376,26 @@ def write_static_assets() -> None:
         const query = input.value.trim();
         const resourceType = typeSelect ? typeSelect.value : "All";
         const accessMode = accessSelect ? accessSelect.value : "All";
+        const onlineConnection = onlineSelect ? onlineSelect.value : "All";
+        const outreachChannel = outreachSelect ? outreachSelect.value : "All";
+        const outreachStatus = outreachStatusSelect ? outreachStatusSelect.value : "All";
         const matched = DATA.resources
           .filter(item => (county === "All" || item.county === county) && (!query || resourceTextMatch(item, query)))
           .filter(item => resourceType === "All" || item.public_listing_type === resourceType)
           .filter(item => accessMode === "All" || item.access_mode === accessMode)
+          .filter(item => onlineConnection === "All" || item.online_connection_group === onlineConnection)
+          .filter(item => {
+            const channels = Array.isArray(item.outreach_channels) ? item.outreach_channels : [];
+            return outreachChannel === "All" || channels.some(channel => channel.key === outreachChannel);
+          })
+          .filter(item => {
+            const channels = Array.isArray(item.outreach_channels) ? item.outreach_channels : [];
+            if (outreachStatus === "All") return true;
+            return channels.some(channel => (
+              channel.status === outreachStatus
+              && (outreachChannel === "All" || channel.key === outreachChannel)
+            ));
+          })
           .filter(item => (
             locationMode === "All"
             || (locationMode === "Physical" && truthyFlag(item.has_physical_location))
@@ -8780,6 +9416,9 @@ def write_static_assets() -> None:
             county !== "All" ? county : "",
             resourceType !== "All" ? resourceType : "",
             accessMode !== "All" ? accessMode : "",
+            onlineConnection !== "All" ? onlineConnection : "",
+            outreachChannel !== "All" ? outreachChannel : "",
+            outreachStatus !== "All" ? outreachStatus : "",
             locationMode !== "All" ? locationMode : "",
           ].filter(Boolean);
           filterSummary.textContent = activeFilters.length ? `${activeFilters.length} active` : "All listings";
@@ -8796,7 +9435,7 @@ def write_static_assets() -> None:
         resetVisibleCount();
         render();
       });
-      [typeSelect, accessSelect].forEach(select => select && select.addEventListener("change", () => {
+      [typeSelect, accessSelect, onlineSelect, outreachSelect, outreachStatusSelect].forEach(select => select && select.addEventListener("change", () => {
         resetVisibleCount();
         render();
       }));
@@ -9391,10 +10030,17 @@ def zip_output() -> Path:
     return zip_path
 
 
+def reset_output_dir(path: Path) -> None:
+    path.mkdir(parents=True, exist_ok=True)
+    for child in path.iterdir():
+        if child.is_dir():
+            shutil.rmtree(child)
+        else:
+            child.unlink()
+
+
 def main() -> None:
-    if OUT.exists():
-        shutil.rmtree(OUT)
-    OUT.mkdir(parents=True, exist_ok=True)
+    reset_output_dir(OUT)
     rows = load_resources()
     summary = summarize(rows)
     copy_assets()

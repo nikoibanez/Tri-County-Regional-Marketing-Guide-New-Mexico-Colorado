@@ -1,0 +1,253 @@
+{
+  "generated_at": "2026-08-07T16:22:16.836955+00:00",
+  "source": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
+  "summary": {
+    "entries": 1355,
+    "directory_shortcuts": 104,
+    "total_records_reviewed": 1459,
+    "with_any_route": 811,
+    "with_listed_route": 296,
+    "with_ask_route": 748,
+    "without_outreach_route": 544,
+    "missing_structured_fields": 0,
+    "shortcuts_with_any_route": 52,
+    "shortcuts_with_listed_route": 19,
+    "shortcuts_with_ask_route": 44,
+    "shortcuts_without_outreach_route": 52,
+    "shortcuts_missing_structured_fields": 0,
+    "channel_counts": {
+      "physical_flyers": {
+        "label": "Flyers and posters",
+        "listed": 0,
+        "ask": 199,
+        "not_indicated": 1156
+      },
+      "physical_brochures": {
+        "label": "Brochures and rack cards",
+        "listed": 0,
+        "ask": 98,
+        "not_indicated": 1257
+      },
+      "physical_bulletin_board": {
+        "label": "Bulletin boards",
+        "listed": 0,
+        "ask": 19,
+        "not_indicated": 1336
+      },
+      "front_desk_referrals": {
+        "label": "Front-desk referrals",
+        "listed": 0,
+        "ask": 293,
+        "not_indicated": 1062
+      },
+      "directory_listing": {
+        "label": "Directory profiles and listings",
+        "listed": 294,
+        "ask": 12,
+        "not_indicated": 1049
+      },
+      "event_calendar": {
+        "label": "Event calendars",
+        "listed": 1,
+        "ask": 109,
+        "not_indicated": 1245
+      },
+      "social_cross_promotion": {
+        "label": "Social cross-promotion",
+        "listed": 0,
+        "ask": 38,
+        "not_indicated": 1317
+      },
+      "newsletter_mailing_list": {
+        "label": "Newsletters and mailing lists",
+        "listed": 0,
+        "ask": 173,
+        "not_indicated": 1182
+      },
+      "paid_digital_advertising": {
+        "label": "Paid digital advertising",
+        "listed": 1,
+        "ask": 58,
+        "not_indicated": 1296
+      },
+      "media_editorial": {
+        "label": "Media and editorial coverage",
+        "listed": 2,
+        "ask": 58,
+        "not_indicated": 1295
+      },
+      "sponsorship": {
+        "label": "Sponsorships",
+        "listed": 0,
+        "ask": 202,
+        "not_indicated": 1153
+      },
+      "partner_cross_promotion": {
+        "label": "Partner cross-promotion",
+        "listed": 0,
+        "ask": 388,
+        "not_indicated": 967
+      }
+    },
+    "shortcut_channel_counts": {
+      "physical_flyers": {
+        "label": "Flyers and posters",
+        "listed": 0,
+        "ask": 0,
+        "not_indicated": 104
+      },
+      "physical_brochures": {
+        "label": "Brochures and rack cards",
+        "listed": 0,
+        "ask": 0,
+        "not_indicated": 104
+      },
+      "physical_bulletin_board": {
+        "label": "Bulletin boards",
+        "listed": 0,
+        "ask": 0,
+        "not_indicated": 104
+      },
+      "front_desk_referrals": {
+        "label": "Front-desk referrals",
+        "listed": 0,
+        "ask": 0,
+        "not_indicated": 104
+      },
+      "directory_listing": {
+        "label": "Directory profiles and listings",
+        "listed": 14,
+        "ask": 9,
+        "not_indicated": 81
+      },
+      "event_calendar": {
+        "label": "Event calendars",
+        "listed": 6,
+        "ask": 10,
+        "not_indicated": 88
+      },
+      "social_cross_promotion": {
+        "label": "Social cross-promotion",
+        "listed": 1,
+        "ask": 0,
+        "not_indicated": 103
+      },
+      "newsletter_mailing_list": {
+        "label": "Newsletters and mailing lists",
+        "listed": 0,
+        "ask": 31,
+        "not_indicated": 73
+      },
+      "paid_digital_advertising": {
+        "label": "Paid digital advertising",
+        "listed": 1,
+        "ask": 4,
+        "not_indicated": 99
+      },
+      "media_editorial": {
+        "label": "Media and editorial coverage",
+        "listed": 1,
+        "ask": 4,
+        "not_indicated": 99
+      },
+      "sponsorship": {
+        "label": "Sponsorships",
+        "listed": 0,
+        "ask": 13,
+        "not_indicated": 91
+      },
+      "partner_cross_promotion": {
+        "label": "Partner cross-promotion",
+        "listed": 0,
+        "ask": 41,
+        "not_indicated": 63
+      }
+    }
+  },
+  "definitions": [
+    {
+      "key": "physical_flyers",
+      "label": "Flyers and posters",
+      "group": "Physical",
+      "listed_label": "Flyer/poster route",
+      "ask_label": "Ask about flyers"
+    },
+    {
+      "key": "physical_brochures",
+      "label": "Brochures and rack cards",
+      "group": "Physical",
+      "listed_label": "Brochure/rack-card route",
+      "ask_label": "Ask about rack cards"
+    },
+    {
+      "key": "physical_bulletin_board",
+      "label": "Bulletin boards",
+      "group": "Physical",
+      "listed_label": "Bulletin-board route",
+      "ask_label": "Ask about bulletin boards"
+    },
+    {
+      "key": "front_desk_referrals",
+      "label": "Front-desk referrals",
+      "group": "Physical",
+      "listed_label": "Front-desk referral route",
+      "ask_label": "Ask about referrals"
+    },
+    {
+      "key": "directory_listing",
+      "label": "Directory profiles and listings",
+      "group": "Digital",
+      "listed_label": "Existing directory profile",
+      "ask_label": "Ask about getting listed"
+    },
+    {
+      "key": "event_calendar",
+      "label": "Event calendars",
+      "group": "Digital",
+      "listed_label": "Event/calendar route",
+      "ask_label": "Ask about event calendars"
+    },
+    {
+      "key": "social_cross_promotion",
+      "label": "Social cross-promotion",
+      "group": "Digital",
+      "listed_label": "Social-sharing route",
+      "ask_label": "Ask about social sharing"
+    },
+    {
+      "key": "newsletter_mailing_list",
+      "label": "Newsletters and mailing lists",
+      "group": "Digital",
+      "listed_label": "Newsletter/mailing-list route",
+      "ask_label": "Ask about newsletters"
+    },
+    {
+      "key": "paid_digital_advertising",
+      "label": "Paid digital advertising",
+      "group": "Digital",
+      "listed_label": "Advertising inquiry route",
+      "ask_label": "Ask about digital ads"
+    },
+    {
+      "key": "media_editorial",
+      "label": "Media and editorial coverage",
+      "group": "Digital",
+      "listed_label": "Media/editorial route",
+      "ask_label": "Pitch a story or announcement"
+    },
+    {
+      "key": "sponsorship",
+      "label": "Sponsorships",
+      "group": "Digital",
+      "listed_label": "Sponsorship inquiry route",
+      "ask_label": "Ask about sponsorship"
+    },
+    {
+      "key": "partner_cross_promotion",
+      "label": "Partner cross-promotion",
+      "group": "Digital",
+      "listed_label": "Partner-sharing route",
+      "ask_label": "Ask about cross-promotion"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ from __future__ import annotations
 import sys
 import tempfile
 import unittest
+from collections import Counter
 from pathlib import Path
 from unittest.mock import patch
 
@@ -12,6 +13,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "tools"))
 
 from audit_directory_quality import duplicate_groups, normalize_name  # noqa: E402
+from audit_directory_connectivity import connection_details, display_source_path, is_first_party_candidate  # noqa: E402
+from audit_directory_outreach_channels import build_report as build_outreach_report  # noqa: E402
 from audit_internal_links import audit_site  # noqa: E402
 from audit_update_sources import check_record, check_url, summarize  # noqa: E402
 import build_netlify_deep_guide as guide_builder  # noqa: E402
@@ -26,6 +29,7 @@ from directory_exclusions import (  # noqa: E402
     filter_excluded_directory_rows,
     references_excluded_directory_entity,
 )
+from directory_outreach import channel_status_map, classify_outreach_channels  # noqa: E402
 from smoke_test_site import validate_body  # noqa: E402
 from weekly_directory_query_check import extract_candidates  # noqa: E402
 from sweep_listing_keywords import (  # noqa: E402
@@ -125,6 +129,216 @@ class DirectoryQualityTests(unittest.TestCase):
         for card in ROUTE_TYPE_CARDS:
             self.assertTrue(card.get("query"), card["label"])
 
+    def test_capability_tags_cover_flyers_newsletters_and_social_sharing(self) -> None:
+        flyer_tags = guide_builder.outreach_capability_tags(
+            {
+                "resource_name": "Example Market",
+                "public_listing_type": "Retail & local goods",
+                "physical_address": "100 Main St, Raton, NM",
+                "yellowpages_flyer_likelihood": "High: likely local flyer-friendly",
+                "yellowpages_recommended_action": "Ask owner/manager to post flyer near entrance/register.",
+            }
+        )
+        newsletter_tags = guide_builder.outreach_capability_tags(
+            {
+                "resource_name": "Example Chamber",
+                "public_listing_type": "Business support",
+                "notes": "Newsletter signup and mailing list path for member updates and local events.",
+            }
+        )
+        social_tags = guide_builder.outreach_capability_tags(
+            {
+                "resource_name": "Example Venue",
+                "public_listing_type": "Events & venues",
+                "website": "https://www.facebook.com/examplevenue/",
+            }
+        )
+
+        self.assertIn("Flyer-friendly", flyer_tags)
+        self.assertIn("Newsletter sharing", newsletter_tags)
+        self.assertIn("Social sharing", social_tags)
+
+    def test_audience_badges_do_not_repeat_outreach_channels(self) -> None:
+        tags = guide_builder.organization_tags(
+            {
+                "audience_served": "Artist; For-Profit",
+                "outreach_channels": [
+                    {"key": "physical_flyers", "label": "Ask about flyers", "status": "ask"}
+                ],
+            }
+        )
+
+        self.assertEqual(tags, ["Artists", "Businesses"])
+
+
+class DirectoryConnectivityTests(unittest.TestCase):
+    def test_live_first_party_business_site_gets_connection_animation(self) -> None:
+        row = {
+            "id": "example-cafe",
+            "resource_name": "Example Cafe",
+            "public_listing_type": "Food & drink",
+            "website": "https://examplecafe.com/",
+        }
+        checks = {
+            "https://examplecafe.com/": {
+                "status": "ok",
+                "status_code": 200,
+                "final_url": "https://examplecafe.com/",
+            }
+        }
+
+        details = connection_details(row, checks, Counter({"examplecafe.com": 1}))
+
+        self.assertEqual(details["connection_status"], "direct-live")
+        self.assertEqual(details["public_label"], "Connect online")
+        self.assertTrue(details["animation_eligible"])
+
+    def test_shared_directory_page_is_a_hosted_profile(self) -> None:
+        row = {
+            "id": "example-shop",
+            "resource_name": "Example Shop",
+            "public_listing_type": "Retail & local goods",
+            "website": "https://www.yellowpages.com/example-shop",
+        }
+        checks = {
+            "https://www.yellowpages.com/example-shop": {
+                "status": "ok",
+                "status_code": 200,
+                "final_url": "https://www.yellowpages.com/example-shop",
+            }
+        }
+        host_usage = Counter({"yellowpages.com": 400})
+
+        self.assertFalse(is_first_party_candidate(row, row["website"], host_usage))
+        details = connection_details(row, checks, host_usage)
+        self.assertEqual(details["connection_status"], "profile-live")
+        self.assertEqual(details["public_label"], "Online profile")
+        self.assertFalse(details["animation_eligible"])
+
+    def test_phone_only_listing_does_not_imply_business_is_offline(self) -> None:
+        details = connection_details(
+            {
+                "id": "example-service",
+                "resource_name": "Example Service",
+                "public_listing_type": "Professional services",
+                "contact_phone": "(575) 555-0100",
+            },
+            {},
+            Counter(),
+        )
+
+        self.assertEqual(details["connection_status"], "contact-only")
+        self.assertEqual(details["public_label"], "No direct website listed")
+        self.assertFalse(details["animation_eligible"])
+
+    def test_confirmed_broken_site_falls_back_to_remaining_contact_path(self) -> None:
+        url = "https://closed-example.com/"
+        details = connection_details(
+            {
+                "id": "closed-example",
+                "resource_name": "Closed Example",
+                "public_listing_type": "Local business or service",
+                "website": url,
+                "contact_phone": "(719) 555-0100",
+            },
+            {url: {"status": "broken", "status_code": 404, "final_url": url}},
+            Counter({"closed-example.com": 1}),
+        )
+
+        self.assertEqual(details["connection_status"], "contact-only")
+        self.assertEqual(details["public_url"], "")
+        self.assertEqual(details["confirmed_broken_urls"], [url])
+
+    def test_generator_fallback_keeps_first_party_website_without_connectivity_sidecar(self) -> None:
+        with (
+            patch.object(guide_builder, "DIRECTORY_CONNECTIVITY_ENTRIES", {}),
+            patch.object(guide_builder, "DIRECTORY_CONNECTIVITY_CHECKS", {}),
+        ):
+            details = guide_builder.online_connection_fields(
+                {
+                    "id": "example-cafe",
+                    "resource_name": "Example Cafe",
+                    "website": "https://examplecafe.com/",
+                }
+            )
+
+        self.assertEqual(details["online_connection_group"], "Direct website")
+        self.assertEqual(details["online_connection_status"], "direct-unconfirmed")
+
+    def test_connectivity_report_uses_repo_relative_source_path(self) -> None:
+        path = ROOT / "dist" / "tri-county-netlify-guide-deep" / "data" / "guide-data.json"
+        self.assertEqual(display_source_path(path), "dist/tri-county-netlify-guide-deep/data/guide-data.json")
+
+
+class DirectoryOutreachTests(unittest.TestCase):
+    def test_explicit_newsletter_and_advertising_pages_are_listed_routes(self) -> None:
+        channels = classify_outreach_channels(
+            {
+                "resource_name": "Regional Visitor Newsletter",
+                "public_listing_type": "Tourism & visitor info",
+                "website": "https://example.org/newsletter-signup/",
+                "notes": "Advertising rates and newsletter signup are available on the linked pages.",
+            }
+        )
+        statuses = channel_status_map(channels)
+        self.assertEqual(statuses["newsletter_mailing_list"], "listed")
+        self.assertEqual(statuses["paid_digital_advertising"], "listed")
+
+    def test_social_profile_is_an_ask_first_route_not_a_sharing_promise(self) -> None:
+        channels = classify_outreach_channels(
+            {
+                "resource_name": "Example Gallery",
+                "public_listing_type": "Arts & culture",
+                "website": "https://www.facebook.com/example-gallery/",
+            }
+        )
+        statuses = channel_status_map(channels)
+        self.assertEqual(statuses["social_cross_promotion"], "ask")
+
+    def test_physical_address_never_implies_flyer_permission(self) -> None:
+        channels = classify_outreach_channels(
+            {
+                "resource_name": "Example Cafe",
+                "public_listing_type": "Food & drink",
+                "physical_address": "100 Main Street",
+            },
+            has_physical_location=True,
+            physical_ad_candidate=True,
+        )
+        statuses = channel_status_map(channels)
+        self.assertEqual(statuses["physical_flyers"], "ask")
+        self.assertNotEqual(statuses["physical_flyers"], "listed")
+
+    def test_generated_guide_language_does_not_create_channel_claims(self) -> None:
+        channels = classify_outreach_channels(
+            {
+                "resource_name": "Example Shop",
+                "public_listing_type": "Retail & local goods",
+                "notes": (
+                    "Example Shop is a retail business. Search here for promotion, online listing cleanup, "
+                    "flyer posting, sponsorship, and cross-promotion when you need an outreach route."
+                ),
+            }
+        )
+        statuses = channel_status_map(channels)
+        self.assertEqual(statuses["physical_flyers"], "not_indicated")
+        self.assertEqual(statuses["sponsorship"], "not_indicated")
+        self.assertEqual(statuses["partner_cross_promotion"], "not_indicated")
+
+    def test_report_reviews_every_supplied_listing(self) -> None:
+        rows = [
+            {"id": "one", "resource_name": "One", "outreach_channels": []},
+            {
+                "id": "two",
+                "resource_name": "Two",
+                "outreach_channels": [{"key": "event_calendar", "status": "listed", "label": "Event/calendar route"}],
+            },
+        ]
+        report = build_outreach_report(rows, ROOT / "example-guide-data.json")
+        self.assertEqual(report["summary"]["entries"], 2)
+        self.assertEqual(report["summary"]["without_outreach_route"], 1)
+        self.assertEqual(report["summary"]["missing_structured_fields"], 0)
+
 
 class InternalLinkTests(unittest.TestCase):
     def test_audit_site_detects_missing_target(self) -> None:
@@ -180,6 +394,19 @@ class SourceAuditTests(unittest.TestCase):
 
 
 class SiteSmokeTests(unittest.TestCase):
+    def test_reset_output_dir_preserves_root_and_clears_contents(self) -> None:
+        with tempfile.TemporaryDirectory() as folder:
+            out = Path(folder) / "build-output"
+            nested = out / "nested"
+            nested.mkdir(parents=True)
+            (out / "stale.txt").write_text("old", encoding="utf-8")
+            (nested / "old.html").write_text("old", encoding="utf-8")
+
+            guide_builder.reset_output_dir(out)
+
+            self.assertTrue(out.exists())
+            self.assertEqual(list(out.iterdir()), [])
+
     def test_navigation_yucca_is_generated_with_motion_safeguards(self) -> None:
         page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
         self.assertIn('data-nav-yucca aria-hidden="true"', page)
@@ -230,6 +457,28 @@ class SiteSmokeTests(unittest.TestCase):
 
         self.assertEqual(validate_body("assets/app.js", complete), "")
         self.assertIn("data-assistant-followup", validate_body("assets/app.js", incomplete))
+
+    def test_directory_connection_ui_is_filterable_and_motion_safe(self) -> None:
+        page = guide_builder.network_page([])
+        self.assertIn('id="online-connection-filter"', page)
+        self.assertIn('id="outreach-channel-filter"', page)
+        self.assertIn('id="outreach-status-filter"', page)
+        self.assertIn("What the listing labels mean", page)
+
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+            js = (asset_out / "app.js").read_text(encoding="utf-8")
+
+        self.assertIn("@keyframes connection-online-pulse", css)
+        self.assertIn("function onlineConnectionMarkup(item)", js)
+        self.assertIn("function outreachChannelMarkup(item", js)
+        self.assertIn('document.querySelector("#outreach-channel-filter")', js)
+        self.assertIn('uniqueValues(DATA.resources, "online_connection_group")', js)
+        self.assertIn('window.matchMedia("(max-width: 640px)")', js)
+        self.assertIn("prefers-reduced-motion: reduce", css)
 
     def test_public_output_rejects_excluded_organization_names(self) -> None:
         body = '{"resource_name": "Raton Art Space"}'

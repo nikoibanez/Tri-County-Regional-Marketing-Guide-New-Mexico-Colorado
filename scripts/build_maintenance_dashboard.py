@@ -34,6 +34,7 @@ def build_dashboard() -> dict:
     source_audit = load_json(ROOT / "review" / "update-audits" / "update-audit-latest.json")
     directory_watch = load_json(ROOT / "review" / "directory-watch" / "directory-watch-latest.json")
     keyword_sweep = load_json(ROOT / "review" / "keyword-sweep" / "keyword-sweep-latest.json")
+    outreach_review = load_json(ROOT / "review" / "directory-outreach" / "directory-outreach-latest.json")
     quality = load_json(DEFAULT_OUT_DIR / "directory-quality-latest.json")
     link_audit = load_json(DEFAULT_OUT_DIR / "internal-link-audit-latest.json")
 
@@ -43,6 +44,7 @@ def build_dashboard() -> dict:
     public_quality = quality.get("published_directory") or quality.get("consolidated_directory") or {}
     link_summary = link_audit.get("summary") or {}
     keyword_summary = keyword_sweep.get("summary") or {}
+    outreach_summary = outreach_review.get("summary") or {}
     action_queue = []
 
     def add_action(count: int, label: str, next_action: str, priority: str) -> None:
@@ -109,6 +111,19 @@ def build_dashboard() -> dict:
         "Open failed pages normally before removing retained source-derived keywords.",
         "low",
     )
+    add_action(
+        int(outreach_summary.get("missing_structured_fields") or 0)
+        + int(outreach_summary.get("shortcuts_missing_structured_fields") or 0),
+        "public directory records missing structured outreach fields",
+        "Rebuild and rerun the outreach audit before deployment.",
+        "high",
+    )
+    add_action(
+        int(outreach_summary.get("without_outreach_route") or 0),
+        "listings without an identified promotion route",
+        "Enrich these only when a public page or direct contact supports a useful route; do not invent availability.",
+        "low",
+    )
 
     return {
         "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -119,6 +134,9 @@ def build_dashboard() -> dict:
             "registered_update_sources": int((registry.get("counts") or {}).get("records") or 0),
             "deep_watch_sources": int(candidate_summary.get("sources_watched") or candidate_summary.get("sources") or 0),
             "keyword_index_entries": len((load_json(ROOT / "data" / "listing-keyword-index.json").get("entries") or {})),
+            "outreach_review_entries": int(outreach_summary.get("entries") or 0),
+            "outreach_review_shortcuts": int(outreach_summary.get("directory_shortcuts") or 0),
+            "outreach_review_total": int(outreach_summary.get("total_records_reviewed") or 0),
         },
         "latest_checks": {
             "directory_quality": quality.get("status") or "not run",
@@ -133,6 +151,12 @@ def build_dashboard() -> dict:
             "priority_new_leads": int(candidate_summary.get("priority_new_leads") or 0),
             "keyword_urls_checked": int(keyword_summary.get("urls_checked") or 0),
             "keyword_entries_changed": int(keyword_summary.get("entries_changed") or 0),
+            "outreach_listed_routes": int(outreach_summary.get("with_listed_route") or 0),
+            "outreach_ask_routes": int(outreach_summary.get("with_ask_route") or 0),
+            "outreach_without_routes": int(outreach_summary.get("without_outreach_route") or 0),
+            "shortcut_outreach_listed_routes": int(outreach_summary.get("shortcuts_with_listed_route") or 0),
+            "shortcut_outreach_ask_routes": int(outreach_summary.get("shortcuts_with_ask_route") or 0),
+            "shortcut_outreach_without_routes": int(outreach_summary.get("shortcuts_without_outreach_route") or 0),
         },
         "action_queue": sorted(action_queue, key=lambda item: ({"high": 0, "medium": 1, "low": 2}[item["priority"]], -item["count"])),
     }
@@ -155,6 +179,9 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- Registered update sources: {inventory['registered_update_sources']}",
         f"- Deep-watch source groups: {inventory['deep_watch_sources']}",
         f"- Listing keyword index entries: {inventory['keyword_index_entries']}",
+        f"- Directory outreach rows reviewed: {inventory['outreach_review_entries']}",
+        f"- Directory shortcuts reviewed: {inventory['outreach_review_shortcuts']}",
+        f"- Total outreach records reviewed: {inventory['outreach_review_total']}",
         "",
         "## Latest Checks",
         "",
@@ -170,6 +197,12 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- Priority new leads: {checks['priority_new_leads']}",
         f"- Keyword source URLs checked: {checks['keyword_urls_checked']}",
         f"- Keyword sets proposed for review: {checks['keyword_entries_changed']}",
+        f"- Listings with at least one listed outreach route: {checks['outreach_listed_routes']}",
+        f"- Listings with at least one ask-first outreach route: {checks['outreach_ask_routes']}",
+        f"- Listings without an identified outreach route: {checks['outreach_without_routes']}",
+        f"- Shortcuts with at least one listed outreach route: {checks['shortcut_outreach_listed_routes']}",
+        f"- Shortcuts with at least one ask-first outreach route: {checks['shortcut_outreach_ask_routes']}",
+        f"- Shortcuts without an identified outreach route: {checks['shortcut_outreach_without_routes']}",
         "",
         "## Action Queue",
         "",

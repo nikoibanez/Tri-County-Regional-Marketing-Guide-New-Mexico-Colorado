@@ -1,6 +1,6 @@
 # Internal Link Audit
 
-Generated: 2026-07-26
+Generated: 2026-08-07
 
 Status: **PASS**
 

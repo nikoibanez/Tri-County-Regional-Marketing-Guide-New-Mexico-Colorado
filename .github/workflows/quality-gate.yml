@@ -39,12 +39,14 @@ jobs:
           python -m py_compile
           tools/directory_exclusions.py
           tools/apply_directory_exclusions.py
+          tools/directory_outreach.py
           tools/build_netlify_deep_guide.py
           scripts/audit_update_sources.py
           scripts/weekly_directory_query_check.py
           scripts/audit_ui_accessibility.py
           scripts/audit_seo_static.py
           scripts/audit_directory_quality.py
+          scripts/audit_directory_outreach_channels.py
           scripts/audit_internal_links.py
           scripts/build_maintenance_dashboard.py
           scripts/smoke_test_site.py
@@ -67,6 +69,9 @@ jobs:
 
       - name: Audit directory quality
         run: python scripts/audit_directory_quality.py --fail-on-blocking
+
+      - name: Audit listing outreach channels
+        run: python scripts/audit_directory_outreach_channels.py --fail-on-missing
 
       - name: Enforce permanent directory exclusions
         run: python tools/apply_directory_exclusions.py --check
@@ -91,3 +96,4 @@ jobs:
             dist/tri-county-netlify-guide-deep/QA_REPORT.md
             review/UI_ACCESSIBILITY_STATIC_AUDIT_*.md
             review/maintenance/
+            review/directory-outreach/

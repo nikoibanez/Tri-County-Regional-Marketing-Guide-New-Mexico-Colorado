@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-08-07T16:24:05.463900+00:00",
+  "source": "dist/tri-county-netlify-guide-deep/data/guide-data.json",
+  "summary": {
+    "entries": 1355,
+    "connection_status_counts": {
+      "address-only": 19,
+      "contact-only": 55,
+      "direct-live": 151,
+      "direct-unconfirmed": 27,
+      "no-online-link": 59,
+      "profile-live": 353,
+      "profile-unconfirmed": 691
+    },
+    "direct_website_candidates": 178,
+    "animated_business_connections": 112,
+    "without_any_url": 133,
+    "without_any_contact_path": 59,
+    "unique_urls_checked": 571,
+    "url_check_counts": {
+      "access_blocked": 120,
+      "broken": 7,
+      "network_error": 17,
+      "ok": 384,
+      "redirect": 39,
+      "tls_error": 4
+    },
+    "confirmed_broken_urls": 7,
+    "script_access_limited": 124
+  },
+  "detail_files": {
+    "status": "data/directory-connectivity-status.json",
+    "csv": "review/directory-connectivity/directory-connectivity-latest.csv",
+    "markdown": "review/directory-connectivity/directory-connectivity-latest.md"
+  }
+}

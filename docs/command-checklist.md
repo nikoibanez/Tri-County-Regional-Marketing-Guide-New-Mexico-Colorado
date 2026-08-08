@@ -22,12 +22,13 @@ dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip
 ## Local QA
 
 ```powershell
-python -m py_compile tools/build_netlify_deep_guide.py scripts/audit_update_sources.py scripts/weekly_directory_query_check.py scripts/sweep_listing_keywords.py scripts/audit_ui_accessibility.py scripts/audit_seo_static.py scripts/audit_directory_quality.py scripts/audit_internal_links.py scripts/build_maintenance_dashboard.py scripts/smoke_test_site.py
+python -m py_compile tools/build_netlify_deep_guide.py tools/directory_outreach.py scripts/audit_update_sources.py scripts/weekly_directory_query_check.py scripts/sweep_listing_keywords.py scripts/audit_ui_accessibility.py scripts/audit_seo_static.py scripts/audit_directory_quality.py scripts/audit_directory_outreach_channels.py scripts/audit_internal_links.py scripts/build_maintenance_dashboard.py scripts/smoke_test_site.py
 python -m unittest discover -s tests -p "test_*.py"
 node --check dist/tri-county-netlify-guide-deep/assets/app.js
 python scripts/audit_ui_accessibility.py
 python scripts/audit_seo_static.py
 python scripts/audit_directory_quality.py --fail-on-blocking
+python scripts/audit_directory_outreach_channels.py --fail-on-missing
 python scripts/audit_internal_links.py --fail-on-broken
 python scripts/smoke_test_site.py
 python scripts/build_maintenance_dashboard.py
@@ -89,6 +90,20 @@ review/directory-watch/directory-watch-latest.json
 data/directory-auto-update-candidates.json
 ```
 
+Refresh the listing-level physical and digital outreach review after a build:
+
+```powershell
+python scripts/audit_directory_outreach_channels.py --fail-on-missing
+```
+
+The CSV contains one row per published listing and directory shortcut. The JSON is a compact summary, and the Markdown file is the readable review:
+
+```text
+review/directory-outreach/directory-outreach-latest.csv
+review/directory-outreach/directory-outreach-latest.json
+review/directory-outreach/directory-outreach-latest.md
+```
+
 ## Weekly Listing Keyword Sweep
 
 Seed or validate every listing from canonical fields without using the network:
@@ -135,7 +150,7 @@ Publish directory: dist/tri-county-netlify-guide-deep
 Set the same final public origin in Netlify and GitHub:
 
 ```text
-PUBLIC_SITE_ORIGIN=https://statelineguide.org
+PUBLIC_SITE_ORIGIN=https://newmexicocoloradoguide.netlify.app
 ```
 
 To test a live deployment locally without changing files:

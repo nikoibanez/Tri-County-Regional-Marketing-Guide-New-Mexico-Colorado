@@ -52,6 +52,8 @@ PUBLIC_REQUIRED = {
     "resource_name",
     "county",
     "town",
+    "outreach_channels",
+    "outreach_channel_keys",
     "public_description",
     "public_keywords",
     "public_listing_type",
@@ -172,6 +174,11 @@ def assess(source_path: Path, directory_path: Path, guide_data_path: Path = DEFA
     ]
     public_missing_keywords = [row for row in public_rows if not clean(row.get("public_keywords"))]
     public_missing_type = [row for row in public_rows if not clean(row.get("public_listing_type"))]
+    public_missing_outreach_review = [
+        row
+        for row in public_rows
+        if not isinstance(row.get("outreach_channels"), list) or "outreach_channel_keys" not in row
+    ]
 
     if blank_source_names:
         blocking.append(f"Canonical source has {len(blank_source_names)} blank resource names.")
@@ -199,6 +206,10 @@ def assess(source_path: Path, directory_path: Path, guide_data_path: Path = DEFA
         blocking.append(f"Published directory has {len(public_missing_keywords)} entries without search keywords.")
     if public_missing_type:
         blocking.append(f"Published directory has {len(public_missing_type)} entries without an entity type.")
+    if public_missing_outreach_review:
+        blocking.append(
+            f"Published directory has {len(public_missing_outreach_review)} entries without a structured outreach-channel review."
+        )
 
     warnings: list[str] = []
     if source_no_link:
@@ -242,6 +253,7 @@ def assess(source_path: Path, directory_path: Path, guide_data_path: Path = DEFA
             "missing_descriptions": len(public_missing_description),
             "missing_keywords": len(public_missing_keywords),
             "missing_entry_type": len(public_missing_type),
+            "missing_outreach_review": len(public_missing_outreach_review),
             "generalized_idea_sample": sample_names(public_concept_rows, "resource_name"),
             "generic_description_sample": sample_names(public_generic_descriptions, "resource_name"),
         },
@@ -307,6 +319,7 @@ def write_markdown(payload: dict, path: Path) -> None:
             f"- Missing descriptions: {published['missing_descriptions']}",
             f"- Missing keywords: {published['missing_keywords']}",
             f"- Missing entity types: {published['missing_entry_type']}",
+            f"- Missing outreach-channel reviews: {published['missing_outreach_review']}",
             "",
             "## Legacy Consolidated Export",
             "",

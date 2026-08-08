@@ -1,6 +1,6 @@
 # Site Smoke Test
 
-Generated: 2026-07-23
+Generated: 2026-08-07
 Target: C:\Users\Alyxx and Niko\Documents\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\dist\tri-county-netlify-guide-deep
 Mode: local
 Status: **PASS**

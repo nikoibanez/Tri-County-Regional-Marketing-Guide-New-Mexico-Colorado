@@ -37,6 +37,8 @@ This repo includes a no-secret maintenance system. Deterministic scripts build, 
 - `scripts/audit_ui_accessibility.py` - checks generated HTML/CSS/JS for accessibility regressions in the assistant, skip link, images, and music bar.
 - `scripts/normalize_netlify_submissions.py` - turns exported Netlify form submissions into a human review report.
 - `scripts/audit_directory_quality.py` - blocks duplicate, non-entity, placeholder-description, and missing-metadata regressions.
+- `scripts/audit_directory_connectivity.py` - classifies every published listing as a first-party website, hosted profile, contact-only entry, or missing online path and checks URL response status without treating bot blocks as confirmed failures.
+- `scripts/audit_directory_outreach_channels.py` - reviews every published listing and directory shortcut for physical posting, directory, calendar, social-sharing, newsletter, advertising, media, sponsorship, and partner-outreach routes while separating listed routes from ask-first ideas.
 - `tools/directory_exclusions.py` - private permanent exclusion registry enforced by imports, builds, audits, and candidate sweeps.
 - `tools/apply_directory_exclusions.py` - removes excluded rows from historical data artifacts and fails when public output contains one.
 - `scripts/audit_internal_links.py` - checks generated routes, fragments, assets, and duplicate HTML IDs.

@@ -1,12 +1,15 @@
 {
-  "generated_at": "2026-07-26T17:02:07-06:00",
+  "generated_at": "2026-08-07T10:22:18-06:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1490,
     "consolidated_directory_entries": 687,
     "registered_update_sources": 126,
     "deep_watch_sources": 15,
-    "keyword_index_entries": 1490
+    "keyword_index_entries": 1490,
+    "outreach_review_entries": 1355,
+    "outreach_review_shortcuts": 104,
+    "outreach_review_total": 1459
   },
   "latest_checks": {
     "directory_quality": "pass",
@@ -20,7 +23,13 @@
     "watch_pages_failed": 0,
     "priority_new_leads": 12,
     "keyword_urls_checked": 0,
-    "keyword_entries_changed": 0
+    "keyword_entries_changed": 0,
+    "outreach_listed_routes": 296,
+    "outreach_ask_routes": 748,
+    "outreach_without_routes": 544,
+    "shortcut_outreach_listed_routes": 19,
+    "shortcut_outreach_ask_routes": 44,
+    "shortcut_outreach_without_routes": 52
   },
   "action_queue": [
     {
@@ -34,6 +43,12 @@
       "count": 175,
       "label": "canonical rows without a website or source URL",
       "next_action": "Enrich high-value entries first; do not invent contact paths."
+    },
+    {
+      "priority": "low",
+      "count": 544,
+      "label": "listings without an identified promotion route",
+      "next_action": "Enrich these only when a public page or direct contact supports a useful route; do not invent availability."
     },
     {
       "priority": "low",

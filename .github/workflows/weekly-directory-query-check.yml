@@ -32,8 +32,14 @@ jobs:
       - name: Run weekly directory query check
         run: python scripts/weekly_directory_query_check.py
 
+      - name: Audit every directory connection path
+        run: python scripts/audit_directory_connectivity.py --workers 16 --timeout 10
+
       - name: Build generated directory for quality checks
         run: python tools/build_netlify_deep_guide.py
+
+      - name: Review physical and digital outreach routes
+        run: python scripts/audit_directory_outreach_channels.py --fail-on-missing
 
       - name: Audit directory quality
         run: python scripts/audit_directory_quality.py --fail-on-blocking
@@ -47,7 +53,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/directory-auto-update-candidates.json
+          git add data/directory-connectivity-status.json
           git add review/directory-watch/directory-watch-latest.json review/directory-watch/directory-watch-latest.md
+          git add review/directory-connectivity/directory-connectivity-latest.json
+          git add review/directory-connectivity/directory-connectivity-latest.csv
+          git add review/directory-connectivity/directory-connectivity-latest.md
+          git add review/directory-outreach/directory-outreach-latest.json
+          git add review/directory-outreach/directory-outreach-latest.csv
+          git add review/directory-outreach/directory-outreach-latest.md
           git add review/maintenance/maintenance-dashboard-latest.json review/maintenance/maintenance-dashboard-latest.md
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -68,7 +81,8 @@ jobs:
         run: |
           body="This automated pull request refreshes candidate listings from fifteen high-signal regional source groups. Candidate rows are not approved directory additions. Open the linked listing page and confirm relevance, identity, place, and contact details before merging any candidate into canonical public data."
           if ! gh pr create --base master --head "$REVIEW_BRANCH" --title "Review weekly directory candidates" --body "$body"; then
-            gh issue create --title "Directory-candidate review branch is ready" --body "$body Branch: $REVIEW_BRANCH"
+            compare_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/master...${REVIEW_BRANCH}?expand=1"
+            gh issue create --title "Directory-candidate review branch is ready" --body "$body Branch: $REVIEW_BRANCH One-click draft PR: $compare_url"
           fi
 
       - name: Upload directory-watch report
@@ -80,4 +94,6 @@ jobs:
           path: |
             review/directory-watch/directory-watch-latest.json
             review/directory-watch/directory-watch-latest.md
+            review/directory-connectivity/
+            review/directory-outreach/
             review/maintenance/

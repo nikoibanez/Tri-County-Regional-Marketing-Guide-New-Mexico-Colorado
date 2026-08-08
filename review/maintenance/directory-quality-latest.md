@@ -1,6 +1,6 @@
 # Directory Quality Report
 
-Generated: 2026-07-23
+Generated: 2026-08-07
 
 Status: **PASS**
 
@@ -34,6 +34,7 @@ Status: **PASS**
 - Missing descriptions: 0
 - Missing keywords: 0
 - Missing entity types: 0
+- Missing outreach-channel reviews: 0
 
 ## Legacy Consolidated Export
 
