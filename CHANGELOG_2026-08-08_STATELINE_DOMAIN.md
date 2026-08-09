@@ -13,6 +13,7 @@
 - Unified visible branding, site metadata, JSON-LD, navigation labeling, home heading, route-title suffixes, and favicon labeling under **Stateline Tri-County Guide**.
 - Preserved `Tri-County Regional Marketing Guide` as an alternate descriptive name for search context.
 - Corrected the accessibility audit so it detects obsolete generated MP3 names without falsely rejecting the new `stateline-...` logo asset.
+- Kept the GitHub quality gate's local smoke test local even when the canonical production-origin variable is set; live-domain smoke testing remains a separate deployment check.
 
 ## Preserved
 

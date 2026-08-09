@@ -80,6 +80,8 @@ jobs:
         run: python scripts/audit_internal_links.py --fail-on-broken
 
       - name: Smoke-test the local build
+        env:
+          PUBLIC_SITE_ORIGIN: ""
         run: python scripts/smoke_test_site.py
 
       - name: Build maintenance dashboard
