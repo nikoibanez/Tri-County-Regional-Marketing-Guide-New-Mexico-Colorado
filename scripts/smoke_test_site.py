@@ -19,7 +19,7 @@ from directory_exclusions import references_excluded_directory_entity  # noqa: E
 
 DEFAULT_SITE = ROOT / "dist" / "tri-county-netlify-guide-deep"
 DEFAULT_OUT_DIR = ROOT / "review" / "maintenance"
-PUBLIC_SITE_ORIGIN = (os.environ.get("PUBLIC_SITE_ORIGIN") or "https://newmexicocoloradoguide.netlify.app").rstrip("/")
+PUBLIC_SITE_ORIGIN = (os.environ.get("PUBLIC_SITE_ORIGIN") or "https://statelineguide.org").rstrip("/")
 MAX_REMOTE_BYTES = 12_000_000
 DEFAULT_PATHS = (
     "",

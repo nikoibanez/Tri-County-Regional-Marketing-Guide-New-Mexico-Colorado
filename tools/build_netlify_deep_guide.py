@@ -88,11 +88,11 @@ DIRECTORY_CONNECTIVITY_ENTRIES, DIRECTORY_CONNECTIVITY_CHECKS = load_directory_c
 
 
 def normalize_origin(value: str) -> str:
-    value = (value or "").strip() or "https://newmexicocoloradoguide.netlify.app"
+    value = (value or "").strip() or "https://statelineguide.org"
     return value.rstrip("/") + "/"
 
 
-SITE_URL = normalize_origin(os.environ.get("PUBLIC_SITE_ORIGIN", "https://newmexicocoloradoguide.netlify.app"))
+SITE_URL = normalize_origin(os.environ.get("PUBLIC_SITE_ORIGIN", "https://statelineguide.org"))
 
 
 def build_asset_version() -> str:
@@ -1765,7 +1765,7 @@ ROUTE_LABELS = {
 TASK_PAGE_DEFS = [
     {
         "active": "post-raton",
-        "title": "Where to Post Events in Raton NM | Stateline Guide",
+        "title": "Where to Post Events in Raton NM | Stateline Tri-County Guide",
         "description": "Find starting points for Raton event visibility, including city pages, tourism routes, media, calendars, public boards, partners, and practical next steps.",
         "eyebrow": "Raton event visibility",
         "h1": "Where to post events in Raton, New Mexico",
@@ -1776,7 +1776,7 @@ TASK_PAGE_DEFS = [
     },
     {
         "active": "post-trinidad",
-        "title": "Where to Post Events in Trinidad CO | Stateline Guide",
+        "title": "Where to Post Events in Trinidad CO | Stateline Tri-County Guide",
         "description": "Use Trinidad tourism, city, chamber, creative district, venue, media, and community routes to submit or promote public events after checking rules.",
         "eyebrow": "Trinidad event visibility",
         "h1": "Where to post events in Trinidad, Colorado",
@@ -1787,7 +1787,7 @@ TASK_PAGE_DEFS = [
     },
     {
         "active": "post-huerfano",
-        "title": "Where to Post Events in Walsenburg & La Veta CO | Stateline Guide",
+        "title": "Where to Post Events in Walsenburg & La Veta CO | Stateline Tri-County Guide",
         "description": "Find Huerfano County event routes through Spanish Peaks Country, Walsenburg, La Veta, libraries, media, arts, and tourism channels.",
         "eyebrow": "Huerfano event visibility",
         "h1": "Where to post events in Walsenburg and La Veta",
@@ -1798,7 +1798,7 @@ TASK_PAGE_DEFS = [
     },
     {
         "active": "advertise-trinidad",
-        "title": "Where to Advertise in Trinidad CO | Stateline Guide",
+        "title": "Where to Advertise in Trinidad CO | Stateline Tri-County Guide",
         "description": "Compare Trinidad-area promotion routes, including tourism channels, chamber options, media, venue lineups, newsletters, and paid-placement inquiries.",
         "eyebrow": "Trinidad promotion routes",
         "h1": "Where to advertise or promote something in Trinidad, Colorado",
@@ -1809,7 +1809,7 @@ TASK_PAGE_DEFS = [
     },
     {
         "active": "colfax-business",
-        "title": "Colfax County Business Resources | Stateline Guide",
+        "title": "Colfax County Business Resources | Stateline Tri-County Guide",
         "description": "Start with Raton business services, licensing, GrowRaton, MainStreet, county resources, tourism, and New Mexico support before outreach.",
         "eyebrow": "Colfax business resources",
         "h1": "Colfax County business resources",
@@ -1820,7 +1820,7 @@ TASK_PAGE_DEFS = [
     },
     {
         "active": "las-animas-nonprofit",
-        "title": "Las Animas County Nonprofit Resources | Stateline Guide",
+        "title": "Las Animas County Nonprofit Resources | Stateline Tri-County Guide",
         "description": "Find Trinidad and Las Animas nonprofit visibility, grant, partner, media, chamber, and community-resource routes with clear next steps.",
         "eyebrow": "Las Animas nonprofit routes",
         "h1": "Las Animas County nonprofit resources",
@@ -1831,7 +1831,7 @@ TASK_PAGE_DEFS = [
     },
     {
         "active": "huerfano-calendars",
-        "title": "Huerfano County Event Calendars & Visitor Listings | Stateline Guide",
+        "title": "Huerfano County Event Calendars & Visitor Listings | Stateline Tri-County Guide",
         "description": "Use Spanish Peaks Country, Walsenburg, La Veta, media, tourism, library, arts, and community calendars as Huerfano event starting points.",
         "eyebrow": "Huerfano calendar routes",
         "h1": "Huerfano County event calendars and visitor listings",
@@ -1842,7 +1842,7 @@ TASK_PAGE_DEFS = [
     },
     {
         "active": "artist-gallery",
-        "title": "Artist & Gallery Promotion in Raton, Trinidad & Walsenburg | Stateline Guide",
+        "title": "Artist & Gallery Promotion in Raton, Trinidad & Walsenburg | Stateline Tri-County Guide",
         "description": "Route art shows, gallery events, makers, workshops, performances, and creative-sector announcements through arts, tourism, media, venue, and partner channels.",
         "eyebrow": "Artist and gallery promotion",
         "h1": "Artist and gallery promotion across the tri-county area",
@@ -1853,7 +1853,7 @@ TASK_PAGE_DEFS = [
     },
     {
         "active": "regional-channels",
-        "title": "Regional Newsletters, Event Calendars & Visitor Guides | Stateline Guide",
+        "title": "Regional Newsletters, Event Calendars & Visitor Guides | Stateline Tri-County Guide",
         "description": "Compare tri-county newsletters, event calendars, tourism guides, business directories, venue lineups, and placement inquiry paths.",
         "eyebrow": "Regional amplifier channels",
         "h1": "Regional newsletters, event calendars, and visitor guides",
@@ -1991,7 +1991,7 @@ COUNTY_INTENT_BLOCKS = {
             "Colfax County media and public-notice pathways",
             "New Mexico resources for local businesses and community programs",
         ],
-        "title": "Colfax County Business, Event & Promotion Resources | Stateline Guide",
+        "title": "Colfax County Business, Event & Promotion Resources | Stateline Tri-County Guide",
         "description": "Use Raton, MainStreet, GrowRaton, Explore Raton, arts, media, county, and New Mexico support routes before building a new contact list.",
     },
     "Las Animas": {
@@ -2005,7 +2005,7 @@ COUNTY_INTENT_BLOCKS = {
             "Las Animas County grants and community resources",
             "Trinidad creative district and arts promotion channels",
         ],
-        "title": "Las Animas County Business, Event & Nonprofit Resources | Stateline Guide",
+        "title": "Las Animas County Business, Event & Nonprofit Resources | Stateline Tri-County Guide",
         "description": "Use Trinidad, tourism, the chamber, Colexico, city economic development, creative district, media, grants, and Colorado support routes.",
     },
     "Huerfano": {
@@ -2019,7 +2019,7 @@ COUNTY_INTENT_BLOCKS = {
             "World Journal event and advertising inquiry",
             "Huerfano arts, gallery, and creative-district promotion",
         ],
-        "title": "Huerfano County Event, Tourism & Business Resources | Stateline Guide",
+        "title": "Huerfano County Event, Tourism & Business Resources | Stateline Tri-County Guide",
         "description": "Use Walsenburg, La Veta, Spanish Peaks Country, HCED, chamber, creative district, World Journal, and rural Colorado support routes.",
     },
 }
@@ -3398,6 +3398,7 @@ def copy_assets() -> None:
     DATA_OUT.mkdir(parents=True, exist_ok=True)
     for src, dest in [
         (ROOT / "assets" / "brand" / "super-eukarya-logo.png", ASSET_OUT / "super-eukarya-logo.png"),
+        (ROOT / "assets" / "brand" / "stateline-tri-county-guide-logo.svg", ASSET_OUT / "stateline-tri-county-guide-logo.svg"),
         (ROOT / "assets" / "brand" / "raton-accessible-cursor.svg", ASSET_OUT / "raton-accessible-cursor.svg"),
     ]:
         if src.exists():
@@ -3729,8 +3730,8 @@ def directory_item_list_schema(rows: list[dict]) -> dict:
     return {
         "@type": "ItemList",
         "@id": SITE_URL + "network/#directory-entry-metadata",
-        "name": "Stateline Guide directory entries",
-        "description": "Machine-readable metadata for directory shortcuts and local inventory entries in the Stateline Guide. Details may change.",
+        "name": "Stateline Tri-County Guide directory entries",
+        "description": "Machine-readable metadata for directory shortcuts and local inventory entries in the Stateline Tri-County Guide. Details may change.",
         "numberOfItems": payload["entry_count"],
         "itemListElement": [
             {
@@ -4228,7 +4229,7 @@ def breadcrumb_json_ld(active: str) -> dict:
 def website_json_ld() -> dict:
     return {
         "@type": "WebSite",
-        "name": "Stateline Guide",
+        "name": "Stateline Tri-County Guide",
         "alternateName": "Tri-County Regional Marketing Guide",
         "url": SITE_URL,
         "description": "A tri-county guide for business listings, event calendars, newsletters, visitor guides, arts promotion, nonprofit outreach, and local support routes across Colfax, Las Animas, and Huerfano counties.",
@@ -4239,8 +4240,9 @@ def website_json_ld() -> dict:
 def organization_json_ld() -> dict:
     return {
         "@type": "Organization",
-        "name": "Stateline Guide",
+        "name": "Stateline Tri-County Guide",
         "url": SITE_URL,
+        "logo": SITE_URL + "assets/stateline-tri-county-guide-logo.svg",
         "description": "A tri-county guide for business listings, event calendars, newsletters, visitor guides, arts promotion, nonprofit outreach, and local support routes across Colfax, Las Animas, and Huerfano counties.",
         "areaServed": [
             {"@type": "AdministrativeArea", "name": "Colfax County, New Mexico"},
@@ -4444,7 +4446,7 @@ def page_shell(
         "dateModified": BUILD_DATE,
         "isPartOf": {
             "@type": "WebSite",
-            "name": "Stateline Guide",
+            "name": "Stateline Tri-County Guide",
             "url": SITE_URL,
         },
         "about": [
@@ -4464,7 +4466,7 @@ def page_shell(
         ],
         "publisher": {
             "@type": "Organization",
-            "name": "Stateline Guide",
+            "name": "Stateline Tri-County Guide",
         },
     }
     if main_entity:
@@ -4534,16 +4536,18 @@ def page_shell(
           <meta name="theme-color" content="#173047">
           <link rel="canonical" href="{html_escape(canonical_url)}">
           <meta property="og:type" content="website">
-          <meta property="og:site_name" content="Stateline Guide">
+          <meta property="og:site_name" content="Stateline Tri-County Guide">
           <meta property="og:locale" content="en_US">
           <meta property="og:title" content="{html_escape(title)}">
           <meta property="og:description" content="{html_escape(description)}">
           <meta property="og:url" content="{html_escape(canonical_url)}">
           <meta property="og:image" content="{html_escape(social_image_url)}">
+          <meta property="og:image:alt" content="Animated high-desert route landscape for the Stateline Tri-County Guide">
           <meta name="twitter:card" content="summary_large_image">
           <meta name="twitter:title" content="{html_escape(title)}">
           <meta name="twitter:description" content="{html_escape(description)}">
           <meta name="twitter:image" content="{html_escape(social_image_url)}">
+          <meta name="twitter:image:alt" content="Animated high-desert route landscape for the Stateline Tri-County Guide">
           <title>{html_escape(title)}</title>
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -4562,7 +4566,7 @@ def page_shell(
           {audio_markup}
           {intro_curtain}
           <header class="site-header">
-            <a class="brand" href="{rel('index.html', depth)}" aria-label="Stateline Guide home">
+            <a class="brand" href="{rel('index.html', depth)}" aria-label="Stateline Tri-County Guide home">
               <span class="brand-mark" aria-hidden="true">
                 <svg viewBox="0 0 44 36" focusable="false">
                   <path class="brand-mark__mesa" d="M3 25 12 17h8l5-7 5 7h5l6 8H3Z"/>
@@ -4570,7 +4574,7 @@ def page_shell(
                   <circle class="brand-mark__sun" cx="32" cy="7" r="2.6"/>
                 </svg>
               </span>
-              <span>Stateline Guide</span>
+              <span>Stateline Tri-County Guide</span>
             </a>
             <nav class="site-nav" aria-label="Primary navigation">
               {nav}
@@ -4750,8 +4754,8 @@ def mountain_banner() -> str:
         </svg>
       </div>
       <div class="hero-copy">
-        <p class="eyebrow">Stateline Guide</p>
-        <h1>Tri-County Regional Marketing Guide</h1>
+        <p class="eyebrow">Regional marketing, posting, and directory manual</p>
+        <h1>Stateline Tri-County Guide</h1>
         <p class="lede">
           <span class="hero-lede-desktop">For new and existing businesses, artists, nonprofits, galleries, programs, services, and mentorships trying to expand customers, visibility, partnerships, and usefulness across Colfax, Las Animas, and Huerfano counties.</span>
           <span class="hero-lede-mobile">For businesses, artists, nonprofits, and programs building visibility across Colfax, Las Animas, and Huerfano counties.</span>
@@ -4839,7 +4843,7 @@ def home_page(summary: dict) -> str:
         """
     )
     return page_shell(
-        "Tri-County Regional Marketing Guide | Stateline Guide",
+        "Stateline Tri-County Guide | Regional Marketing & Business Resources",
         "Find business directories, event calendars, newsletters, visitor guides, flyer posting routes, media channels, and public offices across Colfax, Las Animas, and Huerfano counties.",
         "home",
         content,
@@ -4915,7 +4919,7 @@ def plan_page() -> str:
     </section>
     """
     return page_shell(
-        "Plan Local Growth Across Colfax, Las Animas & Huerfano | Stateline Guide",
+        "Plan Local Growth Across Colfax, Las Animas & Huerfano | Stateline Tri-County Guide",
         "Choose the right business listing, event calendar, newsletter, partner, media, or flyer route before promoting a business, event, nonprofit, service, or program.",
         "plan",
         content,
@@ -5088,7 +5092,7 @@ def network_page(rows: list[dict]) -> str:
     ])}
     """
     return page_shell(
-        "Find Local Directories, Physical Ad Locations, Media & Support Entries | Stateline Guide",
+        "Find Local Directories, Physical Ad Locations, Media & Support Entries | Stateline Tri-County Guide",
         f"Search a {row_count}-entry tri-county directory for business listings, event calendars, newsletters, social pages, visitor guides, physical posting routes, funding leads, arts listings, and support services.",
         "network",
         content,
@@ -5194,7 +5198,7 @@ def funding_page(rows: list[dict]) -> str:
     {submit_listing_panel(2, "directory")}
     """
     return page_shell(
-        "Funding, Grants & Support Entries | Stateline Guide",
+        "Funding, Grants & Support Entries | Stateline Tri-County Guide",
         "Find grant, incentive, scholarship, stipend, loan, workforce, arts, nonprofit, and business-support starting points for Colfax, Las Animas, and Huerfano counties.",
         "funding",
         content,
@@ -5269,7 +5273,7 @@ def arts_culture_page(rows: list[dict]) -> str:
     {submit_listing_panel(2, "directory")}
     """
     return page_shell(
-        "Arts & Culture Directory Routes | Stateline Guide",
+        "Arts & Culture Directory Routes | Stateline Tri-County Guide",
         "Find artist, gallery, maker, music, venue, creative-district, cultural, visitor-facing, and partner visibility routes across the tri-county region.",
         "arts-culture",
         content,
@@ -5392,7 +5396,7 @@ Could you point me to the right form, deadline, rate card, eligibility rule, or 
     {submit_listing_panel(1, "amplifier")}
     """
     return page_shell(
-        "Regional Newsletters, Calendars, Directories & Visitor Guides | Stateline Guide",
+        "Regional Newsletters, Calendars, Directories & Visitor Guides | Stateline Tri-County Guide",
         "Compare event calendars, newsletters, business directories, tourism guides, venue lineups, and advertising inquiry routes across the tri-county area.",
         "amplifiers",
         content,
@@ -5503,7 +5507,7 @@ def posting_page(rows: list[dict]) -> str:
     ])}
     """
     return page_shell(
-        "Where to Post Events, Notices & Listings in the Tri-County Area | Stateline Guide",
+        "Where to Post Events, Notices & Listings in the Tri-County Area | Stateline Tri-County Guide",
         "Separate official notices from community visibility, then check boards, calendars, newsletters, directories, and public office posting routes.",
         "posting",
         content,
@@ -5580,7 +5584,7 @@ def appendix_page(rows: list[dict]) -> str:
     ])}
     """
     return page_shell(
-        "Tri-County Public Contact Appendix | Stateline Guide",
+        "Tri-County Public Contact Appendix | Stateline Tri-County Guide",
         "Browse public-contact appendix entries by county, community, access mode, resource type, and listing details.",
         "appendix",
         content,
@@ -5640,7 +5644,7 @@ def region_page(summary: dict) -> str:
     ])}
     """
     return page_shell(
-        "Tri-County Regional Visibility Map | Stateline Guide",
+        "Tri-County Regional Visibility Map | Stateline Tri-County Guide",
         "Understand how Raton, Trinidad, Walsenburg, La Veta, Colfax, Las Animas, Huerfano, and statewide support systems connect.",
         "region",
         content,
@@ -5848,7 +5852,7 @@ def templates_page() -> str:
     ])}
     """
     return page_shell(
-        "Outreach Templates for Listings, Events, Media & Partners | Stateline Guide",
+        "Outreach Templates for Listings, Events, Media & Partners | Stateline Tri-County Guide",
         "Copy and adapt outreach language for directories, event calendars, newsletters, partner asks, media inquiries, and correction requests.",
         "templates",
         content,
@@ -6004,7 +6008,7 @@ def submit_page() -> str:
     ])}
     """
     return page_shell(
-        "Submit a Correction or Suggest a Regional Channel | Stateline Guide",
+        "Submit a Correction or Suggest a Regional Channel | Stateline Tri-County Guide",
         "Send public-page corrections, listing updates, new channel suggestions, or changed contact paths for review.",
         "submit",
         content,
@@ -6123,7 +6127,7 @@ def about_page(summary: dict) -> str:
     ])}
     """
     return page_shell(
-        "How This Manual Works | Stateline Guide",
+        "How This Manual Works | Stateline Tri-County Guide",
         "Purpose, update guidance, and page-routing logic for the tri-county regional marketing guide.",
         "about",
         content,
@@ -6231,7 +6235,7 @@ def task_page(definition: dict, rows: list[dict]) -> str:
 
 
 def write_static_assets() -> None:
-    icon = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stateline Guide icon"><rect x="3" y="3" width="58" height="58" rx="9" fill="#f3efe5"/><path d="M8 43 21 31h10l7-12 8 12h5l7 12H8Z" fill="#173047"/><path d="M12 49c10-7 19-8 27-4 7 3 12 1 18-3" fill="none" stroke="#b69146" stroke-width="4" stroke-linecap="round"/><circle cx="48" cy="14" r="4" fill="#a76149"/></svg>"""
+    icon = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stateline Tri-County Guide icon"><rect x="3" y="3" width="58" height="58" rx="9" fill="#f3efe5"/><path d="M8 43 21 31h10l7-12 8 12h5l7 12H8Z" fill="#173047"/><path d="M12 49c10-7 19-8 27-4 7 3 12 1 18-3" fill="none" stroke="#b69146" stroke-width="4" stroke-linecap="round"/><circle cx="48" cy="14" r="4" fill="#a76149"/></svg>"""
     (ASSET_OUT / "site-icon.svg").write_text(icon, encoding="utf-8")
 
     css = r"""

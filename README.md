@@ -1,6 +1,8 @@
-# Tri-County Regional Marketing Guide
+# Stateline Tri-County Guide
 
 Static Netlify-ready guide for businesses, nonprofits, artists, creators, programs, and service providers working across Colfax County, Las Animas County, and Huerfano County.
+
+Production origin: `https://statelineguide.org`
 
 ## Optional GitHub Pages Fallback
 

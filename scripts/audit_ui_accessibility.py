@@ -33,7 +33,8 @@ def main() -> int:
     check('role="status"' in index and 'aria-live="polite"' in index, "assistant live status", "Result counts are announced politely", rows)
     check('role="list"' in index and 'role="listitem"' in app_js, "assistant result structure", "Results are exposed as list/listitem content", rows)
     check("showModal" in app_js and "focusableSelector" not in app_js, "native focus management", "Uses dialog showModal instead of a custom focus trap", rows)
-    check("stateline-" not in index and "stateline-" not in app_js, "generated music removed", "No generated music files are referenced by active pages/scripts", rows)
+    generated_music_ref = re.search(r"stateline-[^\"']+\.mp3", index + app_js, re.IGNORECASE)
+    check(not generated_music_ref, "generated music removed", "No generated music files are referenced by active pages/scripts", rows)
     check("loc-rael-nm-valse.mp3" in index and "loc-rael-co-valse.mp3" in index, "regional audio present", "Music bar references only LOC regional tracks", rows)
     check(".sr-only" in styles, "screen-reader utility", "Screen-reader-only helper exists", rows)
 
