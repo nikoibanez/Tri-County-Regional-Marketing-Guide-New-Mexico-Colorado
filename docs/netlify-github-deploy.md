@@ -41,7 +41,7 @@ After connecting the repo:
 Set `PUBLIC_SITE_ORIGIN` to the final public origin in both Netlify environment variables and GitHub repository variables. Example:
 
 ```text
-https://newmexicocoloradoguide.netlify.app
+https://statelineguide.org
 ```
 
-The generator uses that value for canonical links, structured data, social metadata, `robots.txt`, and the sitemap. It currently defaults to `https://newmexicocoloradoguide.netlify.app` when the variable is absent. If a custom domain is connected later, update both environments, rebuild, and submit the new sitemap in Google Search Console.
+The generator uses that value for canonical links, structured data, social metadata, `robots.txt`, and the sitemap. It defaults to `https://statelineguide.org`, the official custom domain. Keep the same value in Netlify and GitHub, then rebuild and submit the sitemap in Google Search Console.

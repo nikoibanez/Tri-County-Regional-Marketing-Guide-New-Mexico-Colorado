@@ -16,7 +16,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REGISTRY = ROOT / "data" / "update-source-registry.json"
 DEFAULT_OUT_DIR = ROOT / "review" / "update-audits"
-PUBLIC_SITE_ORIGIN = (os.environ.get("PUBLIC_SITE_ORIGIN") or "https://newmexicocoloradoguide.netlify.app").rstrip("/")
+PUBLIC_SITE_ORIGIN = (os.environ.get("PUBLIC_SITE_ORIGIN") or "https://statelineguide.org").rstrip("/")
 CONFIRMED_BROKEN_STATUSES = {"broken", "invalid_url", "missing_url"}
 BROWSER_CHECK_STATUSES = {"error", "http_error", "network_error", "timeout"}
 SCRIPT_LIMIT_STATUSES = {"access_blocked", "tls_error"}

@@ -150,7 +150,7 @@ Publish directory: dist/tri-county-netlify-guide-deep
 Set the same final public origin in Netlify and GitHub:
 
 ```text
-PUBLIC_SITE_ORIGIN=https://newmexicocoloradoguide.netlify.app
+PUBLIC_SITE_ORIGIN=https://statelineguide.org
 ```
 
 To test a live deployment locally without changing files:
