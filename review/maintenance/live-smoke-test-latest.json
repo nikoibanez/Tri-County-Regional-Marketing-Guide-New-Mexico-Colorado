@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-07-26",
+  "target": "https://newmexicocoloradoguide.netlify.app",
+  "mode": "live",
+  "status": "pass",
+  "checked": 13,
+  "failed": 0,
+  "results": [
+    {
+      "route": "/",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/network/",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/resources/funding/",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/resources/arts-culture/",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/posting/",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/submit/",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/about/",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/assets/app.js",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/data/guide-data.json",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/data/tri_county_persona_resources.csv",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/data/tri_county_persona_resources.json",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/sitemap.xml",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/robots.txt",
+      "ok": true,
+      "error": ""
+    }
+  ]
+}
