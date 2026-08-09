@@ -1,18 +1,18 @@
 # Directory Outreach Channel Review
 
-Generated: 2026-08-07T16:22:16.836955+00:00
+Generated: 2026-08-09T05:09:26.095742+00:00
 
 This report reviews every published directory listing for practical physical and digital outreach routes. A listed route means the attached listing information identifies that kind of channel. Ask first means the entity may be a sensible contact, but placement, sharing, price, eligibility, and acceptance are not promised.
 
 ## Summary
 
-- Published listings reviewed: 1355
+- Published listings reviewed: 1363
 - Directory shortcuts reviewed: 104
-- Total directory records reviewed: 1459
-- Listings with at least one outreach route: 811
-- Listings with at least one listed route: 296
-- Listings with at least one ask-first route: 748
-- Listings without an identified outreach route: 544
+- Total directory records reviewed: 1467
+- Listings with at least one outreach route: 799
+- Listings with at least one listed route: 308
+- Listings with at least one ask-first route: 730
+- Listings without an identified outreach route: 564
 - Listings missing structured outreach fields: 0
 - Directory shortcuts with a listed or ask-first route: 52
 - Directory shortcuts without an identified route: 52
@@ -22,18 +22,18 @@ This report reviews every published directory listing for practical physical and
 
 | Channel | Listed route | Ask first | Not indicated |
 | --- | ---: | ---: | ---: |
-| Flyers and posters | 0 | 199 | 1156 |
-| Brochures and rack cards | 0 | 98 | 1257 |
-| Bulletin boards | 0 | 19 | 1336 |
-| Front-desk referrals | 0 | 293 | 1062 |
-| Directory profiles and listings | 294 | 12 | 1049 |
-| Event calendars | 1 | 109 | 1245 |
-| Social cross-promotion | 0 | 38 | 1317 |
-| Newsletters and mailing lists | 0 | 173 | 1182 |
-| Paid digital advertising | 1 | 58 | 1296 |
-| Media and editorial coverage | 2 | 58 | 1295 |
-| Sponsorships | 0 | 202 | 1153 |
-| Partner cross-promotion | 0 | 388 | 967 |
+| Flyers and posters | 0 | 193 | 1170 |
+| Brochures and rack cards | 0 | 103 | 1260 |
+| Bulletin boards | 0 | 23 | 1340 |
+| Front-desk referrals | 0 | 279 | 1084 |
+| Directory profiles and listings | 306 | 12 | 1045 |
+| Event calendars | 1 | 116 | 1246 |
+| Social cross-promotion | 0 | 39 | 1324 |
+| Newsletters and mailing lists | 0 | 182 | 1181 |
+| Paid digital advertising | 1 | 59 | 1303 |
+| Media and editorial coverage | 2 | 59 | 1302 |
+| Sponsorships | 0 | 209 | 1154 |
+| Partner cross-promotion | 0 | 397 | 966 |
 
 ## Directory Shortcut Coverage
 
@@ -57,18 +57,18 @@ This report reviews every published directory listing for practical physical and
 - The Candy Crate - Colfax, NM; Retail & local goods
 - Capo's - Colfax, NM; Food & drink
 - Dairy Bar - Colfax, NM; Food & drink
-- Der Markt Food Store - Colfax, NM; Food & drink
+- Der Markt Food Store - Colfax, NM; Retail & local goods
 - Noisy Water Winery and Cellars - Colfax, NM; Food & drink
 - Texas Reds Steakhouse - Colfax, NM; Food & drink
 - A J Martinez & Company - Angel Fire, Colfax, NM; Local business or service
-- Angel Fire Appraisers - Angel Fire, Colfax, NM; Lodging & stays
-- Angel Fire Environmental Architectural Control - Angel Fire, Colfax, NM; Lodging & stays
+- Angel Fire Appraisers - Angel Fire, Colfax, NM; Local business or service
+- Angel Fire Environmental Architectural Control - Angel Fire, Colfax, NM; Local business or service
 - Angel Fire Mini-Mart - Angel Fire, Colfax, NM; Local business or service
 - Angel Fire Mountain Rentals - Angel Fire, Colfax, NM; Local business or service
 - Angel Fire Small Animal Hospital - Angel Fire, Colfax, NM; Health & wellness
 - Angelfire Flooring - Angel Fire, Colfax, NM; Local business or service
 - The Bakery & Cafe at Angel Fire - Angel Fire, Colfax, NM; Food & drink
-- Barwick's Flooring Store - Angel Fire, Colfax, NM; Food & drink
+- Barwick's Flooring Store - Angel Fire, Colfax, NM; Local business or service
 - Bob's Yard - Angel Fire, Colfax, NM; Local business or service
 - Coinstar - Angel Fire, Colfax, NM; Local business or service
 - Elements at Angel Fire Resort Country Club - Angel Fire, Colfax, NM; Lodging & stays
@@ -82,7 +82,7 @@ This report reviews every published directory listing for practical physical and
 - LK Creative - Angel Fire, Colfax, NM; Arts & culture
 - McCash, Strider A, DDS - Angel Fire, Colfax, NM; Local business or service
 - Monte Verde Lake Office - Angel Fire, Colfax, NM; Local business or service
-- Moreno Valley Healthcare Clinic - Angel Fire, Colfax, NM; Lodging & stays
+- Moreno Valley Healthcare Clinic - Angel Fire, Colfax, NM; Health & wellness
 - Moreno Valley High School - Angel Fire, Colfax, NM; Education & learning
 - Moreno Valley-Taos Pines Substation - Angel Fire, Colfax, NM; Local business or service
 - Morning Star Express - Angel Fire, Colfax, NM; Local business or service
@@ -90,7 +90,7 @@ This report reviews every published directory listing for practical physical and
 - Piedra Lumbre Excavation Inc - Angel Fire, Colfax, NM; Home, land & contracting
 - Pretty Petals By Shay - Angel Fire, Colfax, NM; Local business or service
 - prodPendingTest4 - Angel Fire, Colfax, NM; Local business or service
-- Professional Auto Parts Service & Repair - Angel Fire, Colfax, NM; Arts & culture
+- Professional Auto Parts Service & Repair - Angel Fire, Colfax, NM; Auto & transportation
 - Rockies - Angel Fire, Colfax, NM; Local business or service
 - Rustic Chalet - Angel Fire, Colfax, NM; Local business or service
 - Sticks & Stones Custom Builder - Angel Fire, Colfax, NM; Home, land & contracting
@@ -135,7 +135,8 @@ This report reviews every published directory listing for practical physical and
 - Budget Host - Raton, Colfax, NM; Local business or service
 - Casa Lemus Restaurant - Raton, Colfax, NM; Food & drink
 - Cedar Rail RV Park & Campground - Raton, Colfax, NM; Lodging & stays
-- The Children's Workshop - Raton, Colfax, NM; Retail & local goods
+- Center for Community Innovation - Raton, Colfax, NM; Business support
+- The Children's Workshop - Raton, Colfax, NM; Education & learning
 - China Garden Restaurant - Raton, Colfax, NM; Food & drink
 - Christine Lopez, MD - Raton, Colfax, NM; Local business or service
 - Chuy's Auto Repair / Cunico Automotive - Raton, Colfax, NM; Auto & transportation
@@ -144,12 +145,12 @@ This report reviews every published directory listing for practical physical and
 - Clo German Sherpard - Raton, Colfax, NM; Local business or service
 - Colfax County Detention Center - Raton, Colfax, NM; Public offices
 - Colfax County Juvenile Probation - Raton, Colfax, NM; Public offices
-- Colfax County, NM Raton, Springer, Angel Fire, Cimarron, Eagle Nest, Maxwell & Ute Park - Raton, Colfax, NM; Funding & support
+- Colfax County, NM Raton, Springer, Angel Fire, Cimarron, Eagle Nest, Maxwell & Ute Park - Raton, Colfax, NM; Public offices
 - Colfax Metal Works - Raton, Colfax, NM; Local business or service
 - Continental Loans - Raton, Colfax, NM; Funding & support
 - Dancing Eagle Gifts - Raton, Colfax, NM; Retail & local goods
 - Data Plus Printing - Raton, Colfax, NM; Local business or service
-- David Parker Builders Inc - Raton, Colfax, NM; Outdoor recreation
+- David Parker Builders Inc - Raton, Colfax, NM; Local business or service
 - Denny's - Raton, Colfax, NM; Food & drink
 - Department of Motor Vehicles - Raton, Colfax, NM; Local business or service
 - Department of Veterans Affairs - Raton, Colfax, NM; Local business or service
@@ -169,25 +170,24 @@ This report reviews every published directory listing for practical physical and
 - Family Worship Center - Raton, Colfax, NM; Local business or service
 - First National Loan Production Office - Raton, Colfax, NM; Funding & support
 - First Street Thrift Store - Raton, Colfax, NM; Retail & local goods
-- Frontier Trails & Tracks - Raton, Colfax, NM; Tourism & visitor info
+- Frontier Trails & Tracks - Raton, Colfax, NM; Local business or service
 - Game & Fish Department - Raton, Colfax, NM; Local business or service
-- Gate City Craft Bar - Raton, Colfax, NM; Arts & culture
 - Gateway to the Southwest Realty - Raton, Colfax, NM; Professional services
 - George & Gonzales Cpa's - Raton, Colfax, NM; Local business or service
 - Green Chili Grill @ JR's - Raton, Colfax, NM; Food & drink
 - Greyhound Bus Lines - Raton, Colfax, NM; Local business or service
-- GrowRaton & Raton MainStreet - Raton, Colfax, NM; Funding & support
+- GrowRaton & Raton MainStreet - Raton, Colfax, NM; Business support
 - Heidi Elizabeth Wahl - Raton, Colfax, NM; Local business or service
 - Hertz - Raton, Colfax, NM; Local business or service
 - Hertz Car Rental - Raton - South st Street - Raton, Colfax, NM; Local business or service
 - High Country Meats - Raton, Colfax, NM; Retail & local goods
 - High Country Property Maintenance - Raton, Colfax, NM; Professional services
 - High Desert Coins, LLC - Raton, Colfax, NM; Local business or service
-- High Desert Outdoors Inc - Raton, Colfax, NM; Outdoor recreation
+- High Desert Outdoors Inc - Raton, Colfax, NM; Local business or service
 - Home Associates Inc - Raton, Colfax, NM; Local business or service
 - Human SVC-Child Youth & Family - Raton, Colfax, NM; Local business or service
 - Hyde Properties - Raton, Colfax, NM; Local business or service
-- Innovative Journaling - Raton, Colfax, NM; Lodging & stays
+- Innovative Journaling - Raton, Colfax, NM; Retail & local goods
 - International Bank / InBank - Raton, Colfax, NM; Professional services
 - J R's Fuel Stop - Raton, Colfax, NM; Auto & transportation
 - Jamie Marez - Raton, Colfax, NM; Local business or service
@@ -199,29 +199,31 @@ This report reviews every published directory listing for practical physical and
 - Kmart - Raton, Colfax, NM; Local business or service
 - La Cosina Cafe - Raton, Colfax, NM; Food & drink
 - Loaf N Jug - Raton, Colfax, NM; Local business or service
-- Los Chanquis Mexican & Seafood - Raton, Colfax, NM; Food & drink
+- Los Chanquis Mexican & Seafood - Raton, Colfax, NM; Local business or service
 - Low Cost Ignition Interlock - Raton, Colfax, NM; Local business or service
+- Lyn's Hair Design - Raton, Colfax, NM; Local business or service
 - Magistrate Court - Raton, Colfax, NM; Local business or service
 - Martin Financial Advisers - Raton, Colfax, NM; Professional services
 - MCB Computers - Raton, Colfax, NM; Local business or service
 - McConnell, Steven L, ATTY - Raton, Colfax, NM; Local business or service
-- Medicine Shoppe - Raton, Colfax, NM; Retail & local goods
+- Medicine Shoppe - Raton, Colfax, NM; Local business or service
 - Mesa Vista Veterinary Hospital - Raton, Colfax, NM; Health & wellness
-- Mesalands Scenic Byway - Raton, Colfax, NM; Tourism & visitor info
+- Mesalands Scenic Byway - Raton, Colfax, NM; Local business or service
 - Michael A Martinez, SW - Raton, Colfax, NM; Local business or service
 - Miner's Colfax Medical Center - Raton, Colfax, NM; Health & wellness
+- Miners' Colfax Medical Center - Raton, Colfax, NM; Health & wellness
 - Miners Long-Term Care Facility - Raton, Colfax, NM; Local business or service
 - Murphy CPA & Associates - Raton, Colfax, NM; Local business or service
 - New Mexico - State - Raton, Colfax, NM; Local business or service
 - New Mexico State Government - Raton, Colfax, NM; Public offices
 - New Mexico State Government Children Youth and Families - Raton, Colfax, NM; Public offices
 - New Mexico State Government Courts - Raton, Colfax, NM; Public offices
-- Northeast Region Interactive Birding Map - Raton, Colfax, NM; Tourism & visitor info
+- Northeast Region Interactive Birding Map - Raton, Colfax, NM; Local business or service
 - NRA Whittington Center Pro Shop - Raton, Colfax, NM; Retail & local goods
 - Oasis Restaurant - Raton, Colfax, NM; Food & drink
 - The Pack Rat - Raton, Colfax, NM; Retail & local goods
 - Pappa's Sweet Shop - Raton, Colfax, NM; Food & drink
-- The Pecos, Canadian, Cimarron, and Mora Rivers - Raton, Colfax, NM; Tourism & visitor info
+- The Pecos, Canadian, Cimarron, and Mora Rivers - Raton, Colfax, NM; Local business or service
 - Phil Long Ford of Raton - Raton, Colfax, NM; Local business or service
 - Professional Home Health - Raton, Colfax, NM; Health & wellness
 - R & D Honda - Raton, Colfax, NM; Local business or service
@@ -231,7 +233,7 @@ This report reviews every published directory listing for practical physical and
 - Raton High School - Raton, Colfax, NM; Education & learning
 - Raton Home Center - Raton, Colfax, NM; Home, land & contracting
 - Raton MVD Field Office - Raton, Colfax, NM; Local business or service
-- Raton Public Service Co - Raton, Colfax, NM; Lodging & stays
+- Raton Public Service Co - Raton, Colfax, NM; Local business or service
 - Raton Sign Co - Raton, Colfax, NM; Local business or service
 - Raton Truck Stop - Raton, Colfax, NM; Local business or service
 - Raton Veterinary Hospital - Raton, Colfax, NM; Health & wellness
@@ -244,16 +246,17 @@ This report reviews every published directory listing for practical physical and
 - Rocky Mountain Pest Control - Raton, Colfax, NM; Local business or service
 - S & F Contracting - Raton, Colfax, NM; Local business or service
 - Sands Restaurant - Raton, Colfax, NM; Food & drink
-- Santa Fe Trail Scenic Byway - Raton, Colfax, NM; Tourism & visitor info
+- Santa Fe Trail Scenic Byway - Raton, Colfax, NM; Outdoor recreation
 - Sav-O-Mat Inc - Raton, Colfax, NM; Local business or service
+- Small Business Development Center - Las Vegas (NM) - Raton, Colfax, NM; Business support
 - Society of St. Vincent de Paul - Raton, Colfax, NM; Retail & local goods
 - Sonic - Raton, Colfax, NM; Food & drink
 - Southwestern Hollow Metal - Raton, Colfax, NM; Local business or service
 - Spencer's Rentals - Raton, Colfax, NM; Local business or service
 - Stakeout Dining Club - Raton, Colfax, NM; Food & drink
-- Stuart Family Counseling Services - Raton, Colfax, NM; Lodging & stays
+- Stuart Family Counseling Services - Raton, Colfax, NM; Local business or service
 - Sugarite Canyon State Park - Raton, Colfax, NM; Outdoor recreation
-- Summerlan Parks - Raton, Colfax, NM; Outdoor recreation
+- Summerlan Parks - Raton, Colfax, NM; Local business or service
 - Super Save Discount Food - Raton, Colfax, NM; Food & drink
 - Tamar Rubin, LPCC - Raton, Colfax, NM; Local business or service
 - Terry Diane Crotinger, LPC - Raton, Colfax, NM; Local business or service
@@ -261,6 +264,7 @@ This report reviews every published directory listing for practical physical and
 - Trinity Fellowship - Raton, Colfax, NM; Local business or service
 - UPS Authorized Shipping Provider - Raton, Colfax, NM; Local business or service
 - UPS Drop Box - Raton, Colfax, NM; Local business or service
+- VA Raton Clinic - Raton, Colfax, NM; Health & wellness
 - Western Union - Raton, Colfax, NM; Local business or service
 - WIC State Agency - Raton, Colfax, NM; Local business or service
 - Williams Edward D - Raton, Colfax, NM; Local business or service
@@ -273,45 +277,62 @@ This report reviews every published directory listing for practical physical and
 - Brown Hotel & Cafe - Springer, Colfax, NM; Lodging & stays
 - Caldwell Johnny - Springer, Colfax, NM; Local business or service
 - County Of Colfax - Springer, Colfax, NM; Public offices
+- Dee Dee Cosmetology - Springer, Colfax, NM; Local business or service
 - Elidas - Springer, Colfax, NM; Local business or service
 - Iron Skillet Restaurant - Springer, Colfax, NM; Food & drink
+- Randles Bookkeeping and Tax Services - Springer, Colfax, NM; Professional services
 - Ross Oils - Springer, Colfax, NM; Auto & transportation
 - Russell's Route 66 Diner - Springer, Colfax, NM; Local business or service
-- Springer - Springer, Colfax, NM; Media & news
+- Springer - Springer, Colfax, NM; Lodging & stays
 - Springer Auto Company (Ford) - Springer, Colfax, NM; Auto & transportation
+- Springer Family Health - Springer, Colfax, NM; Health & wellness
 - Springer High School - Springer, Colfax, NM; Education & learning
 - Springer Police Department - Springer, Colfax, NM; Local business or service
 - Springer Super Market - Springer, Colfax, NM; Retail & local goods
 - Springer Town Police Department - Springer, Colfax, NM; Public offices
-- Bishop Castle - Huerfano, CO; Retail & local goods
+- Bishop Castle - Huerfano, CO; Local business or service
 - Colorado Small Business Development Center - Pueblo - Huerfano, CO; Funding & support
-- The Dakota Wall - Huerfano, CO; Tourism & visitor info
-- Farley Wildflower Overlook - Huerfano, CO; Tourism & visitor info
-- Farmers & Holiday Markets - Huerfano, CO; Retail & local goods
-- The Great Sand Dunes National Park & Preserve - Huerfano, CO; Lodging & stays
-- Lake Isabel - Huerfano, CO; Tourism & visitor info
-- Million Dollar Shot - Huerfano, CO; Tourism & visitor info
-- Spanish Peaks Country Scenery - Huerfano, CO; Tourism & visitor info
-- Spanish Peaks Country's State Trust Lands and Wildlife Areas - Huerfano, CO; Tourism & visitor info
-- Wahatoya Lakes State Wildlife Area - Huerfano, CO; Tourism & visitor info
+- The Dakota Wall - Huerfano, CO; Local business or service
+- Farley Wildflower Overlook - Huerfano, CO; Local business or service
+- Farmers & Holiday Markets - Huerfano, CO; Local business or service
+- The Great Sand Dunes National Park & Preserve - Huerfano, CO; Outdoor recreation
+- Lake Isabel - Huerfano, CO; Local business or service
+- Million Dollar Shot - Huerfano, CO; Local business or service
+- Spanish Peaks Country Scenery - Huerfano, CO; Local business or service
+- Spanish Peaks Country's State Trust Lands and Wildlife Areas - Huerfano, CO; Local business or service
+- Wahatoya Lakes State Wildlife Area - Huerfano, CO; Local business or service
+- A Taylor Made Haircut - La Veta, Huerfano, CO; Health & wellness
 - Acorn - La Veta, Huerfano, CO; Local business or service
+- Bachman & Associates Real Estate - La Veta, Huerfano, CO; Professional services
 - Capture Colorado - La Veta, Huerfano, CO; Arts & culture
+- Code of the West Real Estate - La Veta, Huerfano, CO; Professional services
+- Corner Cottage Skin Care - La Veta, Huerfano, CO; Health & wellness
 - Cuchara Mountain Park / Panadero Ski Corporation - La Veta, Huerfano, CO; Tourism & visitor info
+- Cuchara Valley Mini Storage - La Veta, Huerfano, CO; Professional services
 - Dog Bar & Grill - La Veta, Huerfano, CO; Food & drink
+- H Unlimited - La Veta, Huerfano, CO; Local business or service
 - Heath Andreatta Excavation - La Veta, Huerfano, CO; Home, land & contracting
 - La Veta Elementary School - La Veta, Huerfano, CO; Education & learning
 - La Veta High School - La Veta, Huerfano, CO; Education & learning
 - La Veta Junior-Senior High School - La Veta, Huerfano, CO; Education & learning
-- La Veta Yoga Studio - La Veta, Huerfano, CO; Arts & culture
+- La Veta Physical Therapy - La Veta, Huerfano, CO; Health & wellness
+- La Veta Propane - La Veta, Huerfano, CO; Local business or service
+- La Veta Yoga Studio - La Veta, Huerfano, CO; Health & wellness
+- Mountain Time Pilates - La Veta, Huerfano, CO; Health & wellness
+- Peakview Self-Storage - La Veta, Huerfano, CO; Professional services
 - Peet's Coffee & Tea - La Veta, Huerfano, CO; Food & drink
+- Petrichor IV Hydration - La Veta, Huerfano, CO; Health & wellness
+- Roger Batchelor, DAOM Acupuncture - La Veta, Huerfano, CO; Health & wellness
+- The Salon LTD - La Veta, Huerfano, CO; Health & wellness
 - Timbers Restaurant - La Veta, Huerfano, CO; Food & drink
 - Town of La Veta - La Veta, Huerfano, CO; Public offices
+- Tutu's Washateria - La Veta, Huerfano, CO; Local business or service
 - 38 Special - Walsenburg, Huerfano, CO; Local business or service
 - 7-Eleven - Walsenburg, Huerfano, CO; Local business or service
 - A&W All-American Food - Walsenburg, Huerfano, CO; Food & drink
 - Acorn Petroleum Inc - Walsenburg, Huerfano, CO; Local business or service
 - ADT Security - Walsenburg, Huerfano, CO; Local business or service
-- Advance Auto Parts - Walsenburg, Huerfano, CO; Arts & culture
+- Advance Auto Parts - Walsenburg, Huerfano, CO; Auto & transportation
 - Antiques and so much more......deja vu ltd - Walsenburg, Huerfano, CO; Local business or service
 - Ashcatek - Walsenburg, Huerfano, CO; Local business or service
 - Baudino's Market - Walsenburg, Huerfano, CO; Retail & local goods
@@ -349,8 +370,7 @@ This report reviews every published directory listing for practical physical and
 - Huerfano County Concrete - Walsenburg, Huerfano, CO; Public offices
 - Huerfano County Courthouse - Walsenburg, Huerfano, CO; Public offices
 - Huerfano County Health Department - Walsenburg, Huerfano, CO; Health & wellness
-- Huerfano County, CO Walsenburg, La Veta, Gardner & unincorporated communities - Walsenburg, Huerfano, CO; Funding & support
-- Huerfano Heritage Center - Walsenburg, Huerfano, CO; Arts & culture
+- Huerfano County, CO Walsenburg, La Veta, Gardner & unincorporated communities - Walsenburg, Huerfano, CO; Public offices
 - John Mall Auto Shop - Walsenburg, Huerfano, CO; Retail & local goods
 - John Mall High School - Walsenburg, Huerfano, CO; Education & learning
 - Kennels At Rio Cucharas Veterinary Clinic - Walsenburg, Huerfano, CO; Health & wellness
@@ -383,8 +403,8 @@ This report reviews every published directory listing for practical physical and
 - Soco Grow - Walsenburg, Huerfano, CO; Local business or service
 - Southern Colorado Land & Livestock Co - Walsenburg, Huerfano, CO; Local business or service
 - Spanish Peaks Regional Airport - Walsenburg, Huerfano, CO; Public offices
-- Spanish Peaks Regional Health Center - Walsenburg, Huerfano, CO; Lodging & stays
-- Spanish Peaks Veterans Community Living Center - Walsenburg, Huerfano, CO; Lodging & stays
+- Spanish Peaks Regional Health Center - Walsenburg, Huerfano, CO; Health & wellness
+- Spanish Peaks Veterans Community Living Center - Walsenburg, Huerfano, CO; Nonprofit & community
 - St Mary Credit Union - Walsenburg, Huerfano, CO; Professional services
 - Star Drug Health Mart - Walsenburg, Huerfano, CO; Health & wellness
 - Systems Builders - Walsenburg, Huerfano, CO; Local business or service
@@ -392,7 +412,7 @@ This report reviews every published directory listing for practical physical and
 - U-Haul Neighborhood Dealer - Walsenburg, Huerfano, CO; Local business or service
 - UPS Authorized Shipping Provider - Walsenburg, Huerfano, CO; Local business or service
 - UPS Drop Box - Walsenburg, Huerfano, CO; Local business or service
-- Uptownclothingsupply.com - Walsenburg, Huerfano, CO; Public offices
+- Uptownclothingsupply.com - Walsenburg, Huerfano, CO; Local business or service
 - Walsenburg Golf Club - Walsenburg, Huerfano, CO; Outdoor recreation
 - Walsenburg Housing Authority - Walsenburg, Huerfano, CO; Local business or service
 - Walsenburg Jr./Sr. High School - Walsenburg, Huerfano, CO; Education & learning
@@ -406,20 +426,20 @@ This report reviews every published directory listing for practical physical and
 - Branson-Trinchera Reunion - Aguilar, Las Animas, CO; Events & venues
 - Cokedale Mining Museum / Town Hall / Post Office complex - Aguilar, Las Animas, CO; Arts & culture
 - Exit 30 BBQ & Cafe - Aguilar, Las Animas, CO; Food & drink
-- Hoehne Post Office - Aguilar, Las Animas, CO; Lodging & stays
+- Hoehne Post Office - Aguilar, Las Animas, CO; Public offices
 - Our Lady of Guadalupe Church and Medina Cemetery - Aguilar, Las Animas, CO; Nonprofit & community
 - Ringo's Food Market - Aguilar, Las Animas, CO; Food & drink
 - Tina's Family Cafe - Aguilar, Las Animas, CO; Food & drink
 - Tjs Mechnical Inc - Aguilar, Las Animas, CO; Local business or service
 - Town of Branson - Aguilar, Las Animas, CO; Nonprofit & community
-- U.S. Post Office - Branson - Aguilar, Las Animas, CO; Lodging & stays
-- Weston Supply & U.S. Post Office - Aguilar, Las Animas, CO; Media & news
+- U.S. Post Office - Branson - Aguilar, Las Animas, CO; Public offices
+- Weston Supply & U.S. Post Office - Aguilar, Las Animas, CO; Retail & local goods
 - Wildlife Division - Aguilar, Las Animas, CO; Local business or service
 - Boncarbo - Boncarbo, Las Animas, CO; Nonprofit & community
 - Trinchera - Branson, Las Animas, CO; Nonprofit & community
 - Kim - Kim, Las Animas, CO; Nonprofit & community
 - Model - Model, Las Animas, CO; Nonprofit & community
-- Segundo - Segundo, Las Animas, CO; Media & news
+- Segundo - Segundo, Las Animas, CO; Nonprofit & community
 - Starkville - Starkville, Las Animas, CO; Nonprofit & community
 - Advance America - Trinidad, Las Animas, CO; Local business or service
 - Advanced Climate Solutions - Trinidad, Las Animas, CO; Local business or service
@@ -427,13 +447,13 @@ This report reviews every published directory listing for practical physical and
 - American Legion - Trinidad, Las Animas, CO; Local business or service
 - American Paving and Concrete - Trinidad, Las Animas, CO; Local business or service
 - APC Southern - Trinidad, Las Animas, CO; Local business or service
-- Arts/culture/tourism audiences - Trinidad, Las Animas, CO; Arts & culture
-- Ave Maria Shrine - Trinidad, Las Animas, CO; Tourism & visitor info
+- Arts/culture/tourism audiences - Trinidad, Las Animas, CO; Public offices
+- Ave Maria Shrine - Trinidad, Las Animas, CO; Local business or service
 - Bealls Department Store - Trinidad, Las Animas, CO; Local business or service
 - Bella Luna Pizzeria - Trinidad, Las Animas, CO; Local business or service
 - Big Pine Realty - Trinidad, Las Animas, CO; Professional services
 - Big R - Trinidad, Las Animas, CO; Arts & culture
-- Birding & Wildlife Viewing - Trinidad, Las Animas, CO; Tourism & visitor info
+- Birding & Wildlife Viewing - Trinidad, Las Animas, CO; Outdoor recreation
 - Bloom House - Trinidad, Las Animas, CO; Local business or service
 - Blue Diamond Builders Inc - Trinidad, Las Animas, CO; Local business or service
 - BNSF Railway Company - Trinidad, Las Animas, CO; Local business or service
@@ -445,7 +465,7 @@ This report reviews every published directory listing for practical physical and
 - Cedar Street Printing - Trinidad, Las Animas, CO; Local business or service
 - Chef Liu's Chinese Restaurant - Trinidad, Las Animas, CO; Food & drink
 - City of Trinidad - Trinidad, Las Animas, CO; Public offices
-- Classic Cuts - Trinidad, Las Animas, CO; Education & learning
+- Classic Cuts - Trinidad, Las Animas, CO; Local business or service
 - Coatney, Michael W, DO - Trinidad, Las Animas, CO; Local business or service
 - Coin Dancer Antiques - Trinidad, Las Animas, CO; Arts & culture
 - Colorado CDL Training School - Trinidad, Las Animas, CO; Business support
@@ -476,8 +496,8 @@ This report reviews every published directory listing for practical physical and
 - Fishers Peak Outfitters - Trinidad, Las Animas, CO; Arts & culture
 - Flatt's Burgers & Shakes (Food Court at the Marketplace) - Trinidad, Las Animas, CO; Food & drink
 - Francesca's - Trinidad, Las Animas, CO; Arts & culture
-- Gagliardi's 489 (At the Hilton Garden Inn) - Trinidad, Las Animas, CO; Lodging & stays
-- Geocaching at Trinidad Lake State Park - Trinidad, Las Animas, CO; Tourism & visitor info
+- Gagliardi's 489 (At the Hilton Garden Inn) - Trinidad, Las Animas, CO; Food & drink
+- Geocaching at Trinidad Lake State Park - Trinidad, Las Animas, CO; Outdoor recreation
 - Grampa Charlie's - Trinidad, Las Animas, CO; Food & drink
 - Grease Monkey - Trinidad, Las Animas, CO; Local business or service
 - Great Wall - Trinidad, Las Animas, CO; Food & drink
@@ -491,12 +511,12 @@ This report reviews every published directory listing for practical physical and
 - J M Towing - Trinidad, Las Animas, CO; Local business or service
 - Joe Febbraro - Trinidad, Las Animas, CO; Local business or service
 - Jupiter's Child - Trinidad, Las Animas, CO; Arts & culture
-- Just Architectural & Engnrng - Trinidad, Las Animas, CO; Lodging & stays
+- Just Architectural & Engnrng - Trinidad, Las Animas, CO; Local business or service
 - Kangaroo Coffee (Food Court at the Marketplace) - Trinidad, Las Animas, CO; Food & drink
 - Kinder Morgan - Trinidad, Las Animas, CO; Local business or service
 - Las Animas County Assessor - Trinidad, Las Animas, CO; Public offices
 - Las Animas County Government - Trinidad, Las Animas, CO; Public offices
-- Las Animas County, CO Trinidad, Aguilar, Branson, Cokedale, Kim, Starkville & unincorporated communities - Trinidad, Las Animas, CO; Funding & support
+- Las Animas County, CO Trinidad, Aguilar, Branson, Cokedale, Kim, Starkville & unincorporated communities - Trinidad, Las Animas, CO; Public offices
 - Lee's Bar-B-Q - Trinidad, Las Animas, CO; Food & drink
 - LibertyX Bitcoin ATM - Trinidad, Las Animas, CO; Local business or service
 - Linda's Alterations - Trinidad, Las Animas, CO; Local business or service
@@ -511,13 +531,13 @@ This report reviews every published directory listing for practical physical and
 - Natural Food Store - Trinidad, Las Animas, CO; Food & drink
 - Perkatory Coffee House - Trinidad, Las Animas, CO; Food & drink
 - Pham, Huong H - Trinidad, Las Animas, CO; Local business or service
-- Phil Long Ford of Trinidad Parts - Trinidad, Las Animas, CO; Arts & culture
+- Phil Long Ford of Trinidad Parts - Trinidad, Las Animas, CO; Local business or service
 - Phil Long Toyota - Trinidad, Las Animas, CO; Local business or service
 - Phil Long Toyota of Trinidad - Trinidad, Las Animas, CO; Local business or service
 - Phoenix West Designs - Trinidad, Las Animas, CO; Local business or service
 - Prospect Plaza Apartments - Trinidad, Las Animas, CO; Local business or service
 - Prospect Plaza II - Trinidad, Las Animas, CO; Local business or service
-- Public Schools Special Services - Trinidad, Las Animas, CO; Lodging & stays
+- Public Schools Special Services - Trinidad, Las Animas, CO; Local business or service
 - Pure H2O - Trinidad, Las Animas, CO; Local business or service
 - Purgatoire River Trading Co - Trinidad, Las Animas, CO; Local business or service
 - QuickBooks Training - Trinidad, Las Animas, CO; Business support
@@ -534,17 +554,17 @@ This report reviews every published directory listing for practical physical and
 - Savoy Hotel - Trinidad, Las Animas, CO; Lodging & stays
 - Select Pro Locksmith - Trinidad, Las Animas, CO; Local business or service
 - Sexy Pizza - Trinidad, Las Animas, CO; Food & drink
-- Sister Blandina Wellness Garden - Trinidad, Las Animas, CO; Tourism & visitor info
+- Sister Blandina Wellness Garden - Trinidad, Las Animas, CO; Health & wellness
 - Smart Start Ignition Interlock - Trinidad, Las Animas, CO; Local business or service
 - Smoker Friendly - Trinidad, Las Animas, CO; Local business or service
 - Snap Fitness Trinidad - Trinidad, Las Animas, CO; Local business or service
-- SOCO Skateland - Trinidad, Las Animas, CO; Tourism & visitor info
+- SOCO Skateland - Trinidad, Las Animas, CO; Local business or service
 - South Central Boces - Trinidad, Las Animas, CO; Local business or service
 - Spanish Peaks Fire Dept Aguilar Station - Trinidad, Las Animas, CO; Local business or service
 - State Board For Community College - Trinidad, Las Animas, CO; Education & learning
 - Steam King LLC - Trinidad, Las Animas, CO; Local business or service
 - Steven Paul Szabo - Trinidad, Las Animas, CO; Local business or service
-- Stonewall Century Ride - Trinidad, Las Animas, CO; Tourism & visitor info
+- Stonewall Century Ride - Trinidad, Las Animas, CO; Local business or service
 - Sugarloaf - Trinidad, Las Animas, CO; Local business or service
 - Telemed Nightingales - Trinidad, Las Animas, CO; Local business or service
 - Tequila's Family Mexican Restaurant - Trinidad, Las Animas, CO; Food & drink
@@ -555,49 +575,49 @@ This report reviews every published directory listing for practical physical and
 - Trinidad Animal Clinic - Trinidad, Las Animas, CO; Health & wellness
 - Trinidad Art Fest 2026 ZAPP Artist Application - Trinidad, Las Animas, CO; Arts & culture
 - Trinidad Builders Supply - Trinidad, Las Animas, CO; Local business or service
-- Trinidad Gardens Dispensary - Trinidad, Las Animas, CO; Home, land & contracting
+- Trinidad Gardens Dispensary - Trinidad, Las Animas, CO; Local business or service
 - Trinidad High School - Trinidad, Las Animas, CO; Education & learning
-- Trinidad Lanes - Trinidad, Las Animas, CO; Tourism & visitor info
+- Trinidad Lanes - Trinidad, Las Animas, CO; Local business or service
 - Trinidad Lock & Key - Trinidad, Las Animas, CO; Local business or service
 - Trinidad Motor Inn - Trinidad, Las Animas, CO; Lodging & stays
-- Trinidad State College - Trinidad, Las Animas, CO; Media & news
-- Trinidad Triggers - Trinidad, Las Animas, CO; Tourism & visitor info
-- TSJC Presidents House - Trinidad, Las Animas, CO; Lodging & stays
+- Trinidad State College - Trinidad, Las Animas, CO; Education & learning
+- Trinidad Triggers - Trinidad, Las Animas, CO; Local business or service
+- TSJC Presidents House - Trinidad, Las Animas, CO; Local business or service
 - Tutti Scoops - Trinidad, Las Animas, CO; Local business or service
 - Two Feathers Salon - Trinidad, Las Animas, CO; Health & wellness
 - Ultimate Sports & Nutrition - Trinidad, Las Animas, CO; Local business or service
 - UPS Authorized Shipping Provider - Trinidad, Las Animas, CO; Local business or service
 - Valley Eye Care - Trinidad, Las Animas, CO; Local business or service
-- Walking & Running Paths - Trinidad, Las Animas, CO; Tourism & visitor info
+- Walking & Running Paths - Trinidad, Las Animas, CO; Outdoor recreation
 - Waste Connections of Colorado Inc - Trinidad, Las Animas, CO; Local business or service
 - The Water Station - Trinidad, Las Animas, CO; Local business or service
 - Tyrone / Villegreen - Tyrone, Las Animas, CO; Nonprofit & community
-- Center for Community Innovation - Regional, Regional, NM / CO; Lodging & stays
+- Center for Community Innovation - Regional, Regional, NM / CO; Business support
 - Community groups - Regional, Regional, NM / CO; Nonprofit & community
-- Creative Industries Division Grant Portal - Regional, Regional, NM; Funding & support
-- Creative New Mexico - Regional, Regional, NM; Funding & support
+- Creative Industries Division Grant Portal - Regional, Regional, NM; Arts & culture
+- Creative New Mexico - Regional, Regional, NM; Arts & culture
 - Enterprise Zone - Regional, Regional, NM / CO; Funding & support
-- Grocery stores, cafes, restaurants, laundromats, pharmacies, hardware stores - Regional, Regional, NM / CO; Food & drink
+- Grocery stores, cafes, restaurants, laundromats, pharmacies, hardware stores - Regional, Regional, NM / CO; Nonprofit & community
 - JTIP - Regional, Regional, NM / CO; Funding & support
 - Kauffman FastTrac & SCORE - Regional, Regional, NM / CO; Business support
-- Libraries and community centers - Regional, Regional, NM / CO; Business support
+- Libraries and community centers - Regional, Regional, NM / CO; Nonprofit & community
 - Local newspapers and digital news - Regional, Regional, NM / CO; Media & news
 - Lodging, restaurants, retail stores, and service businesses - Regional, Regional, NM / CO; Lodging & stays
 - Microsoft for Startups - Regional, Regional, NM / CO; Business support
-- Municipal and tourism calendars - Regional, Regional, NM / CO; Funding & support
+- Municipal and tourism calendars - Regional, Regional, NM / CO; Tourism & visitor info
 - New Mexico Creative Industries Resource Center - Regional, Regional, NM; Arts & culture
 - News/radio - Regional, Regional, NM / CO; Media & news
-- NM Creative Industries Grant Opportunities - Regional, Regional, NM; Funding & support
+- NM Creative Industries Grant Opportunities - Regional, Regional, NM; Arts & culture
 - NM Creative Industries Submit or Update a Resource Listing - Regional, Regional, NM; Arts & culture
-- Nonprofit and community-service grants - Regional, Regional, NM / CO; Funding & support
+- Nonprofit and community-service grants - Regional, Regional, NM / CO; Nonprofit & community
 - Radio stations - Regional, Regional, NM / CO; Media & news
-- Real estate, façade, and downtown revitalization funds - Regional, Regional, NM / CO; Funding & support
-- SBA & NM Small Business Development Center - Regional, Regional, NM / CO; Funding & support
-- Schools, colleges, churches, and service organizations - Regional, Regional, NM / CO; Lodging & stays
-- Schools, libraries, churches, and community centers - Regional, Regional, NM / CO; Business support
+- Real estate, façade, and downtown revitalization funds - Regional, Regional, NM / CO; Professional services
+- SBA & NM Small Business Development Center - Regional, Regional, NM / CO; Business support
+- Schools, colleges, churches, and service organizations - Regional, Regional, NM / CO; Nonprofit & community
+- Schools, libraries, churches, and community centers - Regional, Regional, NM / CO; Nonprofit & community
 - Small-business loans, loan guarantees, and credit support - Regional, Regional, NM / CO; Funding & support
-- Tourism, arts, event, and creative-economy grants - Regional, Regional, NM / CO; Funding & support
-- Workforce and job-training incentives - Regional, Regional, NM / CO; Funding & support
+- Tourism, arts, event, and creative-economy grants - Regional, Regional, NM / CO; Arts & culture
+- Workforce and job-training incentives - Regional, Regional, NM / CO; Business support
 
 ## Review Boundary
 

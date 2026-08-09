@@ -463,7 +463,8 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn('id="online-connection-filter"', page)
         self.assertIn('id="outreach-channel-filter"', page)
         self.assertIn('id="outreach-status-filter"', page)
-        self.assertIn("What the listing labels mean", page)
+        self.assertIn("How to read a listing", page)
+        self.assertNotIn('id="access-mode-filter"', page)
 
         with tempfile.TemporaryDirectory() as folder:
             asset_out = Path(folder)

@@ -39,6 +39,8 @@ LISTING_KEYWORD_INDEX_JSON = REPO_DATA / "listing-keyword-index.json"
 DIRECTORY_CONNECTIVITY_STATUS_JSON = REPO_DATA / "directory-connectivity-status.json"
 NATIONAL_FUNDING_JSON = REPO_DATA / "national-funding-opportunities.json"
 NATIONAL_FUNDING_WATCH_JSON = REPO_DATA / "national-funding-watch-sources.json"
+RESOURCE_DISCOVERY_JSON = REPO_DATA / "resource-discovery-sources.json"
+RESOURCE_KEYWORD_REGISTRY_JSON = REPO_DATA / "resource-keyword-registry.json"
 REAUDIT_NOTES = DOWNLOADS / "tri_county_reaudit" / "comprehensive_reaudit_source_notes.md"
 NEW_PDF_EXTRACT_DIR = DOWNLOADS / "tri_county_new_pdf_extract_20260621"
 BUILD_DATE = os.environ.get("BUILD_DATE", date.today().isoformat())
@@ -110,6 +112,7 @@ def load_json_records(path: Path, key: str) -> list[dict]:
 
 NATIONAL_FUNDING_OPPORTUNITIES = load_json_records(NATIONAL_FUNDING_JSON, "opportunities")
 NATIONAL_FUNDING_WATCH_SOURCES = load_json_records(NATIONAL_FUNDING_WATCH_JSON, "sources")
+RESOURCE_DISCOVERY_SOURCES = load_json_records(RESOURCE_DISCOVERY_JSON, "sources")
 
 
 def build_asset_version() -> str:
@@ -130,6 +133,8 @@ def build_asset_version() -> str:
         DIRECTORY_CONNECTIVITY_STATUS_JSON,
         NATIONAL_FUNDING_JSON,
         NATIONAL_FUNDING_WATCH_JSON,
+        RESOURCE_DISCOVERY_JSON,
+        RESOURCE_KEYWORD_REGISTRY_JSON,
     ):
         if path.exists():
             digest.update(path.read_bytes())
@@ -2456,7 +2461,20 @@ def normalized_resource_name_key(value: str) -> str:
     value = clean_text(value).casefold().replace("&", " and ")
     value = re.sub(r"\b(llc|inc|co|company|corp|corporation)\b", " ", value)
     value = re.sub(r"[^a-z0-9]+", " ", value)
-    return " ".join(value.split())
+    tokens = value.split()
+    collapsed: list[str] = []
+    index = 0
+    while index < len(tokens):
+        if len(tokens[index]) == 1 and tokens[index].isalpha():
+            letters = []
+            while index < len(tokens) and len(tokens[index]) == 1 and tokens[index].isalpha():
+                letters.append(tokens[index])
+                index += 1
+            collapsed.append("".join(letters) if len(letters) > 1 else letters[0])
+            continue
+        collapsed.append(tokens[index])
+        index += 1
+    return " ".join(collapsed)
 
 
 def split_resource_alias_names(value: str) -> list[str]:
@@ -2538,37 +2556,38 @@ def inferred_listing_type(row: dict) -> str:
     name = clean_text(row.get("resource_name"))
     note = "" if generic_note(row) else clean_text(row.get("notes"))
     name_category = " ".join([name, clean_text(row.get("category"))]).casefold()
-    if "catering" in name_category and not any(
-        term in name_category for term in ("grant", "funding", "scholarship", "stipend")
+    if text_matches_terms(name_category, ["catering"]) and not text_matches_terms(
+        name_category, ["grant", "funding", "scholarship", "stipend"]
     ):
         return "Food & drink"
-    text = " ".join(
-        [
-            name,
-            clean_text(row.get("category")),
-            clean_text(row.get("resource_type")),
-            " ".join(listing_keyword_terms(row)),
-            note,
-        ]
-    ).casefold()
     category = clean_text(row.get("category"))
     resource_type = clean_text(row.get("resource_type"))
-    for needles, label in PUBLIC_TYPE_RULES:
-        if any(needle in text for needle in needles):
-            return label
-    for candidate in [category, resource_type]:
+
+    # Prefer the listing's concrete identity fields before broader keywords or notes.
+    # This keeps incidental text such as "artist audience" from turning a cafe into
+    # an arts listing and prevents short terms such as "art" matching "Auto Parts."
+    candidates = []
+    if category.casefold() not in GENERIC_CATEGORIES:
+        candidates.append(category)
+    candidates.append(name)
+    if resource_type.casefold() not in GENERIC_RESOURCE_TYPES:
+        candidates.append(resource_type)
+    candidates.extend([" ".join(listing_keyword_terms(row)), note])
+    for candidate in candidates:
         if candidate in PUBLIC_TYPE_LABELS:
             return candidate
-        candidate_text = candidate.casefold()
-        if candidate_text:
-            for needles, label in PUBLIC_TYPE_RULES:
-                if any(needle in candidate_text for needle in needles):
-                    return label
+        if not candidate:
+            continue
+        for needles, label in PUBLIC_TYPE_RULES:
+            if text_matches_terms(candidate, list(needles)):
+                return label
+
+    text = " ".join(candidate for candidate in candidates if candidate)
     for needle, label in BUSINESS_TYPE_KEYWORDS:
-        if needle in text:
+        if business_keyword_matches(text, needle):
             label_text = label.casefold()
             for needles, public_label in PUBLIC_TYPE_RULES:
-                if any(rule in label_text or rule in needle for rule in needles):
+                if text_matches_terms(label_text, list(needles)) or text_matches_terms(needle, list(needles)):
                     return public_label
             return "Local business or service"
     return "Local business or service"
@@ -2906,8 +2925,9 @@ def physical_ad_location_rows(rows: list[dict], limit: int = 96) -> list[dict]:
     for item in ranked:
         by_county[clean_text(item[1].get("county")) or "Regional"].append(item)
     county_order = ["Colfax", "Las Animas", "Huerfano", "Regional"]
-    county_cap = max(24, limit // 3)
-    town_cap = 16
+    active_counties = [county for county in county_order if by_county.get(county)]
+    county_cap = max(1, (limit + max(1, len(active_counties)) - 1) // max(1, len(active_counties)))
+    town_cap = max(2, (county_cap + 1) // 2)
     chosen: list[dict] = []
     chosen_ids: set[str] = set()
     town_counts: Counter[str] = Counter()
@@ -2926,7 +2946,7 @@ def physical_ad_location_rows(rows: list[dict], limit: int = 96) -> list[dict]:
             if added >= cap or len(chosen) >= limit:
                 return
 
-    for county in county_order:
+    for county in active_counties:
         choose_from(by_county.get(county, []), county_cap)
     if len(chosen) < limit:
         choose_from(ranked, limit - len(chosen))
@@ -3771,6 +3791,14 @@ def write_data_files(rows: list[dict], summary: dict) -> None:
     amplifier_channels = [public_data_item(item) for item in AMPLIFIER_CHANNELS]
     national_funding = [public_data_item(item) for item in NATIONAL_FUNDING_OPPORTUNITIES]
     national_funding_sources = [public_data_item(item) for item in NATIONAL_FUNDING_WATCH_SOURCES]
+    resource_discovery_sources = [
+        {
+            key: public_text_value(item.get(key))
+            for key in ("id", "name", "url", "category", "authority", "public_use")
+            if item.get(key) not in (None, "", [])
+        }
+        for item in RESOURCE_DISCOVERY_SOURCES
+    ]
     public_rows = [public_data_item(row) for row in rows]
     physical_ad_locations = []
     for row in physical_ad_location_rows(rows, limit=120):
@@ -3797,6 +3825,7 @@ def write_data_files(rows: list[dict], summary: dict) -> None:
         "amplifier_channels": amplifier_channels,
         "national_funding_opportunities": national_funding,
         "national_funding_watch_sources": national_funding_sources,
+        "resource_discovery_sources": resource_discovery_sources,
         "posting_spaces": [public_data_item(item) for item in POSTING_SPACES],
         "physical_ad_locations": physical_ad_locations,
         "persona_routes": [public_data_item(item) for item in PERSONA_ROUTES],
@@ -4072,8 +4101,9 @@ def grouped_directory_sources(sources: list[dict]) -> list[dict]:
                 if kind and kind not in kinds:
                     kinds.append(kind)
             group["kind"] = " + ".join(kinds[:3]) + (" + more" if len(kinds) > 3 else "")
-            group["best_for"] = f"Grouped routes for {group['title']}. Use the sublinks below for the specific directory, grant, event, listing, advertising, or support task."
-            group["action"] = "Pick the sublink that matches the job, then confirm current rules, deadlines, eligibility, rates, or acceptance with the source."
+            purpose = ", ".join(kinds[:3]).casefold() or "local information and support"
+            group["best_for"] = f"Use {group['title']} for {purpose}."
+            group["action"] = "Choose the link that fits your task; that page has the current details."
         normalized.append(group)
     return sorted(normalized, key=source_group_priority)
 
@@ -4132,7 +4162,10 @@ def source_group_cards(sources: list[dict], limit: int | None = None) -> str:
               <p>{html_escape(public_text_value(group['best_for']))}</p>
               <p class="action-line">{html_escape(public_text_value(group['action']))}</p>
               <div class="resource-outreach"><strong>Promotion paths:</strong>{resource_outreach_channel_badges(group, limit=4)}</div>
-              <div class="source-link-list">{links}</div>
+              <details class="source-group-links" open>
+                <summary>Open {html_escape(group['source_count'])} {route_word}</summary>
+                <div class="source-link-list">{links}</div>
+              </details>
             </article>
             """
         )
@@ -4342,71 +4375,68 @@ def page_shell(
         (task_nav_labels.get(item["active"], ROUTE_LABELS[item["active"]]), route_href(ACTIVE_PATHS[item["active"]]), item["active"])
         for item in TASK_PAGE_DEFS
     ]
+    promote_nav_links = [
+        ("Calendars + media", "amplifiers/index.html", "amplifiers"),
+        ("Physical posting", "posting/index.html", "posting"),
+        ("Regional channels", route_href(ACTIVE_PATHS["regional-channels"]), "regional-channels"),
+        ("Message templates", "templates/index.html", "templates"),
+        *task_nav_links,
+    ]
+    county_nav_links = [
+        ("Colfax", "counties/colfax/index.html", "colfax"),
+        ("Las Animas", "counties/las-animas/index.html", "las-animas"),
+        ("Huerfano", "counties/huerfano/index.html", "huerfano"),
+    ]
+    more_nav_links = [
+        ("Home", "index.html", "home"),
+        ("Plan", "plan/index.html", "plan"),
+        ("Region", "region/index.html", "region"),
+        ("About + process", "about/index.html", "about"),
+        ("Appendix", "appendix/index.html", "appendix"),
+        ("Submit update", "submit/index.html", "submit"),
+    ]
     nav_structure = [
-        ("link", "Home", "index.html", "home"),
+        ("link", "Directory", "network/index.html", "network", "nav-core"),
+        ("link", "Funding", route_href(ACTIVE_PATHS["funding"]), "funding", "nav-core"),
+        ("link", "Arts & Culture", route_href(ACTIVE_PATHS["arts-culture"]), "arts-culture", "nav-core"),
         (
             "group",
-            "Start",
-            [
-                ("Plan", "plan/index.html", "plan"),
-                ("Region", "region/index.html", "region"),
-                ("About", "about/index.html", "about"),
-            ],
-        ),
-        (
-            "group",
-            "Find",
-            [
-                ("Network", "network/index.html", "network"),
-                ("Funding", route_href(ACTIVE_PATHS["funding"]), "funding"),
-                ("Arts & Culture", route_href(ACTIVE_PATHS["arts-culture"]), "arts-culture"),
-                ("Amplifiers", "amplifiers/index.html", "amplifiers"),
-                ("Regional channels", route_href(ACTIVE_PATHS["regional-channels"]), "regional-channels"),
-                ("Appendix", "appendix/index.html", "appendix"),
-            ],
+            "Promote",
+            promote_nav_links,
+            "nav-desktop-only",
         ),
         (
             "group",
             "Counties",
-            [
-                ("Colfax", "counties/colfax/index.html", "colfax"),
-                ("Las Animas", "counties/las-animas/index.html", "las-animas"),
-                ("Huerfano", "counties/huerfano/index.html", "huerfano"),
-            ],
+            county_nav_links,
+            "nav-desktop-only",
         ),
         (
             "group",
-            "Tasks",
-            task_nav_links,
-        ),
-        (
-            "group",
-            "Tools",
-            [
-                ("Posting rules", "posting/index.html", "posting"),
-                ("Templates", "templates/index.html", "templates"),
-                ("Submit update", "submit/index.html", "submit"),
-            ],
+            "More",
+            more_nav_links,
+            "nav-desktop-only",
         ),
     ]
 
-    def nav_link(label: str, href: str, key: str) -> str:
+    def nav_link(label: str, href: str, key: str, extra_class: str = "") -> str:
         active_class = "is-active" if key == active else ""
         current = ' aria-current="page"' if key == active else ""
-        return f'<a class="{active_class}" href="{rel(href, depth)}"{current}>{label}</a>'
+        classes = " ".join(value for value in (active_class, extra_class) if value)
+        return f'<a class="{classes}" href="{rel(href, depth)}"{current}>{label}</a>'
 
     nav_parts = []
     for item in nav_structure:
         if item[0] == "link":
-            _, label, href, key = item
-            nav_parts.append(nav_link(label, href, key))
+            _, label, href, key, extra_class = item
+            nav_parts.append(nav_link(label, href, key, extra_class))
             continue
-        _, label, children = item
+        _, label, children, extra_class = item
         group_active = any(key == active for _, _, key in children)
         child_links = "\n".join(nav_link(child_label, href, key) for child_label, href, key in children)
         nav_parts.append(
             f"""
-            <details class="nav-group {'is-active' if group_active else ''}">
+            <details class="nav-group {extra_class} {'is-active' if group_active else ''}">
               <summary class="nav-trigger">{label}</summary>
               <div class="nav-menu">
                 {child_links}
@@ -4414,10 +4444,29 @@ def page_shell(
             </details>
             """
         )
+    mobile_more_active = active not in {"network", "funding", "arts-culture"}
+    mobile_sections = [
+        ("Guide", more_nav_links),
+        ("Promote", promote_nav_links),
+        ("Counties", county_nav_links),
+    ]
+    mobile_links = "\n".join(
+        f'<span class="nav-menu-label">{html_escape(section_label)}</span>'
+        + "\n".join(nav_link(child_label, href, key) for child_label, href, key in children)
+        for section_label, children in mobile_sections
+    )
+    nav_parts.append(
+        f"""
+        <details class="nav-group nav-mobile-only {'is-active' if mobile_more_active else ''}">
+          <summary class="nav-trigger">More</summary>
+          <div class="nav-menu nav-menu--mobile">{mobile_links}</div>
+        </details>
+        """
+    )
     nav = "\n".join(nav_parts)
     footer_structure = [
         (
-            "Start",
+            "Guide",
             [
                 ("Home", "index.html"),
                 ("Plan", "plan/index.html"),
@@ -4426,19 +4475,22 @@ def page_shell(
             ],
         ),
         (
-            "Find",
+            "Find resources",
             [
                 ("Directory", "network/index.html"),
                 ("Funding", route_href(ACTIVE_PATHS["funding"])),
                 ("Arts & Culture", route_href(ACTIVE_PATHS["arts-culture"])),
-                ("Amplifiers", "amplifiers/index.html"),
-                ("Regional channels", route_href(ACTIVE_PATHS["regional-channels"])),
                 ("Appendix", "appendix/index.html"),
             ],
         ),
         (
-            "Task Guides",
-            [(label, href) for label, href, _ in task_nav_links],
+            "Promote",
+            [
+                ("Calendars + media", "amplifiers/index.html"),
+                ("Physical posting", "posting/index.html"),
+                ("Regional channels", route_href(ACTIVE_PATHS["regional-channels"])),
+                ("Message templates", "templates/index.html"),
+            ],
         ),
         (
             "Counties",
@@ -4452,10 +4504,8 @@ def page_shell(
             ],
         ),
         (
-            "Tools + Data",
+            "Data + updates",
             [
-                ("Posting rules", "posting/index.html"),
-                ("Templates", "templates/index.html"),
                 ("Submit update", "submit/index.html"),
                 ("CSV data", "data/tri_county_persona_resources.csv"),
                 ("JSON data", "data/guide-data.json"),
@@ -5021,10 +5071,6 @@ def network_page(rows: list[dict]) -> str:
                 <select id="resource-type-filter"><option value="All">All types</option></select>
               </div>
               <div>
-                <label for="access-mode-filter">Access mode</label>
-                <select id="access-mode-filter"><option value="All">All access modes</option></select>
-              </div>
-              <div>
                 <label for="online-connection-filter">Online connection</label>
                 <select id="online-connection-filter"><option value="All">All connection types</option></select>
               </div>
@@ -5035,9 +5081,9 @@ def network_page(rows: list[dict]) -> str:
               <div>
                 <label for="outreach-status-filter">Channel status</label>
                 <select id="outreach-status-filter">
-                  <option value="All">Listed routes and ask-first ideas</option>
-                  <option value="listed">Listed routes</option>
-                  <option value="ask">Ask first</option>
+                  <option value="All">Any channel indication</option>
+                  <option value="listed">Route shown on linked page</option>
+                  <option value="ask">Ask before using</option>
                 </select>
               </div>
             </div>
@@ -5063,22 +5109,22 @@ def network_page(rows: list[dict]) -> str:
         </details>
       </div>
       <details class="marker-help">
-        <summary>What the listing labels mean</summary>
+        <summary>How to read a listing</summary>
         <div class="marker-legend" aria-label="Directory marker legend">
           <span class="listing-marker listing-marker--physical">Physical location</span>
           <span>{physical_location_count} listings include a map-able or street-style location.</span>
           <span class="listing-marker listing-marker--ad">Ask about flyers</span>
           <span>{physical_ad_count} listings may be useful places to ask about physical materials. Ask first; the guide does not imply permission.</span>
           <span class="connection-label connection-label--connected"><span class="connection-label__signal" aria-hidden="true"></span>Connect online</span>
-          <span>{direct_website_count} listings point to a business website or organization website. The animated treatment appears only when the latest check opens the site successfully.</span>
+          <span>{direct_website_count} listings point to a business or organization website.</span>
           <span class="connection-label connection-label--profile"><span class="connection-label__signal" aria-hidden="true"></span>Online profile</span>
           <span>{hosted_profile_count} listings use a hosted directory, tourism page, or social profile that helps with discovery, updates, and cross-promotion.</span>
           <span class="connection-label connection-label--missing"><span class="connection-label__signal" aria-hidden="true"></span>No online link listed</span>
           <span>{no_online_count} listings currently rely on phone, email, map, or update-form routes.</span>
-          <span class="outreach-tag outreach-tag--listed">Listed route</span>
-          <span>{outreach_listed_count} listings identify at least one directory, calendar, newsletter, media, advertising, sponsorship, or sharing route. Open the linked page to confirm current terms.</span>
+          <span class="outreach-tag outreach-tag--listed">Route shown</span>
+          <span>{outreach_listed_count} listings point to at least one directory, calendar, newsletter, media, advertising, sponsorship, or sharing route. Open the linked page for current terms.</span>
           <span class="outreach-tag outreach-tag--ask">Ask first</span>
-          <span>{outreach_ask_count} listings may suit a tailored outreach request, but the guide does not imply that placement or sharing is available.</span>
+          <span>{outreach_ask_count} listings may suit a tailored outreach request. Contact the organization before sending materials or assuming placement.</span>
         </div>
       </details>
       <p id="resource-results-note" class="section-note" aria-live="polite">Search by town, county, business type, audience, keyword, flyer posting fit, or outreach task.</p>
@@ -5146,16 +5192,55 @@ def network_page(rows: list[dict]) -> str:
     )
 
 
+def normalized_match_text(value: object) -> str:
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", str(value or "").casefold()).split())
+
+
+def text_matches_terms(value: object, terms: list[str]) -> bool:
+    haystack = f" {normalized_match_text(value)} "
+    return any(
+        normalized and f" {normalized} " in haystack
+        for normalized in (normalized_match_text(term) for term in terms)
+    )
+
+
+BUSINESS_PREFIX_KEYWORDS = {"brew", "dent", "landscap", "plumb"}
+
+
+def business_keyword_matches(value: object, term: str) -> bool:
+    normalized_value = normalized_match_text(value)
+    normalized_term = normalized_match_text(term)
+    if not normalized_term:
+        return False
+    if normalized_term in BUSINESS_PREFIX_KEYWORDS:
+        return bool(re.search(rf"\b{re.escape(normalized_term)}[a-z0-9]*\b", normalized_value))
+    return text_matches_terms(normalized_value, [normalized_term])
+
+
 def row_matches_terms(row: dict, terms: list[str]) -> bool:
-    blob = " ".join(str(value or "") for value in row.values()).lower()
-    return any(term in blob for term in terms)
+    identity_fields = (
+        "resource_name",
+        "alternate_names",
+        "category",
+        "public_listing_type",
+        "public_category",
+    )
+    return text_matches_terms(" ".join(str(row.get(field) or "") for field in identity_fields), terms)
 
 
 def resource_preview_cards(rows: list[dict], terms: list[str], limit: int = 18) -> str:
-    matched = [
-        row for row in sorted(rows, key=lambda item: (item.get("resource_name") or "", item.get("county") or "", item.get("town") or ""))
-        if row_matches_terms(row, terms)
-    ][:limit]
+    matched = []
+    seen_names = set()
+    for row in sorted(rows, key=lambda item: (item.get("resource_name") or "", item.get("county") or "", item.get("town") or "")):
+        if not row_matches_terms(row, terms):
+            continue
+        name_key = normalized_resource_name_key(row.get("resource_name"))
+        if not name_key or name_key in seen_names:
+            continue
+        seen_names.add(name_key)
+        matched.append(row)
+        if len(matched) >= limit:
+            break
     if not matched:
         return '<p class="section-note">No matching local inventory rows are available in this build.</p>'
     cards = []
@@ -5188,11 +5273,63 @@ def resource_preview_cards(rows: list[dict], terms: list[str], limit: int = 18) 
 def sources_matching_terms(terms: list[str]) -> list[dict]:
     return [
         item for item in DIRECTORY_SOURCES
-        if any(
-            term in " ".join(str(item.get(field) or "") for field in ["title", "kind", "best_for", "action", "county"]).lower()
-            for term in terms
+        if text_matches_terms(
+            " ".join(str(item.get(field) or "") for field in ["title", "kind", "best_for", "action", "county"]),
+            terms,
         )
     ]
+
+
+DISCOVERY_CATEGORY_LABELS = {
+    "grants-public-funding": "Grants and public funding",
+    "business-capital": "Loans and business capital",
+    "fiscal-sponsorship": "Fiscal sponsors",
+    "nonprofit-directories": "Nonprofit directories",
+    "business-directories": "Business directories",
+    "artists-creative-opportunities": "Artist opportunities",
+}
+
+
+def selected_discovery_sources(categories: list[str], limit: int = 9) -> list[dict]:
+    buckets = {
+        category: [item for item in RESOURCE_DISCOVERY_SOURCES if item.get("category") == category]
+        for category in categories
+    }
+    selected = []
+    index = 0
+    while len(selected) < limit:
+        added = False
+        for category in categories:
+            bucket = buckets[category]
+            if index < len(bucket):
+                selected.append(bucket[index])
+                added = True
+                if len(selected) >= limit:
+                    break
+        if not added:
+            break
+        index += 1
+    return selected
+
+
+def discovery_source_cards(categories: list[str], limit: int = 9) -> str:
+    sources = selected_discovery_sources(categories, limit)
+    if not sources:
+        return '<p class="section-note">No external search registry is configured for this route yet.</p>'
+    return "\n".join(
+        f"""
+        <article class="source-card discovery-source-card">
+          <div class="source-card__meta">
+            <span>{html_escape(DISCOVERY_CATEGORY_LABELS.get(item.get('category'), 'Resource search'))}</span>
+            <span>{html_escape(item.get('authority'))}</span>
+          </div>
+          <h3><a href="{html_escape(item.get('url'))}" target="_blank" rel="noreferrer">{html_escape(item.get('name'))}</a></h3>
+          <p>{html_escape(item.get('public_use'))}</p>
+          <a class="text-link" href="{html_escape(item.get('url'))}" target="_blank" rel="noreferrer">Open registry</a>
+        </article>
+        """
+        for item in sources
+    )
 
 
 FUNDING_AUDIENCE_FILTERS = (
@@ -5294,7 +5431,7 @@ def national_funding_card(item: dict) -> str:
         <p><strong>Deadline</strong><span>{html_escape(item.get('deadline_display'))}</span></p>
         <p><strong>Funding or support</strong><span>{html_escape(item.get('funding_range'))}</span></p>
       </div>
-      <details class="funding-details" open>
+      <details class="funding-details">
         <summary>Eligibility, costs, and allowed uses</summary>
         <dl class="funding-terms">
           <div><dt>Applicant</dt><dd>{html_escape(applicants)}</dd></div>
@@ -5328,7 +5465,12 @@ def national_funding_cards() -> str:
 
 
 def funding_page(rows: list[dict]) -> str:
-    terms = ["fund", "grant", "scholarship", "stipend", "loan", "incentive", "foundation", "capital", "training reimbursement", "technical assistance"]
+    terms = [
+        "funding", "grant", "grants", "scholarship", "scholarships", "stipend", "stipends",
+        "loan", "loans", "incentive", "incentives", "foundation", "foundations", "capital",
+        "microgrant", "microgrants", "fellowship", "fellowships", "training reimbursement",
+        "technical assistance", "cdfi",
+    ]
     funding_sources = sources_matching_terms(terms)
     content = f"""
     <section class="page-hero">
@@ -5378,13 +5520,25 @@ def funding_page(rows: list[dict]) -> str:
             </select>
           </label>
         </div>
-        <p id="funding-results-note" class="results-note" role="status" aria-live="polite">Showing all {len(NATIONAL_FUNDING_OPPORTUNITIES)} opportunities.</p>
+        <p id="funding-results-note" class="results-note" role="status" aria-live="polite">Funding entries are ready to filter.</p>
       </div>
       <div id="national-funding-results" class="funding-grid">{national_funding_cards()}</div>
+      <div class="section-actions directory-load-more-row">
+        <button id="funding-load-more" class="button button-soft" type="button">Show more funding entries</button>
+      </div>
       <div class="download-row">
         <a class="button button-soft" href="../../data/national-funding-opportunities.csv" download>Download funding CSV</a>
         <a class="button button-soft" href="../../data/national-funding-opportunities.json" download>Download funding JSON</a>
       </div>
+    </section>
+    <section class="section funding-registry-section">
+      <div class="section-heading">
+        <p class="eyebrow">Search beyond this list</p>
+        <h2>Funding, lending, and fiscal-sponsor registries.</h2>
+        <p class="section-note">Use these when the curated entries do not fit. Start with the registry, then confirm the program or sponsor directly.</p>
+      </div>
+      <div class="source-grid compact" data-progressive-list data-compact-count="4" data-wide-count="9">{discovery_source_cards(['grants-public-funding', 'business-capital', 'fiscal-sponsorship'], 99)}</div>
+      <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="registries">Show more registries</button></div>
     </section>
     <section class="section tinted">
       <div class="section-heading">
@@ -5399,7 +5553,8 @@ def funding_page(rows: list[dict]) -> str:
         <p class="eyebrow">Funding directory shortcuts</p>
         <h2>Programs and pages to open directly.</h2>
       </div>
-      <div class="source-grid compact">{source_group_cards(funding_sources)}</div>
+      <div class="source-grid compact" data-progressive-list data-compact-count="4" data-wide-count="12">{source_group_cards(funding_sources, 12)}</div>
+      <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="shortcuts">Show more shortcuts</button><a class="button button-soft" href="../../network/index.html?q=funding+grant+loan#resource-results">Search every funding-related listing</a></div>
     </section>
     <section class="section tinted">
       <div class="section-heading">
@@ -5407,7 +5562,8 @@ def funding_page(rows: list[dict]) -> str:
         <h2>Additional rows that may connect to money, training, or support.</h2>
         <p class="section-note">Use these as starting entries. Open the link or contact path before including a program in public advice.</p>
       </div>
-      <div class="resource-list">{resource_preview_cards(rows, terms)}</div>
+      <div class="resource-list" data-progressive-list data-compact-count="4" data-wide-count="12">{resource_preview_cards(rows, terms, 12)}</div>
+      <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="local entries">Show more local entries</button></div>
       {download_buttons(2)}
     </section>
     {submit_listing_panel(2, "directory")}
@@ -5424,20 +5580,13 @@ def funding_page(rows: list[dict]) -> str:
 
 
 def arts_culture_page(rows: list[dict]) -> str:
-    terms = ["art", "artist", "gallery", "creative", "maker", "music", "theater", "theatre", "museum", "cultural", "craft", "mural", "performance", "dance", "film", "literary"]
+    terms = [
+        "art", "arts", "artist", "artists", "gallery", "galleries", "creative", "maker", "makers",
+        "music", "musician", "musicians", "theater", "theatre", "museum", "museums", "cultural",
+        "craft", "crafts", "artisan", "artisans", "mural", "murals", "performance", "performances",
+        "dance", "film", "literary", "writer", "writers", "studio", "studios",
+    ]
     arts_sources = sources_matching_terms(terms)
-    arts_leads = [item for item in CURRENT_LEADS if item["title"] == "Walsenburg Mercantile vendors"]
-    lead_markup = "\n".join(
-        f"""
-        <article class="lead-card" data-lead-group="{html_escape(item['group'])}" data-county="{html_escape(item['county'])}">
-          <div class="source-card__meta"><span>{html_escape(item['county'])}</span><span>{html_escape(item['kind'])}</span></div>
-          <h3><a href="{html_escape(item['url'])}" target="_blank" rel="noreferrer">{html_escape(item['title'])}</a></h3>
-          <p>{html_escape(item['best_for'])}</p>
-          <p class="action-line">{html_escape(item['action'])}</p>
-        </article>
-        """
-        for item in arts_leads
-    )
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">Arts & Culture</p>
@@ -5460,22 +5609,32 @@ def arts_culture_page(rows: list[dict]) -> str:
     </nav>
     <section class="section">
       <div class="section-heading">
-        <p class="eyebrow">Fast arts entries</p>
-        <h2>Useful arts-directory items to check now.</h2>
-        <p class="section-note">These entries help keep arts pages practical: who may list creative work, where makers appear, and what needs an address or status check.</p>
+        <p class="eyebrow">Choose a creative route</p>
+        <h2>Start with what you need to do.</h2>
       </div>
-      <div class="current-leads-grid">{lead_markup}</div>
-      <div class="section-actions">
-        <a class="button button-primary" href="../../artist-gallery-promotion/index.html">Open artist promotion guide</a>
-        <a class="button button-soft" href="../../network/index.html">Search all creative entries</a>
+      <div class="mini-grid arts-action-grid">
+        <a class="mini-card category-route-card" href="../../network/index.html?q=artist+gallery+maker#resource-results"><h3>Find artists and galleries</h3><p>Search local makers, studios, galleries, performers, and cultural organizations.</p><strong>Search creative listings</strong></a>
+        <a class="mini-card category-route-card" href="../funding/index.html?audience=arts"><h3>Find arts funding</h3><p>Compare grants, fellowships, fiscal-sponsor routes, and free support programs.</p><strong>Open funding</strong></a>
+        <a class="mini-card category-route-card" href="../../amplifiers/index.html#amplifier-event-calendars"><h3>Promote an event</h3><p>Find calendars, visitor guides, media, newsletters, and partner channels.</p><strong>Open promotion channels</strong></a>
+        <a class="mini-card category-route-card" href="../../submit/index.html"><h3>Add creative work</h3><p>Submit an artist, gallery, venue, cultural program, or corrected contact route.</p><strong>Submit a listing</strong></a>
       </div>
+    </section>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Open calls and artist registries</p>
+        <h2>Search wider creative-opportunity networks.</h2>
+        <p class="section-note">Use these for residencies, public-art calls, exhibitions, fellowships, grants, and creative-business programs beyond the local directory.</p>
+      </div>
+      <div class="source-grid compact" data-progressive-list data-compact-count="4" data-wide-count="7">{discovery_source_cards(['artists-creative-opportunities'], 99)}</div>
+      <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="registries">Show more registries</button></div>
     </section>
     <section class="section tinted">
       <div class="section-heading">
         <p class="eyebrow">Arts and culture shortcuts</p>
         <h2>Pages that already gather creative visibility.</h2>
       </div>
-      <div class="source-grid compact">{source_group_cards(arts_sources)}</div>
+      <div class="source-grid compact" data-progressive-list data-compact-count="4" data-wide-count="12">{source_group_cards(arts_sources, 12)}</div>
+      <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="shortcuts">Show more shortcuts</button></div>
     </section>
     <section class="section">
       <div class="section-heading">
@@ -5483,7 +5642,8 @@ def arts_culture_page(rows: list[dict]) -> str:
         <h2>Artists, venues, galleries, makers, and cultural entries.</h2>
         <p class="section-note">Use these rows for discovery and outreach. Confirm current details before publishing a recommendation or sending visitors to a location.</p>
       </div>
-      <div class="resource-list">{resource_preview_cards(rows, terms, 24)}</div>
+      <div class="resource-list" data-progressive-list data-compact-count="4" data-wide-count="12">{resource_preview_cards(rows, terms, 12)}</div>
+      <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="local entries">Show more local entries</button><a class="button button-primary" href="../../network/index.html?q=artist+gallery+maker#resource-results">Search the full creative directory</a></div>
       {download_buttons(2)}
     </section>
     {submit_listing_panel(2, "directory")}
@@ -5577,7 +5737,7 @@ Could you point me to the right form, deadline, rate card, eligibility rule, or 
         <article class="mini-card"><h3>What should I prepare before submitting an event?</h3><p>Prepare the event name, date, time, location, short description, contact link, images, flyer, accessibility notes, and whether the event is free, ticketed, nonprofit, youth, tourism, business, or community-oriented.</p></article>
       </div>
     </section>
-    <section class="section">
+    <section id="amplifier-event-calendars" class="section">
       <div class="section-heading">
         <p class="eyebrow">Channel table</p>
         <h2>Places to check before submitting or pitching.</h2>
@@ -5647,16 +5807,20 @@ def posting_page(rows: list[dict]) -> str:
         """
         for item in PHYSICAL_AD_PLACE_TYPES
     )
-    candidate_rows = physical_ad_location_rows(rows)
-    candidate_table = "\n".join(
+    candidate_rows = physical_ad_location_rows(rows, limit=18)
+    candidate_cards = "\n".join(
         f"""
-        <tr>
-          <td><strong>{entity_name_link(row, row.get('resource_name') or 'Unnamed place')}</strong><span class="table-subtle">{html_escape(public_place(row))}</span></td>
-          <td>{html_escape(row.get('public_listing_type') or inferred_listing_type(row))}</td>
-          <td>{html_escape(physical_ad_location_fit(row))}</td>
-          <td>{html_escape(physical_ad_location_note(row))}</td>
-          <td><div class="resource-links">{contact_links_for_row(row)}</div></td>
-        </tr>
+        <article class="resource-item physical-posting-card">
+          <div class="source-card__meta">
+            <span>{html_escape(row.get('county'))}</span>
+            <span>{html_escape(public_place(row))}</span>
+            <span>{html_escape(row.get('public_listing_type') or inferred_listing_type(row))}</span>
+          </div>
+          <h3>{entity_name_link(row, row.get('resource_name') or 'Unnamed place')}</h3>
+          <p><strong>Useful for:</strong> {html_escape(physical_ad_location_fit(row))}</p>
+          <p class="action-line"><strong>Ask first:</strong> {html_escape(physical_ad_location_note(row))}</p>
+          <div class="resource-links">{contact_links_for_row(row)}</div>
+        </article>
         """
         for row in candidate_rows
     )
@@ -5680,13 +5844,8 @@ def posting_page(rows: list[dict]) -> str:
         <h2>Directory rows that may help with flyers, posters, rack cards, or front-desk referrals.</h2>
         <p class="section-note">This shortlist is pulled from the guide's local directory rows that look most useful for offline promotion. Ask the location owner or office before posting, leaving materials, or implying sponsorship.</p>
       </div>
-      <div class="table-wrap physical-posting-table">
-        <table>
-          <thead><tr><th>Place</th><th>Type</th><th>Useful for</th><th>Before you post</th><th>Contact</th></tr></thead>
-          <tbody>{candidate_table}</tbody>
-        </table>
-      </div>
-      <p class="section-note">Need more than this shortlist? Search the Network or Appendix for terms like library, visitor center, chamber, gallery, cafe, restaurant, market, depot, city hall, courthouse, college, and community center.</p>
+      <div class="resource-list physical-posting-list" data-progressive-list data-compact-count="6" data-wide-count="18">{candidate_cards}</div>
+      <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="places">Show more places</button><a class="button button-primary" href="../network/index.html?location=Flyers#resource-results">Search every place to ask about flyers</a></div>
     </section>
     <section class="section tinted">
       <div class="section-heading">
@@ -6562,6 +6721,7 @@ def write_static_assets() -> None:
     .brand-mark__route { fill: none; stroke: var(--gold); stroke-width: 2.4; stroke-linecap: round; }
     .brand-mark__sun { fill: var(--clay); }
     .site-nav { position: relative; z-index: 2; display: flex; gap: 3px; flex-wrap: wrap; justify-content: flex-end; align-items: center; overflow: visible; }
+    .nav-mobile-only { display: none; }
     .site-nav a, .nav-trigger { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 34px; text-decoration: none; padding: 7px 9px; border: 0; border-radius: 4px; background: transparent; font: inherit; font-size: 0.8rem; color: var(--ink-soft); cursor: pointer; transition: background 160ms ease, color 160ms ease; }
     .site-nav a:hover, .site-nav a.is-active, .site-nav a[aria-current="page"], .nav-group:hover > .nav-trigger, .nav-group:focus-within > .nav-trigger, .nav-group.is-active > .nav-trigger { background: rgba(167,97,73,0.075); color: var(--ink); }
     .site-nav a[aria-current="page"]::after,
@@ -6597,6 +6757,7 @@ def write_static_assets() -> None:
       overflow-y: auto;
     }
     .nav-menu a { display: flex; justify-content: flex-start; width: 100%; border-radius: 8px; white-space: nowrap; }
+    .nav-menu-label { display: block; padding: 8px 9px 4px; color: var(--plum); font-size: 0.68rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; }
     .nav-group:hover .nav-menu, .nav-group:focus-within .nav-menu, .nav-group[open] .nav-menu { display: grid; gap: 2px; }
     @keyframes tabSettle {
       from { transform: scaleX(0.65); opacity: 0.35; }
@@ -6741,7 +6902,7 @@ def write_static_assets() -> None:
     .eyebrow { margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.76rem; font-weight: 800; color: var(--plum); }
     h1, h2, h3 { line-height: 1.08; letter-spacing: 0; }
     h1 { margin: 0; font-family: Fraunces, Georgia, serif; font-size: clamp(3rem, 6.2vw, 5.25rem); max-width: 18ch; }
-    .page-hero h1 { font-size: clamp(2.5rem, 5.5vw, 4.3rem); max-width: 13ch; }
+    .page-hero h1 { font-size: clamp(2.35rem, 4.2vw, 3.55rem); max-width: 16ch; }
     .county-hero h1 { font-size: clamp(2.1rem, 4vw, 3.55rem); max-width: 23ch; }
     .county-hero .lede { max-width: 52rem; }
     h2 { margin: 0; font-size: clamp(1.8rem, 3vw, 2.8rem); }
@@ -6780,7 +6941,7 @@ def write_static_assets() -> None:
       isolation: isolate;
       display: grid;
       align-content: center;
-      min-height: clamp(340px, 46vh, 500px);
+      min-height: clamp(250px, 32vh, 360px);
       overflow: hidden;
       background: linear-gradient(112deg, rgba(243,239,229,0.98) 0 36%, rgba(229,235,226,0.84) 63%, rgba(175,203,208,0.48));
       border-bottom: 1px solid rgba(23,48,71,0.16);
@@ -6788,7 +6949,7 @@ def write_static_assets() -> None:
     }
     .page-hero > :not(.page-hero-art) { position: relative; z-index: 1; }
     .page-network .page-hero {
-      min-height: clamp(300px, 38vh, 410px);
+      min-height: clamp(240px, 30vh, 330px);
       padding-top: clamp(36px, 4vw, 52px);
       padding-bottom: clamp(32px, 4vw, 48px);
     }
@@ -7484,6 +7645,7 @@ def write_static_assets() -> None:
     .chip, .copy-button { min-height: 38px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.85); color: var(--ink); padding: 8px 12px; font: inherit; font-weight: 800; cursor: pointer; }
     .chip.is-active { background: var(--ink); color: #fff; }
     .resource-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(430px, 1fr)); gap: 12px; }
+    [data-progressive-list] > [hidden] { display: none !important; }
     .resource-item { display: flex; flex-direction: column; min-width: 0; }
     .resource-item__head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
     .resource-item__head h3 { margin-bottom: 0; }
@@ -8079,7 +8241,9 @@ def write_static_assets() -> None:
       .site-header { width: 100%; max-width: 100vw; padding: 8px 12px; gap: 10px; }
       .brand { font-size: 0.9rem; gap: 8px; }
       .brand-mark { width: 32px; height: 26px; }
-      .site-nav { width: 100%; max-width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; justify-content: stretch; overflow: visible; padding-bottom: 0; }
+      .site-nav { width: 100%; max-width: 100%; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; justify-content: stretch; overflow: visible; padding-bottom: 0; }
+      .nav-desktop-only { display: none; }
+      .nav-mobile-only { display: block; }
       .site-nav a, .nav-trigger { width: 100%; min-height: 30px; white-space: nowrap; text-align: center; padding: 4px 5px; font-size: 0.72rem; }
       .nav-group { position: relative; }
       .nav-menu { position: absolute; top: calc(100% + 6px); min-width: 150px; width: max-content; max-width: calc(100vw - 24px); margin-top: 0; padding: 6px; box-shadow: var(--shadow); }
@@ -8088,6 +8252,8 @@ def write_static_assets() -> None:
       .nav-group:nth-of-type(3) .nav-menu { left: 0; right: auto; translate: none; }
       .nav-group:nth-of-type(4) .nav-menu { left: 50%; right: auto; translate: -50% 0; }
       .nav-group:nth-of-type(5) .nav-menu { right: 0; left: auto; translate: none; }
+      .nav-mobile-only .nav-menu { left: auto; right: 0; translate: none; width: min(310px, calc(100vw - 24px)); }
+      .nav-mobile-only .nav-menu a { justify-content: flex-start; text-align: left; }
       .nav-menu a { white-space: normal; justify-content: center; }
       .hero {
         min-height: min(64svh, 560px);
@@ -8108,12 +8274,12 @@ def write_static_assets() -> None:
         text-align: center;
       }
       .hero-actions .button:nth-child(3) { grid-column: 1 / -1; }
-      .page-hero { min-height: 218px; padding-top: 28px; padding-bottom: 28px; }
-      .page-hero h1 { max-width: 14ch; font-size: clamp(2.25rem, 10vw, 2.8rem); }
+      .page-hero { min-height: 178px; padding-top: 20px; padding-bottom: 20px; }
+      .page-hero h1 { max-width: 15ch; font-size: clamp(2rem, 9vw, 2.5rem); }
       .page-hero .lede { display: none; }
       .page-hero-art { width: 500px; max-width: none; right: -235px; top: 46%; opacity: 0.44; }
-      .page-network .page-hero { min-height: 230px; padding-top: 22px; padding-bottom: 24px; }
-      .page-network .page-hero h1 { max-width: 11ch; font-size: 2.55rem; line-height: 1.02; }
+      .page-network .page-hero { min-height: 188px; padding-top: 18px; padding-bottom: 20px; }
+      .page-network .page-hero h1 { max-width: 12ch; font-size: 2.25rem; line-height: 1.02; }
       .page-network .section { padding: 32px 18px; }
       .page-network .section-heading { margin-bottom: 18px; }
       .arts-route-visual { min-height: 122px; }
@@ -9597,6 +9763,42 @@ def write_static_assets() -> None:
       if (filters) filters.toggleAttribute("open", !compact);
     }
 
+    function initProgressiveLists() {
+      document.querySelectorAll("[data-progressive-list]").forEach(host => {
+        const items = [...host.children].filter(item => item.matches("article"));
+        const section = host.closest(".section") || host.parentElement;
+        const button = section?.querySelector("[data-progressive-more]");
+        const compactStep = Math.max(1, Number(host.dataset.compactCount) || 4);
+        const wideCount = Math.max(compactStep, Number(host.dataset.wideCount) || items.length);
+        let compact = window.matchMedia("(max-width: 640px)").matches;
+        let visibleCount = compact ? compactStep : wideCount;
+
+        function render() {
+          const visibleItems = items.slice(0, visibleCount);
+          const visibleSet = new Set(visibleItems);
+          items.forEach(item => { item.hidden = !visibleSet.has(item); });
+          if (!button) return;
+          const remaining = Math.max(0, items.length - visibleItems.length);
+          const label = button.dataset.progressiveLabel || "items";
+          button.hidden = remaining === 0;
+          button.textContent = remaining ? `Show ${Math.min(compactStep, remaining)} more ${label}` : `All ${label} shown`;
+        }
+
+        button && button.addEventListener("click", () => {
+          visibleCount += compactStep;
+          render();
+        });
+        window.addEventListener("resize", () => {
+          const nextCompact = window.matchMedia("(max-width: 640px)").matches;
+          if (nextCompact === compact) return;
+          compact = nextCompact;
+          visibleCount = compact ? compactStep : wideCount;
+          render();
+        }, { passive: true });
+        render();
+      });
+    }
+
     function initNationalFundingSearch() {
       const host = document.querySelector("#national-funding-results");
       if (!host) return;
@@ -9607,13 +9809,14 @@ def write_static_assets() -> None:
       const type = document.querySelector("#funding-type-filter");
       const cost = document.querySelector("#funding-cost-filter");
       const note = document.querySelector("#funding-results-note");
-
-      function syncDetails() {
-        const compact = window.matchMedia("(max-width: 640px)").matches;
-        cards.forEach(card => {
-          const details = card.querySelector(".funding-details");
-          if (details) details.toggleAttribute("open", !compact);
-        });
+      const moreButton = document.querySelector("#funding-load-more");
+      let visibleCount = directoryPageSize(6, 12);
+      const incoming = new URLSearchParams(window.location.search);
+      const incomingQuery = incoming.get("q");
+      const incomingAudience = incoming.get("audience");
+      if (incomingQuery && input) input.value = incomingQuery;
+      if (incomingAudience && audience && [...audience.options].some(option => option.value === incomingAudience)) {
+        audience.value = incomingAudience;
       }
 
       function matchesAudience(card, value) {
@@ -9628,27 +9831,36 @@ def write_static_assets() -> None:
         const statusValue = status?.value || "All";
         const typeValue = type?.value || "All";
         const costValue = cost?.value || "All";
-        let shown = 0;
-        cards.forEach(card => {
-          const visible = (
+        const matched = cards.filter(card => (
             (!query || (card.dataset.fundingSearch || "").includes(query))
             && matchesAudience(card, audienceValue)
             && (statusValue === "All" || card.dataset.fundingStatus === statusValue)
             && (typeValue === "All" || card.dataset.fundingType === typeValue)
             && (costValue === "All" || card.dataset.fundingCost === costValue)
-          );
-          card.hidden = !visible;
-          if (visible) shown += 1;
-        });
-        if (note) note.textContent = `Showing ${shown} of ${cards.length} funding ${cards.length === 1 ? "entry" : "entries"}.`;
+        ));
+        const visible = new Set(matched.slice(0, visibleCount));
+        cards.forEach(card => { card.hidden = !visible.has(card); });
+        if (note) note.textContent = `Showing ${visible.size} of ${matched.length} matching funding ${matched.length === 1 ? "entry" : "entries"}.`;
+        if (moreButton) {
+          const remaining = Math.max(0, matched.length - visible.size);
+          moreButton.hidden = remaining === 0;
+          moreButton.textContent = remaining
+            ? `Show ${Math.min(directoryPageSize(6, 12), remaining)} more funding entries`
+            : "All matching funding entries shown";
+        }
       }
 
       [input, audience, status, type, cost].forEach(control => {
         if (!control) return;
-        control.addEventListener(control === input ? "input" : "change", render);
+        control.addEventListener(control === input ? "input" : "change", () => {
+          visibleCount = directoryPageSize(6, 12);
+          render();
+        });
       });
-      syncDetails();
-      window.addEventListener("resize", syncDetails, { passive: true });
+      moreButton && moreButton.addEventListener("click", () => {
+        visibleCount += directoryPageSize(6, 12);
+        render();
+      });
       render();
     }
 
@@ -9660,9 +9872,9 @@ def write_static_assets() -> None:
       const chips = [...document.querySelectorAll("[data-source-filter]")];
       const moreButton = document.querySelector("#source-load-more");
       let county = "All";
-      let visibleCount = directoryPageSize(6, 12);
+      let visibleCount = directoryPageSize(4, 8);
       function resetVisibleCount() {
-        visibleCount = directoryPageSize(6, 12);
+        visibleCount = directoryPageSize(4, 8);
       }
       function render() {
         const query = input.value.trim();
@@ -9684,7 +9896,7 @@ def write_static_assets() -> None:
         if (moreButton) {
           const remaining = Math.max(0, filtered.length - visible.length);
           moreButton.hidden = remaining === 0;
-          moreButton.textContent = remaining ? `Show ${Math.min(directoryPageSize(6, 12), remaining)} more shortcuts` : "All shortcuts shown";
+          moreButton.textContent = remaining ? `Show ${Math.min(directoryPageSize(4, 8), remaining)} more shortcuts` : "All shortcuts shown";
         }
       }
       input.addEventListener("input", () => {
@@ -9698,7 +9910,7 @@ def write_static_assets() -> None:
         render();
       }));
       moreButton && moreButton.addEventListener("click", () => {
-        visibleCount += directoryPageSize(6, 12);
+        visibleCount += directoryPageSize(4, 8);
         render();
       });
       render();
@@ -9711,7 +9923,6 @@ def write_static_assets() -> None:
       const chips = [...document.querySelectorAll("[data-resource-filter]")];
       const locationChips = [...document.querySelectorAll("[data-location-filter]")];
       const typeSelect = document.querySelector("#resource-type-filter");
-      const accessSelect = document.querySelector("#access-mode-filter");
       const onlineSelect = document.querySelector("#online-connection-filter");
       const outreachSelect = document.querySelector("#outreach-channel-filter");
       const outreachStatusSelect = document.querySelector("#outreach-status-filter");
@@ -9721,7 +9932,7 @@ def write_static_assets() -> None:
       const moreButton = document.querySelector("#resource-load-more");
       let county = "All";
       let locationMode = "All";
-      let visibleCount = directoryPageSize(18, 36);
+      let visibleCount = directoryPageSize(10, 24);
       const incomingParams = new URLSearchParams(window.location.search);
       const incomingQuery = incomingParams.get("q");
       const incomingLocation = incomingParams.get("location");
@@ -9743,7 +9954,6 @@ def write_static_assets() -> None:
         locationChips.forEach(chip => chip.classList.toggle("is-active", chip.dataset.locationFilter === locationMode));
       }
       populateSelect(typeSelect, uniqueValues(DATA.resources, "public_listing_type"), "All types");
-      populateSelect(accessSelect, uniqueValues(DATA.resources, "access_mode"), "All access modes");
       populateSelect(onlineSelect, uniqueValues(DATA.resources, "online_connection_group"), "All connection types");
       if (outreachSelect && incomingChannel && [...outreachSelect.options].some(option => option.value === incomingChannel)) {
         outreachSelect.value = incomingChannel;
@@ -9752,19 +9962,17 @@ def write_static_assets() -> None:
         outreachStatusSelect.value = incomingChannelStatus;
       }
       function resetVisibleCount() {
-        visibleCount = directoryPageSize(18, 36);
+        visibleCount = directoryPageSize(10, 24);
       }
       function render() {
         const query = input.value.trim();
         const resourceType = typeSelect ? typeSelect.value : "All";
-        const accessMode = accessSelect ? accessSelect.value : "All";
         const onlineConnection = onlineSelect ? onlineSelect.value : "All";
         const outreachChannel = outreachSelect ? outreachSelect.value : "All";
         const outreachStatus = outreachStatusSelect ? outreachStatusSelect.value : "All";
         const matched = DATA.resources
           .filter(item => (county === "All" || item.county === county) && (!query || resourceTextMatch(item, query)))
           .filter(item => resourceType === "All" || item.public_listing_type === resourceType)
-          .filter(item => accessMode === "All" || item.access_mode === accessMode)
           .filter(item => onlineConnection === "All" || item.online_connection_group === onlineConnection)
           .filter(item => {
             const channels = Array.isArray(item.outreach_channels) ? item.outreach_channels : [];
@@ -9797,7 +10005,6 @@ def write_static_assets() -> None:
           const activeFilters = [
             county !== "All" ? county : "",
             resourceType !== "All" ? resourceType : "",
-            accessMode !== "All" ? accessMode : "",
             onlineConnection !== "All" ? onlineConnection : "",
             outreachChannel !== "All" ? outreachChannel : "",
             outreachStatus !== "All" ? outreachStatus : "",
@@ -9810,14 +10017,14 @@ def write_static_assets() -> None:
         if (moreButton) {
           const remaining = Math.max(0, matched.length - filtered.length);
           moreButton.hidden = remaining === 0;
-          moreButton.textContent = remaining ? `Show ${Math.min(directoryPageSize(18, 36), remaining)} more listings` : "All listings shown";
+          moreButton.textContent = remaining ? `Show ${Math.min(directoryPageSize(10, 24), remaining)} more listings` : "All listings shown";
         }
       }
       input.addEventListener("input", () => {
         resetVisibleCount();
         render();
       });
-      [typeSelect, accessSelect, onlineSelect, outreachSelect, outreachStatusSelect].forEach(select => select && select.addEventListener("change", () => {
+      [typeSelect, onlineSelect, outreachSelect, outreachStatusSelect].forEach(select => select && select.addEventListener("change", () => {
         resetVisibleCount();
         render();
       }));
@@ -9834,7 +10041,7 @@ def write_static_assets() -> None:
         render();
       }));
       moreButton && moreButton.addEventListener("click", () => {
-        visibleCount += directoryPageSize(18, 36);
+        visibleCount += directoryPageSize(10, 24);
         render();
       });
       render();
@@ -10162,6 +10369,8 @@ def write_static_assets() -> None:
     }
 
     initNavigationYucca();
+    syncDirectoryDetails();
+    initProgressiveLists();
     initNationalFundingSearch();
     initSourceSearch();
     initResourceSearch();

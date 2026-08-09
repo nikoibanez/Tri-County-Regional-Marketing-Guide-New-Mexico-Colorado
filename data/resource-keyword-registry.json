@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "purpose": "Controlled terms for finding grants, capital, fiscal sponsors, businesses, nonprofits, artists, and creative opportunities without relying on broad substring matches.",
+  "groups": [
+    {
+      "id": "grants-public-funding",
+      "label": "Grants and public funding",
+      "include_phrases": [
+        "grant",
+        "grants",
+        "funding opportunity",
+        "notice of funding opportunity",
+        "NOFO",
+        "cooperative agreement",
+        "fellowship",
+        "fellowships",
+        "stipend",
+        "stipends",
+        "scholarship",
+        "scholarships",
+        "microgrant",
+        "microgrants",
+        "challenge prize",
+        "technical assistance",
+        "capacity building"
+      ],
+      "decision_terms": [
+        "deadline",
+        "rolling",
+        "award floor",
+        "award ceiling",
+        "eligible applicant",
+        "cost share",
+        "matching funds",
+        "501(c)(3)",
+        "fiscal sponsor",
+        "application fee",
+        "allowable costs"
+      ],
+      "exclude_phrases": [
+        "research article",
+        "news archive",
+        "grant writer for hire"
+      ]
+    },
+    {
+      "id": "business-capital",
+      "label": "Loans, investment, and business capital",
+      "include_phrases": [
+        "small business loan",
+        "microloan",
+        "microloans",
+        "revolving loan fund",
+        "loan guarantee",
+        "lender match",
+        "community development financial institution",
+        "CDFI",
+        "certified development company",
+        "working capital",
+        "startup capital",
+        "seed funding",
+        "equity investment",
+        "tax credit",
+        "rebate",
+        "reimbursement",
+        "incentive",
+        "incentives"
+      ],
+      "decision_terms": [
+        "interest rate",
+        "origination fee",
+        "collateral",
+        "credit score",
+        "repayment",
+        "loan term",
+        "minimum revenue",
+        "eligible use",
+        "geographic service area"
+      ],
+      "exclude_phrases": [
+        "payday loan",
+        "merchant cash advance",
+        "crypto investment"
+      ]
+    },
+    {
+      "id": "fiscal-sponsorship",
+      "label": "Fiscal sponsors",
+      "include_phrases": [
+        "fiscal sponsor",
+        "fiscal sponsorship",
+        "comprehensive fiscal sponsorship",
+        "pre-approved grant relationship",
+        "Model A",
+        "Model C",
+        "sponsored project",
+        "charitable project"
+      ],
+      "decision_terms": [
+        "administrative fee",
+        "application process",
+        "project eligibility",
+        "insurance",
+        "ownership",
+        "donor acknowledgement",
+        "grant agreement",
+        "minimum budget",
+        "geographic restriction"
+      ],
+      "exclude_phrases": [
+        "event sponsor",
+        "corporate sponsorship package",
+        "advertising sponsor"
+      ]
+    },
+    {
+      "id": "nonprofit-directories",
+      "label": "Nonprofit and tax-exempt directories",
+      "include_phrases": [
+        "nonprofit directory",
+        "nonprofit member directory",
+        "tax exempt organization",
+        "tax-exempt organization",
+        "charity search",
+        "501(c)(3)",
+        "Form 990",
+        "EIN",
+        "NTEE code",
+        "exempt organizations business master file",
+        "EO BMF"
+      ],
+      "decision_terms": [
+        "organization name",
+        "mission",
+        "city",
+        "state",
+        "tax status",
+        "ruling date",
+        "filing status",
+        "website",
+        "contact"
+      ],
+      "exclude_phrases": [
+        "nonprofit idea",
+        "how to start a nonprofit"
+      ]
+    },
+    {
+      "id": "business-directories",
+      "label": "Business and supplier directories",
+      "include_phrases": [
+        "business directory",
+        "business search",
+        "small business search",
+        "supplier directory",
+        "vendor directory",
+        "certified business directory",
+        "minority-owned business",
+        "women-owned business",
+        "LGBTQ-owned business",
+        "veteran-owned business",
+        "tribally owned business",
+        "Native-owned business",
+        "Hispanic-owned business",
+        "creative business directory",
+        "chamber member directory"
+      ],
+      "decision_terms": [
+        "business name",
+        "trade name",
+        "good standing",
+        "industry",
+        "NAICS",
+        "address",
+        "phone",
+        "email",
+        "website",
+        "certification"
+      ],
+      "exclude_phrases": [
+        "business ideas",
+        "sample company",
+        "marketing agency directory service"
+      ]
+    },
+    {
+      "id": "artists-creative-opportunities",
+      "label": "Artists, creative businesses, and opportunities",
+      "include_phrases": [
+        "artist directory",
+        "artists directory",
+        "artist opportunity",
+        "artist opportunities",
+        "call for artists",
+        "call for entries",
+        "open call",
+        "public art commission",
+        "artist residency",
+        "creative business",
+        "creative industries",
+        "gallery directory",
+        "studio directory",
+        "maker directory",
+        "vendor application",
+        "exhibition opportunity",
+        "performing arts opportunity",
+        "literary opportunity"
+      ],
+      "decision_terms": [
+        "discipline",
+        "location",
+        "deadline",
+        "application fee",
+        "artist fee",
+        "honorarium",
+        "stipend",
+        "commission budget",
+        "eligibility",
+        "work sample",
+        "usage rights"
+      ],
+      "exclude_phrases": [
+        "AI art generator",
+        "stock art",
+        "clip art"
+      ]
+    }
+  ]
+}

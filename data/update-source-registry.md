@@ -1,6 +1,6 @@
 # Update Source Registry
 
-Generated: 2026-08-07
+Generated: 2026-08-08
 
 Automation may propose updates. Human approval is required for public claims, eligibility, rates, deadlines, contact changes, listing removal, and civic/legal guidance.
 

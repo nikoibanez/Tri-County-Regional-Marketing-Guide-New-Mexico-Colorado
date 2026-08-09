@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-07T16:22:16.836955+00:00",
-  "source": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
+  "generated_at": "2026-08-09T05:09:26.095742+00:00",
+  "source": "C:\\Users\\Alyxx and Niko\\Documents\\Tri-County-Guide-worktrees\\ux-source-registry-20260808\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
   "summary": {
-    "entries": 1355,
+    "entries": 1363,
     "directory_shortcuts": 104,
-    "total_records_reviewed": 1459,
-    "with_any_route": 811,
-    "with_listed_route": 296,
-    "with_ask_route": 748,
-    "without_outreach_route": 544,
+    "total_records_reviewed": 1467,
+    "with_any_route": 799,
+    "with_listed_route": 308,
+    "with_ask_route": 730,
+    "without_outreach_route": 564,
     "missing_structured_fields": 0,
     "shortcuts_with_any_route": 52,
     "shortcuts_with_listed_route": 19,
@@ -19,74 +19,74 @@
       "physical_flyers": {
         "label": "Flyers and posters",
         "listed": 0,
-        "ask": 199,
-        "not_indicated": 1156
+        "ask": 193,
+        "not_indicated": 1170
       },
       "physical_brochures": {
         "label": "Brochures and rack cards",
         "listed": 0,
-        "ask": 98,
-        "not_indicated": 1257
+        "ask": 103,
+        "not_indicated": 1260
       },
       "physical_bulletin_board": {
         "label": "Bulletin boards",
         "listed": 0,
-        "ask": 19,
-        "not_indicated": 1336
+        "ask": 23,
+        "not_indicated": 1340
       },
       "front_desk_referrals": {
         "label": "Front-desk referrals",
         "listed": 0,
-        "ask": 293,
-        "not_indicated": 1062
+        "ask": 279,
+        "not_indicated": 1084
       },
       "directory_listing": {
         "label": "Directory profiles and listings",
-        "listed": 294,
+        "listed": 306,
         "ask": 12,
-        "not_indicated": 1049
+        "not_indicated": 1045
       },
       "event_calendar": {
         "label": "Event calendars",
         "listed": 1,
-        "ask": 109,
-        "not_indicated": 1245
+        "ask": 116,
+        "not_indicated": 1246
       },
       "social_cross_promotion": {
         "label": "Social cross-promotion",
         "listed": 0,
-        "ask": 38,
-        "not_indicated": 1317
+        "ask": 39,
+        "not_indicated": 1324
       },
       "newsletter_mailing_list": {
         "label": "Newsletters and mailing lists",
         "listed": 0,
-        "ask": 173,
-        "not_indicated": 1182
+        "ask": 182,
+        "not_indicated": 1181
       },
       "paid_digital_advertising": {
         "label": "Paid digital advertising",
         "listed": 1,
-        "ask": 58,
-        "not_indicated": 1296
+        "ask": 59,
+        "not_indicated": 1303
       },
       "media_editorial": {
         "label": "Media and editorial coverage",
         "listed": 2,
-        "ask": 58,
-        "not_indicated": 1295
+        "ask": 59,
+        "not_indicated": 1302
       },
       "sponsorship": {
         "label": "Sponsorships",
         "listed": 0,
-        "ask": 202,
-        "not_indicated": 1153
+        "ask": 209,
+        "not_indicated": 1154
       },
       "partner_cross_promotion": {
         "label": "Partner cross-promotion",
         "listed": 0,
-        "ask": 388,
-        "not_indicated": 967
+        "ask": 397,
+        "not_indicated": 966
       }
     },
     "shortcut_channel_counts": {

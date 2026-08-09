@@ -37,6 +37,8 @@ def build_dashboard() -> dict:
     outreach_review = load_json(ROOT / "review" / "directory-outreach" / "directory-outreach-latest.json")
     funding_directory = load_json(ROOT / "data" / "national-funding-opportunities.json")
     funding_watch = load_json(ROOT / "review" / "national-funding-watch" / "national-funding-watch-latest.json")
+    discovery_registry = load_json(ROOT / "data" / "resource-discovery-sources.json")
+    resource_discovery = load_json(ROOT / "review" / "resource-discovery" / "resource-discovery-latest.json")
     quality = load_json(DEFAULT_OUT_DIR / "directory-quality-latest.json")
     link_audit = load_json(DEFAULT_OUT_DIR / "internal-link-audit-latest.json")
 
@@ -48,6 +50,7 @@ def build_dashboard() -> dict:
     keyword_summary = keyword_sweep.get("summary") or {}
     outreach_summary = outreach_review.get("summary") or {}
     funding_watch_summary = funding_watch.get("summary") or {}
+    discovery_summary = resource_discovery.get("summary") or {}
     action_queue = []
 
     def add_action(count: int, label: str, next_action: str, priority: str) -> None:
@@ -145,6 +148,24 @@ def build_dashboard() -> dict:
         "Open these pages normally; do not treat bot blocking or a temporary network error as a closed program.",
         "low",
     )
+    add_action(
+        int(discovery_summary.get("candidate_links") or 0),
+        "resource candidate links waiting for review",
+        "Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data.",
+        "medium",
+    )
+    add_action(
+        int(discovery_summary.get("confirmed_broken") or 0),
+        "confirmed broken resource-discovery hubs",
+        "Replace or intentionally retire each hub URL before relying on its candidate queue.",
+        "high",
+    )
+    add_action(
+        int(discovery_summary.get("check_failures") or 0),
+        "resource-discovery hubs needing a normal-browser check",
+        "Open these pages normally; do not remove a source because of bot blocking or a temporary request failure.",
+        "low",
+    )
 
     return {
         "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -160,6 +181,7 @@ def build_dashboard() -> dict:
             "outreach_review_total": int(outreach_summary.get("total_records_reviewed") or 0),
             "national_funding_opportunities": len(funding_directory.get("opportunities") or []),
             "national_funding_watch_sources": int(funding_watch_summary.get("sources") or 0),
+            "resource_discovery_sources": len(discovery_registry.get("sources") or []),
         },
         "latest_checks": {
             "directory_quality": quality.get("status") or "not run",
@@ -185,6 +207,10 @@ def build_dashboard() -> dict:
             "funding_watch_new_baselines": int(funding_watch_summary.get("new_baselines") or 0),
             "funding_watch_confirmed_broken": int(funding_watch_summary.get("confirmed_broken") or 0),
             "funding_watch_check_failures": int(funding_watch_summary.get("check_failures") or 0),
+            "resource_discovery_candidates": int(discovery_summary.get("candidate_links") or 0),
+            "resource_discovery_changed": int(discovery_summary.get("changed") or 0),
+            "resource_discovery_broken": int(discovery_summary.get("confirmed_broken") or 0),
+            "resource_discovery_failures": int(discovery_summary.get("check_failures") or 0),
         },
         "action_queue": sorted(action_queue, key=lambda item: ({"high": 0, "medium": 1, "low": 2}[item["priority"]], -item["count"])),
     }
@@ -212,6 +238,7 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- Total outreach records reviewed: {inventory['outreach_review_total']}",
         f"- Curated national funding opportunities: {inventory['national_funding_opportunities']}",
         f"- National funding watch sources: {inventory['national_funding_watch_sources']}",
+        f"- Resource-discovery source hubs: {inventory['resource_discovery_sources']}",
         "",
         "## Latest Checks",
         "",
@@ -238,6 +265,10 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- National funding watch baselines added: {checks['funding_watch_new_baselines']}",
         f"- Confirmed broken national funding URLs: {checks['funding_watch_confirmed_broken']}",
         f"- National funding source checks needing attention: {checks['funding_watch_check_failures']}",
+        f"- Resource candidate links collected: {checks['resource_discovery_candidates']}",
+        f"- Resource-discovery pages changed: {checks['resource_discovery_changed']}",
+        f"- Confirmed broken resource-discovery hubs: {checks['resource_discovery_broken']}",
+        f"- Resource-discovery checks needing attention: {checks['resource_discovery_failures']}",
         "",
         "## Action Queue",
         "",

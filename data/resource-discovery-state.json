@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-08T23:00:40-06:00",
+  "sources": {
+    "grants-gov-api": {
+      "name": "Grants.gov API and Opportunity Search",
+      "url": "https://www.grants.gov/api/api-guide",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "tls_error",
+      "status_code": null,
+      "last_error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)"
+    },
+    "sam-assistance-listings": {
+      "name": "SAM.gov Assistance Listings",
+      "url": "https://sam.gov/assistance-listings",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "9f99d75d98ce53d57c5e242c173f0c637e37297990d53c68749bdc131fd2a234",
+      "text_length": 2873,
+      "link_count": 35,
+      "candidate_count": 3
+    },
+    "sbir-funding": {
+      "name": "SBIR and STTR Funding Opportunities",
+      "url": "https://www.sbir.gov/topics?page=0&program=&status=Open",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "e1f1f77cc28e9b51b4de1ec3e2bc9eafcf8f3dbf253481f8101ca8e30cb99e09",
+      "text_length": 10345,
+      "link_count": 68,
+      "candidate_count": 0
+    },
+    "cdfi-certified-list": {
+      "name": "CDFI Fund Certified CDFI List",
+      "url": "https://www.cdfifund.gov/programs-training/certification/cdfi",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "79a71781f8f3e3a0fee63cf60013e338e50007d01b36d2dd35440e3e4987f905",
+      "text_length": 5162,
+      "link_count": 109,
+      "candidate_count": 12
+    },
+    "sba-lender-match": {
+      "name": "SBA Lender Match",
+      "url": "https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "069b8407a578a9aa392b8869fb80161bf73f069e2e3d36c21f4082a675b20d62",
+      "text_length": 5435,
+      "link_count": 108,
+      "candidate_count": 2
+    },
+    "candid-foundation-directory": {
+      "name": "Candid Foundation Directory Free Access",
+      "url": "https://learning.candid.org/free-access-to-foundation-directory",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "access_blocked",
+      "status_code": 403,
+      "last_error": "HTTP Error 403: Forbidden"
+    },
+    "nnfs-member-directory": {
+      "name": "National Network of Fiscal Sponsors Member Directory",
+      "url": "https://www.fiscalsponsors.org/member-directory",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "d7092235d54fcb4845044eff9ea1d76c04e7b463add679fc2b00adf0794a3def",
+      "text_length": 1002,
+      "link_count": 54,
+      "candidate_count": 1
+    },
+    "fiscal-sponsor-directory": {
+      "name": "Fiscal Sponsor Directory",
+      "url": "https://fiscalsponsordirectory.org/",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "06d8b65e0658e8e885a218c2a86d2f941f722b44d16f9041e53f3842e8933933",
+      "text_length": 5321,
+      "link_count": 82,
+      "candidate_count": 9
+    },
+    "fractured-atlas-sponsorship": {
+      "name": "Fractured Atlas Fiscal Sponsorship",
+      "url": "https://www.fracturedatlas.org/fiscal-sponsorship",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "5f54e33b686dfac64269f3d30632d43961638302ed083600cf503f987999a7c0",
+      "text_length": 2852,
+      "link_count": 51,
+      "candidate_count": 3
+    },
+    "irs-eo-bmf": {
+      "name": "IRS Exempt Organizations Business Master File",
+      "url": "https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "0ad2446ef5a89de9d0e852ca65a153cb3545a060b6d287f969691ed88a20756e",
+      "text_length": 8930,
+      "link_count": 287,
+      "candidate_count": 14
+    },
+    "propublica-nonprofit-api": {
+      "name": "ProPublica Nonprofit Explorer API",
+      "url": "https://projects.propublica.org/nonprofits/api/",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "c76b869629b3c8a249ac61640e2c4bde7578b1916ff7204a2b242410d98ad5f6",
+      "text_length": 18195,
+      "link_count": 57,
+      "candidate_count": 6
+    },
+    "guidestar-search": {
+      "name": "Candid GuideStar Search",
+      "url": "https://www.guidestar.org/search",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "f1299718d4a3259df3fe4ef2cfe5a431da0f13e82ad692a9f4879b35c3d288e6",
+      "text_length": 23820,
+      "link_count": 16,
+      "candidate_count": 0
+    },
+    "groundworks-nm-directory": {
+      "name": "Groundworks New Mexico Nonprofit Directory",
+      "url": "https://www.groundworksnm.org/nonprofit-directory",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "50fa6fb36c6ffdc1368b742494119d6c730cb702109097d97f6833dd8214b051",
+      "text_length": 7310,
+      "link_count": 117,
+      "candidate_count": 24
+    },
+    "colorado-nonprofit-directory": {
+      "name": "Colorado Nonprofit Association Member Directory",
+      "url": "https://coloradononprofits.org/member-resources/nonprofit-member-directory/",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "36f342fa9eefa077c54331675fc7ca743c830f5b729ee66b4683a5b87e792b11",
+      "text_length": 1271,
+      "link_count": 45,
+      "candidate_count": 1
+    },
+    "nm-sos-business-search": {
+      "name": "New Mexico Secretary of State Business Search",
+      "url": "https://enterprise.sos.nm.gov/search/business",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "6df41d1fe61422b48f4d79fc2d671a7a704127780a228444629368a63bc31f81",
+      "text_length": 18,
+      "link_count": 0,
+      "candidate_count": 0
+    },
+    "colorado-sos-business-search": {
+      "name": "Colorado Secretary of State Business Database",
+      "url": "https://www.sos.state.co.us/biz/BusinessEntityCriteriaExt.do",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "access_blocked",
+      "status_code": 403,
+      "last_error": "HTTP Error 403: Forbidden"
+    },
+    "sba-small-business-search": {
+      "name": "SBA Small Business Search",
+      "url": "https://dsbs.sba.gov/search/dsp_dsbs.cfm",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "61b12b9cb165f2bd278eee2af8270fd883440ccaf774748937274989f170e510",
+      "text_length": 25,
+      "link_count": 0,
+      "candidate_count": 0
+    },
+    "aca-residency-directory": {
+      "name": "Artist Communities Alliance Directory",
+      "url": "https://artistcommunities.org/directory",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "ef39a13c7104f0dda60c2b95b908e14f130fb8dfb3d82d4252bc0ed35a7d8c95",
+      "text_length": 4184,
+      "link_count": 122,
+      "candidate_count": 0
+    },
+    "creative-west-opportunities": {
+      "name": "Creative West Opportunities Portal and CaFE",
+      "url": "https://wearecreativewest.org/opportunities-portal/",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "e4397d6a5e0c82e7f15a19361459f92c091adcc57f4046c288a54619a3419033",
+      "text_length": 6258,
+      "link_count": 154,
+      "candidate_count": 0
+    },
+    "creative-capital-resources": {
+      "name": "Creative Capital Artist Opportunities",
+      "url": "https://creative-capital.org/artist-resources/",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "4320667d5387abd677b57efd8ebf727865bb5361269b8d7b01028e3a22ec3811",
+      "text_length": 4675,
+      "link_count": 59,
+      "candidate_count": 1
+    },
+    "nm-arts-artist-opportunities": {
+      "name": "New Mexico Arts Artist Opportunities",
+      "url": "https://nmarts.org/public-art/are-you-an-artist/",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "7d5f81ece44704923894f2853d0521185e782f37b93f6d0587b31eb8773650a2",
+      "text_length": 14003,
+      "link_count": 145,
+      "candidate_count": 1
+    },
+    "nm-creative-industries": {
+      "name": "New Mexico Creative Industries Division Opportunities",
+      "url": "https://www.edd.newmexico.gov/grants/cid-grants/",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "26acc117fcddb641fc432feadb0d3f4b930281deb53c67aef86c2705c599c6c2",
+      "text_length": 45575,
+      "link_count": 182,
+      "candidate_count": 12
+    },
+    "colorado-creative-industries": {
+      "name": "Colorado Creative Industries",
+      "url": "https://oedit.colorado.gov/colorado-creative-industries",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "access_blocked",
+      "status_code": 403,
+      "last_error": "HTTP Error 403: Forbidden"
+    },
+    "new-mexico-artist-directory": {
+      "name": "New Mexico Artist Directory",
+      "url": "https://www.newmexicoartistdirectory.com/",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "84779bb14c1e130c56ec719a1220c141589783a69c91fa5c58ac4c49daa86004",
+      "text_length": 3616,
+      "link_count": 104,
+      "candidate_count": 0
+    },
+    "nea-grants": {
+      "name": "National Endowment for the Arts Grants",
+      "url": "https://www.arts.gov/grants",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "0da498b9c3a7c402341853d0a2c32ea13b0c03ea17fc37c48dc2064ab4722afb",
+      "text_length": 6960,
+      "link_count": 111,
+      "candidate_count": 13
+    },
+    "neh-grants": {
+      "name": "National Endowment for the Humanities Grants",
+      "url": "https://www.neh.gov/grants",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "0b5b0b1ab3a4436ba28dec669790d26581cc8faedded1cb887ba49e4cc9a7c1b",
+      "text_length": 2836,
+      "link_count": 86,
+      "candidate_count": 17
+    },
+    "usda-rural-business-programs": {
+      "name": "USDA Rural Development Business Programs",
+      "url": "https://www.rd.usda.gov/programs-services/business-programs",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "access_blocked",
+      "status_code": 403,
+      "last_error": "HTTP Error 403: Forbidden"
+    },
+    "eda-funding-opportunities": {
+      "name": "U.S. Economic Development Administration Funding Opportunities",
+      "url": "https://www.eda.gov/funding/funding-opportunities",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "access_blocked",
+      "status_code": 403,
+      "last_error": "HTTP Error 403: Forbidden"
+    },
+    "nm-community-foundation-grants": {
+      "name": "New Mexico Community Foundation Grants and Scholarships",
+      "url": "https://nmcf.org/grants-and-scholarships/",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "7f272abc187a314e91e9897e1356a10909e535e6468653b6f80e417cef47d016",
+      "text_length": 4253,
+      "link_count": 197,
+      "candidate_count": 3
+    },
+    "el-pomar-grantmaking": {
+      "name": "El Pomar Foundation Grantmaking",
+      "url": "https://www.elpomar.org/grant-making/",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "fe3b15ffde8875f9dfc9139a8b1b036eafaf5e4a2fab40bf926a57ebec2fec4d",
+      "text_length": 10522,
+      "link_count": 117,
+      "candidate_count": 8
+    },
+    "anschutz-family-foundation": {
+      "name": "Anschutz Family Foundation Grantmaking",
+      "url": "https://anschutzfamilyfoundation.org/our-grantmaking/",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "3d056dc1383d483816a1806d6db88a650092b8b25feee2c92fa2d7a7536ddf66",
+      "text_length": 2972,
+      "link_count": 37,
+      "candidate_count": 5
+    },
+    "share-new-mexico": {
+      "name": "SHARE New Mexico Resource Directory",
+      "url": "https://www.sharenm.org/",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "1fbeb880c6115ea05e3edda6836e4fe279bce7cd63e0e7221922a81d720b66d9",
+      "text_length": 3900,
+      "link_count": 28,
+      "candidate_count": 0
+    },
+    "colorado-gives-directory": {
+      "name": "ColoradoGives.org Organization Search",
+      "url": "https://www.coloradogives.org/search",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "tls_error",
+      "status_code": null,
+      "last_error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)"
+    },
+    "submittable-discover": {
+      "name": "Submittable Discover",
+      "url": "https://www.submittable.com/discover",
+      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "a8fbcbcd5382ecf52eb8f5cd5ec05e626910b09ac1430c55a192be3b66504a26",
+      "text_length": 824,
+      "link_count": 16,
+      "candidate_count": 0
+    }
+  }
+}

@@ -1,7 +1,7 @@
 # Site Smoke Test
 
 Generated: 2026-08-08
-Target: C:\Users\super\OneDrive\Documents\Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado\dist\tri-county-netlify-guide-deep
+Target: C:\Users\Alyxx and Niko\Documents\Tri-County-Guide-worktrees\ux-source-registry-20260808\dist\tri-county-netlify-guide-deep
 Mode: local
 Status: **PASS**
 
