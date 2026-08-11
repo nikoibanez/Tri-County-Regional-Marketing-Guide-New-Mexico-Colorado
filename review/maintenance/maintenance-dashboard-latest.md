@@ -1,12 +1,12 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-08-07T10:22:18-06:00
+Generated: 2026-08-11T16:15:15+00:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
 ## Inventory
 
-- Canonical resource rows: 1490
+- Canonical resource rows: 1499
 - Consolidated directory entries: 687
 - Registered update sources: 126
 - Deep-watch source groups: 15
@@ -19,10 +19,10 @@ Automation detects and drafts. A person approves public claims, directory change
 
 - Directory quality: pass
 - Internal links: pass
-- Source URLs checked: 119
+- Source URLs checked: 125
 - Confirmed broken or missing source URLs: 0
-- Source URLs requiring normal-browser confirmation: 0
-- Script-access limitations (not broken): 20
+- Source URLs requiring normal-browser confirmation: 4
+- Script-access limitations (not broken): 23
 - Offline field-check records: 1
 - Deep-watch pages checked: 32
 - Deep-watch pages failed: 0
@@ -39,7 +39,8 @@ Automation detects and drafts. A person approves public claims, directory change
 ## Action Queue
 
 - **HIGH - 12 priority directory candidates:** Confirm each linked listing page before adding it to canonical data.
-- **MEDIUM - 175 canonical rows without a website or source URL:** Enrich high-value entries first; do not invent contact paths.
+- **MEDIUM - 173 canonical rows without a website or source URL:** Enrich high-value entries first; do not invent contact paths.
 - **LOW - 544 listings without an identified promotion route:** Enrich these only when a public page or direct contact supports a useful route; do not invent availability.
 - **LOW - 127 low-confidence text candidates:** Review only after the linked priority queue; do not publish from page text alone.
+- **LOW - 4 sources the automated checker could not confirm:** Open these in a normal browser; do not remove a link solely because of a timeout, network problem, or temporary server response.
 - **LOW - 1 offline posting pathways awaiting a field check:** Confirm the physical location or owner-controlled posting policy locally.

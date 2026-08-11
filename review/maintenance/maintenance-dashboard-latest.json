@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-07T10:22:18-06:00",
+  "generated_at": "2026-08-11T16:15:15+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
-    "canonical_resource_rows": 1490,
+    "canonical_resource_rows": 1499,
     "consolidated_directory_entries": 687,
     "registered_update_sources": 126,
     "deep_watch_sources": 15,
@@ -14,10 +14,10 @@
   "latest_checks": {
     "directory_quality": "pass",
     "internal_links": "pass",
-    "source_urls_checked": 119,
+    "source_urls_checked": 125,
     "source_urls_confirmed_broken": 0,
-    "source_urls_browser_check": 0,
-    "source_urls_script_limited": 20,
+    "source_urls_browser_check": 4,
+    "source_urls_script_limited": 23,
     "source_field_checks": 1,
     "watch_pages_checked": 32,
     "watch_pages_failed": 0,
@@ -40,7 +40,7 @@
     },
     {
       "priority": "medium",
-      "count": 175,
+      "count": 173,
       "label": "canonical rows without a website or source URL",
       "next_action": "Enrich high-value entries first; do not invent contact paths."
     },
@@ -55,6 +55,12 @@
       "count": 127,
       "label": "low-confidence text candidates",
       "next_action": "Review only after the linked priority queue; do not publish from page text alone."
+    },
+    {
+      "priority": "low",
+      "count": 4,
+      "label": "sources the automated checker could not confirm",
+      "next_action": "Open these in a normal browser; do not remove a link solely because of a timeout, network problem, or temporary server response."
     },
     {
       "priority": "low",
