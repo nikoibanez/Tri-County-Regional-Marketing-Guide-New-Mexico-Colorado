@@ -4,7 +4,7 @@
 
 [build.environment]
   PYTHON_VERSION = "3.11"
-  PUBLIC_SITE_ORIGIN = "https://statelineguide.org"
+  PUBLIC_SITE_ORIGIN = "https://newmexicocoloradoguide.netlify.app"
 
 [[headers]]
   for = "/*"

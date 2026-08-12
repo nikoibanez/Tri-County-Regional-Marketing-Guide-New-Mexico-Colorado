@@ -88,11 +88,11 @@ DIRECTORY_CONNECTIVITY_ENTRIES, DIRECTORY_CONNECTIVITY_CHECKS = load_directory_c
 
 
 def normalize_origin(value: str) -> str:
-    value = (value or "").strip() or "https://statelineguide.org"
+    value = (value or "").strip() or "https://newmexicocoloradoguide.netlify.app"
     return value.rstrip("/") + "/"
 
 
-SITE_URL = normalize_origin(os.environ.get("PUBLIC_SITE_ORIGIN", "https://statelineguide.org"))
+SITE_URL = normalize_origin(os.environ.get("PUBLIC_SITE_ORIGIN", "https://newmexicocoloradoguide.netlify.app"))
 
 
 def build_asset_version() -> str:
