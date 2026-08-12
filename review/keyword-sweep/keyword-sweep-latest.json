@@ -1,24 +1,750 @@
 {
-  "generated_at": "2026-07-26",
-  "index_path": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\data\\listing-keyword-index.json",
-  "network_enabled": false,
+  "generated_at": "2026-08-12",
+  "index_path": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/listing-keyword-index.json",
+  "network_enabled": true,
   "summary": {
-    "rows": 1490,
-    "rows_with_source_url": 1315,
-    "distinct_source_urls": 408,
-    "urls_selected": 0,
-    "urls_checked": 0,
-    "urls_failed": 0,
-    "entries_changed": 0,
-    "source_keyword_changes": 0,
+    "rows": 1499,
+    "rows_with_source_url": 1326,
+    "distinct_source_urls": 419,
+    "urls_selected": 120,
+    "urls_checked": 120,
+    "urls_failed": 43,
+    "entries_changed": 37,
+    "source_keyword_changes": 44,
     "status_counts": {
-      "checked": 74,
-      "checked_no_name_match": 94,
-      "fetch_error": 102,
-      "no_source": 175,
-      "pending_source_check": 1045
+      "checked": 139,
+      "checked_no_name_match": 509,
+      "fetch_error": 160,
+      "no_source": 173,
+      "pending_source_check": 518
     }
   },
-  "changes": [],
-  "fetch_failures": []
+  "changes": [
+    {
+      "id": "travel-guide-bobcat-pass-wilderness-adventures-angel-fire-colfax",
+      "name": "Bobcat Pass Wilderness Adventures",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "added": [
+        "agriculture"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://angelfirechamber.org/business/bobcat-pass-wilderness-adventures/"
+    },
+    {
+      "id": "travel-guide-longhorn-lodge-angel-fire-colfax",
+      "name": "Longhorn Lodge",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "added": [
+        "vacation rental"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://angelfirechamber.org/business/longhorn-lodge/"
+    },
+    {
+      "id": "mountain-sports-of-angel-fire-colfax-retail-outdoor",
+      "name": "Mountain Sports of Angel Fire",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "added": [
+        "camping"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://angelfirechamber.org/business/mountain-sports-of-angel-fire/"
+    },
+    {
+      "id": "travel-guide-music-from-angel-fire-angel-fire-colfax",
+      "name": "Music from Angel Fire",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "added": [
+        "chamber of commerce",
+        "festival",
+        "workshop"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://angelfirechamber.org/business/music-from-angel-fire/"
+    },
+    {
+      "id": "travel-guide-roadrunner-tours-angel-fire-colfax",
+      "name": "Roadrunner Tours",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "added": [
+        "horseback riding"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://angelfirechamber.org/business/road-runner-tours-ltd/"
+    },
+    {
+      "id": "explore-raton-arts-and-culture-page-raton-colfax-visitor-facing-arts-and-culture-route",
+      "name": "Explore Raton Arts and Culture Page",
+      "county": "Colfax",
+      "town": "Raton",
+      "added": [
+        "theater"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.exploreraton.com/arts-culture"
+    },
+    {
+      "id": "travel-guide-mesalands-cc-dinosaur-museum-raton-colfax",
+      "name": "Mesalands CC Dinosaur Museum",
+      "county": "Colfax",
+      "town": "Raton",
+      "added": [
+        "education",
+        "outdoor recreation"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.newmexico.org/listing/mesalands-community-college%e2%80%99s-dinosaur-museum/1411/"
+    },
+    {
+      "id": "travel-guide-pecos-national-historical-park-raton-colfax",
+      "name": "Pecos National Historical Park",
+      "county": "Colfax",
+      "town": "Raton",
+      "added": [
+        "outdoor recreation"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.newmexico.org/listing/pecos-national-historical-park/1568/"
+    },
+    {
+      "id": "santa-fe-trail-performing-arts-colfax-raton",
+      "name": "Santa Fe Trail School for the Performing Arts",
+      "county": "Colfax",
+      "town": "Raton",
+      "added": [
+        "theater"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.ratonnm.gov/business_detail_T7_R32.php"
+    },
+    {
+      "id": "the-shuler-theater-colfax-performing-arts-venue",
+      "name": "The Shuler Theater",
+      "county": "Colfax",
+      "town": "Raton",
+      "added": [
+        "main street"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "http://www.shulertheater.com/"
+    },
+    {
+      "id": "travel-guide-cuchara-lokal-cuchara-huerfano",
+      "name": "Cuchara Lokal",
+      "county": "Huerfano",
+      "town": "Cuchara",
+      "added": [
+        "hotel"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.cucharalokalhotel.com/"
+    },
+    {
+      "id": "travel-guide-dodgeton-creek-inn-cuchara-huerfano",
+      "name": "Dodgeton Creek Inn",
+      "county": "Huerfano",
+      "town": "Cuchara",
+      "added": [
+        "bed and breakfast"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://thedodgetoncreekinn.com/"
+    },
+    {
+      "id": "travel-guide-stonewall-cuchara-la-veta-huerfano",
+      "name": "Stonewall",
+      "county": "Huerfano",
+      "town": "Cuchara / La Veta",
+      "added": [
+        "camping",
+        "directory"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.coloradodirectory.com/stonewall/"
+    },
+    {
+      "id": "artisans-on-main-llc-huerfano-retail-arts",
+      "name": "Artisans on Main",
+      "county": "Huerfano",
+      "town": "La Veta",
+      "added": [
+        "jewelry",
+        "photography",
+        "pottery"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.artisansonmain.art/"
+    },
+    {
+      "id": "shalawalla-gallery-huerfano-la-veta",
+      "name": "Shalawalla Gallery & Batik Studio",
+      "county": "Huerfano",
+      "town": "La Veta",
+      "added": [
+        "gift shop",
+        "jewelry",
+        "pottery"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.shalawalla.com/"
+    },
+    {
+      "id": "huerfano-heritage-center-huerfano-arts-culture",
+      "name": "Huerfano County Heritage Center",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "added": [
+        "museum",
+        "newspaper",
+        "nonprofit",
+        "visitor center"
+      ],
+      "removed": [],
+      "status": "pending_source_check",
+      "source_url": "https://www.huerfanohistory.org/visit-us"
+    },
+    {
+      "id": "travel-guide-jeeping-and-4wd-walsenburg-huerfano",
+      "name": "Jeeping & 4WD",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "added": [
+        "hiking"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.coloradodirectory.com/jeeping/"
+    },
+    {
+      "id": "travel-guide-rafting-kayaking-walsenburg-huerfano",
+      "name": "Rafting/Kayaking",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "added": [
+        "workshop"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.coloradodirectory.com/rafting/"
+    },
+    {
+      "id": "walsenburg-mining-museum-huerfano-county-historical-society-huerfano-art",
+      "name": "Walsenburg Mining Museum / Huerfano County Historical Society",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "added": [
+        "nonprofit"
+      ],
+      "removed": [],
+      "status": "pending_source_check",
+      "source_url": "https://www.huerfanohistory.org/mining-museum"
+    },
+    {
+      "id": "travel-guide-whitewater-rafting-and-kayaking-walsenburg-huerfano",
+      "name": "Whitewater Rafting & Kayaking",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "added": [
+        "workshop"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.coloradodirectory.com/rafting/"
+    },
+    {
+      "id": "a-r-mitchell-museum-of-western-art-las-animas-museum-arts",
+      "name": "A.R. Mitchell Museum of Western Art",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "added": [
+        "painting"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://armitchellmuseum.com/"
+    },
+    {
+      "id": "travel-guide-bent-s-old-fort-national-historic-site-trinidad-las-animas",
+      "name": "Bent's Old Fort National Historic Site",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "added": [
+        "hiking"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.coloradodirectory.com/nationalparks/bentsfort.html"
+    },
+    {
+      "id": "gluten-free-in-the-303-las-animas-specialty-food",
+      "name": "Gluten Free in the 303",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "added": [
+        "bakery"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://glutenfreeinthe303.com"
+    },
+    {
+      "id": "travel-guide-jeeping-and-4wd-trinidad-las-animas",
+      "name": "Jeeping & 4WD",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "added": [
+        "hiking"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.coloradodirectory.com/jeeping/"
+    },
+    {
+      "id": "lucky-blue-tattoo-las-animas-tattoo-tooth-gem-studio",
+      "name": "Lucky Blue Tattoo",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "added": [
+        "artist"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.luckybluetattootrinidad.com/"
+    },
+    {
+      "id": "travel-guide-rafting-kayaking-trinidad-las-animas",
+      "name": "Rafting/Kayaking",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "added": [
+        "workshop"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.coloradodirectory.com/rafting/"
+    },
+    {
+      "id": "travel-guide-stonewall-trinidad-las-animas",
+      "name": "Stonewall",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "added": [
+        "camping",
+        "directory"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.coloradodirectory.com/stonewall/"
+    },
+    {
+      "id": "travel-guide-whitewater-rafting-and-kayaking-trinidad-las-animas",
+      "name": "Whitewater Rafting & Kayaking",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "added": [
+        "workshop"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.coloradodirectory.com/rafting/"
+    },
+    {
+      "id": "advanced-air-llc-colfax-air-transportation",
+      "name": "Advanced Air, LLC",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "added": [
+        "transportation"
+      ],
+      "removed": [],
+      "status": "pending_source_check",
+      "source_url": "https://advancedairlines.com/landing-pages/angel-fire-new-mexico/"
+    },
+    {
+      "id": "angels-glow-tanning-oxygen-bar-colfax-health-wellness",
+      "name": "Angel's Glow Tanning & Oxygen Bar",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "added": [
+        "salon",
+        "spa and wellness"
+      ],
+      "removed": [],
+      "status": "pending_source_check",
+      "source_url": "https://www.google.com/maps/search/?api=1&query=Angel%27s+Glow+Tanning+%26+Oxygen+Bar+3379+Mountain+View+Blvd+Angel+Fire+NM"
+    },
+    {
+      "id": "brodsky-bookkeeping-colfax-professional-services",
+      "name": "Brodsky Bookkeeping",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "added": [
+        "accounting",
+        "business support",
+        "professional services"
+      ],
+      "removed": [],
+      "status": "pending_source_check",
+      "source_url": "https://www.brodskybookkeeping.com/"
+    },
+    {
+      "id": "comanche-creek-brewing-company-colfax-food-beverage",
+      "name": "Comanche Creek Brewing Company",
+      "county": "Colfax",
+      "town": "Eagle Nest",
+      "added": [
+        "brewery"
+      ],
+      "removed": [],
+      "status": "pending_source_check",
+      "source_url": "https://www.comanchecreekbrewingco.com/"
+    },
+    {
+      "id": "double-black-design-llc-colfax-construction",
+      "name": "Double Black Design, LLC",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "added": [
+        "construction",
+        "contractor"
+      ],
+      "removed": [],
+      "status": "pending_source_check",
+      "source_url": "https://www.doubleblackdesign.co/"
+    },
+    {
+      "id": "holy-angels-catholic-mission-church-colfax-community-organization",
+      "name": "Holy Angels Catholic Mission Church",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "added": [
+        "community organization",
+        "nonprofit"
+      ],
+      "removed": [],
+      "status": "pending_source_check",
+      "source_url": "https://www.angelfirecatholic.com/"
+    },
+    {
+      "id": "c-cubed-training-huerfano-education-nonprofit",
+      "name": "C Cubed Training",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "added": [
+        "education",
+        "nonprofit",
+        "training"
+      ],
+      "removed": [],
+      "status": "pending_source_check",
+      "source_url": "https://www.ccubedtraining.com/"
+    },
+    {
+      "id": "my-one-hour-office-huerfano-business-support",
+      "name": "My One Hour Office",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "added": [
+        "business support",
+        "coworking",
+        "professional services"
+      ],
+      "removed": [],
+      "status": "pending_source_check",
+      "source_url": "https://myonehouroffice.com/"
+    },
+    {
+      "id": "world-journal-huerfano-media-news",
+      "name": "The World Journal",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "added": [
+        "advertising",
+        "newspaper"
+      ],
+      "removed": [],
+      "status": "pending_source_check",
+      "source_url": "https://worldjournalnewspaper.com/"
+    }
+  ],
+  "fetch_failures": [
+    {
+      "url": "https://anchormotelandcottages.com/",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)>"
+    },
+    {
+      "url": "https://angelfirechamber.org/business/big-river-raft-trips/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://angelfirechamber.org/business/enchanted-circle-pottery/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://angelfirechamber.org/business/far-flung-adventures/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://angelfirechamber.org/business/j-a-fun-bakery-cafe/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://angelfirechamber.org/business/nuckolls-brewing-company/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://charlies-market.com/",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1016)>"
+    },
+    {
+      "url": "https://kangaroocoffeellc.com",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://thelvesa.org/",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "url": "https://trinidadstate.edu/collaboratory/index.html",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/angel-fire-ebikes-llc/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/capulin-camp-rv-park/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/chisum-group-berkshire-hathaway-homeservices-angel-fire-real-estate/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/clean-af-llc/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/desert-sky-realty-investments/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/dollar-general/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/enchanted-circle-campground-rv-park/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/enchanted-outpost-magazine/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/family-dollar/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/jeanettes-specialty-foods-catering/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/legacy-silver-company/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/los-rios-river-runners/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/mi-cocina-mexicana/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/mikuna-grill/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/monte-verde-lake/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/purple-sage-studio/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/ridgewalk-treehouse/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/rio-grande-balloons/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/smoke-rings-bbq/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/southern-exposure-photography/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/taty-at-the-bump/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/the-bakery-and-cafe/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/the-indigo-market/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/tolby-campground-cimarron-valley/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/trailhead-ski-shop/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/village-ski-shop/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/whatville/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/zebs-restaurant-and-bar/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visittrinidadcolorado.com/attraction/trinidad-history-museum/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visittrinidadcolorado.com/shop/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.bestwestern.com/en_US/book/hotels-in-walsenburg/best-western-rambler/propertyCode.06038.html",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.enchantedcirclepottery.com",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)>"
+    },
+    {
+      "url": "https://www.lavetatheaterweb.org",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [Errno -2] Name or service not known>"
+    }
+  ]
 }
