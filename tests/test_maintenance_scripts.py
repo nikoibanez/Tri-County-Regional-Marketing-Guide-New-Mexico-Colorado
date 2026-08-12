@@ -154,7 +154,7 @@ class DirectoryQualityTests(unittest.TestCase):
             }
         )
 
-        self.assertIn("Flyer-friendly", flyer_tags)
+        self.assertIn("Physical promotion contact", flyer_tags)
         self.assertIn("Newsletter sharing", newsletter_tags)
         self.assertIn("Social sharing", social_tags)
 
@@ -163,7 +163,7 @@ class DirectoryQualityTests(unittest.TestCase):
             {
                 "audience_served": "Artist; For-Profit",
                 "outreach_channels": [
-                    {"key": "physical_flyers", "label": "Ask about flyers", "status": "ask"}
+                    {"key": "physical_flyers", "label": "Flyer/poster contact", "status": "ask"}
                 ],
             }
         )

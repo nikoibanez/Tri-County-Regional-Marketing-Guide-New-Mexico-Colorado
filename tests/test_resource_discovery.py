@@ -146,6 +146,65 @@ class GuideTaxonomyTests(unittest.TestCase):
         counts = {county: sum(1 for row in selected if row["county"] == county) for county in ("Colfax", "Las Animas", "Huerfano")}
         self.assertEqual(counts, {"Colfax": 6, "Las Animas": 6, "Huerfano": 6})
 
+    def test_physical_promotion_keywords_reach_master_directory_search(self) -> None:
+        enriched = guide_builder.enrich_resource_row(
+            {
+                "id": "sample-bookstore",
+                "resource_name": "Sample Bookstore",
+                "county": "Colfax",
+                "town": "Raton",
+                "physical_address": "100 Main Street",
+                "public_listing_type": "Retail & local goods",
+                "category": "Bookstore",
+            }
+        )
+        self.assertEqual(enriched["physical_ad_candidate"], "true")
+        self.assertEqual(enriched["physical_promotion_category"], "Bookstores and pharmacies")
+        self.assertIn("Bookstore", enriched["public_keywords"])
+        self.assertIn("physical promotion location", enriched["physical_promotion_keywords"])
+        self.assertIn("bulletin boards", enriched["physical_promotion_keywords"])
+
+    def test_short_physical_terms_do_not_match_inside_unrelated_words(self) -> None:
+        self.assertEqual(
+            guide_builder.physical_promotion_category(
+                {
+                    "resource_name": "Regional Service Company",
+                    "category": "Professional service",
+                    "public_listing_type": "Local business or service",
+                }
+            ),
+            "",
+        )
+        self.assertEqual(
+            guide_builder.physical_promotion_category(
+                {
+                    "resource_name": "A Taylor Made Haircut",
+                    "category": "Service / personal care",
+                    "public_listing_type": "Health & wellness",
+                }
+            ),
+            "Personal service and auto shops",
+        )
+
+    def test_duplicate_directory_routes_on_same_host_render_once(self) -> None:
+        markup = guide_builder.contact_links_for_row(
+            {
+                "website": "https://example.org/; https://www.example.org/about",
+                "source_url": "https://example.com/directory/one; https://example.com/directory/two",
+            }
+        )
+        self.assertEqual(markup.count(">Website<"), 1)
+        self.assertEqual(markup.count("Listing page"), 1)
+
+    def test_promote_and_physical_pages_use_searchable_shared_data(self) -> None:
+        promote = guide_builder.promote_page()
+        physical = guide_builder.posting_page([])
+        self.assertIn('id="promote-results"', promote)
+        self.assertIn('id="promote-county-filter"', promote)
+        self.assertIn('id="physical-location-list"', physical)
+        self.assertIn('id="physical-category-filter"', physical)
+        self.assertNotIn("Ask first", physical)
+
     def test_discovery_shortlist_balances_requested_categories(self) -> None:
         sources = [
             {"name": f"Grant {index}", "category": "grants-public-funding"}

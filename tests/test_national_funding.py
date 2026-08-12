@@ -26,7 +26,7 @@ class NationalFundingDataTests(unittest.TestCase):
         self.assertEqual(validate(OPPORTUNITIES, WATCH_SOURCES), [])
         opportunities = json.loads(OPPORTUNITIES.read_text(encoding="utf-8"))["opportunities"]
         sources = json.loads(WATCH_SOURCES.read_text(encoding="utf-8"))["sources"]
-        self.assertGreaterEqual(len(opportunities), 20)
+        self.assertEqual(len(opportunities), 60)
         self.assertEqual(len(sources), 10)
 
     def test_public_funding_cards_expose_requested_decision_fields(self) -> None:
@@ -43,7 +43,14 @@ class NationalFundingDataTests(unittest.TestCase):
         groups = {guide_builder.funding_program_group(item) for item in guide_builder.NATIONAL_FUNDING_OPPORTUNITIES}
         self.assertEqual(
             groups,
-            {"Cash grants", "Fellowships", "Free support programs", "Funding search tools"},
+            {
+                "Cash grants",
+                "Fellowships",
+                "Free support programs",
+                "Funding search tools",
+                "Incentives and reimbursements",
+                "Loans and capital",
+            },
         )
 
     def test_directory_assistant_searches_funding_records(self) -> None:

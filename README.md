@@ -2,7 +2,7 @@
 
 Static Netlify-ready guide for businesses, nonprofits, artists, creators, programs, and service providers working across Colfax County, Las Animas County, and Huerfano County.
 
-Production origin: `https://statelineguide.org`
+Production origin: `https://newmexicocoloradoguide.netlify.app`
 
 ## Optional GitHub Pages Fallback
 
@@ -47,7 +47,7 @@ This repo includes a no-secret maintenance system. Deterministic scripts build, 
 - `scripts/normalize_netlify_submissions.py` - turns exported Netlify form submissions into a human review report.
 - `scripts/audit_directory_quality.py` - blocks duplicate, non-entity, placeholder-description, and missing-metadata regressions.
 - `scripts/audit_directory_connectivity.py` - classifies every published listing as a first-party website, hosted profile, contact-only entry, or missing online path and checks URL response status without treating bot blocks as confirmed failures.
-- `scripts/audit_directory_outreach_channels.py` - reviews every published listing and directory shortcut for physical posting, directory, calendar, social-sharing, newsletter, advertising, media, sponsorship, and partner-outreach routes while separating listed routes from ask-first ideas.
+- `scripts/audit_directory_outreach_channels.py` - reviews every published listing and directory shortcut for physical posting, directory, calendar, social-sharing, newsletter, advertising, media, sponsorship, and partner-outreach routes while separating confirmed routes from contact opportunities.
 - `tools/directory_exclusions.py` - private permanent exclusion registry enforced by imports, builds, audits, and candidate sweeps.
 - `tools/apply_directory_exclusions.py` - removes excluded rows from historical data artifacts and fails when public output contains one.
 - `scripts/audit_internal_links.py` - checks generated routes, fragments, assets, and duplicate HTML IDs.
