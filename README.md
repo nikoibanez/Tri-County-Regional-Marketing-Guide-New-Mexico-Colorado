@@ -2,7 +2,7 @@
 
 Static Netlify-ready guide for businesses, nonprofits, artists, creators, programs, and service providers working across Colfax County, Las Animas County, and Huerfano County.
 
-Production origin: `https://statelineguide.org`
+Production origin: `https://newmexicocoloradoguide.netlify.app`
 
 ## Optional GitHub Pages Fallback
 

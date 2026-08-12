@@ -32,7 +32,7 @@ DEFAULT_DIRECTORY_FILES = [
 ]
 DEFAULT_OUT_DIR = ROOT / "review" / "directory-watch"
 DEFAULT_PUBLIC_CANDIDATES = ROOT / "data" / "directory-auto-update-candidates.json"
-PUBLIC_SITE_ORIGIN = (os.environ.get("PUBLIC_SITE_ORIGIN") or "https://statelineguide.org").rstrip("/")
+PUBLIC_SITE_ORIGIN = (os.environ.get("PUBLIC_SITE_ORIGIN") or "https://newmexicocoloradoguide.netlify.app").rstrip("/")
 
 
 BLOCK_TAGS = {
