@@ -1,6 +1,6 @@
 # Update Source Registry
 
-Generated: 2026-08-12
+Generated: 2026-08-13
 
 Automation may propose updates. Human approval is required for public claims, eligibility, rates, deadlines, contact changes, listing removal, and civic/legal guidance.
 
@@ -112,7 +112,7 @@ Automation may propose updates. Human approval is required for public claims, el
 - [NGLCC Scholarships and Grants](https://nglcc.org/programs-initiatives/) - National; funding; every 7 days; human_approval_required; last checked 2026-08-12; redirect; next 2026-08-19
 - [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - National; funding; every 7 days; human_approval_required; last checked 2026-08-12; access_blocked; next 2026-08-19
 - [USDA Rural Development Programs and Services](https://www.rd.usda.gov/programs-services) - National; funding; every 7 days; human_approval_required; last checked 2026-08-12; access_blocked; next 2026-08-19
-- [Arts in Society Grant](https://oedit.colorado.gov/arts-in-society-grant) - Regional; funding; every 7 days; human_approval_required; last checked 2026-08-12; access_blocked; next 2026-08-19
+- [Arts in Society Grant](https://www.redlineart.org/ais-apply-for-a-grant) - Regional; funding; every 7 days; human_approval_required; not checked yet
 - [Colorado Advanced Industries Accelerator Programs](https://oedit.colorado.gov/advanced-industries-accelerator-programs) - Regional; funding; every 7 days; human_approval_required; last checked 2026-08-12; access_blocked; next 2026-08-19
 - [Colorado Business Funding and Incentives](https://oedit.colorado.gov/business-funding-and-incentives) - Regional; funding; every 7 days; human_approval_required; last checked 2026-08-12; access_blocked; next 2026-08-19
 - [Colorado Community Revitalization Grant](https://oedit.colorado.gov/colorado-community-revitalization-grant) - Regional; funding; every 7 days; human_approval_required; last checked 2026-08-12; access_blocked; next 2026-08-19

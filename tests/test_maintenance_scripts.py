@@ -17,6 +17,7 @@ from audit_directory_connectivity import connection_details, display_source_path
 from audit_directory_outreach_channels import build_report as build_outreach_report  # noqa: E402
 from audit_internal_links import audit_site  # noqa: E402
 from audit_update_sources import check_record, check_url, summarize  # noqa: E402
+from apply_directory_link_repairs import apply_repairs_to_rows  # noqa: E402
 import build_netlify_deep_guide as guide_builder  # noqa: E402
 from build_update_source_registry import normalize_posting  # noqa: E402
 from build_netlify_deep_guide import (  # noqa: E402
@@ -31,11 +32,17 @@ from directory_exclusions import (  # noqa: E402
 )
 from directory_outreach import channel_status_map, classify_outreach_channels  # noqa: E402
 from smoke_test_site import validate_body  # noqa: E402
-from weekly_directory_query_check import extract_candidates  # noqa: E402
+from weekly_directory_query_check import (  # noqa: E402
+    extract_candidates,
+    load_existing_names,
+    load_existing_urls,
+    match_existing,
+)
 from sweep_listing_keywords import (  # noqa: E402
     KeywordSignalParser,
     canonical_signal,
     extract_controlled_keywords,
+    filter_source_keywords,
     listing_name_matches_signal,
     primary_source_url,
     select_urls,
@@ -93,6 +100,52 @@ class DirectoryQualityTests(unittest.TestCase):
         candidates = extract_candidates(source, "https://example.org/directory/", html, {})
 
         self.assertEqual([candidate["name"] for candidate in candidates], ["Allowed Gallery"])
+
+    def test_weekly_directory_sweep_matches_aliases_and_known_listing_urls(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            directory_path = Path(temp_dir) / "directory.csv"
+            directory_path.write_text(
+                "name,aliases,source_urls\n"
+                '"Kathy Hills Studio Gallery / Spanish Peaks Art","[\'Kathy Hills Studio Gallery\']","[]"\n'
+                '"The World Journal","[]","[\'https://spanishpeakscountry.com/business-directory/listing/world-journal\']"\n',
+                encoding="utf-8",
+            )
+            names = load_existing_names([directory_path])
+            urls = load_existing_urls([directory_path])
+
+        alias_match = match_existing("Kathy Hills Studio Gallery", names)
+        url_match = match_existing(
+            "World Journal",
+            names,
+            "https://spanishpeakscountry.com/business-directory/listing/world-journal/",
+            urls,
+        )
+        self.assertEqual(alias_match["match_type"], "exact_normalized")
+        self.assertEqual(url_match["match_type"], "exact_url")
+
+    def test_reviewed_link_repairs_replace_stale_urls_and_keep_fallbacks(self) -> None:
+        rows = [
+            {
+                "id": "example",
+                "website": "https://old.example.org/",
+                "source_url": "https://old.example.org/; https://directory.example.org/category",
+            }
+        ]
+        repairs = [
+            {
+                "id": "example",
+                "remove_urls": ["https://old.example.org/"],
+                "replacement_website": "https://new.example.org/",
+                "add_source_urls": ["https://directory.example.org/listing/example"],
+            }
+        ]
+
+        repaired, changed = apply_repairs_to_rows(rows, repairs)
+
+        self.assertEqual(changed, ["example"])
+        self.assertEqual(repaired[0]["website"], "https://new.example.org/")
+        self.assertIn("https://directory.example.org/category", repaired[0]["source_url"])
+        self.assertNotIn("https://old.example.org/", repaired[0]["source_url"])
 
     def test_entity_contact_prefers_website_then_listing_page(self) -> None:
         row = {
@@ -566,6 +619,45 @@ class KeywordSweepTests(unittest.TestCase):
         }
         old_entries = {"checked": {"last_checked": "2026-07-20"}}
         self.assertEqual(select_urls(url_to_ids, old_entries, 1), ["https://new.example.com"])
+
+    def test_keyword_guardrails_block_host_context_and_listing_specific_noise(self) -> None:
+        row = {
+            "id": "music-example",
+            "resource_name": "Example Music Festival",
+            "category": "Music festival",
+            "resource_type": "Arts and culture",
+        }
+        guardrails = {
+            "global_rules": {
+                "chamber of commerce": {"required_canonical_phrases": ["chamber"]}
+            },
+            "listing_rules": {
+                "music-example": {"blocked_source_keywords": ["visitor center"]}
+            },
+        }
+
+        allowed, blocked = filter_source_keywords(
+            row,
+            ["festival", "chamber of commerce", "visitor center"],
+            guardrails,
+        )
+
+        self.assertEqual(allowed, ["festival"])
+        self.assertEqual(blocked, ["chamber of commerce", "visitor center"])
+
+        positive_row = {
+            "id": "library-example",
+            "resource_name": "Example Public Library",
+            "category": "Library and community",
+            "resource_type": "Bulletin and notice",
+        }
+        allowed, blocked = filter_source_keywords(
+            positive_row,
+            ["library"],
+            guardrails,
+        )
+        self.assertEqual(allowed, ["library"])
+        self.assertEqual(blocked, [])
 
 
 if __name__ == "__main__":

@@ -755,7 +755,7 @@ FUNDING_DIRECTORY_ADDITIONS = [
         "title": "Arts in Society Grant",
         "county": "Regional",
         "kind": "Arts / civic grants",
-        "url": "https://oedit.colorado.gov/arts-in-society-grant",
+        "url": "https://www.redlineart.org/ais-apply-for-a-grant",
         "best_for": "Colorado artists, arts organizations, schools, governments, and cross-sector projects using art to address civic or social challenges.",
         "action": "Use for Las Animas and Huerfano arts/community projects that have a clear public benefit and partnership frame.",
         "confidence": "High",

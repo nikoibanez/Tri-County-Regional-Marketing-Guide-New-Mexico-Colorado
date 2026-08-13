@@ -22,6 +22,7 @@ except ModuleNotFoundError:
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = ROOT / "data" / "tri_county_persona_resources.csv"
 DEFAULT_INDEX = ROOT / "data" / "listing-keyword-index.json"
+DEFAULT_GUARDRAILS = ROOT / "data" / "keyword-inference-guardrails.json"
 DEFAULT_OUT_DIR = ROOT / "review" / "keyword-sweep"
 SCHEMA_VERSION = 1
 
@@ -349,6 +350,48 @@ def load_index(path: Path) -> dict:
     return payload
 
 
+def load_keyword_guardrails(path: Path) -> dict:
+    if not path.exists():
+        return {"global_rules": {}, "listing_rules": {}}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {"global_rules": {}, "listing_rules": {}}
+    if not isinstance(payload, dict):
+        return {"global_rules": {}, "listing_rules": {}}
+    if not isinstance(payload.get("global_rules"), dict):
+        payload["global_rules"] = {}
+    if not isinstance(payload.get("listing_rules"), dict):
+        payload["listing_rules"] = {}
+    return payload
+
+
+def filter_source_keywords(row: dict, keywords: list[str], guardrails: dict) -> tuple[list[str], list[str]]:
+    canonical_text = normalize_match_text(canonical_signal(row))
+    listing_rule = guardrails.get("listing_rules", {}).get(clean_text(row.get("id")), {})
+    listing_blocks = {
+        clean_text(keyword).casefold()
+        for keyword in listing_rule.get("blocked_source_keywords", [])
+        if clean_text(keyword)
+    }
+    global_rules = guardrails.get("global_rules", {})
+    allowed: list[str] = []
+    blocked: list[str] = []
+    for keyword in keywords:
+        normalized_keyword = clean_text(keyword).casefold()
+        should_block = normalized_keyword in listing_blocks
+        rule = global_rules.get(normalized_keyword, {})
+        required_phrases = rule.get("required_canonical_phrases", []) if isinstance(rule, dict) else []
+        if required_phrases and not any(phrase_present(canonical_text, phrase) for phrase in required_phrases):
+            should_block = True
+        if should_block:
+            if keyword not in blocked:
+                blocked.append(keyword)
+        elif keyword not in allowed:
+            allowed.append(keyword)
+    return allowed, blocked
+
+
 def fetch_keyword_signals(url: str, timeout: int) -> dict:
     result = fetch_url(url, timeout)
     if not result["ok"]:
@@ -433,6 +476,8 @@ def run_sweep(args: argparse.Namespace) -> dict:
     rows = load_rows(args.source)
     old_payload = load_index(args.index)
     old_entries = old_payload.get("entries", {})
+    guardrail_path = getattr(args, "guardrails", DEFAULT_GUARDRAILS)
+    guardrails = load_keyword_guardrails(guardrail_path)
     rows_by_id = {row["id"]: row for row in rows}
     url_to_ids: dict[str, list[str]] = defaultdict(list)
     for row in rows:
@@ -463,6 +508,7 @@ def run_sweep(args: argparse.Namespace) -> dict:
 
     new_entries: dict[str, dict] = {}
     changes = []
+    blocked_inferences = []
     source_keyword_changes = 0
     for resource_id, row in rows_by_id.items():
         old = old_entries.get(resource_id, {})
@@ -509,6 +555,18 @@ def run_sweep(args: argparse.Namespace) -> dict:
                     source_keywords = []
                     status = "checked_no_name_match"
 
+        source_keywords, blocked_source_keywords = filter_source_keywords(row, source_keywords, guardrails)
+        if blocked_source_keywords:
+            blocked_inferences.append(
+                {
+                    "id": resource_id,
+                    "name": row.get("resource_name"),
+                    "county": row.get("county"),
+                    "town": row.get("town"),
+                    "blocked": blocked_source_keywords,
+                    "source_url": source_url,
+                }
+            )
         keywords = list(dict.fromkeys(canonical_keywords + source_keywords))[:32]
         previous_keywords = list(old.get("keywords") or [])
         previous_source_keywords = list(old.get("source_keywords") or [])
@@ -536,6 +594,7 @@ def run_sweep(args: argparse.Namespace) -> dict:
             "keywords": keywords,
             "canonical_keywords": canonical_keywords,
             "source_keywords": source_keywords,
+            "blocked_source_keywords": blocked_source_keywords,
             "source_url": source_url,
             "final_url": final_url,
             "status": status,
@@ -563,6 +622,8 @@ def run_sweep(args: argparse.Namespace) -> dict:
         "urls_failed": failed_urls,
         "entries_changed": len(changes),
         "source_keyword_changes": source_keyword_changes,
+        "entries_with_blocked_inferences": len(blocked_inferences),
+        "blocked_inference_count": sum(len(item["blocked"]) for item in blocked_inferences),
         "status_counts": dict(sorted(status_counts.items())),
     }
     payload = {
@@ -571,6 +632,8 @@ def run_sweep(args: argparse.Namespace) -> dict:
         "network_enabled": not args.no_network,
         "summary": summary,
         "changes": changes,
+        "blocked_inferences": blocked_inferences,
+        "guardrail_path": str(guardrail_path),
         "fetch_failures": [
             {
                 "url": url,
@@ -607,6 +670,8 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- URL checks needing attention: {summary['urls_failed']}",
         f"- Listing keyword sets changed: {summary['entries_changed']}",
         f"- Source-derived keyword sets changed: {summary['source_keyword_changes']}",
+        f"- Entries with blocked inferences: {summary['entries_with_blocked_inferences']}",
+        f"- Misleading inferred keywords blocked: {summary['blocked_inference_count']}",
         "",
         "## Status",
         "",
@@ -629,6 +694,13 @@ def write_markdown(payload: dict, path: Path) -> None:
             lines.append("")
         if len(payload["changes"]) > 100:
             lines.append(f"Report truncated after 100 entries; machine-readable JSON contains all {len(payload['changes'])} changes.")
+    lines.extend(["", "## Blocked Inferences", ""])
+    if not payload["blocked_inferences"]:
+        lines.append("No source-page keywords were blocked by the reviewed guardrails.")
+    else:
+        for item in payload["blocked_inferences"][:100]:
+            place = ", ".join(part for part in [item.get("town"), item.get("county")] if part)
+            lines.append(f"- {item['name']} ({place}): {', '.join(item['blocked'])}")
     lines.extend(["", "## Fetches Needing Attention", ""])
     if not payload["fetch_failures"]:
         lines.append("No selected source fetches failed.")
@@ -643,6 +715,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Refresh controlled search-keyword suggestions for Tri-County listings.")
     parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
     parser.add_argument("--index", type=Path, default=DEFAULT_INDEX)
+    parser.add_argument("--guardrails", type=Path, default=DEFAULT_GUARDRAILS)
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT_DIR)
     parser.add_argument("--limit", type=int, default=120, help="Maximum distinct source URLs to fetch; 0 checks all.")
     parser.add_argument("--workers", type=int, default=6)

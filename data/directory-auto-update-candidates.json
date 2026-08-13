@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-22",
+  "generated_at": "2026-08-13",
   "publication_note": "Automatically refreshed from watched public directory and tourism pages. Treat these as candidate updates, not official directory additions, until a human confirms the linked source.",
   "summary": {
     "sources_watched": 15,
     "pages_checked": 32,
     "pages_failed": 0,
-    "already_represented": 270,
-    "possible_new_leads": 139,
-    "priority_new_leads": 12,
-    "low_confidence_text_leads": 127
+    "already_represented": 349,
+    "possible_new_leads": 62,
+    "priority_new_leads": 0,
+    "low_confidence_text_leads": 62
   },
   "watched_sources": [
     {
@@ -19,7 +19,7 @@
       "source_role": "Business directory, local services, restaurants, visitor-facing businesses",
       "why_watch": "Raton-area chamber source for business names, local service anchors, restaurants, and potential outreach contacts.",
       "pages_checked": 2,
-      "possible_new_leads": 61,
+      "possible_new_leads": 26,
       "priority_new_leads": 0
     },
     {
@@ -30,8 +30,8 @@
       "source_role": "Business directory, lodging, dining, services, arts, nonprofits",
       "why_watch": "Angel Fire and Moreno Valley chamber source for member businesses, nonprofits, artists, lodging, dining, and services.",
       "pages_checked": 1,
-      "possible_new_leads": 6,
-      "priority_new_leads": 6
+      "possible_new_leads": 0,
+      "priority_new_leads": 0
     },
     {
       "id": "colfax-angel-fire-food-catering-events",
@@ -63,7 +63,7 @@
       "source_role": "Tourist/travel spots, visitor-guide ads, event listings, Raton-facing promotion",
       "why_watch": "Raton visitor-facing source for events, visitor guide updates, attractions, lodging, and travel promotion.",
       "pages_checked": 3,
-      "possible_new_leads": 1,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -74,7 +74,7 @@
       "source_role": "Restaurants, lodging, shopping, visitor-facing businesses, local listing support",
       "why_watch": "High-signal Trinidad tourism pages for visitor-facing businesses and listing-support routes.",
       "pages_checked": 4,
-      "possible_new_leads": 9,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -85,7 +85,7 @@
       "source_role": "Event spots, event calendar, event submission, visitor-facing programs",
       "why_watch": "Primary visitor-facing source for Trinidad events and event submission routes.",
       "pages_checked": 2,
-      "possible_new_leads": 4,
+      "possible_new_leads": 1,
       "priority_new_leads": 0
     },
     {
@@ -129,8 +129,8 @@
       "source_role": "Business directory, tourism listings, galleries, restaurants, shopping, services",
       "why_watch": "High-signal Huerfano visitor-facing directory for Walsenburg, La Veta, Cuchara, Gardner, dining, lodging, shopping, galleries, and attractions.",
       "pages_checked": 1,
-      "possible_new_leads": 6,
-      "priority_new_leads": 6
+      "possible_new_leads": 0,
+      "priority_new_leads": 0
     },
     {
       "id": "huerfano-spanish-peaks-dining-lodging-venues",
@@ -151,7 +151,7 @@
       "source_role": "Event spots, community calendar, event submission, visitor-facing activities",
       "why_watch": "Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.",
       "pages_checked": 2,
-      "possible_new_leads": 13,
+      "possible_new_leads": 10,
       "priority_new_leads": 0
     },
     {
@@ -162,7 +162,7 @@
       "source_role": "Local businesses, restaurants, lodging, galleries, catering, services",
       "why_watch": "Municipal business directory for La Veta-area businesses, including restaurants, galleries, lodging, services, and catering-style entries.",
       "pages_checked": 1,
-      "possible_new_leads": 12,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -173,144 +173,11 @@
       "source_role": "Business directory, member exposure, events, local services",
       "why_watch": "Countywide chamber source for business collaboration, member exposure, events, and local business updates.",
       "pages_checked": 1,
-      "possible_new_leads": 2,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     }
   ],
-  "priority_new_leads": [
-    {
-      "name": "Advanced Air. LLC",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Angel Fire Chamber Member Business Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://angelfirechamber.org/local-businesses/",
-      "listing_url": "https://angelfirechamber.org/business/advanced-air/",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Angel’s Glow Tanning & Oxygen Bar",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Angel Fire Chamber Member Business Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://angelfirechamber.org/local-businesses/",
-      "listing_url": "https://angelfirechamber.org/business/angels-glow-tanning-oxygen-bar/",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Brodsky Bookkeeping",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Angel Fire Chamber Member Business Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://angelfirechamber.org/local-businesses/",
-      "listing_url": "https://angelfirechamber.org/business/brodsky-bookkeeping/",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Comanche Creek Brewing Company",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Angel Fire Chamber Member Business Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://angelfirechamber.org/local-businesses/",
-      "listing_url": "https://angelfirechamber.org/business/comanche-creek-brewing-company/",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Double Black Design, LLc",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Angel Fire Chamber Member Business Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://angelfirechamber.org/local-businesses/",
-      "listing_url": "https://angelfirechamber.org/business/double-black-design-llc/",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Holy Angels Catholic Mission Church",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Angel Fire Chamber Member Business Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://angelfirechamber.org/local-businesses/",
-      "listing_url": "https://angelfirechamber.org/business/holy-angels-catholic-mission-church/",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "C Cubed Training",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Business Directory",
-      "source_type": "Tourism business directory",
-      "source_page": "https://spanishpeakscountry.com/business-directory",
-      "listing_url": "https://spanishpeakscountry.com/business-directory/listing/c-cubed-training",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Huerfano County Heritage Center",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Business Directory",
-      "source_type": "Tourism business directory",
-      "source_page": "https://spanishpeakscountry.com/business-directory",
-      "listing_url": "https://spanishpeakscountry.com/business-directory/listing/hurfano-county-heritage-center",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Kathy Hills Studio Gallery",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Business Directory",
-      "source_type": "Tourism business directory",
-      "source_page": "https://spanishpeakscountry.com/business-directory",
-      "listing_url": "https://spanishpeakscountry.com/business-directory/listing/kathy-hills-studio-gallery",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "My One Hour Office",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Business Directory",
-      "source_type": "Tourism business directory",
-      "source_page": "https://spanishpeakscountry.com/business-directory",
-      "listing_url": "https://spanishpeakscountry.com/business-directory/listing/my-one-hour-office",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Walsenburg Mining Museum",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Business Directory",
-      "source_type": "Tourism business directory",
-      "source_page": "https://spanishpeakscountry.com/business-directory",
-      "listing_url": "https://spanishpeakscountry.com/business-directory/listing/walsenburg-mining-museum",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "World Journal",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Business Directory",
-      "source_type": "Tourism business directory",
-      "source_page": "https://spanishpeakscountry.com/business-directory",
-      "listing_url": "https://spanishpeakscountry.com/business-directory/listing/world-journal",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    }
-  ],
+  "priority_new_leads": [],
   "low_confidence_text_leads": [
     {
       "name": "107 Calle Arriba",
@@ -423,39 +290,6 @@
       "confidence": "low"
     },
     {
-      "name": "Alderette Acupuncture and",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Alpha Design",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "AutoZone",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Bronze Member",
       "county": "Colfax",
       "state": "NM",
@@ -467,39 +301,6 @@
       "confidence": "low"
     },
     {
-      "name": "CARQUEST of Raton",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Colfax Senior Care",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Cunico Automotive",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Fairgrounds",
       "county": "Colfax",
       "state": "NM",
@@ -507,17 +308,6 @@
       "source_type": "Chamber business directory",
       "source_page": "https://www.raton.info/business_directory.html",
       "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Flat Mountain Trading Company |www.flatmountaintrading.com",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -540,39 +330,6 @@
       "source_type": "Chamber business directory",
       "source_page": "https://www.raton.info/business_directory.html",
       "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Herbal Medicine",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Hester's Motorsports",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "High Plains Regional Education",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -610,17 +367,6 @@
       "confidence": "low"
     },
     {
-      "name": "Janese Little CPA",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "June 19, 20 & 21, 2026",
       "county": "Colfax",
       "state": "NM",
@@ -628,50 +374,6 @@
       "source_type": "Tourism, events, dining, and travel source",
       "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
       "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Kamm & McConnell",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Kastler Law Offices",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Knights Auto Parts",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Larry W. McQueary CPA",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -720,39 +422,6 @@
       "confidence": "low"
     },
     {
-      "name": "Mesa Vista Veterinary Clinic, Inc.",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Metal Inc.",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Mike's Muffler & Auto Repair",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Mix",
       "county": "Colfax",
       "state": "NM",
@@ -786,17 +455,6 @@
       "confidence": "low"
     },
     {
-      "name": "On the Go Service & Maintenance",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Pamela L. Seneff, GRI",
       "county": "Colfax",
       "state": "NM",
@@ -804,39 +462,6 @@
       "source_type": "Chamber business directory",
       "source_page": "https://www.raton.info/business_directory.html",
       "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Patchwork Phoenix",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Phil Long Raton",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Plainsong Studio, LLC",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -863,72 +488,6 @@
       "confidence": "low"
     },
     {
-      "name": "Raton Humane Society",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Ray A. Floersheim",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Ray's Field Service",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Red Mountain Appraisal, LLC",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Robert L. Mantz PC CPA",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Robin C. Blair",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "RR 1 Box 33",
       "county": "Colfax",
       "state": "NM",
@@ -936,17 +495,6 @@
       "source_type": "Chamber business directory",
       "source_page": "https://www.raton.info/business_directory.html",
       "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "SIGNATURE",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Explore Raton Tourism and Event Pages",
-      "source_type": "Tourism, visitor guide, events, and local travel source",
-      "source_page": "https://www.exploreraton.com/events",
-      "listing_url": "https://www.exploreraton.com/events",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -995,28 +543,6 @@
       "confidence": "low"
     },
     {
-      "name": "Treasure Shop",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Triple O Auto",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Twitter",
       "county": "Colfax",
       "state": "NM",
@@ -1050,94 +576,6 @@
       "confidence": "low"
     },
     {
-      "name": "Valley View Heating & Sheet",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "|www.colfaxseniorcare.com",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "|www.patchworkphoenix.com",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "|www.phillongraton.com",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "|www.ratonarts.org",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business-directory.html",
-      "listing_url": "https://www.raton.info/business-directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "123’s",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Town of La Veta Business Directory",
-      "source_type": "Municipal business directory",
-      "source_page": "https://townoflaveta-co.gov/business-directory/",
-      "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Become a Member",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Huerfano County Chamber Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://www.chamber.huerfano.org/membership-directory",
-      "listing_url": "https://www.chamber.huerfano.org/membership-directory",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Contact Information",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Town of La Veta Business Directory",
-      "source_type": "Municipal business directory",
-      "source_page": "https://townoflaveta-co.gov/business-directory/",
-      "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Cuchara Farmers Market",
       "county": "Huerfano",
       "state": "CO",
@@ -1145,50 +583,6 @@
       "source_type": "Tourism event calendar and submission source",
       "source_page": "https://spanishpeakscountry.com/spc-events/",
       "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Danae's Diner",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Town of La Veta Business Directory",
-      "source_type": "Municipal business directory",
-      "source_page": "https://townoflaveta-co.gov/business-directory/",
-      "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Dotsero",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Forms & Permits",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Town of La Veta Business Directory",
-      "source_type": "Municipal business directory",
-      "source_page": "https://townoflaveta-co.gov/business-directory/",
-      "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Frequently Asked Questions",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Town of La Veta Business Directory",
-      "source_type": "Municipal business directory",
-      "source_page": "https://townoflaveta-co.gov/business-directory/",
-      "listing_url": "https://townoflaveta-co.gov/business-directory/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -1226,28 +620,6 @@
       "confidence": "low"
     },
     {
-      "name": "Grandote Peaks Golf Course",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Grandote Triple Crown Series",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Heritage Park",
       "county": "Huerfano",
       "state": "CO",
@@ -1255,17 +627,6 @@
       "source_type": "Tourism event calendar and submission source",
       "source_page": "https://spanishpeakscountry.com/spc-events/",
       "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Kathy Hill's Studio Gallery",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Town of La Veta Business Directory",
-      "source_type": "Municipal business directory",
-      "source_page": "https://townoflaveta-co.gov/business-directory/",
-      "listing_url": "https://townoflaveta-co.gov/business-directory/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -1281,17 +642,6 @@
       "confidence": "low"
     },
     {
-      "name": "La Veta Flower Company",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Town of La Veta Business Directory",
-      "source_type": "Municipal business directory",
-      "source_page": "https://townoflaveta-co.gov/business-directory/",
-      "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "La Veta Library",
       "county": "Huerfano",
       "state": "CO",
@@ -1303,79 +653,13 @@
       "confidence": "low"
     },
     {
-      "name": "Lannie Garrett presents: Motown Legends Revue starring Ron Ivory",
+      "name": "Lannie Garrett presents... Margarita Brothers.. A Jimmy Buffet Celebration",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
       "source_type": "Tourism event calendar and submission source",
       "source_page": "https://spanishpeakscountry.com/spc-events/",
       "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Marshal — Harold Willburn",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Town of La Veta Business Directory",
-      "source_type": "Municipal business directory",
-      "source_page": "https://townoflaveta-co.gov/business-directory/",
-      "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Member Directory | Connect Locally — huerfano county chamber of commerce",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Huerfano County Chamber Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://www.chamber.huerfano.org/membership-directory",
-      "listing_url": "https://www.chamber.huerfano.org/membership-directory",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Mountain Time Physical Therapy",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Town of La Veta Business Directory",
-      "source_type": "Municipal business directory",
-      "source_page": "https://townoflaveta-co.gov/business-directory/",
-      "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Office Hours",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Town of La Veta Business Directory",
-      "source_type": "Municipal business directory",
-      "source_page": "https://townoflaveta-co.gov/business-directory/",
-      "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Shalawalla",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Town of La Veta Business Directory",
-      "source_type": "Municipal business directory",
-      "source_page": "https://townoflaveta-co.gov/business-directory/",
-      "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Trailhead General Store",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Town of La Veta Business Directory",
-      "source_type": "Municipal business directory",
-      "source_page": "https://townoflaveta-co.gov/business-directory/",
-      "listing_url": "https://townoflaveta-co.gov/business-directory/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -1409,6 +693,171 @@
       "source_type": "Regional tourism and event source",
       "source_page": "https://southerncoloradotourism.com/events/",
       "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "April",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Christmas Tree Lighting",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Details",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Hometown Holidays Parade of Lights",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "June",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Literary Festival – GET LIT!",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "March",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "November",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "St. Patrick's Day Parade",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Stonewall Fishing Tournament",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Summer Arts Exhibits",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "The Annual Collector's Series Calendar",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Visit Trinidad Colorado –",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://visittrinidadcolorado.com/upcoming-events/",
+      "listing_url": "https://visittrinidadcolorado.com/upcoming-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Visit Trinidad Colorado –",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Meetings, Weddings, and Venue Routes",
+      "source_type": "Meetings, conventions, weddings, and venue tourism source",
+      "source_page": "https://visittrinidadcolorado.com/meetings-conventions/",
+      "listing_url": "https://visittrinidadcolorado.com/meetings-conventions/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Visit Trinidad Colorado –",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Meetings, Weddings, and Venue Routes",
+      "source_type": "Meetings, conventions, weddings, and venue tourism source",
+      "source_page": "https://visittrinidadcolorado.com/weddings/",
+      "listing_url": "https://visittrinidadcolorado.com/weddings/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     }
