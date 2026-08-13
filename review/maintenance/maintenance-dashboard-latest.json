@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-08T23:10:12-06:00",
+  "generated_at": "2026-08-13T18:28:39+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
-    "canonical_resource_rows": 1499,
+    "canonical_resource_rows": 1498,
     "consolidated_directory_entries": 687,
     "registered_update_sources": 136,
     "deep_watch_sources": 15,
@@ -10,23 +10,23 @@
     "outreach_review_entries": 1363,
     "outreach_review_shortcuts": 104,
     "outreach_review_total": 1467,
-    "national_funding_opportunities": 30,
+    "national_funding_opportunities": 60,
     "national_funding_watch_sources": 10,
     "resource_discovery_sources": 34
   },
   "latest_checks": {
     "directory_quality": "pass",
     "internal_links": "pass",
-    "source_urls_checked": 119,
+    "source_urls_checked": 135,
     "source_urls_confirmed_broken": 0,
-    "source_urls_browser_check": 0,
-    "source_urls_script_limited": 24,
+    "source_urls_browser_check": 1,
+    "source_urls_script_limited": 27,
     "source_field_checks": 1,
     "watch_pages_checked": 32,
     "watch_pages_failed": 0,
     "priority_new_leads": 12,
     "keyword_urls_checked": 0,
-    "keyword_entries_changed": 11,
+    "keyword_entries_changed": 13,
     "outreach_listed_routes": 308,
     "outreach_ask_routes": 730,
     "outreach_without_routes": 564,
@@ -64,7 +64,7 @@
     },
     {
       "priority": "medium",
-      "count": 11,
+      "count": 13,
       "label": "listing keyword sets proposed for review",
       "next_action": "Review additions and removals in the latest keyword-sweep report before merging the keyword index."
     },
@@ -91,6 +91,12 @@
       "count": 5,
       "label": "national funding pages needing a normal-browser check",
       "next_action": "Open these pages normally; do not treat bot blocking or a temporary network error as a closed program."
+    },
+    {
+      "priority": "low",
+      "count": 1,
+      "label": "sources the automated checker could not confirm",
+      "next_action": "Open these in a normal browser; do not remove a link solely because of a timeout, network problem, or temporary server response."
     },
     {
       "priority": "low",
