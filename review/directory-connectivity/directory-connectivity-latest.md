@@ -1,29 +1,39 @@
 # Directory Online Connection Review
 
-Generated: 2026-08-07T16:24:05.463900+00:00
+Generated: 2026-08-13T18:25:36.392799+00:00
 
 This review distinguishes a first-party website from a hosted directory, tourism page, social profile, email, phone, street address, or missing contact route. An HTTP response does not prove that an organization is active or that page content is current.
 
 ## Summary
 
-- Published directory entries reviewed: 1355
-- First-party website candidates: 178
-- Live first-party business links eligible for the public animation: 112
-- Live direct websites: 151
-- Direct website links needing a normal-browser check: 27
-- Live hosted profiles or directory pages: 353
-- Hosted links needing a normal-browser check: 691
+- Published directory entries reviewed: 1362
+- First-party website candidates: 189
+- Live first-party business links eligible for the public animation: 120
+- Live direct websites: 157
+- Direct website links needing a normal-browser check: 32
+- Live hosted profiles or directory pages: 901
+- Hosted links needing a normal-browser check: 140
 - Entries with contact details but no URL: 74
-- Entries with no online or direct contact path: 59
-- Unique URLs checked: 571
-- Confirmed broken URLs: 7
-- Script-access limits such as 403 or TLS errors: 124
+- Entries with no online or direct contact path: 58
+- Unique URLs checked: 594
+- Confirmed broken URLs: 11
+- Script-access limits such as 403 or TLS errors: 127
 
 The companion CSV contains all entries and their assigned connection group.
 
 ## Confirmed Broken Listing URLs
 
-- None found by this scripted check.
+- Angel's Outback Adventure (Angel Fire): https://angelfirechamber.org/business/angels-outback-adventure/
+- Big River Raft Trips (Angel Fire): https://angelfirechamber.org/business/big-river-raft-trips/
+- Casa de Artesanias (Angel Fire): https://angelfirechamber.org/business/casa-de-artisianias-y-textiles/
+- Enchanted Circle Pottery (Angel Fire): https://angelfirechamber.org/business/enchanted-circle-pottery/
+- Far Flung Adventures (Angel Fire): https://angelfirechamber.org/business/far-flung-adventures/
+- Golden Eagle RV Park & Resort (Angel Fire): https://angelfirechamber.org/business/golden-eagle-rv-park-resort/
+- J & A's Cafe @ the Roadrunner (Angel Fire): https://angelfirechamber.org/business/j-a-fun-bakery-cafe/
+- Monte Verde RV Park & Campground (Angel Fire): https://angelfirechamber.org/business/monte-verde-rv-park-campground/
+- Nuckolls Brewing Co. (Angel Fire): https://angelfirechamber.org/business/nuckolls-brewing-company/
+- Taos Lifestyle (Angel Fire): https://angelfirechamber.org/business/taos-lifestyle/
+- Taty @ the Bump (Angel Fire): https://angelfirechamber.org/business/taty-the-bump/
 
 ## Listings Without Any URL
 
@@ -108,7 +118,6 @@ The companion CSV contains all entries and their assigned connection group.
 - CSU Pueblo at Spanish Peaks - Walsenburg, Huerfano (no contact path)
 - Huerfano County Courthouse - Walsenburg, Huerfano (address)
 - Huerfano County Government building - Walsenburg, Huerfano (address)
-- Huerfano Heritage Center - Walsenburg, Huerfano (no contact path)
 - KFEZ 101.3 / Gnarly 101.3 - Walsenburg, Huerfano (no contact path)
 - Spanish Peaks Regional Airport - Walsenburg, Huerfano (no contact path)
 - Tourist Information Center at Heritage Park - Walsenburg, Huerfano (no contact path)

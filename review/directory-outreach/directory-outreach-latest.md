@@ -1,18 +1,18 @@
 # Directory Outreach Channel Review
 
-Generated: 2026-08-09T05:09:26.095742+00:00
+Generated: 2026-08-13T18:25:36.599251+00:00
 
 This report reviews every published directory listing for practical physical and digital outreach routes. A listed route means the attached listing information identifies that kind of channel. Ask first means the entity may be a sensible contact, but placement, sharing, price, eligibility, and acceptance are not promised.
 
 ## Summary
 
-- Published listings reviewed: 1363
+- Published listings reviewed: 1362
 - Directory shortcuts reviewed: 104
-- Total directory records reviewed: 1467
-- Listings with at least one outreach route: 799
+- Total directory records reviewed: 1466
+- Listings with at least one outreach route: 742
 - Listings with at least one listed route: 308
-- Listings with at least one ask-first route: 730
-- Listings without an identified outreach route: 564
+- Listings with at least one ask-first route: 702
+- Listings without an identified outreach route: 620
 - Listings missing structured outreach fields: 0
 - Directory shortcuts with a listed or ask-first route: 52
 - Directory shortcuts without an identified route: 52
@@ -22,18 +22,18 @@ This report reviews every published directory listing for practical physical and
 
 | Channel | Listed route | Ask first | Not indicated |
 | --- | ---: | ---: | ---: |
-| Flyers and posters | 0 | 193 | 1170 |
-| Brochures and rack cards | 0 | 103 | 1260 |
-| Bulletin boards | 0 | 23 | 1340 |
-| Front-desk referrals | 0 | 279 | 1084 |
-| Directory profiles and listings | 306 | 12 | 1045 |
-| Event calendars | 1 | 116 | 1246 |
-| Social cross-promotion | 0 | 39 | 1324 |
-| Newsletters and mailing lists | 0 | 182 | 1181 |
-| Paid digital advertising | 1 | 59 | 1303 |
-| Media and editorial coverage | 2 | 59 | 1302 |
-| Sponsorships | 0 | 209 | 1154 |
-| Partner cross-promotion | 0 | 397 | 966 |
+| Flyers and posters | 0 | 334 | 1028 |
+| Brochures and rack cards | 0 | 103 | 1259 |
+| Bulletin boards | 0 | 24 | 1338 |
+| Front-desk referrals | 0 | 281 | 1081 |
+| Directory profiles and listings | 306 | 12 | 1044 |
+| Event calendars | 1 | 117 | 1244 |
+| Social cross-promotion | 0 | 39 | 1323 |
+| Newsletters and mailing lists | 0 | 183 | 1179 |
+| Paid digital advertising | 1 | 59 | 1302 |
+| Media and editorial coverage | 2 | 59 | 1301 |
+| Sponsorships | 0 | 209 | 1153 |
+| Partner cross-promotion | 0 | 396 | 966 |
 
 ## Directory Shortcut Coverage
 
@@ -281,10 +281,8 @@ This report reviews every published directory listing for practical physical and
 - Elidas - Springer, Colfax, NM; Local business or service
 - Iron Skillet Restaurant - Springer, Colfax, NM; Food & drink
 - Randles Bookkeeping and Tax Services - Springer, Colfax, NM; Professional services
-- Ross Oils - Springer, Colfax, NM; Auto & transportation
 - Russell's Route 66 Diner - Springer, Colfax, NM; Local business or service
 - Springer - Springer, Colfax, NM; Lodging & stays
-- Springer Auto Company (Ford) - Springer, Colfax, NM; Auto & transportation
 - Springer Family Health - Springer, Colfax, NM; Health & wellness
 - Springer High School - Springer, Colfax, NM; Education & learning
 - Springer Police Department - Springer, Colfax, NM; Local business or service
@@ -301,7 +299,6 @@ This report reviews every published directory listing for practical physical and
 - Spanish Peaks Country Scenery - Huerfano, CO; Local business or service
 - Spanish Peaks Country's State Trust Lands and Wildlife Areas - Huerfano, CO; Local business or service
 - Wahatoya Lakes State Wildlife Area - Huerfano, CO; Local business or service
-- A Taylor Made Haircut - La Veta, Huerfano, CO; Health & wellness
 - Acorn - La Veta, Huerfano, CO; Local business or service
 - Bachman & Associates Real Estate - La Veta, Huerfano, CO; Professional services
 - Capture Colorado - La Veta, Huerfano, CO; Arts & culture
@@ -323,63 +320,107 @@ This report reviews every published directory listing for practical physical and
 - Peet's Coffee & Tea - La Veta, Huerfano, CO; Food & drink
 - Petrichor IV Hydration - La Veta, Huerfano, CO; Health & wellness
 - Roger Batchelor, DAOM Acupuncture - La Veta, Huerfano, CO; Health & wellness
-- The Salon LTD - La Veta, Huerfano, CO; Health & wellness
 - Timbers Restaurant - La Veta, Huerfano, CO; Food & drink
-- Town of La Veta - La Veta, Huerfano, CO; Public offices
 - Tutu's Washateria - La Veta, Huerfano, CO; Local business or service
+- 2K Design - Walsenburg, Huerfano, CO; Arts & culture
 - 38 Special - Walsenburg, Huerfano, CO; Local business or service
+- 3rd Times A Charm - Walsenburg, Huerfano, CO; Arts & culture
 - 7-Eleven - Walsenburg, Huerfano, CO; Local business or service
+- 719 Tines - Walsenburg, Huerfano, CO; Arts & culture
 - A&W All-American Food - Walsenburg, Huerfano, CO; Food & drink
 - Acorn Petroleum Inc - Walsenburg, Huerfano, CO; Local business or service
 - ADT Security - Walsenburg, Huerfano, CO; Local business or service
 - Advance Auto Parts - Walsenburg, Huerfano, CO; Auto & transportation
+- Amber Schalla Silver - Walsenburg, Huerfano, CO; Arts & culture
 - Antiques and so much more......deja vu ltd - Walsenburg, Huerfano, CO; Local business or service
+- Artist Vicky De Taos - Walsenburg, Huerfano, CO; Arts & culture
 - Ashcatek - Walsenburg, Huerfano, CO; Local business or service
 - Baudino's Market - Walsenburg, Huerfano, CO; Retail & local goods
 - Best Friends Grooming Shop - Walsenburg, Huerfano, CO; Retail & local goods
+- Between the Knotted Lines - Walsenburg, Huerfano, CO; Arts & culture
 - Black Hills Corporation - Walsenburg, Huerfano, CO; Local business or service
+- Blue Hemp Honey - Walsenburg, Huerfano, CO; Arts & culture
+- Bob Bader Custom Wood Products - Walsenburg, Huerfano, CO; Arts & culture
+- Borrowed Blooms - Walsenburg, Huerfano, CO; Arts & culture
 - Borrowed Blooms Floral - Walsenburg, Huerfano, CO; Local business or service
+- Botanical Creations - Walsenburg, Huerfano, CO; Arts & culture
 - Budget Host - Walsenburg, Huerfano, CO; Local business or service
 - C S Garden Supply - Walsenburg, Huerfano, CO; Home, land & contracting
 - Career Building Academy - Walsenburg, Huerfano, CO; Local business or service
 - CareerOneStop - Walsenburg, Huerfano, CO; Local business or service
 - Carl's Jr. - Walsenburg, Huerfano, CO; Local business or service
 - CAT Scale - Walsenburg, Huerfano, CO; Local business or service
+- Centennial Cuts - Walsenburg, Huerfano, CO; Arts & culture
+- Centennial Jewelry - Walsenburg, Huerfano, CO; Arts & culture
+- Chae Organics - Walsenburg, Huerfano, CO; Arts & culture
 - Chelsie's Wings Burgers-SPRTS - Walsenburg, Huerfano, CO; Local business or service
+- Chollafire - Walsenburg, Huerfano, CO; Arts & culture
 - City of Walsenburg - Walsenburg, Huerfano, CO; Public offices
 - Collectors Corner - Walsenburg, Huerfano, CO; Local business or service
+- Colorado Crunch - Walsenburg, Huerfano, CO; Arts & culture
 - Colorado State Government - Walsenburg, Huerfano, CO; Public offices
 - Corine's Mexican Food & Restaurant - Walsenburg, Huerfano, CO; Food & drink
+- CostaCustoms - Walsenburg, Huerfano, CO; Arts & culture
+- Cowgirl Style - Walsenburg, Huerfano, CO; Arts & culture
 - Coyote Cafe - Walsenburg, Huerfano, CO; Food & drink
+- Craftsman Cottage Artisans - Walsenburg, Huerfano, CO; Arts & culture
 - CST, LLC - Walsenburg, Huerfano, CO; Local business or service
 - CSU Pueblo at Spanish Peaks - Walsenburg, Huerfano, CO; Business support
+- Customization By Elizabeth - Walsenburg, Huerfano, CO; Arts & culture
 - Daniel's Inc - Walsenburg, Huerfano, CO; Local business or service
+- Desert Salt Rainbow Woman - Walsenburg, Huerfano, CO; Arts & culture
+- Designs By Dustbunny - Walsenburg, Huerfano, CO; Arts & culture
 - Diane M Ernewein, PT - Walsenburg, Huerfano, CO; Local business or service
+- Donovans Creations - Walsenburg, Huerfano, CO; Arts & culture
 - Dorcas Circle - Walsenburg, Huerfano, CO; Local business or service
 - Dr. James Theodore Vigil, DC - Walsenburg, Huerfano, CO; Local business or service
+- Dreaming Frog - Walsenburg, Huerfano, CO; Arts & culture
+- E-Z P-Z Woodworking Art - Walsenburg, Huerfano, CO; Arts & culture
+- Ecozoica Apothecary - Walsenburg, Huerfano, CO; Arts & culture
 - Everything Nice - Walsenburg, Huerfano, CO; Local business or service
+- Eves Crafts and Creations - Walsenburg, Huerfano, CO; Arts & culture
+- Fancy - Walsenburg, Huerfano, CO; Arts & culture
 - The First National Bank in Trinidad-Huerfano County Branch - Walsenburg, Huerfano, CO; Public offices
+- Flamingo Book Club - Walsenburg, Huerfano, CO; Arts & culture
+- Flyda - Walsenburg, Huerfano, CO; Arts & culture
+- Fox Canyon Knives - Walsenburg, Huerfano, CO; Arts & culture
 - Getz, Brenda S, ATTY - Walsenburg, Huerfano, CO; Local business or service
 - Greyhound Bus Lines - Walsenburg, Huerfano, CO; Local business or service
 - Groceries Unlimited - Walsenburg, Huerfano, CO; Retail & local goods
 - Hammernik, Judith A, CPA - Walsenburg, Huerfano, CO; Local business or service
 - Harness the Wind & Sun - Walsenburg, Huerfano, CO; Local business or service
 - Harold Andreatta - Walsenburg, Huerfano, CO; Local business or service
+- Heart Song - Walsenburg, Huerfano, CO; Arts & culture
+- Hearts & Crafts - Walsenburg, Huerfano, CO; Arts & culture
 - Hollowpoint Gun Shop - Walsenburg, Huerfano, CO; Retail & local goods
 - The Huerfano Cafe - Walsenburg, Huerfano, CO; Food & drink
 - Huerfano County Concrete - Walsenburg, Huerfano, CO; Public offices
-- Huerfano County Courthouse - Walsenburg, Huerfano, CO; Public offices
 - Huerfano County Health Department - Walsenburg, Huerfano, CO; Health & wellness
 - Huerfano County, CO Walsenburg, La Veta, Gardner & unincorporated communities - Walsenburg, Huerfano, CO; Public offices
+- Ink By Bink - Walsenburg, Huerfano, CO; Arts & culture
+- JC CREATIONS - Walsenburg, Huerfano, CO; Arts & culture
 - John Mall Auto Shop - Walsenburg, Huerfano, CO; Retail & local goods
 - John Mall High School - Walsenburg, Huerfano, CO; Education & learning
+- JV Jungle Cuts - Walsenburg, Huerfano, CO; Arts & culture
 - Kennels At Rio Cucharas Veterinary Clinic - Walsenburg, Huerfano, CO; Health & wellness
 - KFEZ 101.3 / Gnarly 101.3 - Walsenburg, Huerfano, CO; Media & news
+- Kissed By Katie - Walsenburg, Huerfano, CO; Arts & culture
 - Knights Inn - Walsenburg, Huerfano, CO; Lodging & stays
 - Lathrop State Park - Walsenburg, Huerfano, CO; Tourism & visitor info
 - Legends Flooring & Interior - Walsenburg, Huerfano, CO; Local business or service
 - Lincare - Walsenburg, Huerfano, CO; Local business or service
+- Lisa Lynn - Wildlife Artist - Walsenburg, Huerfano, CO; Arts & culture
+- Mallory's Treehouse - Walsenburg, Huerfano, CO; Arts & culture
+- Mike Snoddy - Walsenburg, Huerfano, CO; Arts & culture
+- Mimi's Creations - Walsenburg, Huerfano, CO; Arts & culture
+- Mimi's Merch - Walsenburg, Huerfano, CO; Arts & culture
+- Moon Mountain Studio - Walsenburg, Huerfano, CO; Arts & culture
+- Mountain Bubbles - Walsenburg, Huerfano, CO; Arts & culture
 - Mountain Creek Home Health - Walsenburg, Huerfano, CO; Health & wellness
+- Mountain Escapes - Walsenburg, Huerfano, CO; Arts & culture
+- Mountain View Sanctuary - Walsenburg, Huerfano, CO; Arts & culture
+- Nickell Designs - Walsenburg, Huerfano, CO; Arts & culture
+- Odie Art - Walsenburg, Huerfano, CO; Arts & culture
 - Ojo' Springs Drilling & Well - Walsenburg, Huerfano, CO; Local business or service
 - Ol' Reliable Car Care - Walsenburg, Huerfano, CO; Local business or service
 - Paperback Trading Post - Walsenburg, Huerfano, CO; Local business or service
@@ -392,27 +433,43 @@ This report reviews every published directory listing for practical physical and
 - Rambler Restaurant - Walsenburg, Huerfano, CO; Food & drink
 - Reata Realty - Walsenburg, Huerfano, CO; Professional services
 - Redbox - Walsenburg, Huerfano, CO; Local business or service
+- Redhyl Welding - Walsenburg, Huerfano, CO; Arts & culture
 - Rio Cucharas Inn - Walsenburg, Huerfano, CO; Lodging & stays
 - Rocky Mountain Eye Center Inc - Walsenburg, Huerfano, CO; Local business or service
 - Rosa's Cantina - Walsenburg, Huerfano, CO; Local business or service
 - Ruiz & Ruiz Stucco - Walsenburg, Huerfano, CO; Local business or service
 - Sands Motel - Walsenburg, Huerfano, CO; Lodging & stays
 - School Rem Ser Head Start - Walsenburg, Huerfano, CO; Education & learning
+- Scotty B's Custom T's - Walsenburg, Huerfano, CO; Arts & culture
+- Scrap Happy - Walsenburg, Huerfano, CO; Arts & culture
+- Second Chance - Walsenburg, Huerfano, CO; Arts & culture
 - The Secret Garden - Walsenburg, Huerfano, CO; Home, land & contracting
 - Sheldon, Garrett, ATTY - Walsenburg, Huerfano, CO; Local business or service
+- Silver Mountain Pottery - Walsenburg, Huerfano, CO; Arts & culture
+- Simply Stitchz - Walsenburg, Huerfano, CO; Arts & culture
+- SOCO Chili - Walsenburg, Huerfano, CO; Arts & culture
 - Soco Grow - Walsenburg, Huerfano, CO; Local business or service
+- Sofia Sugar Shack - Walsenburg, Huerfano, CO; Arts & culture
+- Southern Colorado Crafts - Walsenburg, Huerfano, CO; Arts & culture
 - Southern Colorado Land & Livestock Co - Walsenburg, Huerfano, CO; Local business or service
 - Spanish Peaks Regional Airport - Walsenburg, Huerfano, CO; Public offices
 - Spanish Peaks Regional Health Center - Walsenburg, Huerfano, CO; Health & wellness
 - Spanish Peaks Veterans Community Living Center - Walsenburg, Huerfano, CO; Nonprofit & community
 - St Mary Credit Union - Walsenburg, Huerfano, CO; Professional services
 - Star Drug Health Mart - Walsenburg, Huerfano, CO; Health & wellness
+- Stardust Farm & Flowers - Walsenburg, Huerfano, CO; Arts & culture
+- Studio Katie - Walsenburg, Huerfano, CO; Arts & culture
+- Sunrise Mesa Design - Walsenburg, Huerfano, CO; Arts & culture
+- Suzy's Salsa - Walsenburg, Huerfano, CO; Arts & culture
 - Systems Builders - Walsenburg, Huerfano, CO; Local business or service
 - Tinas Family Cafe - Walsenburg, Huerfano, CO; Food & drink
+- Too Cool Chicks - Walsenburg, Huerfano, CO; Arts & culture
+- Two Hare Trading - Walsenburg, Huerfano, CO; Arts & culture
 - U-Haul Neighborhood Dealer - Walsenburg, Huerfano, CO; Local business or service
 - UPS Authorized Shipping Provider - Walsenburg, Huerfano, CO; Local business or service
 - UPS Drop Box - Walsenburg, Huerfano, CO; Local business or service
 - Uptownclothingsupply.com - Walsenburg, Huerfano, CO; Local business or service
+- Vanishing Horizons - Walsenburg, Huerfano, CO; Arts & culture
 - Walsenburg Golf Club - Walsenburg, Huerfano, CO; Outdoor recreation
 - Walsenburg Housing Authority - Walsenburg, Huerfano, CO; Local business or service
 - Walsenburg Jr./Sr. High School - Walsenburg, Huerfano, CO; Education & learning
@@ -458,7 +515,6 @@ This report reviews every published directory listing for practical physical and
 - Blue Diamond Builders Inc - Trinidad, Las Animas, CO; Local business or service
 - BNSF Railway Company - Trinidad, Las Animas, CO; Local business or service
 - Bob & Earl's Cafe - Trinidad, Las Animas, CO; Food & drink
-- Books & More - Trinidad, Las Animas, CO; Arts & culture
 - Boom Noodles (Food Court at the Marketplace) - Trinidad, Las Animas, CO; Food & drink
 - Brix - Trinidad, Las Animas, CO; Local business or service
 - Casa Village Apartments - Trinidad, Las Animas, CO; Public offices

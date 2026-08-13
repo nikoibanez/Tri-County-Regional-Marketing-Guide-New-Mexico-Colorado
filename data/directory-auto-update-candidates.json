@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-22",
+  "generated_at": "2026-08-13",
   "publication_note": "Automatically refreshed from watched public directory and tourism pages. Treat these as candidate updates, not official directory additions, until a human confirms the linked source.",
   "summary": {
     "sources_watched": 15,
     "pages_checked": 32,
-    "pages_failed": 0,
-    "already_represented": 270,
-    "possible_new_leads": 139,
-    "priority_new_leads": 12,
-    "low_confidence_text_leads": 127
+    "pages_failed": 8,
+    "already_represented": 227,
+    "possible_new_leads": 116,
+    "priority_new_leads": 3,
+    "low_confidence_text_leads": 113
   },
   "watched_sources": [
     {
@@ -30,8 +30,8 @@
       "source_role": "Business directory, lodging, dining, services, arts, nonprofits",
       "why_watch": "Angel Fire and Moreno Valley chamber source for member businesses, nonprofits, artists, lodging, dining, and services.",
       "pages_checked": 1,
-      "possible_new_leads": 6,
-      "priority_new_leads": 6
+      "possible_new_leads": 0,
+      "priority_new_leads": 0
     },
     {
       "id": "colfax-angel-fire-food-catering-events",
@@ -74,7 +74,7 @@
       "source_role": "Restaurants, lodging, shopping, visitor-facing businesses, local listing support",
       "why_watch": "High-signal Trinidad tourism pages for visitor-facing businesses and listing-support routes.",
       "pages_checked": 4,
-      "possible_new_leads": 9,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -85,7 +85,7 @@
       "source_role": "Event spots, event calendar, event submission, visitor-facing programs",
       "why_watch": "Primary visitor-facing source for Trinidad events and event submission routes.",
       "pages_checked": 2,
-      "possible_new_leads": 4,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -96,7 +96,7 @@
       "source_role": "Venues, event facilities, travel groups, catering-adjacent planning routes",
       "why_watch": "Useful for venues, event spaces, group travel, weddings, and catering-adjacent outreach.",
       "pages_checked": 2,
-      "possible_new_leads": 2,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -107,7 +107,7 @@
       "source_role": "Digital-only business listings, events, restaurants, shops, visitor-facing local guide",
       "why_watch": "LocalStash is the current digital successor route to the Weekender-style local guide model and can surface Trinidad businesses, events, restaurants, and shops.",
       "pages_checked": 2,
-      "possible_new_leads": 0,
+      "possible_new_leads": 4,
       "priority_new_leads": 0
     },
     {
@@ -129,8 +129,8 @@
       "source_role": "Business directory, tourism listings, galleries, restaurants, shopping, services",
       "why_watch": "High-signal Huerfano visitor-facing directory for Walsenburg, La Veta, Cuchara, Gardner, dining, lodging, shopping, galleries, and attractions.",
       "pages_checked": 1,
-      "possible_new_leads": 6,
-      "priority_new_leads": 6
+      "possible_new_leads": 3,
+      "priority_new_leads": 3
     },
     {
       "id": "huerfano-spanish-peaks-dining-lodging-venues",
@@ -151,7 +151,7 @@
       "source_role": "Event spots, community calendar, event submission, visitor-facing activities",
       "why_watch": "Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.",
       "pages_checked": 2,
-      "possible_new_leads": 13,
+      "possible_new_leads": 10,
       "priority_new_leads": 0
     },
     {
@@ -179,94 +179,6 @@
   ],
   "priority_new_leads": [
     {
-      "name": "Advanced Air. LLC",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Angel Fire Chamber Member Business Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://angelfirechamber.org/local-businesses/",
-      "listing_url": "https://angelfirechamber.org/business/advanced-air/",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Angel’s Glow Tanning & Oxygen Bar",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Angel Fire Chamber Member Business Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://angelfirechamber.org/local-businesses/",
-      "listing_url": "https://angelfirechamber.org/business/angels-glow-tanning-oxygen-bar/",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Brodsky Bookkeeping",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Angel Fire Chamber Member Business Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://angelfirechamber.org/local-businesses/",
-      "listing_url": "https://angelfirechamber.org/business/brodsky-bookkeeping/",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Comanche Creek Brewing Company",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Angel Fire Chamber Member Business Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://angelfirechamber.org/local-businesses/",
-      "listing_url": "https://angelfirechamber.org/business/comanche-creek-brewing-company/",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Double Black Design, LLc",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Angel Fire Chamber Member Business Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://angelfirechamber.org/local-businesses/",
-      "listing_url": "https://angelfirechamber.org/business/double-black-design-llc/",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Holy Angels Catholic Mission Church",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Angel Fire Chamber Member Business Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://angelfirechamber.org/local-businesses/",
-      "listing_url": "https://angelfirechamber.org/business/holy-angels-catholic-mission-church/",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "C Cubed Training",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Business Directory",
-      "source_type": "Tourism business directory",
-      "source_page": "https://spanishpeakscountry.com/business-directory",
-      "listing_url": "https://spanishpeakscountry.com/business-directory/listing/c-cubed-training",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "Huerfano County Heritage Center",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Business Directory",
-      "source_type": "Tourism business directory",
-      "source_page": "https://spanishpeakscountry.com/business-directory",
-      "listing_url": "https://spanishpeakscountry.com/business-directory/listing/hurfano-county-heritage-center",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
       "name": "Kathy Hills Studio Gallery",
       "county": "Huerfano",
       "state": "CO",
@@ -274,17 +186,6 @@
       "source_type": "Tourism business directory",
       "source_page": "https://spanishpeakscountry.com/business-directory",
       "listing_url": "https://spanishpeakscountry.com/business-directory/listing/kathy-hills-studio-gallery",
-      "evidence_type": "linked_text",
-      "confidence": "medium-high"
-    },
-    {
-      "name": "My One Hour Office",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Business Directory",
-      "source_type": "Tourism business directory",
-      "source_page": "https://spanishpeakscountry.com/business-directory",
-      "listing_url": "https://spanishpeakscountry.com/business-directory/listing/my-one-hour-office",
       "evidence_type": "linked_text",
       "confidence": "medium-high"
     },
@@ -1160,17 +1061,6 @@
       "confidence": "low"
     },
     {
-      "name": "Dotsero",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Forms & Permits",
       "county": "Huerfano",
       "state": "CO",
@@ -1216,28 +1106,6 @@
     },
     {
       "name": "Gardner Methodist Church",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Grandote Peaks Golf Course",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Grandote Triple Crown Series",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -1303,7 +1171,7 @@
       "confidence": "low"
     },
     {
-      "name": "Lannie Garrett presents: Motown Legends Revue starring Ron Ivory",
+      "name": "Lannie Garrett presents... Margarita Brothers.. A Jimmy Buffet Celebration",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -1403,6 +1271,39 @@
     },
     {
       "name": "420 Festival at Central Park",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "A Few Practical Notes",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "LocalStash Trinidad",
+      "source_type": "Digital local guide and business/event listings",
+      "source_page": "https://colorado.localstash.com/trinidad-co/",
+      "listing_url": "https://colorado.localstash.com/trinidad-co/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "April",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Southern Colorado Tourism Event and Travel Pages",
+      "source_type": "Regional tourism and event source",
+      "source_page": "https://southerncoloradotourism.com/events/",
+      "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Christmas Tree Lighting",
       "county": "Las Animas",
       "state": "CO",
       "source_title": "Southern Colorado Tourism Event and Travel Pages",

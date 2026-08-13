@@ -1,6 +1,6 @@
 # Weekly Directory Query Check
 
-Generated: 2026-07-22
+Generated: 2026-08-13
 
 Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.
 
@@ -8,12 +8,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 
 - Sources watched: 15
 - Pages checked: 32
-- Pages failed: 0
-- Listing-like candidates found: 409
-- Already represented in guide: 270
-- Possible new leads: 139
-- Priority new leads: 12
-- Low-confidence text leads: 127
+- Pages failed: 8
+- Listing-like candidates found: 343
+- Already represented in guide: 227
+- Possible new leads: 116
+- Priority new leads: 3
+- Low-confidence text leads: 113
 
 ## Watch Sources
 
@@ -32,8 +32,8 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Chamber member directory
 - Why watch: Angel Fire and Moreno Valley chamber source for member businesses, nonprofits, artists, lodging, dining, and services.
 - Pages checked: 1
-- Possible new leads: 6
-- Priority new leads: 6
+- Possible new leads: 0
+- Priority new leads: 0
 
 ### Angel Fire Chamber Food, Catering, and Event-Service Categories
 
@@ -68,8 +68,14 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism business and visitor directory
 - Why watch: High-signal Trinidad tourism pages for visitor-facing businesses and listing-support routes.
 - Pages checked: 4
-- Possible new leads: 9
+- Possible new leads: 0
 - Priority new leads: 0
+
+Fetch issues:
+- [https://visittrinidadcolorado.com/dine/](https://visittrinidadcolorado.com/dine/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/stay/](https://visittrinidadcolorado.com/stay/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/shop/](https://visittrinidadcolorado.com/shop/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/resources-for-locals/](https://visittrinidadcolorado.com/resources-for-locals/) - HTTP Error 403: Forbidden
 
 ### Visit Trinidad Events and Submit-Event Routes
 
@@ -77,8 +83,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary visitor-facing source for Trinidad events and event submission routes.
 - Pages checked: 2
-- Possible new leads: 4
+- Possible new leads: 0
 - Priority new leads: 0
+
+Fetch issues:
+- [https://visittrinidadcolorado.com/upcoming-events/](https://visittrinidadcolorado.com/upcoming-events/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - HTTP Error 403: Forbidden
 
 ### Visit Trinidad Meetings, Weddings, and Venue Routes
 
@@ -86,8 +96,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Meetings, conventions, weddings, and venue tourism source
 - Why watch: Useful for venues, event spaces, group travel, weddings, and catering-adjacent outreach.
 - Pages checked: 2
-- Possible new leads: 2
+- Possible new leads: 0
 - Priority new leads: 0
+
+Fetch issues:
+- [https://visittrinidadcolorado.com/meetings-conventions/](https://visittrinidadcolorado.com/meetings-conventions/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/weddings/](https://visittrinidadcolorado.com/weddings/) - HTTP Error 403: Forbidden
 
 ### LocalStash Trinidad
 
@@ -95,7 +109,7 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Digital local guide and business/event listings
 - Why watch: LocalStash is the current digital successor route to the Weekender-style local guide model and can surface Trinidad businesses, events, restaurants, and shops.
 - Pages checked: 2
-- Possible new leads: 0
+- Possible new leads: 4
 - Priority new leads: 0
 
 ### Southern Colorado Tourism Event and Travel Pages
@@ -113,8 +127,8 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism business directory
 - Why watch: High-signal Huerfano visitor-facing directory for Walsenburg, La Veta, Cuchara, Gardner, dining, lodging, shopping, galleries, and attractions.
 - Pages checked: 1
-- Possible new leads: 6
-- Priority new leads: 6
+- Possible new leads: 3
+- Priority new leads: 3
 
 ### Spanish Peaks Country Dining, Lodging, and Venue Categories
 
@@ -131,7 +145,7 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.
 - Pages checked: 2
-- Possible new leads: 13
+- Possible new leads: 10
 - Priority new leads: 0
 
 ### Town of La Veta Business Directory
@@ -156,16 +170,7 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 
 These have linked listing-page evidence. They are still not publication-ready additions until a human confirms the source page.
 
-- [Advanced Air. LLC](https://angelfirechamber.org/business/advanced-air/) - Colfax; Angel Fire Chamber Member Business Directory; evidence: linked_text; confidence: medium-high
-- [Angel’s Glow Tanning & Oxygen Bar](https://angelfirechamber.org/business/angels-glow-tanning-oxygen-bar/) - Colfax; Angel Fire Chamber Member Business Directory; evidence: linked_text; confidence: medium-high
-- [Brodsky Bookkeeping](https://angelfirechamber.org/business/brodsky-bookkeeping/) - Colfax; Angel Fire Chamber Member Business Directory; evidence: linked_text; confidence: medium-high
-- [Comanche Creek Brewing Company](https://angelfirechamber.org/business/comanche-creek-brewing-company/) - Colfax; Angel Fire Chamber Member Business Directory; evidence: linked_text; confidence: medium-high
-- [Double Black Design, LLc](https://angelfirechamber.org/business/double-black-design-llc/) - Colfax; Angel Fire Chamber Member Business Directory; evidence: linked_text; confidence: medium-high
-- [Holy Angels Catholic Mission Church](https://angelfirechamber.org/business/holy-angels-catholic-mission-church/) - Colfax; Angel Fire Chamber Member Business Directory; evidence: linked_text; confidence: medium-high
-- [C Cubed Training](https://spanishpeakscountry.com/business-directory/listing/c-cubed-training) - Huerfano; Spanish Peaks Country Business Directory; evidence: linked_text; confidence: medium-high
-- [Huerfano County Heritage Center](https://spanishpeakscountry.com/business-directory/listing/hurfano-county-heritage-center) - Huerfano; Spanish Peaks Country Business Directory; evidence: linked_text; confidence: medium-high
 - [Kathy Hills Studio Gallery](https://spanishpeakscountry.com/business-directory/listing/kathy-hills-studio-gallery) - Huerfano; Spanish Peaks Country Business Directory; evidence: linked_text; confidence: medium-high
-- [My One Hour Office](https://spanishpeakscountry.com/business-directory/listing/my-one-hour-office) - Huerfano; Spanish Peaks Country Business Directory; evidence: linked_text; confidence: medium-high
 - [Walsenburg Mining Museum](https://spanishpeakscountry.com/business-directory/listing/walsenburg-mining-museum) - Huerfano; Spanish Peaks Country Business Directory; evidence: linked_text; confidence: medium-high
 - [World Journal](https://spanishpeakscountry.com/business-directory/listing/world-journal) - Huerfano; Spanish Peaks Country Business Directory; evidence: linked_text; confidence: medium-high
 
@@ -250,24 +255,24 @@ These came from directory page text rather than individual listing links. Review
 - Contact Information - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Cuchara Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Danae's Diner - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
-- Dotsero - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Forms & Permits - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Frequently Asked Questions - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
-- Additional low-confidence candidates omitted from Markdown: 47. See JSON.
+- Gardner Farmer and Craft Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- Additional low-confidence candidates omitted from Markdown: 33. See JSON.
 
 ## Already Represented Sample
 
 - A Taylor Made Haircut -> A Taylor Made Haircut (exact_normalized)
 - A&W -> A&W (exact_normalized)
 - A&W -> A&W (exact_normalized)
-- AlMack's Kitchen -> AlMack's Kitchen (exact_normalized)
+- Advanced Air. LLC -> Advanced Air, LLC (exact_normalized)
 - Alys' Restaurant -> Alys' Restaurant (exact_normalized)
 - Alys' Restaurant -> Alys' Restaurant (exact_normalized)
 - Alys' Restaurant -> Alys' Restaurant (exact_normalized)
 - Anchor Motel -> Anchor Motel (exact_normalized)
 - Anchor Motel -> Anchor Motel (exact_normalized)
+- Angel’s Glow Tanning & Oxygen Bar -> Angel's Glow Tanning & Oxygen Bar (exact_compact)
 - Antique Avenue -> Antique Avenue (exact_normalized)
-- AR Mitchell Museum of Western Art -> AR Mitchell Museum of Western Art (exact_normalized)
 - Armidas -> Armidas (exact_normalized)
 - Artisans on Main -> Artisans on Main (exact_normalized)
 - Artisans on Main LLC -> Artisans on Main (exact_normalized)
@@ -278,22 +283,22 @@ These came from directory page text rather than individual listing links. Review
 - Best Western Rambler -> Best Western Rambler (exact_normalized)
 - Big "R" -> Big R (exact_normalized)
 - Big R -> Big R (exact_normalized)
-- Big R -> Big R (exact_normalized)
-- Bob & Earl's -> Bob & Earl's (exact_normalized)
 - Book Nook -> Book Nook (exact_normalized)
-- Books & More -> Books & More (exact_normalized)
-- Boom Noodles (Food Court at the Marketplace) -> Boom Noodles (Food Court at the Marketplace) (exact_normalized)
-- Brick City Tattoo -> Brick City Tattoo (exact_normalized)
-- Brick Road Bakery -> Brick Road Bakery (exact_normalized)
-- Brick Road Bakery -> Brick Road Bakery (exact_normalized)
+- Brodsky Bookkeeping -> Brodsky Bookkeeping (exact_normalized)
 - Bud Hut -> Bud Hut (exact_normalized)
-- Budget Host & Summit RV Park -> Budget Host & Summit RV Park (exact_normalized)
+- C Cubed Training -> C Cubed Training (exact_normalized)
 - C1B True Organics -> C1B True Organics (exact_normalized)
 - Canna City -> Canna City (exact_normalized)
 - Cannaco -> Cannaco (exact_normalized)
 - Capture Colorado -> Capture Colorado (exact_normalized)
 - Casa de Pajaros -> Casa de Pajaros (exact_normalized)
 - Casa de Pajaros -> Casa de Pajaros (exact_normalized)
-- Cawthon RV Park & Motel -> Cawthon RV Park & Motel (exact_normalized)
 - Chae Organics -> Chae Organics (exact_normalized)
 - Charlie's Market -> Charlie's Market (exact_normalized)
+- Charlie's Market -> Charlie's Market (exact_normalized)
+- Code of the West Real Estate -> Code of the West Real Estate (exact_normalized)
+- Comanche Creek Brewing Company -> Comanche Creek Brewing Company (exact_normalized)
+- Corine’s Mexican Restaurant -> Corine’s Mexican Restaurant (exact_normalized)
+- Corine’s Mexican Restaurant -> Corine’s Mexican Restaurant (exact_normalized)
+- Corner Cottage Skin Care -> Corner Cottage Skin Care (exact_normalized)
+- Crafted in Colorado -> Crafted in Colorado (exact_normalized)
