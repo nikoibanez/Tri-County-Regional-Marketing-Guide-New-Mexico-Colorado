@@ -32,11 +32,11 @@ jobs:
       - name: Run weekly directory query check
         run: python scripts/weekly_directory_query_check.py
 
-      - name: Audit every directory connection path
-        run: python scripts/audit_directory_connectivity.py --workers 16 --timeout 10
-
       - name: Build generated directory for quality checks
         run: python tools/build_netlify_deep_guide.py
+
+      - name: Audit every directory connection path
+        run: python scripts/audit_directory_connectivity.py --workers 16 --timeout 10
 
       - name: Review physical and digital outreach routes
         run: python scripts/audit_directory_outreach_channels.py --fail-on-missing

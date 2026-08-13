@@ -393,6 +393,15 @@ class SourceAuditTests(unittest.TestCase):
         self.assertEqual(check_url("example.org/directory", 1)["status"], "invalid_url")
 
 
+class WorkflowTests(unittest.TestCase):
+    def test_weekly_directory_query_check_builds_before_connectivity_audit(self) -> None:
+        workflow = (ROOT / ".github" / "workflows" / "weekly-directory-query-check.yml").read_text(encoding="utf-8")
+        self.assertLess(
+            workflow.index("python tools/build_netlify_deep_guide.py"),
+            workflow.index("python scripts/audit_directory_connectivity.py --workers 16 --timeout 10"),
+        )
+
+
 class SiteSmokeTests(unittest.TestCase):
     def test_reset_output_dir_preserves_root_and_clears_contents(self) -> None:
         with tempfile.TemporaryDirectory() as folder:
