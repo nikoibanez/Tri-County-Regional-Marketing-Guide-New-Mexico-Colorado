@@ -20,6 +20,8 @@ def main() -> int:
     rows: list[tuple[str, str, str]] = []
 
     index = (SITE / "index.html").read_text(encoding="utf-8")
+    arts_page_path = SITE / "resources" / "arts-culture" / "index.html"
+    arts_page = arts_page_path.read_text(encoding="utf-8")
     app_js = (SITE / "assets" / "app.js").read_text(encoding="utf-8")
     styles = (SITE / "assets" / "styles.css").read_text(encoding="utf-8")
 
@@ -33,9 +35,26 @@ def main() -> int:
     check('role="status"' in index and 'aria-live="polite"' in index, "assistant live status", "Result counts are announced politely", rows)
     check('role="list"' in index and 'role="listitem"' in app_js, "assistant result structure", "Results are exposed as list/listitem content", rows)
     check("showModal" in app_js and "focusableSelector" not in app_js, "native focus management", "Uses dialog showModal instead of a custom focus trap", rows)
-    generated_music_ref = re.search(r"stateline-[^\"']+\.mp3", index + app_js, re.IGNORECASE)
+    all_html = "\n".join(html_file.read_text(encoding="utf-8") for html_file in html_files)
+    generated_music_ref = re.search(r"stateline-[^\"']+\.mp3", all_html + app_js, re.IGNORECASE)
     check(not generated_music_ref, "generated music removed", "No generated music files are referenced by active pages/scripts", rows)
-    check("loc-rael-nm-valse.mp3" in index and "loc-rael-co-valse.mp3" in index, "regional audio present", "Music bar references only LOC regional tracks", rows)
+    non_arts_music_pages = [
+        str(html_file.relative_to(SITE))
+        for html_file in html_files
+        if html_file != arts_page_path and 'data-music-bar' in html_file.read_text(encoding="utf-8")
+    ]
+    check(
+        not non_arts_music_pages,
+        "regional audio scope",
+        "Music controls appear only on Arts & Culture" if not non_arts_music_pages else ", ".join(non_arts_music_pages),
+        rows,
+    )
+    check(
+        "loc-rael-nm-valse.mp3" in arts_page and "loc-rael-co-valse.mp3" in arts_page,
+        "regional audio present",
+        "Arts & Culture references only the two LOC regional tracks",
+        rows,
+    )
     check(".sr-only" in styles, "screen-reader utility", "Screen-reader-only helper exists", rows)
 
     images_without_alt: list[str] = []

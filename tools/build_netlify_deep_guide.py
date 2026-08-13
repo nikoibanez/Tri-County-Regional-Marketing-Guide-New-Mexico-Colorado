@@ -4730,7 +4730,8 @@ def page_shell(
         f'          <link rel="alternate" type="application/json" title="{html_escape(label)}" href="{rel(href, depth)}">'
         for label, href in (extra_json_alternates or [])
     )
-    music_bar = f"""
+    music_bar = (
+        f"""
           <details class="music-bar" data-music-bar aria-label="Regional sound player">
             <summary class="music-summary">
               <span><span class="music-label-prefix">Regional </span>sound</span>
@@ -4759,14 +4760,21 @@ def page_shell(
             </div>
           </details>
     """
+        if active == "arts-culture"
+        else ""
+    )
     intro_curtain = (
         '<div class="intro-curtain" aria-hidden="true" data-intro-state="ready"></div>'
         if active == "home"
         else ""
     )
-    audio_markup = f"""
+    audio_markup = (
+        f"""
           <audio id="site-music-loop" preload="metadata" loop src="{rel('assets/audio/loc-rael-nm-valse.mp3', depth)}"></audio>
     """
+        if active == "arts-culture"
+        else ""
+    )
     return dedent(
         f"""\
         <!doctype html>
@@ -4806,6 +4814,7 @@ def page_shell(
         </head>
         <body class="page-{html_escape(active)}">
           <a class="skip-link" href="#main">Skip to content</a>
+          <div class="site-watermark" data-preview-watermark hidden><span>Draft</span><span class="site-watermark__detail"> preview</span></div>
           {audio_markup}
           {intro_curtain}
           <header class="site-header">
@@ -6934,6 +6943,26 @@ def write_static_assets() -> None:
     }
     .skip-link { position: absolute; top: -80px; left: 16px; background: var(--ink); color: #fff; padding: 10px 14px; z-index: 20; }
     .skip-link:focus { top: 12px; }
+    .site-watermark {
+      position: fixed;
+      top: max(12px, env(safe-area-inset-top));
+      right: max(12px, env(safe-area-inset-right));
+      z-index: 28;
+      pointer-events: none;
+      min-height: 34px;
+      padding: 7px 10px;
+      border: 1px solid rgba(23,48,71,0.15);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.76);
+      color: rgba(23,48,71,0.72);
+      box-shadow: 0 10px 24px rgba(23,48,71,0.09);
+      backdrop-filter: blur(12px);
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
     .intro-curtain {
       position: fixed;
       inset: 0;
@@ -8840,9 +8869,11 @@ def write_static_assets() -> None:
       .site-nav { gap: 4px; }
       .site-nav a, .nav-trigger { padding: 4px 3px; font-size: 0.66rem; }
       .nav-menu--promote { max-height: min(68vh, 520px); }
+      .site-watermark { top: 5px; right: 5px; min-height: 26px; padding: 4px 7px; font-size: 0.58rem; letter-spacing: 0.08em; }
+      .site-watermark__detail { display: none; }
     }
     @media print {
-      .site-header, .hero-actions, .tool-panel, .copy-button, .corner-controls, .directory-assistant, .download-row, .nav-yucca-flourish { display: none; }
+      .site-header, .site-watermark, .hero-actions, .tool-panel, .copy-button, .corner-controls, .directory-assistant, .download-row, .nav-yucca-flourish { display: none; }
       body { background: #fff; background-image: none; color: #111; }
       a::after { content: " (" attr(href) ")"; font-size: 0.86em; }
       .section, .page-hero { padding: 24px 0; }
@@ -9031,6 +9062,14 @@ def write_static_assets() -> None:
     }
 
     const NAV_YUCCA_KEY = "statelineGuideNavYuccaV1";
+
+    function initPreviewWatermark() {
+      const watermark = document.querySelector("[data-preview-watermark]");
+      if (!watermark) return;
+      const host = window.location.hostname.toLowerCase();
+      const isPreview = host.startsWith("deploy-preview-") || host === "localhost" || host === "127.0.0.1";
+      if (isPreview) watermark.hidden = false;
+    }
 
     function playNavigationYucca() {
       const flourish = document.querySelector("[data-nav-yucca]");
@@ -10962,6 +11001,7 @@ def write_static_assets() -> None:
       }
     }
 
+    initPreviewWatermark();
     initNavigationYucca();
     syncDirectoryDetails();
     initProgressiveLists();

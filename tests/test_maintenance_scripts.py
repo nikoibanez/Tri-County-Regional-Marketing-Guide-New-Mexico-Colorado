@@ -518,6 +518,31 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("grid-template-columns: repeat(4, minmax(0, 1fr))", css)
         self.assertIn(".nav-menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr))", css)
 
+    def test_music_bar_only_renders_on_arts_culture_page(self) -> None:
+        about_page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
+        arts_page = guide_builder.page_shell("Test", "Test page", "arts-culture", "<section>Test</section>")
+
+        self.assertNotIn('data-music-bar', about_page)
+        self.assertNotIn('id="site-music-loop"', about_page)
+        self.assertIn('data-music-bar', arts_page)
+        self.assertIn('id="site-music-loop"', arts_page)
+
+    def test_draft_watermark_is_limited_to_preview_hosts(self) -> None:
+        page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
+        self.assertIn('data-preview-watermark hidden><span>Draft</span>', page)
+
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+            js = (asset_out / "app.js").read_text(encoding="utf-8")
+
+        self.assertIn(".site-watermark", css)
+        self.assertIn(".site-watermark__detail { display: none; }", css)
+        self.assertIn('host.startsWith("deploy-preview-")', js)
+        self.assertIn("initPreviewWatermark();", js)
+
     def test_landscapes_and_assistant_use_accessible_southwest_motion(self) -> None:
         page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
         self.assertIn('class="directory-assistant__desert-motion" aria-hidden="true"', page)

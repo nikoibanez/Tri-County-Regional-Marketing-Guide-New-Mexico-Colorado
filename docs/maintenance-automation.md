@@ -13,6 +13,7 @@ The maintenance system uses Python, GitHub Actions, the built site, and reposito
 | Listing keyword sweep | Wednesday at 15:41 UTC | Rotates through up to 120 public listing pages and maps current page signals to controlled search terms | Opens a review pull request or fallback issue |
 | Live site smoke test | Daily at 16:17 UTC | Loads critical public pages, data, sitemap, and robots routes | Opens or updates one GitHub issue on failure |
 | Monthly maintenance snapshot | First day of each month at 16:00 UTC | Builds the canonical deploy zip and stores data, reports, and a SHA-256 checksum | Creates a private GitHub Actions artifact retained for 90 days |
+| Weekly canonical integration review | Friday at 9:00 Mountain Time | Reconciles overlapping Codex task and automation work against the canonical generator, page skeleton, and review branches | May prepare one draft code/infrastructure pull request; never merges or publishes public claims |
 
 GitHub schedules use UTC and therefore shift by one local clock hour when Mountain Time enters or leaves daylight saving time.
 
@@ -91,3 +92,5 @@ review/update-audits/
 ```
 
 These files are maintenance evidence, not public-facing directory copy.
+
+The Codex coordination task also reads `docs/canonical-integration-workflow.md`. It runs in a clean worktree so a dirty desktop checkout cannot become a second accidental version of the site.
