@@ -485,6 +485,39 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("NAV_YUCCA_KEY", js)
         self.assertIn("initNavigationYucca();", js)
 
+    def test_primary_navigation_combines_direct_resources_with_county_promote_routes(self) -> None:
+        page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
+        nav = page.split('<nav class="site-nav" aria-label="Primary navigation">', 1)[1].split("</nav>", 1)[0]
+        ordered_labels = [
+            ">Home</a>",
+            ">Directory</a>",
+            ">Funding</a>",
+            ">Arts &amp; Culture</a>",
+            ">Promote</summary>",
+            ">Counties</summary>",
+            ">Guide</summary>",
+            ">Tools</summary>",
+        ]
+        positions = [nav.index(label) for label in ordered_labels]
+
+        self.assertEqual(positions, sorted(positions))
+        self.assertNotIn(">More</summary>", nav)
+        self.assertIn('class="nav-menu nav-menu--promote"', nav)
+        for heading in ("Events", "Advertising + media", "Business visibility", "Nonprofit outreach", "Calendars", "Galleries + arts"):
+            self.assertIn(f'<p class="nav-menu-label">{heading}</p>', nav)
+        self.assertIn("promote/index.html?county=Colfax&amp;route=events#promotion-results", nav)
+        self.assertIn("promote/index.html?county=Las+Animas&amp;route=advertising#promotion-results", nav)
+        self.assertIn("promote/index.html?county=Huerfano&amp;route=galleries#promotion-results", nav)
+
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+
+        self.assertIn("grid-template-columns: repeat(4, minmax(0, 1fr))", css)
+        self.assertIn(".nav-menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr))", css)
+
     def test_landscapes_and_assistant_use_accessible_southwest_motion(self) -> None:
         page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
         self.assertIn('class="directory-assistant__desert-motion" aria-hidden="true"', page)

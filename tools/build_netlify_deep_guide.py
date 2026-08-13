@@ -4527,59 +4527,68 @@ def page_shell(
     extra_json_alternates: list[tuple[str, str]] | None = None,
     schema_type: str = "WebPage",
 ) -> str:
-    promote_nav_links = [
-        ("Promotion finder", route_href(ACTIVE_PATHS["promote"]), "promote"),
-        ("Events", route_href("promote/?route=events"), "promote-events"),
-        ("Advertising + media", route_href("promote/?route=advertising"), "promote-advertising"),
-        ("Business visibility", route_href("promote/?route=businesses"), "promote-businesses"),
-        ("Nonprofit outreach", route_href("promote/?route=nonprofits"), "promote-nonprofits"),
-        ("Calendars", route_href("promote/?route=calendars"), "promote-calendars"),
-        ("Galleries + arts", route_href("promote/?route=galleries"), "promote-galleries"),
-        ("Physical locations", "posting/index.html", "posting"),
-        ("Message templates", "templates/index.html", "templates"),
-    ]
+    promote_nav_sections = []
+    promote_nav_links = [("All promotion routes", route_href(ACTIVE_PATHS["promote"]), "promote")]
+    for route_def in PROMOTE_ROUTE_DEFS:
+        route_links = []
+        for county in ("Colfax", "Las Animas", "Huerfano"):
+            route_key = f"promote-{route_def['key']}-{county.casefold().replace(' ', '-')}"
+            route_href_value = route_href(
+                f"promote/?county={quote_plus(county)}&route={route_def['key']}#promotion-results"
+            )
+            route_links.append((f"{county} County", route_href_value, route_key))
+        promote_nav_sections.append((route_def["title"], route_links))
+        promote_nav_links.extend(route_links)
     county_nav_links = [
-        ("Region overview", "region/index.html", "region"),
-        ("Colfax", "counties/colfax/index.html", "colfax"),
-        ("Las Animas", "counties/las-animas/index.html", "las-animas"),
-        ("Huerfano", "counties/huerfano/index.html", "huerfano"),
+        ("Tri-county overview", "region/index.html", "region"),
+        ("Colfax County", "counties/colfax/index.html", "colfax"),
+        ("Las Animas County", "counties/las-animas/index.html", "las-animas"),
+        ("Huerfano County", "counties/huerfano/index.html", "huerfano"),
     ]
-    more_nav_links = [
-        ("Plan", "plan/index.html", "plan"),
-        ("About + process", "about/index.html", "about"),
+    guide_nav_links = [
+        ("Plan your growth", "plan/index.html", "plan"),
+        ("Understand the region", "region/index.html", "region"),
+        ("About + creation process", "about/index.html", "about"),
+        ("Regional channels", "regional-channels/index.html", "regional-channels"),
+    ]
+    tools_nav_links = [
+        ("Physical ad finder", "posting/index.html", "posting"),
+        ("Message templates", "templates/index.html", "templates"),
         ("Appendix", "appendix/index.html", "appendix"),
         ("Submit update", "submit/index.html", "submit"),
-    ]
-    nav_structure = [
-        ("link", "Directory", "network/index.html", "network", "nav-core"),
-        ("link", "Funding", route_href(ACTIVE_PATHS["funding"]), "funding", "nav-core"),
-        ("link", "Arts & Culture", route_href(ACTIVE_PATHS["arts-culture"]), "arts-culture", "nav-core nav-core-arts"),
-        ("link", "Promote", route_href(ACTIVE_PATHS["promote"]), "promote", "nav-mobile-only nav-mobile-promote"),
-        (
-            "group",
-            "Promote",
-            promote_nav_links,
-            "nav-desktop-only",
-        ),
-        (
-            "group",
-            "Counties",
-            county_nav_links,
-            "nav-desktop-only",
-        ),
-        (
-            "group",
-            "More",
-            more_nav_links,
-            "nav-desktop-only",
-        ),
     ]
 
     def nav_link(label: str, href: str, key: str, extra_class: str = "") -> str:
         active_class = "is-active" if key == active else ""
         current = ' aria-current="page"' if key == active else ""
         classes = " ".join(value for value in (active_class, extra_class) if value)
-        return f'<a class="{classes}" href="{rel(href, depth)}"{current}>{label}</a>'
+        return f'<a class="{classes}" href="{html_escape(rel(href, depth))}"{current}>{html_escape(label)}</a>'
+
+    promote_menu_sections = "\n".join(
+        f"""
+        <section class="nav-menu-section" aria-label="{html_escape(section_label)}">
+          <p class="nav-menu-label">{html_escape(section_label)}</p>
+          <div class="nav-menu-county-links">
+            {''.join(nav_link(label, href, key) for label, href, key in links)}
+          </div>
+        </section>
+        """
+        for section_label, links in promote_nav_sections
+    )
+    promote_menu = f"""
+      {nav_link("All promotion routes", route_href(ACTIVE_PATHS["promote"]), "promote", "nav-menu-feature")}
+      <div class="nav-menu-grid">{promote_menu_sections}</div>
+    """
+    nav_structure = [
+        ("link", "Home", "index.html", "home", "nav-home"),
+        ("link", "Directory", "network/index.html", "network", "nav-resource"),
+        ("link", "Funding", route_href(ACTIVE_PATHS["funding"]), "funding", "nav-resource"),
+        ("link", "Arts & Culture", route_href(ACTIVE_PATHS["arts-culture"]), "arts-culture", "nav-resource"),
+        ("group", "Promote", promote_nav_links, "nav-promote", promote_menu),
+        ("group", "Counties", county_nav_links, "nav-counties", ""),
+        ("group", "Guide", guide_nav_links, "nav-guide", ""),
+        ("group", "Tools", tools_nav_links, "nav-tools", ""),
+    ]
 
     nav_parts = []
     for item in nav_structure:
@@ -4587,39 +4596,22 @@ def page_shell(
             _, label, href, key, extra_class = item
             nav_parts.append(nav_link(label, href, key, extra_class))
             continue
-        _, label, children, extra_class = item
+        _, label, children, extra_class, custom_menu = item
         group_active = any(key == active for _, _, key in children)
-        child_links = "\n".join(nav_link(child_label, href, key) for child_label, href, key in children)
+        if label == "Promote" and active in {item["active"] for item in TASK_PAGE_DEFS} | {"amplifiers"}:
+            group_active = True
+        child_links = custom_menu or "\n".join(nav_link(child_label, href, key) for child_label, href, key in children)
+        menu_class = "nav-menu nav-menu--promote" if label == "Promote" else "nav-menu"
         nav_parts.append(
             f"""
             <details class="nav-group {extra_class} {'is-active' if group_active else ''}">
               <summary class="nav-trigger">{label}</summary>
-              <div class="nav-menu">
+              <div class="{menu_class}">
                 {child_links}
               </div>
             </details>
             """
         )
-    mobile_more_active = active not in {"network", "funding", "promote"}
-    mobile_sections = [
-        ("Resources", [("Arts & Culture", route_href(ACTIVE_PATHS["arts-culture"]), "arts-culture")]),
-        ("Guide", more_nav_links),
-        ("Promote", promote_nav_links),
-        ("Counties", county_nav_links),
-    ]
-    mobile_links = "\n".join(
-        f'<span class="nav-menu-label">{html_escape(section_label)}</span>'
-        + "\n".join(nav_link(child_label, href, key) for child_label, href, key in children)
-        for section_label, children in mobile_sections
-    )
-    nav_parts.append(
-        f"""
-        <details class="nav-group nav-mobile-only {'is-active' if mobile_more_active else ''}">
-          <summary class="nav-trigger">More</summary>
-          <div class="nav-menu nav-menu--mobile">{mobile_links}</div>
-        </details>
-        """
-    )
     nav = "\n".join(nav_parts)
     footer_structure = [
         (
@@ -7002,8 +6994,6 @@ def write_static_assets() -> None:
     .brand-mark__route { fill: none; stroke: var(--gold); stroke-width: 2.4; stroke-linecap: round; }
     .brand-mark__sun { fill: var(--clay); }
     .site-nav { position: relative; z-index: 2; display: flex; gap: 3px; flex-wrap: wrap; justify-content: flex-end; align-items: center; overflow: visible; }
-    .nav-mobile-only,
-    .site-nav > a.nav-mobile-only { display: none; }
     .site-nav a, .nav-trigger { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 34px; text-decoration: none; padding: 7px 9px; border: 0; border-radius: 4px; background: transparent; font: inherit; font-size: 0.8rem; color: var(--ink-soft); cursor: pointer; transition: background 160ms ease, color 160ms ease; }
     .site-nav a:hover, .site-nav a.is-active, .site-nav a[aria-current="page"], .nav-group:hover > .nav-trigger, .nav-group:focus-within > .nav-trigger, .nav-group.is-active > .nav-trigger { background: rgba(167,97,73,0.075); color: var(--ink); }
     .site-nav a[aria-current="page"]::after,
@@ -7019,6 +7009,7 @@ def write_static_assets() -> None:
       animation: tabSettle 180ms ease-out;
     }
     .nav-group { position: relative; }
+    .nav-promote { position: static; }
     .nav-group summary { list-style: none; }
     .nav-group summary::-webkit-details-marker { display: none; }
     .nav-trigger::after { content: ""; width: 0; height: 0; margin-left: 6px; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; opacity: 0.72; }
@@ -7039,7 +7030,24 @@ def write_static_assets() -> None:
       overflow-y: auto;
     }
     .nav-menu a { display: flex; justify-content: flex-start; width: 100%; border-radius: 8px; white-space: nowrap; }
-    .nav-menu-label { display: block; padding: 8px 9px 4px; color: var(--plum); font-size: 0.68rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; }
+    .nav-menu--promote {
+      width: min(760px, calc(100vw - 32px));
+      max-height: min(76vh, 620px);
+      padding: 10px;
+    }
+    .nav-menu-feature {
+      min-height: 40px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid var(--line) !important;
+      border-radius: 6px 6px 0 0 !important;
+      color: var(--ink) !important;
+      font-weight: 850;
+    }
+    .nav-menu-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px 14px; }
+    .nav-menu-section { min-width: 0; padding: 4px 0 6px; }
+    .nav-menu-label { display: block; margin: 0; padding: 8px 9px 4px; color: var(--plum); font-size: 0.68rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; }
+    .nav-menu-county-links { display: grid; gap: 2px; }
+    .nav-menu-county-links a { min-height: 30px; font-size: 0.76rem; }
     .nav-group:hover .nav-menu, .nav-group:focus-within .nav-menu, .nav-group[open] .nav-menu { display: grid; gap: 2px; }
     @keyframes tabSettle {
       from { transform: scaleX(0.65); opacity: 0.35; }
@@ -8524,21 +8532,15 @@ def write_static_assets() -> None:
       .brand { font-size: 0.9rem; gap: 8px; }
       .brand-mark { width: 32px; height: 26px; }
       .site-nav { width: 100%; max-width: 100%; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; justify-content: stretch; overflow: visible; padding-bottom: 0; }
-      .nav-desktop-only { display: none; }
-      .nav-mobile-only { display: block; }
-      .site-nav > a.nav-mobile-only { display: flex; }
-      .site-nav a.nav-core-arts { display: none; }
-      .site-nav a, .nav-trigger { width: 100%; min-height: 30px; white-space: nowrap; text-align: center; padding: 4px 5px; font-size: 0.72rem; }
-      .nav-group { position: relative; }
-      .nav-menu { position: absolute; top: calc(100% + 6px); min-width: 150px; width: max-content; max-width: calc(100vw - 24px); margin-top: 0; padding: 6px; box-shadow: var(--shadow); }
-      .nav-group:nth-of-type(1) .nav-menu { left: 50%; right: auto; translate: -50% 0; }
-      .nav-group:nth-of-type(2) .nav-menu { right: 0; left: auto; translate: none; }
-      .nav-group:nth-of-type(3) .nav-menu { left: 0; right: auto; translate: none; }
-      .nav-group:nth-of-type(4) .nav-menu { left: 50%; right: auto; translate: -50% 0; }
-      .nav-group:nth-of-type(5) .nav-menu { right: 0; left: auto; translate: none; }
-      .nav-mobile-only .nav-menu { left: auto; right: 0; translate: none; width: min(310px, calc(100vw - 24px)); }
-      .nav-mobile-only .nav-menu a { justify-content: flex-start; text-align: left; }
-      .nav-menu a { white-space: normal; justify-content: center; }
+      .site-nav a, .nav-trigger { width: 100%; min-height: 36px; white-space: normal; text-align: center; padding: 4px 5px; font-size: 0.7rem; line-height: 1.15; }
+      .nav-group { position: static; min-width: 0; }
+      .nav-menu,
+      .nav-menu--promote { position: absolute; top: calc(100% + 6px); right: 0; left: 0; width: 100%; min-width: 0; max-width: none; margin-top: 0; padding: 8px; box-shadow: var(--shadow); }
+      .nav-menu a { white-space: normal; justify-content: flex-start; text-align: left; }
+      .nav-menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 10px; }
+      .nav-menu-section { padding: 2px 0 3px; }
+      .nav-menu-label { padding: 5px 5px 2px; }
+      .nav-menu-county-links a { min-height: 28px; padding: 3px 5px; font-size: 0.7rem; }
       .hero {
         min-height: min(64svh, 560px);
         padding-top: clamp(64px, 15vw, 84px);
@@ -8833,6 +8835,11 @@ def write_static_assets() -> None:
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
       }
+    }
+    @media (max-width: 420px) {
+      .site-nav { gap: 4px; }
+      .site-nav a, .nav-trigger { padding: 4px 3px; font-size: 0.66rem; }
+      .nav-menu--promote { max-height: min(68vh, 520px); }
     }
     @media print {
       .site-header, .hero-actions, .tool-panel, .copy-button, .corner-controls, .directory-assistant, .download-row, .nav-yucca-flourish { display: none; }
