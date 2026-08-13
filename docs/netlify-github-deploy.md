@@ -44,4 +44,4 @@ Set `PUBLIC_SITE_ORIGIN` to the public origin in both Netlify environment variab
 https://newmexicocoloradoguide.netlify.app
 ```
 
-The generator uses that value for canonical links, structured data, social metadata, `robots.txt`, and the sitemap. It defaults to the production Netlify origin above. Keep the same value in Netlify and GitHub, then rebuild and submit the sitemap in Google Search Console.
+The generator uses that value for canonical links, structured data, social metadata, `robots.txt`, and the sitemap. It defaults to `https://newmexicocoloradoguide.netlify.app`, the current production domain. Keep the same value in Netlify and GitHub. When a custom domain is ready, update the value, make that domain primary in Netlify, rebuild, and submit the replacement sitemap in Google Search Console.
