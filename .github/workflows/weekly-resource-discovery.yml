@@ -1,0 +1,83 @@
+name: Weekly resource discovery review
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 16 * * 3"
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: weekly-resource-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Collect review-only resource candidates
+        run: python scripts/audit_resource_discovery_sources.py --timeout 20
+
+      - name: Build private maintenance dashboard
+        run: python scripts/build_maintenance_dashboard.py
+
+      - name: Prepare resource-discovery review branch
+        id: review
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          review_count=$(python -c "import json; d=json.load(open('review/resource-discovery/resource-discovery-latest.json', encoding='utf-8')); s=d.get('summary', {}); print(int(s.get('changed', 0)) + int(s.get('new_baselines', 0)) + int(s.get('confirmed_broken', 0)))")
+          if [ "$review_count" -eq 0 ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git add data/resource-discovery-state.json
+          git add review/resource-discovery/resource-discovery-latest.json
+          git add review/resource-discovery/resource-discovery-latest.md
+          git add review/maintenance/maintenance-dashboard-latest.json review/maintenance/maintenance-dashboard-latest.md
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            branch="automation/resource-discovery-${GITHUB_RUN_ID}"
+            git switch -c "$branch"
+            git commit -m "Refresh resource discovery review"
+            git push --set-upstream origin "$branch"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open human-review pull request
+        if: steps.review.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEW_BRANCH: ${{ steps.review.outputs.branch }}
+        shell: bash
+        run: |
+          body="This automated pull request contains source-page changes and candidate links for grants, business capital, fiscal sponsors, nonprofit directories, business directories, and artist opportunities. It does not change the public directory. Confirm relevance, eligibility, deadlines, contact details, terms of use, and public wording before moving a candidate into canonical data."
+          if ! gh pr create --draft --base master --head "$REVIEW_BRANCH" --title "Review newly discovered resource links" --body "$body"; then
+            compare_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/master...${REVIEW_BRANCH}?expand=1"
+            gh issue create --title "Resource discovery review branch is ready" --body "$body Branch: $REVIEW_BRANCH One-click draft PR: $compare_url"
+          fi
+
+      - name: Upload resource-discovery report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: resource-discovery-${{ github.run_id }}
+          retention-days: 30
+          path: |
+            review/resource-discovery/
+            review/maintenance/

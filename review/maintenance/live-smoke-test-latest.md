@@ -1,7 +1,7 @@
 # Site Smoke Test
 
-Generated: 2026-07-26
-Target: https://newmexicocoloradoguide.netlify.app
+Generated: 2026-08-12
+Target: http://127.0.0.1:8794
 Mode: live
 Status: **PASS**
 

@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-07",
+  "generated_at": "2026-08-13",
   "status": "pass",
   "blocking": [],
   "warnings": [
-    "175 canonical rows lack both a website and source URL; prioritize contact enrichment.",
+    "173 canonical rows lack both a website and source URL; prioritize contact enrichment.",
     "3 names occur in more than one place; review aliases before merging across towns.",
     "The legacy 688-row consolidated export still contains structural cleanup work. It is not the active Network data source; keep it internal until rebuilt from published rows."
   ],
   "canonical_source": {
-    "path": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\data\\tri_county_persona_resources.csv",
-    "rows": 1490,
+    "path": "C:\\Users\\Alyxx and Niko\\Documents\\Tri-County-Guide-worktrees\\ux-source-registry-20260808\\data\\tri_county_persona_resources.csv",
+    "rows": 1498,
     "excluded_organization_rows": 0,
     "blank_names": 0,
     "exact_name_place_duplicate_groups": 0,
-    "without_website_or_source": 175,
-    "without_phone": 1300,
-    "without_email": 1463,
+    "without_website_or_source": 173,
+    "without_phone": 1294,
+    "without_email": 1461,
     "without_address": 1025,
     "contact_enrichment_sample": [
       "111 Park Espresso Bar / Enchanted Grounds Espresso Bar",
@@ -41,8 +41,8 @@
     ]
   },
   "published_directory": {
-    "path": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
-    "rows": 1355,
+    "path": "C:\\Users\\Alyxx and Niko\\Documents\\Tri-County-Guide-worktrees\\ux-source-registry-20260808\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
+    "rows": 1362,
     "excluded_organization_rows": 0,
     "blank_names": 0,
     "exact_name_place_duplicate_groups": 0,
@@ -56,7 +56,7 @@
     "generic_description_sample": []
   },
   "consolidated_directory": {
-    "path": "C:\\Users\\Alyxx and Niko\\Documents\\Northern New Mexico & Southern Colorado Tri-County Regional Marketing Guide For Businesses, Non-Profits, Entrepreneurs, and Artists\\data\\directory_of_absolutely_everything.csv",
+    "path": "C:\\Users\\Alyxx and Niko\\Documents\\Tri-County-Guide-worktrees\\ux-source-registry-20260808\\data\\directory_of_absolutely_everything.csv",
     "rows": 687,
     "excluded_organization_rows": 0,
     "blank_names": 0,

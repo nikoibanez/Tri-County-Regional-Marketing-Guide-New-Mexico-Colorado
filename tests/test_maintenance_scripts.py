@@ -154,7 +154,7 @@ class DirectoryQualityTests(unittest.TestCase):
             }
         )
 
-        self.assertIn("Flyer-friendly", flyer_tags)
+        self.assertIn("Physical promotion contact", flyer_tags)
         self.assertIn("Newsletter sharing", newsletter_tags)
         self.assertIn("Social sharing", social_tags)
 
@@ -163,7 +163,7 @@ class DirectoryQualityTests(unittest.TestCase):
             {
                 "audience_served": "Artist; For-Profit",
                 "outreach_channels": [
-                    {"key": "physical_flyers", "label": "Ask about flyers", "status": "ask"}
+                    {"key": "physical_flyers", "label": "Flyer/poster contact", "status": "ask"}
                 ],
             }
         )
@@ -463,7 +463,8 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn('id="online-connection-filter"', page)
         self.assertIn('id="outreach-channel-filter"', page)
         self.assertIn('id="outreach-status-filter"', page)
-        self.assertIn("What the listing labels mean", page)
+        self.assertIn("How to read a listing", page)
+        self.assertNotIn('id="access-mode-filter"', page)
 
         with tempfile.TemporaryDirectory() as folder:
             asset_out = Path(folder)

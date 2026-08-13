@@ -185,6 +185,29 @@ def normalize_posting(item: dict) -> dict:
     }
 
 
+def normalize_national_funding_source(item: dict) -> dict:
+    title = str(item.get("name") or "").strip()
+    url = str(item.get("url") or "").strip()
+    return {
+        "id": stable_id("national-funding", title, url),
+        "source_group": "national_funding_sources",
+        "title": title,
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": url,
+        "host": hostname(url),
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": int(item.get("cadence_days") or 7),
+        "last_checked": None,
+        "next_check": date.today().isoformat(),
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+    }
+
+
 def load_registry() -> dict:
     data = json.loads(GUIDE_DATA.read_text(encoding="utf-8"))
     previous_records: dict[str, dict] = {}
@@ -202,6 +225,7 @@ def load_registry() -> dict:
     records.extend(normalize_directory_source(item) for item in data.get("directory_sources", []))
     records.extend(normalize_amplifier(item) for item in data.get("amplifier_channels", []))
     records.extend(normalize_posting(item) for item in data.get("posting_spaces", []))
+    records.extend(normalize_national_funding_source(item) for item in data.get("national_funding_watch_sources", []))
     for record in records:
         previous = previous_records.get(record["id"])
         if not previous or previous.get("url") != record.get("url"):

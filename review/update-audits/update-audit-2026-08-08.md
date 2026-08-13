@@ -1,6 +1,6 @@
 # Update Source Audit
 
-Generated: 2026-08-12
+Generated: 2026-08-08
 
 This report separates confirmed link failures from pages that merely block or confuse scripted checks.
 
@@ -9,19 +9,17 @@ This report separates confirmed link failures from pages that merely block or co
 - Records checked: 120
 - Web sources checked: 119
 - Confirmed broken or missing: 0
-- Normal-browser confirmation required: 7
-- Script-access limitations (not broken): 21
+- Normal-browser confirmation required: 0
+- Script-access limitations (not broken): 24
 - Offline field-check records: 1
 - Human approval required: 75
 
 ## Status Counts
 
-- access_blocked: 19
-- error: 1
+- access_blocked: 22
 - field_check: 1
-- network_error: 6
-- ok: 81
-- redirect: 10
+- ok: 83
+- redirect: 12
 - tls_error: 2
 
 ## Confirmed Broken Or Missing
@@ -30,15 +28,7 @@ No checked web source is confirmed broken or missing.
 
 ## Normal-Browser Confirmation Required
 
-These pages are not classified as broken. A timeout, network problem, or temporary server response prevented a conclusive scripted check.
-
-- [SBA Funding Programs](https://www.sba.gov/funding-programs) - Regional; funding; error; [WinError 10054] An existing connection was forcibly closed by the remote host
-- [SBA Lender Match](https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders) - Regional; funding; network_error; [Errno 11001] getaddrinfo failed
-- [Southern Colorado Community Foundation Grants](https://sccfcolorado.org/for-grantseekers/grants/) - Regional; funding; network_error; [Errno 11001] getaddrinfo failed
-- [Southern Colorado Community Foundation Scholarship](https://sccfcolorado.org/madeline-mellers-memorial-girls-golf-scholarship/) - Regional; funding; network_error; [Errno 11001] getaddrinfo failed
-- [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; funding; network_error; [Errno 11001] getaddrinfo failed
-- [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; network_error; [Errno 11001] getaddrinfo failed
-- [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; network_error; [Errno 11001] getaddrinfo failed
+No inconclusive network or server response is waiting on a normal-browser confirmation.
 
 ## Script Access Limitations (Not Broken)
 
@@ -65,6 +55,9 @@ These are informational results, not broken-link findings. The page blocked scri
 - [Colorado Rural Jump-Start Program](https://oedit.colorado.gov/rural-jump-start-program) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Folk and Traditional Arts Project Grant](https://oedit.colorado.gov/folk-and-traditional-arts-project-grant) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Grants.gov](https://www.grants.gov/) - Regional; funding; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)
+- [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 
 ## Offline Field Checks
 

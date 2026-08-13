@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-12",
+  "generated_at": "2026-08-08",
   "index_path": "C:\\Users\\Alyxx and Niko\\Documents\\Tri-County-Guide-worktrees\\ux-source-registry-20260808\\data\\listing-keyword-index.json",
   "network_enabled": false,
   "summary": {
     "rows": 1499,
     "rows_with_source_url": 1326,
-    "distinct_source_urls": 421,
+    "distinct_source_urls": 419,
     "urls_selected": 0,
     "urls_checked": 0,
     "urls_failed": 0,
-    "entries_changed": 13,
+    "entries_changed": 11,
     "source_keyword_changes": 0,
     "status_counts": {
       "checked": 74,
@@ -20,22 +20,6 @@
     }
   },
   "changes": [
-    {
-      "id": "dewitt-enterprises-huerfano-local-maker-vendor",
-      "name": "DeWitt Enterprises",
-      "county": "Huerfano",
-      "town": "Walsenburg",
-      "added": [
-        "retail",
-        "writing"
-      ],
-      "removed": [
-        "artist",
-        "maker"
-      ],
-      "status": "pending_source_check",
-      "source_url": "https://www.walsenburgmercantile.com/vendors/dewitt-enterprise"
-    },
     {
       "id": "huerfano-heritage-center-huerfano-arts-culture",
       "name": "Huerfano County Heritage Center",
@@ -62,18 +46,6 @@
       "removed": [],
       "status": "pending_source_check",
       "source_url": "https://www.huerfanohistory.org/mining-museum"
-    },
-    {
-      "id": "travel-guide-books-and-more-trinidad-las-animas",
-      "name": "Books & More Used Bookstore",
-      "county": "Las Animas",
-      "town": "Trinidad",
-      "added": [
-        "library"
-      ],
-      "removed": [],
-      "status": "pending_source_check",
-      "source_url": "https://carnegiepubliclibrary.org/about-us/friends-of-the-library/"
     },
     {
       "id": "advanced-air-llc-colfax-air-transportation",

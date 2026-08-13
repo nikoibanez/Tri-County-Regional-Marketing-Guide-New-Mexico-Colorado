@@ -1,15 +1,18 @@
 {
-  "generated_at": "2026-08-07T10:22:18-06:00",
+  "generated_at": "2026-08-08T23:10:12-06:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
-    "canonical_resource_rows": 1490,
+    "canonical_resource_rows": 1499,
     "consolidated_directory_entries": 687,
-    "registered_update_sources": 126,
+    "registered_update_sources": 136,
     "deep_watch_sources": 15,
     "keyword_index_entries": 1490,
-    "outreach_review_entries": 1355,
+    "outreach_review_entries": 1363,
     "outreach_review_shortcuts": 104,
-    "outreach_review_total": 1459
+    "outreach_review_total": 1467,
+    "national_funding_opportunities": 30,
+    "national_funding_watch_sources": 10,
+    "resource_discovery_sources": 34
   },
   "latest_checks": {
     "directory_quality": "pass",
@@ -17,19 +20,28 @@
     "source_urls_checked": 119,
     "source_urls_confirmed_broken": 0,
     "source_urls_browser_check": 0,
-    "source_urls_script_limited": 20,
+    "source_urls_script_limited": 24,
     "source_field_checks": 1,
     "watch_pages_checked": 32,
     "watch_pages_failed": 0,
     "priority_new_leads": 12,
     "keyword_urls_checked": 0,
-    "keyword_entries_changed": 0,
-    "outreach_listed_routes": 296,
-    "outreach_ask_routes": 748,
-    "outreach_without_routes": 544,
+    "keyword_entries_changed": 11,
+    "outreach_listed_routes": 308,
+    "outreach_ask_routes": 730,
+    "outreach_without_routes": 564,
     "shortcut_outreach_listed_routes": 19,
     "shortcut_outreach_ask_routes": 44,
-    "shortcut_outreach_without_routes": 52
+    "shortcut_outreach_without_routes": 52,
+    "funding_watch_pages_checked": 10,
+    "funding_watch_pages_changed": 0,
+    "funding_watch_new_baselines": 0,
+    "funding_watch_confirmed_broken": 0,
+    "funding_watch_check_failures": 5,
+    "resource_discovery_candidates": 135,
+    "resource_discovery_changed": 3,
+    "resource_discovery_broken": 0,
+    "resource_discovery_failures": 7
   },
   "action_queue": [
     {
@@ -40,13 +52,25 @@
     },
     {
       "priority": "medium",
-      "count": 175,
+      "count": 173,
       "label": "canonical rows without a website or source URL",
       "next_action": "Enrich high-value entries first; do not invent contact paths."
     },
     {
+      "priority": "medium",
+      "count": 135,
+      "label": "resource candidate links waiting for review",
+      "next_action": "Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data."
+    },
+    {
+      "priority": "medium",
+      "count": 11,
+      "label": "listing keyword sets proposed for review",
+      "next_action": "Review additions and removals in the latest keyword-sweep report before merging the keyword index."
+    },
+    {
       "priority": "low",
-      "count": 544,
+      "count": 564,
       "label": "listings without an identified promotion route",
       "next_action": "Enrich these only when a public page or direct contact supports a useful route; do not invent availability."
     },
@@ -55,6 +79,18 @@
       "count": 127,
       "label": "low-confidence text candidates",
       "next_action": "Review only after the linked priority queue; do not publish from page text alone."
+    },
+    {
+      "priority": "low",
+      "count": 7,
+      "label": "resource-discovery hubs needing a normal-browser check",
+      "next_action": "Open these pages normally; do not remove a source because of bot blocking or a temporary request failure."
+    },
+    {
+      "priority": "low",
+      "count": 5,
+      "label": "national funding pages needing a normal-browser check",
+      "next_action": "Open these pages normally; do not treat bot blocking or a temporary network error as a closed program."
     },
     {
       "priority": "low",

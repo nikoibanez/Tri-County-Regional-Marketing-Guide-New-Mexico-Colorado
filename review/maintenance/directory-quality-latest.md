@@ -1,6 +1,6 @@
 # Directory Quality Report
 
-Generated: 2026-08-07
+Generated: 2026-08-13
 
 Status: **PASS**
 
@@ -10,23 +10,23 @@ Status: **PASS**
 
 ## Maintenance Warnings
 
-- 175 canonical rows lack both a website and source URL; prioritize contact enrichment.
+- 173 canonical rows lack both a website and source URL; prioritize contact enrichment.
 - 3 names occur in more than one place; review aliases before merging across towns.
 - The legacy 688-row consolidated export still contains structural cleanup work. It is not the active Network data source; keep it internal until rebuilt from published rows.
 
 ## Canonical Resource Rows
 
-- Rows: 1490
+- Rows: 1498
 - Explicitly excluded organization rows: 0
 - Exact name/place duplicate groups: 0
-- Without website or source URL: 175
-- Without phone: 1300
-- Without email: 1463
+- Without website or source URL: 173
+- Without phone: 1294
+- Without email: 1461
 - Without address: 1025
 
 ## Published Network Directory
 
-- Entries: 1355
+- Entries: 1362
 - Explicitly excluded organization rows: 0
 - Exact name/place duplicate groups: 0
 - Generalized ideas presented as listings: 0

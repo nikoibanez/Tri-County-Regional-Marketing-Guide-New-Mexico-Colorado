@@ -38,7 +38,7 @@ After connecting the repo:
 
 ## Later
 
-Set `PUBLIC_SITE_ORIGIN` to the final public origin in both Netlify environment variables and GitHub repository variables. Example:
+Set `PUBLIC_SITE_ORIGIN` to the public origin in both Netlify environment variables and GitHub repository variables:
 
 ```text
 https://newmexicocoloradoguide.netlify.app

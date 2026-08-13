@@ -1,6 +1,6 @@
 # Listing Keyword Sweep
 
-Generated: 2026-08-12
+Generated: 2026-08-08
 
 This is a review queue. Source-page terms improve directory search only after the generated index change is reviewed and merged.
 
@@ -8,11 +8,11 @@ This is a review queue. Source-page terms improve directory search only after th
 
 - Canonical rows: 1499
 - Rows with a public source URL: 1326
-- Distinct source URLs: 421
+- Distinct source URLs: 419
 - URLs selected this run: 0
 - URLs checked: 0
 - URL checks needing attention: 0
-- Listing keyword sets changed: 13
+- Listing keyword sets changed: 11
 - Source-derived keyword sets changed: 0
 
 ## Status
@@ -24,13 +24,6 @@ This is a review queue. Source-page terms improve directory search only after th
 - pending_source_check: 1056
 
 ## Proposed Keyword Changes
-
-### DeWitt Enterprises (Walsenburg, Huerfano)
-
-- Status: pending_source_check
-- Add: retail, writing
-- Remove: artist, maker
-- Public page: https://www.walsenburgmercantile.com/vendors/dewitt-enterprise
 
 ### Huerfano County Heritage Center (Walsenburg, Huerfano)
 
@@ -45,13 +38,6 @@ This is a review queue. Source-page terms improve directory search only after th
 - Add: nonprofit
 - Remove: None
 - Public page: https://www.huerfanohistory.org/mining-museum
-
-### Books & More Used Bookstore (Trinidad, Las Animas)
-
-- Status: pending_source_check
-- Add: library
-- Remove: None
-- Public page: https://carnegiepubliclibrary.org/about-us/friends-of-the-library/
 
 ### Advanced Air, LLC (Angel Fire, Colfax)
 
