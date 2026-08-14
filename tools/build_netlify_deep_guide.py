@@ -291,64 +291,6 @@ HOME_TASK_GROUPS = [
 ]
 
 
-CURRENT_LEADS = [
-    {
-        "title": "New Mexico Local Economic Development Act",
-        "county": "Colfax",
-        "kind": "Public economic-development funding",
-        "group": "Funding",
-        "url": "https://www.edd.newmexico.gov/grants/local-economic-development-act/",
-        "best_for": "Colfax projects that may need a formal public economic-development path, infrastructure support, or a city/county conversation before funding is realistic.",
-        "action": "Use as an official starting gate, then confirm eligibility, public-process requirements, and the local applicant pathway.",
-    },
-    {
-        "title": "New Mexico Trails+ Grant",
-        "county": "Colfax",
-        "kind": "Outdoor recreation / trail funding",
-        "group": "Funding",
-        "url": "https://www.edd.newmexico.gov/press-releases/state-opens-trails-grant-for-outdoor-recreation-projects/",
-        "best_for": "Trail, outdoor recreation, visitor-economy, and community access projects that need a state funding lead to evaluate.",
-        "action": "Check the current cycle, eligible applicants, match rules, and deadlines before building a project promise around it.",
-    },
-    {
-        "title": "New Mexico Job Training Incentive Program",
-        "county": "Colfax",
-        "kind": "Workforce training reimbursement",
-        "group": "Funding",
-        "url": "https://www.edd.newmexico.gov/programs-and-services/business-development/job-training-incentive-program/",
-        "best_for": "New Mexico businesses planning expansion hires and training costs before those positions are filled.",
-        "action": "Use early in hiring planning; verify eligible jobs, wages, timing, and approval steps before promising reimbursement.",
-    },
-    {
-        "title": "Explore Raton Visitors Guide advertising",
-        "county": "Colfax",
-        "kind": "Visitor guide / promotion inquiry",
-        "group": "Directory source",
-        "url": "https://www.exploreraton.com/post/purchase-your-2026-raton-visitors-guide-ad",
-        "best_for": "Raton and Colfax visitor-facing businesses, attractions, lodging, dining, galleries, recreation, and event campaigns.",
-        "action": "Ask about the current visitor-guide deadline, ad sizes, rate card, placement rules, and whether the listing also appears online.",
-    },
-    {
-        "title": "Town of La Veta Business Directory",
-        "county": "Huerfano",
-        "kind": "Municipal business directory",
-        "group": "Directory source",
-        "url": "https://townoflaveta-co.gov/business-directory/",
-        "best_for": "La Veta businesses, galleries, lodging, dining, services, and local referrals that should be findable from a municipal source.",
-        "action": "Check whether a listing is present, then use the town contact path to ask about additions or corrections.",
-    },
-    {
-        "title": "Walsenburg Mercantile vendors",
-        "county": "Huerfano",
-        "kind": "Maker / retail vendor directory",
-        "group": "Directory source",
-        "url": "https://www.walsenburgmercantile.com/meet-our-vendors",
-        "best_for": "Artists, makers, craftspeople, food producers, and retailers looking for local vendor visibility and cross-promotion examples.",
-        "action": "Use as a discovery lead, then contact the venue directly before assuming vendor availability or terms.",
-    },
-]
-
-
 DIRECTORY_SOURCES = [
     {
         "title": "Colorado Vacation Directory",
@@ -1803,7 +1745,6 @@ PERSONA_ROUTES = [
     },
 ]
 
-CURRENT_LEADS = filter_excluded_directory_rows(CURRENT_LEADS)
 DIRECTORY_SOURCES = filter_excluded_directory_rows(DIRECTORY_SOURCES)
 AMPLIFIER_CHANNELS = filter_excluded_directory_rows(AMPLIFIER_CHANNELS)
 POSTING_SPACES = filter_excluded_directory_rows(POSTING_SPACES)
@@ -4140,14 +4081,13 @@ def write_data_files(rows: list[dict], summary: dict) -> None:
         "directory_sources": directory_sources,
         "directory_source_groups": directory_source_groups,
         "top_directory_source_groups": top_source_groups,
-        "current_leads": [public_data_item(item) for item in CURRENT_LEADS],
         "home_task_groups": HOME_TASK_GROUPS,
         "promote_route_defs": PROMOTE_ROUTE_DEFS,
         "amplifier_channels": amplifier_channels,
         "national_funding_opportunities": national_funding,
         "national_funding_watch_sources": national_funding_sources,
         "resource_discovery_sources": resource_discovery_sources,
-        "free_tools": [public_data_item(item) for item in PROMOTION_TOOLS],
+        "free_tools": [public_data_item(item) for item in tools_catalog()],
         "site_routes": [public_data_item(item) for item in assistant_site_routes()],
         "posting_spaces": [public_data_item(item) for item in POSTING_SPACES],
         "physical_ad_locations": physical_ad_locations,
@@ -4190,9 +4130,43 @@ def html_escape(value: object) -> str:
     return html.escape(str(value or ""), quote=True)
 
 
+def free_support_tool_records() -> list[dict]:
+    records = []
+    for item in NATIONAL_FUNDING_OPPORTUNITIES:
+        if not item.get("include_in_tools"):
+            continue
+        access_types = item.get("tools_access_types") or ["Free or low-cost support"]
+        records.append(
+            {
+                "id": f"support-{item.get('id')}",
+                "name": item.get("name"),
+                "url": item.get("application_url") or item.get("source_url"),
+                "source_url": item.get("source_url"),
+                "category": item.get("tools_category") or "Funding & business help",
+                "format": item.get("tools_format") or "Advising and support service",
+                "access_types": access_types,
+                "use": item.get("tools_use") or item.get("summary"),
+                "note": item.get("tools_note") or item.get("free_to_apply_or_enroll"),
+                "nonprofit_note": item.get("tools_nonprofit_note") or item.get("requires_501c3"),
+                "keywords": [
+                    *(item.get("keywords") or []),
+                    *(item.get("audiences") or []),
+                    *(item.get("applicant_types") or []),
+                    "support service",
+                ],
+                "featured": bool(item.get("tools_featured")),
+            }
+        )
+    return records
+
+
+def tools_catalog() -> list[dict]:
+    return [*PROMOTION_TOOLS, *free_support_tool_records()]
+
+
 def promotion_tool_cards(items: list[dict] | None = None) -> str:
     cards = []
-    for item in items if items is not None else PROMOTION_TOOLS:
+    for item in items if items is not None else tools_catalog():
         access_types = [clean_text(value) for value in item.get("access_types") or [] if clean_text(value)]
         keywords = [clean_text(value) for value in item.get("keywords") or [] if clean_text(value)]
         badges = "".join(
@@ -4243,7 +4217,7 @@ def promotion_tool_cards(items: list[dict] | None = None) -> str:
 
 def promotion_tool_filters() -> str:
     categories = sorted(
-        {clean_text(item.get("category")) for item in PROMOTION_TOOLS if clean_text(item.get("category"))},
+        {clean_text(item.get("category")) for item in tools_catalog() if clean_text(item.get("category"))},
         key=str.casefold,
     )
     category_options = "".join(
@@ -4251,9 +4225,9 @@ def promotion_tool_filters() -> str:
         for category in categories
     )
     return f"""
-    <form class="tool-filters" data-tool-filters role="search" aria-label="Filter free tools">
-      <label class="tool-filter-search">Search tools
-        <input type="search" data-tool-query autocomplete="off" placeholder="Try flyer, CRM, forms, audio, nonprofit...">
+    <form class="tool-filters" data-tool-filters role="search" aria-label="Filter free services and software">
+      <label class="tool-filter-search">Search services and tools
+        <input type="search" data-tool-query autocomplete="off" placeholder="Try advising, grants, flyer, CRM, forms, nonprofit...">
       </label>
       <label>Category
         <select data-tool-category>
@@ -4268,6 +4242,7 @@ def promotion_tool_filters() -> str:
           <option value="open-source">Open-source software</option>
           <option value="desktop">Desktop software</option>
           <option value="web">Web apps and services</option>
+          <option value="support">Advising and support services</option>
         </select>
       </label>
       <button class="button button-soft" type="reset">Clear</button>
@@ -4591,25 +4566,6 @@ def home_task_group_cards(depth: int = 0) -> str:
         </a>
         """
         for item in HOME_TASK_GROUPS
-    )
-
-
-def current_lead_cards(depth: int = 0, group: str | None = None) -> str:
-    leads = [item for item in CURRENT_LEADS if group is None or item["group"] == group]
-    return "\n".join(
-        f"""
-        <article class="lead-card" data-lead-group="{html_escape(item['group'])}" data-county="{html_escape(item['county'])}">
-          <div class="source-card__meta">
-            <span>{html_escape(item['group'])}</span>
-            <span>{html_escape(item['county'])}</span>
-            <span>{html_escape(item['kind'])}</span>
-          </div>
-          <h3><a href="{html_escape(item['url'])}" target="_blank" rel="noreferrer">{html_escape(item['title'])}</a></h3>
-          <p>{html_escape(public_text_value(item['best_for']))}</p>
-          <p class="action-line">{html_escape(public_text_value(item['action']))}</p>
-        </article>
-        """
-        for item in leads
     )
 
 
@@ -5328,18 +5284,6 @@ def home_page(summary: dict) -> str:
           </div>
           <div class="mini-grid task-grid">{task_cards}</div>
         </section>
-        <section class="section">
-          <div class="section-heading">
-            <p class="eyebrow">Current funding and directory entries</p>
-            <h2>Fast-moving items to check before building a new list.</h2>
-            <p class="section-note">Use these time-sensitive entries as starting points. Open the linked page before assuming eligibility, rates, deadlines, listing approval, or current location details.</p>
-          </div>
-          <div class="current-leads-grid">{current_lead_cards(0)}</div>
-          <figure class="grant-map-figure">
-            <img class="grant-map-image" src="assets/infographics/grant-opportunity-map.svg" alt="Grant routing infographic for Southern Colorado and Northern New Mexico">
-            <figcaption>Use the grant map as a visual starting point, then confirm current applicant rules and deadlines with the original program.</figcaption>
-          </figure>
-        </section>
         <section class="section tinted">
           <div class="section-heading">
             <p class="eyebrow">Inventory backbone</p>
@@ -5872,15 +5816,19 @@ def national_funding_card(item: dict) -> str:
     """
 
 
-def national_funding_cards() -> str:
-    ordered = sorted(
-        NATIONAL_FUNDING_OPPORTUNITIES,
-        key=lambda item: (
-            0 if funding_timing_group(item) == "Open or upcoming" else 1,
-            str(item.get("deadline_date") or "9999-12-31"),
-            str(item.get("name") or "").casefold(),
-        ),
+def funding_deadline_sort_key(item: dict) -> tuple:
+    timing = funding_timing_group(item)
+    deadline = str(item.get("deadline_date") or "")
+    return (
+        0 if timing == "Open or upcoming" else 1,
+        0 if deadline else 1,
+        deadline or "9999-12-31",
+        str(item.get("name") or "").casefold(),
     )
+
+
+def national_funding_cards() -> str:
+    ordered = sorted(NATIONAL_FUNDING_OPPORTUNITIES, key=funding_deadline_sort_key)
     return "\n".join(national_funding_card(item) for item in ordered)
 
 
@@ -5961,14 +5909,6 @@ def funding_page(rows: list[dict]) -> str:
       </div>
       <div class="source-grid compact" data-progressive-list data-compact-count="4" data-wide-count="9">{discovery_source_cards(['grants-public-funding', 'business-capital', 'fiscal-sponsorship'], 99)}</div>
       <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="registries">Show more registries</button></div>
-    </section>
-    <section class="section tinted">
-      <div class="section-heading">
-        <p class="eyebrow">Regional starting points</p>
-        <h2>Local and state funding routes.</h2>
-        <p class="section-note">Use these alongside the national directory when the project needs a local funder, lender, state incentive, training reimbursement, or technical-assistance contact.</p>
-      </div>
-      <div class="current-leads-grid">{current_lead_cards(2, "Funding")}</div>
     </section>
     <section class="section">
       <div class="section-heading">
@@ -6743,9 +6683,9 @@ def templates_page() -> str:
     </section>
     <section class="section" id="free-tools">
       <div class="section-heading">
-        <p class="eyebrow">Free software, web apps, and nonprofit offers</p>
-        <h2>Build the packet, list, form, or flyer without adding unnecessary software.</h2>
-        <p class="section-note">Search general free plans, open-source desktop software, and programs made available to eligible nonprofits. Check current plan limits and eligibility on the provider's official page before moving a team or mailing list.</p>
+        <p class="eyebrow">Free services and software</p>
+        <h2>Find practical help, build the packet, or run outreach without unnecessary cost.</h2>
+        <p class="section-note">Search no-cost advising, public support services, free plans, open-source software, and nonprofit offers. Check current access rules and plan limits on the provider's official page before relying on a service.</p>
       </div>
       {promotion_tool_filters()}
       <div class="tool-grid" data-tool-grid>{tools}</div>
@@ -7696,16 +7636,6 @@ def write_static_assets() -> None:
     .task-group-card strong {
       display: block;
       margin-top: 14px;
-    }
-    .grant-map-figure {
-      margin-top: 20px;
-      padding: 18px;
-      background: rgba(255,255,255,0.78);
-    }
-    .grant-map-image {
-      display: block;
-      width: 100%;
-      border-radius: 6px;
     }
     .path-card, .mini-card, .step-card, .template-card, .tool-card, .lead-card, .route-type-card, .button, .chip, .persona-route {
       transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
@@ -10241,7 +10171,6 @@ def write_static_assets() -> None:
       const audienceTerms = new Set(["artist", "business", "nonprofit", "program"]);
       const coreTerms = terms.filter(term => !locationTerms.has(term) && !audienceTerms.has(term));
       const pools = [
-        ...(DATA.current_leads || []).map(item => ({ ...item, assistant_type: "Current item" })),
         ...((DATA.directory_source_groups || DATA.directory_sources || [])).map(item => ({ ...item, assistant_type: "Shortcut group" })),
         ...(DATA.resources || []).map(item => ({ ...item, assistant_type: "Listing" })),
         ...(DATA.amplifier_channels || []).map(item => ({ ...item, assistant_type: "Amplifier" })),
@@ -10616,6 +10545,7 @@ def write_static_assets() -> None:
         if (value === "open-source") return accessText.includes("open-source");
         if (value === "desktop") return formatText.includes("desktop");
         if (value === "web") return formatText.includes("web");
+        if (value === "support") return formatText.includes("support") || formatText.includes("advising");
         return true;
       }
 
