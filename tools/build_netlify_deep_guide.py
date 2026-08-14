@@ -7288,8 +7288,20 @@ def write_static_assets() -> None:
     .brand-mark__route { fill: none; stroke: var(--gold); stroke-width: 2.4; stroke-linecap: round; }
     .brand-mark__sun { fill: var(--clay); }
     .site-nav { position: relative; z-index: 2; display: flex; gap: 3px; flex-wrap: wrap; justify-content: flex-end; align-items: center; overflow: visible; }
-    .site-nav a, .nav-trigger { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 34px; text-decoration: none; padding: 7px 9px; border: 0; border-radius: 4px; background: transparent; font: inherit; font-size: 0.8rem; color: var(--ink-soft); cursor: pointer; transition: background 160ms ease, color 160ms ease; }
+    .site-nav a, .nav-trigger { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 34px; text-decoration: none; padding: 7px 9px; border: 0; border-radius: 4px; background: transparent; font: inherit; font-size: 0.8rem; color: var(--ink-soft); cursor: url("raton-accessible-cursor.svg") 4 2, pointer; transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
     .site-nav a:hover, .site-nav a.is-active, .site-nav a[aria-current="page"], .nav-group:hover > .nav-trigger, .nav-group:focus-within > .nav-trigger, .nav-group.is-active > .nav-trigger { background: rgba(167,97,73,0.075); color: var(--ink); }
+    @media (hover: hover) and (pointer: fine) {
+      .site-nav a:hover,
+      .site-nav a:focus-visible,
+      .nav-group:hover > .nav-trigger,
+      .nav-group:focus-within > .nav-trigger {
+        animation: navCursorGlow 1800ms ease-in-out infinite;
+      }
+    }
+    @keyframes navCursorGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(182,145,70,0); }
+      50% { box-shadow: 0 0 0 2px rgba(182,145,70,0.20), 0 0 11px rgba(182,145,70,0.16); }
+    }
     .site-nav a[aria-current="page"]::after,
     .nav-group.is-active > .nav-trigger::before {
       content: "";
