@@ -166,7 +166,7 @@ class GuideTaxonomyTests(unittest.TestCase):
             }
         )
         self.assertEqual(enriched["physical_ad_candidate"], "true")
-        self.assertEqual(enriched["physical_promotion_category"], "Bookstores and pharmacies")
+        self.assertEqual(enriched["physical_promotion_category"], "Local businesses and services")
         self.assertIn("Bookstore", enriched["public_keywords"])
         self.assertIn("physical promotion location", enriched["physical_promotion_keywords"])
         self.assertIn("bulletin boards", enriched["physical_promotion_keywords"])
@@ -190,7 +190,7 @@ class GuideTaxonomyTests(unittest.TestCase):
                     "public_listing_type": "Health & wellness",
                 }
             ),
-            "Personal service and auto shops",
+            "Local businesses and services",
         )
 
     def test_duplicate_directory_routes_on_same_host_render_once(self) -> None:
@@ -210,6 +210,14 @@ class GuideTaxonomyTests(unittest.TestCase):
         self.assertIn('id="promote-county-filter"', promote)
         self.assertIn('id="physical-location-list"', physical)
         self.assertIn('id="physical-category-filter"', physical)
+        self.assertEqual(physical.count("Show matching contacts"), 4)
+        for category in (
+            "Community and public spaces",
+            "Arts and event spaces",
+            "Local businesses and services",
+            "Visitor and travel locations",
+        ):
+            self.assertIn(category, physical)
         self.assertNotIn("Ask first", physical)
 
     def test_discovery_shortlist_balances_requested_categories(self) -> None:

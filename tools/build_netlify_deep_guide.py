@@ -1602,60 +1602,28 @@ POSTING_SPACES = [
 
 PHYSICAL_AD_PLACE_TYPES = [
     {
-        "key": "libraries-community",
-        "title": "Libraries and community boards",
-        "best_for": "Classes, nonprofit programs, arts events, workshops, support services, and local announcements.",
-        "categories": ["Libraries and community spaces"],
-        "query": "library",
+        "key": "community-public",
+        "title": "Community and public spaces",
+        "best_for": "Libraries, community centers, schools, and public offices used for programs, services, classes, and local announcements.",
+        "categories": ["Community and public spaces"],
     },
     {
-        "key": "visitor-civic",
-        "title": "Visitor, tourism, and civic centers",
-        "best_for": "Visitor-facing events, public information, tours, services, brochures, rack cards, and civic announcements.",
-        "categories": ["Visitor and tourism locations", "Civic and public-information locations"],
-        "query": "visitor",
+        "key": "arts-events",
+        "title": "Arts and event spaces",
+        "best_for": "Galleries, theaters, museums, venues, and creative spaces used for openings, performances, workshops, artist calls, and festivals.",
+        "categories": ["Arts and event spaces"],
     },
     {
-        "key": "arts-venues",
-        "title": "Galleries, theaters, venues, and museums",
-        "best_for": "Openings, performances, artist calls, workshops, talks, music, festivals, and cultural events.",
-        "categories": ["Galleries, theaters, venues, and museums"],
-        "query": "gallery theater venue museum",
+        "key": "local-businesses",
+        "title": "Local businesses and services",
+        "best_for": "Food and drink, retail, bookstores, pharmacies, personal services, auto shops, and secondhand stores near regular local foot traffic.",
+        "categories": ["Local businesses and services"],
     },
     {
-        "key": "food-coffee",
-        "title": "Coffee shops, bakeries, restaurants, and bars",
-        "best_for": "Neighborhood events, classes, hiring, local offers, performances, fundraisers, and downtown cross-promotion.",
-        "categories": ["Coffee, food, and drink locations"],
-        "query": "coffee bakery restaurant",
-    },
-    {
-        "key": "retail-books-pharmacy",
-        "title": "Local shops, bookstores, and pharmacies",
-        "best_for": "Community events, services, classes, hiring, local campaigns, and cross-promotion near regular foot traffic.",
-        "categories": ["Local retail and high-traffic shops", "Bookstores and pharmacies"],
-        "query": "retail bookstore pharmacy",
-    },
-    {
-        "key": "personal-auto",
-        "title": "Tattoo, personal-service, and auto shops",
-        "best_for": "Local events, fundraisers, service referrals, hiring, and neighborhood-facing promotion.",
-        "categories": ["Personal service and auto shops"],
-        "query": "tattoo auto salon",
-    },
-    {
-        "key": "thrift-antique",
-        "title": "Thrift, antique, mercantile, and secondhand shops",
-        "best_for": "Markets, arts events, community sales, local services, classes, and downtown cross-promotion.",
-        "categories": ["Thrift, antique, and mercantile"],
-        "query": "thrift antique mercantile",
-    },
-    {
-        "key": "travel-transit",
-        "title": "Transit, lodging, and travel stops",
-        "best_for": "Visitor-facing events, maps, tours, transportation notices, lodging-adjacent services, and regional travel ideas.",
-        "categories": ["Transit, lodging, and travel stops"],
-        "query": "lodging",
+        "key": "visitor-travel",
+        "title": "Visitor and travel locations",
+        "best_for": "Visitor centers, chambers, lodging, transit, and travel stops used for events, maps, tours, brochures, and visitor-facing services.",
+        "categories": ["Visitor and travel locations"],
     },
 ]
 
@@ -3113,25 +3081,25 @@ def physical_promotion_category(row: dict) -> str:
         ]
     )
     if text_matches_terms(blob, ["thrift", "secondhand", "antique", "mercantile"]):
-        return "Thrift, antique, and mercantile"
+        return "Local businesses and services"
     if text_matches_terms(blob, ["tattoo", "auto shop", "auto repair", "automotive", "car dealer", "dealership", "tire shop", "salon", "barber", "haircut", "hair salon", "beauty salon", "personal care", "spa"]) or listing_type == "Auto & transportation":
-        return "Personal service and auto shops"
+        return "Local businesses and services"
     if text_matches_terms(blob, ["bookstore", "book shop", "bookseller", "pharmacy", "drugstore"]):
-        return "Bookstores and pharmacies"
+        return "Local businesses and services"
     if text_matches_terms(blob, ["library", "community center", "senior center", "recreation center", "school", "college", "campus"]):
-        return "Libraries and community spaces"
+        return "Community and public spaces"
     if listing_type == "Public offices" or text_matches_terms(blob, ["city hall", "town hall", "county clerk", "courthouse", "court", "public office"]):
-        return "Civic and public-information locations"
+        return "Community and public spaces"
     if text_matches_terms(blob, ["visitor center", "visitors center", "welcome center", "tourism", "tourist", "chamber", "mainstreet"]):
-        return "Visitor and tourism locations"
+        return "Visitor and travel locations"
     if text_matches_terms(blob, ["gallery", "museum", "venue", "theater", "theatre", "arts center", "art center", "creative district", "cultural center"]):
-        return "Galleries, theaters, venues, and museums"
+        return "Arts and event spaces"
     if listing_type == "Food & drink" or text_matches_terms(blob, ["coffee", "cafe", "espresso", "bakery", "restaurant", "bar", "brewery", "distillery"]):
-        return "Coffee, food, and drink locations"
+        return "Local businesses and services"
     if listing_type == "Retail & local goods" or text_matches_terms(blob, ["market", "grocery", "food store", "shop", "store", "retail", "boutique"]):
-        return "Local retail and high-traffic shops"
+        return "Local businesses and services"
     if listing_type in {"Lodging & stays", "Tourism & visitor info"} or text_matches_terms(blob, ["rail", "train", "station", "depot", "bus", "transit", "hotel", "motel", "inn", "lodging", "campground", "rv", "resort"]):
-        return "Transit, lodging, and travel stops"
+        return "Visitor and travel locations"
     return ""
 
 
