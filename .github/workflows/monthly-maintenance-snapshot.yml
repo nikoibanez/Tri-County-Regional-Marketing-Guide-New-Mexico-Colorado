@@ -6,7 +6,13 @@ on:
     - cron: "0 16 1 * *"
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: monthly-maintenance-snapshot
+  cancel-in-progress: false
 
 jobs:
   snapshot:
@@ -26,6 +32,9 @@ jobs:
       - name: Build canonical site and deploy zip
         run: python tools/build_netlify_deep_guide.py
 
+      - name: Review free tools and nonprofit offers
+        run: python scripts/audit_free_tools.py --timeout 20
+
       - name: Run deterministic checks
         run: |
           python scripts/audit_ui_accessibility.py
@@ -38,6 +47,44 @@ jobs:
 
       - name: Write deploy checksum
         run: sha256sum dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip > dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip.sha256
+
+      - name: Prepare monthly free-tools review branch
+        id: free_tools_review
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          review_count=$(python -c "import json; d=json.load(open('review/free-tools/free-tools-latest.json', encoding='utf-8')); print(int(d.get('summary', {}).get('review_count', 0)))")
+          if [ "$review_count" -eq 0 ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git add data/free-tools-state.json
+          git add review/free-tools/free-tools-latest.json review/free-tools/free-tools-latest.md
+          git add review/maintenance/maintenance-dashboard-latest.json review/maintenance/maintenance-dashboard-latest.md
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            branch="automation/free-tools-${GITHUB_RUN_ID}"
+            git switch -c "$branch"
+            git commit -m "Refresh monthly free-tools review"
+            git push --set-upstream origin "$branch"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open human-review pull request
+        if: steps.free_tools_review.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEW_BRANCH: ${{ steps.free_tools_review.outputs.branch }}
+        shell: bash
+        run: |
+          body="This monthly review watches the official pages behind the guide's free software, web-app, service, and nonprofit-offer inventory. It records page changes and candidate links only. Confirm current terms, eligibility, geography, privacy implications, and public wording before editing data/free-tools.json."
+          if ! gh pr create --draft --base master --head "$REVIEW_BRANCH" --title "Review monthly free-tool changes" --body "$body"; then
+            compare_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/master...${REVIEW_BRANCH}?expand=1"
+            gh issue create --title "Monthly free-tools review branch is ready" --body "$body Branch: $REVIEW_BRANCH One-click draft PR: $compare_url"
+          fi
 
       - name: Upload canonical maintenance snapshot
         uses: actions/upload-artifact@v7
@@ -53,6 +100,9 @@ jobs:
             data/directory_of_absolutely_everything.json
             data/listing-keyword-index.json
             data/directory-outreach-status.json
+            data/free-tools.json
+            data/free-tools-state.json
+            review/free-tools/
             review/directory-outreach/
             review/keyword-sweep/
             review/maintenance/

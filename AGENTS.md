@@ -9,6 +9,15 @@ This repository builds the Northern New Mexico and Southern Colorado Tri-County 
 - Generated site: `dist/tri-county-netlify-guide-deep`
 - Deploy zip: `dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip`
 
+## Canonical Integration Contract
+
+- Treat `master` as the shared integration target and use review branches or Codex worktrees for concurrent work.
+- Edit the canonical generator and data paths above. Do not create a parallel generator, alternate deploy root, or hand-edited generated site.
+- Preserve the primary navigation order: Home, Directory, Funding, Arts & Culture, Promote, Counties, Guide, Tools.
+- Keep promotion routes grouped by Events, Advertising + media, Business visibility, Nonprofit outreach, Calendars, and Galleries + arts, with Colfax, Las Animas, and Huerfano county links in every group.
+- Reconcile an existing open integration pull request before starting a competing page hierarchy or navigation branch.
+- Follow `docs/canonical-integration-workflow.md` when moving work between Codex tasks or scheduled maintenance runs.
+
 Run:
 
 ```powershell

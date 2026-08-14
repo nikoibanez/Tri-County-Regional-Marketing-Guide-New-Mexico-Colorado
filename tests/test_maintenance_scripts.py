@@ -16,7 +16,9 @@ from audit_directory_quality import duplicate_groups, normalize_name  # noqa: E4
 from audit_directory_connectivity import connection_details, display_source_path, is_first_party_candidate  # noqa: E402
 from audit_directory_outreach_channels import build_report as build_outreach_report  # noqa: E402
 from audit_internal_links import audit_site  # noqa: E402
+from audit_free_tools import audit as audit_free_tools, candidate_links as free_tool_candidate_links, validate_payload as validate_free_tools  # noqa: E402
 from audit_update_sources import check_record, check_url, summarize  # noqa: E402
+from apply_directory_link_repairs import apply_repairs_to_rows  # noqa: E402
 import build_netlify_deep_guide as guide_builder  # noqa: E402
 from build_update_source_registry import normalize_posting  # noqa: E402
 from build_netlify_deep_guide import (  # noqa: E402
@@ -31,11 +33,17 @@ from directory_exclusions import (  # noqa: E402
 )
 from directory_outreach import channel_status_map, classify_outreach_channels  # noqa: E402
 from smoke_test_site import validate_body  # noqa: E402
-from weekly_directory_query_check import extract_candidates  # noqa: E402
+from weekly_directory_query_check import (  # noqa: E402
+    extract_candidates,
+    load_existing_names,
+    load_existing_urls,
+    match_existing,
+)
 from sweep_listing_keywords import (  # noqa: E402
     KeywordSignalParser,
     canonical_signal,
     extract_controlled_keywords,
+    filter_source_keywords,
     listing_name_matches_signal,
     primary_source_url,
     select_urls,
@@ -93,6 +101,52 @@ class DirectoryQualityTests(unittest.TestCase):
         candidates = extract_candidates(source, "https://example.org/directory/", html, {})
 
         self.assertEqual([candidate["name"] for candidate in candidates], ["Allowed Gallery"])
+
+    def test_weekly_directory_sweep_matches_aliases_and_known_listing_urls(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            directory_path = Path(temp_dir) / "directory.csv"
+            directory_path.write_text(
+                "name,aliases,source_urls\n"
+                '"Kathy Hills Studio Gallery / Spanish Peaks Art","[\'Kathy Hills Studio Gallery\']","[]"\n'
+                '"The World Journal","[]","[\'https://spanishpeakscountry.com/business-directory/listing/world-journal\']"\n',
+                encoding="utf-8",
+            )
+            names = load_existing_names([directory_path])
+            urls = load_existing_urls([directory_path])
+
+        alias_match = match_existing("Kathy Hills Studio Gallery", names)
+        url_match = match_existing(
+            "World Journal",
+            names,
+            "https://spanishpeakscountry.com/business-directory/listing/world-journal/",
+            urls,
+        )
+        self.assertEqual(alias_match["match_type"], "exact_normalized")
+        self.assertEqual(url_match["match_type"], "exact_url")
+
+    def test_reviewed_link_repairs_replace_stale_urls_and_keep_fallbacks(self) -> None:
+        rows = [
+            {
+                "id": "example",
+                "website": "https://old.example.org/",
+                "source_url": "https://old.example.org/; https://directory.example.org/category",
+            }
+        ]
+        repairs = [
+            {
+                "id": "example",
+                "remove_urls": ["https://old.example.org/"],
+                "replacement_website": "https://new.example.org/",
+                "add_source_urls": ["https://directory.example.org/listing/example"],
+            }
+        ]
+
+        repaired, changed = apply_repairs_to_rows(rows, repairs)
+
+        self.assertEqual(changed, ["example"])
+        self.assertEqual(repaired[0]["website"], "https://new.example.org/")
+        self.assertIn("https://directory.example.org/category", repaired[0]["source_url"])
+        self.assertNotIn("https://old.example.org/", repaired[0]["source_url"])
 
     def test_entity_contact_prefers_website_then_listing_page(self) -> None:
         row = {
@@ -432,6 +486,142 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("NAV_YUCCA_KEY", js)
         self.assertIn("initNavigationYucca();", js)
 
+    def test_primary_navigation_combines_direct_resources_with_county_promote_routes(self) -> None:
+        page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
+        nav = page.split('<nav class="site-nav" aria-label="Primary navigation">', 1)[1].split("</nav>", 1)[0]
+        ordered_labels = [
+            ">Home</a>",
+            ">Directory</a>",
+            ">Funding</a>",
+            ">Arts &amp; Culture</a>",
+            ">Promote</summary>",
+            ">Counties</summary>",
+            ">Guide</summary>",
+            ">Tools</summary>",
+        ]
+        positions = [nav.index(label) for label in ordered_labels]
+
+        self.assertEqual(positions, sorted(positions))
+        self.assertNotIn(">More</summary>", nav)
+        self.assertIn('class="nav-menu nav-menu--promote"', nav)
+        for heading in ("Events", "Advertising + media", "Business visibility", "Nonprofit outreach", "Calendars", "Galleries + arts"):
+            self.assertIn(f'<p class="nav-menu-label">{heading}</p>', nav)
+        self.assertIn("promote/index.html?county=Colfax&amp;route=events#promotion-results", nav)
+        self.assertIn("promote/index.html?county=Las+Animas&amp;route=advertising#promotion-results", nav)
+        self.assertIn("promote/index.html?county=Huerfano&amp;route=galleries#promotion-results", nav)
+
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+
+        self.assertIn("grid-template-columns: repeat(4, minmax(0, 1fr))", css)
+        self.assertIn(".nav-menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr))", css)
+
+    def test_music_bar_only_renders_on_arts_culture_page(self) -> None:
+        about_page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
+        arts_page = guide_builder.page_shell("Test", "Test page", "arts-culture", "<section>Test</section>")
+
+        self.assertNotIn('data-music-bar', about_page)
+        self.assertNotIn('id="site-music-loop"', about_page)
+        self.assertIn('data-music-bar', arts_page)
+        self.assertIn('id="site-music-loop"', arts_page)
+        self.assertGreaterEqual(len(guide_builder.REGIONAL_AUDIO_TRACKS), 6)
+        for track in guide_builder.REGIONAL_AUDIO_TRACKS:
+            self.assertIn(track["local_audio_filename"], arts_page)
+            self.assertIn(track["item_url"], arts_page)
+
+    def test_draft_watermark_is_limited_to_preview_hosts(self) -> None:
+        page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
+        self.assertIn('data-preview-watermark hidden aria-hidden="true">Draft preview</div>', page)
+
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+            js = (asset_out / "app.js").read_text(encoding="utf-8")
+
+        self.assertIn(".site-watermark", css)
+        self.assertIn("bottom: max(8vh, env(safe-area-inset-bottom));", css)
+        self.assertIn("opacity: 0.10;", css)
+        self.assertNotIn(".site-watermark__detail", css)
+        self.assertIn('host.startsWith("deploy-preview-")', js)
+        self.assertIn("initPreviewWatermark();", js)
+
+    def test_free_tools_are_structured_filterable_and_routed_by_assistant(self) -> None:
+        payload = {
+            "tools": guide_builder.PROMOTION_TOOLS,
+            "discovery_sources": guide_builder.FREE_TOOL_DISCOVERY_SOURCES,
+        }
+        self.assertEqual(validate_free_tools(payload), [])
+        self.assertGreaterEqual(len(guide_builder.PROMOTION_TOOLS), 20)
+        self.assertIn("Nonprofit benefits", {item["category"] for item in guide_builder.PROMOTION_TOOLS})
+        self.assertTrue(any("Free/open-source software" in item["access_types"] for item in guide_builder.PROMOTION_TOOLS))
+        self.assertTrue(any(any("nonprofit" in label.casefold() for label in item["access_types"]) for item in guide_builder.PROMOTION_TOOLS))
+
+        page = guide_builder.templates_page()
+        self.assertIn('id="free-tools"', page)
+        self.assertIn("data-tool-filters", page)
+        self.assertIn("data-tool-card", page)
+        self.assertIn("TechSoup", page)
+        self.assertIn("Open-source software", page)
+
+        shell = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
+        self.assertIn("data-site-root=", shell)
+        routes = guide_builder.assistant_site_routes()
+        route_paths = {item["path"] for item in routes}
+        self.assertIn("network/", route_paths)
+        self.assertIn("resources/funding/", route_paths)
+        self.assertIn("templates/#free-tools", route_paths)
+        self.assertTrue(any(path.startswith("promote/?county=Colfax") for path in route_paths))
+
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+            js = (asset_out / "app.js").read_text(encoding="utf-8")
+        self.assertIn("...(DATA.free_tools || [])", js)
+        self.assertIn("...(DATA.site_routes || [])", js)
+        self.assertIn("function assistantSiteUrl", js)
+        self.assertIn("function initFreeToolFilters", js)
+        self.assertIn('["Site route", "Free tool"].includes(item.assistant_type)', js)
+        self.assertIn(".tool-card[hidden] { display: none; }", css)
+
+    def test_free_tool_audit_preserves_review_boundary(self) -> None:
+        payload = {
+            "tools": [
+                {
+                    "id": "example",
+                    "name": "Example Tool",
+                    "url": "https://example.com/",
+                    "source_url": "https://example.com/pricing",
+                    "category": "Design & print",
+                    "format": "Web app",
+                    "access_types": ["Free plan"],
+                    "use": "Create a flyer.",
+                    "note": "Check current limits.",
+                    "watch_terms": ["free"],
+                }
+            ],
+            "discovery_sources": [],
+        }
+        results, summary, state = audit_free_tools(payload, {"schema_version": 1, "pages": {}}, 1, no_network=True)
+        self.assertEqual(len(results), 1)
+        self.assertEqual(summary["checked_ok"], 0)
+        self.assertEqual(summary["review_count"], 0)
+        self.assertEqual(state["pages"], {})
+
+        candidates = free_tool_candidate_links(
+            {"candidate_terms": ["nonprofit", "software"]},
+            "https://example.org/catalog/",
+            [("Nonprofit design software", "/offers/design"), ("Privacy", "/privacy")],
+            set(),
+        )
+        self.assertEqual([item["url"] for item in candidates], ["https://example.org/offers/design"])
+
     def test_landscapes_and_assistant_use_accessible_southwest_motion(self) -> None:
         page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
         self.assertIn('class="directory-assistant__desert-motion" aria-hidden="true"', page)
@@ -566,6 +756,45 @@ class KeywordSweepTests(unittest.TestCase):
         }
         old_entries = {"checked": {"last_checked": "2026-07-20"}}
         self.assertEqual(select_urls(url_to_ids, old_entries, 1), ["https://new.example.com"])
+
+    def test_keyword_guardrails_block_host_context_and_listing_specific_noise(self) -> None:
+        row = {
+            "id": "music-example",
+            "resource_name": "Example Music Festival",
+            "category": "Music festival",
+            "resource_type": "Arts and culture",
+        }
+        guardrails = {
+            "global_rules": {
+                "chamber of commerce": {"required_canonical_phrases": ["chamber"]}
+            },
+            "listing_rules": {
+                "music-example": {"blocked_source_keywords": ["visitor center"]}
+            },
+        }
+
+        allowed, blocked = filter_source_keywords(
+            row,
+            ["festival", "chamber of commerce", "visitor center"],
+            guardrails,
+        )
+
+        self.assertEqual(allowed, ["festival"])
+        self.assertEqual(blocked, ["chamber of commerce", "visitor center"])
+
+        positive_row = {
+            "id": "library-example",
+            "resource_name": "Example Public Library",
+            "category": "Library and community",
+            "resource_type": "Bulletin and notice",
+        }
+        allowed, blocked = filter_source_keywords(
+            positive_row,
+            ["library"],
+            guardrails,
+        )
+        self.assertEqual(allowed, ["library"])
+        self.assertEqual(blocked, [])
 
 
 if __name__ == "__main__":

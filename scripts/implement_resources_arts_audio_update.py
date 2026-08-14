@@ -1433,9 +1433,7 @@ def copy_audio_package() -> list[dict]:
     if not AUDIO_PKG.exists():
         return []
     for rel in [
-        "data/regional_audio_manifest.csv",
         "data/regional_audio_manifest.json",
-        "assets/regional-audio-registry.js",
         "docs/CODEX_REGIONAL_AUDIO_IMPLEMENTATION.md",
     ]:
         src = AUDIO_PKG / rel
@@ -1452,13 +1450,15 @@ def copy_audio_package() -> list[dict]:
     audio_dir = SITE / "assets" / "audio"
     audio_dir.mkdir(parents=True, exist_ok=True)
     for track in manifest:
-        filename = track.get("local_audio_filename_recommended")
+        filename = track.get("local_audio_filename") or track.get("local_audio_filename_recommended")
         hdl = track.get("hdl") or ""
         match = re.search(r"afcrael\.([0-9a-z]+)", hdl)
         if not filename or not match:
             continue
         dst = audio_dir / filename
-        direct = f"https://tile.loc.gov/storage-services/service/afc/afc1940002/afc1940002_{match.group(1)}.mp3"
+        direct = track.get("direct_audio_source") or (
+            f"https://tile.loc.gov/storage-services/service/afc/afc1940002/afc1940002_{match.group(1)}.mp3"
+        )
         track["direct_audio_source"] = direct
         if dst.exists() and dst.stat().st_size > 1000:
             track["local_audio_downloaded"] = True
@@ -2402,12 +2402,10 @@ def mirror_support_files() -> dict[str, int]:
     failed = 0
     for rel in [
         "data/regional_audio_manifest.json",
-        "data/regional_audio_manifest.csv",
         "data/guide-data.json",
         "data/directory_of_absolutely_everything.json",
         "data/directory_of_absolutely_everything.csv",
         "assets/site-data.js",
-        "assets/regional-audio-registry.js",
         "assets/styles.css",
         "assets/app.js",
     ]:

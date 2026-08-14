@@ -1,18 +1,14 @@
-# Codex Regional Audio Implementation
+# Regional Audio Implementation
 
-Integrate the regional archival audio package without rebuilding the whole site.
+The canonical site generator reads `data/regional_audio_manifest.json` directly. Do not maintain a second JavaScript or CSV track registry.
 
-## Steps
+## Adding A Track
 
-1. Copy `data/regional_audio_manifest.json` into `/data/`.
-2. Copy `assets/regional-audio-registry.js` into `/assets/`.
-3. Merge `assets/regional-audio.css` into `/assets/styles.css` or include it separately.
-4. Download MP3 files from each LOC item page in `regional_audio_manifest.csv`.
-5. Save them in `/assets/audio/` using `local_audio_filename_recommended`.
-6. Insert `snippets/regional-audio-section.html` where the regional audio feature should appear.
-7. Keep the credit line visible.
-8. Do not autoplay audio by default. If a user-initiated play button is used, provide a clear pause/stop button.
+1. Confirm the item page names the recording, performers, place, source collection, and reuse status.
+2. Add the source URL, rights note, credit line, player label, and final local filename to `data/regional_audio_manifest.json`.
+3. Download the approved audio into `assets/audio/` using that exact filename.
+4. Set `local_audio_downloaded` to `true` only after the local file exists.
+5. Add the full source trail to `assets/audio/README.md`.
+6. Run the canonical build and `python scripts/audit_ui_accessibility.py`.
 
-## Warning text to display
-
-Regional archival audio is provided as cultural context. Rights statements are reviewed source-by-source; users should confirm reuse terms before redistribution, remixing, or commercial use.
+The player is opt-in, includes play/stop and volume controls, and links the selected track to its source-and-rights page. Contemporary music requires written permission or an explicit compatible license before publication.

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-08-13",
+  "description": "Browser-reviewed replacements for retired, unsafe, or unrelated directory links. Apply with tools/apply_directory_link_repairs.py and retain category/profile fallbacks when no entity-specific replacement is available.",
+  "repairs": [
+    {
+      "id": "travel-guide-angel-s-outback-adventure-angel-fire-colfax",
+      "remove_urls": ["https://angelfirechamber.org/business/angels-outback-adventure/"],
+      "replacement_website": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/",
+      "add_source_urls": ["https://visitangelfirenm.com/listing/angels-outback-adventures-llc/"],
+      "reason": "The retired chamber profile renders a 404; the current Visit Angel Fire entity profile opens in a normal browser."
+    },
+    {
+      "id": "travel-guide-big-river-raft-trips-angel-fire-colfax",
+      "remove_urls": ["https://angelfirechamber.org/business/big-river-raft-trips/"],
+      "replacement_website": "https://bigriverrafts.com/",
+      "add_source_urls": ["https://visitangelfirenm.com/listing/big-river-raft-trips/"],
+      "reason": "The retired chamber profile renders a 404; the business website and current tourism profile identify the same rafting operator."
+    },
+    {
+      "id": "travel-guide-casa-de-artesanias-angel-fire-colfax",
+      "remove_urls": ["https://angelfirechamber.org/business/casa-de-artisianias-y-textiles/"],
+      "replacement_website": "",
+      "add_source_urls": [],
+      "reason": "The entity-specific chamber profile renders a 404 and no current direct website was confirmed; category routes remain available."
+    },
+    {
+      "id": "travel-guide-enchanted-circle-pottery-angel-fire-colfax",
+      "remove_urls": ["https://angelfirechamber.org/business/enchanted-circle-pottery/"],
+      "replacement_website": "https://angelfirestudiotour.org/home/enchanted-circle-pottery-kevin-joanne-dekeuster-4/",
+      "add_source_urls": ["https://angelfirestudiotour.org/home/enchanted-circle-pottery-kevin-joanne-dekeuster-4/"],
+      "reason": "The retired chamber profile renders a 404; the current studio-tour artist page provides an entity-specific public profile."
+    },
+    {
+      "id": "enchanted-circle-pottery-regional-pottery-ceramics-studio",
+      "remove_urls": ["https://www.enchantedcirclepottery.com", "https://www.enchantedcirclepottery.com/"],
+      "replacement_website": "https://angelfirestudiotour.org/home/enchanted-circle-pottery-kevin-joanne-dekeuster-4/",
+      "add_source_urls": ["https://angelfirestudiotour.org/home/enchanted-circle-pottery-kevin-joanne-dekeuster-4/"],
+      "reason": "The former direct site currently has an invalid certificate; the current studio-tour profile is usable."
+    },
+    {
+      "id": "travel-guide-far-flung-adventures-angel-fire-colfax",
+      "remove_urls": ["https://angelfirechamber.org/business/far-flung-adventures/"],
+      "replacement_website": "https://farflung.com/",
+      "add_source_urls": [],
+      "reason": "The retired chamber profile renders a 404; the outfitter's current website identifies its Taos-based operation."
+    },
+    {
+      "id": "travel-guide-golden-eagle-rv-park-and-resort-angel-fire-colfax",
+      "remove_urls": ["https://angelfirechamber.org/business/golden-eagle-rv-park-resort/"],
+      "replacement_website": "https://www.goldeneaglerv.com/",
+      "add_source_urls": [],
+      "reason": "The retired chamber profile renders a 404; the current park website provides contact and location information."
+    },
+    {
+      "id": "travel-guide-j-and-a-s-cafe-roadrunner-angel-fire-colfax",
+      "remove_urls": ["https://angelfirechamber.org/business/j-a-fun-bakery-cafe/"],
+      "replacement_website": "",
+      "add_source_urls": [],
+      "reason": "The entity-specific chamber profile renders a 404 and no current first-party page was confirmed; category routes remain available."
+    },
+    {
+      "id": "travel-guide-monte-verde-rv-park-and-campground-angel-fire-colfax",
+      "remove_urls": ["https://angelfirechamber.org/business/monte-verde-rv-park-campground/"],
+      "replacement_website": "https://monteverderv.com/",
+      "add_source_urls": ["https://www.angelfirenm.gov/251/Monte-Verde-RV-Park-Campground"],
+      "reason": "The retired chamber profile renders a 404; the business site and municipal visitor page are current."
+    },
+    {
+      "id": "travel-guide-nuckolls-brewing-angel-fire-colfax",
+      "remove_urls": ["https://angelfirechamber.org/business/nuckolls-brewing-company/"],
+      "replacement_website": "https://www.nuckollsbrewing.com/",
+      "add_source_urls": [],
+      "reason": "The retired chamber profile renders a 404; the brewery's current website includes its Angel Fire location."
+    },
+    {
+      "id": "travel-guide-taos-lifestyle-angel-fire-colfax",
+      "remove_urls": ["https://angelfirechamber.org/business/taos-lifestyle/"],
+      "replacement_website": "https://www.taoslifestyle.com/",
+      "add_source_urls": [],
+      "reason": "The retired chamber profile renders a 404; the current store website provides location and contact information."
+    },
+    {
+      "id": "taty-at-the-bump-colfax-food-beverage",
+      "remove_urls": ["https://angelfirechamber.org/business/taty-the-bump/"],
+      "replacement_website": "https://www.facebook.com/taty.bistro",
+      "add_source_urls": [],
+      "reason": "The retired chamber profile renders a 404; the existing business social page remains the closest direct contact path."
+    },
+    {
+      "id": "walsenburg-studio-huerfano-art-studio-gallery",
+      "remove_urls": ["https://www.walsenburgstudio.com/"],
+      "replacement_website": "https://spanishpeakscountry.com/business-directory/listing/walsenburg-studio",
+      "add_source_urls": [],
+      "reason": "The former domain now renders an unrelated German retail site; the local tourism profile remains entity-specific."
+    }
+  ]
+}

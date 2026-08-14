@@ -26,6 +26,13 @@ class ResourceDiscoveryRegistryTests(unittest.TestCase):
         self.assertTrue(all(item["category"] in group_ids for item in sources))
         self.assertTrue(all(str(item["url"]).startswith("https://") for item in sources))
 
+    def test_artist_routes_are_numerous_and_user_labeled(self) -> None:
+        sources = json.loads((ROOT / "data" / "resource-discovery-sources.json").read_text(encoding="utf-8"))["sources"]
+        artist_sources = [item for item in sources if item["category"] == "artists-creative-opportunities"]
+        self.assertGreaterEqual(len(artist_sources), 15)
+        self.assertTrue(all(item.get("resource_type") for item in artist_sources))
+        self.assertTrue(all(item.get("action_label") for item in artist_sources))
+
     def test_candidate_extractor_uses_whole_phrases_and_ignores_scripts(self) -> None:
         markup = """
         <html><body>
@@ -159,7 +166,7 @@ class GuideTaxonomyTests(unittest.TestCase):
             }
         )
         self.assertEqual(enriched["physical_ad_candidate"], "true")
-        self.assertEqual(enriched["physical_promotion_category"], "Bookstores and pharmacies")
+        self.assertEqual(enriched["physical_promotion_category"], "Local businesses and services")
         self.assertIn("Bookstore", enriched["public_keywords"])
         self.assertIn("physical promotion location", enriched["physical_promotion_keywords"])
         self.assertIn("bulletin boards", enriched["physical_promotion_keywords"])
@@ -183,7 +190,7 @@ class GuideTaxonomyTests(unittest.TestCase):
                     "public_listing_type": "Health & wellness",
                 }
             ),
-            "Personal service and auto shops",
+            "Local businesses and services",
         )
 
     def test_duplicate_directory_routes_on_same_host_render_once(self) -> None:
@@ -203,6 +210,14 @@ class GuideTaxonomyTests(unittest.TestCase):
         self.assertIn('id="promote-county-filter"', promote)
         self.assertIn('id="physical-location-list"', physical)
         self.assertIn('id="physical-category-filter"', physical)
+        self.assertEqual(physical.count("Show matching contacts"), 4)
+        for category in (
+            "Community and public spaces",
+            "Arts and event spaces",
+            "Local businesses and services",
+            "Visitor and travel locations",
+        ):
+            self.assertIn(category, physical)
         self.assertNotIn("Ask first", physical)
 
     def test_discovery_shortlist_balances_requested_categories(self) -> None:

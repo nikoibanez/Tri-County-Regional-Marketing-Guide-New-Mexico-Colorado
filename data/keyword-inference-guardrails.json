@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-08-13",
+  "description": "Prevents source-page navigation, host branding, nearby listings, and legal-status language from becoming misleading public search keywords. These rules apply only to automated source-page inferences; canonical editor-reviewed keywords remain unchanged.",
+  "global_rules": {
+    "agriculture": {
+      "required_canonical_phrases": [
+        "agriculture",
+        "farm",
+        "farmer",
+        "farming",
+        "ranching",
+        "livestock"
+      ],
+      "reason": "Do not classify tours, lodging, or recreation as agriculture merely because a page mentions a ranch."
+    },
+    "chamber of commerce": {
+      "required_canonical_phrases": [
+        "chamber",
+        "chamber of commerce"
+      ],
+      "reason": "Directory host branding must not make every chamber member look like a chamber."
+    },
+    "library": {
+      "required_canonical_phrases": [
+        "library",
+        "libraries"
+      ],
+      "reason": "A shop or program hosted on a library page is not automatically a library."
+    },
+    "main street": {
+      "required_canonical_phrases": [
+        "main street",
+        "mainstreet",
+        "downtown development"
+      ],
+      "reason": "Street addresses and presenter names must not imply participation in a Main Street program."
+    },
+    "nonprofit": {
+      "required_canonical_phrases": [
+        "nonprofit",
+        "non-profit",
+        "501(c)(3)",
+        "public charity"
+      ],
+      "reason": "Legal or tax status requires an editor-reviewed canonical signal rather than contextual inference."
+    },
+    "visitor center": {
+      "required_canonical_phrases": [
+        "visitor center",
+        "visitors center",
+        "tourist information center"
+      ],
+      "reason": "Tourism-page context must not turn another organization into a visitor center."
+    }
+  },
+  "listing_rules": {
+    "travel-guide-bobcat-pass-wilderness-adventures-angel-fire-colfax": {
+      "blocked_source_keywords": [
+        "agriculture"
+      ],
+      "reason": "The public page describes recreation and ranch activities; agriculture is not a useful directory route for this listing."
+    },
+    "travel-guide-music-from-angel-fire-angel-fire-colfax": {
+      "blocked_source_keywords": [
+        "chamber of commerce"
+      ],
+      "reason": "Angel Fire Chamber is the profile host, not Music from Angel Fire's organization type."
+    },
+    "travel-guide-mesalands-cc-dinosaur-museum-raton-colfax": {
+      "blocked_source_keywords": [
+        "outdoor recreation"
+      ],
+      "reason": "The tourism template supplies recreation language; the listing itself is a museum and educational attraction."
+    },
+    "the-shuler-theater-colfax-performing-arts-venue": {
+      "blocked_source_keywords": [
+        "main street"
+      ],
+      "reason": "Main Street Live is a presenter name on the events page, not evidence that the theater is a Main Street program."
+    },
+    "dewitt-enterprises-huerfano-local-maker-vendor": {
+      "blocked_source_keywords": [
+        "artist",
+        "maker",
+        "writing"
+      ],
+      "reason": "The current profile describes a historical and collectible bookseller; surrounding maker and author language describes inventory or page context."
+    },
+    "huerfano-heritage-center-huerfano-arts-culture": {
+      "blocked_source_keywords": [
+        "museum",
+        "newspaper",
+        "visitor center"
+      ],
+      "reason": "The center is an archive and research facility; navigation and collection descriptions must not reclassify it as a museum, newspaper, or visitor center."
+    },
+    "travel-guide-books-and-more-trinidad-las-animas": {
+      "blocked_source_keywords": [
+        "library"
+      ],
+      "reason": "Books & More is a used bookstore associated with the Friends of the Library, not the library itself."
+    }
+  }
+}

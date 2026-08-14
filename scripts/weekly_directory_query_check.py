@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import ast
 import csv
 import hashlib
 import json
@@ -282,6 +283,33 @@ def compact_key(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", normalize_name(value))
 
 
+def parse_multi_values(value: object) -> list[str]:
+    raw = clean_text(str(value or ""))
+    if not raw:
+        return []
+    if raw.startswith("[") and raw.endswith("]"):
+        try:
+            parsed = ast.literal_eval(raw)
+        except (SyntaxError, ValueError):
+            parsed = None
+        if isinstance(parsed, (list, tuple, set)):
+            return [clean_text(str(item)) for item in parsed if clean_text(str(item))]
+    return [clean_text(part) for part in raw.split(";") if clean_text(part)]
+
+
+def normalize_url_key(value: object) -> str:
+    raw = clean_text(str(value or ""))
+    if not raw:
+        return ""
+    parsed = urlparse(raw)
+    if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+        return ""
+    host = parsed.netloc.casefold().removeprefix("www.")
+    path = re.sub(r"/+", "/", parsed.path or "/").rstrip("/") or "/"
+    query = f"?{parsed.query}" if parsed.query else ""
+    return f"{host}{path}{query}"
+
+
 def stable_id(*parts: str) -> str:
     digest = hashlib.sha1("|".join(parts).encode("utf-8")).hexdigest()[:10]
     slug = re.sub(r"[^a-z0-9]+", "-", parts[0].lower()).strip("-")[:50] or "candidate"
@@ -514,16 +542,48 @@ def load_existing_names(paths: list[Path]) -> dict:
                 raw_name = clean_text(row.get("name") or row.get("resource_name") or "")
                 if not raw_name:
                     continue
-                key = normalize_name(raw_name)
-                compact = compact_key(raw_name)
-                if key:
-                    names[key].add(raw_name)
-                if compact:
-                    names[compact].add(raw_name)
+                for candidate_name in [raw_name, *parse_multi_values(row.get("aliases"))]:
+                    key = normalize_name(candidate_name)
+                    compact = compact_key(candidate_name)
+                    if key:
+                        names[key].add(raw_name)
+                    if compact:
+                        names[compact].add(raw_name)
     return names
 
 
-def match_existing(candidate_name: str, existing_names: dict) -> dict:
+def load_existing_urls(paths: list[Path]) -> dict[str, set[str]]:
+    urls: dict[str, set[str]] = defaultdict(set)
+    for path in paths:
+        if not path.exists():
+            continue
+        with path.open(newline="", encoding="utf-8-sig") as handle:
+            reader = csv.DictReader(handle)
+            for row in reader:
+                raw_name = clean_text(row.get("name") or row.get("resource_name") or "")
+                if not raw_name:
+                    continue
+                for field in ("website", "listing_url", "source_url", "source_urls"):
+                    for raw_url in parse_multi_values(row.get(field)):
+                        key = normalize_url_key(raw_url)
+                        if key:
+                            urls[key].add(raw_name)
+    return urls
+
+
+def match_existing(
+    candidate_name: str,
+    existing_names: dict,
+    candidate_url: str = "",
+    existing_urls: dict[str, set[str]] | None = None,
+) -> dict:
+    url_key = normalize_url_key(candidate_url)
+    if url_key and existing_urls and url_key in existing_urls:
+        return {
+            "status": "already_in_guide",
+            "matched_name": sorted(existing_urls[url_key])[0],
+            "match_type": "exact_url",
+        }
     key = normalize_name(candidate_name)
     compact = compact_key(candidate_name)
     if key in existing_names:
@@ -543,7 +603,13 @@ def same_site(source_url: str, target_url: str) -> bool:
     return bool(source_host and target_host and source_host == target_host)
 
 
-def extract_candidates(source: dict, page_url: str, html: str, existing_names: dict) -> list[dict]:
+def extract_candidates(
+    source: dict,
+    page_url: str,
+    html: str,
+    existing_names: dict,
+    existing_urls: dict[str, set[str]] | None = None,
+) -> list[dict]:
     parser = DirectoryHTMLParser(page_url)
     parser.feed(html)
     candidates: dict[str, dict] = {}
@@ -557,7 +623,7 @@ def extract_candidates(source: dict, page_url: str, html: str, existing_names: d
         key = normalize_name(name)
         if not key:
             return
-        match = match_existing(name, existing_names)
+        match = match_existing(name, existing_names, url, existing_urls)
         existing = candidates.get(key)
         candidate = {
             "id": stable_id(name, url, source["id"]),
@@ -810,6 +876,7 @@ def run_check(args: argparse.Namespace) -> dict:
     config = json.loads(args.config.read_text(encoding="utf-8"))
     directory_files = args.directory_file or DEFAULT_DIRECTORY_FILES
     existing_names = load_existing_names(directory_files)
+    existing_urls = load_existing_urls(directory_files)
     results = []
 
     for source in config.get("sources", []):
@@ -830,7 +897,17 @@ def run_check(args: argparse.Namespace) -> dict:
             else:
                 fetched = fetch_url(url, args.timeout)
                 fetch = {key: value for key, value in fetched.items() if key != "html"}
-                candidates = extract_candidates(source, fetched.get("final_url") or url, fetched.get("html", ""), existing_names) if fetched["ok"] else []
+                candidates = (
+                    extract_candidates(
+                        source,
+                        fetched.get("final_url") or url,
+                        fetched.get("html", ""),
+                        existing_names,
+                        existing_urls,
+                    )
+                    if fetched["ok"]
+                    else []
+                )
             source_result["pages"].append({"url": url, "fetch": fetch, "candidates": candidates})
         results.append(source_result)
 

@@ -1,23 +1,23 @@
 # Directory Online Connection Review
 
-Generated: 2026-08-07T16:24:05.463900+00:00
+Generated: 2026-08-13T19:25:34.381853+00:00
 
 This review distinguishes a first-party website from a hosted directory, tourism page, social profile, email, phone, street address, or missing contact route. An HTTP response does not prove that an organization is active or that page content is current.
 
 ## Summary
 
-- Published directory entries reviewed: 1355
-- First-party website candidates: 178
-- Live first-party business links eligible for the public animation: 112
-- Live direct websites: 151
-- Direct website links needing a normal-browser check: 27
-- Live hosted profiles or directory pages: 353
-- Hosted links needing a normal-browser check: 691
+- Published directory entries reviewed: 1362
+- First-party website candidates: 195
+- Live first-party business links eligible for the public animation: 128
+- Live direct websites: 167
+- Direct website links needing a normal-browser check: 28
+- Live hosted profiles or directory pages: 333
+- Hosted links needing a normal-browser check: 702
 - Entries with contact details but no URL: 74
-- Entries with no online or direct contact path: 59
-- Unique URLs checked: 571
-- Confirmed broken URLs: 7
-- Script-access limits such as 403 or TLS errors: 124
+- Entries with no online or direct contact path: 58
+- Unique URLs checked: 590
+- Confirmed broken URLs: 0
+- Script-access limits such as 403 or TLS errors: 125
 
 The companion CSV contains all entries and their assigned connection group.
 
@@ -108,7 +108,6 @@ The companion CSV contains all entries and their assigned connection group.
 - CSU Pueblo at Spanish Peaks - Walsenburg, Huerfano (no contact path)
 - Huerfano County Courthouse - Walsenburg, Huerfano (address)
 - Huerfano County Government building - Walsenburg, Huerfano (address)
-- Huerfano Heritage Center - Walsenburg, Huerfano (no contact path)
 - KFEZ 101.3 / Gnarly 101.3 - Walsenburg, Huerfano (no contact path)
 - Spanish Peaks Regional Airport - Walsenburg, Huerfano (no contact path)
 - Tourist Information Center at Heritage Park - Walsenburg, Huerfano (no contact path)

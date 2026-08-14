@@ -67,6 +67,7 @@ This repo includes a no-secret maintenance system. Deterministic scripts build, 
 - `docs/weekly-listing-keyword-sweep.md` - keyword taxonomy, rotation, review, and failure-retention rules.
 - `docs/resource-discovery-automation.md` - source categories, review boundary, and local commands for broader resource discovery.
 - `docs/maintenance-automation.md` - schedules, review boundaries, and account settings for the no-secret maintenance system.
+- `docs/canonical-integration-workflow.md` - shared paths, page skeleton, worktree rules, and cross-task reconciliation policy.
 - `docs/agentic-update-methodology.md` - governance and operating model.
 - `docs/netlify-github-deploy.md` - Netlify-from-GitHub deployment path.
 - `docs/openai-source-audit-summarization.md` - first OpenAI-backed feature plan.
@@ -86,4 +87,4 @@ Every generated page includes a small client-side "Ask directory" assistant. It 
 
 ## Music Bar
 
-Every generated page includes a compact music bar with play/stop, track choice, progress, and volume controls. The tracks are public-domain regional field recordings from the Library of Congress Juan B. Rael Collection.
+The Arts & Culture page includes a compact music bar with play/stop, track choice, progress, and volume controls. The tracks are public-domain regional field recordings from the Library of Congress Juan B. Rael Collection.
