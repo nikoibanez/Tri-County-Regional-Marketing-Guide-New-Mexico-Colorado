@@ -561,12 +561,16 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertTrue(any("Free/open-source software" in item["access_types"] for item in guide_builder.PROMOTION_TOOLS))
         self.assertTrue(any(any("nonprofit" in label.casefold() for label in item["access_types"]) for item in guide_builder.PROMOTION_TOOLS))
 
-        page = guide_builder.templates_page()
-        self.assertIn('id="free-tools"', page)
+        page = guide_builder.free_tools_page()
+        self.assertIn('id="free-tools-directory"', page)
         self.assertIn("data-tool-filters", page)
         self.assertIn("data-tool-card", page)
         self.assertIn("TechSoup", page)
         self.assertIn("Open-source software", page)
+        self.assertIn("General free tools", page)
+        self.assertIn("Nonprofit discounts &amp; donations", page)
+        self.assertIn("Free advising &amp; public support", page)
+        self.assertNotIn("data-tool-filters", guide_builder.templates_page())
 
         shell = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
         self.assertIn("data-site-root=", shell)
@@ -574,7 +578,7 @@ class SiteSmokeTests(unittest.TestCase):
         route_paths = {item["path"] for item in routes}
         self.assertIn("network/", route_paths)
         self.assertIn("resources/funding/", route_paths)
-        self.assertIn("templates/#free-tools", route_paths)
+        self.assertIn("tools/free-discounted/", route_paths)
         self.assertTrue(any(path.startswith("promote/?county=Colfax") for path in route_paths))
 
         with tempfile.TemporaryDirectory() as folder:

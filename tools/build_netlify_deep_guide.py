@@ -172,6 +172,7 @@ ACTIVE_PATHS = {
     "las-animas": "counties/las-animas/",
     "huerfano": "counties/huerfano/",
     "templates": "templates/",
+    "free-tools": "tools/free-discounted/",
     "submit": "submit/",
     "appendix": "appendix/",
     "about": "about/",
@@ -199,6 +200,7 @@ HERO_ART_BY_ACTIVE = {
     "las-animas": "hero-fishers-canyon.svg",
     "huerfano": "hero-spanish-peaks.svg",
     "templates": "hero-huerfano-valley.svg",
+    "free-tools": "hero-plains-valley.svg",
     "submit": "hero-canyon-submit.svg",
     "appendix": "hero-archive-ridges.svg",
     "about": "hero-raton-mesa.svg",
@@ -1784,6 +1786,7 @@ ROUTE_LABELS = {
     "las-animas": "Las Animas County",
     "huerfano": "Huerfano County",
     "templates": "Templates",
+    "free-tools": "Free & Discounted Tools",
     "submit": "Submit",
     "appendix": "Appendix",
     "about": "About",
@@ -2160,11 +2163,18 @@ BASE_SITE_ROUTES = [
         "keywords": ["Huerfano", "Walsenburg", "La Veta", "Gardner", "Cuchara"],
     },
     {
-        "title": "Message templates and free tools",
-        "path": "templates/#free-tools",
+        "title": "Message templates",
+        "path": "templates/",
         "category": "Tools",
-        "summary": "Use copy-ready outreach templates and search free, open-source, freemium, and nonprofit software or services.",
-        "keywords": ["template", "message", "email", "free software", "free tools", "nonprofit software", "flyer maker", "form builder"],
+        "summary": "Use copy-ready outreach language for directories, calendars, partners, media, and listing corrections.",
+        "keywords": ["template", "message", "email", "calendar submission", "media pitch", "partner request"],
+    },
+    {
+        "title": "Free and discounted tools",
+        "path": "tools/free-discounted/",
+        "category": "Tools",
+        "summary": "Compare general free tools, nonprofit discounts and donated services, and free advising or public support.",
+        "keywords": ["free software", "free tools", "nonprofit discount", "donated software", "free advising", "open source", "forms", "email"],
     },
     {
         "title": "Submit an update",
@@ -3723,13 +3733,6 @@ def copy_assets() -> None:
             shutil.rmtree(audio_dest)
         shutil.copytree(audio_src, audio_dest)
 
-    infographics_src = ROOT / "assets" / "infographics"
-    if infographics_src.exists():
-        infographics_dest = ASSET_OUT / "infographics"
-        if infographics_dest.exists():
-            shutil.rmtree(infographics_dest)
-        shutil.copytree(infographics_src, infographics_dest)
-
     if SOURCE_CSV.exists():
         shutil.copy2(SOURCE_CSV, DATA_OUT / "tri_county_persona_resources.csv")
     if SOURCE_JSON.exists():
@@ -4164,11 +4167,26 @@ def tools_catalog() -> list[dict]:
     return [*PROMOTION_TOOLS, *free_support_tool_records()]
 
 
+def tool_offer_groups(item: dict) -> list[str]:
+    access_types = [clean_text(value).casefold() for value in item.get("access_types") or [] if clean_text(value)]
+    item_format = clean_text(item.get("format")).casefold()
+    is_support = clean_text(item.get("id")).startswith("support-") or "support" in item_format or "advising" in item_format
+    groups = []
+    if not is_support and any("free" in label and "nonprofit" not in label for label in access_types):
+        groups.append("general-free")
+    if any("nonprofit" in label for label in access_types):
+        groups.append("nonprofit")
+    if is_support:
+        groups.append("support")
+    return groups
+
+
 def promotion_tool_cards(items: list[dict] | None = None) -> str:
     cards = []
     for item in items if items is not None else tools_catalog():
         access_types = [clean_text(value) for value in item.get("access_types") or [] if clean_text(value)]
         keywords = [clean_text(value) for value in item.get("keywords") or [] if clean_text(value)]
+        offer_groups = tool_offer_groups(item)
         badges = "".join(
             f'<span class="tool-pill">{html_escape(label)}</span>'
             for label in [item.get("category"), item.get("format"), *access_types]
@@ -4202,6 +4220,7 @@ def promotion_tool_cards(items: list[dict] | None = None) -> str:
             f"""
             <article class="tool-card" data-tool-card data-tool-category="{html_escape(item.get('category'))}"
               data-tool-format="{html_escape(item.get('format'))}" data-tool-access="{html_escape(' '.join(access_types))}"
+              data-tool-offers="{html_escape(' '.join(offer_groups))}"
               data-tool-search="{html_escape(searchable)}">
               <div class="tool-card__meta">{badges}</div>
               <h3><a href="{html_escape(item.get('url'))}" target="_blank" rel="noreferrer">{html_escape(item.get('name'))}</a></h3>
@@ -4225,7 +4244,7 @@ def promotion_tool_filters() -> str:
         for category in categories
     )
     return f"""
-    <form class="tool-filters" data-tool-filters role="search" aria-label="Filter free services and software">
+    <form class="tool-filters" data-tool-filters role="search" aria-label="Filter free and discounted tools and services">
       <label class="tool-filter-search">Search services and tools
         <input type="search" data-tool-query autocomplete="off" placeholder="Try advising, grants, flyer, CRM, forms, nonprofit...">
       </label>
@@ -4235,14 +4254,20 @@ def promotion_tool_filters() -> str:
           {category_options}
         </select>
       </label>
-      <label>Access or format
-        <select data-tool-access>
-          <option value="All">All access types</option>
-          <option value="nonprofit">Nonprofit offers</option>
+      <label>Offer
+        <select data-tool-offer>
+          <option value="All">All offers</option>
+          <option value="general-free">General free tools</option>
+          <option value="nonprofit">Nonprofit discounts &amp; donations</option>
+          <option value="support">Free advising &amp; public support</option>
+        </select>
+      </label>
+      <label>Format
+        <select data-tool-format-filter>
+          <option value="All">All formats</option>
           <option value="open-source">Open-source software</option>
           <option value="desktop">Desktop software</option>
           <option value="web">Web apps and services</option>
-          <option value="support">Advising and support services</option>
         </select>
       </label>
       <button class="button button-soft" type="reset">Clear</button>
@@ -4750,6 +4775,7 @@ def page_shell(
         ("Regional channels", "regional-channels/index.html", "regional-channels"),
     ]
     tools_nav_links = [
+        ("Free & discounted tools", "tools/free-discounted/index.html", "free-tools"),
         ("Physical ad finder", "posting/index.html", "posting"),
         ("Message templates", "templates/index.html", "templates"),
         ("Appendix", "appendix/index.html", "appendix"),
@@ -4827,6 +4853,7 @@ def page_shell(
                 ("Directory", "network/index.html"),
                 ("Funding", route_href(ACTIVE_PATHS["funding"])),
                 ("Arts & Culture", route_href(ACTIVE_PATHS["arts-culture"])),
+                ("Free & discounted tools", "tools/free-discounted/index.html"),
                 ("Appendix", "appendix/index.html"),
             ],
         ),
@@ -5312,7 +5339,6 @@ def home_page(summary: dict) -> str:
 
 
 def plan_page() -> str:
-    tool_cards = promotion_tool_cards([item for item in PROMOTION_TOOLS if item.get("featured")])
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">Plan Your Growth</p>
@@ -5344,16 +5370,8 @@ def plan_page() -> str:
       <div class="section-actions">
         <a class="button button-primary" href="../templates/index.html">Use copy-ready templates</a>
         <a class="button button-soft" href="../regional-channels/index.html">Find places to send them</a>
+        <a class="button button-soft" href="../tools/free-discounted/index.html">Find free &amp; discounted tools</a>
       </div>
-    </section>
-    <section class="section tinted">
-      <div class="section-heading">
-        <p class="eyebrow">Free and freemium tools</p>
-        <h2>Build the packet with tools people already recognize.</h2>
-        <p class="section-note">Plan limits change. Treat these as popular online starting points and check current free-tier limits before relying on them for a campaign.</p>
-      </div>
-      <div class="tool-grid">{tool_cards}</div>
-      <div class="section-actions"><a class="button button-soft" href="../templates/index.html#free-tools">Search all free and nonprofit tools</a></div>
     </section>
     <section class="section">
       <div class="section-heading">
@@ -6655,7 +6673,6 @@ def templates_page() -> str:
         """
         for title, purpose, personalize, body in templates
     )
-    tools = promotion_tool_cards()
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">Templates</p>
@@ -6681,18 +6698,8 @@ def templates_page() -> str:
       </div>
       <div class="template-grid">{items}</div>
     </section>
-    <section class="section" id="free-tools">
-      <div class="section-heading">
-        <p class="eyebrow">Free services and software</p>
-        <h2>Find practical help, build the packet, or run outreach without unnecessary cost.</h2>
-        <p class="section-note">Search no-cost advising, public support services, free plans, open-source software, and nonprofit offers. Check current access rules and plan limits on the provider's official page before relying on a service.</p>
-      </div>
-      {promotion_tool_filters()}
-      <div class="tool-grid" data-tool-grid>{tools}</div>
-      <p class="empty-state" data-tool-empty hidden>No tools match those filters. Clear a filter or try a broader term.</p>
-      <div class="section-actions"><button class="button button-soft" type="button" data-tool-more hidden>Show more tools</button></div>
-    </section>
     {next_action_block(1, [
+        ("Find free and discounted tools", "tools/free-discounted/"),
         ("Find places to send outreach packets", "amplifiers/"),
         ("Search directories and local entries", "network/"),
         ("Submit a correction or new channel", "submit/"),
@@ -6705,6 +6712,71 @@ def templates_page() -> str:
         "templates",
         content,
         depth=1,
+    )
+
+
+def free_tools_page() -> str:
+    catalog = tools_catalog()
+    offer_counts = Counter(
+        group
+        for item in catalog
+        for group in tool_offer_groups(item)
+    )
+    tools = promotion_tool_cards(catalog)
+    content = f"""
+    <section class="page-hero">
+      <p class="eyebrow">Free &amp; discounted tools</p>
+      <h1>Find free tools, nonprofit offers, and no-cost support.</h1>
+      <p class="lede">Start with the kind of access you qualify for. Some tools do not require nonprofit status, some offers do, and some services are provided through public or partner-funded business support.</p>
+    </section>
+    <section class="section tool-offer-overview" aria-labelledby="tool-offer-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Choose by access</p>
+        <h2 id="tool-offer-heading">Free does not mean the same thing on every provider page.</h2>
+        <p class="section-note">Use the three starting points below to avoid mixing general free plans with nonprofit-only benefits. Confirm current limits and eligibility before moving contacts, files, or project budgets into a service.</p>
+      </div>
+      <div class="tool-offer-grid">
+        <article class="tool-offer-card">
+          <h3>General free tools</h3>
+          <p>Free plans, free services, and open-source software that do not require nonprofit status. Other provider rules may still apply.</p>
+          <button class="button button-soft" type="button" data-tool-preset="general-free" aria-controls="free-tools-directory" aria-pressed="false">Show {offer_counts['general-free']} general free resources</button>
+        </article>
+        <article class="tool-offer-card">
+          <h3>Nonprofit discounts &amp; donations</h3>
+          <p>Free nonprofit programs, donated technology, membership offers, and discounted plans that may require verification.</p>
+          <button class="button button-soft" type="button" data-tool-preset="nonprofit" aria-controls="free-tools-directory" aria-pressed="false">Show {offer_counts['nonprofit']} nonprofit offers</button>
+        </article>
+        <article class="tool-offer-card">
+          <h3>Free advising &amp; public support</h3>
+          <p>No-cost mentoring, counseling, research access, public directories, technical help, and regional support programs.</p>
+          <button class="button button-soft" type="button" data-tool-preset="support" aria-controls="free-tools-directory" aria-pressed="false">Show {offer_counts['support']} support resources</button>
+        </article>
+      </div>
+    </section>
+    <section class="section tinted" id="free-tools-directory" aria-labelledby="free-tools-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Search all tools &amp; support</p>
+        <h2 id="free-tools-heading">Compare the practical options.</h2>
+        <p class="section-note">Open the provider name for the main service. When a separate eligibility or offer page exists, the card links to that page too.</p>
+      </div>
+      {promotion_tool_filters()}
+      <div class="tool-grid" data-tool-grid>{tools}</div>
+      <p class="empty-state" data-tool-empty hidden>No tools match those filters. Clear a filter or try a broader term.</p>
+      <div class="section-actions"><button class="button button-soft" type="button" data-tool-more hidden>Show more tools</button></div>
+    </section>
+    {next_action_block(2, [
+        ("Use copy-ready outreach templates", "templates/"),
+        ("Search grants and funding support", "resources/funding/"),
+        ("Search local directories and contacts", "network/"),
+        ("Suggest a tool or correct an offer", "submit/"),
+    ])}
+    """
+    return page_shell(
+        "Free & Discounted Tools for Businesses and Nonprofits | Stateline Tri-County Guide",
+        "Search free software, nonprofit discounts and donated services, open-source tools, and no-cost business support for organizations across the tri-county region.",
+        "free-tools",
+        content,
+        depth=2,
     )
 
 
@@ -7515,7 +7587,7 @@ def write_static_assets() -> None:
     .tool-grid > * { min-width: 0; }
     .tool-filters {
       display: grid;
-      grid-template-columns: minmax(240px, 1.5fr) minmax(180px, 0.8fr) minmax(190px, 0.9fr) auto;
+      grid-template-columns: minmax(220px, 1.35fr) repeat(3, minmax(155px, 0.78fr)) auto;
       gap: 12px;
       align-items: end;
       margin: 0 0 18px;
@@ -7528,6 +7600,26 @@ def write_static_assets() -> None:
     .tool-filters input, .tool-filters select { width: 100%; min-width: 0; min-height: 44px; }
     .tool-filters .button { min-height: 44px; }
     .tool-filter-status { grid-column: 1 / -1; min-height: 1.2em; margin: 0; color: var(--ink-soft); font-size: 0.86rem; }
+    .tool-offer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 18px;
+      border-block: 1px solid var(--line);
+    }
+    .tool-offer-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 20px;
+      border-right: 1px solid var(--line);
+    }
+    .tool-offer-card:last-child { border-right: 0; }
+    .tool-offer-card h3, .tool-offer-card p { margin: 0; }
+    .tool-offer-card p { color: var(--ink-soft); }
+    .tool-offer-card .button { margin-top: auto; }
+    .tool-offer-card .button[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: #fff; }
     .tool-card { display: flex; min-height: 310px; flex-direction: column; overflow-wrap: anywhere; }
     .tool-card[hidden] { display: none; }
     .tool-card__meta { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
@@ -9053,6 +9145,9 @@ def write_static_assets() -> None:
       .county-promote-grid { grid-template-columns: 1fr; }
       .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .tool-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .tool-offer-grid { grid-template-columns: 1fr; }
+      .tool-offer-card { border-right: 0; border-bottom: 1px solid var(--line); }
+      .tool-offer-card:last-child { border-bottom: 0; }
     }
     @media (max-width: 640px) {
       .site-watermark { bottom: max(9vh, env(safe-area-inset-bottom)); padding-inline: 12px; font-size: 0.9rem; }
@@ -9072,6 +9167,8 @@ def write_static_assets() -> None:
       .tool-filters { grid-template-columns: 1fr; gap: 8px; padding: 12px; }
       .tool-filter-status { grid-column: 1; }
       .tool-card { min-height: 0; padding: 13px; }
+      .tool-offer-card { padding: 16px 0; }
+      .tool-offer-card .button { width: 100%; justify-content: center; }
       .promote-route-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
       .promote-route-card { min-height: 138px; padding: 12px; }
       .promote-route-card h3 { font-size: 0.98rem; }
@@ -10529,34 +10626,42 @@ def write_static_assets() -> None:
       if (!form || !grid) return;
       const query = form.querySelector("[data-tool-query]");
       const category = form.querySelector("[data-tool-category]");
-      const access = form.querySelector("[data-tool-access]");
+      const offer = form.querySelector("[data-tool-offer]");
+      const format = form.querySelector("[data-tool-format-filter]");
       const status = form.querySelector("[data-tool-status]");
       const empty = document.querySelector("[data-tool-empty]");
       const more = document.querySelector("[data-tool-more]");
+      const presets = [...document.querySelectorAll("[data-tool-preset]")];
       const cards = [...grid.querySelectorAll("[data-tool-card]")];
       let compact = window.matchMedia("(max-width: 640px)").matches;
       let visibleLimit = compact ? 6 : Number.POSITIVE_INFINITY;
 
-      function matchesAccess(card, value) {
+      function matchesOffer(card, value) {
+        if (!value || value === "all") return true;
+        const offerGroups = String(card.dataset.toolOffers || "").toLowerCase().split(/\s+/);
+        return offerGroups.includes(value);
+      }
+
+      function matchesFormat(card, value) {
         if (!value || value === "all") return true;
         const accessText = String(card.dataset.toolAccess || "").toLowerCase();
         const formatText = String(card.dataset.toolFormat || "").toLowerCase();
-        if (value === "nonprofit") return accessText.includes("nonprofit");
         if (value === "open-source") return accessText.includes("open-source");
         if (value === "desktop") return formatText.includes("desktop");
         if (value === "web") return formatText.includes("web");
-        if (value === "support") return formatText.includes("support") || formatText.includes("advising");
         return true;
       }
 
       function render() {
         const terms = normalizedSearchTerms(query?.value || "");
         const selectedCategory = String(category?.value || "All");
-        const selectedAccess = String(access?.value || "All").toLowerCase();
+        const selectedOffer = String(offer?.value || "All").toLowerCase();
+        const selectedFormat = String(format?.value || "All").toLowerCase();
         const matches = cards.filter(card => {
           const searchText = String(card.dataset.toolSearch || "").toLowerCase();
           const categoryMatch = selectedCategory === "All" || card.dataset.toolCategory === selectedCategory;
-          return categoryMatch && matchesAccess(card, selectedAccess) && terms.every(term => searchText.includes(term));
+          return categoryMatch && matchesOffer(card, selectedOffer) && matchesFormat(card, selectedFormat)
+            && terms.every(term => searchText.includes(term));
         });
         const visible = matches.slice(0, visibleLimit);
         const visibleSet = new Set(visible);
@@ -10572,6 +10677,9 @@ def write_static_assets() -> None:
           more.hidden = remaining === 0;
           more.textContent = remaining ? `Show ${Math.min(6, remaining)} more tools` : "All tools shown";
         }
+        presets.forEach(button => {
+          button.setAttribute("aria-pressed", String(button.dataset.toolPreset === selectedOffer));
+        });
       }
 
       form.addEventListener("input", () => {
@@ -10587,6 +10695,15 @@ def write_static_assets() -> None:
           visibleLimit = compact ? 6 : Number.POSITIVE_INFINITY;
           render();
         }, 0);
+      });
+      presets.forEach(button => {
+        button.addEventListener("click", () => {
+          if (offer) offer.value = button.dataset.toolPreset || "All";
+          visibleLimit = compact ? 6 : Number.POSITIVE_INFINITY;
+          render();
+          form.scrollIntoView({ block: "start", behavior: "auto" });
+          query?.focus({ preventScroll: true });
+        });
       });
       more && more.addEventListener("click", () => {
         visibleLimit += 6;
@@ -11606,7 +11723,7 @@ Before public launch, open the deployed Netlify preview and check:
 
 def write_pages(rows: list[dict], summary: dict) -> None:
     (OUT / "index.html").write_text(home_page(summary), encoding="utf-8")
-    for folder in ["plan", "amplifiers", "promote", "network", "posting", "region", "templates", "submit", "appendix", "about", "resources/funding", "resources/arts-culture"]:
+    for folder in ["plan", "amplifiers", "promote", "network", "posting", "region", "templates", "tools/free-discounted", "submit", "appendix", "about", "resources/funding", "resources/arts-culture"]:
         (OUT / folder).mkdir(parents=True, exist_ok=True)
     for item in TASK_PAGE_DEFS:
         path = OUT / ACTIVE_PATHS[item["active"]]
@@ -11620,6 +11737,7 @@ def write_pages(rows: list[dict], summary: dict) -> None:
     (OUT / "posting" / "index.html").write_text(posting_page(rows), encoding="utf-8")
     (OUT / "region" / "index.html").write_text(region_page(summary), encoding="utf-8")
     (OUT / "templates" / "index.html").write_text(templates_page(), encoding="utf-8")
+    (OUT / "tools" / "free-discounted" / "index.html").write_text(free_tools_page(), encoding="utf-8")
     (OUT / "submit" / "index.html").write_text(submit_page(), encoding="utf-8")
     (OUT / "appendix" / "index.html").write_text(appendix_page(rows), encoding="utf-8")
     (OUT / "about" / "index.html").write_text(about_page(summary), encoding="utf-8")

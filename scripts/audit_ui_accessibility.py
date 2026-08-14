@@ -23,7 +23,7 @@ def main() -> int:
     index = (SITE / "index.html").read_text(encoding="utf-8")
     arts_page_path = SITE / "resources" / "arts-culture" / "index.html"
     arts_page = arts_page_path.read_text(encoding="utf-8")
-    tools_page = (SITE / "templates" / "index.html").read_text(encoding="utf-8")
+    tools_page = (SITE / "tools" / "free-discounted" / "index.html").read_text(encoding="utf-8")
     app_js = (SITE / "assets" / "app.js").read_text(encoding="utf-8")
     styles = (SITE / "assets" / "styles.css").read_text(encoding="utf-8")
     guide_data = json.loads((SITE / "data" / "guide-data.json").read_text(encoding="utf-8"))
@@ -47,10 +47,11 @@ def main() -> int:
     check(
         'data-tool-query' in tools_page
         and 'data-tool-category' in tools_page
-        and 'data-tool-access' in tools_page
+        and 'data-tool-offer' in tools_page
+        and 'data-tool-format-filter' in tools_page
         and 'data-tool-status role="status" aria-live="polite"' in tools_page,
         "free-tool filter semantics",
-        "Tool search, category, and access controls are labelled and report results politely",
+        "Tool search, category, offer, and format controls are labelled and report results politely",
         rows,
     )
     check(
@@ -71,9 +72,10 @@ def main() -> int:
     check(
         "@media (max-width: 900px)" in styles
         and "@media (max-width: 640px)" in styles
+        and ".tool-offer-grid { grid-template-columns: 1fr; }" in styles
         and "visibleLimit = compact ? 6" in app_js,
         "responsive tool reflow",
-        "Tool controls reflow at tablet/mobile widths and the mobile list starts with six items",
+        "Tool categories and controls stack at tablet/mobile widths and the mobile list starts with six items",
         rows,
     )
     check(":focus-visible" in styles, "visible keyboard focus", "Generated controls retain visible focus styles", rows)

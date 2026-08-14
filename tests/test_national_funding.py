@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import inspect
 import json
 import sys
 import tempfile
@@ -89,6 +90,9 @@ class NationalFundingDataTests(unittest.TestCase):
         self.assertNotIn("Current funding and directory entries", page)
         self.assertNotIn("grant-opportunity-map", page)
 
+    def test_public_build_does_not_copy_legacy_infographic_assets(self) -> None:
+        self.assertNotIn("infographics", inspect.getsource(guide_builder.copy_assets).casefold())
+
     def test_funding_cards_put_nearest_active_deadlines_first(self) -> None:
         entries = [
             {"name": "Rolling", "status": "Open rolling", "deadline_date": ""},
@@ -103,8 +107,8 @@ class NationalFundingDataTests(unittest.TestCase):
         catalog_ids = {item["id"] for item in guide_builder.tools_catalog()}
         self.assertIn("support-nm-mainstreet-frontier-services", catalog_ids)
         self.assertIn("support-scedd-business-resource-fairs", catalog_ids)
-        page = guide_builder.templates_page()
-        self.assertIn("Free services and software", page)
+        page = guide_builder.free_tools_page()
+        self.assertIn("Free &amp; discounted tools", page)
         self.assertIn("New Mexico Frontier Community Initiative", page)
 
 
