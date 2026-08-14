@@ -486,6 +486,20 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("NAV_YUCCA_KEY", js)
         self.assertIn("initNavigationYucca();", js)
 
+    def test_navigation_uses_site_cursor_with_reduced_motion_safe_glow(self) -> None:
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+
+        nav_rule = css.split(".site-nav a, .nav-trigger {", 1)[1].split("}", 1)[0]
+        self.assertIn('cursor: url("raton-accessible-cursor.svg") 4 2, pointer;', nav_rule)
+        self.assertIn("@media (hover: hover) and (pointer: fine)", css)
+        self.assertIn("@keyframes navCursorGlow", css)
+        self.assertIn("animation: navCursorGlow 1800ms ease-in-out infinite;", css)
+        self.assertIn("@media (prefers-reduced-motion: reduce)", css)
+
     def test_primary_navigation_combines_direct_resources_with_county_promote_routes(self) -> None:
         page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
         nav = page.split('<nav class="site-nav" aria-label="Primary navigation">', 1)[1].split("</nav>", 1)[0]
