@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import date
+import json
 from pathlib import Path
 import re
 
@@ -49,10 +50,32 @@ def main() -> int:
         "Music controls appear only on Arts & Culture" if not non_arts_music_pages else ", ".join(non_arts_music_pages),
         rows,
     )
+    audio_manifest = json.loads((ROOT / "data" / "regional_audio_manifest.json").read_text(encoding="utf-8"))
+    audio_tracks = [
+        item
+        for item in audio_manifest
+        if item.get("local_audio_downloaded") and item.get("local_audio_filename")
+    ]
+    missing_audio = [
+        item["local_audio_filename"]
+        for item in audio_tracks
+        if not (ROOT / "assets" / "audio" / item["local_audio_filename"]).exists()
+        or not (SITE / "assets" / "audio" / item["local_audio_filename"]).exists()
+    ]
     check(
-        "loc-rael-nm-valse.mp3" in arts_page and "loc-rael-co-valse.mp3" in arts_page,
+        len(audio_tracks) >= 6
+        and not missing_audio
+        and all(item["local_audio_filename"] in arts_page for item in audio_tracks),
         "regional audio present",
-        "Arts & Culture references only the two LOC regional tracks",
+        f"Arts & Culture references {len(audio_tracks)} manifest-backed LOC tracks"
+        if not missing_audio
+        else f"Missing audio: {', '.join(missing_audio)}",
+        rows,
+    )
+    check(
+        all(item.get("item_url") and item.get("license_status") and item.get("credit_line") for item in audio_tracks),
+        "regional audio source trail",
+        "Every player track includes an item page, rights note, and credit line",
         rows,
     )
     check(".sr-only" in styles, "screen-reader utility", "Screen-reader-only helper exists", rows)

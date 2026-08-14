@@ -41,6 +41,7 @@ NATIONAL_FUNDING_JSON = REPO_DATA / "national-funding-opportunities.json"
 NATIONAL_FUNDING_WATCH_JSON = REPO_DATA / "national-funding-watch-sources.json"
 RESOURCE_DISCOVERY_JSON = REPO_DATA / "resource-discovery-sources.json"
 RESOURCE_KEYWORD_REGISTRY_JSON = REPO_DATA / "resource-keyword-registry.json"
+REGIONAL_AUDIO_JSON = REPO_DATA / "regional_audio_manifest.json"
 REAUDIT_NOTES = DOWNLOADS / "tri_county_reaudit" / "comprehensive_reaudit_source_notes.md"
 NEW_PDF_EXTRACT_DIR = DOWNLOADS / "tri_county_new_pdf_extract_20260621"
 BUILD_DATE = os.environ.get("BUILD_DATE", date.today().isoformat())
@@ -110,9 +111,20 @@ def load_json_records(path: Path, key: str) -> list[dict]:
     return [item for item in records if isinstance(item, dict)] if isinstance(records, list) else []
 
 
+def load_json_list(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return []
+    return [item for item in payload if isinstance(item, dict)] if isinstance(payload, list) else []
+
+
 NATIONAL_FUNDING_OPPORTUNITIES = load_json_records(NATIONAL_FUNDING_JSON, "opportunities")
 NATIONAL_FUNDING_WATCH_SOURCES = load_json_records(NATIONAL_FUNDING_WATCH_JSON, "sources")
 RESOURCE_DISCOVERY_SOURCES = load_json_records(RESOURCE_DISCOVERY_JSON, "sources")
+REGIONAL_AUDIO_TRACKS = load_json_list(REGIONAL_AUDIO_JSON)
 
 
 def build_asset_version() -> str:
@@ -135,6 +147,7 @@ def build_asset_version() -> str:
         NATIONAL_FUNDING_WATCH_JSON,
         RESOURCE_DISCOVERY_JSON,
         RESOURCE_KEYWORD_REGISTRY_JSON,
+        REGIONAL_AUDIO_JSON,
     ):
         if path.exists():
             digest.update(path.read_bytes())
@@ -4730,6 +4743,26 @@ def page_shell(
         f'          <link rel="alternate" type="application/json" title="{html_escape(label)}" href="{rel(href, depth)}">'
         for label, href in (extra_json_alternates or [])
     )
+    available_audio_tracks = [
+        item
+        for item in REGIONAL_AUDIO_TRACKS
+        if item.get("local_audio_downloaded") and item.get("local_audio_filename")
+    ]
+    music_options = "\n".join(
+        f'<option value="{rel("assets/audio/" + str(item["local_audio_filename"]), depth)}" '
+        f'data-track-id="{html_escape(item.get("id"))}" '
+        f'data-credit="{html_escape(item.get("credit_display"))}" '
+        f'data-source-url="{html_escape(item.get("item_url"))}">'
+        f'{html_escape(item.get("player_label") or item.get("title"))}</option>'
+        for item in available_audio_tracks
+    )
+    first_audio = available_audio_tracks[0] if available_audio_tracks else {}
+    first_audio_path = rel(
+        f'assets/audio/{first_audio.get("local_audio_filename") or "loc-rael-nm-valse.mp3"}',
+        depth,
+    )
+    first_audio_credit = first_audio.get("credit_display") or "Juan B. Rael Collection, Library of Congress."
+    first_audio_source = first_audio.get("item_url") or "https://www.loc.gov/collections/hispano-music-and-culture-from-the-northern-rio-grande/"
     music_bar = (
         f"""
           <details class="music-bar" data-music-bar aria-label="Regional sound player">
@@ -4742,8 +4775,7 @@ def page_shell(
                 <button class="music-toggle" type="button" aria-pressed="false" data-state="stopped">Play</button>
                 <label class="music-track-label">Track
                   <select class="music-track-select" aria-label="Choose regional sound track">
-                    <option value="{rel('assets/audio/loc-rael-nm-valse.mp3', depth)}" data-track-id="rael-arroyo-hondo">Rael Waltz - Arroyo Hondo, NM</option>
-                    <option value="{rel('assets/audio/loc-rael-co-valse.mp3', depth)}" data-track-id="rael-antonito">Rael Waltz - Antonito, CO</option>
+                    {music_options}
                   </select>
                 </label>
               </div>
@@ -4752,7 +4784,10 @@ def page_shell(
                 <span class="music-time" aria-live="polite">0:00</span>
               </div>
               <div class="music-bar__bottom">
-                <span>Optional archival audio from the Library of Congress.</span>
+                <span class="music-credit-block">
+                  <span data-music-credit>{html_escape(first_audio_credit)}</span>
+                  <a class="music-source-link" data-music-source href="{html_escape(first_audio_source)}" target="_blank" rel="noreferrer">Source &amp; rights</a>
+                </span>
                 <label>Volume
                   <input class="music-volume" type="range" min="0" max="100" value="42" aria-label="Regional sound volume">
                 </label>
@@ -4760,7 +4795,7 @@ def page_shell(
             </div>
           </details>
     """
-        if active == "arts-culture"
+        if active == "arts-culture" and available_audio_tracks
         else ""
     )
     intro_curtain = (
@@ -4770,9 +4805,9 @@ def page_shell(
     )
     audio_markup = (
         f"""
-          <audio id="site-music-loop" preload="metadata" loop src="{rel('assets/audio/loc-rael-nm-valse.mp3', depth)}"></audio>
+          <audio id="site-music-loop" preload="metadata" loop src="{first_audio_path}"></audio>
     """
-        if active == "arts-culture"
+        if active == "arts-culture" and available_audio_tracks
         else ""
     )
     return dedent(
@@ -5479,12 +5514,12 @@ def discovery_source_cards(categories: list[str], limit: int = 9) -> str:
         f"""
         <article class="source-card discovery-source-card">
           <div class="source-card__meta">
-            <span>{html_escape(DISCOVERY_CATEGORY_LABELS.get(item.get('category'), 'Resource search'))}</span>
+            <span>{html_escape(item.get('resource_type') or DISCOVERY_CATEGORY_LABELS.get(item.get('category'), 'Resource search'))}</span>
             <span>{html_escape(item.get('authority'))}</span>
           </div>
           <h3><a href="{html_escape(item.get('url'))}" target="_blank" rel="noreferrer">{html_escape(item.get('name'))}</a></h3>
           <p>{html_escape(item.get('public_use'))}</p>
-          <a class="text-link" href="{html_escape(item.get('url'))}" target="_blank" rel="noreferrer">Open registry</a>
+          <a class="text-link" href="{html_escape(item.get('url'))}" target="_blank" rel="noreferrer">{html_escape(item.get('action_label') or 'Open registry')}</a>
         </article>
         """
         for item in sources
@@ -5787,10 +5822,10 @@ def arts_culture_page(rows: list[dict]) -> str:
     <section class="section">
       <div class="section-heading">
         <p class="eyebrow">Open calls and artist registries</p>
-        <h2>Search wider creative-opportunity networks.</h2>
-        <p class="section-note">Use these for residencies, public-art calls, exhibitions, fellowships, grants, and creative-business programs beyond the local directory.</p>
+        <h2>Find calls, registries, residencies, and art-fair applications.</h2>
+        <p class="section-note">Start with the local and state routes, then widen the search. Each card identifies the kind of route it opens; confirm the current deadline, fee, eligibility, and rights terms on the linked page.</p>
       </div>
-      <div class="source-grid compact" data-progressive-list data-compact-count="4" data-wide-count="7">{discovery_source_cards(['artists-creative-opportunities'], 99)}</div>
+      <div class="source-grid compact" data-progressive-list data-compact-count="5" data-wide-count="10">{discovery_source_cards(['artists-creative-opportunities'], 99)}</div>
       <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="registries">Show more registries</button></div>
     </section>
     <section class="section tinted">
@@ -8084,14 +8119,14 @@ def write_static_assets() -> None:
     .music-bar {
       pointer-events: auto;
       width: auto;
-      max-width: min(320px, calc(100vw - 32px));
+      max-width: min(340px, calc(100vw - 32px));
       border: 0;
       background: transparent;
       color: var(--ink);
     }
     .music-panel {
       margin-top: 7px;
-      width: min(320px, calc(100vw - 32px));
+      width: min(340px, calc(100vw - 32px));
       padding: 10px;
       border: 1px solid rgba(23,48,71,0.14);
       border-radius: 12px;
@@ -8115,6 +8150,18 @@ def write_static_assets() -> None:
       color: rgba(23,48,71,0.66);
       font-size: 0.68rem;
       font-weight: 800;
+    }
+    .music-credit-block {
+      display: grid;
+      gap: 2px;
+      max-width: 205px;
+      line-height: 1.3;
+    }
+    .music-source-link {
+      width: fit-content;
+      color: var(--ink);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
     }
     .music-bar label {
       margin: 0;
@@ -8676,7 +8723,8 @@ def write_static_assets() -> None:
       .music-bar__top { align-items: flex-start; }
       .music-track-label { flex: 1; }
       .music-track-select { width: 100%; }
-      .music-bar__bottom { align-items: flex-start; gap: 6px; }
+      .music-bar__bottom { align-items: flex-start; flex-direction: column; gap: 6px; }
+      .music-credit-block { max-width: none; }
       .music-volume { width: 76px; }
       .directory-assistant { width: auto; max-width: calc(100vw - 156px); left: 12px; bottom: 12px; }
       .directory-assistant__toggle { min-height: 38px; padding: 7px 10px; background: rgba(23,48,71,0.56); font-size: 0.75rem; }
@@ -10776,6 +10824,8 @@ def write_static_assets() -> None:
       const timeLabel = document.querySelector(".music-time");
       const volume = document.querySelector(".music-volume");
       const status = document.querySelector("[data-music-status]");
+      const credit = document.querySelector("[data-music-credit]");
+      const sourceLink = document.querySelector("[data-music-source]");
       const intro = document.querySelector(".intro-curtain");
       const loopAudio = document.getElementById("site-music-loop");
       if (!toggle || !loopAudio) return;
@@ -10805,7 +10855,14 @@ def write_static_assets() -> None:
 
       function selectedTrackId() {
         const option = trackSelect ? trackSelect.selectedOptions[0] : null;
-        return option ? option.dataset.trackId || option.value : "rael-arroyo-hondo";
+        return option ? option.dataset.trackId || option.value : "regional-audio-default";
+      }
+
+      function updateTrackDetails() {
+        const option = trackSelect ? trackSelect.selectedOptions[0] : null;
+        if (!option) return;
+        if (credit) credit.textContent = option.dataset.credit || option.textContent;
+        if (sourceLink && option.dataset.sourceUrl) sourceLink.href = option.dataset.sourceUrl;
       }
 
       function trackTimeKey(trackId = selectedTrackId()) {
@@ -10846,6 +10903,7 @@ def write_static_assets() -> None:
       }
 
       applyVolume();
+      updateTrackDetails();
       updateProgress();
 
       function setButtonState(state) {
@@ -10947,6 +11005,7 @@ def write_static_assets() -> None:
           localStorage.setItem(TRACK_KEY, selectedTrackId());
           loopAudio.src = trackSelect.value;
           loopAudio.currentTime = 0;
+          updateTrackDetails();
           updateProgress();
           if (wasPlaying) startLoop({ userInitiated: true, resume: false, fromBeginning: true });
         });

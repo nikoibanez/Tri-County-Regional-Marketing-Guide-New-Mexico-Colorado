@@ -9,7 +9,7 @@ This report separates confirmed link failures from pages that merely block or co
 - Records checked: 120
 - Web sources checked: 119
 - Confirmed broken or missing: 0
-- Normal-browser confirmation required: 1
+- Normal-browser confirmation required: 0
 - Script-access limitations (not broken): 21
 - Offline field-check records: 1
 - Human approval required: 75
@@ -18,8 +18,7 @@ This report separates confirmed link failures from pages that merely block or co
 
 - access_blocked: 21
 - field_check: 1
-- network_error: 1
-- ok: 85
+- ok: 86
 - redirect: 12
 
 ## Confirmed Broken Or Missing
@@ -28,9 +27,7 @@ No checked web source is confirmed broken or missing.
 
 ## Normal-Browser Confirmation Required
 
-These pages are not classified as broken. A timeout, network problem, or temporary server response prevented a conclusive scripted check.
-
-- [Colorado Vacation Directory](https://www.coloradodirectory.com/) - Regional; directory; network_error; [Errno 11002] getaddrinfo failed
+No inconclusive network or server response is waiting on a normal-browser confirmation.
 
 ## Script Access Limitations (Not Broken)
 

@@ -7,13 +7,12 @@
     "counts": {
       "access_blocked": 21,
       "field_check": 1,
-      "network_error": 1,
-      "ok": 85,
+      "ok": 86,
       "redirect": 12
     },
     "confirmed_broken": 0,
     "needs_attention": 0,
-    "browser_check_needed": 1,
+    "browser_check_needed": 0,
     "script_access_limited": 21,
     "field_checks": 1,
     "human_approval_required": 75
@@ -44,7 +43,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.co.colfax.nm.us/government/county_clerk.php",
-        "elapsed_ms": 773,
+        "elapsed_ms": 854,
         "error": ""
       }
     },
@@ -101,7 +100,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.ratonnm.gov/government/agendas_minutes.php",
-        "elapsed_ms": 616,
+        "elapsed_ms": 835,
         "error": ""
       }
     },
@@ -130,7 +129,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidad.co.gov/government/public_notice.php",
-        "elapsed_ms": 689,
+        "elapsed_ms": 1779,
         "error": ""
       }
     },
@@ -187,7 +186,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.ratonnm.gov/business/business_license_regulations.php",
-        "elapsed_ms": 695,
+        "elapsed_ms": 396,
         "error": ""
       }
     },
@@ -216,7 +215,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.ratonnm.gov/business/index.php",
-        "elapsed_ms": 416,
+        "elapsed_ms": 409,
         "error": ""
       }
     },
@@ -245,7 +244,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.ratonnm.gov/business/economic_development/local_business_resources.php",
-        "elapsed_ms": 388,
+        "elapsed_ms": 411,
         "error": ""
       }
     },
@@ -274,7 +273,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.co.colfax.nm.us/business/index.php",
-        "elapsed_ms": 487,
+        "elapsed_ms": 853,
         "error": ""
       }
     },
@@ -303,7 +302,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.enigma.com/directory/nm/raton/",
-        "elapsed_ms": 793,
+        "elapsed_ms": 1571,
         "error": ""
       }
     },
@@ -332,7 +331,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.exploreraton.com/shop",
-        "elapsed_ms": 608,
+        "elapsed_ms": 2681,
         "error": ""
       }
     },
@@ -361,7 +360,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.growraton.org/properties/",
-        "elapsed_ms": 967,
+        "elapsed_ms": 2506,
         "error": ""
       }
     },
@@ -390,7 +389,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://nmsbaprogram.org/",
-        "elapsed_ms": 1032,
+        "elapsed_ms": 978,
         "error": ""
       }
     },
@@ -419,7 +418,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
-        "elapsed_ms": 1672,
+        "elapsed_ms": 967,
         "error": ""
       }
     },
@@ -448,7 +447,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
-        "elapsed_ms": 1939,
+        "elapsed_ms": 2205,
         "error": ""
       }
     },
@@ -477,7 +476,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/",
-        "elapsed_ms": 1916,
+        "elapsed_ms": 977,
         "error": ""
       }
     },
@@ -506,7 +505,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://roamsnm.org/",
-        "elapsed_ms": 890,
+        "elapsed_ms": 945,
         "error": ""
       }
     },
@@ -535,7 +534,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
-        "elapsed_ms": 712,
+        "elapsed_ms": 666,
         "error": ""
       }
     },
@@ -592,7 +591,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/add-business-listing/",
-        "elapsed_ms": 575,
+        "elapsed_ms": 615,
         "error": ""
       }
     },
@@ -621,7 +620,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/business-directory",
-        "elapsed_ms": 259,
+        "elapsed_ms": 316,
         "error": ""
       }
     },
@@ -650,7 +649,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://townoflaveta-co.gov/business-directory/",
-        "elapsed_ms": 544,
+        "elapsed_ms": 1738,
         "error": ""
       }
     },
@@ -679,7 +678,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.wheelhouseincubator.org/",
-        "elapsed_ms": 559,
+        "elapsed_ms": 1644,
         "error": ""
       }
     },
@@ -708,7 +707,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/business-directory",
-        "elapsed_ms": 229,
+        "elapsed_ms": 282,
         "error": ""
       }
     },
@@ -737,7 +736,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.bentcounty.net/businesses/business_development.php",
-        "elapsed_ms": 835,
+        "elapsed_ms": 866,
         "error": ""
       }
     },
@@ -766,7 +765,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://artistssunday.com/directory/",
-        "elapsed_ms": 653,
+        "elapsed_ms": 666,
         "error": ""
       }
     },
@@ -844,14 +843,15 @@
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
         "reader_action": "Use the directory to discover possible visitor channels, then confirm each business or destination through its own current website before outreach.",
-        "last_check_status": "network_error",
-        "last_status_code": null
+        "last_check_status": "ok",
+        "last_status_code": 200
       },
       "check": {
-        "status": "network_error",
-        "status_code": null,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://www.coloradodirectory.com/",
-        "error": "[Errno 11002] getaddrinfo failed"
+        "elapsed_ms": 706,
+        "error": ""
       }
     },
     {
@@ -879,7 +879,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://biz.nm.gov/business-navigator/licenses-and-permits/",
-        "elapsed_ms": 1628,
+        "elapsed_ms": 628,
         "error": ""
       }
     },
@@ -908,7 +908,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nmsbdc.org/",
-        "elapsed_ms": 1613,
+        "elapsed_ms": 1113,
         "error": ""
       }
     },
@@ -937,7 +937,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://nmfamilyfriendlybusiness.org/premium-business-directory/",
-        "elapsed_ms": 1927,
+        "elapsed_ms": 1965,
         "error": ""
       }
     },
@@ -966,7 +966,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://www.sba.gov/counseling/local-assistance/resource-partners/#sbdcs",
-        "elapsed_ms": 1271,
+        "elapsed_ms": 1228,
         "error": ""
       }
     },
@@ -995,7 +995,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.angelfireresort.com/events/",
-        "elapsed_ms": 597,
+        "elapsed_ms": 703,
         "error": ""
       }
     },
@@ -1024,7 +1024,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.angelfireresortvacationrentals.com/plan-your-trip/summer-events/",
-        "elapsed_ms": 1002,
+        "elapsed_ms": 1063,
         "error": ""
       }
     },
@@ -1109,7 +1109,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://angelfirechamber.org/local-businesses/",
-        "elapsed_ms": 1123,
+        "elapsed_ms": 923,
         "error": ""
       }
     },
@@ -1138,7 +1138,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.exploreraton.com/",
-        "elapsed_ms": 2212,
+        "elapsed_ms": 1997,
         "error": ""
       }
     },
@@ -1167,7 +1167,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.exploreraton.com/events",
-        "elapsed_ms": 2146,
+        "elapsed_ms": 2439,
         "error": ""
       }
     },
@@ -1196,7 +1196,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.exploreraton.com/post/purchase-your-2026-raton-visitors-guide-ad",
-        "elapsed_ms": 2078,
+        "elapsed_ms": 2002,
         "error": ""
       }
     },
@@ -1225,7 +1225,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://krtnradio.com/advertising/",
-        "elapsed_ms": 931,
+        "elapsed_ms": 966,
         "error": ""
       }
     },
@@ -1254,7 +1254,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.raton.info/business-directory.html",
-        "elapsed_ms": 1993,
+        "elapsed_ms": 1095,
         "error": ""
       }
     },
@@ -1283,7 +1283,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://ratonmainstreet.org/",
-        "elapsed_ms": 1100,
+        "elapsed_ms": 985,
         "error": ""
       }
     },
@@ -1312,7 +1312,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.discoverbachman.com/community-calendar/",
-        "elapsed_ms": 644,
+        "elapsed_ms": 623,
         "error": ""
       }
     },
@@ -1341,7 +1341,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.chamber.huerfano.org/resources",
-        "elapsed_ms": 1525,
+        "elapsed_ms": 846,
         "error": ""
       }
     },
@@ -1370,7 +1370,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.chamber.huerfano.org/",
-        "elapsed_ms": 336,
+        "elapsed_ms": 415,
         "error": ""
       }
     },
@@ -1399,7 +1399,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://huerfano.us/",
-        "elapsed_ms": 673,
+        "elapsed_ms": 978,
         "error": ""
       }
     },
@@ -1428,7 +1428,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://huerfano.us/",
-        "elapsed_ms": 696,
+        "elapsed_ms": 650,
         "error": ""
       }
     },
@@ -1457,7 +1457,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.lavetacreativedistrict.org/",
-        "elapsed_ms": 648,
+        "elapsed_ms": 1653,
         "error": ""
       }
     },
@@ -1486,7 +1486,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
-        "elapsed_ms": 559,
+        "elapsed_ms": 607,
         "error": ""
       }
     },
@@ -1515,7 +1515,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.spld.org/connect/community-links/",
-        "elapsed_ms": 1587,
+        "elapsed_ms": 1478,
         "error": ""
       }
     },
@@ -1544,7 +1544,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://worldjournalnewspaper.com/",
-        "elapsed_ms": 775,
+        "elapsed_ms": 1607,
         "error": ""
       }
     },
@@ -1601,7 +1601,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://worldjournalnewspaper.com/",
-        "elapsed_ms": 261,
+        "elapsed_ms": 386,
         "error": ""
       }
     },
@@ -1630,7 +1630,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
-        "elapsed_ms": 577,
+        "elapsed_ms": 539,
         "error": ""
       }
     },
@@ -1659,7 +1659,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/newsletter-signup/",
-        "elapsed_ms": 342,
+        "elapsed_ms": 285,
         "error": ""
       }
     },
@@ -1688,7 +1688,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
-        "elapsed_ms": 618,
+        "elapsed_ms": 657,
         "error": ""
       }
     },
@@ -1717,7 +1717,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php",
-        "elapsed_ms": 732,
+        "elapsed_ms": 786,
         "error": ""
       }
     },
@@ -1746,7 +1746,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidadcreativedistrict.org/",
-        "elapsed_ms": 608,
+        "elapsed_ms": 643,
         "error": ""
       }
     },
@@ -1775,7 +1775,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
-        "elapsed_ms": 325,
+        "elapsed_ms": 638,
         "error": ""
       }
     },
@@ -1804,7 +1804,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
-        "elapsed_ms": 368,
+        "elapsed_ms": 358,
         "error": ""
       }
     },
@@ -1833,7 +1833,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://weekender.pub/",
-        "elapsed_ms": 605,
+        "elapsed_ms": 647,
         "error": ""
       }
     },
@@ -1862,7 +1862,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.redriverbrewing.com/",
-        "elapsed_ms": 862,
+        "elapsed_ms": 934,
         "error": ""
       }
     },
@@ -1891,7 +1891,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://redriver.org/events/",
-        "elapsed_ms": 924,
+        "elapsed_ms": 852,
         "error": ""
       }
     },
@@ -1920,7 +1920,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://tlacchamber.org/",
-        "elapsed_ms": 950,
+        "elapsed_ms": 1051,
         "error": ""
       }
     },
@@ -1949,7 +1949,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://weekender.pub/",
-        "elapsed_ms": 358,
+        "elapsed_ms": 383,
         "error": ""
       }
     },
@@ -1978,7 +1978,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
-        "elapsed_ms": 3291,
+        "elapsed_ms": 3117,
         "error": ""
       }
     },
@@ -2007,7 +2007,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php",
-        "elapsed_ms": 877,
+        "elapsed_ms": 758,
         "error": ""
       }
     },
@@ -2036,7 +2036,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.mainstreetlive.org/",
-        "elapsed_ms": 638,
+        "elapsed_ms": 527,
         "error": ""
       }
     },
@@ -2065,7 +2065,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.mainstreetlive.org/2026-calendar",
-        "elapsed_ms": 450,
+        "elapsed_ms": 299,
         "error": ""
       }
     },
@@ -2094,7 +2094,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
-        "elapsed_ms": 400,
+        "elapsed_ms": 362,
         "error": ""
       }
     },
@@ -2123,7 +2123,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
-        "elapsed_ms": 436,
+        "elapsed_ms": 382,
         "error": ""
       }
     },
@@ -2152,7 +2152,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://nmarts.org/grants/grants-information/",
-        "elapsed_ms": 896,
+        "elapsed_ms": 818,
         "error": ""
       }
     },
@@ -2181,7 +2181,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://biz.nm.gov/financial-assistance/",
-        "elapsed_ms": 325,
+        "elapsed_ms": 348,
         "error": ""
       }
     },
@@ -2210,7 +2210,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/grants/cid-grants/",
-        "elapsed_ms": 2868,
+        "elapsed_ms": 2070,
         "error": ""
       }
     },
@@ -2239,7 +2239,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nmfinance.com/project/opportunity-enterprise-commercial-development/",
-        "elapsed_ms": 1483,
+        "elapsed_ms": 1169,
         "error": ""
       }
     },
@@ -2268,7 +2268,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nmfinance.com/project/state-small-business-credit-initiative-ssbci/",
-        "elapsed_ms": 1044,
+        "elapsed_ms": 721,
         "error": ""
       }
     },
@@ -2297,7 +2297,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/programs-and-services/business-development/job-training-incentive-program/",
-        "elapsed_ms": 2062,
+        "elapsed_ms": 2528,
         "error": ""
       }
     },
@@ -2326,7 +2326,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/grants/local-economic-development-act/",
-        "elapsed_ms": 1733,
+        "elapsed_ms": 2039,
         "error": ""
       }
     },
@@ -2355,7 +2355,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/press-releases/state-opens-trails-grant-for-outdoor-recreation-projects/",
-        "elapsed_ms": 1677,
+        "elapsed_ms": 1536,
         "error": ""
       }
     },
@@ -2384,7 +2384,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://sharenm.org/",
-        "elapsed_ms": 1485,
+        "elapsed_ms": 2328,
         "error": ""
       }
     },
@@ -2413,7 +2413,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.wesst.org/lending",
-        "elapsed_ms": 586,
+        "elapsed_ms": 650,
         "error": ""
       }
     },
@@ -2442,7 +2442,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.huerfano.org/support",
-        "elapsed_ms": 597,
+        "elapsed_ms": 662,
         "error": ""
       }
     },
@@ -2471,7 +2471,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.spanishpeaks.foundation/",
-        "elapsed_ms": 692,
+        "elapsed_ms": 704,
         "error": ""
       }
     },
@@ -2500,7 +2500,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://barnicommunityfund.org/",
-        "elapsed_ms": 614,
+        "elapsed_ms": 1841,
         "error": ""
       }
     },
@@ -2529,7 +2529,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidad.co.gov/services/grants.php",
-        "elapsed_ms": 804,
+        "elapsed_ms": 812,
         "error": ""
       }
     },
@@ -2558,7 +2558,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://sccfcolorado.org/nonprofit-directory/",
-        "elapsed_ms": 2393,
+        "elapsed_ms": 1267,
         "error": ""
       }
     },
@@ -2587,7 +2587,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidadcf.org/board.html",
-        "elapsed_ms": 831,
+        "elapsed_ms": 666,
         "error": ""
       }
     },
@@ -2616,7 +2616,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidadcf.org/grants.html",
-        "elapsed_ms": 343,
+        "elapsed_ms": 362,
         "error": ""
       }
     },
@@ -2673,7 +2673,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.firstpeoplesfund.org/programs/fellowships",
-        "elapsed_ms": 609,
+        "elapsed_ms": 572,
         "error": ""
       }
     },
@@ -2702,7 +2702,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.grants.gov/search-grants",
-        "elapsed_ms": 584,
+        "elapsed_ms": 527,
         "error": ""
       }
     },
@@ -2759,7 +2759,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.imls.gov/find-funding/how-to-apply/funding-opportunities",
-        "elapsed_ms": 585,
+        "elapsed_ms": 598,
         "error": ""
       }
     },
@@ -2788,7 +2788,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nalac.org/grants/nalac-fund-for-the-arts/",
-        "elapsed_ms": 1239,
+        "elapsed_ms": 2932,
         "error": ""
       }
     },
@@ -2817,7 +2817,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.arts.gov/grants",
-        "elapsed_ms": 1982,
+        "elapsed_ms": 831,
         "error": ""
       }
     },
@@ -2846,7 +2846,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://www.nglcc.org/programs-initiatives",
-        "elapsed_ms": 1216,
+        "elapsed_ms": 1422,
         "error": ""
       }
     },
@@ -2931,7 +2931,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.redlineart.org/ais-apply-for-a-grant",
-        "elapsed_ms": 583,
+        "elapsed_ms": 662,
         "error": ""
       }
     },
@@ -3156,7 +3156,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://gatesfamilyfoundation.org/types-of-support/capital-grants/",
-        "elapsed_ms": 851,
+        "elapsed_ms": 590,
         "error": ""
       }
     },
@@ -3185,7 +3185,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.grants.gov/",
-        "elapsed_ms": 225,
+        "elapsed_ms": 278,
         "error": ""
       }
     },
@@ -3214,7 +3214,7 @@
         "status": "ok",
         "status_code": 202,
         "final_url": "https://www.historycolorado.org/state-historical-fund",
-        "elapsed_ms": 668,
+        "elapsed_ms": 546,
         "error": ""
       }
     },
@@ -3243,7 +3243,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.arts.gov/grants",
-        "elapsed_ms": 816,
+        "elapsed_ms": 875,
         "error": ""
       }
     },
@@ -3272,7 +3272,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/news-and-information/resource-map/",
-        "elapsed_ms": 2165,
+        "elapsed_ms": 3225,
         "error": ""
       }
     },
@@ -3301,7 +3301,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://www.sba.gov/loans/",
-        "elapsed_ms": 2582,
+        "elapsed_ms": 2183,
         "error": ""
       }
     },
@@ -3330,7 +3330,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://www.sba.gov/loans/lender-match/",
-        "elapsed_ms": 1241,
+        "elapsed_ms": 602,
         "error": ""
       }
     },
@@ -3359,7 +3359,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://sccfcolorado.org/for-grantseekers/grants/",
-        "elapsed_ms": 1976,
+        "elapsed_ms": 995,
         "error": ""
       }
     },
@@ -3388,7 +3388,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://sccfcolorado.org/madeline-mellers-memorial-girls-golf-scholarship/",
-        "elapsed_ms": 690,
+        "elapsed_ms": 719,
         "error": ""
       }
     },

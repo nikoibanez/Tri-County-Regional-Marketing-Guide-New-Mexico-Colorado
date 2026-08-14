@@ -1,19 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-08T23:00:40-06:00",
+  "updated_at": "2026-08-13T18:46:00-06:00",
   "sources": {
     "grants-gov-api": {
       "name": "Grants.gov API and Opportunity Search",
       "url": "https://www.grants.gov/api/api-guide",
-      "last_checked": "2026-08-08T23:00:40-06:00",
-      "last_status": "tls_error",
-      "status_code": null,
-      "last_error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)"
+      "last_checked": "2026-08-13T18:46:00-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "d4e3e57e27171e716ea928fce4ce60b39a5aa6c5e5a80b50e16a53c51c4a781d",
+      "text_length": 5581,
+      "link_count": 40,
+      "candidate_count": 3
     },
     "sam-assistance-listings": {
       "name": "SAM.gov Assistance Listings",
       "url": "https://sam.gov/assistance-listings",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "9f99d75d98ce53d57c5e242c173f0c637e37297990d53c68749bdc131fd2a234",
@@ -24,18 +27,18 @@
     "sbir-funding": {
       "name": "SBIR and STTR Funding Opportunities",
       "url": "https://www.sbir.gov/topics?page=0&program=&status=Open",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "e1f1f77cc28e9b51b4de1ec3e2bc9eafcf8f3dbf253481f8101ca8e30cb99e09",
-      "text_length": 10345,
+      "content_hash": "616373c8c47081467c6e1fb9abd19c4ed7988c61702e1a7216afa1ec8824d898",
+      "text_length": 10358,
       "link_count": 68,
       "candidate_count": 0
     },
     "cdfi-certified-list": {
       "name": "CDFI Fund Certified CDFI List",
       "url": "https://www.cdfifund.gov/programs-training/certification/cdfi",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "79a71781f8f3e3a0fee63cf60013e338e50007d01b36d2dd35440e3e4987f905",
@@ -46,18 +49,18 @@
     "sba-lender-match": {
       "name": "SBA Lender Match",
       "url": "https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "069b8407a578a9aa392b8869fb80161bf73f069e2e3d36c21f4082a675b20d62",
-      "text_length": 5435,
+      "content_hash": "2f2cf174275021bb4e8417caefbb754d8ff93775120cbcce945733df7bfd80e8",
+      "text_length": 5447,
       "link_count": 108,
       "candidate_count": 2
     },
     "candid-foundation-directory": {
       "name": "Candid Foundation Directory Free Access",
       "url": "https://learning.candid.org/free-access-to-foundation-directory",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -65,7 +68,7 @@
     "nnfs-member-directory": {
       "name": "National Network of Fiscal Sponsors Member Directory",
       "url": "https://www.fiscalsponsors.org/member-directory",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "d7092235d54fcb4845044eff9ea1d76c04e7b463add679fc2b00adf0794a3def",
@@ -76,7 +79,7 @@
     "fiscal-sponsor-directory": {
       "name": "Fiscal Sponsor Directory",
       "url": "https://fiscalsponsordirectory.org/",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "06d8b65e0658e8e885a218c2a86d2f941f722b44d16f9041e53f3842e8933933",
@@ -87,7 +90,7 @@
     "fractured-atlas-sponsorship": {
       "name": "Fractured Atlas Fiscal Sponsorship",
       "url": "https://www.fracturedatlas.org/fiscal-sponsorship",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "5f54e33b686dfac64269f3d30632d43961638302ed083600cf503f987999a7c0",
@@ -98,21 +101,21 @@
     "irs-eo-bmf": {
       "name": "IRS Exempt Organizations Business Master File",
       "url": "https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "0ad2446ef5a89de9d0e852ca65a153cb3545a060b6d287f969691ed88a20756e",
-      "text_length": 8930,
-      "link_count": 287,
+      "content_hash": "31fc6a139fcc7f3b53b33ea9b4c9245c82e98837d5eac82c74aa96f6d218dce0",
+      "text_length": 8782,
+      "link_count": 280,
       "candidate_count": 14
     },
     "propublica-nonprofit-api": {
       "name": "ProPublica Nonprofit Explorer API",
       "url": "https://projects.propublica.org/nonprofits/api/",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "c76b869629b3c8a249ac61640e2c4bde7578b1916ff7204a2b242410d98ad5f6",
+      "content_hash": "91c7c28e43522b1396dc84598ee357650f51c362b2f7c06628a2715b1d3f2079",
       "text_length": 18195,
       "link_count": 57,
       "candidate_count": 6
@@ -120,7 +123,7 @@
     "guidestar-search": {
       "name": "Candid GuideStar Search",
       "url": "https://www.guidestar.org/search",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "f1299718d4a3259df3fe4ef2cfe5a431da0f13e82ad692a9f4879b35c3d288e6",
@@ -131,18 +134,18 @@
     "groundworks-nm-directory": {
       "name": "Groundworks New Mexico Nonprofit Directory",
       "url": "https://www.groundworksnm.org/nonprofit-directory",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "50fa6fb36c6ffdc1368b742494119d6c730cb702109097d97f6833dd8214b051",
-      "text_length": 7310,
+      "content_hash": "5cc8807d9aabbfbbd5f98d3c4d49399c1149f858e0959e3a10b3028f9d12968d",
+      "text_length": 6922,
       "link_count": 117,
       "candidate_count": 24
     },
     "colorado-nonprofit-directory": {
       "name": "Colorado Nonprofit Association Member Directory",
       "url": "https://coloradononprofits.org/member-resources/nonprofit-member-directory/",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "36f342fa9eefa077c54331675fc7ca743c830f5b729ee66b4683a5b87e792b11",
@@ -153,7 +156,7 @@
     "nm-sos-business-search": {
       "name": "New Mexico Secretary of State Business Search",
       "url": "https://enterprise.sos.nm.gov/search/business",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "6df41d1fe61422b48f4d79fc2d671a7a704127780a228444629368a63bc31f81",
@@ -164,7 +167,7 @@
     "colorado-sos-business-search": {
       "name": "Colorado Secretary of State Business Database",
       "url": "https://www.sos.state.co.us/biz/BusinessEntityCriteriaExt.do",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -172,7 +175,7 @@
     "sba-small-business-search": {
       "name": "SBA Small Business Search",
       "url": "https://dsbs.sba.gov/search/dsp_dsbs.cfm",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "61b12b9cb165f2bd278eee2af8270fd883440ccaf774748937274989f170e510",
@@ -183,32 +186,32 @@
     "aca-residency-directory": {
       "name": "Artist Communities Alliance Directory",
       "url": "https://artistcommunities.org/directory",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "ef39a13c7104f0dda60c2b95b908e14f130fb8dfb3d82d4252bc0ed35a7d8c95",
+      "content_hash": "7ed5102d5754168a5bcfbb6b47ec0fbaec36d1905bb52f4c8efefdb69040958c",
       "text_length": 4184,
-      "link_count": 122,
+      "link_count": 123,
       "candidate_count": 0
     },
     "creative-west-opportunities": {
-      "name": "Creative West Opportunities Portal and CaFE",
+      "name": "Creative West Opportunities Portal",
       "url": "https://wearecreativewest.org/opportunities-portal/",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "e4397d6a5e0c82e7f15a19361459f92c091adcc57f4046c288a54619a3419033",
-      "text_length": 6258,
-      "link_count": 154,
+      "content_hash": "310b47b6b5328b5f221bce852a9b32d194193cfa1689f18cad896246092ec3d4",
+      "text_length": 6229,
+      "link_count": 153,
       "candidate_count": 0
     },
     "creative-capital-resources": {
       "name": "Creative Capital Artist Opportunities",
       "url": "https://creative-capital.org/artist-resources/",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "4320667d5387abd677b57efd8ebf727865bb5361269b8d7b01028e3a22ec3811",
+      "content_hash": "94eca55d0b7052dfc711ef9d023e766d7cd614d39d6b190e1e2f92d572dfcc42",
       "text_length": 4675,
       "link_count": 59,
       "candidate_count": 1
@@ -216,7 +219,7 @@
     "nm-arts-artist-opportunities": {
       "name": "New Mexico Arts Artist Opportunities",
       "url": "https://nmarts.org/public-art/are-you-an-artist/",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "7d5f81ece44704923894f2853d0521185e782f37b93f6d0587b31eb8773650a2",
@@ -227,18 +230,18 @@
     "nm-creative-industries": {
       "name": "New Mexico Creative Industries Division Opportunities",
       "url": "https://www.edd.newmexico.gov/grants/cid-grants/",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "26acc117fcddb641fc432feadb0d3f4b930281deb53c67aef86c2705c599c6c2",
-      "text_length": 45575,
-      "link_count": 182,
+      "content_hash": "07ff3e7e4cd3b066d0d954cf52f22b4cd630066951100220ce34c359da0c37c8",
+      "text_length": 36583,
+      "link_count": 180,
       "candidate_count": 12
     },
     "colorado-creative-industries": {
       "name": "Colorado Creative Industries",
       "url": "https://oedit.colorado.gov/colorado-creative-industries",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -246,10 +249,10 @@
     "new-mexico-artist-directory": {
       "name": "New Mexico Artist Directory",
       "url": "https://www.newmexicoartistdirectory.com/",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "84779bb14c1e130c56ec719a1220c141589783a69c91fa5c58ac4c49daa86004",
+      "content_hash": "e73514e635240e4eabcc5ec2a6852de026a63d90adf0ce2356bc92c31294c978",
       "text_length": 3616,
       "link_count": 104,
       "candidate_count": 0
@@ -257,7 +260,7 @@
     "nea-grants": {
       "name": "National Endowment for the Arts Grants",
       "url": "https://www.arts.gov/grants",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "0da498b9c3a7c402341853d0a2c32ea13b0c03ea17fc37c48dc2064ab4722afb",
@@ -268,7 +271,7 @@
     "neh-grants": {
       "name": "National Endowment for the Humanities Grants",
       "url": "https://www.neh.gov/grants",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "0b5b0b1ab3a4436ba28dec669790d26581cc8faedded1cb887ba49e4cc9a7c1b",
@@ -279,7 +282,7 @@
     "usda-rural-business-programs": {
       "name": "USDA Rural Development Business Programs",
       "url": "https://www.rd.usda.gov/programs-services/business-programs",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -287,7 +290,7 @@
     "eda-funding-opportunities": {
       "name": "U.S. Economic Development Administration Funding Opportunities",
       "url": "https://www.eda.gov/funding/funding-opportunities",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -295,7 +298,7 @@
     "nm-community-foundation-grants": {
       "name": "New Mexico Community Foundation Grants and Scholarships",
       "url": "https://nmcf.org/grants-and-scholarships/",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "7f272abc187a314e91e9897e1356a10909e535e6468653b6f80e417cef47d016",
@@ -306,18 +309,18 @@
     "el-pomar-grantmaking": {
       "name": "El Pomar Foundation Grantmaking",
       "url": "https://www.elpomar.org/grant-making/",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "fe3b15ffde8875f9dfc9139a8b1b036eafaf5e4a2fab40bf926a57ebec2fec4d",
-      "text_length": 10522,
+      "content_hash": "99bf147fd9137bc0cc306de8d9f3b3c41d5e7706b72ce4b48412d19bb91de03f",
+      "text_length": 10530,
       "link_count": 117,
       "candidate_count": 8
     },
     "anschutz-family-foundation": {
       "name": "Anschutz Family Foundation Grantmaking",
       "url": "https://anschutzfamilyfoundation.org/our-grantmaking/",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "3d056dc1383d483816a1806d6db88a650092b8b25feee2c92fa2d7a7536ddf66",
@@ -328,7 +331,7 @@
     "share-new-mexico": {
       "name": "SHARE New Mexico Resource Directory",
       "url": "https://www.sharenm.org/",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "1fbeb880c6115ea05e3edda6836e4fe279bce7cd63e0e7221922a81d720b66d9",
@@ -339,7 +342,7 @@
     "colorado-gives-directory": {
       "name": "ColoradoGives.org Organization Search",
       "url": "https://www.coloradogives.org/search",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "tls_error",
       "status_code": null,
       "last_error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)"
@@ -347,13 +350,134 @@
     "submittable-discover": {
       "name": "Submittable Discover",
       "url": "https://www.submittable.com/discover",
-      "last_checked": "2026-08-08T23:00:40-06:00",
+      "last_checked": "2026-08-13T18:46:00-06:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "a8fbcbcd5382ecf52eb8f5cd5ec05e626910b09ac1430c55a192be3b66504a26",
       "text_length": 824,
       "link_count": 16,
       "candidate_count": 0
+    },
+    "taos-center-calls": {
+      "name": "Taos Center for the Arts Calls for Submission",
+      "url": "https://tcataos.org/calls-for-submission",
+      "last_checked": "2026-08-13T18:46:00-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "e861ce3afe27d53673329f39251dfca7d3180555b82542560bce8c5073b9a169",
+      "text_length": 3679,
+      "link_count": 68,
+      "candidate_count": 0
+    },
+    "ar-mitchell-resonance": {
+      "name": "A.R. Mitchell Museum Resonance Call",
+      "url": "https://armitchellmuseum.com/resonance",
+      "last_checked": "2026-08-13T18:46:00-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "5bc57f04176d629dc92395c8f69772959f612b00838f1b5c867ec9fe4f2220d9",
+      "text_length": 2758,
+      "link_count": 117,
+      "candidate_count": 0
+    },
+    "taos-arts-community-directory": {
+      "name": "TaosArts Artist Community Directory",
+      "url": "https://taosarts.org/",
+      "last_checked": "2026-08-13T18:46:00-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "e4fc98a68c6003a0c9cb35574c9feb48b660492a92bdb3ec1e68df0f85e71ec0",
+      "text_length": 795,
+      "link_count": 22,
+      "candidate_count": 0
+    },
+    "southwest-contemporary-classifieds": {
+      "name": "Southwest Contemporary Classifieds",
+      "url": "https://southwestcontemporary.com/classifieds/",
+      "last_checked": "2026-08-13T18:46:00-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "d0c4d6dff3720525d2fb8470b75f81fa7e7c4980d6ee0326666891841009dae0",
+      "text_length": 2782,
+      "link_count": 118,
+      "candidate_count": 6
+    },
+    "nm-women-in-arts-registry": {
+      "name": "New Mexico Women in the Arts Artist Registry",
+      "url": "https://newmexicowomeninthearts.org/artist-registry-sign-up/",
+      "last_checked": "2026-08-13T18:46:00-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "bd245e1cd27a5400d6e51b204da0e01f838a85953f6f9d6f44657410a5d74458",
+      "text_length": 7361,
+      "link_count": 70,
+      "candidate_count": 0
+    },
+    "high-road-artisans": {
+      "name": "High Road Artisans Studio Tour",
+      "url": "https://www.highroadnewmexico.com/",
+      "last_checked": "2026-08-13T18:46:00-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "2038785c93124ce630ec6b15822050c0b1285a1441df069724f9b3e4aaa47dcc",
+      "text_length": 3529,
+      "link_count": 125,
+      "candidate_count": 0
+    },
+    "colorado-music-directory": {
+      "name": "Colorado Music Directory",
+      "url": "https://focoma.org/directory/artists",
+      "last_checked": "2026-08-13T18:46:00-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "de1d74036fef248958063978852441b6ce45590d67147f3e30dfa1033ba31905",
+      "text_length": 9373,
+      "link_count": 220,
+      "candidate_count": 0
+    },
+    "cafe-public-art-calls": {
+      "name": "CaFE Public Art Calls",
+      "url": "https://www.callforentry.org/public-art/",
+      "last_checked": "2026-08-13T18:46:00-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "e95997c6d07eb13d1da77ae15767ab12c8c0010d752f4bd19acf1c48428b9075",
+      "text_length": 4133,
+      "link_count": 62,
+      "candidate_count": 2
+    },
+    "zapp-artist-events": {
+      "name": "ZAPP Artist Event Applications",
+      "url": "https://www.zapplication.org/",
+      "last_checked": "2026-08-13T18:46:00-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "724af80f5c6cfd063549add9d4ba7653f0dd0bf942f4e8399a65a900eb2d6fed",
+      "text_length": 42311,
+      "link_count": 963,
+      "candidate_count": 3
+    },
+    "public-art-archive-submission": {
+      "name": "Public Art Archive Artwork Submission",
+      "url": "https://explore.publicartarchive.org/submission-form/",
+      "last_checked": "2026-08-13T18:46:00-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "9257da0f6ebd00b60dfa8b1d39a1355a08487e638b0c80f4fcd67e36ecc9d56a",
+      "text_length": 9166,
+      "link_count": 64,
+      "candidate_count": 3
+    },
+    "res-artis-open-calls": {
+      "name": "Res Artis Open Calls",
+      "url": "https://resartis.org/open-calls/",
+      "last_checked": "2026-08-13T18:46:00-06:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "c038f7178ad4ce2965a588e64c254820295dfee7b0bf12e11e2fda26e74dcb8e",
+      "text_length": 36355,
+      "link_count": 784,
+      "candidate_count": 24
     }
   }
 }

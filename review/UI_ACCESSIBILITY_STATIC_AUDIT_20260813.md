@@ -18,7 +18,8 @@ This no-dependency audit checks generated static files for accessibility regress
 | PASS | native focus management | Uses dialog showModal instead of a custom focus trap |
 | PASS | generated music removed | No generated music files are referenced by active pages/scripts |
 | PASS | regional audio scope | Music controls appear only on Arts & Culture |
-| PASS | regional audio present | Arts & Culture references only the two LOC regional tracks |
+| PASS | regional audio present | Arts & Culture references 6 manifest-backed LOC tracks |
+| PASS | regional audio source trail | Every player track includes an item page, rights note, and credit line |
 | PASS | screen-reader utility | Screen-reader-only helper exists |
 | PASS | image alt attributes | All generated pages give img elements alt attributes |
 

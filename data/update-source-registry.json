@@ -585,8 +585,8 @@
       "review_level": "standard_review",
       "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
       "reader_action": "Use the directory to discover possible visitor channels, then confirm each business or destination through its own current website before outreach.",
-      "last_check_status": "network_error",
-      "last_status_code": null
+      "last_check_status": "ok",
+      "last_status_code": 200
     },
     {
       "id": "directory-new-mexico-business-portal-c2467d66",

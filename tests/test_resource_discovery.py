@@ -26,6 +26,13 @@ class ResourceDiscoveryRegistryTests(unittest.TestCase):
         self.assertTrue(all(item["category"] in group_ids for item in sources))
         self.assertTrue(all(str(item["url"]).startswith("https://") for item in sources))
 
+    def test_artist_routes_are_numerous_and_user_labeled(self) -> None:
+        sources = json.loads((ROOT / "data" / "resource-discovery-sources.json").read_text(encoding="utf-8"))["sources"]
+        artist_sources = [item for item in sources if item["category"] == "artists-creative-opportunities"]
+        self.assertGreaterEqual(len(artist_sources), 15)
+        self.assertTrue(all(item.get("resource_type") for item in artist_sources))
+        self.assertTrue(all(item.get("action_label") for item in artist_sources))
+
     def test_candidate_extractor_uses_whole_phrases_and_ignores_scripts(self) -> None:
         markup = """
         <html><body>

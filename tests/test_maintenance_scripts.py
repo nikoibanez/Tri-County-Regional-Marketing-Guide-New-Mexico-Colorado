@@ -526,6 +526,10 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertNotIn('id="site-music-loop"', about_page)
         self.assertIn('data-music-bar', arts_page)
         self.assertIn('id="site-music-loop"', arts_page)
+        self.assertGreaterEqual(len(guide_builder.REGIONAL_AUDIO_TRACKS), 6)
+        for track in guide_builder.REGIONAL_AUDIO_TRACKS:
+            self.assertIn(track["local_audio_filename"], arts_page)
+            self.assertIn(track["item_url"], arts_page)
 
     def test_draft_watermark_is_limited_to_preview_hosts(self) -> None:
         page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
