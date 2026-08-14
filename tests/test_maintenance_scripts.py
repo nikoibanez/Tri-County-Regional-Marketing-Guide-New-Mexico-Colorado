@@ -16,6 +16,7 @@ from audit_directory_quality import duplicate_groups, normalize_name  # noqa: E4
 from audit_directory_connectivity import connection_details, display_source_path, is_first_party_candidate  # noqa: E402
 from audit_directory_outreach_channels import build_report as build_outreach_report  # noqa: E402
 from audit_internal_links import audit_site  # noqa: E402
+from audit_free_tools import audit as audit_free_tools, candidate_links as free_tool_candidate_links, validate_payload as validate_free_tools  # noqa: E402
 from audit_update_sources import check_record, check_url, summarize  # noqa: E402
 from apply_directory_link_repairs import apply_repairs_to_rows  # noqa: E402
 import build_netlify_deep_guide as guide_builder  # noqa: E402
@@ -533,7 +534,7 @@ class SiteSmokeTests(unittest.TestCase):
 
     def test_draft_watermark_is_limited_to_preview_hosts(self) -> None:
         page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
-        self.assertIn('data-preview-watermark hidden><span>Draft</span>', page)
+        self.assertIn('data-preview-watermark hidden aria-hidden="true">Draft preview</div>', page)
 
         with tempfile.TemporaryDirectory() as folder:
             asset_out = Path(folder)
@@ -543,9 +544,83 @@ class SiteSmokeTests(unittest.TestCase):
             js = (asset_out / "app.js").read_text(encoding="utf-8")
 
         self.assertIn(".site-watermark", css)
-        self.assertIn(".site-watermark__detail { display: none; }", css)
+        self.assertIn("bottom: max(8vh, env(safe-area-inset-bottom));", css)
+        self.assertIn("opacity: 0.10;", css)
+        self.assertNotIn(".site-watermark__detail", css)
         self.assertIn('host.startsWith("deploy-preview-")', js)
         self.assertIn("initPreviewWatermark();", js)
+
+    def test_free_tools_are_structured_filterable_and_routed_by_assistant(self) -> None:
+        payload = {
+            "tools": guide_builder.PROMOTION_TOOLS,
+            "discovery_sources": guide_builder.FREE_TOOL_DISCOVERY_SOURCES,
+        }
+        self.assertEqual(validate_free_tools(payload), [])
+        self.assertGreaterEqual(len(guide_builder.PROMOTION_TOOLS), 20)
+        self.assertIn("Nonprofit benefits", {item["category"] for item in guide_builder.PROMOTION_TOOLS})
+        self.assertTrue(any("Free/open-source software" in item["access_types"] for item in guide_builder.PROMOTION_TOOLS))
+        self.assertTrue(any(any("nonprofit" in label.casefold() for label in item["access_types"]) for item in guide_builder.PROMOTION_TOOLS))
+
+        page = guide_builder.templates_page()
+        self.assertIn('id="free-tools"', page)
+        self.assertIn("data-tool-filters", page)
+        self.assertIn("data-tool-card", page)
+        self.assertIn("TechSoup", page)
+        self.assertIn("Open-source software", page)
+
+        shell = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
+        self.assertIn("data-site-root=", shell)
+        routes = guide_builder.assistant_site_routes()
+        route_paths = {item["path"] for item in routes}
+        self.assertIn("network/", route_paths)
+        self.assertIn("resources/funding/", route_paths)
+        self.assertIn("templates/#free-tools", route_paths)
+        self.assertTrue(any(path.startswith("promote/?county=Colfax") for path in route_paths))
+
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+            js = (asset_out / "app.js").read_text(encoding="utf-8")
+        self.assertIn("...(DATA.free_tools || [])", js)
+        self.assertIn("...(DATA.site_routes || [])", js)
+        self.assertIn("function assistantSiteUrl", js)
+        self.assertIn("function initFreeToolFilters", js)
+        self.assertIn('["Site route", "Free tool"].includes(item.assistant_type)', js)
+        self.assertIn(".tool-card[hidden] { display: none; }", css)
+
+    def test_free_tool_audit_preserves_review_boundary(self) -> None:
+        payload = {
+            "tools": [
+                {
+                    "id": "example",
+                    "name": "Example Tool",
+                    "url": "https://example.com/",
+                    "source_url": "https://example.com/pricing",
+                    "category": "Design & print",
+                    "format": "Web app",
+                    "access_types": ["Free plan"],
+                    "use": "Create a flyer.",
+                    "note": "Check current limits.",
+                    "watch_terms": ["free"],
+                }
+            ],
+            "discovery_sources": [],
+        }
+        results, summary, state = audit_free_tools(payload, {"schema_version": 1, "pages": {}}, 1, no_network=True)
+        self.assertEqual(len(results), 1)
+        self.assertEqual(summary["checked_ok"], 0)
+        self.assertEqual(summary["review_count"], 0)
+        self.assertEqual(state["pages"], {})
+
+        candidates = free_tool_candidate_links(
+            {"candidate_terms": ["nonprofit", "software"]},
+            "https://example.org/catalog/",
+            [("Nonprofit design software", "/offers/design"), ("Privacy", "/privacy")],
+            set(),
+        )
+        self.assertEqual([item["url"] for item in candidates], ["https://example.org/offers/design"])
 
     def test_landscapes_and_assistant_use_accessible_southwest_motion(self) -> None:
         page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")

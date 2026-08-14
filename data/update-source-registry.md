@@ -40,7 +40,7 @@ Automation may propose updates. Human approval is required for public claims, el
 - [Artists Sunday Artist Directory](https://artistssunday.com/directory/) - Regional; directory; every 30 days; human_approval_required; last checked 2026-08-13; ok; next 2026-09-12
 - [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; every 30 days; standard_review; last checked 2026-08-13; access_blocked; next 2026-09-12
 - [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; every 30 days; standard_review; last checked 2026-08-13; access_blocked; next 2026-09-12
-- [Colorado Vacation Directory](https://www.coloradodirectory.com/) - Regional; directory; every 30 days; standard_review; last checked 2026-08-13; network_error; next 2026-09-12
+- [Colorado Vacation Directory](https://www.coloradodirectory.com/) - Regional; directory; every 30 days; standard_review; last checked 2026-08-13; ok; next 2026-09-12
 - [New Mexico Business Portal](https://biz.nm.gov/business-navigator/licenses-and-permits/) - Regional; directory; every 30 days; human_approval_required; last checked 2026-08-13; ok; next 2026-09-12
 - [New Mexico Small Business Development Center](https://www.nmsbdc.org/) - Regional; directory; every 30 days; standard_review; last checked 2026-08-13; ok; next 2026-09-12
 - [NM Family Friendly Business Directory](https://nmfamilyfriendlybusiness.org/premium-business-directory/) - Regional; directory; every 30 days; standard_review; last checked 2026-08-13; ok; next 2026-09-12

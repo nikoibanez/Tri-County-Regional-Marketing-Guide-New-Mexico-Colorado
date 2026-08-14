@@ -23,8 +23,10 @@ def main() -> int:
     index = (SITE / "index.html").read_text(encoding="utf-8")
     arts_page_path = SITE / "resources" / "arts-culture" / "index.html"
     arts_page = arts_page_path.read_text(encoding="utf-8")
+    tools_page = (SITE / "templates" / "index.html").read_text(encoding="utf-8")
     app_js = (SITE / "assets" / "app.js").read_text(encoding="utf-8")
     styles = (SITE / "assets" / "styles.css").read_text(encoding="utf-8")
+    guide_data = json.loads((SITE / "data" / "guide-data.json").read_text(encoding="utf-8"))
 
     check(bool(html_files), "generated pages exist", f"{len(html_files)} HTML files found", rows)
     check('href="#main"' in index and 'id="main"' in index, "skip link target", "Homepage includes a skip link target", rows)
@@ -36,6 +38,46 @@ def main() -> int:
     check('role="status"' in index and 'aria-live="polite"' in index, "assistant live status", "Result counts are announced politely", rows)
     check('role="list"' in index and 'role="listitem"' in app_js, "assistant result structure", "Results are exposed as list/listitem content", rows)
     check("showModal" in app_js and "focusableSelector" not in app_js, "native focus management", "Uses dialog showModal instead of a custom focus trap", rows)
+    check(
+        'data-site-root=' in index and "...(DATA.site_routes || [])" in app_js,
+        "assistant guide-page routing",
+        f"Assistant indexes {len(guide_data.get('site_routes') or [])} internal routes with a page-relative root",
+        rows,
+    )
+    check(
+        'data-tool-query' in tools_page
+        and 'data-tool-category' in tools_page
+        and 'data-tool-access' in tools_page
+        and 'data-tool-status role="status" aria-live="polite"' in tools_page,
+        "free-tool filter semantics",
+        "Tool search, category, and access controls are labelled and report results politely",
+        rows,
+    )
+    check(
+        tools_page.count("data-tool-card") == len(guide_data.get("free_tools") or []) >= 20,
+        "structured free-tool inventory",
+        f"Rendered {tools_page.count('data-tool-card')} cards from {len(guide_data.get('free_tools') or [])} structured tool records",
+        rows,
+    )
+    check(
+        'data-preview-watermark hidden aria-hidden="true">Draft preview</div>' in index
+        and "opacity: 0.10;" in styles
+        and "background: transparent;" in styles
+        and "bottom: max(8vh, env(safe-area-inset-bottom));" in styles,
+        "non-obstructive preview watermark",
+        "Preview text is decorative, pointer-transparent, 90% transparent, and positioned in the lowest viewport band",
+        rows,
+    )
+    check(
+        "@media (max-width: 900px)" in styles
+        and "@media (max-width: 640px)" in styles
+        and "visibleLimit = compact ? 6" in app_js,
+        "responsive tool reflow",
+        "Tool controls reflow at tablet/mobile widths and the mobile list starts with six items",
+        rows,
+    )
+    check(":focus-visible" in styles, "visible keyboard focus", "Generated controls retain visible focus styles", rows)
+    check("@media (prefers-reduced-motion: reduce)" in styles, "reduced motion", "Decorative motion can be disabled by user preference", rows)
     all_html = "\n".join(html_file.read_text(encoding="utf-8") for html_file in html_files)
     generated_music_ref = re.search(r"stateline-[^\"']+\.mp3", all_html + app_js, re.IGNORECASE)
     check(not generated_music_ref, "generated music removed", "No generated music files are referenced by active pages/scripts", rows)

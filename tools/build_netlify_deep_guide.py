@@ -42,6 +42,7 @@ NATIONAL_FUNDING_WATCH_JSON = REPO_DATA / "national-funding-watch-sources.json"
 RESOURCE_DISCOVERY_JSON = REPO_DATA / "resource-discovery-sources.json"
 RESOURCE_KEYWORD_REGISTRY_JSON = REPO_DATA / "resource-keyword-registry.json"
 REGIONAL_AUDIO_JSON = REPO_DATA / "regional_audio_manifest.json"
+FREE_TOOLS_JSON = REPO_DATA / "free-tools.json"
 REAUDIT_NOTES = DOWNLOADS / "tri_county_reaudit" / "comprehensive_reaudit_source_notes.md"
 NEW_PDF_EXTRACT_DIR = DOWNLOADS / "tri_county_new_pdf_extract_20260621"
 BUILD_DATE = os.environ.get("BUILD_DATE", date.today().isoformat())
@@ -125,6 +126,8 @@ NATIONAL_FUNDING_OPPORTUNITIES = load_json_records(NATIONAL_FUNDING_JSON, "oppor
 NATIONAL_FUNDING_WATCH_SOURCES = load_json_records(NATIONAL_FUNDING_WATCH_JSON, "sources")
 RESOURCE_DISCOVERY_SOURCES = load_json_records(RESOURCE_DISCOVERY_JSON, "sources")
 REGIONAL_AUDIO_TRACKS = load_json_list(REGIONAL_AUDIO_JSON)
+PROMOTION_TOOLS = load_json_records(FREE_TOOLS_JSON, "tools")
+FREE_TOOL_DISCOVERY_SOURCES = load_json_records(FREE_TOOLS_JSON, "discovery_sources")
 
 
 def build_asset_version() -> str:
@@ -148,6 +151,7 @@ def build_asset_version() -> str:
         RESOURCE_DISCOVERY_JSON,
         RESOURCE_KEYWORD_REGISTRY_JSON,
         REGIONAL_AUDIO_JSON,
+        FREE_TOOLS_JSON,
     ):
         if path.exists():
             digest.update(path.read_bytes())
@@ -2151,56 +2155,225 @@ COUNTY_INTENT_BLOCKS = {
 }
 
 
-PROMOTION_TOOLS = [
+BASE_SITE_ROUTES = [
     {
-        "name": "Canva",
-        "url": "https://www.canva.com/",
-        "use": "Flyers, social posts, simple ads, posters, and presentation graphics.",
-        "note": "Free/freemium design tool; check current plan limits.",
+        "title": "Guide home",
+        "path": "",
+        "category": "Guide page",
+        "summary": "Start with a task, county, or resource type and move directly to the matching guide page.",
+        "keywords": ["home", "start", "tri-county guide", "help", "navigation"],
     },
     {
-        "name": "Adobe Express",
-        "url": "https://www.adobe.com/express/",
-        "use": "Alternate flyer, social, photo, and quick brand-asset creation.",
-        "note": "Free/freemium design tool; check current plan limits.",
+        "title": "Master directory",
+        "path": "network/",
+        "category": "Directory",
+        "summary": "Search businesses, nonprofits, artists, programs, services, venues, support organizations, and regional channels.",
+        "keywords": ["directory", "listing", "contact", "search", "business", "nonprofit", "artist"],
     },
     {
-        "name": "Google Forms",
-        "url": "https://workspace.google.com/products/forms/",
-        "use": "Signup forms, intake forms, update requests, and simple surveys.",
-        "note": "Useful when a program needs responses before a full website exists.",
+        "title": "Funding and free support",
+        "path": "resources/funding/",
+        "category": "Funding",
+        "summary": "Search grants, loans, technical assistance, stipends, scholarships, and no-cost support programs.",
+        "keywords": ["funding", "grant", "loan", "stipend", "scholarship", "free support", "technical assistance"],
     },
     {
-        "name": "Google Business Profile",
-        "url": "https://business.google.com/en-all/business-profile/",
-        "use": "Search and Maps visibility, hours, photos, posts, and basic business listing control.",
-        "note": "Free listing path for storefronts and service-area businesses.",
+        "title": "Arts and culture",
+        "path": "resources/arts-culture/",
+        "category": "Arts & culture",
+        "summary": "Find artist directories, galleries, venues, open calls, registries, cultural resources, and regional audio.",
+        "keywords": ["arts", "culture", "artist", "gallery", "venue", "open call", "registry", "music"],
     },
     {
-        "name": "Meta Business Suite",
-        "url": "https://business.meta.com/",
-        "use": "Facebook and Instagram post scheduling, messaging, insights, and ad setup.",
-        "note": "Free business dashboard; paid ads remain optional.",
+        "title": "Plan your growth",
+        "path": "plan/",
+        "category": "Guide page",
+        "summary": "Choose an audience, prepare one reusable promotion packet, test matched channels, and track what works.",
+        "keywords": ["plan", "growth", "customer", "audience", "promotion packet", "strategy"],
     },
     {
-        "name": "HubSpot Email Marketing",
-        "url": "https://www.hubspot.com/products/marketing/email",
-        "use": "Email newsletters, outreach campaigns, simple CRM-linked lists, and templates.",
-        "note": "Free/freemium email tools; check send limits before launch.",
+        "title": "Promotion finder",
+        "path": "promote/",
+        "category": "Promotion finder",
+        "summary": "Filter regional promotion routes by county and task, including events, advertising, businesses, nonprofits, calendars, and galleries.",
+        "keywords": ["promote", "advertise", "events", "calendar", "business", "nonprofit", "gallery"],
     },
     {
-        "name": "Mailchimp",
-        "url": "https://mailchimp.com/pricing/marketing/compare-plans/",
-        "use": "Beginner-friendly mailing lists, email campaigns, audience forms, and reporting.",
-        "note": "Free/freemium email marketing; check current contact and send limits.",
+        "title": "Physical ad finder",
+        "path": "posting/",
+        "category": "Physical promotion",
+        "summary": "Search public-facing locations and contacts for flyers, posters, brochures, and rack cards.",
+        "keywords": ["flyer", "poster", "brochure", "rack card", "physical advertising", "bulletin board"],
     },
     {
-        "name": "Brevo",
-        "url": "https://www.brevo.com/pricing/",
-        "use": "Email campaigns and contact lists when a small team needs a simple sender.",
-        "note": "Free/freemium email marketing; check daily and monthly limits.",
+        "title": "Regional channels",
+        "path": "regional-channels/",
+        "category": "Promotion channels",
+        "summary": "Use regional directories, calendars, newsletters, visitor guides, media, and partner channels across county lines.",
+        "keywords": ["regional", "channel", "calendar", "newsletter", "visitor guide", "media", "partner"],
+    },
+    {
+        "title": "Amplifier channels",
+        "path": "amplifiers/",
+        "category": "Promotion channels",
+        "summary": "Find calendars, newsletters, directories, visitor guides, venues, media outlets, and other routes that can carry a message farther.",
+        "keywords": ["amplifier", "calendar", "newsletter", "directory", "visitor guide", "media", "venue"],
+    },
+    {
+        "title": "Tri-county region overview",
+        "path": "region/",
+        "category": "Regional guide",
+        "summary": "Understand how Colfax, Las Animas, and Huerfano county resources connect across the state line.",
+        "keywords": ["region", "tri-county", "state line", "overview", "New Mexico", "Colorado"],
+    },
+    {
+        "title": "Colfax County resources",
+        "path": "counties/colfax/",
+        "category": "County guide",
+        "county": "Colfax",
+        "summary": "Find Colfax County business, nonprofit, arts, event, tourism, media, and support routes.",
+        "keywords": ["Colfax", "Raton", "Angel Fire", "Cimarron", "Eagle Nest", "Red River", "Maxwell", "Springer"],
+    },
+    {
+        "title": "Las Animas County resources",
+        "path": "counties/las-animas/",
+        "category": "County guide",
+        "county": "Las Animas",
+        "summary": "Find Las Animas County business, nonprofit, arts, event, tourism, media, and support routes.",
+        "keywords": ["Las Animas", "Trinidad", "Aguilar", "Branson", "Kim", "Model", "Hoehne"],
+    },
+    {
+        "title": "Huerfano County resources",
+        "path": "counties/huerfano/",
+        "category": "County guide",
+        "county": "Huerfano",
+        "summary": "Find Huerfano County business, nonprofit, arts, event, tourism, media, and support routes.",
+        "keywords": ["Huerfano", "Walsenburg", "La Veta", "Gardner", "Cuchara"],
+    },
+    {
+        "title": "Message templates and free tools",
+        "path": "templates/#free-tools",
+        "category": "Tools",
+        "summary": "Use copy-ready outreach templates and search free, open-source, freemium, and nonprofit software or services.",
+        "keywords": ["template", "message", "email", "free software", "free tools", "nonprofit software", "flyer maker", "form builder"],
+    },
+    {
+        "title": "Submit an update",
+        "path": "submit/",
+        "category": "Guide service",
+        "summary": "Suggest a listing, correct an entry, add a public contact path, or recommend a regional resource.",
+        "keywords": ["submit", "update", "correction", "add listing", "remove listing", "contact"],
+    },
+    {
+        "title": "Guide appendix",
+        "path": "appendix/",
+        "category": "Reference",
+        "summary": "Open compact reference tables, contact paths, downloads, and supporting guide information.",
+        "keywords": ["appendix", "reference", "table", "download", "contacts"],
+    },
+    {
+        "title": "About and creation process",
+        "path": "about/",
+        "category": "About",
+        "summary": "Read the guide purpose, data-compilation method, limitations, and a reusable model for local resource research.",
+        "keywords": ["about", "creation process", "method", "data", "research", "limitations"],
+    },
+    {
+        "title": "Post events in Raton and Colfax County",
+        "path": "post-events-raton/",
+        "category": "Task guide",
+        "county": "Colfax",
+        "summary": "Find event calendars and promotion channels for Raton and Colfax County.",
+        "keywords": ["Raton", "Colfax", "event", "calendar", "post event"],
+    },
+    {
+        "title": "Post events in Trinidad and Las Animas County",
+        "path": "post-events-trinidad/",
+        "category": "Task guide",
+        "county": "Las Animas",
+        "summary": "Find event calendars and promotion channels for Trinidad and Las Animas County.",
+        "keywords": ["Trinidad", "Las Animas", "event", "calendar", "post event"],
+    },
+    {
+        "title": "Post events in Huerfano County",
+        "path": "post-events-huerfano/",
+        "category": "Task guide",
+        "county": "Huerfano",
+        "summary": "Find event calendars and promotion channels for Walsenburg, La Veta, and Huerfano County.",
+        "keywords": ["Huerfano", "Walsenburg", "La Veta", "event", "calendar", "post event"],
+    },
+    {
+        "title": "Advertise in Trinidad and Las Animas County",
+        "path": "advertise-trinidad/",
+        "category": "Task guide",
+        "county": "Las Animas",
+        "summary": "Find advertising, media, visitor, and community promotion contacts in and around Trinidad.",
+        "keywords": ["Trinidad", "Las Animas", "advertise", "media", "newspaper", "radio"],
+    },
+    {
+        "title": "Colfax County business visibility",
+        "path": "colfax-business/",
+        "category": "Task guide",
+        "county": "Colfax",
+        "summary": "Find business directories, support organizations, visitor channels, and local promotion routes in Colfax County.",
+        "keywords": ["Colfax", "business", "directory", "support", "tourism", "customers"],
+    },
+    {
+        "title": "Las Animas County nonprofit outreach",
+        "path": "las-animas-nonprofit/",
+        "category": "Task guide",
+        "county": "Las Animas",
+        "summary": "Find nonprofit partners, funding, referral routes, calendars, and public channels in Las Animas County.",
+        "keywords": ["Las Animas", "nonprofit", "partner", "funding", "referral", "community"],
+    },
+    {
+        "title": "Huerfano County calendars",
+        "path": "huerfano-calendars/",
+        "category": "Task guide",
+        "county": "Huerfano",
+        "summary": "Find event calendars, venue schedules, visitor calendars, and announcement routes in Huerfano County.",
+        "keywords": ["Huerfano", "calendar", "events", "Walsenburg", "La Veta", "schedule"],
+    },
+    {
+        "title": "Artist and gallery promotion",
+        "path": "artist-gallery-promotion/",
+        "category": "Task guide",
+        "summary": "Find artist directories, galleries, venues, open calls, cultural partners, and promotion routes across the region.",
+        "keywords": ["artist", "gallery", "open call", "registry", "venue", "creative business"],
     },
 ]
+
+
+def assistant_site_routes() -> list[dict]:
+    routes = [dict(item) for item in BASE_SITE_ROUTES]
+    for route_def in PROMOTE_ROUTE_DEFS:
+        routes.append(
+            {
+                "title": f"{route_def['title']} across the tri-county region",
+                "path": f"promote/?route={quote_plus(route_def['key'])}#promotion-results",
+                "category": "Promotion finder",
+                "summary": route_def["summary"],
+                "keywords": [route_def["title"], route_def["query"], "regional promotion"],
+            }
+        )
+        for county in ("Colfax", "Las Animas", "Huerfano"):
+            routes.append(
+                {
+                    "title": f"{route_def['title']} in {county} County",
+                    "path": (
+                        "promote/?county="
+                        f"{quote_plus(county)}&route={quote_plus(route_def['key'])}#promotion-results"
+                    ),
+                    "category": "Promotion finder",
+                    "county": county,
+                    "summary": route_def["summary"],
+                    "keywords": [route_def["title"], route_def["query"], county, "promotion"],
+                }
+            )
+    for item in routes:
+        item.setdefault("area_served", item.get("county") or "Colfax Las Animas Huerfano")
+        item.setdefault("action", "Open this guide page for the full route, filters, links, and next actions.")
+    return routes
 
 
 def rel(path: str, depth: int = 0) -> str:
@@ -4006,6 +4179,8 @@ def write_data_files(rows: list[dict], summary: dict) -> None:
         "national_funding_opportunities": national_funding,
         "national_funding_watch_sources": national_funding_sources,
         "resource_discovery_sources": resource_discovery_sources,
+        "free_tools": [public_data_item(item) for item in PROMOTION_TOOLS],
+        "site_routes": [public_data_item(item) for item in assistant_site_routes()],
         "posting_spaces": [public_data_item(item) for item in POSTING_SPACES],
         "physical_ad_locations": physical_ad_locations,
         "persona_routes": [public_data_item(item) for item in PERSONA_ROUTES],
@@ -4045,6 +4220,92 @@ def write_data_files(rows: list[dict], summary: dict) -> None:
 
 def html_escape(value: object) -> str:
     return html.escape(str(value or ""), quote=True)
+
+
+def promotion_tool_cards(items: list[dict] | None = None) -> str:
+    cards = []
+    for item in items if items is not None else PROMOTION_TOOLS:
+        access_types = [clean_text(value) for value in item.get("access_types") or [] if clean_text(value)]
+        keywords = [clean_text(value) for value in item.get("keywords") or [] if clean_text(value)]
+        badges = "".join(
+            f'<span class="tool-pill">{html_escape(label)}</span>'
+            for label in [item.get("category"), item.get("format"), *access_types]
+            if label
+        )
+        source_link = ""
+        source_url = clean_text(item.get("source_url"))
+        has_nonprofit_offer = any("nonprofit" in label.casefold() for label in access_types)
+        if source_url and source_url.rstrip("/") != clean_text(item.get("url")).rstrip("/"):
+            source_link_label = "Plan or eligibility details" if has_nonprofit_offer else "Official details"
+            source_link = (
+                f'<a class="tool-detail-link" href="{html_escape(source_url)}" target="_blank" '
+                f'rel="noreferrer">{source_link_label}</a>'
+            )
+        nonprofit_note = clean_text(item.get("nonprofit_note"))
+        searchable = " ".join(
+            clean_text(value)
+            for value in [
+                item.get("name"),
+                item.get("category"),
+                item.get("format"),
+                item.get("use"),
+                item.get("note"),
+                nonprofit_note,
+                *access_types,
+                *keywords,
+            ]
+            if clean_text(value)
+        )
+        cards.append(
+            f"""
+            <article class="tool-card" data-tool-card data-tool-category="{html_escape(item.get('category'))}"
+              data-tool-format="{html_escape(item.get('format'))}" data-tool-access="{html_escape(' '.join(access_types))}"
+              data-tool-search="{html_escape(searchable)}">
+              <div class="tool-card__meta">{badges}</div>
+              <h3><a href="{html_escape(item.get('url'))}" target="_blank" rel="noreferrer">{html_escape(item.get('name'))}</a></h3>
+              <p>{html_escape(item.get('use'))}</p>
+              <p class="source-note">{html_escape(item.get('note'))}</p>
+              {f'<p class="tool-nonprofit-note"><strong>For nonprofits:</strong> {html_escape(nonprofit_note)}</p>' if nonprofit_note and has_nonprofit_offer else ''}
+              {source_link}
+            </article>
+            """
+        )
+    return "\n".join(cards)
+
+
+def promotion_tool_filters() -> str:
+    categories = sorted(
+        {clean_text(item.get("category")) for item in PROMOTION_TOOLS if clean_text(item.get("category"))},
+        key=str.casefold,
+    )
+    category_options = "".join(
+        f'<option value="{html_escape(category)}">{html_escape(category)}</option>'
+        for category in categories
+    )
+    return f"""
+    <form class="tool-filters" data-tool-filters role="search" aria-label="Filter free tools">
+      <label class="tool-filter-search">Search tools
+        <input type="search" data-tool-query autocomplete="off" placeholder="Try flyer, CRM, forms, audio, nonprofit...">
+      </label>
+      <label>Category
+        <select data-tool-category>
+          <option value="All">All categories</option>
+          {category_options}
+        </select>
+      </label>
+      <label>Access or format
+        <select data-tool-access>
+          <option value="All">All access types</option>
+          <option value="nonprofit">Nonprofit offers</option>
+          <option value="open-source">Open-source software</option>
+          <option value="desktop">Desktop software</option>
+          <option value="web">Web apps and services</option>
+        </select>
+      </label>
+      <button class="button button-soft" type="reset">Clear</button>
+      <p class="tool-filter-status" data-tool-status role="status" aria-live="polite"></p>
+    </form>
+    """
 
 
 def enrich_directory_source(item: dict) -> dict:
@@ -4849,7 +5110,7 @@ def page_shell(
         </head>
         <body class="page-{html_escape(active)}">
           <a class="skip-link" href="#main">Skip to content</a>
-          <div class="site-watermark" data-preview-watermark hidden><span>Draft</span><span class="site-watermark__detail"> preview</span></div>
+          <div class="site-watermark" data-preview-watermark hidden aria-hidden="true">Draft preview</div>
           {audio_markup}
           {intro_curtain}
           <header class="site-header">
@@ -4920,7 +5181,7 @@ def page_shell(
             {music_bar}
             <a class="back-to-top" href="#main">Back to top</a>
           </div>
-          <section class="directory-assistant" data-directory-assistant data-network-url="{rel('network/index.html', depth)}" data-submit-url="{rel('submit/index.html', depth)}" aria-label="Directory assistant">
+          <section class="directory-assistant" data-directory-assistant data-site-root="{rel('', depth)}" data-network-url="{rel('network/index.html', depth)}" data-submit-url="{rel('submit/index.html', depth)}" aria-label="Directory assistant">
             <button class="directory-assistant__toggle" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="directory-assistant-panel">
               <span class="assistant-dot" aria-hidden="true"></span>
               Ask directory
@@ -4957,7 +5218,7 @@ def page_shell(
                 </div>
                 <button class="directory-assistant__close" type="button" aria-label="Close directory assistant">Close</button>
               </div>
-              <p class="directory-assistant__intro" id="directory-assistant-intro">Search local listings, funding, calendars, media, and physical promotion contacts. Add a town or county to narrow the results.</p>
+              <p class="directory-assistant__intro" id="directory-assistant-intro">Ask for a listing, guide page, free tool, funding route, calendar, media contact, or physical promotion location. Add a town or county when place matters.</p>
               <p class="sr-only" id="directory-assistant-hint">Results update after submitting the form or after a short pause while typing. Press Escape to close this panel.</p>
               <form class="directory-assistant__form" role="search">
                 <label for="directory-assistant-query">What are you trying to find?</label>
@@ -4975,6 +5236,7 @@ def page_shell(
                 <button type="button" data-assistant-prompt="catering">Food &amp; catering</button>
                 <button type="button" data-assistant-prompt="nonprofit">Nonprofits</button>
                 <button type="button" data-assistant-prompt="business support">Business help</button>
+                <button type="button" data-assistant-prompt="free tools">Free tools</button>
               </div>
               <div class="directory-assistant__status" id="directory-assistant-status" role="status" aria-live="polite" aria-atomic="true"></div>
               <div class="directory-assistant__guidance" data-assistant-guidance role="region" aria-label="Suggested next steps" hidden>
@@ -5138,16 +5400,7 @@ def home_page(summary: dict) -> str:
 
 
 def plan_page() -> str:
-    tool_cards = "\n".join(
-        f"""
-        <article class="tool-card">
-          <h3><a href="{html_escape(item['url'])}" target="_blank" rel="noreferrer">{html_escape(item['name'])}</a></h3>
-          <p>{html_escape(item['use'])}</p>
-          <p class="source-note">{html_escape(item['note'])}</p>
-        </article>
-        """
-        for item in PROMOTION_TOOLS
-    )
+    tool_cards = promotion_tool_cards([item for item in PROMOTION_TOOLS if item.get("featured")])
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">Plan Your Growth</p>
@@ -5188,6 +5441,7 @@ def plan_page() -> str:
         <p class="section-note">Plan limits change. Treat these as popular online starting points and check current free-tier limits before relying on them for a campaign.</p>
       </div>
       <div class="tool-grid">{tool_cards}</div>
+      <div class="section-actions"><a class="button button-soft" href="../templates/index.html#free-tools">Search all free and nonprofit tools</a></div>
     </section>
     <section class="section">
       <div class="section-heading">
@@ -6493,16 +6747,7 @@ def templates_page() -> str:
         """
         for title, purpose, personalize, body in templates
     )
-    tools = "\n".join(
-        f"""
-        <article class="tool-card">
-          <h3><a href="{html_escape(tool['url'])}" target="_blank" rel="noreferrer">{html_escape(tool['name'])}</a></h3>
-          <p>{html_escape(tool['use'])}</p>
-          <p class="source-note">{html_escape(tool['note'])}</p>
-        </article>
-        """
-        for tool in PROMOTION_TOOLS
-    )
+    tools = promotion_tool_cards()
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">Templates</p>
@@ -6528,13 +6773,16 @@ def templates_page() -> str:
       </div>
       <div class="template-grid">{items}</div>
     </section>
-    <section class="section">
+    <section class="section" id="free-tools">
       <div class="section-heading">
-        <p class="eyebrow">Useful free or freemium tools</p>
+        <p class="eyebrow">Free software, web apps, and nonprofit offers</p>
         <h2>Build the packet, list, form, or flyer without adding unnecessary software.</h2>
-        <p class="section-note">Check current free-plan limits before relying on any tool for a public campaign or mailing list.</p>
+        <p class="section-note">Search general free plans, open-source desktop software, and programs made available to eligible nonprofits. Check current plan limits and eligibility on the provider's official page before moving a team or mailing list.</p>
       </div>
-      <div class="tool-grid">{tools}</div>
+      {promotion_tool_filters()}
+      <div class="tool-grid" data-tool-grid>{tools}</div>
+      <p class="empty-state" data-tool-empty hidden>No tools match those filters. Clear a filter or try a broader term.</p>
+      <div class="section-actions"><button class="button button-soft" type="button" data-tool-more hidden>Show more tools</button></div>
     </section>
     {next_action_block(1, [
         ("Find places to send outreach packets", "amplifiers/"),
@@ -6980,21 +7228,23 @@ def write_static_assets() -> None:
     .skip-link:focus { top: 12px; }
     .site-watermark {
       position: fixed;
-      top: max(12px, env(safe-area-inset-top));
-      right: max(12px, env(safe-area-inset-right));
-      z-index: 28;
+      inset-inline: 0;
+      bottom: max(8vh, env(safe-area-inset-bottom));
+      z-index: 12;
       pointer-events: none;
-      min-height: 34px;
-      padding: 7px 10px;
-      border: 1px solid rgba(23,48,71,0.15);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.76);
-      color: rgba(23,48,71,0.72);
-      box-shadow: 0 10px 24px rgba(23,48,71,0.09);
-      backdrop-filter: blur(12px);
-      font-size: 0.66rem;
+      width: 100%;
+      min-height: 0;
+      padding: 0 20px;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      box-shadow: none;
+      opacity: 0.10;
+      font-size: 1.2rem;
       font-weight: 800;
       letter-spacing: 0.12em;
+      line-height: 1.2;
+      text-align: center;
       text-transform: uppercase;
       white-space: nowrap;
     }
@@ -7353,7 +7603,31 @@ def write_static_assets() -> None:
     .source-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
     .source-grid.compact { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
     .mini-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-    .tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; }
+    .tool-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .tool-grid > * { min-width: 0; }
+    .tool-filters {
+      display: grid;
+      grid-template-columns: minmax(240px, 1.5fr) minmax(180px, 0.8fr) minmax(190px, 0.9fr) auto;
+      gap: 12px;
+      align-items: end;
+      margin: 0 0 18px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.62);
+    }
+    .tool-filters label { display: grid; min-width: 0; gap: 6px; color: var(--ink); font-size: 0.78rem; font-weight: 800; }
+    .tool-filters input, .tool-filters select { width: 100%; min-width: 0; min-height: 44px; }
+    .tool-filters .button { min-height: 44px; }
+    .tool-filter-status { grid-column: 1 / -1; min-height: 1.2em; margin: 0; color: var(--ink-soft); font-size: 0.86rem; }
+    .tool-card { display: flex; min-height: 310px; flex-direction: column; overflow-wrap: anywhere; }
+    .tool-card[hidden] { display: none; }
+    .tool-card__meta { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+    .tool-pill { display: inline-flex; align-items: center; min-height: 24px; padding: 3px 7px; border: 1px solid rgba(23,48,71,0.12); border-radius: 999px; background: rgba(220,238,232,0.58); color: var(--ink); font-size: 0.68rem; font-weight: 800; }
+    .tool-card h3 { margin-top: 0; }
+    .tool-card .source-note { margin-top: auto; }
+    .tool-nonprofit-note { color: var(--ink-soft); font-size: 0.82rem; line-height: 1.45; }
+    .tool-detail-link { display: inline-flex; align-self: flex-start; margin-top: 4px; font-size: 0.82rem; font-weight: 800; }
     .steps-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
     .template-grid { grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
     .stats-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
@@ -8875,11 +9149,15 @@ def write_static_assets() -> None:
     .funding-terms dd { margin: 3px 0 0; color: var(--ink-soft); font-size: 0.84rem; line-height: 1.45; overflow-wrap: anywhere; }
     .funding-card__actions { margin-top: auto; padding-top: 14px; }
     @media (max-width: 900px) {
+      .site-watermark { font-size: 1rem; }
       .funding-filter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .funding-grid { grid-template-columns: 1fr; }
       .county-promote-grid { grid-template-columns: 1fr; }
+      .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .tool-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 640px) {
+      .site-watermark { bottom: max(9vh, env(safe-area-inset-bottom)); padding-inline: 12px; font-size: 0.9rem; }
       .funding-filter-panel { margin: 14px 0 18px; padding: 12px 0; }
       .funding-filter-grid { grid-template-columns: 1fr; gap: 8px; }
       .funding-card { padding: 13px; }
@@ -8892,6 +9170,10 @@ def write_static_assets() -> None:
       .physical-filter-panel { margin: 12px 0 16px; padding: 12px 0; }
       .promote-filter-grid,
       .physical-filter-grid { grid-template-columns: 1fr; gap: 8px; }
+      .tool-grid { grid-template-columns: 1fr; gap: 10px; }
+      .tool-filters { grid-template-columns: 1fr; gap: 8px; padding: 12px; }
+      .tool-filter-status { grid-column: 1; }
+      .tool-card { min-height: 0; padding: 13px; }
       .promote-route-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
       .promote-route-card { min-height: 138px; padding: 12px; }
       .promote-route-card h3 { font-size: 0.98rem; }
@@ -8917,8 +9199,7 @@ def write_static_assets() -> None:
       .site-nav { gap: 4px; }
       .site-nav a, .nav-trigger { padding: 4px 3px; font-size: 0.66rem; }
       .nav-menu--promote { max-height: min(68vh, 520px); }
-      .site-watermark { top: 5px; right: 5px; min-height: 26px; padding: 4px 7px; font-size: 0.58rem; letter-spacing: 0.08em; }
-      .site-watermark__detail { display: none; }
+      .site-watermark { bottom: max(9vh, env(safe-area-inset-bottom)); padding-inline: 10px; font-size: 0.82rem; letter-spacing: 0.08em; }
     }
     @media print {
       .site-header, .site-watermark, .hero-actions, .tool-panel, .copy-button, .corner-controls, .directory-assistant, .download-row, .nav-yucca-flourish { display: none; }
@@ -9515,7 +9796,9 @@ def write_static_assets() -> None:
         "Amplifier": "Promotion channel",
         "Physical ad location": "Physical promotion contact",
         "Posting path": "Posting route",
-        "Funding opportunity": "Funding"
+        "Funding opportunity": "Funding",
+        "Free tool": "Free tool or service",
+        "Site route": "Guide page"
       }[item.assistant_type] || category;
     }
 
@@ -9526,6 +9809,8 @@ def write_static_assets() -> None:
         || item.best_for
         || item.short_description
         || item.asks
+        || item.use
+        || item.note
         || "Local route for finding a relevant organization, program, service, or promotion channel.";
     }
 
@@ -9536,12 +9821,31 @@ def write_static_assets() -> None:
     }
 
     function assistantContactMarkup(item) {
+      if (item.assistant_type === "Site route" && item.path !== undefined) {
+        return `<div class="resource-links"><a class="resource-contact-link" href="${escapeHtml(assistantSiteUrl(item.path))}">Open guide page</a></div>`;
+      }
+      if (item.assistant_type === "Free tool") {
+        const links = [];
+        if (item.url) links.push(`<a class="resource-contact-link" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">Website</a>`);
+        if (item.source_url && item.source_url !== item.url) links.push(`<a class="resource-contact-link" href="${escapeHtml(item.source_url)}" target="_blank" rel="noreferrer">Plan or eligibility</a>`);
+        return `<div class="resource-links">${links.join("")}</div>`;
+      }
       const sourceUrls = [
         ...splitList(item.source_url),
         ...splitList(item.url),
         ...(item.links || []).map(link => link.url).filter(Boolean)
       ];
       return contactLinkMarkup({ ...item, source_url: sourceUrls.join("; ") }, { compact: true });
+    }
+
+    function assistantTitleMarkup(item, title) {
+      if (item.assistant_type === "Site route" && item.path !== undefined) {
+        return `<a class="entity-name-link" href="${escapeHtml(assistantSiteUrl(item.path))}" aria-label="Open ${escapeHtml(title)}">${escapeHtml(title)}</a>`;
+      }
+      if (item.assistant_type === "Free tool" && item.url) {
+        return `<a class="entity-name-link" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer" aria-label="Open ${escapeHtml(title)} website">${escapeHtml(title)}</a>`;
+      }
+      return entityNameMarkup(item, title);
     }
 
     function assistantCard(item) {
@@ -9557,9 +9861,9 @@ def write_static_assets() -> None:
           <div class="assistant-result__meta">
             ${metaLabels.map((label, index) => `<span${index === 0 ? ' class="assistant-result__type"' : ""}>${escapeHtml(label)}</span>`).join("")}
           </div>
-          <h3>${entityNameMarkup(item, title)}</h3>
+          <h3>${assistantTitleMarkup(item, title)}</h3>
           ${physicalIndicatorMarkup(item)}
-          ${onlineConnectionMarkup(item)}
+          ${["Site route", "Free tool"].includes(item.assistant_type) ? "" : onlineConnectionMarkup(item)}
           ${outreachChannelMarkup(item, { compact: true })}
           <p class="assistant-result__description">${escapeHtml(description)}</p>
           ${nextStep ? `<p class="assistant-result__next"><strong>Next:</strong> ${escapeHtml(nextStep)}</p>` : ""}
@@ -9597,7 +9901,11 @@ def write_static_assets() -> None:
         item.fiscal_sponsor_policy,
         item.advertising_marketing_eligibility,
         item.free_to_apply_or_enroll,
-        item.match_requirement
+        item.match_requirement,
+        item.use,
+        item.note,
+        item.nonprofit_note,
+        item.access_types
       ]);
       const keywords = searchableText([
         item.public_keywords,
@@ -9614,7 +9922,9 @@ def write_static_assets() -> None:
         item.posting_note,
         item.reader_action,
         item.status,
-        item.provider
+        item.provider,
+        item.format,
+        item.path
       ]);
       return {
         title: title.toLowerCase(),
@@ -9634,6 +9944,30 @@ def write_static_assets() -> None:
     }
 
     const ASSISTANT_INTENTS = [
+      {
+        id: "tools",
+        search: "free",
+        signals: ["free tool", "free tools", "free software", "open source", "open-source", "web app", "nonprofit software", "software for nonprofits", "flyer maker", "form builder", "email tool", "crm tool"],
+        guidance: "It sounds like you need software or an online service without adding a large recurring cost.",
+        question: "Do you need design, forms, email, social scheduling, audio and video, or a nonprofit-specific offer?",
+        suggestions: [
+          ["Design and flyers", "design"],
+          ["Forms and documents", "forms"],
+          ["Email and contacts", "email"],
+          ["Nonprofit offers", "nonprofit"]
+        ],
+        specific: [
+          ["flyer", "design"],
+          ["form", "forms"],
+          ["email", "email"],
+          ["crm", "crm"],
+          ["audio", "audio"],
+          ["video", "video"],
+          ["open source", "open-source"],
+          ["open-source", "open-source"],
+          ["nonprofit", "nonprofit"]
+        ]
+      },
       {
         id: "flyers",
         search: "flyer location",
@@ -9889,7 +10223,8 @@ def write_static_assets() -> None:
                 ["Get listed", "directory"],
                 ["Promote an event", "events"],
                 ["Find funding", "funding"],
-                ["Find local help", "business support"]
+                ["Find local help", "business support"],
+                ["Find free tools", "free tools"]
               ].map(([label, value]) => ({ label, query: value }))
             : []
         };
@@ -9924,6 +10259,9 @@ def write_static_assets() -> None:
         }
         return /\b(media|news|advertis|directory|tourism|visitor|chamber|business support|public office|promotion)\b/.test(fields.category);
       }
+      if (intent === "tools") {
+        return item.assistant_type === "Free tool" || (item.assistant_type === "Site route" && item.category === "Tools");
+      }
       return true;
     }
 
@@ -9941,7 +10279,9 @@ def write_static_assets() -> None:
         ...(DATA.amplifier_channels || []).map(item => ({ ...item, assistant_type: "Amplifier" })),
         ...(DATA.physical_ad_locations || []).map(item => ({ ...item, assistant_type: "Physical ad location" })),
         ...(DATA.posting_spaces || []).map(item => ({ ...item, assistant_type: "Posting path" })),
-        ...(DATA.national_funding_opportunities || []).map(item => ({ ...item, assistant_type: "Funding opportunity" }))
+        ...(DATA.national_funding_opportunities || []).map(item => ({ ...item, assistant_type: "Funding opportunity" })),
+        ...(DATA.free_tools || []).map(item => ({ ...item, assistant_type: "Free tool" })),
+        ...(DATA.site_routes || []).map(item => ({ ...item, assistant_type: "Site route" }))
       ];
       const scored = pools.map(item => {
         const fields = assistantSearchFields(item);
@@ -9963,6 +10303,8 @@ def write_static_assets() -> None:
           "Physical ad location": 5,
           "Posting path": 5,
           "Funding opportunity": 7,
+          "Free tool": 8,
+          "Site route": 18,
           "Current item": 4,
           "Listing": 3
         }[item.assistant_type] || 1;
@@ -10282,6 +10624,90 @@ def write_static_assets() -> None:
         }, { passive: true });
         render();
       });
+    }
+
+    function initFreeToolFilters() {
+      const form = document.querySelector("[data-tool-filters]");
+      const grid = document.querySelector("[data-tool-grid]");
+      if (!form || !grid) return;
+      const query = form.querySelector("[data-tool-query]");
+      const category = form.querySelector("[data-tool-category]");
+      const access = form.querySelector("[data-tool-access]");
+      const status = form.querySelector("[data-tool-status]");
+      const empty = document.querySelector("[data-tool-empty]");
+      const more = document.querySelector("[data-tool-more]");
+      const cards = [...grid.querySelectorAll("[data-tool-card]")];
+      let compact = window.matchMedia("(max-width: 640px)").matches;
+      let visibleLimit = compact ? 6 : Number.POSITIVE_INFINITY;
+
+      function matchesAccess(card, value) {
+        if (!value || value === "all") return true;
+        const accessText = String(card.dataset.toolAccess || "").toLowerCase();
+        const formatText = String(card.dataset.toolFormat || "").toLowerCase();
+        if (value === "nonprofit") return accessText.includes("nonprofit");
+        if (value === "open-source") return accessText.includes("open-source");
+        if (value === "desktop") return formatText.includes("desktop");
+        if (value === "web") return formatText.includes("web");
+        return true;
+      }
+
+      function render() {
+        const terms = normalizedSearchTerms(query?.value || "");
+        const selectedCategory = String(category?.value || "All");
+        const selectedAccess = String(access?.value || "All").toLowerCase();
+        const matches = cards.filter(card => {
+          const searchText = String(card.dataset.toolSearch || "").toLowerCase();
+          const categoryMatch = selectedCategory === "All" || card.dataset.toolCategory === selectedCategory;
+          return categoryMatch && matchesAccess(card, selectedAccess) && terms.every(term => searchText.includes(term));
+        });
+        const visible = matches.slice(0, visibleLimit);
+        const visibleSet = new Set(visible);
+        cards.forEach(card => { card.hidden = !visibleSet.has(card); });
+        if (empty) empty.hidden = matches.length > 0;
+        if (status) {
+          status.textContent = matches.length
+            ? `Showing ${visible.length} of ${matches.length} matching tool${matches.length === 1 ? "" : "s"}.`
+            : "No matching tools.";
+        }
+        if (more) {
+          const remaining = Math.max(0, matches.length - visible.length);
+          more.hidden = remaining === 0;
+          more.textContent = remaining ? `Show ${Math.min(6, remaining)} more tools` : "All tools shown";
+        }
+      }
+
+      form.addEventListener("input", () => {
+        visibleLimit = compact ? 6 : Number.POSITIVE_INFINITY;
+        render();
+      });
+      form.addEventListener("change", () => {
+        visibleLimit = compact ? 6 : Number.POSITIVE_INFINITY;
+        render();
+      });
+      form.addEventListener("reset", () => {
+        window.setTimeout(() => {
+          visibleLimit = compact ? 6 : Number.POSITIVE_INFINITY;
+          render();
+        }, 0);
+      });
+      more && more.addEventListener("click", () => {
+        visibleLimit += 6;
+        render();
+      });
+      window.addEventListener("resize", () => {
+        const nextCompact = window.matchMedia("(max-width: 640px)").matches;
+        if (nextCompact === compact) return;
+        compact = nextCompact;
+        visibleLimit = compact ? 6 : Number.POSITIVE_INFINITY;
+        render();
+      });
+      render();
+    }
+
+    function assistantSiteUrl(path = "") {
+      const root = document.querySelector("[data-directory-assistant]");
+      const base = new URL(root?.dataset.siteRoot || "./", document.baseURI);
+      return new URL(String(path || ""), base).href;
     }
 
     function initNationalFundingSearch() {
@@ -11064,6 +11490,7 @@ def write_static_assets() -> None:
     initNavigationYucca();
     syncDirectoryDetails();
     initProgressiveLists();
+    initFreeToolFilters();
     initNationalFundingSearch();
     initSourceSearch();
     initPromoteSearch();

@@ -39,6 +39,8 @@ def build_dashboard() -> dict:
     funding_watch = load_json(ROOT / "review" / "national-funding-watch" / "national-funding-watch-latest.json")
     discovery_registry = load_json(ROOT / "data" / "resource-discovery-sources.json")
     resource_discovery = load_json(ROOT / "review" / "resource-discovery" / "resource-discovery-latest.json")
+    free_tools = load_json(ROOT / "data" / "free-tools.json")
+    free_tools_review = load_json(ROOT / "review" / "free-tools" / "free-tools-latest.json")
     quality = load_json(DEFAULT_OUT_DIR / "directory-quality-latest.json")
     link_audit = load_json(DEFAULT_OUT_DIR / "internal-link-audit-latest.json")
 
@@ -51,6 +53,7 @@ def build_dashboard() -> dict:
     outreach_summary = outreach_review.get("summary") or {}
     funding_watch_summary = funding_watch.get("summary") or {}
     discovery_summary = resource_discovery.get("summary") or {}
+    free_tools_summary = free_tools_review.get("summary") or {}
     action_queue = []
 
     def add_action(count: int, label: str, next_action: str, priority: str) -> None:
@@ -166,6 +169,26 @@ def build_dashboard() -> dict:
         "Open these pages normally; do not remove a source because of bot blocking or a temporary request failure.",
         "low",
     )
+    add_action(
+        int(free_tools_summary.get("changed") or 0)
+        + int(free_tools_summary.get("new_baselines") or 0)
+        + int(free_tools_summary.get("term_reviews") or 0),
+        "free-tool or nonprofit-offer pages waiting for wording review",
+        "Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory.",
+        "medium",
+    )
+    add_action(
+        int(free_tools_summary.get("candidate_links") or 0),
+        "free-tool candidate links waiting for review",
+        "Open each official candidate and add it only when it fills a real guide task without duplicating an existing tool.",
+        "low",
+    )
+    add_action(
+        int(free_tools_summary.get("failed") or 0),
+        "free-tool pages needing a normal-browser check",
+        "Open failed pages normally; do not remove a tool solely because automation was blocked or timed out.",
+        "low",
+    )
 
     return {
         "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -182,6 +205,8 @@ def build_dashboard() -> dict:
             "national_funding_opportunities": len(funding_directory.get("opportunities") or []),
             "national_funding_watch_sources": int(funding_watch_summary.get("sources") or 0),
             "resource_discovery_sources": len(discovery_registry.get("sources") or []),
+            "free_tools": len(free_tools.get("tools") or []),
+            "free_tool_discovery_sources": len(free_tools.get("discovery_sources") or []),
         },
         "latest_checks": {
             "directory_quality": quality.get("status") or "not run",
@@ -211,6 +236,10 @@ def build_dashboard() -> dict:
             "resource_discovery_changed": int(discovery_summary.get("changed") or 0),
             "resource_discovery_broken": int(discovery_summary.get("confirmed_broken") or 0),
             "resource_discovery_failures": int(discovery_summary.get("check_failures") or 0),
+            "free_tool_pages_checked": int(free_tools_summary.get("checked_ok") or 0),
+            "free_tool_pages_changed": int(free_tools_summary.get("changed") or 0),
+            "free_tool_candidate_links": int(free_tools_summary.get("candidate_links") or 0),
+            "free_tool_checks_failed": int(free_tools_summary.get("failed") or 0),
         },
         "action_queue": sorted(action_queue, key=lambda item: ({"high": 0, "medium": 1, "low": 2}[item["priority"]], -item["count"])),
     }
@@ -239,6 +268,8 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- Curated national funding opportunities: {inventory['national_funding_opportunities']}",
         f"- National funding watch sources: {inventory['national_funding_watch_sources']}",
         f"- Resource-discovery source hubs: {inventory['resource_discovery_sources']}",
+        f"- Curated free tools and nonprofit offers: {inventory['free_tools']}",
+        f"- Free-tool discovery pages: {inventory['free_tool_discovery_sources']}",
         "",
         "## Latest Checks",
         "",
@@ -269,6 +300,10 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- Resource-discovery pages changed: {checks['resource_discovery_changed']}",
         f"- Confirmed broken resource-discovery hubs: {checks['resource_discovery_broken']}",
         f"- Resource-discovery checks needing attention: {checks['resource_discovery_failures']}",
+        f"- Free-tool pages checked: {checks['free_tool_pages_checked']}",
+        f"- Free-tool pages changed: {checks['free_tool_pages_changed']}",
+        f"- Free-tool candidate links collected: {checks['free_tool_candidate_links']}",
+        f"- Free-tool checks needing attention: {checks['free_tool_checks_failed']}",
         "",
         "## Action Queue",
         "",
