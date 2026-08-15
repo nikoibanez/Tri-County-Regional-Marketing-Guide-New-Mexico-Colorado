@@ -32,7 +32,9 @@ jobs:
           python-version: "3.11"
 
       - name: Build canonical site
-        run: python tools/build_netlify_deep_guide.py
+        run: |
+          python tools/build_netlify_deep_guide.py
+          python tools/inject_deluxe_legacy_context.py
 
       - name: Compile maintenance scripts
         run: >-
@@ -41,6 +43,7 @@ jobs:
           tools/apply_directory_exclusions.py
           tools/directory_outreach.py
           tools/build_netlify_deep_guide.py
+          tools/inject_deluxe_legacy_context.py
           scripts/audit_update_sources.py
           scripts/audit_national_funding_sources.py
           scripts/audit_resource_discovery_sources.py

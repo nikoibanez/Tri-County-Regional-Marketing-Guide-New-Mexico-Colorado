@@ -1,9 +1,10 @@
 [build]
-  command = "python tools/build_netlify_deep_guide.py"
+  command = "python tools/build_netlify_deep_guide.py && python tools/inject_deluxe_legacy_context.py"
   publish = "dist/tri-county-netlify-guide-deep"
 
 [build.environment]
-  PUBLIC_SITE_ORIGIN = "https://newmexicocoloradoguide.netlify.app"
+  PUBLIC_SITE_ORIGIN = "https://deluxe-horse-207efc.netlify.app"
+  PYTHON_VERSION = "3.11"
 
 [[headers]]
   for = "/*"

@@ -30,7 +30,9 @@ jobs:
           python-version: "3.11"
 
       - name: Build static site
-        run: python tools/build_netlify_deep_guide.py
+        run: |
+          python tools/build_netlify_deep_guide.py
+          python tools/inject_deluxe_legacy_context.py
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
