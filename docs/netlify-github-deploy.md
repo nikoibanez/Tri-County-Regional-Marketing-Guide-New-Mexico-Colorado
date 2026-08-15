@@ -19,7 +19,7 @@ https://github.com/nikoibanez/Tri-County-Regional-Marketing-Guide-New-Mexico-Col
 Build settings:
 
 ```text
-Build command: python tools/build_netlify_deep_guide.py
+Build command: python tools/build_netlify_deep_guide.py && python tools/inject_deluxe_legacy_context.py
 Publish directory: dist/tri-county-netlify-guide-deep
 Python version: 3.11
 ```
@@ -41,7 +41,7 @@ After connecting the repo:
 Set `PUBLIC_SITE_ORIGIN` to the public origin in both Netlify environment variables and GitHub repository variables:
 
 ```text
-https://newmexicocoloradoguide.netlify.app
+https://deluxe-horse-207efc.netlify.app
 ```
 
-The generator uses that value for canonical links, structured data, social metadata, `robots.txt`, and the sitemap. It defaults to `https://newmexicocoloradoguide.netlify.app`, the current production domain. Keep the same value in Netlify and GitHub. When a custom domain is ready, update the value, make that domain primary in Netlify, rebuild, and submit the replacement sitemap in Google Search Console.
+The generator uses that value for canonical links, structured data, social metadata, `robots.txt`, and the sitemap. It defaults to `https://deluxe-horse-207efc.netlify.app`, the current production domain. Keep the same value in Netlify and GitHub. When a custom domain is ready, update the value, make that domain primary in Netlify, rebuild, and submit the replacement sitemap in Google Search Console.
