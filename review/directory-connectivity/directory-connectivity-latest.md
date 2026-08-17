@@ -1,29 +1,35 @@
 # Directory Online Connection Review
 
-Generated: 2026-08-13T19:25:34.381853+00:00
+Generated: 2026-08-17T15:21:20.694889+00:00
 
 This review distinguishes a first-party website from a hosted directory, tourism page, social profile, email, phone, street address, or missing contact route. An HTTP response does not prove that an organization is active or that page content is current.
 
 ## Summary
 
 - Published directory entries reviewed: 1362
-- First-party website candidates: 195
-- Live first-party business links eligible for the public animation: 128
-- Live direct websites: 167
-- Direct website links needing a normal-browser check: 28
-- Live hosted profiles or directory pages: 333
-- Hosted links needing a normal-browser check: 702
+- First-party website candidates: 201
+- Live first-party business links eligible for the public animation: 125
+- Live direct websites: 163
+- Direct website links needing a normal-browser check: 32
+- Live hosted profiles or directory pages: 907
+- Hosted links needing a normal-browser check: 128
 - Entries with contact details but no URL: 74
 - Entries with no online or direct contact path: 58
-- Unique URLs checked: 590
-- Confirmed broken URLs: 0
-- Script-access limits such as 403 or TLS errors: 125
+- Unique URLs checked: 597
+- Confirmed broken URLs: 7
+- Script-access limits such as 403 or TLS errors: 128
 
 The companion CSV contains all entries and their assigned connection group.
 
 ## Confirmed Broken Listing URLs
 
-- None found by this scripted check.
+- All Seasons Gift Shop (Raton): https://allseasonsgiftshop.business.site/
+- Boom Noodles (Trinidad): https://boom-noodles.com
+- Lindsey Living (Angel Fire): https://angelfirechamber.org/business/lindsey-living/
+- Rooms At The Club (La Veta): https://www.roomsattheclub.com/
+- The Royal Tavern (Trinidad): https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html
+- Trails End Motel (Trinidad): https://jimandmelissa.org
+- Trinidad State Collaboratory (Trinidad): https://trinidadstate.edu/collaboratory/index.html
 
 ## Listings Without Any URL
 
@@ -131,7 +137,6 @@ The companion CSV contains all entries and their assigned connection group.
 - Segundo - Segundo, Las Animas (no contact path)
 - Starkville - Starkville, Las Animas (no contact path)
 - Arts/culture/tourism audiences - Trinidad, Las Animas (no contact path)
-- Boom Noodles - Trinidad, Las Animas (phone, address)
 - Great Wall Restaurant - Trinidad, Las Animas (phone, address)
 - Trinidad State College - Trinidad, Las Animas (no contact path)
 - Tyrone / Villegreen - Tyrone, Las Animas (no contact path)

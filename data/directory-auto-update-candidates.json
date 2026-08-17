@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-13",
+  "generated_at": "2026-08-17",
   "publication_note": "Automatically refreshed from watched public directory and tourism pages. Treat these as candidate updates, not official directory additions, until a human confirms the linked source.",
   "summary": {
     "sources_watched": 15,
     "pages_checked": 32,
-    "pages_failed": 0,
-    "already_represented": 349,
-    "possible_new_leads": 62,
+    "pages_failed": 8,
+    "already_represented": 284,
+    "possible_new_leads": 59,
     "priority_new_leads": 0,
-    "low_confidence_text_leads": 62
+    "low_confidence_text_leads": 59
   },
   "watched_sources": [
     {
@@ -85,7 +85,7 @@
       "source_role": "Event spots, event calendar, event submission, visitor-facing programs",
       "why_watch": "Primary visitor-facing source for Trinidad events and event submission routes.",
       "pages_checked": 2,
-      "possible_new_leads": 1,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -96,7 +96,7 @@
       "source_role": "Venues, event facilities, travel groups, catering-adjacent planning routes",
       "why_watch": "Useful for venues, event spaces, group travel, weddings, and catering-adjacent outreach.",
       "pages_checked": 2,
-      "possible_new_leads": 2,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -825,39 +825,6 @@
       "source_type": "Regional tourism and event source",
       "source_page": "https://southerncoloradotourism.com/events/",
       "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Visit Trinidad Colorado –",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Visit Trinidad Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://visittrinidadcolorado.com/upcoming-events/",
-      "listing_url": "https://visittrinidadcolorado.com/upcoming-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Visit Trinidad Colorado –",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Visit Trinidad Meetings, Weddings, and Venue Routes",
-      "source_type": "Meetings, conventions, weddings, and venue tourism source",
-      "source_page": "https://visittrinidadcolorado.com/meetings-conventions/",
-      "listing_url": "https://visittrinidadcolorado.com/meetings-conventions/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Visit Trinidad Colorado –",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Visit Trinidad Meetings, Weddings, and Venue Routes",
-      "source_type": "Meetings, conventions, weddings, and venue tourism source",
-      "source_page": "https://visittrinidadcolorado.com/weddings/",
-      "listing_url": "https://visittrinidadcolorado.com/weddings/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     }
