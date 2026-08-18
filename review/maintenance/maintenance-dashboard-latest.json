@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T19:57:48-06:00",
+  "generated_at": "2026-08-18T15:55:29+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1498,
@@ -10,7 +10,7 @@
     "outreach_review_entries": 1362,
     "outreach_review_shortcuts": 104,
     "outreach_review_total": 1466,
-    "national_funding_opportunities": 60,
+    "national_funding_opportunities": 73,
     "national_funding_watch_sources": 10,
     "resource_discovery_sources": 45,
     "free_tools": 22,
@@ -35,11 +35,11 @@
     "shortcut_outreach_listed_routes": 19,
     "shortcut_outreach_ask_routes": 44,
     "shortcut_outreach_without_routes": 52,
-    "funding_watch_pages_checked": 0,
+    "funding_watch_pages_checked": 10,
     "funding_watch_pages_changed": 0,
-    "funding_watch_new_baselines": 0,
+    "funding_watch_new_baselines": 1,
     "funding_watch_confirmed_broken": 0,
-    "funding_watch_check_failures": 0,
+    "funding_watch_check_failures": 4,
     "resource_discovery_candidates": 176,
     "resource_discovery_changed": 11,
     "resource_discovery_broken": 0,
@@ -50,6 +50,12 @@
     "free_tool_checks_failed": 5
   },
   "action_queue": [
+    {
+      "priority": "high",
+      "count": 1,
+      "label": "national funding pages waiting for claim review",
+      "next_action": "Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory."
+    },
     {
       "priority": "medium",
       "count": 176,
@@ -97,6 +103,12 @@
       "count": 5,
       "label": "free-tool pages needing a normal-browser check",
       "next_action": "Open failed pages normally; do not remove a tool solely because automation was blocked or timed out."
+    },
+    {
+      "priority": "low",
+      "count": 4,
+      "label": "national funding pages needing a normal-browser check",
+      "next_action": "Open these pages normally; do not treat bot blocking or a temporary network error as a closed program."
     },
     {
       "priority": "low",
