@@ -1,6 +1,6 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-08-13T19:57:48-06:00
+Generated: 2026-08-18T15:52:14+00:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
@@ -14,7 +14,7 @@ Automation detects and drafts. A person approves public claims, directory change
 - Directory outreach rows reviewed: 1362
 - Directory shortcuts reviewed: 104
 - Total outreach records reviewed: 1466
-- Curated national funding opportunities: 60
+- Curated national funding opportunities: 73
 - National funding watch sources: 10
 - Resource-discovery source hubs: 45
 - Curated free tools and nonprofit offers: 22
@@ -24,10 +24,10 @@ Automation detects and drafts. A person approves public claims, directory change
 
 - Directory quality: pass
 - Internal links: pass
-- Source URLs checked: 119
+- Source URLs checked: 135
 - Confirmed broken or missing source URLs: 0
 - Source URLs requiring normal-browser confirmation: 0
-- Script-access limitations (not broken): 21
+- Script-access limitations (not broken): 28
 - Offline field-check records: 1
 - Deep-watch pages checked: 32
 - Deep-watch pages failed: 0

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T19:57:48-06:00",
+  "generated_at": "2026-08-18T15:52:14+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1498,
@@ -10,7 +10,7 @@
     "outreach_review_entries": 1362,
     "outreach_review_shortcuts": 104,
     "outreach_review_total": 1466,
-    "national_funding_opportunities": 60,
+    "national_funding_opportunities": 73,
     "national_funding_watch_sources": 10,
     "resource_discovery_sources": 45,
     "free_tools": 22,
@@ -19,10 +19,10 @@
   "latest_checks": {
     "directory_quality": "pass",
     "internal_links": "pass",
-    "source_urls_checked": 119,
+    "source_urls_checked": 135,
     "source_urls_confirmed_broken": 0,
     "source_urls_browser_check": 0,
-    "source_urls_script_limited": 21,
+    "source_urls_script_limited": 28,
     "source_field_checks": 1,
     "watch_pages_checked": 32,
     "watch_pages_failed": 0,
