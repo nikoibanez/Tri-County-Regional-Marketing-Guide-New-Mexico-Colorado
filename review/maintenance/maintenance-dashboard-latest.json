@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T19:57:48-06:00",
+  "generated_at": "2026-08-19T16:46:47+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1498,
@@ -10,7 +10,7 @@
     "outreach_review_entries": 1362,
     "outreach_review_shortcuts": 104,
     "outreach_review_total": 1466,
-    "national_funding_opportunities": 60,
+    "national_funding_opportunities": 73,
     "national_funding_watch_sources": 10,
     "resource_discovery_sources": 45,
     "free_tools": 22,
@@ -41,9 +41,9 @@
     "funding_watch_confirmed_broken": 0,
     "funding_watch_check_failures": 0,
     "resource_discovery_candidates": 176,
-    "resource_discovery_changed": 11,
+    "resource_discovery_changed": 17,
     "resource_discovery_broken": 0,
-    "resource_discovery_failures": 6,
+    "resource_discovery_failures": 5,
     "free_tool_pages_checked": 22,
     "free_tool_pages_changed": 0,
     "free_tool_candidate_links": 0,
@@ -88,7 +88,7 @@
     },
     {
       "priority": "low",
-      "count": 6,
+      "count": 5,
       "label": "resource-discovery hubs needing a normal-browser check",
       "next_action": "Open these pages normally; do not remove a source because of bot blocking or a temporary request failure."
     },

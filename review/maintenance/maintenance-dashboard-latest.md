@@ -1,6 +1,6 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-08-13T19:57:48-06:00
+Generated: 2026-08-19T16:46:47+00:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
@@ -14,7 +14,7 @@ Automation detects and drafts. A person approves public claims, directory change
 - Directory outreach rows reviewed: 1362
 - Directory shortcuts reviewed: 104
 - Total outreach records reviewed: 1466
-- Curated national funding opportunities: 60
+- Curated national funding opportunities: 73
 - National funding watch sources: 10
 - Resource-discovery source hubs: 45
 - Curated free tools and nonprofit offers: 22
@@ -46,9 +46,9 @@ Automation detects and drafts. A person approves public claims, directory change
 - Confirmed broken national funding URLs: 0
 - National funding source checks needing attention: 0
 - Resource candidate links collected: 176
-- Resource-discovery pages changed: 11
+- Resource-discovery pages changed: 17
 - Confirmed broken resource-discovery hubs: 0
-- Resource-discovery checks needing attention: 6
+- Resource-discovery checks needing attention: 5
 - Free-tool pages checked: 22
 - Free-tool pages changed: 0
 - Free-tool candidate links collected: 0
@@ -62,6 +62,6 @@ Automation detects and drafts. A person approves public claims, directory change
 - **MEDIUM - 1 free-tool or nonprofit-offer pages waiting for wording review:** Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory.
 - **LOW - 620 listings without an identified promotion route:** Enrich these only when a public page or direct contact supports a useful route; do not invent availability.
 - **LOW - 62 low-confidence text candidates:** Review only after the linked priority queue; do not publish from page text alone.
-- **LOW - 6 resource-discovery hubs needing a normal-browser check:** Open these pages normally; do not remove a source because of bot blocking or a temporary request failure.
+- **LOW - 5 resource-discovery hubs needing a normal-browser check:** Open these pages normally; do not remove a source because of bot blocking or a temporary request failure.
 - **LOW - 5 free-tool pages needing a normal-browser check:** Open failed pages normally; do not remove a tool solely because automation was blocked or timed out.
 - **LOW - 1 offline posting pathways awaiting a field check:** Confirm the physical location or owner-controlled posting policy locally.
