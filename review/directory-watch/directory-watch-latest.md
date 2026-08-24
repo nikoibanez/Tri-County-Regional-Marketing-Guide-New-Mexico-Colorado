@@ -1,6 +1,6 @@
 # Weekly Directory Query Check
 
-Generated: 2026-08-13
+Generated: 2026-08-24
 
 Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.
 
@@ -8,12 +8,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 
 - Sources watched: 15
 - Pages checked: 32
-- Pages failed: 0
-- Listing-like candidates found: 411
-- Already represented in guide: 349
-- Possible new leads: 62
-- Priority new leads: 0
-- Low-confidence text leads: 62
+- Pages failed: 8
+- Listing-like candidates found: 345
+- Already represented in guide: 284
+- Possible new leads: 61
+- Priority new leads: 1
+- Low-confidence text leads: 60
 
 ## Watch Sources
 
@@ -71,14 +71,24 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Possible new leads: 0
 - Priority new leads: 0
 
+Fetch issues:
+- [https://visittrinidadcolorado.com/dine/](https://visittrinidadcolorado.com/dine/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/stay/](https://visittrinidadcolorado.com/stay/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/shop/](https://visittrinidadcolorado.com/shop/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/resources-for-locals/](https://visittrinidadcolorado.com/resources-for-locals/) - HTTP Error 403: Forbidden
+
 ### Visit Trinidad Events and Submit-Event Routes
 
 - County: Las Animas
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary visitor-facing source for Trinidad events and event submission routes.
 - Pages checked: 2
-- Possible new leads: 1
+- Possible new leads: 0
 - Priority new leads: 0
+
+Fetch issues:
+- [https://visittrinidadcolorado.com/upcoming-events/](https://visittrinidadcolorado.com/upcoming-events/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - HTTP Error 403: Forbidden
 
 ### Visit Trinidad Meetings, Weddings, and Venue Routes
 
@@ -86,8 +96,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Meetings, conventions, weddings, and venue tourism source
 - Why watch: Useful for venues, event spaces, group travel, weddings, and catering-adjacent outreach.
 - Pages checked: 2
-- Possible new leads: 2
+- Possible new leads: 0
 - Priority new leads: 0
+
+Fetch issues:
+- [https://visittrinidadcolorado.com/meetings-conventions/](https://visittrinidadcolorado.com/meetings-conventions/) - HTTP Error 403: Forbidden
+- [https://visittrinidadcolorado.com/weddings/](https://visittrinidadcolorado.com/weddings/) - HTTP Error 403: Forbidden
 
 ### LocalStash Trinidad
 
@@ -113,8 +127,8 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism business directory
 - Why watch: High-signal Huerfano visitor-facing directory for Walsenburg, La Veta, Cuchara, Gardner, dining, lodging, shopping, galleries, and attractions.
 - Pages checked: 1
-- Possible new leads: 0
-- Priority new leads: 0
+- Possible new leads: 1
+- Priority new leads: 1
 
 ### Spanish Peaks Country Dining, Lodging, and Venue Categories
 
@@ -131,7 +145,7 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.
 - Pages checked: 2
-- Possible new leads: 10
+- Possible new leads: 11
 - Priority new leads: 0
 
 ### Town of La Veta Business Directory
@@ -154,7 +168,9 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 
 ## Priority New Leads
 
-No priority new leads were found by this run.
+These have linked listing-page evidence. They are still not publication-ready additions until a human confirms the source page.
+
+- [Cuchara Mountain Trail Ride - Guided Horseback Rides](https://spanishpeakscountry.com/business-directory/listing/cuchara-mountain-trail-ride) - Huerfano; Spanish Peaks Country Business Directory; evidence: linked_text; confidence: medium-high
 
 ## Low-Confidence Text Candidates
 
@@ -197,13 +213,14 @@ These came from directory page text rather than individual listing links. Review
 - Twitter - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/annual-calendar-of-events/
 - Twitter - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/arts-and-culture/
 - Cuchara Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- Darrell Scott - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Farmer and Craft Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Methodist Church - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Heritage Park - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - La Veta Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - La Veta Library - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Lannie Garrett presents... Margarita Brothers.. A Jimmy Buffet Celebration - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- Mountain Mining Days - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Walsenburg Farm & Makers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Walsenburg Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - 420 Festival at Central Park - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
@@ -219,9 +236,6 @@ These came from directory page text rather than individual listing links. Review
 - Stonewall Fishing Tournament - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Summer Arts Exhibits - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - The Annual Collector's Series Calendar - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
-- Visit Trinidad Colorado – - Las Animas; Visit Trinidad Events and Submit-Event Routes; source page: https://visittrinidadcolorado.com/upcoming-events/
-- Visit Trinidad Colorado – - Las Animas; Visit Trinidad Meetings, Weddings, and Venue Routes; source page: https://visittrinidadcolorado.com/meetings-conventions/
-- Visit Trinidad Colorado – - Las Animas; Visit Trinidad Meetings, Weddings, and Venue Routes; source page: https://visittrinidadcolorado.com/weddings/
 
 ## Already Represented Sample
 
@@ -232,7 +246,6 @@ These came from directory page text rather than individual listing links. Review
 - A&W -> A&W (exact_url)
 - Advanced Air. LLC -> Advanced Air, LLC (exact_url)
 - Alderette Acupuncture and -> Raton Chamber Business Directory (exact_url)
-- AlMack's Kitchen -> AlMack's Kitchen (exact_url)
 - Alpha Design -> Raton Chamber Business Directory (exact_url)
 - Alys' Restaurant -> Alys' Restaurant (exact_url)
 - Alys' Restaurant -> Alys' Restaurant (exact_url)
@@ -241,7 +254,6 @@ These came from directory page text rather than individual listing links. Review
 - Anchor Motel -> Anchor Motel (exact_url)
 - Angel’s Glow Tanning & Oxygen Bar -> Angel's Glow Tanning & Oxygen Bar (exact_url)
 - Antique Avenue -> Antique Avenue (exact_url)
-- AR Mitchell Museum of Western Art -> AR Mitchell Museum of Western Art (exact_url)
 - Armidas -> Armidas (exact_url)
 - Artisans on Main -> Artisans on Main (exact_url)
 - Artisans on Main LLC -> Town of La Veta Business Directory (exact_url)
@@ -250,18 +262,20 @@ These came from directory page text rather than individual listing links. Review
 - Ayers Family Fitness -> Ayers Family Fitness (exact_url)
 - Bachman & Associates Real Estate -> Town of La Veta Business Directory (exact_url)
 - Become a Member -> Bachman & associates (exact_url)
-- Bella Luna Pizzeria -> AlMack's Kitchen (exact_url)
 - Best Western Rambler -> Best Western Rambler (exact_url)
 - Best Western Rambler -> Best Western Rambler (exact_url)
 - Big "R" -> Town of La Veta Business Directory (exact_url)
-- Big R -> AR Mitchell Museum of Western Art (exact_url)
 - Big R -> Big R (exact_url)
-- Bob & Earl's -> AlMack's Kitchen (exact_url)
 - Book Nook -> Town of La Veta Business Directory (exact_url)
-- Books & More -> AR Mitchell Museum of Western Art (exact_url)
-- Boom Noodles (Food Court at the Marketplace) -> AlMack's Kitchen (exact_url)
-- Brick City Tattoo -> AR Mitchell Museum of Western Art (exact_url)
-- Brick Road Bakery -> AlMack's Kitchen (exact_url)
-- Brick Road Bakery -> AR Mitchell Museum of Western Art (exact_url)
 - Brodsky Bookkeeping -> Brodsky Bookkeeping (exact_url)
 - Bud Hut -> Bud Hut (exact_url)
+- C Cubed Training -> C Cubed Training (exact_url)
+- C1B True Organics -> C1B True Organics (exact_url)
+- Canna City -> Canna City (exact_url)
+- Cannaco -> Cannaco (exact_url)
+- Capture Colorado -> Town of La Veta Business Directory (exact_url)
+- CARQUEST of Raton -> Raton Chamber Business Directory (exact_url)
+- Casa de Pajaros -> Casa de Pajaros (exact_url)
+- Casa de Pajaros -> Town of La Veta Business Directory (exact_url)
+- Chae Organics -> Chae Organics (exact_normalized)
+- Charlie's Market -> Charlie's Market (exact_url)

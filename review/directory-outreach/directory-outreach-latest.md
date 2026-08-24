@@ -1,6 +1,6 @@
 # Directory Outreach Channel Review
 
-Generated: 2026-08-14T01:49:18.105964+00:00
+Generated: 2026-08-24T15:35:25.327790+00:00
 
 This report reviews every published directory listing for practical physical and digital outreach routes. A listed route means the attached listing information identifies that kind of channel. Ask first means the entity may be a sensible contact, but placement, sharing, price, eligibility, and acceptance are not promised.
 
