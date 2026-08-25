@@ -1,6 +1,6 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-08-25T05:06:35-06:00
+Generated: 2026-08-25T05:18:28-06:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
@@ -10,7 +10,7 @@ Automation detects and drafts. A person approves public claims, directory change
 - Consolidated directory entries: 687
 - Registered update sources: 136
 - Deep-watch source groups: 15
-- Listing keyword index entries: 1490
+- Listing keyword index entries: 1498
 - Directory outreach rows reviewed: 1362
 - Directory shortcuts reviewed: 104
 - Total outreach records reviewed: 1466

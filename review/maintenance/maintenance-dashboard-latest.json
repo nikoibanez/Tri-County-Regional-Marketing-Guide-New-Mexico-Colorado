@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-25T05:06:35-06:00",
+  "generated_at": "2026-08-25T05:18:28-06:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1498,
     "consolidated_directory_entries": 687,
     "registered_update_sources": 136,
     "deep_watch_sources": 15,
-    "keyword_index_entries": 1490,
+    "keyword_index_entries": 1498,
     "outreach_review_entries": 1362,
     "outreach_review_shortcuts": 104,
     "outreach_review_total": 1466,

@@ -4,6 +4,31 @@ Static Netlify-ready guide for businesses, nonprofits, artists, creators, progra
 
 Production origin: `https://deluxe-horse-207efc.netlify.app`
 
+## What This Repo Builds
+
+This repository builds the canonical Stateline Guide site and its review artifacts from one Python generator and one data pipeline.
+
+- Generator: `tools/build_netlify_deep_guide.py`
+- Canonical public data: `data/tri_county_persona_resources.csv` and `data/tri_county_persona_resources.json`
+- Generated site: `dist/tri-county-netlify-guide-deep`
+- Deploy zip: `dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip`
+
+The site routes businesses, nonprofits, artists, programs, and service providers toward useful regional listings, promotion channels, funding, tools, and county-specific contacts.
+
+## Canonical Site Structure
+
+The top-level navigation is `Home`, `Directory`, `Funding`, `Arts & Culture`, `Promote`, `Counties`, `Guide`, and `Tools`.
+
+- `Directory` provides searchable businesses, organizations, venues, media, services, and support routes.
+- `Funding` provides grants, incentives, scholarships, loans, free support, and readiness resources.
+- `Arts & Culture` provides artists, galleries, makers, venues, calls, registries, and regional audio.
+- `Promote` routes events, advertisements, businesses, nonprofits, galleries, venues, and calendars by county.
+- `Counties` provides Colfax, Las Animas, and Huerfano entry points.
+- `Guide` explains the regional method, planning sequence, and creation process.
+- `Tools` provides templates, free or discounted services, posting aids, and update workflows.
+
+The six `Promote` route families retain Colfax, Las Animas, and Huerfano paths. See [`docs/canonical-integration-workflow.md`](docs/canonical-integration-workflow.md) for the integration rules.
+
 ## Optional GitHub Pages Fallback
 
 Netlify is the production deployment target. GitHub Pages remains available as a manually triggered fallback after Pages is enabled in the repository settings.
@@ -84,7 +109,7 @@ GitHub Actions can autonomously rebuild the site, run checks, archive snapshots,
 
 ## Immediate Directory Assistant
 
-Every generated page includes a small client-side "Ask directory" assistant. It searches the same public guide data used by the Network page and returns directory shortcuts, lead-bank rows, amplifier channels, and posting paths with source links and update reminders. It does not use an API or invent answers.
+Every generated page includes a small client-side routing assistant. It searches the same public guide data used by the Directory page and returns directory shortcuts, lead-bank rows, amplifier channels, and posting paths with source links and update reminders. It uses deterministic local data and does not require an API.
 
 ## Music Bar
 
