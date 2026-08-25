@@ -62,7 +62,7 @@ This repo includes a no-secret maintenance system. Deterministic scripts build, 
 - `scripts/build_update_source_registry.py` - builds the monitoring registry from public guide data.
 - `scripts/audit_update_sources.py` - checks monitored URLs and writes review reports.
 - `data/national-funding-opportunities.json` - curated national grants, fellowships, free support programs, deadlines, applicant rules, funding ranges, fiscal-sponsor notes, and marketing-cost guidance.
-- `scripts/audit_national_funding_sources.py` - compares ten national funding hubs with the previous successful snapshot and writes a human-review queue without changing public claims.
+- `scripts/audit_national_funding_sources.py` - runs separate economic-development, education, healthcare, nonprofit, and arts-and-culture sweeps across regional and national funding pages, then writes a human-review queue without changing public claims.
 - `scripts/validate_national_funding_data.py` - checks every funding record for required decision fields, searchable keywords, URLs, and sane funding ranges.
 - `data/resource-keyword-registry.json` - controlled phrases for grants, capital, fiscal sponsors, nonprofit directories, business directories, and artist opportunities.
 - `data/resource-discovery-sources.json` - high-value public registries and search hubs with cadence, purpose, and automation mode.
@@ -81,7 +81,7 @@ This repo includes a no-secret maintenance system. Deterministic scripts build, 
 - `scripts/smoke_test_site.py` - checks critical local or live routes without browser dependencies.
 - `.github/workflows/quality-gate.yml` - builds and runs all deterministic checks on pull requests and pushes.
 - `.github/workflows/source-audit.yml` - checks the complete source registry and opens a review pull request.
-- `.github/workflows/weekly-national-funding-watch.yml` - checks ten national funding hubs and opens a draft review pull request when the report changes.
+- `.github/workflows/weekly-national-funding-watch.yml` - checks the subject-tagged regional and national funding registry and opens a draft review pull request when the report changes.
 - `.github/workflows/weekly-resource-discovery.yml` - checks broader resource registries and opens a draft candidate-review pull request.
 - `.github/workflows/weekly-directory-query-check.yml` - checks fifteen high-signal source groups and opens a candidate-review pull request.
 - `.github/workflows/weekly-listing-keyword-sweep.yml` - rotates through public listing pages and opens a review pull request for search-keyword changes.

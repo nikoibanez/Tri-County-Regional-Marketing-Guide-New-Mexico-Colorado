@@ -5779,6 +5779,8 @@ FUNDING_AUDIENCE_FILTERS = (
     ("creative", "Creative businesses"),
     ("nonprofit", "Nonprofits"),
     ("economic development", "Economic development"),
+    ("education student scholarship", "Education and scholarships"),
+    ("health healthcare wellness mental", "Healthcare and wellness"),
     ("small business", "Small businesses"),
     ("women", "Women-owned businesses"),
     ("lgbtq", "LGBTQ-owned businesses"),
@@ -5793,7 +5795,10 @@ def funding_program_group(item: dict) -> str:
         return "Fellowships"
     if any(term in value for term in ("loan", "microloan", "capital", "credit", "financing")):
         return "Loans and capital"
-    if ("grant" in value and "research" not in value) or "apprenticeship award" in value:
+    if (
+        ("grant" in value and "research" not in value)
+        or any(term in value for term in ("apprenticeship award", "scholarship", "stipend", "sponsorship", "purchase award"))
+    ):
         return "Cash grants"
     if any(term in value for term in ("free", "accelerator", "education", "certification")):
         return "Free support programs"
@@ -5937,11 +5942,11 @@ def funding_page(rows: list[dict]) -> str:
     )}
     <section id="funding-finder" class="section funding-finder" aria-labelledby="national-funding-title">
       <div class="section-heading">
-        <p class="eyebrow">National funding finder</p>
+        <p class="eyebrow">Regional and national funding finder</p>
         <h2 id="national-funding-title">Search {len(NATIONAL_FUNDING_OPPORTUNITIES)} grants, capital, and free support programs.</h2>
         <p class="section-note">Filter by audience, timing, support type, or application cost. Closed rounds stay visible only when they are useful programs to monitor.</p>
       </div>
-      <div class="funding-filter-panel" role="search" aria-label="Filter national funding opportunities">
+      <div class="funding-filter-panel" role="search" aria-label="Filter regional and national funding opportunities">
         <label class="funding-search-label" for="funding-search">Search funding</label>
         <input id="funding-search" class="search-input" type="search" placeholder="Try artist, nonprofit, women-owned, fiscal sponsor, rolling, advertising...">
         <div class="funding-filter-grid">
