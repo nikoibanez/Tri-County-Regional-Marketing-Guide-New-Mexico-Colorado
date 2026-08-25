@@ -1,6 +1,6 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-08-25T05:18:28-06:00
+Generated: 2026-08-25T16:05:42+00:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
@@ -27,7 +27,7 @@ Automation detects and drafts. A person approves public claims, directory change
 - Source URLs checked: 135
 - Confirmed broken or missing source URLs: 0
 - Source URLs requiring normal-browser confirmation: 0
-- Script-access limitations (not broken): 28
+- Script-access limitations (not broken): 26
 - Offline field-check records: 1
 - Deep-watch pages checked: 32
 - Deep-watch pages failed: 8
