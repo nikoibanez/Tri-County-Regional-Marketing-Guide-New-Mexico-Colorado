@@ -3,7 +3,7 @@
   publish = "dist/tri-county-netlify-guide-deep"
 
 [build.environment]
-  PUBLIC_SITE_ORIGIN = "https://deluxe-horse-207efc.netlify.app"
+  PUBLIC_SITE_ORIGIN = "https://newmexicocoloradoguide.netlify.app"
   PYTHON_VERSION = "3.11"
 
 [[headers]]

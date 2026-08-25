@@ -92,13 +92,15 @@ def load_directory_connectivity_data() -> tuple[dict[str, dict], dict[str, dict]
 
 DIRECTORY_CONNECTIVITY_ENTRIES, DIRECTORY_CONNECTIVITY_CHECKS = load_directory_connectivity_data()
 
+DEFAULT_SITE_ORIGIN = "https://newmexicocoloradoguide.netlify.app"
+
 
 def normalize_origin(value: str) -> str:
-    value = (value or "").strip() or "https://deluxe-horse-207efc.netlify.app"
+    value = (value or "").strip() or DEFAULT_SITE_ORIGIN
     return value.rstrip("/") + "/"
 
 
-SITE_URL = normalize_origin(os.environ.get("PUBLIC_SITE_ORIGIN", "https://deluxe-horse-207efc.netlify.app"))
+SITE_URL = normalize_origin(os.environ.get("PUBLIC_SITE_ORIGIN", DEFAULT_SITE_ORIGIN))
 
 
 def load_json_records(path: Path, key: str) -> list[dict]:

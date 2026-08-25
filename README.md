@@ -2,7 +2,7 @@
 
 Static Netlify-ready guide for businesses, nonprofits, artists, creators, programs, and service providers working across Colfax County, Las Animas County, and Huerfano County.
 
-Production origin: `https://deluxe-horse-207efc.netlify.app`
+Production origin: `https://newmexicocoloradoguide.netlify.app`
 
 ## What This Repo Builds
 
