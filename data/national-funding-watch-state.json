@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-18T15:55:19+00:00",
+  "updated_at": "2026-08-25T16:07:13+00:00",
   "sources": {
     "grants-gov-search": {
       "name": "Grants.gov",
       "url": "https://www.grants.gov/search-grants",
-      "last_checked": "2026-08-18T15:55:19+00:00",
+      "last_checked": "2026-08-25T16:07:13+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "38914b2b42777149c8cb6a3532e06d61a0ef0edb5cf23f05c2f581fbe68a4bc1",
@@ -17,7 +17,7 @@
     "nea-grants": {
       "name": "National Endowment for the Arts Grants",
       "url": "https://www.arts.gov/grants",
-      "last_checked": "2026-08-18T15:55:19+00:00",
+      "last_checked": "2026-08-25T16:07:13+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "24949995dd6623de03d3902c8f960543236081915b4b5501e764a69a40eebf1c",
@@ -33,7 +33,7 @@
     "imls-funding": {
       "name": "Institute of Museum and Library Services Funding Opportunities",
       "url": "https://www.imls.gov/find-funding/how-to-apply/funding-opportunities",
-      "last_checked": "2026-08-18T15:55:19+00:00",
+      "last_checked": "2026-08-25T16:07:13+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "50b133542e339faf4631bb2459498cc1e487351ba97ec507857b402764b0a66d",
@@ -46,7 +46,7 @@
     "usda-rural-development": {
       "name": "USDA Rural Development Programs and Services",
       "url": "https://www.rd.usda.gov/programs-services",
-      "last_checked": "2026-08-18T15:55:19+00:00",
+      "last_checked": "2026-08-25T16:07:13+00:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -54,7 +54,7 @@
     "eda-funding": {
       "name": "U.S. Economic Development Administration Funding Opportunities",
       "url": "https://www.eda.gov/funding/funding-opportunities",
-      "last_checked": "2026-08-18T15:55:19+00:00",
+      "last_checked": "2026-08-25T16:07:13+00:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -62,7 +62,7 @@
     "candid-funding-search": {
       "name": "Candid Funding Search and Learning",
       "url": "https://learning.candid.org/free-access-to-foundation-directory",
-      "last_checked": "2026-08-18T15:55:19+00:00",
+      "last_checked": "2026-08-25T16:07:13+00:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -70,7 +70,7 @@
     "ifundwomen-grants": {
       "name": "IFundWomen Grants",
       "url": "https://www.ifundwomen.com/grants/apply-for-grants",
-      "last_checked": "2026-08-18T15:55:19+00:00",
+      "last_checked": "2026-08-25T16:07:13+00:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -78,7 +78,7 @@
     "nglcc-grants": {
       "name": "NGLCC Scholarships and Grants",
       "url": "https://nglcc.org/programs-initiatives/",
-      "last_checked": "2026-08-18T15:55:19+00:00",
+      "last_checked": "2026-08-25T16:07:13+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "e0aff9e8fee96c588fdadf3db38f8cdd521327c7851c1f9e339fc08344eef1af",
@@ -90,7 +90,7 @@
     "first-peoples-fund": {
       "name": "First Peoples Fund Fellowships",
       "url": "https://www.firstpeoplesfund.org/programs/fellowships",
-      "last_checked": "2026-08-18T15:55:19+00:00",
+      "last_checked": "2026-08-25T16:07:13+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "ca747c6954617e593146c1a31725b86822cc873bee56006ca73d4d8759147c2d",
@@ -111,7 +111,7 @@
     "nalac-fund-for-the-arts": {
       "name": "NALAC Fund for the Arts",
       "url": "https://www.nalac.org/grants/nalac-fund-for-the-arts/",
-      "last_checked": "2026-08-18T15:55:19+00:00",
+      "last_checked": "2026-08-25T16:07:13+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "7d9b5be43a7cb6e41660d6a216a0f72379526c75724063d5babcfc0a201048e7",
