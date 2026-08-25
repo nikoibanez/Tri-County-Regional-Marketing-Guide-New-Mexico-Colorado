@@ -1,5 +1,5 @@
 [build]
-  command = "python tools/build_netlify_deep_guide.py && python tools/inject_deluxe_legacy_context.py"
+  command = "python scripts/verify_canonical_integration.py --source-only && python tools/build_netlify_deep_guide.py && python tools/inject_deluxe_legacy_context.py && python scripts/verify_canonical_integration.py"
   publish = "dist/tri-county-netlify-guide-deep"
 
 [build.environment]

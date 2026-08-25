@@ -15,6 +15,11 @@ def check(condition: bool, label: str, detail: str, rows: list[tuple[str, str, s
     rows.append(("PASS" if condition else "FAIL", label, detail))
 
 
+def attribute_has_idrefs(document: str, attribute: str, expected: set[str]) -> bool:
+    match = re.search(rf'\b{re.escape(attribute)}="([^"]+)"', document)
+    return bool(match and expected.issubset(set(match.group(1).split())))
+
+
 def main() -> int:
     html_files = sorted(SITE.rglob("*.html"))
     failures = 0
@@ -33,7 +38,16 @@ def main() -> int:
     check("<dialog" in index and 'id="directory-assistant-panel"' in index, "native assistant dialog", "Assistant uses native dialog markup", rows)
     check('aria-haspopup="dialog"' in index, "assistant opener semantics", "Ask directory button announces a dialog", rows)
     check('aria-labelledby="directory-assistant-title"' in index, "assistant title link", "Dialog is tied to a visible title", rows)
-    check('aria-describedby="directory-assistant-intro directory-assistant-hint"' in index, "assistant description link", "Dialog has visible and screen-reader instructions", rows)
+    check(
+        attribute_has_idrefs(
+            index,
+            "aria-describedby",
+            {"directory-assistant-intro", "directory-assistant-scope", "directory-assistant-hint"},
+        ),
+        "assistant description link",
+        "Dialog is tied to its visible scope and screen-reader instructions",
+        rows,
+    )
     check('aria-controls="directory-assistant-results"' in index, "assistant result control", "Search input controls the results region", rows)
     check('role="status"' in index and 'aria-live="polite"' in index, "assistant live status", "Result counts are announced politely", rows)
     check('role="list"' in index and 'role="listitem"' in app_js, "assistant result structure", "Results are exposed as list/listitem content", rows)

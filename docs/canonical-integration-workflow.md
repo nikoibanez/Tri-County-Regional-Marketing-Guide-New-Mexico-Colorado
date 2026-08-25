@@ -40,6 +40,21 @@ The optional regional audio player belongs only on Arts & Culture. A Draft previ
 6. Run the canonical build, exclusion check, tests, JavaScript syntax check, internal-link audit, directory-quality audit, and local smoke test before review.
 7. Merge only after a person reviews public claims, directory changes, eligibility language, contacts, deadlines, rates, and civic or legal guidance.
 
+## Luna Checkpoint Rule
+
+Luna is not a separate version of the guide. Work completed on Luna counts once it is committed and merged into canonical `master`. Uncommitted files on one computer cannot be seen by GitHub Actions or another Codex task, so they must remain in a dedicated worktree until they are reviewed and integrated.
+
+Every workflow that prepares an automated pull request or Codex proposal must:
+
+1. Check out `master` with full history and refresh `origin/master`.
+2. Refuse to continue unless `HEAD` equals the refreshed canonical checkpoint.
+3. Run `scripts/verify_canonical_integration.py --require-current-master --source-only` before collecting updates.
+4. Rebuild the canonical site and run `scripts/verify_canonical_integration.py` before returning a branch, pull request, issue, or AI proposal.
+5. Read the current open pull-request queue with `scripts/capture_open_pr_context.py` so overlapping review work is visible.
+6. Include the canonical base commit SHA and open-review context in the review text.
+
+This proves which accepted Luna work the automation saw. It does not authorize publication of unreviewed directory, funding, eligibility, deadline, rate, contact, civic, or legal claims.
+
 ## Weekly Coordination Review
 
 The weekly Codex maintenance task uses a clean worktree and this document as its contract. It should inspect open automation and integration pull requests, identify overlapping files or superseded structures, and propose the smallest safe reconciliation. It may prepare a draft pull request for code and infrastructure changes, but it must not merge, deploy, or publish unreviewed public claims.

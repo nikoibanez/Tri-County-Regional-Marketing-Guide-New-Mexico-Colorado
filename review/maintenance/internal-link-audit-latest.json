@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-13",
-  "site": "C:\\Users\\Alyxx and Niko\\Documents\\Tri-County-Guide-worktrees\\directory-verification-20260813\\dist\\tri-county-netlify-guide-deep",
+  "generated_at": "2026-08-25",
+  "site": "C:\\Temp\\tri-county-luna-integration\\dist\\tri-county-netlify-guide-deep",
   "status": "pass",
   "summary": {
-    "html_files": 26,
-    "local_references_checked": 2054,
+    "html_files": 27,
+    "local_references_checked": 2236,
     "missing_targets": 0,
     "missing_anchors": 0,
     "outside_site_targets": 0,

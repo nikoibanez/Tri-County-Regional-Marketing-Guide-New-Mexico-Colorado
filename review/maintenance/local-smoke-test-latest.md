@@ -1,7 +1,7 @@
 # Site Smoke Test
 
-Generated: 2026-08-13
-Target: C:\Users\Alyxx and Niko\Documents\Tri-County-Guide-worktrees\directory-verification-20260813\dist\tri-county-netlify-guide-deep
+Generated: 2026-08-25
+Target: C:\Temp\tri-county-luna-integration\dist\tri-county-netlify-guide-deep
 Mode: local
 Status: **PASS**
 

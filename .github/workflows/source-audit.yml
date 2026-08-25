@@ -28,11 +28,27 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          ref: master
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
+
+      - name: Verify current Luna/canonical checkpoint
+        id: canonical
+        run: |
+          git fetch origin master
+          python scripts/verify_canonical_integration.py --require-current-master --source-only
+          echo "base_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Capture open integration work
+        id: coordination
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/capture_open_pr_context.py
 
       - name: Build site data
         run: python tools/build_netlify_deep_guide.py
@@ -62,6 +78,9 @@ jobs:
       - name: Build maintenance dashboard
         run: python scripts/build_maintenance_dashboard.py
 
+      - name: Verify canonical generated structure
+        run: python scripts/verify_canonical_integration.py
+
       - name: Prepare review pull request
         id: review
         run: |
@@ -86,9 +105,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           REVIEW_BRANCH: ${{ steps.review.outputs.branch }}
+          CANONICAL_BASE_SHA: ${{ steps.canonical.outputs.base_sha }}
+          OPEN_PR_CONTEXT: ${{ steps.coordination.outputs.open_pr_context }}
         run: |
-          body="This automated pull request refreshes source status, the latest audit report, and the private maintenance dashboard. The report separates confirmed broken links from pages that only block scripted checks. Review browser-check items normally, and do not merge public claims, contact changes, eligibility, deadlines, rates, civic guidance, or directory additions without human confirmation."
-          if ! gh pr create --base master --head "$REVIEW_BRANCH" --title "Review scheduled source-audit results" --body "$body"; then
+          body="Canonical Luna/master checkpoint: $CANONICAL_BASE_SHA. Open review work checked before this run: $OPEN_PR_CONTEXT. This automated pull request refreshes source status, the latest audit report, and the private maintenance dashboard after checking the authoritative site structure and deploy paths. The report separates confirmed broken links from pages that only block scripted checks. Review browser-check items normally, and do not merge public claims, contact changes, eligibility, deadlines, rates, civic guidance, or directory additions without human confirmation."
+          if ! gh pr create --draft --base master --head "$REVIEW_BRANCH" --title "Review scheduled source-audit results" --body "$body"; then
             compare_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/master...${REVIEW_BRANCH}?expand=1"
             gh issue create --title "Source-audit review branch is ready" --body "$body Branch: $REVIEW_BRANCH One-click draft PR: $compare_url"
           fi

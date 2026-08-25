@@ -1,6 +1,6 @@
 # Resource Discovery Review
 
-Generated: 2026-08-13T18:47:14-06:00
+Generated: 2026-08-19T16:46:47+00:00
 
 This is a private candidate queue. A link or page change is not proof that a resource fits the guide or that an opportunity is open.
 
@@ -9,17 +9,17 @@ This is a private candidate queue. A link or page change is not proof that a res
 - Source hubs configured: 45
 - Source hubs checked: 45
 - Candidate links collected: 176
-- Changed pages: 11
-- New baselines: 12
+- Changed pages: 17
+- New baselines: 1
 - Confirmed broken URLs: 0
-- Script-access limitations: 6
-- Other check failures: 6
+- Script-access limitations: 5
+- Other check failures: 5
 
 ## Candidate Links
 
 ### [Grants.gov API and Opportunity Search](https://www.grants.gov/api/api-guide)
 
-Category: grants-public-funding. Page status: new_baseline.
+Category: grants-public-funding. Page status: unchanged.
 
 - [GRANTS.GOV](https://www.grants.gov/) - matched: grants
 - [https://www.grants.gov/system-to-system](https://www.grants.gov/system-to-system) - matched: grants
@@ -75,7 +75,7 @@ Category: grants-public-funding. Page status: unchanged.
 
 ### [CDFI Fund Certified CDFI List](https://www.cdfifund.gov/programs-training/certification/cdfi)
 
-Category: business-capital. Page status: unchanged.
+Category: business-capital. Page status: changed.
 
 - [CDFI Bond Guarantee Program](https://www.cdfifund.gov/programs-training/programs/cdfi-bond) - matched: CDFI
 - [CDFI Equitable Recovery Program](https://www.cdfifund.gov/programs-training/programs/erp) - matched: CDFI
@@ -107,7 +107,7 @@ Category: grants-public-funding. Page status: unchanged.
 
 ### [El Pomar Foundation Grantmaking](https://www.elpomar.org/grant-making/)
 
-Category: grants-public-funding. Page status: changed.
+Category: grants-public-funding. Page status: unchanged.
 
 - [Search Grants](https://www.elpomar.org/grant-making/search-grants/) - matched: grant, grants
 - [Apply](https://www.elpomar.org/grant-making/apply/) - matched: grant
@@ -136,7 +136,7 @@ Category: fiscal-sponsorship. Page status: unchanged.
 
 ### [Fiscal Sponsor Directory](https://fiscalsponsordirectory.org/)
 
-Category: fiscal-sponsorship. Page status: unchanged.
+Category: fiscal-sponsorship. Page status: changed.
 
 - [Fiscal Sponsorship](https://fiscalsponsordirectory.org/what-it-is/) - matched: fiscal sponsorship
 - [Fiscal Sponsorship: 6 Ways To Do It Right (eBook)](https://fiscalsponsordirectory.org/product/fiscal-sponsorship-6-ways-to-do-it-right-e-book/) - matched: fiscal sponsorship
@@ -158,7 +158,7 @@ Category: fiscal-sponsorship. Page status: unchanged.
 
 ### [IRS Exempt Organizations Business Master File](https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf)
 
-Category: nonprofit-directories. Page status: changed.
+Category: nonprofit-directories. Page status: unchanged.
 
 - [Español](https://www.irs.gov/es/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf) - matched: EO BMF, exempt organizations business master file
 - [Kreyòl ayisyen](https://www.irs.gov/ht/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf) - matched: EO BMF, exempt organizations business master file
@@ -190,11 +190,10 @@ Category: nonprofit-directories. Page status: changed.
 
 Category: nonprofit-directories. Page status: changed.
 
-- [Animal Rescue Mission](https://www.groundworksnm.org/nonprofit-directory/nonprofit/11038) - matched: mission, nonprofit directory
+- [The Center for Contemporary Arts](https://www.groundworksnm.org/nonprofit-directory/nonprofit/45758) - matched: arts, nonprofit directory
 - [City](https://www.groundworksnm.org/nonprofit-directory?order=city&sort=asc) - matched: city, nonprofit directory
-- [Parents, Families and Friends of Lesbians and Gays (PFLAG) - Silver City](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26892) - matched: city, nonprofit directory
+- [Eastern New Mexico State Fair](https://www.groundworksnm.org/nonprofit-directory/nonprofit/11366) - matched: nonprofit directory, state
 - [2](https://www.groundworksnm.org/nonprofit-directory?page=1) - matched: nonprofit directory
-- [2 Can Rescue](https://www.groundworksnm.org/nonprofit-directory/nonprofit/13483) - matched: nonprofit directory
 - [3](https://www.groundworksnm.org/nonprofit-directory?page=2) - matched: nonprofit directory
 - [4](https://www.groundworksnm.org/nonprofit-directory?page=3) - matched: nonprofit directory
 - [5](https://www.groundworksnm.org/nonprofit-directory?page=4) - matched: nonprofit directory
@@ -202,18 +201,19 @@ Category: nonprofit-directories. Page status: changed.
 - [7](https://www.groundworksnm.org/nonprofit-directory?page=6) - matched: nonprofit directory
 - [8](https://www.groundworksnm.org/nonprofit-directory?page=7) - matched: nonprofit directory
 - [9](https://www.groundworksnm.org/nonprofit-directory?page=8) - matched: nonprofit directory
+- [Abode Inc.](https://www.groundworksnm.org/nonprofit-directory/nonprofit/5423) - matched: nonprofit directory
 - [Advanced Search](https://www.groundworksnm.org/nonprofit-directory/advanced-search) - matched: nonprofit directory
+- [Albuquerque Center for Hope and Recovery](https://www.groundworksnm.org/nonprofit-directory/nonprofit/757) - matched: nonprofit directory
+- [Always In Blue, Inc](https://www.groundworksnm.org/nonprofit-directory/nonprofit/40252) - matched: nonprofit directory
 - [Browse by Name](https://www.groundworksnm.org/nonprofit-directory/all) - matched: nonprofit directory
-- [Chamber Music Festival](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26966) - matched: nonprofit directory
-- [Chihuahuan Desert Charities, INC](https://www.groundworksnm.org/nonprofit-directory/nonprofit/44900) - matched: nonprofit directory
-- [Desert Inc](https://www.groundworksnm.org/nonprofit-directory/nonprofit/27006) - matched: nonprofit directory
-- [Disability Rights New Mexico](https://www.groundworksnm.org/nonprofit-directory/nonprofit/3735) - matched: nonprofit directory
-- [Down Syndrome Foundation of Southeastern New Mexico](https://www.groundworksnm.org/nonprofit-directory/nonprofit/7092) - matched: nonprofit directory
-- [El Pueblo Health Services](https://www.groundworksnm.org/nonprofit-directory/nonprofit/9050) - matched: nonprofit directory
-- [Friends of the Bosque del Apache National Wildlife Refuge](https://www.groundworksnm.org/nonprofit-directory/nonprofit/7051) - matched: nonprofit directory
-- [Health Leadership Foundation](https://www.groundworksnm.org/nonprofit-directory/nonprofit/61165) - matched: nonprofit directory
-- [Highpointe Solutions](https://www.groundworksnm.org/nonprofit-directory/nonprofit/27095) - matched: nonprofit directory
-- [Institute of Historical Survey Foundation](https://www.groundworksnm.org/nonprofit-directory/nonprofit/10839) - matched: nonprofit directory
+- [Casa Milagro](https://www.groundworksnm.org/nonprofit-directory/nonprofit/1000) - matched: nonprofit directory
+- [Crime Stoppers of Las Cruces and Dona Ana County](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26996) - matched: nonprofit directory
+- [Desert View Family Counseling](https://www.groundworksnm.org/nonprofit-directory/nonprofit/3318) - matched: nonprofit directory
+- [Friends of Coronado Historic Site](https://www.groundworksnm.org/nonprofit-directory/nonprofit/11348) - matched: nonprofit directory
+- [Home for Women and Children](https://www.groundworksnm.org/nonprofit-directory/nonprofit/1268) - matched: nonprofit directory
+- [Hostel Internacional de Santa Fe](https://www.groundworksnm.org/nonprofit-directory/nonprofit/27105) - matched: nonprofit directory
+- [Land of Enchantment Clean Cities Coalition](https://www.groundworksnm.org/nonprofit-directory/nonprofit/11005) - matched: nonprofit directory
+- [last »](https://www.groundworksnm.org/nonprofit-directory?page=108) - matched: nonprofit directory
 
 ### [Colorado Nonprofit Association Member Directory](https://coloradononprofits.org/member-resources/nonprofit-member-directory/)
 
@@ -223,13 +223,13 @@ Category: nonprofit-directories. Page status: unchanged.
 
 ### [New Mexico Arts Artist Opportunities](https://nmarts.org/public-art/are-you-an-artist/)
 
-Category: artists-creative-opportunities. Page status: unchanged.
+Category: artists-creative-opportunities. Page status: changed.
 
 - [creative-industries](https://edd.newmexico.gov/business-development/creative-industries/) - matched: creative industries
 
 ### [Southwest Contemporary Classifieds](https://southwestcontemporary.com/classifieds/)
 
-Category: artists-creative-opportunities. Page status: new_baseline.
+Category: artists-creative-opportunities. Page status: changed.
 
 - [Call for Artists Call for Artists: Exhibition Opportunity for NM Woman-Identifying Artists August 30, 2026 July 3, 2026](https://southwestcontemporary.com/classifieds/call-for-artists-exhibition-opportunity-for-nm-woman-identifying-artists/) - matched: call for artists, exhibition opportunity
 - [Call for Artists](https://southwestcontemporary.com/call-for-artists/) - matched: call for artists
@@ -240,14 +240,14 @@ Category: artists-creative-opportunities. Page status: new_baseline.
 
 ### [CaFE Public Art Calls](https://www.callforentry.org/public-art/)
 
-Category: artists-creative-opportunities. Page status: new_baseline.
+Category: artists-creative-opportunities. Page status: unchanged.
 
 - [Public Art Archive™ (PAA)](http://www.publicartarchive.org) - matched: public art, public art archive
 - [Public Art Archive™ (PAA)](https://publicartarchive.org/) - matched: public art, public art archive
 
 ### [ZAPP Artist Event Applications](https://www.zapplication.org/)
 
-Category: artists-creative-opportunities. Page status: new_baseline.
+Category: artists-creative-opportunities. Page status: changed.
 
 - [Bellevue Arts Fair 2026 - Food Vendor Application](https://www.zapplication.org/event-info.php?ID=14237) - matched: vendor, vendor application
 - [Oktoberfest 2026 Retail Vendor Application](https://www.zapplication.org/event-info.php?ID=14342) - matched: vendor, vendor application
@@ -255,7 +255,7 @@ Category: artists-creative-opportunities. Page status: new_baseline.
 
 ### [Public Art Archive Artwork Submission](https://explore.publicartarchive.org/submission-form/)
 
-Category: artists-creative-opportunities. Page status: new_baseline.
+Category: artists-creative-opportunities. Page status: changed.
 
 - [Public Art Archive Team](https://explore.publicartarchive.org/about/public-art-archive-team/) - matched: public art, public art archive
 - [Review the Public Art Archive’s Content Submission Agreement .](https://explore.publicartarchive.org/content-submission-agreeement/) - matched: public art, public art archive
@@ -263,7 +263,7 @@ Category: artists-creative-opportunities. Page status: new_baseline.
 
 ### [Res Artis Open Calls](https://resartis.org/open-calls/)
 
-Category: artists-creative-opportunities. Page status: new_baseline.
+Category: artists-creative-opportunities. Page status: changed.
 
 - [2026-artist-residency-program-casa-de-mono](https://resartis.org/open-call/2026-artist-residency-program-casa-de-mono/) - matched: artist residency, open call
 - [2026-artist-residency-studio-programs-2](https://resartis.org/open-call/2026-artist-residency-studio-programs-2/) - matched: artist residency, open call
@@ -282,13 +282,13 @@ Category: artists-creative-opportunities. Page status: new_baseline.
 - [guatemalan-artist-residency-black-sand-beaches](https://resartis.org/open-call/guatemalan-artist-residency-black-sand-beaches/) - matched: artist residency, open call
 - [guatemalan-artist-residency-on-the-pacific-coast](https://resartis.org/open-call/guatemalan-artist-residency-on-the-pacific-coast/) - matched: artist residency, open call
 - [hub-feenix-artist-residency-2026-27](https://resartis.org/open-call/hub-feenix-artist-residency-2026-27/) - matched: artist residency, open call
+- [international-artist-residency-spring-2027-residence-dartiste-internationale-printemps-2027](https://resartis.org/open-call/international-artist-residency-spring-2027-residence-dartiste-internationale-printemps-2027/) - matched: artist residency, open call
 - [kala-yatra-international-artist-residency-2025-2026](https://resartis.org/open-call/kala-yatra-international-artist-residency-2025-2026/) - matched: artist residency, open call
 - [kala-yatra-international-artist-residency-nepal-2025-2026](https://resartis.org/open-call/kala-yatra-international-artist-residency-nepal-2025-2026/) - matched: artist residency, open call
 - [onview-artist-residency-february-may-2027](https://resartis.org/open-call/onview-artist-residency-february-may-2027/) - matched: artist residency, open call
 - [onview-artist-residency-program](https://resartis.org/open-call/onview-artist-residency-program/) - matched: artist residency, open call
 - [peaceful-artist-residency-on-guatemalas-pacific-coast-4](https://resartis.org/open-call/peaceful-artist-residency-on-guatemalas-pacific-coast-4/) - matched: artist residency, open call
 - [spring-2027-artist-residency-in-morocco-with-green-olive-arts](https://resartis.org/open-call/spring-2027-artist-residency-in-morocco-with-green-olive-arts/) - matched: artist residency, open call
-- [summer-2027-artist-residency-in-morocco-with-green-olive-art](https://resartis.org/open-call/summer-2027-artist-residency-in-morocco-with-green-olive-art/) - matched: artist residency, open call
 
 ### [Creative Capital Artist Opportunities](https://creative-capital.org/artist-resources/)
 
@@ -298,7 +298,7 @@ Category: artists-creative-opportunities. Page status: changed.
 
 ### [New Mexico Creative Industries Division Opportunities](https://www.edd.newmexico.gov/grants/cid-grants/)
 
-Category: artists-creative-opportunities. Page status: changed.
+Category: artists-creative-opportunities. Page status: unchanged.
 
 - [Creative Ambassadors](https://edd.newmexico.gov/divisions-and-offices/creative-industries/ci-ambassadors/) - matched: creative industries
 - [Creative Economy Insights](https://edd.newmexico.gov/creative-industries/) - matched: creative industries
@@ -318,6 +318,5 @@ Category: artists-creative-opportunities. Page status: changed.
 - [USDA Rural Development Business Programs](https://www.rd.usda.gov/programs-services/business-programs) - access_blocked; HTTP Error 403: Forbidden
 - [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - access_blocked; HTTP Error 403: Forbidden
 - [Candid Foundation Directory Free Access](https://learning.candid.org/free-access-to-foundation-directory) - access_blocked; HTTP Error 403: Forbidden
-- [ColoradoGives.org Organization Search](https://www.coloradogives.org/search) - tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
 - [Colorado Secretary of State Business Database](https://www.sos.state.co.us/biz/BusinessEntityCriteriaExt.do) - access_blocked; HTTP Error 403: Forbidden
 - [Colorado Creative Industries](https://oedit.colorado.gov/colorado-creative-industries) - access_blocked; HTTP Error 403: Forbidden

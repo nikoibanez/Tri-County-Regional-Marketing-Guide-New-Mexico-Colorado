@@ -1,25 +1,25 @@
 # Update Source Audit
 
-Generated: 2026-08-13
+Generated: 2026-08-18
 
 This report separates confirmed link failures from pages that merely block or confuse scripted checks.
 
 ## Summary
 
-- Records checked: 120
-- Web sources checked: 119
+- Records checked: 136
+- Web sources checked: 135
 - Confirmed broken or missing: 0
 - Normal-browser confirmation required: 0
-- Script-access limitations (not broken): 21
+- Script-access limitations (not broken): 28
 - Offline field-check records: 1
-- Human approval required: 75
+- Human approval required: 82
 
 ## Status Counts
 
-- access_blocked: 21
+- access_blocked: 28
 - field_check: 1
-- ok: 86
-- redirect: 12
+- ok: 94
+- redirect: 13
 
 ## Confirmed Broken Or Missing
 
@@ -34,12 +34,17 @@ No inconclusive network or server response is waiting on a normal-browser confir
 These are informational results, not broken-link findings. The page blocked scripted access or the local certificate checker could not validate its chain.
 
 - [Walsenburg / Huerfano](https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes) - Regional; civic; access_blocked; HTTP Error 403: Forbidden
-- [Yellow Pages Raton Business Listings](https://www.yellowpages.com/raton-nm/business-listings/1) - Colfax; directory; access_blocked; HTTP Error 403: Forbidden
 - [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
 - [Visit Angel Fire NM Get Listed](https://visitangelfirenm.com/get-listed/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
 - [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Las Animas; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Submit Your Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Las Animas; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Submit Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Tourism / Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
+- [Trinidad Community Foundation](https://www.trinidadcf.org/board.html) - Las Animas; funding; access_blocked; HTTP Error 429: Too Many Requests
+- [Trinidad Community Foundation Grant Process](https://www.trinidadcf.org/grants.html) - Las Animas; funding; access_blocked; HTTP Error 429: Too Many Requests
 - [Candid Funding Search and Learning](https://learning.candid.org/free-access-to-foundation-directory) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [IFundWomen Grants](https://www.ifundwomen.com/grants/apply-for-grants) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - National; funding; access_blocked; HTTP Error 403: Forbidden
@@ -54,6 +59,8 @@ These are informational results, not broken-link findings. The page blocked scri
 - [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [Las Animas County Government](https://lasanimascounty.colorado.gov/) - Las Animas; general; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Outdoor Recreation](https://visittrinidadcolorado.com/outdoor-recreation/) - Las Animas; general; access_blocked; HTTP Error 403: Forbidden
 
 ## Offline Field Checks
 
@@ -136,3 +143,10 @@ These are informational results, not broken-link findings. The page blocked scri
 - [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; Rural funding; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; Rural microbusiness loans / grants; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; Agriculture / producer grants; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [City of Raton Economic Development Programs](https://www.ratonnm.gov/business/economic_development/index.php) - Colfax; Startup / economic-development resource hub; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [El Raton Media Works Local Businesses](https://www.elratonmediaworks.org/local-businesses) - Colfax; Local business list; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [Groundworks New Mexico Nonprofit Directory](https://www.groundworksnm.org/nonprofit-directory/new-mexico-busin?combine=&order=city&page=32&sort=desc) - Colfax; Nonprofit directory; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [World Journal Services Directory](https://worldjournalnewspaper.com/services/) - Huerfano; Services directory; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [The Chronicle-News](https://www.thechronicle-news.com/) - Las Animas; Media / classifieds; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [Red River Chamber Vacation Guide](https://redriver.org/plan-your-trip/vacation-guide/) - Red River / Colfax; Vacation guide request; visitor mailing pathway; newsletter; Do not infer free placement, ad availability, acceptance, audience size, or endorsement.
+- [Colorado Nonprofit Association Directory](https://coloradononprofits.org/member-resources/nonprofit-member-directory/) - Regional; Nonprofit directory; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
