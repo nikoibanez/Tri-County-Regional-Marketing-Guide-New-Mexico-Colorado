@@ -265,7 +265,7 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- Directory outreach rows reviewed: {inventory['outreach_review_entries']}",
         f"- Directory shortcuts reviewed: {inventory['outreach_review_shortcuts']}",
         f"- Total outreach records reviewed: {inventory['outreach_review_total']}",
-        f"- Curated national funding opportunities: {inventory['national_funding_opportunities']}",
+        f"- Curated regional and national funding opportunities: {inventory['national_funding_opportunities']}",
         f"- National funding watch sources: {inventory['national_funding_watch_sources']}",
         f"- Resource-discovery source hubs: {inventory['resource_discovery_sources']}",
         f"- Curated free tools and nonprofit offers: {inventory['free_tools']}",

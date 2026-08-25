@@ -41,6 +41,13 @@ SIGNAL_TERMS = (
 )
 CONFIRMED_BROKEN = {"broken", "invalid_url", "missing_url"}
 SCRIPT_LIMITS = {"access_blocked", "tls_error"}
+SWEEP_TOPIC_LABELS = {
+    "economic-development": "Economic development",
+    "education": "Education",
+    "healthcare": "Healthcare",
+    "nonprofits": "Nonprofits",
+    "arts-culture": "Arts & culture",
+}
 
 
 class VisibleTextParser(HTMLParser):
@@ -204,6 +211,36 @@ def audit_sources(sources: list[dict], previous_state: dict, timeout: int, no_ne
     return results, state
 
 
+def validate_watch_registry(payload: dict) -> list[str]:
+    errors: list[str] = []
+    sources = payload.get("sources") or []
+    required_sweeps = payload.get("required_sweeps") or []
+    sweep_ids = {
+        str(item.get("id") or "")
+        for item in required_sweeps
+        if isinstance(item, dict)
+    }
+    if sweep_ids != set(SWEEP_TOPIC_LABELS):
+        errors.append("The watch registry must configure all five required subject sweeps.")
+    if not sources:
+        errors.append("The watch registry has no sources.")
+    covered: set[str] = set()
+    for source in sources:
+        source_id = str(source.get("id") or "<missing id>")
+        topics = source.get("sweep_topics") or []
+        if not topics:
+            errors.append(f"{source_id} has no sweep_topics values.")
+            continue
+        unsupported = sorted(set(topics) - set(SWEEP_TOPIC_LABELS))
+        if unsupported:
+            errors.append(f"{source_id} has unsupported sweep topics: {', '.join(unsupported)}.")
+        covered.update(set(topics) & set(SWEEP_TOPIC_LABELS))
+    missing = sorted(set(SWEEP_TOPIC_LABELS) - covered)
+    if missing:
+        errors.append(f"The source registry does not cover: {', '.join(missing)}.")
+    return errors
+
+
 def summarize(results: list[dict]) -> dict:
     status_counts: dict[str, int] = {}
     change_counts: dict[str, int] = {}
@@ -212,6 +249,22 @@ def summarize(results: list[dict]) -> dict:
         change = str(result.get("change_status") or "unknown")
         status_counts[status] = status_counts.get(status, 0) + 1
         change_counts[change] = change_counts.get(change, 0) + 1
+    sweep_counts: dict[str, dict[str, int]] = {}
+    for topic_id, label in SWEEP_TOPIC_LABELS.items():
+        topic_results = [
+            result
+            for result in results
+            if topic_id in (result["source"].get("sweep_topics") or [])
+        ]
+        sweep_counts[topic_id] = {
+            "label": label,
+            "configured": len(topic_results),
+            "checked": sum(1 for result in topic_results if result["check"].get("status") != "not_checked"),
+            "ok": sum(1 for result in topic_results if result["check"].get("status") == "ok"),
+            "changed": sum(1 for result in topic_results if result.get("change_status") == "changed"),
+            "new_baselines": sum(1 for result in topic_results if result.get("change_status") == "new_baseline"),
+            "check_failures": sum(1 for result in topic_results if result.get("change_status") == "check_failed"),
+        }
     return {
         "sources": len(results),
         "checked": sum(1 for result in results if result["check"].get("status") != "not_checked"),
@@ -222,13 +275,14 @@ def summarize(results: list[dict]) -> dict:
         "check_failures": change_counts.get("check_failed", 0),
         "status_counts": dict(sorted(status_counts.items())),
         "change_counts": dict(sorted(change_counts.items())),
+        "sweep_counts": sweep_counts,
     }
 
 
 def write_markdown(payload: dict, path: Path) -> None:
     summary = payload["summary"]
     lines = [
-        "# National Funding Source Watch",
+        "# Regional and National Funding Source Watch",
         "",
         f"Generated: {payload['generated_at']}",
         "",
@@ -244,9 +298,33 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- Script-access limitations (not broken): {summary['script_access_limited']}",
         f"- Other check failures: {summary['check_failures']}",
         "",
-        "## Review First",
+        "## Separate Subject Sweeps",
         "",
     ]
+    for topic_id, counts in summary["sweep_counts"].items():
+        source_names = [
+            result["source"].get("name", result["source"].get("id", "Unnamed source"))
+            for result in payload["results"]
+            if topic_id in (result["source"].get("sweep_topics") or [])
+        ]
+        lines.extend(
+            [
+                f"### {counts['label']}",
+                "",
+                (
+                    f"Configured {counts['configured']}; checked {counts['checked']}; "
+                    f"successful {counts['ok']}; changed {counts['changed']}; "
+                    f"new baselines {counts['new_baselines']}; failed checks {counts['check_failures']}."
+                ),
+                "",
+                "Sources: " + "; ".join(source_names) + ".",
+                "",
+            ]
+        )
+    lines.extend([
+        "## Review First",
+        "",
+    ])
     review_items = [result for result in payload["results"] if result["change_status"] in {"changed", "new_baseline"}]
     if not review_items:
         lines.append("No changed page is waiting for funding-claim review.")
@@ -256,7 +334,11 @@ def write_markdown(payload: dict, path: Path) -> None:
             check = result["check"]
             lines.append(f"### [{source['name']}]({source['url']})")
             lines.append("")
-            lines.append(f"Change status: {result['change_status']}. Focus: {', '.join(source.get('focus') or [])}.")
+            sweep_labels = [SWEEP_TOPIC_LABELS[value] for value in source.get("sweep_topics") or []]
+            lines.append(
+                f"Change status: {result['change_status']}. "
+                f"Sweeps: {', '.join(sweep_labels)}. Focus: {', '.join(source.get('focus') or [])}."
+            )
             lines.append("")
             snippets = check.get("signal_snippets") or []
             if snippets:
@@ -280,7 +362,7 @@ def write_markdown(payload: dict, path: Path) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Watch ten national funding pages and create a human-review report.")
+    parser = argparse.ArgumentParser(description="Run five subject-specific regional and national funding sweeps and create a human-review report.")
     parser.add_argument("--sources", type=Path, default=DEFAULT_SOURCES)
     parser.add_argument("--state", type=Path, default=DEFAULT_STATE)
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT_DIR)
@@ -291,8 +373,9 @@ def main() -> None:
 
     source_payload = load_json(args.sources, {})
     sources = source_payload.get("sources") or []
-    if len(sources) != 10:
-        raise SystemExit(f"Expected exactly 10 funding watch sources, found {len(sources)}.")
+    registry_errors = validate_watch_registry(source_payload)
+    if registry_errors:
+        raise SystemExit("Invalid funding watch registry:\n- " + "\n- ".join(registry_errors))
     previous_state = load_json(args.state, {"schema_version": 1, "sources": {}})
     results, state = audit_sources(sources, previous_state, args.timeout, args.no_network)
     payload = {

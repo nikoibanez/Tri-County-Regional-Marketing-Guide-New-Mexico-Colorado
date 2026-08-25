@@ -57,7 +57,7 @@ review/update-audits/update-audit-latest.md
 review/update-audits/update-audit-latest.json
 ```
 
-Check the ten national funding hubs and preserve their last successful page fingerprints:
+Run the five separate regional and national funding sweeps and preserve each page's last successful fingerprint:
 
 ```powershell
 python scripts/validate_national_funding_data.py
