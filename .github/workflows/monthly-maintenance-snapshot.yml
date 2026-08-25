@@ -23,11 +23,27 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          ref: master
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
+
+      - name: Verify current Luna/canonical checkpoint
+        id: canonical
+        run: |
+          git fetch origin master
+          python scripts/verify_canonical_integration.py --require-current-master --source-only
+          echo "base_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Capture open integration work
+        id: coordination
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/capture_open_pr_context.py
 
       - name: Build canonical site and deploy zip
         run: python tools/build_netlify_deep_guide.py
@@ -44,6 +60,7 @@ jobs:
           python scripts/audit_internal_links.py --fail-on-broken
           python scripts/smoke_test_site.py
           python scripts/build_maintenance_dashboard.py
+          python scripts/verify_canonical_integration.py
 
       - name: Write deploy checksum
         run: sha256sum dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip > dist/Tri_County_Regional_Marketing_Guide_Netlify_Deep.zip.sha256
@@ -78,9 +95,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           REVIEW_BRANCH: ${{ steps.free_tools_review.outputs.branch }}
+          CANONICAL_BASE_SHA: ${{ steps.canonical.outputs.base_sha }}
+          OPEN_PR_CONTEXT: ${{ steps.coordination.outputs.open_pr_context }}
         shell: bash
         run: |
-          body="This monthly review watches the official pages behind the guide's free software, web-app, service, and nonprofit-offer inventory. It records page changes and candidate links only. Confirm current terms, eligibility, geography, privacy implications, and public wording before editing data/free-tools.json."
+          body="Canonical Luna/master checkpoint: $CANONICAL_BASE_SHA. Open review work checked before this run: $OPEN_PR_CONTEXT. This monthly review watches the official pages behind the guide's free software, web-app, service, and nonprofit-offer inventory after rebuilding and checking the authoritative site structure and deploy paths. It records page changes and candidate links only. Confirm current terms, eligibility, geography, privacy implications, and public wording before editing data/free-tools.json."
           if ! gh pr create --draft --base master --head "$REVIEW_BRANCH" --title "Review monthly free-tool changes" --body "$body"; then
             compare_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/master...${REVIEW_BRANCH}?expand=1"
             gh issue create --title "Monthly free-tools review branch is ready" --body "$body Branch: $REVIEW_BRANCH One-click draft PR: $compare_url"

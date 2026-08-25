@@ -28,7 +28,10 @@ python scripts/audit_update_sources.py --limit 120
 python scripts/validate_national_funding_data.py
 python scripts/audit_national_funding_sources.py --no-network
 python scripts/sweep_listing_keywords.py --no-network
+python scripts/verify_canonical_integration.py
 ```
+
+Before an automation returns a pull request, issue, or Codex proposal, it must refresh `origin/master`, prove that its `HEAD` matches that Luna/canonical checkpoint, inspect open review work with `scripts/capture_open_pr_context.py`, rebuild the canonical site, and pass `scripts/verify_canonical_integration.py`. Include the base commit SHA and open-review context in the review text. Local uncommitted work is not part of the checkpoint.
 
 ## Publication Rules
 

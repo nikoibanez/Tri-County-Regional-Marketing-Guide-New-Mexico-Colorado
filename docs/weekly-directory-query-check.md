@@ -56,7 +56,7 @@ Internal pending-candidate feed:
 data/directory-auto-update-candidates.json
 ```
 
-The generator does not publish this candidate feed on the public Network page. Candidates become public listings only after a person confirms the linked page and intentionally updates canonical directory data.
+The generator does not publish this candidate feed on the public Directory page. Candidates become public listings only after a person confirms the linked page and intentionally updates canonical directory data.
 
 ## GitHub Actions
 

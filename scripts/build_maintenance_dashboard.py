@@ -44,7 +44,7 @@ def build_dashboard() -> dict:
     quality = load_json(DEFAULT_OUT_DIR / "directory-quality-latest.json")
     link_audit = load_json(DEFAULT_OUT_DIR / "internal-link-audit-latest.json")
 
-    candidate_summary = candidates.get("summary") or directory_watch.get("summary") or {}
+    candidate_summary = directory_watch.get("summary") or candidates.get("summary") or {}
     audit_summary = source_audit.get("summary") or {}
     quality_summary = quality.get("canonical_source") or {}
     public_quality = quality.get("published_directory") or quality.get("consolidated_directory") or {}

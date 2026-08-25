@@ -21,11 +21,30 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          ref: master
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
+
+      - name: Verify current Luna/canonical checkpoint
+        id: canonical
+        run: |
+          git fetch origin master
+          python scripts/verify_canonical_integration.py --require-current-master --source-only
+          echo "base_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Capture open integration work
+        id: coordination
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/capture_open_pr_context.py
+
+      - name: Build canonical site
+        run: python tools/build_netlify_deep_guide.py
 
       - name: Validate curated funding data
         run: python scripts/validate_national_funding_data.py
@@ -35,6 +54,9 @@ jobs:
 
       - name: Build private maintenance dashboard
         run: python scripts/build_maintenance_dashboard.py
+
+      - name: Verify canonical generated structure
+        run: python scripts/verify_canonical_integration.py
 
       - name: Prepare funding review pull request
         id: review
@@ -62,9 +84,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           REVIEW_BRANCH: ${{ steps.review.outputs.branch }}
+          CANONICAL_BASE_SHA: ${{ steps.canonical.outputs.base_sha }}
+          OPEN_PR_CONTEXT: ${{ steps.coordination.outputs.open_pr_context }}
         shell: bash
         run: |
-          body="This automated pull request reports changes on ten national funding pages. It does not modify public opportunity records. Review the official page and confirm deadline, applicant type, 501(c)(3) status, fiscal-sponsor policy, award range, application cost, and marketing-cost eligibility before editing or merging any public claim."
+          body="Canonical Luna/master checkpoint: $CANONICAL_BASE_SHA. Open review work checked before this run: $OPEN_PR_CONTEXT. This automated pull request reports changes on ten national funding pages after rebuilding and checking the authoritative site structure and deploy paths. It does not modify public opportunity records. Review the official page and confirm deadline, applicant type, 501(c)(3) status, fiscal-sponsor policy, award range, application cost, and marketing-cost eligibility before editing or merging any public claim."
           if ! gh pr create --draft --base master --head "$REVIEW_BRANCH" --title "Review national funding source changes" --body "$body"; then
             compare_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/master...${REVIEW_BRANCH}?expand=1"
             gh issue create --title "National funding review branch is ready" --body "$body Branch: $REVIEW_BRANCH One-click draft PR: $compare_url"

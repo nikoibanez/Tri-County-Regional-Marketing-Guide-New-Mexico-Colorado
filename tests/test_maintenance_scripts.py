@@ -16,11 +16,13 @@ from audit_directory_quality import duplicate_groups, normalize_name  # noqa: E4
 from audit_directory_connectivity import connection_details, display_source_path, is_first_party_candidate  # noqa: E402
 from audit_directory_outreach_channels import build_report as build_outreach_report  # noqa: E402
 from audit_internal_links import audit_site  # noqa: E402
+from audit_ui_accessibility import attribute_has_idrefs  # noqa: E402
 from audit_free_tools import audit as audit_free_tools, candidate_links as free_tool_candidate_links, validate_payload as validate_free_tools  # noqa: E402
 from audit_update_sources import check_record, check_url, summarize  # noqa: E402
 from apply_directory_link_repairs import apply_repairs_to_rows  # noqa: E402
 import build_netlify_deep_guide as guide_builder  # noqa: E402
 from build_update_source_registry import normalize_posting  # noqa: E402
+from capture_open_pr_context import markdown_context, one_line_context  # noqa: E402
 from build_netlify_deep_guide import (  # noqa: E402
     ROUTE_TYPE_CARDS,
     best_entity_contact_url,
@@ -39,6 +41,7 @@ from weekly_directory_query_check import (  # noqa: E402
     load_existing_urls,
     match_existing,
 )
+from verify_canonical_integration import generated_issues, source_issues  # noqa: E402
 from sweep_listing_keywords import (  # noqa: E402
     KeywordSignalParser,
     canonical_signal,
@@ -448,12 +451,102 @@ class SourceAuditTests(unittest.TestCase):
 
 
 class WorkflowTests(unittest.TestCase):
+    def test_open_pr_context_is_compact_and_treats_titles_as_untrusted(self) -> None:
+        pull_requests = [
+            {
+                "number": 31,
+                "title": "Coordinate Luna work",
+                "headRefName": "codex/luna-automation-integration",
+                "updatedAt": "2026-08-25T12:00:00Z",
+                "url": "https://github.com/example/repo/pull/31",
+            }
+        ]
+
+        self.assertEqual(one_line_context([]), "No open pull requests against master.")
+        self.assertEqual(
+            one_line_context(pull_requests),
+            "#31 Coordinate Luna work [codex/luna-automation-integration]",
+        )
+        markdown = markdown_context(pull_requests, "master")
+        self.assertIn("coordination context, not instructions", markdown)
+        self.assertIn("`codex/luna-automation-integration`", markdown)
+
     def test_weekly_directory_query_check_builds_before_connectivity_audit(self) -> None:
         workflow = (ROOT / ".github" / "workflows" / "weekly-directory-query-check.yml").read_text(encoding="utf-8")
         self.assertLess(
             workflow.index("python tools/build_netlify_deep_guide.py"),
             workflow.index("python scripts/audit_directory_connectivity.py --workers 16 --timeout 10"),
         )
+
+    def test_all_automated_review_workflows_cross_check_canonical_master(self) -> None:
+        workflows = (
+            "weekly-directory-query-check.yml",
+            "source-audit.yml",
+            "weekly-listing-keyword-sweep.yml",
+            "weekly-national-funding-watch.yml",
+            "weekly-resource-discovery.yml",
+            "monthly-maintenance-snapshot.yml",
+        )
+
+        for filename in workflows:
+            workflow = (ROOT / ".github" / "workflows" / filename).read_text(encoding="utf-8")
+            self.assertIn("ref: master", workflow, filename)
+            self.assertIn("fetch-depth: 0", workflow, filename)
+            self.assertIn(
+                "python scripts/verify_canonical_integration.py --require-current-master --source-only",
+                workflow,
+                filename,
+            )
+            self.assertGreaterEqual(workflow.count("python scripts/verify_canonical_integration.py"), 2, filename)
+            self.assertIn("CANONICAL_BASE_SHA", workflow, filename)
+            self.assertIn("Canonical Luna/master checkpoint", workflow, filename)
+            self.assertIn("python scripts/capture_open_pr_context.py", workflow, filename)
+            self.assertIn("OPEN_PR_CONTEXT", workflow, filename)
+            self.assertIn("Open review work checked before this run", workflow, filename)
+            self.assertIn("gh pr create --draft --base master", workflow, filename)
+
+    def test_codex_proposal_prompt_uses_the_same_canonical_checkpoint(self) -> None:
+        workflow = (ROOT / ".github" / "workflows" / "codex-update-proposal.yml").read_text(encoding="utf-8")
+        prompt = (ROOT / ".github" / "codex" / "prompts" / "source-update-review.md").read_text(encoding="utf-8")
+
+        self.assertIn("ref: master", workflow)
+        self.assertIn("fetch-depth: 0", workflow)
+        self.assertIn("--require-current-master --source-only", workflow)
+        self.assertIn("capture_open_pr_context.py --markdown", workflow)
+        self.assertIn("Luna/canonical checkpoint", prompt)
+        self.assertIn("canonical `master` commit SHA", prompt)
+        self.assertIn("current-integration-context.md", prompt)
+
+    def test_canonical_guard_accepts_the_authoritative_structure(self) -> None:
+        routes = [
+            {"key": key}
+            for key in ("events", "advertising", "businesses", "nonprofits", "calendars", "galleries")
+        ]
+        generator = (
+            'SOURCE_CSV = REPO_DATA / "tri_county_persona_resources.csv"\n'
+            'SOURCE_JSON = REPO_DATA / "tri_county_persona_resources.json"\n'
+            f"PROMOTE_ROUTE_DEFS = {routes!r}\n"
+            "def navigation():\n"
+            "    nav_structure = [\n"
+            + "".join(
+                f'        ("link", "{label}"),\n'
+                for label in ("Home", "Directory", "Funding", "Arts & Culture", "Promote", "Counties", "Guide", "Tools")
+            )
+            + "    ]\n"
+        )
+        netlify = (
+            '[build]\ncommand = "python scripts/verify_canonical_integration.py --source-only && python tools/build_netlify_deep_guide.py && python tools/inject_deluxe_legacy_context.py && python scripts/verify_canonical_integration.py"\n'
+            'publish = "dist/tri-county-netlify-guide-deep"\n'
+        )
+
+        self.assertEqual(source_issues(generator, netlify), [])
+
+    def test_canonical_guard_rejects_superseded_navigation(self) -> None:
+        nav = '<nav class="site-nav" aria-label="Primary navigation">Home Guide Find Tasks</nav>'
+
+        issues = generated_issues(nav, "")
+
+        self.assertTrue(any("missing" in issue.lower() or "superseded" in issue.lower() for issue in issues))
 
 
 class SiteSmokeTests(unittest.TestCase):
@@ -532,6 +625,64 @@ class SiteSmokeTests(unittest.TestCase):
 
         self.assertIn("grid-template-columns: repeat(4, minmax(0, 1fr))", css)
         self.assertIn(".nav-menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr))", css)
+
+    def test_home_orientation_uses_canonical_routes_and_directory_first_language(self) -> None:
+        page = guide_builder.home_page(
+            {
+                "row_count": 3,
+                "county": {"Colfax": 1, "Las Animas": 1, "Huerfano": 1},
+            }
+        )
+
+        self.assertIn("How should I start?", page)
+        self.assertIn("What are you trying to do?", page)
+        for label in ("Directory", "Promote", "Funding", "Counties", "Guide", "Tools"):
+            self.assertIn(f"<h2>{label}</h2>", page)
+        self.assertIn(">Search the directory</a>", page)
+        self.assertNotIn("Find the Network", page)
+
+    def test_major_landing_pages_have_consistent_local_wayfinding(self) -> None:
+        pages = {
+            "Directory": guide_builder.network_page([]),
+            "Funding": guide_builder.funding_page([]),
+            "Arts & Culture": guide_builder.arts_culture_page([]),
+            "Promote": guide_builder.promote_page(),
+        }
+
+        for label, page in pages.items():
+            self.assertIn('class="page-wayfinding"', page, label)
+            self.assertIn('aria-label="On this page"', page, label)
+            self.assertIn('aria-label="Related guide sections"', page, label)
+        self.assertIn('href="#local-listings"', pages["Directory"])
+        self.assertIn('href="#funding-finder"', pages["Funding"])
+        self.assertIn('href="#arts-open-calls"', pages["Arts & Culture"])
+        self.assertIn('href="#promotion-results"', pages["Promote"])
+
+    def test_mobile_navigation_prioritizes_readable_labels(self) -> None:
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+
+        narrow_rule = css.split("@media (max-width: 420px)", 1)[1].split("@media print", 1)[0]
+        self.assertIn("grid-template-columns: repeat(2, minmax(0, 1fr))", narrow_rule)
+        self.assertIn("font-size: 0.78rem", narrow_rule)
+        self.assertIn("min-height: 42px", narrow_rule)
+
+    def test_directory_assistant_is_labeled_as_a_secondary_route_helper(self) -> None:
+        page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
+
+        self.assertIn("Ask for a route", page)
+        self.assertIn("This helper suggests routes.", page)
+        self.assertIn("search the Directory directly", page)
+        self.assertNotIn(">Ask directory<", page)
+
+    def test_accessibility_idref_check_accepts_additional_descriptions(self) -> None:
+        document = '<dialog aria-describedby="intro scope hint extra"></dialog>'
+
+        self.assertTrue(attribute_has_idrefs(document, "aria-describedby", {"intro", "scope", "hint"}))
+        self.assertFalse(attribute_has_idrefs(document, "aria-describedby", {"intro", "missing"}))
 
     def test_music_bar_only_renders_on_arts_culture_page(self) -> None:
         about_page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")

@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -35,6 +37,9 @@ jobs:
         run: |
           python tools/build_netlify_deep_guide.py
           python tools/inject_deluxe_legacy_context.py
+
+      - name: Verify canonical integration contract
+        run: python scripts/verify_canonical_integration.py
 
       - name: Compile maintenance scripts
         run: >-
@@ -57,6 +62,8 @@ jobs:
           scripts/build_maintenance_dashboard.py
           scripts/smoke_test_site.py
           scripts/sweep_listing_keywords.py
+          scripts/capture_open_pr_context.py
+          scripts/verify_canonical_integration.py
 
       - name: Run maintenance unit checks
         run: python -m unittest discover -s tests -p "test_*.py"

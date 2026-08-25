@@ -19,7 +19,7 @@ https://github.com/nikoibanez/Tri-County-Regional-Marketing-Guide-New-Mexico-Col
 Build settings:
 
 ```text
-Build command: python tools/build_netlify_deep_guide.py && python tools/inject_deluxe_legacy_context.py
+Build command: python scripts/verify_canonical_integration.py --source-only && python tools/build_netlify_deep_guide.py && python tools/inject_deluxe_legacy_context.py && python scripts/verify_canonical_integration.py
 Publish directory: dist/tri-county-netlify-guide-deep
 Python version: 3.11
 ```

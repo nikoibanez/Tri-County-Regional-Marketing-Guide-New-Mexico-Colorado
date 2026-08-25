@@ -94,11 +94,11 @@ DIRECTORY_CONNECTIVITY_ENTRIES, DIRECTORY_CONNECTIVITY_CHECKS = load_directory_c
 
 
 def normalize_origin(value: str) -> str:
-    value = (value or "").strip() or "https://newmexicocoloradoguide.netlify.app"
+    value = (value or "").strip() or "https://deluxe-horse-207efc.netlify.app"
     return value.rstrip("/") + "/"
 
 
-SITE_URL = normalize_origin(os.environ.get("PUBLIC_SITE_ORIGIN", "https://newmexicocoloradoguide.netlify.app"))
+SITE_URL = normalize_origin(os.environ.get("PUBLIC_SITE_ORIGIN", "https://deluxe-horse-207efc.netlify.app"))
 
 
 def load_json_records(path: Path, key: str) -> list[dict]:
@@ -1754,22 +1754,40 @@ POSTING_SPACES = filter_excluded_directory_rows(POSTING_SPACES)
 
 PATHS = [
     {
-        "name": "Plan Your Growth",
-        "slug": "plan",
-        "summary": "Choose what kind of expansion you need before chasing every possible listing.",
-        "cta": "Start the growth cycle",
+        "name": "Directory",
+        "href": "network/",
+        "summary": "Find a business, organization, place, program, service, or support resource.",
+        "cta": "Search listings",
     },
     {
-        "name": "Find the Network",
-        "slug": "network",
-        "summary": "Use existing directories, calendars, media channels, chambers, and support orgs first.",
-        "cta": "Search shortcuts and listings",
+        "name": "Promote",
+        "href": "promote/",
+        "summary": "Find calendars, media, visitor channels, directories, and places that may share something.",
+        "cta": "Choose a promotion route",
     },
     {
-        "name": "Understand the Region",
-        "slug": "region",
-        "summary": "See how Colfax, Las Animas, Huerfano, and regional channels fit together.",
-        "cta": "Read the regional map",
+        "name": "Funding",
+        "href": "resources/funding/",
+        "summary": "Compare grants, capital, incentives, fiscal support, and free assistance.",
+        "cta": "Search funding",
+    },
+    {
+        "name": "Counties",
+        "href": "region/",
+        "summary": "Begin with Colfax, Las Animas, or Huerfano, then widen across the region when useful.",
+        "cta": "Choose a county",
+    },
+    {
+        "name": "Guide",
+        "href": "plan/",
+        "summary": "Plan an outreach cycle, understand the region, and learn how this manual is maintained.",
+        "cta": "Plan the work",
+    },
+    {
+        "name": "Tools",
+        "href": "tools/free-discounted/",
+        "summary": "Use free services, templates, posting aids, downloads, and the update form.",
+        "cta": "Open practical tools",
     },
 ]
 
@@ -1779,7 +1797,7 @@ ROUTE_LABELS = {
     "plan": "Plan",
     "amplifiers": "Amplifiers",
     "promote": "Promote",
-    "network": "Network",
+    "network": "Directory",
     "posting": "Physical locations",
     "region": "Region",
     "colfax": "Colfax County",
@@ -4594,6 +4612,43 @@ def home_task_group_cards(depth: int = 0) -> str:
     )
 
 
+def page_wayfinding(
+    current_label: str,
+    purpose: str,
+    jumps: list[tuple[str, str]],
+    related: list[tuple[str, str]],
+    depth: int,
+) -> str:
+    def destination(href: str) -> str:
+        return href if href.startswith("#") else rel(route_href(href), depth)
+
+    jump_links = "".join(
+        f'<a href="{html_escape(destination(href))}">{html_escape(label)}</a>'
+        for label, href in jumps
+    )
+    related_links = "".join(
+        f'<a href="{html_escape(destination(href))}">{html_escape(label)}</a>'
+        for label, href in related
+    )
+    label_id = f"{css_token(current_label)}-wayfinding-title"
+    return f"""
+    <aside class="page-wayfinding" aria-labelledby="{html_escape(label_id)}">
+      <div class="page-wayfinding__intro">
+        <span class="page-wayfinding__label">You are in</span>
+        <p id="{html_escape(label_id)}"><strong>{html_escape(current_label)}</strong> {html_escape(purpose)}</p>
+      </div>
+      <nav class="page-wayfinding__links" aria-label="On this page">
+        <span>On this page</span>
+        {jump_links}
+      </nav>
+      <nav class="page-wayfinding__links page-wayfinding__links--related" aria-label="Related guide sections">
+        <span>Related routes</span>
+        {related_links}
+      </nav>
+    </aside>
+    """
+
+
 def download_buttons(depth: int = 0) -> str:
     return f"""
     <div class="download-row" aria-label="Download guide data">
@@ -5135,9 +5190,9 @@ def page_shell(
           <section class="directory-assistant" data-directory-assistant data-site-root="{rel('', depth)}" data-network-url="{rel('network/index.html', depth)}" data-submit-url="{rel('submit/index.html', depth)}" aria-label="Directory assistant">
             <button class="directory-assistant__toggle" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="directory-assistant-panel">
               <span class="assistant-dot" aria-hidden="true"></span>
-              Ask directory
+              Ask for a route
             </button>
-            <dialog class="directory-assistant__panel" id="directory-assistant-panel" aria-labelledby="directory-assistant-title" aria-describedby="directory-assistant-intro directory-assistant-hint">
+            <dialog class="directory-assistant__panel" id="directory-assistant-panel" aria-labelledby="directory-assistant-title" aria-describedby="directory-assistant-intro directory-assistant-scope directory-assistant-hint">
               <div class="directory-assistant__desert-motion" aria-hidden="true">
                 <svg viewBox="0 0 430 58" preserveAspectRatio="xMidYMid slice" focusable="false">
                   <rect class="assistant-desert__sky" width="430" height="58"/>
@@ -5164,12 +5219,13 @@ def page_shell(
               </div>
               <div class="directory-assistant__header">
                 <div>
-                  <p class="eyebrow">Immediate directory</p>
+                  <p class="eyebrow">Routing helper</p>
                   <h2 id="directory-assistant-title">Find the right route.</h2>
                 </div>
                 <button class="directory-assistant__close" type="button" aria-label="Close directory assistant">Close</button>
               </div>
-              <p class="directory-assistant__intro" id="directory-assistant-intro">Ask for a listing, guide page, free tool, funding route, calendar, media contact, or physical promotion location. Add a town or county when place matters.</p>
+              <p class="directory-assistant__intro" id="directory-assistant-intro">Describe the job in ordinary language: finding support, promoting an event, reaching a county, locating a free tool, or deciding where to start.</p>
+              <p class="directory-assistant__scope" id="directory-assistant-scope">This helper suggests routes. If you already know a name, service, or category, <a href="{rel('network/index.html', depth)}#local-listings">search the Directory directly</a>.</p>
               <p class="sr-only" id="directory-assistant-hint">Results update after submitting the form or after a short pause while typing. Press Escape to close this panel.</p>
               <form class="directory-assistant__form" role="search">
                 <label for="directory-assistant-query">What are you trying to find?</label>
@@ -5262,7 +5318,7 @@ def mountain_banner() -> str:
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="plan/index.html">Plan your growth</a>
-          <a class="button button-soft" href="network/index.html">Find the network</a>
+          <a class="button button-soft" href="network/index.html">Search the directory</a>
           <a class="button button-soft" href="region/index.html">Understand the region</a>
         </div>
       </div>
@@ -5273,7 +5329,7 @@ def mountain_banner() -> str:
 def home_page(summary: dict) -> str:
     path_cards = "\n".join(
         f"""
-        <a class="path-card" href="{item['slug']}/index.html">
+        <a class="path-card" href="{route_href(item['href'])}">
           <span>0{idx}</span>
           <h2>{html_escape(item['name'])}</h2>
           <p>{html_escape(item['summary'])}</p>
@@ -5300,12 +5356,17 @@ def home_page(summary: dict) -> str:
             <p>Use it when you have a business, event, nonprofit, gallery, class, service, or program and need the right directory, event calendar, visitor guide, media route, or flyer stop across Colfax, Las Animas, and Huerfano counties.</p>
           </div>
         </section>
-        <section class="section">
+        <section class="section route-orientation" aria-labelledby="route-orientation-title">
+          <div class="section-heading">
+            <p class="eyebrow">How should I start?</p>
+            <h2 id="route-orientation-title">Choose the section that matches the job.</h2>
+            <p class="section-note">Directory finds people and places. Promote finds channels that can share something. Funding finds money and support. Counties starts locally. Guide explains the process. Tools helps you make and submit the materials.</p>
+          </div>
           <div class="path-grid">{path_cards}</div>
         </section>
         <section class="section tinted">
           <div class="section-heading">
-            <p class="eyebrow">Quick task guides</p>
+            <p class="eyebrow">What are you trying to do?</p>
             <h2>Start with the job in front of you.</h2>
             <p class="section-note">Each card goes to a practical page or search path. Use it to post, list, promote, fund, route by county, or find arts and culture channels without reading the site front to back.</p>
           </div>
@@ -5421,14 +5482,17 @@ def network_page(rows: list[dict]) -> str:
     )
     content = f"""
     <section class="page-hero">
-      <p class="eyebrow">Find the Network</p>
+      <p class="eyebrow">Directory</p>
       <h1>Search the regional directory.</h1>
       <p class="lede">Search {row_count} local listings for business directories, event calendars, visitor guides, social pages, newsletter routes, and physical promotion contacts.</p>
-      <nav class="directory-jumpbar" aria-label="Directory page sections">
-        <a class="button button-primary" href="#local-listings">Local listings</a>
-        <a class="button button-soft" href="#directory-shortcuts">Directory shortcuts</a>
-      </nav>
     </section>
+    {page_wayfinding(
+        "Directory",
+        "Find a known business, organization, place, program, service, or support resource.",
+        [("Search listings", "#local-listings"), ("Directory shortcuts", "#directory-shortcuts"), ("Directory tools", "#directory-tools")],
+        [("Find places to promote", "promote/"), ("Search funding", "resources/funding/"), ("Start with a county", "region/")],
+        1,
+    )}
     <section id="local-listings" class="section tinted">
       <div class="section-heading">
         <p class="eyebrow">Local listings</p>
@@ -5540,7 +5604,7 @@ def network_page(rows: list[dict]) -> str:
         <button id="source-load-more" class="button button-soft" type="button" hidden>Show more shortcuts</button>
       </div>
     </section>
-    <section class="section tinted directory-support-section">
+    <section id="directory-tools" class="section tinted directory-support-section">
       <details class="directory-support-details">
         <summary>Browse by role or download directory data</summary>
         <div class="directory-support-body">
@@ -5864,7 +5928,14 @@ def funding_page(rows: list[dict]) -> str:
       <h1>Funding, grants, incentives, and support entries.</h1>
       <p class="lede">Use this page to find likely starting points for business, nonprofit, arts, culture, outdoor recreation, workforce, and community projects. Check eligibility, deadlines, applicant type, match rules, and award status with the original program.</p>
     </section>
-    <section class="section funding-finder" aria-labelledby="national-funding-title">
+    {page_wayfinding(
+        "Funding",
+        "Compare grants, capital, incentives, fiscal support, and free assistance.",
+        [("Search funding", "#funding-finder"), ("Search registries", "#funding-registries"), ("Regional shortcuts", "#funding-shortcuts"), ("Local support", "#local-funding")],
+        [("Find local providers", "network/"), ("Free & discounted tools", "tools/free-discounted/"), ("Arts & Culture", "resources/arts-culture/")],
+        2,
+    )}
+    <section id="funding-finder" class="section funding-finder" aria-labelledby="national-funding-title">
       <div class="section-heading">
         <p class="eyebrow">National funding finder</p>
         <h2 id="national-funding-title">Search {len(NATIONAL_FUNDING_OPPORTUNITIES)} grants, capital, and free support programs.</h2>
@@ -5919,7 +5990,7 @@ def funding_page(rows: list[dict]) -> str:
         <a class="button button-soft" href="../../data/national-funding-opportunities.json" download>Download funding JSON</a>
       </div>
     </section>
-    <section class="section funding-registry-section">
+    <section id="funding-registries" class="section funding-registry-section">
       <div class="section-heading">
         <p class="eyebrow">Search beyond this list</p>
         <h2>Funding, lending, and fiscal-sponsor registries.</h2>
@@ -5928,7 +5999,7 @@ def funding_page(rows: list[dict]) -> str:
       <div class="source-grid compact" data-progressive-list data-compact-count="4" data-wide-count="9">{discovery_source_cards(['grants-public-funding', 'business-capital', 'fiscal-sponsorship'], 99)}</div>
       <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="registries">Show more registries</button></div>
     </section>
-    <section class="section">
+    <section id="funding-shortcuts" class="section">
       <div class="section-heading">
         <p class="eyebrow">Funding directory shortcuts</p>
         <h2>Programs and pages to open directly.</h2>
@@ -5936,7 +6007,7 @@ def funding_page(rows: list[dict]) -> str:
       <div class="source-grid compact" data-progressive-list data-compact-count="4" data-wide-count="12">{source_group_cards(funding_sources, 12)}</div>
       <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="shortcuts">Show more shortcuts</button><a class="button button-soft" href="../../network/index.html?q=funding+grant+loan#resource-results">Search every funding-related listing</a></div>
     </section>
-    <section class="section tinted">
+    <section id="local-funding" class="section tinted">
       <div class="section-heading">
         <p class="eyebrow">Local inventory entries</p>
         <h2>Additional rows that may connect to money, training, or support.</h2>
@@ -5973,7 +6044,14 @@ def arts_culture_page(rows: list[dict]) -> str:
       <h1>Artists, galleries, makers, venues, and cultural routes.</h1>
       <p class="lede">Use this page when creative work needs to be findable: listings, shows, vendor visibility, visitor-facing promotion, venue calendars, media, creative districts, and partner channels.</p>
     </section>
-    <nav class="arts-route-strip" aria-label="Creative directory routes by county">
+    {page_wayfinding(
+        "Arts & Culture",
+        "Find creative people, places, open calls, funding, and visibility routes.",
+        [("County routes", "#arts-county-routes"), ("Choose a goal", "#arts-goals"), ("Open calls", "#arts-open-calls"), ("Creative listings", "#arts-local-listings")],
+        [("Promote creative work", "promote/?route=galleries"), ("Search arts funding", "resources/funding/?audience=arts"), ("Search the Directory", "network/?q=artist+gallery+maker#resource-results")],
+        2,
+    )}
+    <nav id="arts-county-routes" class="arts-route-strip" aria-label="Creative directory routes by county">
       <a class="arts-route-visual arts-route-visual--colfax" href="../../network/index.html?q=artist+gallery+maker+Colfax#resource-results">
         <img src="../../assets/animations/hero-volcanic-field.svg" alt="" aria-hidden="true">
         <span><strong>Colfax County</strong><small>Artists, studios, galleries, and makers</small></span>
@@ -5987,7 +6065,7 @@ def arts_culture_page(rows: list[dict]) -> str:
         <span><strong>Huerfano County</strong><small>Arts districts, performers, makers, and events</small></span>
       </a>
     </nav>
-    <section class="section">
+    <section id="arts-goals" class="section">
       <div class="section-heading">
         <p class="eyebrow">Choose a creative route</p>
         <h2>Start with what you need to do.</h2>
@@ -5999,7 +6077,7 @@ def arts_culture_page(rows: list[dict]) -> str:
         <a class="mini-card category-route-card" href="../../submit/index.html"><h3>Add creative work</h3><p>Submit an artist, gallery, venue, cultural program, or corrected contact route.</p><strong>Submit a listing</strong></a>
       </div>
     </section>
-    <section class="section">
+    <section id="arts-open-calls" class="section">
       <div class="section-heading">
         <p class="eyebrow">Open calls and artist registries</p>
         <h2>Find calls, registries, residencies, and art-fair applications.</h2>
@@ -6008,7 +6086,7 @@ def arts_culture_page(rows: list[dict]) -> str:
       <div class="source-grid compact" data-progressive-list data-compact-count="5" data-wide-count="10">{discovery_source_cards(['artists-creative-opportunities'], 99)}</div>
       <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="registries">Show more registries</button></div>
     </section>
-    <section class="section tinted">
+    <section id="arts-shortcuts" class="section tinted">
       <div class="section-heading">
         <p class="eyebrow">Arts and culture shortcuts</p>
         <h2>Pages that already gather creative visibility.</h2>
@@ -6016,7 +6094,7 @@ def arts_culture_page(rows: list[dict]) -> str:
       <div class="source-grid compact" data-progressive-list data-compact-count="4" data-wide-count="12">{source_group_cards(arts_sources, 12)}</div>
       <div class="section-actions"><button class="button button-soft" type="button" data-progressive-more data-progressive-label="shortcuts">Show more shortcuts</button></div>
     </section>
-    <section class="section">
+    <section id="arts-local-listings" class="section">
       <div class="section-heading">
         <p class="eyebrow">Local creative inventory</p>
         <h2>Artists, venues, galleries, makers, and cultural entries.</h2>
@@ -6070,7 +6148,14 @@ def promote_page() -> str:
       <h1>Find the local channel that fits the job.</h1>
       <p class="lede">Search events, advertising, business directories, nonprofit partners, calendars, galleries, media, and visitor channels across Colfax, Las Animas, and Huerfano counties.</p>
     </section>
-    <section class="section" aria-labelledby="promote-route-title">
+    {page_wayfinding(
+        "Promote",
+        "Find the channel that can share an event, service, business, nonprofit, or arts project.",
+        [("Choose a route", "#promote-routes"), ("Search contacts", "#promotion-results"), ("County shortcuts", "#county-promotion"), ("Specialized views", "#promote-specialized")],
+        [("Find a specific listing", "network/"), ("Physical ad finder", "posting/"), ("Message templates", "templates/")],
+        1,
+    )}
+    <section id="promote-routes" class="section" aria-labelledby="promote-route-title">
       <div class="section-heading">
         <p class="eyebrow">Choose a route</p>
         <h2 id="promote-route-title">Start with what needs visibility.</h2>
@@ -6118,7 +6203,7 @@ def promote_page() -> str:
         <a class="button button-soft" href="../network/index.html#resource-results">Open the master directory</a>
       </div>
     </section>
-    <section class="section county-promote-section" aria-labelledby="county-promotion-title">
+    <section id="county-promotion" class="section county-promote-section" aria-labelledby="county-promotion-title">
       <div class="section-heading">
         <p class="eyebrow">County shortcuts</p>
         <h2 id="county-promotion-title">The same six routes for every county.</h2>
@@ -6126,7 +6211,7 @@ def promote_page() -> str:
       </div>
       <div class="county-promote-grid">{county_route_panels}</div>
     </section>
-    <section class="section tinted">
+    <section id="promote-specialized" class="section tinted">
       <div class="section-heading">
         <p class="eyebrow">Specialized views</p>
         <h2>Open the detail page only when it adds something.</h2>
@@ -6422,7 +6507,7 @@ def appendix_page(rows: list[dict]) -> str:
       <div class="section-heading">
         <p class="eyebrow">Choose the lighter route</p>
         <h2>Use the full table only when a table is the job.</h2>
-        <p class="section-note">For guided discovery, start with Network or the Ask directory button. Stay here when you need county/community grouping, contact details, or spreadsheet-style review.</p>
+        <p class="section-note">For guided discovery, start with the Directory or use the routing helper. Stay here when you need county/community grouping, contact details, or spreadsheet-style review.</p>
       </div>
       <div class="section-actions">
         <a class="button button-primary" href="../network/index.html">Search by need</a>
@@ -6480,7 +6565,7 @@ def region_page(summary: dict) -> str:
       <div class="section-heading">
         <p class="eyebrow">Co-channeling model</p>
         <h2>One public resource, many local doors.</h2>
-        <p class="section-note">County pages make local entry easy. The Network page keeps cross-county directories, media, funding, creative-economy, and nonprofit resources connected.</p>
+        <p class="section-note">County pages make local entry easy. The Directory keeps cross-county listings, media, funding, creative-economy, and nonprofit resources connected.</p>
       </div>
       <ul class="check-list">
         <li>Colfax: Raton city, chamber, MainStreet, GrowRaton, Explore Raton, KRTN, NM statewide support.</li>
@@ -6573,7 +6658,7 @@ def county_page(county: str, slug: str, summary_text: str, rows: list[dict]) -> 
         <h2>Inventory examples to check before outreach.</h2>
       </div>
       <ul class="lead-list">{leads}</ul>
-      <p class="section-note">The full inventory is searchable from the Network page and downloadable as CSV in the data folder.</p>
+      <p class="section-note">The full inventory is searchable from the Directory and downloadable as CSV in the data folder.</p>
     </section>
     {submit_listing_panel(depth, "county")}
     {next_action_block(depth, [
@@ -6794,7 +6879,7 @@ def submit_page() -> str:
       </div>
       <div class="steps-grid">
         <article class="step-card"><span>1</span><h3>Name the listing</h3><p>Use the public name of the business, organization, program, service, gallery, event, venue, or resource.</p></article>
-        <article class="step-card"><span>2</span><h3>Pick the section</h3><p>Choose the county page, network directory, appendix, amplifier channel list, posting map, or templates/resources area.</p></article>
+        <article class="step-card"><span>2</span><h3>Pick the section</h3><p>Choose the county page, Directory, appendix, regional channel list, posting map, or templates/resources area.</p></article>
         <article class="step-card"><span>3</span><h3>Add the public link</h3><p>Include a website, form, social page, public directory link, flyer, official page, or contact route that can be checked.</p></article>
         <article class="step-card"><span>4</span><h3>State the use</h3><p>Say whether readers should list, post, contact, visit, register, ask about advertising, check public information, or request a correction.</p></article>
       </div>
@@ -6825,7 +6910,7 @@ def submit_page() -> str:
           <label>Guide section
             <select name="guide_section" required>
               <option value="">Choose one</option>
-              <option>Network directory</option>
+              <option>Directory</option>
               <option>Amplifier channels</option>
               <option>Where To Post</option>
               <option>Colfax County page</option>
@@ -7530,8 +7615,39 @@ def write_static_assets() -> None:
     .breadcrumbs a:focus-visible {
       text-decoration: underline;
     }
+    .page-wayfinding {
+      display: grid;
+      grid-template-columns: minmax(250px, 1.2fr) repeat(2, minmax(220px, 1fr));
+      gap: 18px 28px;
+      align-items: start;
+      padding: 18px clamp(18px, 6vw, 86px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,253,248,0.86);
+    }
+    .page-wayfinding__intro p { margin: 3px 0 0; color: var(--ink-soft); line-height: 1.45; }
+    .page-wayfinding__intro strong { color: var(--ink); }
+    .page-wayfinding__label,
+    .page-wayfinding__links > span {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--plum);
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .page-wayfinding__links { display: flex; flex-wrap: wrap; gap: 7px 13px; align-content: start; }
+    .page-wayfinding__links > span { flex-basis: 100%; }
+    .page-wayfinding__links a {
+      color: var(--linked);
+      font-size: 0.82rem;
+      font-weight: 800;
+      line-height: 1.35;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
     .section, .page-hero { padding: clamp(38px, 5vw, 72px) clamp(18px, 6vw, 86px); }
-    #local-listings, #directory-shortcuts { scroll-margin-top: 92px; }
+    main section[id], main nav[id], #resource-results { scroll-margin-top: 92px; }
     .page-hero {
       position: relative;
       isolation: isolate;
@@ -8685,10 +8801,19 @@ def write_static_assets() -> None:
       font-weight: 900;
     }
     .directory-assistant__intro,
+    .directory-assistant__scope,
     .directory-assistant__status,
     .assistant-result p {
       color: var(--ink-soft);
     }
+    .directory-assistant__scope {
+      margin: 8px 0 0;
+      padding-left: 10px;
+      border-left: 2px solid rgba(182,145,70,0.48);
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+    .directory-assistant__scope a { color: var(--linked); font-weight: 800; }
     .directory-assistant__form { display: grid; gap: 8px; margin-top: 12px; }
     .directory-assistant__search-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
     .directory-assistant input {
@@ -8862,7 +8987,10 @@ def write_static_assets() -> None:
     @media (max-width: 860px) {
       .site-header { align-items: flex-start; flex-direction: column; }
       .site-nav { width: 100%; justify-content: flex-start; }
-      .path-grid, .two-col, .site-footer, .advanced-filters, .form-grid, .submit-card { grid-template-columns: 1fr; }
+      .path-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .two-col, .site-footer, .advanced-filters, .form-grid, .submit-card { grid-template-columns: 1fr; }
+      .page-wayfinding { grid-template-columns: 1fr 1fr; }
+      .page-wayfinding__intro { grid-column: 1 / -1; }
       .nav-yucca-flourish { top: 1px; right: 7px; width: 118px; height: 46px; }
       .footer-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .footer-logos { justify-content: flex-start; }
@@ -8884,7 +9012,7 @@ def write_static_assets() -> None:
       .brand { font-size: 0.9rem; gap: 8px; }
       .brand-mark { width: 32px; height: 26px; }
       .site-nav { width: 100%; max-width: 100%; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; justify-content: stretch; overflow: visible; padding-bottom: 0; }
-      .site-nav a, .nav-trigger { width: 100%; min-height: 36px; white-space: normal; text-align: center; padding: 4px 5px; font-size: 0.7rem; line-height: 1.15; }
+      .site-nav a, .nav-trigger { width: 100%; min-height: 40px; white-space: normal; text-align: center; padding: 5px 6px; font-size: 0.76rem; line-height: 1.2; }
       .nav-group { position: static; min-width: 0; }
       .nav-menu,
       .nav-menu--promote { position: absolute; top: calc(100% + 6px); right: 0; left: 0; width: 100%; min-width: 0; max-width: none; margin-top: 0; padding: 8px; box-shadow: var(--shadow); }
@@ -8920,6 +9048,13 @@ def write_static_assets() -> None:
       .page-network .page-hero h1 { max-width: 12ch; font-size: 2.25rem; line-height: 1.02; }
       .page-network .section { padding: 32px 18px; }
       .page-network .section-heading { margin-bottom: 18px; }
+      .page-wayfinding { grid-template-columns: 1fr; gap: 11px; padding: 14px 18px; }
+      .page-wayfinding__intro { grid-column: auto; }
+      .page-wayfinding__links { gap: 7px 12px; }
+      .path-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+      .path-card { min-height: 132px; padding: 12px; }
+      .path-card h2 { font-size: 1.05rem; }
+      .path-card p { display: none; }
       .arts-route-visual { min-height: 122px; }
       .arts-route-visual span { padding: 12px 9px; }
       .arts-route-visual strong { font-size: 0.96rem; }
@@ -9203,8 +9338,8 @@ def write_static_assets() -> None:
       }
     }
     @media (max-width: 420px) {
-      .site-nav { gap: 4px; }
-      .site-nav a, .nav-trigger { padding: 4px 3px; font-size: 0.66rem; }
+      .site-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+      .site-nav a, .nav-trigger { min-height: 42px; padding: 6px 5px; font-size: 0.78rem; }
       .nav-menu--promote { max-height: min(68vh, 520px); }
       .site-watermark { bottom: max(9vh, env(safe-area-inset-bottom)); padding-inline: 10px; font-size: 0.82rem; letter-spacing: 0.08em; }
     }
@@ -11570,8 +11705,8 @@ Upload the contents of this folder to Netlify, or upload the generated zip file 
 - `data/guide-data.json` - directory shortcuts plus public site data
 - `data/directory-metadata.json` - full machine-readable metadata for every directory shortcut and local inventory entry
 - `SOURCES.md` - directory, amplifier, and posting page manifest
-- Global `Ask directory` assistant - client-side search across shortcuts, local inventory rows, amplifier channels, and posting pathways
-- Global music bar - Library of Congress public-domain regional audio with play/stop, track choice, progress, and volume controls
+- Secondary routing helper - client-side route suggestions across shortcuts, local inventory rows, regional channels, and posting pathways
+- Arts & Culture audio player - Library of Congress public-domain regional audio with play/stop, track choice, progress, and volume controls
 
 ## Data summary
 
@@ -11589,7 +11724,7 @@ The local resource inventory is a working directory. Check phone numbers, eligib
 - Local HTML/asset references were checked after generation.
 - SEO metadata is generated from the page shell: title, description, canonical URL, robots tag, social preview tags, JSON-LD, sitemap, and robots.txt.
 - Public pages distinguish directory shortcuts, amplifier channels, public-notice/posting pathways, and local inventory rows.
-- Network page JSON-LD includes machine-readable metadata for every directory shortcut and local inventory entry.
+- Directory page JSON-LD includes machine-readable metadata for every directory shortcut and local inventory entry.
 - Unknown paid/free placement, ad availability, approval, deadlines, and audience size are left as direct-contact follow-up tasks.
 - A bounded automated external-link check may flag official sites because of bot blocking or local certificate handling. Treat `QA_REPORT.md` as a launch checklist, not a proof that every listed official page is broken.
 """
@@ -11641,7 +11776,7 @@ The {summary['row_count']}-row inventory is a working directory. It is useful fo
 
 ## What The Site Incorporates
 
-- A three-path homepage: Plan Your Growth, Find the Network, Understand the Region.
+- A six-section homepage orientation layer: Directory, Promote, Funding, Counties, Guide, and Tools.
 - A searchable shortcut directory with {len(DIRECTORY_SOURCES)} researched pages.
 - A regional amplifier page with {len(AMPLIFIER_CHANNELS)} channel rows and practical follow-up guidance.
 - A posting page separating official notices, physical boards, flyer/poster/rack-card locations, digital calendars, and local update tasks.
@@ -11704,7 +11839,7 @@ Generated: {BUILD_DATE}
 - {len(AMPLIFIER_CHANNELS)} amplifier channel rows embedded.
 - {len(POSTING_SPACES)} posting/public-notice pathway rows embedded.
 - {summary['row_count']} local inventory rows embedded and copied to `/data`.
-- Full directory metadata generated at `/data/directory-metadata.json` and embedded in Network page JSON-LD.
+- Full directory metadata generated at `/data/directory-metadata.json` and embedded in Directory page JSON-LD.
 - Public pages use the animated landscape assets and HTML/CSS layout; no separate generated chart assets are required.
 - Zip package generated for Netlify upload.
 
@@ -11720,9 +11855,9 @@ Generated: {BUILD_DATE}
 Before public launch, open the deployed Netlify preview and check:
 
 - Home hero yucca/mountain animation, reduced-motion behavior, and mobile title wrapping.
-- Network search for `chamber`, `artist`, `media`, `grant`, `Raton`, `Trinidad`, and `Walsenburg`.
-- Network filters for resource type and access mode.
-- Network physical-location filters for `Physical locations` and `Physical promotion contacts`.
+- Directory search for `chamber`, `artist`, `media`, `grant`, `Raton`, `Trinidad`, and `Walsenburg`.
+- Directory filters for resource type and access mode.
+- Directory physical-location filters for `Physical locations` and `Physical promotion contacts`.
 - Amplifier page rows for link URL and practical channel use.
 - Physical-location finder search, county/category filters, contact links, and one clear policy note.
 - County page nav paths.
