@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import sys
 import tempfile
 import unittest
@@ -21,6 +22,7 @@ from audit_free_tools import audit as audit_free_tools, candidate_links as free_
 from audit_update_sources import check_record, check_url, summarize  # noqa: E402
 from apply_directory_link_repairs import apply_repairs_to_rows  # noqa: E402
 import build_netlify_deep_guide as guide_builder  # noqa: E402
+from generate_geo_hero_svgs import BRAND_PALETTES  # noqa: E402
 from build_update_source_registry import normalize_posting  # noqa: E402
 from capture_open_pr_context import markdown_context, one_line_context  # noqa: E402
 from build_netlify_deep_guide import (  # noqa: E402
@@ -797,11 +799,37 @@ class SiteSmokeTests(unittest.TestCase):
 
         landscape_files = sorted((ROOT / "assets" / "animations").glob("hero-*.svg"))
         self.assertEqual(len(landscape_files), 11)
+        allowed_colors = {
+            color.lower()
+            for palette in BRAND_PALETTES.values()
+            for color in palette.values()
+            if color.startswith("#")
+        }
+        palette_names = set()
         for landscape_file in landscape_files:
             svg = landscape_file.read_text(encoding="utf-8")
             self.assertIn('class="plains-layer"', svg, landscape_file.name)
             self.assertIn("@keyframes geo-plains", svg, landscape_file.name)
             self.assertIn("prefers-reduced-motion: reduce", svg, landscape_file.name)
+            self.assertIn('data-edge-overscan="true"', svg, landscape_file.name)
+            self.assertIn("scaleX(1.014)", svg, landscape_file.name)
+            self.assertIn("scaleX(1.012)", svg, landscape_file.name)
+            match = re.search(r'data-brand-palette="([^"]+)"', svg)
+            self.assertIsNotNone(match, landscape_file.name)
+            palette_names.add(match.group(1))
+            colors = {color.lower() for color in re.findall(r"#[0-9a-fA-F]{6}", svg)}
+            self.assertFalse(colors - allowed_colors, landscape_file.name)
+
+        self.assertEqual(palette_names, {"city-of-raton", "explore-raton", "raton-mainstreet"})
+
+        banner = (ROOT / "assets" / "animations" / "yucca-banner.svg").read_text(encoding="utf-8")
+        self.assertIn('data-brand-palette="explore-raton"', banner)
+        self.assertIn('data-edge-overscan="true"', banner)
+        self.assertIn("scaleX(1.014)", banner)
+        self.assertIn("222 23v207H-40V570", banner)
+
+        cta = (ROOT / "assets" / "animations" / "yucca-cta-loop.svg").read_text(encoding="utf-8")
+        self.assertIn('data-brand-palette="raton-mainstreet"', cta)
 
         with tempfile.TemporaryDirectory() as folder:
             asset_out = Path(folder)
@@ -812,6 +840,10 @@ class SiteSmokeTests(unittest.TestCase):
 
         self.assertIn("assistant-desert-open", css)
         self.assertIn("assistant-desert-close", css)
+        self.assertIn("--raton-city-turquoise: #21bdc5", css)
+        self.assertIn("--explore-orange: #d97345", css)
+        self.assertIn("--mainstreet-plum: #6c1c5b", css)
+        self.assertIn("fill: var(--raton-city-turquoise)", css)
         self.assertIn("replayAssistantMotion(panel, \"open\")", js)
         self.assertIn('panel.addEventListener("cancel"', js)
         self.assertIn('playGuideSfx("intro", { armOnGesture: true })', js)

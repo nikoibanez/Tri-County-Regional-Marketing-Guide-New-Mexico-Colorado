@@ -7266,6 +7266,19 @@ def write_static_assets() -> None:
       --field: #9a7a2a;
       --manual: #695674;
       --page-accent: var(--clay);
+      --raton-city-turquoise: #21bdc5;
+      --raton-city-teal: #147176;
+      --raton-city-rust: #772816;
+      --raton-city-sand: #b3b078;
+      --raton-city-cream: #eeedd6;
+      --explore-blue: #2b5672;
+      --explore-deep-blue: #22495a;
+      --explore-orange: #d97345;
+      --explore-pale-aqua: #aae8ec;
+      --mainstreet-plum: #6c1c5b;
+      --mainstreet-mauve: #a06393;
+      --mainstreet-olive: #716c2c;
+      --mainstreet-mist: #c8d5dc;
       color-scheme: light;
     }
     * { box-sizing: border-box; }
@@ -7384,8 +7397,8 @@ def write_static_assets() -> None:
       }
     }
     @keyframes navCursorGlow {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(182,145,70,0); }
-      50% { box-shadow: 0 0 0 2px rgba(182,145,70,0.20), 0 0 11px rgba(182,145,70,0.16); }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(33,189,197,0); }
+      50% { box-shadow: 0 0 0 2px rgba(33,189,197,0.18), 0 0 11px rgba(160,99,147,0.14); }
     }
     .site-nav a[aria-current="page"]::after,
     .nav-group.is-active > .nav-trigger::before {
@@ -7455,7 +7468,7 @@ def write_static_assets() -> None:
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
-      color: var(--sage);
+      color: var(--raton-city-teal);
     }
     .nav-yucca-flourish svg { display: block; width: 100%; height: 100%; overflow: visible; }
     .nav-yucca__index-line,
@@ -7467,25 +7480,25 @@ def write_static_assets() -> None:
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-    .nav-yucca__index-line { stroke: var(--gold); stroke-width: 1; opacity: 0.42; }
+    .nav-yucca__index-line { stroke: var(--mainstreet-olive); stroke-width: 1; opacity: 0.42; }
     .nav-yucca__stem { stroke-width: 2.25; stroke-dasharray: 70; stroke-dashoffset: 70; }
     .nav-yucca__branch { stroke-width: 1.7; stroke-dasharray: 42; stroke-dashoffset: 42; }
     .nav-yucca__leaf {
-      stroke: var(--ink);
+      stroke: var(--explore-deep-blue);
       stroke-width: 2.1;
       stroke-dasharray: 78;
       stroke-dashoffset: 78;
       opacity: 0.88;
     }
     .nav-yucca__flower {
-      color: #f5e6b9;
+      color: var(--raton-city-cream);
       opacity: 0;
       transform-box: fill-box;
       transform-origin: center bottom;
     }
     .nav-yucca__flower path {
       fill: currentColor;
-      stroke: var(--gold);
+      stroke: var(--explore-orange);
       stroke-width: 0.7;
       stroke-linejoin: round;
     }
@@ -7524,12 +7537,12 @@ def write_static_assets() -> None:
       padding: clamp(72px, 8vw, 112px) clamp(18px, 6vw, 86px) clamp(42px, 6vw, 72px);
       isolation: isolate;
     }
-    .mountain-scene { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, #dff3f3, #f7faf3 74%); }
+    .mountain-scene { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, var(--explore-pale-aqua), var(--raton-city-cream) 74%); }
     .mountain-scene svg { position: absolute; inset: auto 0 0; width: 100%; height: 58%; }
     .sky-fade { fill: transparent; }
-    .far-mountains { fill: rgba(114, 150, 143, 0.42); }
-    .near-mountains { fill: rgba(82, 116, 105, 0.62); }
-    .ridge-line { fill: rgba(216, 187, 104, 0.22); }
+    .far-mountains { fill: rgba(33, 189, 197, 0.32); }
+    .near-mountains { fill: rgba(43, 86, 114, 0.54); }
+    .ridge-line { fill: rgba(113, 108, 44, 0.22); }
     .cloud {
       position: absolute;
       width: 180px;
@@ -7552,7 +7565,7 @@ def write_static_assets() -> None:
       z-index: 0;
       pointer-events: none;
       opacity: 0.22;
-      color: rgba(23,48,71,0.52);
+      color: rgba(34,73,90,0.52);
       mix-blend-mode: multiply;
     }
     .hero-accent svg { width: 100%; height: 100%; display: block; }
@@ -7697,7 +7710,7 @@ def write_static_assets() -> None:
       width: min(240px, 52vw);
       height: 1px;
       margin-top: 18px;
-      background: linear-gradient(90deg, rgba(23,48,71,0), rgba(47,103,128,0.18), rgba(216,187,104,0.20), rgba(23,48,71,0));
+      background: linear-gradient(90deg, rgba(33,189,197,0), rgba(33,189,197,0.24), rgba(160,99,147,0.22), rgba(113,108,44,0.20), rgba(33,189,197,0));
       background-size: 180% 100%;
       animation: headingGlide 32s linear infinite;
     }
@@ -8675,22 +8688,22 @@ def write_static_assets() -> None:
       overflow: hidden;
       border-bottom: 1px solid rgba(23,48,71,0.12);
       border-radius: 9px 9px 0 0;
-      background: rgba(175,203,208,0.24);
+      background: color-mix(in srgb, var(--mainstreet-mist) 52%, var(--explore-pale-aqua) 48%);
     }
     .directory-assistant__desert-motion svg {
       display: block;
       width: 100%;
       height: 100%;
     }
-    .assistant-desert__sky { fill: #dfe8df; }
+    .assistant-desert__sky { fill: var(--mainstreet-mist); }
     .assistant-desert__sun {
-      fill: #d6bb68;
+      fill: var(--explore-orange);
       opacity: 0.82;
       transform-box: fill-box;
       transform-origin: center;
     }
-    .assistant-desert__far-ridge { fill: #9eb8b3; opacity: 0.58; }
-    .assistant-desert__near-ridge { fill: #6f7f6c; opacity: 0.72; }
+    .assistant-desert__far-ridge { fill: var(--raton-city-turquoise); opacity: 0.46; }
+    .assistant-desert__near-ridge { fill: var(--explore-blue); opacity: 0.64; }
     .assistant-desert__wind,
     .assistant-desert__horizon,
     .assistant-desert__stem,
@@ -8700,12 +8713,12 @@ def write_static_assets() -> None:
       stroke-linejoin: round;
     }
     .assistant-desert__wind {
-      stroke: rgba(255,253,248,0.82);
+      stroke: rgba(238,237,214,0.88);
       stroke-width: 1.2;
       stroke-dasharray: 24 12;
     }
     .assistant-desert__horizon {
-      stroke: rgba(167,97,73,0.54);
+      stroke: rgba(160,99,147,0.62);
       stroke-width: 1.4;
       stroke-dasharray: 440;
     }
@@ -8713,11 +8726,11 @@ def write_static_assets() -> None:
       transform-box: fill-box;
       transform-origin: 50% 100%;
     }
-    .assistant-desert__stem { stroke: #556554; stroke-width: 2.2; }
-    .assistant-desert__leaves { stroke: #324f4d; stroke-width: 2.4; }
+    .assistant-desert__stem { stroke: var(--raton-city-teal); stroke-width: 2.2; }
+    .assistant-desert__leaves { stroke: var(--explore-deep-blue); stroke-width: 2.4; }
     .assistant-desert__flowers circle {
-      fill: #fff8df;
-      stroke: #b69146;
+      fill: var(--raton-city-cream);
+      stroke: var(--raton-city-rust);
       stroke-width: 0.7;
       transform-box: fill-box;
       transform-origin: center;
