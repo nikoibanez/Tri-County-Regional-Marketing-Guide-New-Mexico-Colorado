@@ -29,16 +29,21 @@ Use `yucca-banner.svg` as the visual hero background or inline it when deeper co
 | Wind lines | Slow horizontal drift |
 | CTA ribbon / marker | Subtle pulse |
 
-## Brand Palettes
+## Raton-Inspired Palette
 
-The animation family uses three complementary Raton identities. Landscape files declare their
-assigned family with `data-brand-palette` so future revisions can preserve the system.
+The site and animation family share a restrained high-desert palette inspired by the public
+visual character of City of Raton, Explore Raton, Grow Raton, and Raton MainStreet. This is a
+locally derived design system, not a claim of formal brand approval or an exact reproduction of
+any organization's brand kit.
 
-- **City of Raton:** turquoise `#21bdc5`, deep teal `#147176`, rust `#772816`, sand `#b3b078`, and cream `#eeedd6`.
-- **Explore Raton:** blue `#2b5672`, deep blue `#22495a`, orange `#d97345`, pale aqua `#aae8ec`, warm brown `#775751`, and cream `#eeedd6`.
-- **Raton MainStreet:** plum `#6c1c5b`, mauve `#a06393`, olive `#716c2c`, mist blue `#c8d5dc`, charcoal `#2a2a2a`, and near-white `#f3f5f8`.
+The shared core is civic brick `#772816`, warm orange `#d97345`, turquoise `#7ed4d8`, and pale
+high-desert cream `#f3eedd`. Deep navy `#173047`, blue `#22495a`, and teal `#147176` provide
+legible shadows, text-adjacent accents, and foreground plants. Each landscape varies the balance
+of those colors while remaining visibly part of one family.
 
-Reference sites: [City of Raton](https://www.ratonnm.gov/), [Explore Raton](https://www.exploreraton.com/), and [Raton MainStreet](https://ratonmainstreet.org/).
+The palette decision is recorded in `data/source-notes/deep-research-report_10.md`. Reference
+sites include [City of Raton](https://www.ratonnm.gov/), [Explore Raton](https://www.exploreraton.com/),
+[Grow Raton](https://www.growraton.org/), and [Raton MainStreet](https://ratonmainstreet.org/).
 
 ## Edge Coverage
 

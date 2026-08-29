@@ -3,9 +3,9 @@
   <desc id="yuccaDesc">A layered vector banner with yucca flowers, plains, mountains, and drifting wind lines.</desc>
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#aae8ec"/>
-      <stop offset="0.54" stop-color="#dfe6e9"/>
-      <stop offset="1" stop-color="#eeedd6"/>
+      <stop offset="0" stop-color="#cfecef"/>
+      <stop offset="0.54" stop-color="#efe0cd"/>
+      <stop offset="1" stop-color="#f3eedd"/>
     </linearGradient>
     <linearGradient id="sunwash" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0.86"/>
@@ -13,8 +13,8 @@
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="mountainFar" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#21bdc5" stop-opacity="0.72"/>
-      <stop offset="1" stop-color="#775751" stop-opacity="0.72"/>
+      <stop offset="0" stop-color="#7ed4d8" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#772816" stop-opacity="0.72"/>
     </linearGradient>
     <linearGradient id="mountainNear" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#2b5672"/>
@@ -23,11 +23,11 @@
     <linearGradient id="yuccaLeaf" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#22495a"/>
       <stop offset="0.45" stop-color="#147176"/>
-      <stop offset="1" stop-color="#21bdc5"/>
+      <stop offset="1" stop-color="#7ed4d8"/>
     </linearGradient>
     <linearGradient id="flower" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="0.62" stop-color="#eeedd6"/>
+      <stop offset="0.62" stop-color="#f3eedd"/>
       <stop offset="1" stop-color="#d97345"/>
     </linearGradient>
     <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
@@ -156,13 +156,13 @@
 
   <g class="far-range">
     <path d="M0 438l130-88 122 32 184-122 132 112 138-92 160 128 118-60 126 77 186-135 214 142v286H0z" fill="url(#mountainFar)" opacity="0.64"/>
-    <path d="M426 262l44 99 66-10-88 42-14-74-58 28z" fill="#eeedd6" opacity="0.52"/>
-    <path d="M1098 298l74 129 88-24-120 62-32-96-72 42z" fill="#eeedd6" opacity="0.46"/>
+    <path d="M426 262l44 99 66-10-88 42-14-74-58 28z" fill="#f3eedd" opacity="0.52"/>
+    <path d="M1098 298l74 129 88-24-120 62-32-96-72 42z" fill="#f3eedd" opacity="0.46"/>
   </g>
 
   <g class="near-range">
     <path d="M0 496l174-92 160 54 214-138 178 138 128-70 182 92 218-158 346 166v232H0z" fill="url(#mountainNear)" opacity="0.74"/>
-    <path d="M256 420c130 38 241 44 348 21 122-26 220-25 332 23 146 63 301 69 482 26 78-19 152-11 222 23v207H-40V570c92-70 190-121 296-150z" fill="#775751" opacity="0.34"/>
+    <path d="M256 420c130 38 241 44 348 21 122-26 220-25 332 23 146 63 301 69 482 26 78-19 152-11 222 23v207H-40V570c92-70 190-121 296-150z" fill="#772816" opacity="0.28"/>
   </g>
 
   <g id="plains" class="plains-layer" opacity="0.96">
@@ -178,7 +178,7 @@
       <path d="M178 686l152-224-81 232z" fill="#147176"/>
       <path d="M188 690l222-146-156 156z" fill="#2b5672"/>
       <path d="M118 690L0 512l168 176z" fill="#22495a"/>
-      <path d="M204 692l66-174 7 181z" fill="#21bdc5"/>
+      <path d="M204 692l66-174 7 181z" fill="#7ed4d8"/>
       <path d="M112 692L44 594l102 96z" fill="#147176"/>
       <path d="M230 694l128-66-82 72z" fill="#7ed4d8"/>
     </g>

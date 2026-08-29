@@ -8,19 +8,19 @@
       }
       .orbit {
         fill: none;
-        stroke: rgba(42,42,42,0.22);
+        stroke: rgba(34,73,90,0.24);
         stroke-width: 4;
       }
       .arrow {
         fill: none;
-        stroke: #6c1c5b;
+        stroke: #772816;
         stroke-width: 7;
         stroke-linecap: round;
         stroke-linejoin: round;
       }
       .node {
-        fill: #716c2c;
-        stroke: #6c1c5b;
+        fill: #7ed4d8;
+        stroke: #d97345;
         stroke-width: 3;
       }
       @keyframes cta-pulse {

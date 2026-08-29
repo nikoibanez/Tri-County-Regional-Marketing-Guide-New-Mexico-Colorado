@@ -3,7 +3,7 @@
   min-height: clamp(520px, 72vh, 700px);
   overflow: hidden;
   isolation: isolate;
-  background: #eeedd6;
+  background: #f3eedd;
 }
 
 .yucca-banner-shell::after {
@@ -12,8 +12,8 @@
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(238, 237, 214, 0.92) 0%, rgba(238, 237, 214, 0.62) 34%, rgba(238, 237, 214, 0.12) 76%),
-    linear-gradient(0deg, rgba(238, 237, 214, 0.68) 0%, rgba(238, 237, 214, 0) 34%);
+    linear-gradient(90deg, rgba(243, 238, 221, 0.92) 0%, rgba(243, 238, 221, 0.62) 34%, rgba(243, 238, 221, 0.12) 76%),
+    linear-gradient(0deg, rgba(243, 238, 221, 0.68) 0%, rgba(243, 238, 221, 0) 34%);
   pointer-events: none;
 }
 
@@ -32,7 +32,7 @@
   display: grid;
   place-items: center;
   padding: clamp(16px, 4vw, 48px);
-  background: #f3f5f8;
+  background: #f3eedd;
   color: #22495a;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -43,7 +43,7 @@
   border: 1px solid rgba(34, 73, 90, 0.16);
   border-radius: 8px;
   box-shadow: 0 22px 70px rgba(34, 73, 90, 0.16);
-  background: #eeedd6;
+  background: #f3eedd;
 }
 
 .yucca-banner-preview img {
@@ -74,6 +74,16 @@
   background: rgba(255, 255, 255, 0.92);
   box-shadow: 0 14px 30px rgba(34, 73, 90, 0.13);
   transform: translateY(-1px);
+}
+
+.yucca-cta-link:active {
+  background: rgba(243, 238, 221, 0.96);
+  box-shadow: 0 5px 14px rgba(34, 73, 90, 0.16);
+  transform: translateY(0);
+}
+
+@media (pointer: fine) {
+  .yucca-cta-link { cursor: pointer; }
 }
 
 .yucca-cta-link img {

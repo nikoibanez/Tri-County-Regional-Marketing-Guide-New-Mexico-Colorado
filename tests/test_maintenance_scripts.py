@@ -581,15 +581,21 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("NAV_YUCCA_KEY", js)
         self.assertIn("initNavigationYucca();", js)
 
-    def test_navigation_uses_site_cursor_with_reduced_motion_safe_glow(self) -> None:
+    def test_navigation_uses_pointer_cursor_with_reduced_motion_safe_glow(self) -> None:
         with tempfile.TemporaryDirectory() as folder:
             asset_out = Path(folder)
             with patch.object(guide_builder, "ASSET_OUT", asset_out):
                 guide_builder.write_static_assets()
             css = (asset_out / "styles.css").read_text(encoding="utf-8")
 
+        self.assertIn('html, body { cursor: url("raton-accessible-cursor.svg") 4 2, auto; }', css)
+        self.assertIn("button:not(:disabled)", css)
+        self.assertIn("[role=\"button\"]", css)
+        self.assertIn(") { cursor: pointer; }", css)
         nav_rule = css.split(".site-nav a, .nav-trigger {", 1)[1].split("}", 1)[0]
-        self.assertIn('cursor: url("raton-accessible-cursor.svg") 4 2, pointer;', nav_rule)
+        self.assertNotIn("cursor:", nav_rule)
+        self.assertIn(".site-nav a:active, .nav-trigger:active", css)
+        self.assertIn(".path-card:active", css)
         self.assertIn("@media (hover: hover) and (pointer: fine)", css)
         self.assertIn("@keyframes navCursorGlow", css)
         self.assertIn("animation: navCursorGlow 1800ms ease-in-out infinite;", css)
@@ -840,8 +846,12 @@ class SiteSmokeTests(unittest.TestCase):
 
         self.assertIn("assistant-desert-open", css)
         self.assertIn("assistant-desert-close", css)
-        self.assertIn("--raton-city-turquoise: #21bdc5", css)
-        self.assertIn("--explore-orange: #d97345", css)
+        self.assertIn("--raton-brick: #772816", css)
+        self.assertIn("--raton-orange: #d97345", css)
+        self.assertIn("--raton-turquoise: #7ed4d8", css)
+        self.assertIn("--raton-cream: #f3eedd", css)
+        self.assertIn("--raton-city-turquoise: var(--raton-turquoise)", css)
+        self.assertIn("--explore-orange: var(--raton-orange)", css)
         self.assertIn("--mainstreet-plum: #6c1c5b", css)
         self.assertIn("fill: var(--raton-city-turquoise)", css)
         self.assertIn("replayAssistantMotion(panel, \"open\")", js)
