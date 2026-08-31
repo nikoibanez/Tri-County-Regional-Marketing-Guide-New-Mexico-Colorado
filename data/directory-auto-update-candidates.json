@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-08-31",
   "publication_note": "Automatically refreshed from watched public directory and tourism pages. Treat these as candidate updates, not official directory additions, until a human confirms the linked source.",
   "summary": {
     "sources_watched": 15,
     "pages_checked": 32,
-    "pages_failed": 8,
-    "already_represented": 284,
-    "possible_new_leads": 61,
+    "pages_failed": 9,
+    "already_represented": 260,
+    "possible_new_leads": 53,
     "priority_new_leads": 1,
-    "low_confidence_text_leads": 60
+    "low_confidence_text_leads": 52
   },
   "watched_sources": [
     {
@@ -52,7 +52,7 @@
       "source_role": "Tourist/travel spots, restaurants, events, lodging, visitor-facing listings",
       "why_watch": "Tourism-facing source for Angel Fire visitor pages, dining discovery, lodging, activities, and events.",
       "pages_checked": 3,
-      "possible_new_leads": 10,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -151,7 +151,7 @@
       "source_role": "Event spots, community calendar, event submission, visitor-facing activities",
       "why_watch": "Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.",
       "pages_checked": 2,
-      "possible_new_leads": 11,
+      "possible_new_leads": 13,
       "priority_new_leads": 0
     },
     {
@@ -379,50 +379,6 @@
       "confidence": "low"
     },
     {
-      "name": "June 19, 20 & 21, 2026",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "LinkedIn",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/visitor/",
-      "listing_url": "https://angelfirechamber.org/visitor/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "LinkedIn",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "LinkedIn",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/visitor/arts-and-culture/",
-      "listing_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Member",
       "county": "Colfax",
       "state": "NM",
@@ -430,39 +386,6 @@
       "source_type": "Chamber business directory",
       "source_page": "https://www.raton.info/business_directory.html",
       "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Mix",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/visitor/",
-      "listing_url": "https://angelfirechamber.org/visitor/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Mix",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Mix",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/visitor/arts-and-culture/",
-      "listing_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -555,39 +478,6 @@
       "confidence": "low"
     },
     {
-      "name": "Twitter",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/visitor/",
-      "listing_url": "https://angelfirechamber.org/visitor/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Twitter",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Twitter",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/visitor/arts-and-culture/",
-      "listing_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Cuchara Farmers Market",
       "county": "Huerfano",
       "state": "CO",
@@ -654,6 +544,17 @@
       "confidence": "low"
     },
     {
+      "name": "Jon Chandler",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "La Veta Farmers Market",
       "county": "Huerfano",
       "state": "CO",
@@ -677,6 +578,17 @@
     },
     {
       "name": "Mountain Mining Days",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "MUSIC BY MIDI LIVE!!!!",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",

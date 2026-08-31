@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-08-31",
   "config": "data/directory-watch-sources.json",
   "directory_files": [
     "data/directory_of_absolutely_everything.csv",
@@ -9,12 +9,12 @@
   "summary": {
     "sources": 15,
     "pages_checked": 32,
-    "pages_failed": 8,
-    "candidates": 345,
-    "already_in_guide": 284,
-    "possible_new_leads": 61,
+    "pages_failed": 9,
+    "candidates": 313,
+    "already_in_guide": 260,
+    "possible_new_leads": 53,
     "priority_new_leads": 1,
-    "low_confidence_new_leads": 60
+    "low_confidence_new_leads": 52
   },
   "results": [
     {
@@ -33,7 +33,7 @@
             "status_code": 200,
             "final_url": "https://www.raton.info/business_directory.html",
             "content_type": "text/html",
-            "elapsed_ms": 446,
+            "elapsed_ms": 570,
             "error": ""
           },
           "candidates": [
@@ -514,7 +514,7 @@
             "status_code": 200,
             "final_url": "https://www.raton.info/business-directory.html",
             "content_type": "text/html",
-            "elapsed_ms": 334,
+            "elapsed_ms": 244,
             "error": ""
           },
           "candidates": [
@@ -1276,191 +1276,10 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/local-businesses/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1233,
+            "elapsed_ms": 620,
             "error": ""
           },
-          "candidates": [
-            {
-              "id": "advanced-air-llc-c7ef4075dd",
-              "name": "Advanced Air. LLC",
-              "source_id": "colfax-angel-fire-chamber-member-directory",
-              "source_title": "Angel Fire Chamber Member Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber member directory",
-              "source_page": "https://angelfirechamber.org/local-businesses/",
-              "listing_url": "https://angelfirechamber.org/business/advanced-air/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Advanced Air, LLC",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "angel-s-glow-tanning-oxygen-bar-099f28d34c",
-              "name": "Angel\u2019s Glow Tanning & Oxygen Bar",
-              "source_id": "colfax-angel-fire-chamber-member-directory",
-              "source_title": "Angel Fire Chamber Member Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber member directory",
-              "source_page": "https://angelfirechamber.org/local-businesses/",
-              "listing_url": "https://angelfirechamber.org/business/angels-glow-tanning-oxygen-bar/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Angel's Glow Tanning & Oxygen Bar",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "brodsky-bookkeeping-d35efe0aae",
-              "name": "Brodsky Bookkeeping",
-              "source_id": "colfax-angel-fire-chamber-member-directory",
-              "source_title": "Angel Fire Chamber Member Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber member directory",
-              "source_page": "https://angelfirechamber.org/local-businesses/",
-              "listing_url": "https://angelfirechamber.org/business/brodsky-bookkeeping/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Brodsky Bookkeeping",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "comanche-creek-brewing-company-6398ecd9d7",
-              "name": "Comanche Creek Brewing Company",
-              "source_id": "colfax-angel-fire-chamber-member-directory",
-              "source_title": "Angel Fire Chamber Member Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber member directory",
-              "source_page": "https://angelfirechamber.org/local-businesses/",
-              "listing_url": "https://angelfirechamber.org/business/comanche-creek-brewing-company/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Comanche Creek Brewing Company",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "double-black-design-llc-af76b20820",
-              "name": "Double Black Design, LLc",
-              "source_id": "colfax-angel-fire-chamber-member-directory",
-              "source_title": "Angel Fire Chamber Member Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber member directory",
-              "source_page": "https://angelfirechamber.org/local-businesses/",
-              "listing_url": "https://angelfirechamber.org/business/double-black-design-llc/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Double Black Design, LLC",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "eagle-nest-mercantile-7180140533",
-              "name": "Eagle Nest Mercantile",
-              "source_id": "colfax-angel-fire-chamber-member-directory",
-              "source_title": "Angel Fire Chamber Member Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber member directory",
-              "source_page": "https://angelfirechamber.org/local-businesses/",
-              "listing_url": "https://angelfirechamber.org/business/eagle-nest-mercantile/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Eagle Nest Mercantile",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "holy-angels-catholic-mission-church-1eeb4e1298",
-              "name": "Holy Angels Catholic Mission Church",
-              "source_id": "colfax-angel-fire-chamber-member-directory",
-              "source_title": "Angel Fire Chamber Member Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber member directory",
-              "source_page": "https://angelfirechamber.org/local-businesses/",
-              "listing_url": "https://angelfirechamber.org/business/holy-angels-catholic-mission-church/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Holy Angels Catholic Mission Church",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "kwk-events-3d879ad5ae",
-              "name": "KWK Events",
-              "source_id": "colfax-angel-fire-chamber-member-directory",
-              "source_title": "Angel Fire Chamber Member Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber member directory",
-              "source_page": "https://angelfirechamber.org/local-businesses/",
-              "listing_url": "https://angelfirechamber.org/business/kwk-events/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "KWK Events",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "snowfish-ski-outdoor-formerly-cottam-s-of-angel-fi-8b6cc2ea75",
-              "name": "Snowfish Ski & Outdoor formerly Cottam\u2019s of Angel Fire",
-              "source_id": "colfax-angel-fire-chamber-member-directory",
-              "source_title": "Angel Fire Chamber Member Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber member directory",
-              "source_page": "https://angelfirechamber.org/local-businesses/",
-              "listing_url": "https://angelfirechamber.org/business/cottams-of-angel-fire/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Snowfish Ski & Outdoor formerly Cottam\u2019s of Angel Fire",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "the-trailhead-5e28c38c51",
-              "name": "The Trailhead",
-              "source_id": "colfax-angel-fire-chamber-member-directory",
-              "source_title": "Angel Fire Chamber Member Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber member directory",
-              "source_page": "https://angelfirechamber.org/local-businesses/",
-              "listing_url": "https://angelfirechamber.org/business/the-trailhead-ski-shop/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "The Trailhead",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            }
-          ]
+          "candidates": []
         }
       ]
     },
@@ -1480,191 +1299,10 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/business/category/restaurants/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 786,
+            "elapsed_ms": 486,
             "error": ""
           },
-          "candidates": [
-            {
-              "id": "el-jefe-803e3e0211",
-              "name": "El Jefe",
-              "source_id": "colfax-angel-fire-food-catering-events",
-              "source_title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Food, catering, and event-service directory categories",
-              "source_page": "https://angelfirechamber.org/business/category/restaurants/",
-              "listing_url": "https://angelfirechamber.org/business/el-jefe/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "El Jefe",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "elements-69c33042cc",
-              "name": "Elements",
-              "source_id": "colfax-angel-fire-food-catering-events",
-              "source_title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Food, catering, and event-service directory categories",
-              "source_page": "https://angelfirechamber.org/business/category/restaurants/",
-              "listing_url": "https://angelfirechamber.org/business/elements/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Elements",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "legends-grill-d1c01fe780",
-              "name": "Legends Grill",
-              "source_id": "colfax-angel-fire-food-catering-events",
-              "source_title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Food, catering, and event-service directory categories",
-              "source_page": "https://angelfirechamber.org/business/category/restaurants/",
-              "listing_url": "https://angelfirechamber.org/business/legends-grill/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Legends Grill",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "morning-star-restaurant-ae72b39afa",
-              "name": "Morning Star Restaurant",
-              "source_id": "colfax-angel-fire-food-catering-events",
-              "source_title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Food, catering, and event-service directory categories",
-              "source_page": "https://angelfirechamber.org/business/category/restaurants/",
-              "listing_url": "https://angelfirechamber.org/business/morning-star-restaurant/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Morning Star Restaurant",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "par-grill-53566fdeec",
-              "name": "Par & Grill",
-              "source_id": "colfax-angel-fire-food-catering-events",
-              "source_title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Food, catering, and event-service directory categories",
-              "source_page": "https://angelfirechamber.org/business/category/restaurants/",
-              "listing_url": "https://angelfirechamber.org/business/par-grill/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Par & Grill",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "pub-n-grub-3af280fc27",
-              "name": "Pub n\u2019grub",
-              "source_id": "colfax-angel-fire-food-catering-events",
-              "source_title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Food, catering, and event-service directory categories",
-              "source_page": "https://angelfirechamber.org/business/category/restaurants/",
-              "listing_url": "https://angelfirechamber.org/business/pub-ngrub/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Pub n\u2019grub",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "subway-58750834b3",
-              "name": "Subway",
-              "source_id": "colfax-angel-fire-food-catering-events",
-              "source_title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Food, catering, and event-service directory categories",
-              "source_page": "https://angelfirechamber.org/business/category/restaurants/",
-              "listing_url": "https://angelfirechamber.org/business/subway/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Subway",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "summit-haus-063fdccfa9",
-              "name": "Summit Haus",
-              "source_id": "colfax-angel-fire-food-catering-events",
-              "source_title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Food, catering, and event-service directory categories",
-              "source_page": "https://angelfirechamber.org/business/category/restaurants/",
-              "listing_url": "https://angelfirechamber.org/business/summit-haus/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Summit Haus",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "the-lift-cafe-bfd734fed4",
-              "name": "The Lift Cafe",
-              "source_id": "colfax-angel-fire-food-catering-events",
-              "source_title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Food, catering, and event-service directory categories",
-              "source_page": "https://angelfirechamber.org/business/category/restaurants/",
-              "listing_url": "https://angelfirechamber.org/business/the-lift-cafe-market/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "The Lift Caf\u00e9",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "the-village-haus-d1dae3f5da",
-              "name": "The Village Haus",
-              "source_id": "colfax-angel-fire-food-catering-events",
-              "source_title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Food, catering, and event-service directory categories",
-              "source_page": "https://angelfirechamber.org/business/category/restaurants/",
-              "listing_url": "https://angelfirechamber.org/business/the-village-haus/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "The Village Haus",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            }
-          ]
+          "candidates": []
         },
         {
           "url": "https://angelfirechamber.org/business/tags/catering/",
@@ -1673,7 +1311,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/business/tags/catering/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 854,
+            "elapsed_ms": 540,
             "error": ""
           },
           "candidates": []
@@ -1685,7 +1323,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/business/category/catering/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 918,
+            "elapsed_ms": 528,
             "error": ""
           },
           "candidates": []
@@ -1708,65 +1346,10 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/visitor/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 811,
+            "elapsed_ms": 501,
             "error": ""
           },
-          "candidates": [
-            {
-              "id": "linkedin-bcb3f514a7",
-              "name": "LinkedIn",
-              "source_id": "colfax-visit-angel-fire-tourism-events",
-              "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Tourism, events, dining, and travel source",
-              "source_page": "https://angelfirechamber.org/visitor/",
-              "listing_url": "https://angelfirechamber.org/visitor/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "mix-3f706fcda1",
-              "name": "Mix",
-              "source_id": "colfax-visit-angel-fire-tourism-events",
-              "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Tourism, events, dining, and travel source",
-              "source_page": "https://angelfirechamber.org/visitor/",
-              "listing_url": "https://angelfirechamber.org/visitor/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "twitter-43f3e94b83",
-              "name": "Twitter",
-              "source_id": "colfax-visit-angel-fire-tourism-events",
-              "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Tourism, events, dining, and travel source",
-              "source_page": "https://angelfirechamber.org/visitor/",
-              "listing_url": "https://angelfirechamber.org/visitor/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            }
-          ]
+          "candidates": []
         },
         {
           "url": "https://angelfirechamber.org/annual-calendar-of-events/",
@@ -1775,83 +1358,10 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/annual-calendar-of-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 744,
+            "elapsed_ms": 515,
             "error": ""
           },
-          "candidates": [
-            {
-              "id": "june-19-20-21-2026-ee3c03cbad",
-              "name": "June 19, 20 & 21, 2026",
-              "source_id": "colfax-visit-angel-fire-tourism-events",
-              "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Tourism, events, dining, and travel source",
-              "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
-              "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "linkedin-6d34fbe90a",
-              "name": "LinkedIn",
-              "source_id": "colfax-visit-angel-fire-tourism-events",
-              "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Tourism, events, dining, and travel source",
-              "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
-              "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "mix-0cfe7cd4d7",
-              "name": "Mix",
-              "source_id": "colfax-visit-angel-fire-tourism-events",
-              "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Tourism, events, dining, and travel source",
-              "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
-              "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "twitter-ca63dac4f8",
-              "name": "Twitter",
-              "source_id": "colfax-visit-angel-fire-tourism-events",
-              "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Tourism, events, dining, and travel source",
-              "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
-              "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            }
-          ]
+          "candidates": []
         },
         {
           "url": "https://angelfirechamber.org/visitor/arts-and-culture/",
@@ -1860,65 +1370,10 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 693,
+            "elapsed_ms": 432,
             "error": ""
           },
-          "candidates": [
-            {
-              "id": "linkedin-a3e7a2946d",
-              "name": "LinkedIn",
-              "source_id": "colfax-visit-angel-fire-tourism-events",
-              "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Tourism, events, dining, and travel source",
-              "source_page": "https://angelfirechamber.org/visitor/arts-and-culture/",
-              "listing_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "mix-fa11d6c623",
-              "name": "Mix",
-              "source_id": "colfax-visit-angel-fire-tourism-events",
-              "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Tourism, events, dining, and travel source",
-              "source_page": "https://angelfirechamber.org/visitor/arts-and-culture/",
-              "listing_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "twitter-33e2b20e8f",
-              "name": "Twitter",
-              "source_id": "colfax-visit-angel-fire-tourism-events",
-              "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Tourism, events, dining, and travel source",
-              "source_page": "https://angelfirechamber.org/visitor/arts-and-culture/",
-              "listing_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            }
-          ]
+          "candidates": []
         }
       ]
     },
@@ -1938,7 +1393,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2118,
+            "elapsed_ms": 378,
             "error": ""
           },
           "candidates": []
@@ -1950,29 +1405,10 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/events",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2284,
+            "elapsed_ms": 2155,
             "error": ""
           },
-          "candidates": [
-            {
-              "id": "signature-7eda6155e3",
-              "name": "SIGNATURE",
-              "source_id": "colfax-explore-raton-tourism-events",
-              "source_title": "Explore Raton Tourism and Event Pages",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Tourism, visitor guide, events, and local travel source",
-              "source_page": "https://www.exploreraton.com/events",
-              "listing_url": "https://www.exploreraton.com/events",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Explore Raton Events",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            }
-          ]
+          "candidates": []
         },
         {
           "url": "https://www.exploreraton.com/blog",
@@ -1981,7 +1417,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/blog",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1754,
+            "elapsed_ms": 606,
             "error": ""
           },
           "candidates": []
@@ -2004,7 +1440,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/dine/",
             "content_type": "",
-            "elapsed_ms": 190,
+            "elapsed_ms": 138,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -2016,7 +1452,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/stay/",
             "content_type": "",
-            "elapsed_ms": 60,
+            "elapsed_ms": 98,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -2028,7 +1464,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/shop/",
             "content_type": "",
-            "elapsed_ms": 61,
+            "elapsed_ms": 83,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -2040,7 +1476,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
             "content_type": "",
-            "elapsed_ms": 57,
+            "elapsed_ms": 87,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -2063,7 +1499,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/upcoming-events/",
             "content_type": "",
-            "elapsed_ms": 63,
+            "elapsed_ms": 84,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -2075,7 +1511,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
             "content_type": "",
-            "elapsed_ms": 52,
+            "elapsed_ms": 81,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -2098,7 +1534,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/meetings-conventions/",
             "content_type": "",
-            "elapsed_ms": 66,
+            "elapsed_ms": 92,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -2110,7 +1546,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/weddings/",
             "content_type": "",
-            "elapsed_ms": 63,
+            "elapsed_ms": 83,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -2129,87 +1565,14 @@
         {
           "url": "https://colorado.localstash.com/trinidad-co/",
           "fetch": {
-            "ok": true,
-            "status_code": 200,
+            "ok": false,
+            "status_code": 522,
             "final_url": "https://colorado.localstash.com/trinidad-co/",
-            "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 588,
-            "error": ""
+            "content_type": "",
+            "elapsed_ms": 156,
+            "error": "HTTP Error 522: <none>"
           },
-          "candidates": [
-            {
-              "id": "a-few-practical-notes-6a1eec9c61",
-              "name": "A Few Practical Notes",
-              "source_id": "las-animas-localstash-trinidad",
-              "source_title": "LocalStash Trinidad",
-              "county": "Las Animas",
-              "state": "CO",
-              "source_type": "Digital local guide and business/event listings",
-              "source_page": "https://colorado.localstash.com/trinidad-co/",
-              "listing_url": "https://colorado.localstash.com/trinidad-co/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "LocalStash Trinidad Town Page",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "the-rhythm-of-the-town-5feda434c4",
-              "name": "The Rhythm of the Town",
-              "source_id": "las-animas-localstash-trinidad",
-              "source_title": "LocalStash Trinidad",
-              "county": "Las Animas",
-              "state": "CO",
-              "source_type": "Digital local guide and business/event listings",
-              "source_page": "https://colorado.localstash.com/trinidad-co/",
-              "listing_url": "https://colorado.localstash.com/trinidad-co/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "LocalStash Trinidad Town Page",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "what-it-s-known-for-85cdf003cd",
-              "name": "What It\u2019s Known For",
-              "source_id": "las-animas-localstash-trinidad",
-              "source_title": "LocalStash Trinidad",
-              "county": "Las Animas",
-              "state": "CO",
-              "source_type": "Digital local guide and business/event listings",
-              "source_page": "https://colorado.localstash.com/trinidad-co/",
-              "listing_url": "https://colorado.localstash.com/trinidad-co/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "LocalStash Trinidad Town Page",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "where-it-sits-98100fa067",
-              "name": "Where It Sits",
-              "source_id": "las-animas-localstash-trinidad",
-              "source_title": "LocalStash Trinidad",
-              "county": "Las Animas",
-              "state": "CO",
-              "source_type": "Digital local guide and business/event listings",
-              "source_page": "https://colorado.localstash.com/trinidad-co/",
-              "listing_url": "https://colorado.localstash.com/trinidad-co/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "LocalStash Trinidad Town Page",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            }
-          ]
+          "candidates": []
         },
         {
           "url": "https://weekender.pub/",
@@ -2217,8 +1580,8 @@
             "ok": true,
             "status_code": 200,
             "final_url": "https://weekender.pub/",
-            "content_type": "text/html; charset=utf-8",
-            "elapsed_ms": 191,
+            "content_type": "text/html; charset=UTF-8",
+            "elapsed_ms": 485,
             "error": ""
           },
           "candidates": []
@@ -2241,7 +1604,7 @@
             "status_code": 200,
             "final_url": "https://southerncoloradotourism.com/events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 3404,
+            "elapsed_ms": 9449,
             "error": ""
           },
           "candidates": [
@@ -2488,7 +1851,7 @@
             "status_code": 200,
             "final_url": "https://southerncoloradotourism.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2091,
+            "elapsed_ms": 826,
             "error": ""
           },
           "candidates": []
@@ -2511,7 +1874,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 263,
+            "elapsed_ms": 267,
             "error": ""
           },
           "candidates": [
@@ -4425,7 +3788,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory/categories/dining",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 282,
+            "elapsed_ms": 181,
             "error": ""
           },
           "candidates": [
@@ -4978,7 +4341,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory/categories/lodging",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 204,
+            "elapsed_ms": 140,
             "error": ""
           },
           "candidates": [
@@ -5387,7 +4750,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 883,
+            "elapsed_ms": 934,
             "error": ""
           },
           "candidates": []
@@ -5410,7 +4773,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/spc-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 286,
+            "elapsed_ms": 168,
             "error": ""
           },
           "candidates": [
@@ -5429,6 +4792,24 @@
               "priority_candidate": false,
               "match_status": "already_in_guide",
               "matched_name": "Cuchara Mountain Mercantile",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "the-stokehouse-d422b2b0b8",
+              "name": "The Stokehouse",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "The Stokehouse",
               "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
@@ -5541,6 +4922,24 @@
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
+              "id": "jon-chandler-9341db1b3e",
+              "name": "Jon Chandler",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
               "id": "la-veta-farmers-market-a2098f9eca",
               "name": "La Veta Farmers Market",
               "source_id": "huerfano-spanish-peaks-events",
@@ -5579,6 +4978,24 @@
             {
               "id": "mountain-mining-days-a2fa776998",
               "name": "Mountain Mining Days",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "music-by-midi-live-b62d40990d",
+              "name": "MUSIC BY MIDI LIVE!!!!",
               "source_id": "huerfano-spanish-peaks-events",
               "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
               "county": "Huerfano",
@@ -5639,7 +5056,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 199,
+            "elapsed_ms": 232,
             "error": ""
           },
           "candidates": [
@@ -5699,7 +5116,7 @@
             "status_code": 200,
             "final_url": "https://townoflaveta-co.gov/business-directory/",
             "content_type": "text/html",
-            "elapsed_ms": 182,
+            "elapsed_ms": 243,
             "error": ""
           },
           "candidates": [
@@ -6749,7 +6166,7 @@
             "status_code": 200,
             "final_url": "https://www.chamber.huerfano.org/membership-directory",
             "content_type": "text/html;charset=utf-8",
-            "elapsed_ms": 685,
+            "elapsed_ms": 552,
             "error": ""
           },
           "candidates": [

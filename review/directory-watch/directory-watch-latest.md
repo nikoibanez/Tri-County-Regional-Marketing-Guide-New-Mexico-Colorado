@@ -1,6 +1,6 @@
 # Weekly Directory Query Check
 
-Generated: 2026-08-24
+Generated: 2026-08-31
 
 Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.
 
@@ -8,12 +8,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 
 - Sources watched: 15
 - Pages checked: 32
-- Pages failed: 8
-- Listing-like candidates found: 345
-- Already represented in guide: 284
-- Possible new leads: 61
+- Pages failed: 9
+- Listing-like candidates found: 313
+- Already represented in guide: 260
+- Possible new leads: 53
 - Priority new leads: 1
-- Low-confidence text leads: 60
+- Low-confidence text leads: 52
 
 ## Watch Sources
 
@@ -50,7 +50,7 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism, events, dining, and travel source
 - Why watch: Tourism-facing source for Angel Fire visitor pages, dining discovery, lodging, activities, and events.
 - Pages checked: 3
-- Possible new leads: 10
+- Possible new leads: 0
 - Priority new leads: 0
 
 ### Explore Raton Tourism and Event Pages
@@ -112,6 +112,9 @@ Fetch issues:
 - Possible new leads: 0
 - Priority new leads: 0
 
+Fetch issues:
+- [https://colorado.localstash.com/trinidad-co/](https://colorado.localstash.com/trinidad-co/) - HTTP Error 522: <none>
+
 ### Southern Colorado Tourism Event and Travel Pages
 
 - County: Las Animas
@@ -145,7 +148,7 @@ Fetch issues:
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.
 - Pages checked: 2
-- Possible new leads: 11
+- Possible new leads: 13
 - Priority new leads: 0
 
 ### Town of La Veta Business Directory
@@ -193,14 +196,7 @@ These came from directory page text rather than individual listing links. Review
 - Hwy 87 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
 - I-25 & Hwy 87 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
 - I-25 Exit 450 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- June 19, 20 & 21, 2026 - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/annual-calendar-of-events/
-- LinkedIn - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/
-- LinkedIn - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/annual-calendar-of-events/
-- LinkedIn - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/arts-and-culture/
 - Member - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Mix - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/
-- Mix - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/annual-calendar-of-events/
-- Mix - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/arts-and-culture/
 - Pamela L. Seneff, GRI - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
 - Platinum Member - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
 - Qualifying Broker - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
@@ -209,18 +205,17 @@ These came from directory page text rather than individual listing links. Review
 - Suite #1 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
 - Suite 120 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
 - Suite A - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Twitter - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/
-- Twitter - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/annual-calendar-of-events/
-- Twitter - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/arts-and-culture/
 - Cuchara Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Darrell Scott - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Farmer and Craft Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Methodist Church - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Heritage Park - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- Jon Chandler - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - La Veta Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - La Veta Library - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Mountain Mining Days - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- MUSIC BY MIDI LIVE!!!! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Walsenburg Farm & Makers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Walsenburg Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - 420 Festival at Central Park - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
@@ -240,11 +235,9 @@ These came from directory page text rather than individual listing links. Review
 ## Already Represented Sample
 
 - 123’s -> Town of La Veta Business Directory (exact_url)
-- A Few Practical Notes -> LocalStash Trinidad Town Page (exact_url)
 - A Taylor Made Haircut -> Town of La Veta Business Directory (exact_url)
 - A&W -> A&W (exact_url)
 - A&W -> A&W (exact_url)
-- Advanced Air. LLC -> Advanced Air, LLC (exact_url)
 - Alderette Acupuncture and -> Raton Chamber Business Directory (exact_url)
 - Alpha Design -> Raton Chamber Business Directory (exact_url)
 - Alys' Restaurant -> Alys' Restaurant (exact_url)
@@ -252,7 +245,6 @@ These came from directory page text rather than individual listing links. Review
 - Alys' Restaurant -> Town of La Veta Business Directory (exact_url)
 - Anchor Motel -> Anchor Motel (exact_url)
 - Anchor Motel -> Anchor Motel (exact_url)
-- Angel’s Glow Tanning & Oxygen Bar -> Angel's Glow Tanning & Oxygen Bar (exact_url)
 - Antique Avenue -> Antique Avenue (exact_url)
 - Armidas -> Armidas (exact_url)
 - Artisans on Main -> Artisans on Main (exact_url)
@@ -267,7 +259,6 @@ These came from directory page text rather than individual listing links. Review
 - Big "R" -> Town of La Veta Business Directory (exact_url)
 - Big R -> Big R (exact_url)
 - Book Nook -> Town of La Veta Business Directory (exact_url)
-- Brodsky Bookkeeping -> Brodsky Bookkeeping (exact_url)
 - Bud Hut -> Bud Hut (exact_url)
 - C Cubed Training -> C Cubed Training (exact_url)
 - C1B True Organics -> C1B True Organics (exact_url)
@@ -279,3 +270,7 @@ These came from directory page text rather than individual listing links. Review
 - Casa de Pajaros -> Town of La Veta Business Directory (exact_url)
 - Chae Organics -> Chae Organics (exact_normalized)
 - Charlie's Market -> Charlie's Market (exact_url)
+- Charlie's Market -> Town of La Veta Business Directory (exact_url)
+- Code of the West Real Estate -> Town of La Veta Business Directory (exact_url)
+- Colfax Senior Care -> Raton Chamber Business Directory (exact_url)
+- Contact Information -> Town of La Veta Business Directory (exact_url)
