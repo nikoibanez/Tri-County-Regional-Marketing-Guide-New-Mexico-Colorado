@@ -1,6 +1,6 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-08-25T05:18:28-06:00
+Generated: 2026-09-01T18:41:15+00:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
@@ -41,8 +41,8 @@ Automation detects and drafts. A person approves public claims, directory change
 - Shortcuts with at least one ask-first outreach route: 44
 - Shortcuts without an identified outreach route: 52
 - National funding pages checked: 10
-- National funding pages changed: 0
-- National funding watch baselines added: 1
+- National funding pages changed: 2
+- National funding watch baselines added: 0
 - Confirmed broken national funding URLs: 0
 - National funding source checks needing attention: 4
 - Resource candidate links collected: 176
@@ -56,8 +56,8 @@ Automation detects and drafts. A person approves public claims, directory change
 
 ## Action Queue
 
+- **HIGH - 2 national funding pages waiting for claim review:** Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory.
 - **HIGH - 1 priority directory candidates:** Confirm each linked listing page before adding it to canonical data.
-- **HIGH - 1 national funding pages waiting for claim review:** Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory.
 - **MEDIUM - 176 resource candidate links waiting for review:** Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data.
 - **MEDIUM - 173 canonical rows without a website or source URL:** Enrich high-value entries first; do not invent contact paths.
 - **MEDIUM - 40 listing keyword sets proposed for review:** Review additions and removals in the latest keyword-sweep report before merging the keyword index.
