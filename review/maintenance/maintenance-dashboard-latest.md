@@ -1,6 +1,6 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-08-25T05:18:28-06:00
+Generated: 2026-09-02T18:56:34+00:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
@@ -33,7 +33,7 @@ Automation detects and drafts. A person approves public claims, directory change
 - Deep-watch pages failed: 8
 - Priority new leads: 1
 - Keyword source URLs checked: 120
-- Keyword sets proposed for review: 40
+- Keyword sets proposed for review: 24
 - Listings with at least one listed outreach route: 307
 - Listings with at least one ask-first outreach route: 702
 - Listings without an identified outreach route: 620
@@ -60,7 +60,7 @@ Automation detects and drafts. A person approves public claims, directory change
 - **HIGH - 1 national funding pages waiting for claim review:** Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory.
 - **MEDIUM - 176 resource candidate links waiting for review:** Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data.
 - **MEDIUM - 173 canonical rows without a website or source URL:** Enrich high-value entries first; do not invent contact paths.
-- **MEDIUM - 40 listing keyword sets proposed for review:** Review additions and removals in the latest keyword-sweep report before merging the keyword index.
+- **MEDIUM - 24 listing keyword sets proposed for review:** Review additions and removals in the latest keyword-sweep report before merging the keyword index.
 - **MEDIUM - 1 free-tool or nonprofit-offer pages waiting for wording review:** Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory.
 - **LOW - 620 listings without an identified promotion route:** Enrich these only when a public page or direct contact supports a useful route; do not invent availability.
 - **LOW - 36 keyword source pages needing attention:** Open failed pages normally before removing retained source-derived keywords.

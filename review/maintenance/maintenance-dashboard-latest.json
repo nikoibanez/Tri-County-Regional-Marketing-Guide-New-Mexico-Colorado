@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T05:18:28-06:00",
+  "generated_at": "2026-09-02T18:56:34+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1498,
@@ -28,7 +28,7 @@
     "watch_pages_failed": 8,
     "priority_new_leads": 1,
     "keyword_urls_checked": 120,
-    "keyword_entries_changed": 40,
+    "keyword_entries_changed": 24,
     "outreach_listed_routes": 307,
     "outreach_ask_routes": 702,
     "outreach_without_routes": 620,
@@ -76,7 +76,7 @@
     },
     {
       "priority": "medium",
-      "count": 40,
+      "count": 24,
       "label": "listing keyword sets proposed for review",
       "next_action": "Review additions and removals in the latest keyword-sweep report before merging the keyword index."
     },
