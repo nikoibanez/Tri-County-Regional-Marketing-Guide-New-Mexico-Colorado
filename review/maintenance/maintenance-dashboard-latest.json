@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T05:18:28-06:00",
+  "generated_at": "2026-09-02T19:23:56+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1498,
@@ -40,8 +40,8 @@
     "funding_watch_new_baselines": 1,
     "funding_watch_confirmed_broken": 0,
     "funding_watch_check_failures": 4,
-    "resource_discovery_candidates": 176,
-    "resource_discovery_changed": 17,
+    "resource_discovery_candidates": 174,
+    "resource_discovery_changed": 22,
     "resource_discovery_broken": 0,
     "resource_discovery_failures": 5,
     "free_tool_pages_checked": 22,
@@ -64,7 +64,7 @@
     },
     {
       "priority": "medium",
-      "count": 176,
+      "count": 174,
       "label": "resource candidate links waiting for review",
       "next_action": "Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data."
     },

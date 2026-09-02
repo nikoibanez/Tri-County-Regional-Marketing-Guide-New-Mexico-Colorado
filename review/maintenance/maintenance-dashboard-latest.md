@@ -1,6 +1,6 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-08-25T05:18:28-06:00
+Generated: 2026-09-02T19:23:56+00:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
@@ -45,8 +45,8 @@ Automation detects and drafts. A person approves public claims, directory change
 - National funding watch baselines added: 1
 - Confirmed broken national funding URLs: 0
 - National funding source checks needing attention: 4
-- Resource candidate links collected: 176
-- Resource-discovery pages changed: 17
+- Resource candidate links collected: 174
+- Resource-discovery pages changed: 22
 - Confirmed broken resource-discovery hubs: 0
 - Resource-discovery checks needing attention: 5
 - Free-tool pages checked: 22
@@ -58,7 +58,7 @@ Automation detects and drafts. A person approves public claims, directory change
 
 - **HIGH - 1 priority directory candidates:** Confirm each linked listing page before adding it to canonical data.
 - **HIGH - 1 national funding pages waiting for claim review:** Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory.
-- **MEDIUM - 176 resource candidate links waiting for review:** Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data.
+- **MEDIUM - 174 resource candidate links waiting for review:** Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data.
 - **MEDIUM - 173 canonical rows without a website or source URL:** Enrich high-value entries first; do not invent contact paths.
 - **MEDIUM - 40 listing keyword sets proposed for review:** Review additions and removals in the latest keyword-sweep report before merging the keyword index.
 - **MEDIUM - 1 free-tool or nonprofit-offer pages waiting for wording review:** Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory.
