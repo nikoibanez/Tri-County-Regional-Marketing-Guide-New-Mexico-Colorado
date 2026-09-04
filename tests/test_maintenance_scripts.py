@@ -662,12 +662,13 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("NAV_YUCCA_KEY", js)
         self.assertIn("initNavigationYucca();", js)
 
-    def test_navigation_uses_pointer_cursor_with_reduced_motion_safe_glow(self) -> None:
+    def test_navigation_uses_contextual_pointer_cursors_with_reduced_motion_safe_glow(self) -> None:
         with tempfile.TemporaryDirectory() as folder:
             asset_out = Path(folder)
             with patch.object(guide_builder, "ASSET_OUT", asset_out):
                 guide_builder.write_static_assets()
             css = (asset_out / "styles.css").read_text(encoding="utf-8")
+            js = (asset_out / "app.js").read_text(encoding="utf-8")
 
         self.assertIn('html, body { cursor: url("raton-accessible-cursor.svg") 4 2, auto; }', css)
         self.assertIn("button:not(:disabled)", css)
@@ -680,6 +681,15 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("@media (hover: hover) and (pointer: fine)", css)
         self.assertIn("@keyframes navCursorGlow", css)
         self.assertIn("animation: navCursorGlow 1800ms ease-in-out infinite;", css)
+        for kind in ("route", "external", "email", "phone", "download", "action"):
+            self.assertIn(f'raton-cursor-{kind}.svg', css)
+            self.assertTrue((ROOT / "assets" / "brand" / f"raton-cursor-{kind}.svg").exists())
+        self.assertIn(".guide-cursor-halo.is-visible", css)
+        self.assertIn("@keyframes guideCursorGlow", css)
+        self.assertIn("function guideCursorKind(element)", js)
+        self.assertIn('lowerHref.startsWith("mailto:")', js)
+        self.assertIn('lowerHref.startsWith("tel:")', js)
+        self.assertIn("initGuideCursorCues();", js)
         self.assertIn("@media (prefers-reduced-motion: reduce)", css)
 
     def test_primary_navigation_combines_direct_resources_with_county_promote_routes(self) -> None:

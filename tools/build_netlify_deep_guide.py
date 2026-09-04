@@ -3728,6 +3728,12 @@ def copy_assets() -> None:
         (ROOT / "assets" / "brand" / "super-eukarya-logo.png", ASSET_OUT / "super-eukarya-logo.png"),
         (ROOT / "assets" / "brand" / "stateline-tri-county-guide-logo.svg", ASSET_OUT / "stateline-tri-county-guide-logo.svg"),
         (ROOT / "assets" / "brand" / "raton-accessible-cursor.svg", ASSET_OUT / "raton-accessible-cursor.svg"),
+        (ROOT / "assets" / "brand" / "raton-cursor-route.svg", ASSET_OUT / "raton-cursor-route.svg"),
+        (ROOT / "assets" / "brand" / "raton-cursor-external.svg", ASSET_OUT / "raton-cursor-external.svg"),
+        (ROOT / "assets" / "brand" / "raton-cursor-email.svg", ASSET_OUT / "raton-cursor-email.svg"),
+        (ROOT / "assets" / "brand" / "raton-cursor-phone.svg", ASSET_OUT / "raton-cursor-phone.svg"),
+        (ROOT / "assets" / "brand" / "raton-cursor-download.svg", ASSET_OUT / "raton-cursor-download.svg"),
+        (ROOT / "assets" / "brand" / "raton-cursor-action.svg", ASSET_OUT / "raton-cursor-action.svg"),
     ]:
         if src.exists():
             shutil.copy2(src, dest)
@@ -7330,6 +7336,47 @@ def write_static_assets() -> None:
       ) { cursor: pointer; }
       :where(button:disabled, [aria-disabled="true"]) { cursor: not-allowed; }
     }
+    .guide-cursor-halo { display: none; }
+    @media (hover: hover) and (pointer: fine) {
+      :where([data-guide-cursor="route"]) { cursor: url("raton-cursor-route.svg") 4 2, pointer; }
+      :where([data-guide-cursor="external"]) { cursor: url("raton-cursor-external.svg") 4 2, pointer; }
+      :where([data-guide-cursor="email"]) { cursor: url("raton-cursor-email.svg") 4 2, pointer; }
+      :where([data-guide-cursor="phone"]) { cursor: url("raton-cursor-phone.svg") 4 2, pointer; }
+      :where([data-guide-cursor="download"]) { cursor: url("raton-cursor-download.svg") 4 2, pointer; }
+      :where([data-guide-cursor="action"]) { cursor: url("raton-cursor-action.svg") 4 2, pointer; }
+      .guide-cursor-halo {
+        --cursor-halo-rgb: 126, 212, 216;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1002;
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: -15px 0 0 -15px;
+        border: 1px solid rgba(var(--cursor-halo-rgb), 0.38);
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate3d(-40px, -40px, 0);
+        transition: opacity 180ms ease;
+        will-change: transform, opacity, box-shadow;
+      }
+      .guide-cursor-halo[data-kind="external"] { --cursor-halo-rgb: 217, 115, 69; }
+      .guide-cursor-halo[data-kind="email"] { --cursor-halo-rgb: 108, 28, 91; }
+      .guide-cursor-halo[data-kind="phone"] { --cursor-halo-rgb: 14, 100, 104; }
+      .guide-cursor-halo[data-kind="download"] { --cursor-halo-rgb: 119, 40, 22; }
+      .guide-cursor-halo[data-kind="action"] { --cursor-halo-rgb: 106, 90, 46; }
+      .guide-cursor-halo.is-visible {
+        opacity: 0.44;
+        animation: guideCursorGlow 2400ms ease-in-out infinite;
+      }
+      .guide-cursor-halo.is-pressed { opacity: 0.66; }
+    }
+    @keyframes guideCursorGlow {
+      0%, 100% { box-shadow: 0 0 0 1px rgba(var(--cursor-halo-rgb), 0.08), 0 0 5px rgba(var(--cursor-halo-rgb), 0.12); }
+      50% { box-shadow: 0 0 0 4px rgba(var(--cursor-halo-rgb), 0.10), 0 0 13px rgba(var(--cursor-halo-rgb), 0.28); }
+    }
     :where(a[href], button:not(:disabled), summary, [role="button"], [role="link"]) {
       -webkit-tap-highlight-color: rgba(126, 212, 216, 0.30);
     }
@@ -9600,6 +9647,99 @@ def write_static_assets() -> None:
       if (isPreview) watermark.hidden = false;
     }
 
+    const GUIDE_CURSOR_SELECTOR = [
+      "a[href]",
+      "button:not(:disabled)",
+      "select",
+      "summary",
+      "label[for]",
+      "input[type='checkbox']",
+      "input[type='radio']",
+      "input[type='file']",
+      "input[type='button']",
+      "input[type='submit']",
+      "input[type='reset']",
+      "[role='button']",
+      "[role='link']"
+    ].join(",");
+
+    function guideCursorKind(element) {
+      if (!(element instanceof Element)) return "action";
+      const anchor = element.closest("a[href]");
+      if (!anchor) return "action";
+      const href = String(anchor.getAttribute("href") || "").trim();
+      const lowerHref = href.toLowerCase();
+      if (lowerHref.startsWith("mailto:")) return "email";
+      if (lowerHref.startsWith("tel:")) return "phone";
+      if (anchor.hasAttribute("download")) return "download";
+
+      let destination;
+      try {
+        destination = new URL(anchor.href, document.baseURI);
+      } catch {
+        return "route";
+      }
+      if (/\.(?:csv|json|xlsx?|pdf|zip|docx?|odt|ics)(?:$|[?#])/i.test(destination.href)) return "download";
+      return destination.origin === window.location.origin ? "route" : "external";
+    }
+
+    function initGuideCursorCues() {
+      if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+      const halo = document.createElement("span");
+      halo.className = "guide-cursor-halo";
+      halo.setAttribute("aria-hidden", "true");
+      document.body.append(halo);
+
+      let activeTarget = null;
+      let pointerX = -40;
+      let pointerY = -40;
+      let frame = 0;
+
+      function paintPosition() {
+        frame = 0;
+        halo.style.transform = `translate3d(${pointerX}px, ${pointerY}px, 0)`;
+      }
+
+      function setPosition(event) {
+        pointerX = event.clientX;
+        pointerY = event.clientY;
+        if (!frame) frame = window.requestAnimationFrame(paintPosition);
+      }
+
+      function setTarget(start) {
+        const target = start instanceof Element ? start.closest(GUIDE_CURSOR_SELECTOR) : null;
+        if (!target || target.matches(":disabled, [aria-disabled='true']")) {
+          activeTarget = null;
+          halo.classList.remove("is-visible", "is-pressed");
+          return;
+        }
+        const kind = guideCursorKind(target);
+        target.dataset.guideCursor = kind;
+        activeTarget = target;
+        halo.dataset.kind = kind;
+        halo.classList.add("is-visible");
+      }
+
+      document.addEventListener("pointerover", event => setTarget(event.target), { passive: true });
+      document.addEventListener("pointermove", event => {
+        setPosition(event);
+        if (!activeTarget || !activeTarget.contains(event.target)) setTarget(event.target);
+      }, { passive: true });
+      document.addEventListener("pointerout", event => {
+        if (event.relatedTarget instanceof Element && event.relatedTarget.closest(GUIDE_CURSOR_SELECTOR)) {
+          setTarget(event.relatedTarget);
+          return;
+        }
+        activeTarget = null;
+        halo.classList.remove("is-visible", "is-pressed");
+      }, { passive: true });
+      document.addEventListener("pointerdown", () => {
+        if (activeTarget) halo.classList.add("is-pressed");
+      }, { passive: true });
+      document.addEventListener("pointerup", () => halo.classList.remove("is-pressed"), { passive: true });
+      window.addEventListener("blur", () => halo.classList.remove("is-visible", "is-pressed"));
+    }
+
     function playNavigationYucca() {
       const flourish = document.querySelector("[data-nav-yucca]");
       if (!flourish || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -11707,6 +11847,7 @@ def write_static_assets() -> None:
     }
 
     initPreviewWatermark();
+    initGuideCursorCues();
     initNavigationYucca();
     syncDirectoryDetails();
     initProgressiveLists();
