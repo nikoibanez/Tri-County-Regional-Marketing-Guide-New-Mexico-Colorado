@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T05:18:28-06:00",
+  "generated_at": "2026-09-04T19:42:13+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1498,
@@ -25,7 +25,7 @@
     "source_urls_script_limited": 28,
     "source_field_checks": 1,
     "watch_pages_checked": 32,
-    "watch_pages_failed": 8,
+    "watch_pages_failed": 11,
     "priority_new_leads": 1,
     "keyword_urls_checked": 120,
     "keyword_entries_changed": 40,
