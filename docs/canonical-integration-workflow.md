@@ -55,6 +55,14 @@ Every workflow that prepares an automated pull request or Codex proposal must:
 
 This proves which accepted Luna work the automation saw. It does not authorize publication of unreviewed directory, funding, eligibility, deadline, rate, contact, civic, or legal claims.
 
+## Baby And Luna Review Branches
+
+GitHub records the account, repository, branch, and commit; it cannot identify a physical computer. Use `baby/<topic>` or `luna/<topic>` for ordinary review branches. Codex work may use `codex/baby-<topic>` or `codex/luna-<topic>`.
+
+`.github/workflows/trusted-device-pr-readiness.yml` uses a read-only pull-request token and checks those branches without executing pull-request code. It requires the trusted maintainer account, the same repository, `master` as the base, the current canonical checkpoint, a non-draft pull request, and a low-risk maintenance-only diff. Changes to canonical data, generated output, visual assets, Netlify functions, or generator/tool code remain on the normal reviewed path because they can alter public claims or publication behavior.
+
+Repository auto-merge may be enabled so an exactly approved, check-passing pull request can wait for required checks. A device name is not standing approval: every landing request still names the PR and its current head SHA. A new push invalidates the earlier landing confirmation.
+
 ## Weekly Coordination Review
 
 The weekly Codex maintenance task uses a clean worktree and this document as its contract. It should inspect open automation and integration pull requests, identify overlapping files or superseded structures, and propose the smallest safe reconciliation. It may prepare a draft pull request for code and infrastructure changes, but it must not merge, deploy, or publish unreviewed public claims.

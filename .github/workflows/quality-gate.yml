@@ -63,6 +63,7 @@ jobs:
           scripts/smoke_test_site.py
           scripts/sweep_listing_keywords.py
           scripts/capture_open_pr_context.py
+          scripts/check_trusted_device_pr.py
           scripts/verify_canonical_integration.py
 
       - name: Run maintenance unit checks

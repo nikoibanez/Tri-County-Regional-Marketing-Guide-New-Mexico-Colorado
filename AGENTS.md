@@ -33,6 +33,8 @@ python scripts/verify_canonical_integration.py
 
 Before an automation returns a pull request, issue, or Codex proposal, it must refresh `origin/master`, prove that its `HEAD` matches that Luna/canonical checkpoint, inspect open review work with `scripts/capture_open_pr_context.py`, rebuild the canonical site, and pass `scripts/verify_canonical_integration.py`. Include the base commit SHA and open-review context in the review text. Local uncommitted work is not part of the checkpoint.
 
+Baby and Luna are workflow origins, not separate site versions. Name their review branches `baby/<topic>` or `luna/<topic>`; Codex branches may use `codex/baby-<topic>` or `codex/luna-<topic>`. The trusted-device gate may fast-track low-risk maintenance files after the quality check, but it never replaces exact PR/head landing confirmation or the human review required for public claims and canonical data.
+
 ## Publication Rules
 
 - Treat directory rows as leads unless a current public source verifies them.

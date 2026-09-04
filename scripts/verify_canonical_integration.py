@@ -93,6 +93,8 @@ def source_issues(generator_source: str, netlify_source: str) -> list[str]:
     build = config.get("build", {})
     command = str(build.get("command") or "")
     publish = str(build.get("publish") or "")
+    environment = build.get("environment", {})
+    public_origin = str(environment.get("PUBLIC_SITE_ORIGIN") or "").rstrip("/")
     preflight_position = command.find(CANONICAL_PREFLIGHT)
     build_position = command.find(CANONICAL_BUILD, preflight_position + len(CANONICAL_PREFLIGHT))
     postflight_position = command.find(CANONICAL_POSTFLIGHT, build_position + len(CANONICAL_BUILD))
@@ -104,6 +106,19 @@ def source_issues(generator_source: str, netlify_source: str) -> list[str]:
         )
     if publish != CANONICAL_PUBLISH:
         issues.append(f"Netlify publish directory must be {CANONICAL_PUBLISH!r}; found {publish!r}.")
+    if not public_origin:
+        issues.append("Netlify PUBLIC_SITE_ORIGIN must name the production site.")
+    else:
+        try:
+            generator_origin = str(assignment_literal(generator_source, "DEFAULT_SITE_ORIGIN")).rstrip("/")
+        except (SyntaxError, ValueError, TypeError) as exc:
+            issues.append(f"Generator default production origin could not be checked: {exc}")
+        else:
+            if generator_origin != public_origin:
+                issues.append(
+                    "Netlify PUBLIC_SITE_ORIGIN and the generator fallback origin must agree; "
+                    f"found {public_origin!r} and {generator_origin!r}."
+                )
 
     if 'SOURCE_CSV = REPO_DATA / "tri_county_persona_resources.csv"' not in generator_source:
         issues.append("Canonical CSV source path is missing from the generator.")
