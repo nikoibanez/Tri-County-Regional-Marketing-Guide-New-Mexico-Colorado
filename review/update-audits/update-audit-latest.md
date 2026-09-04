@@ -1,6 +1,6 @@
 # Update Source Audit
 
-Generated: 2026-08-18
+Generated: 2026-09-04
 
 This report separates confirmed link failures from pages that merely block or confuse scripted checks.
 
@@ -10,16 +10,16 @@ This report separates confirmed link failures from pages that merely block or co
 - Web sources checked: 135
 - Confirmed broken or missing: 0
 - Normal-browser confirmation required: 0
-- Script-access limitations (not broken): 28
+- Script-access limitations (not broken): 26
 - Offline field-check records: 1
 - Human approval required: 82
 
 ## Status Counts
 
-- access_blocked: 28
+- access_blocked: 26
 - field_check: 1
-- ok: 94
-- redirect: 13
+- ok: 95
+- redirect: 14
 
 ## Confirmed Broken Or Missing
 
@@ -43,8 +43,6 @@ These are informational results, not broken-link findings. The page blocked scri
 - [Visit Trinidad Submit Your Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Las Animas; events; access_blocked; HTTP Error 403: Forbidden
 - [Visit Trinidad Submit Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
 - [Visit Trinidad Tourism / Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
-- [Trinidad Community Foundation](https://www.trinidadcf.org/board.html) - Las Animas; funding; access_blocked; HTTP Error 429: Too Many Requests
-- [Trinidad Community Foundation Grant Process](https://www.trinidadcf.org/grants.html) - Las Animas; funding; access_blocked; HTTP Error 429: Too Many Requests
 - [Candid Funding Search and Learning](https://learning.candid.org/free-access-to-foundation-directory) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [IFundWomen Grants](https://www.ifundwomen.com/grants/apply-for-grants) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - National; funding; access_blocked; HTTP Error 403: Forbidden
