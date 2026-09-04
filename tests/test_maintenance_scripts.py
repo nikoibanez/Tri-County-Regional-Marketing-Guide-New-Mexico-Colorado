@@ -895,7 +895,7 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn('class="directory-assistant__desert-motion" aria-hidden="true"', page)
 
         landscape_files = sorted((ROOT / "assets" / "animations").glob("hero-*.svg"))
-        self.assertEqual(len(landscape_files), 11)
+        self.assertEqual(len(landscape_files), 12)
         allowed_colors = {
             color.lower()
             for palette in BRAND_PALETTES.values()
@@ -917,7 +917,7 @@ class SiteSmokeTests(unittest.TestCase):
             colors = {color.lower() for color in re.findall(r"#[0-9a-fA-F]{6}", svg)}
             self.assertFalse(colors - allowed_colors, landscape_file.name)
 
-        self.assertEqual(palette_names, {"city-of-raton", "explore-raton", "raton-mainstreet"})
+        self.assertEqual(palette_names, {"city-of-raton", "explore-raton", "grow-raton"})
 
         banner = (ROOT / "assets" / "animations" / "yucca-banner.svg").read_text(encoding="utf-8")
         self.assertIn('data-brand-palette="explore-raton"', banner)
@@ -926,7 +926,7 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("222 23v207H-40V570", banner)
 
         cta = (ROOT / "assets" / "animations" / "yucca-cta-loop.svg").read_text(encoding="utf-8")
-        self.assertIn('data-brand-palette="raton-mainstreet"', cta)
+        self.assertIn('data-brand-palette="grow-raton"', cta)
 
         with tempfile.TemporaryDirectory() as folder:
             asset_out = Path(folder)
@@ -937,13 +937,15 @@ class SiteSmokeTests(unittest.TestCase):
 
         self.assertIn("assistant-desert-open", css)
         self.assertIn("assistant-desert-close", css)
-        self.assertIn("--raton-brick: #772816", css)
-        self.assertIn("--raton-orange: #d97345", css)
-        self.assertIn("--raton-turquoise: #7ed4d8", css)
-        self.assertIn("--raton-cream: #f3eedd", css)
-        self.assertIn("--raton-city-turquoise: var(--raton-turquoise)", css)
-        self.assertIn("--explore-orange: var(--raton-orange)", css)
-        self.assertIn("--mainstreet-plum: #6c1c5b", css)
+        self.assertIn("--city-brick: #772816", css)
+        self.assertIn("--city-turquoise: #21bdc5", css)
+        self.assertIn("--city-cream: #eeedd6", css)
+        self.assertIn("--explore-orange: #d97345", css)
+        self.assertIn("--explore-pale-aqua: #aae8ec", css)
+        self.assertIn("--grow-orange: #dd8500", css)
+        self.assertIn("--grow-green: #043e00", css)
+        self.assertIn("--grow-burgundy: #660001", css)
+        self.assertIn("--raton-city-turquoise: var(--city-turquoise)", css)
         self.assertIn("fill: var(--raton-city-turquoise)", css)
         self.assertIn("replayAssistantMotion(panel, \"open\")", js)
         self.assertIn('panel.addEventListener("cancel"', js)

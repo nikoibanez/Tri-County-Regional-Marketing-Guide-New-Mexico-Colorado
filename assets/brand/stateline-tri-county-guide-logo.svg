@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-labelledby="logo-title logo-description">
   <title id="logo-title">Stateline Tri-County Guide</title>
   <desc id="logo-description">Three connected county route markers beside the Stateline Tri-County Guide name and the counties Colfax, Las Animas, and Huerfano.</desc>
-  <rect width="720" height="180" rx="20" fill="#f3efe5"/>
-  <g fill="none" stroke="#173047" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="720" height="180" rx="20" fill="#eeedd6"/>
+  <g fill="none" stroke="#22495a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M48 121 112 48l64 73 64-73 64 73"/>
-    <path d="M52 139h252" stroke="#b69146"/>
+    <path d="M52 139h252" stroke="#d97345"/>
   </g>
-  <g stroke="#f3efe5" stroke-width="4">
-    <circle cx="112" cy="48" r="18" fill="#b69146"/>
-    <circle cx="176" cy="121" r="18" fill="#6d5262"/>
-    <circle cx="240" cy="48" r="18" fill="#a76149"/>
+  <g stroke="#eeedd6" stroke-width="4">
+    <circle cx="112" cy="48" r="18" fill="#21bdc5"/>
+    <circle cx="176" cy="121" r="18" fill="#dd8500"/>
+    <circle cx="240" cy="48" r="18" fill="#772816"/>
   </g>
-  <text x="344" y="70" fill="#173047" font-family="Inter, Arial, Helvetica, sans-serif" font-size="37" font-weight="800">STATELINE</text>
-  <text x="344" y="112" fill="#173047" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="700">TRI-COUNTY GUIDE</text>
-  <text x="344" y="145" fill="#4f5d67" font-family="Inter, Arial, Helvetica, sans-serif" font-size="16">Colfax • Las Animas • Huerfano</text>
+  <text x="344" y="70" fill="#22495a" font-family="Geogrotesque Slab, Roboto Slab, Georgia, serif" font-size="37" font-weight="800">STATELINE</text>
+  <text x="344" y="112" fill="#22495a" font-family="Proxima Nova, Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="700">TRI-COUNTY GUIDE</text>
+  <text x="344" y="145" fill="#58595b" font-family="Proxima Nova, Inter, Arial, Helvetica, sans-serif" font-size="16">Colfax • Las Animas • Huerfano</text>
 </svg>

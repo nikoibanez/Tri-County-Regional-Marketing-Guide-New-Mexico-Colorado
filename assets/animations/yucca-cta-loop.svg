@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="ctaLoopTitle" data-brand-palette="raton-mainstreet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="ctaLoopTitle" data-brand-palette="grow-raton">
   <title id="ctaLoopTitle">Forward loop marker</title>
   <defs>
     <style>
@@ -8,19 +8,19 @@
       }
       .orbit {
         fill: none;
-        stroke: rgba(34,73,90,0.24);
+        stroke: rgba(4,62,0,0.24);
         stroke-width: 4;
       }
       .arrow {
         fill: none;
-        stroke: #772816;
+        stroke: #043e00;
         stroke-width: 7;
         stroke-linecap: round;
         stroke-linejoin: round;
       }
       .node {
-        fill: #7ed4d8;
-        stroke: #d97345;
+        fill: #dd8500;
+        stroke: #660001;
         stroke-width: 3;
       }
       @keyframes cta-pulse {
