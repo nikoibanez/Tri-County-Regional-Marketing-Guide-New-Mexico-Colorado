@@ -25,6 +25,7 @@ import build_netlify_deep_guide as guide_builder  # noqa: E402
 from generate_geo_hero_svgs import BRAND_PALETTES  # noqa: E402
 from build_update_source_registry import normalize_posting  # noqa: E402
 from capture_open_pr_context import markdown_context, one_line_context  # noqa: E402
+from check_trusted_device_pr import classify_paths, policy_issues  # noqa: E402
 from build_netlify_deep_guide import (  # noqa: E402
     ROUTE_TYPE_CARDS,
     best_entity_contact_url,
@@ -56,6 +57,47 @@ from sweep_listing_keywords import (  # noqa: E402
 
 
 class DirectoryQualityTests(unittest.TestCase):
+    def test_trusted_device_policy_accepts_low_risk_luna_maintenance(self) -> None:
+        paths = ["scripts/build_maintenance_dashboard.py", "tests/test_maintenance_scripts.py"]
+
+        self.assertEqual(classify_paths(paths), (paths, []))
+        self.assertEqual(
+            policy_issues(
+                actor="nikoibanez",
+                base_ref="master",
+                head_ref="codex/luna-maintenance",
+                repo_full_name="nikoibanez/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado",
+                head_repo_full_name="nikoibanez/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado",
+                is_draft=False,
+                base_is_ancestor=True,
+                paths=paths,
+            ),
+            [],
+        )
+
+    def test_trusted_device_policy_blocks_public_data_and_stale_base(self) -> None:
+        issues = policy_issues(
+            actor="nikoibanez",
+            base_ref="master",
+            head_ref="baby/directory-refresh",
+            repo_full_name="nikoibanez/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado",
+            head_repo_full_name="nikoibanez/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado",
+            is_draft=False,
+            base_is_ancestor=False,
+            paths=["data/tri_county_persona_resources.csv"],
+        )
+
+        self.assertTrue(any("current canonical master" in issue for issue in issues))
+        self.assertTrue(any("per-PR review" in issue for issue in issues))
+
+        _, protected_policy_paths = classify_paths(
+            [".github/workflows/quality-gate.yml", "scripts/check_trusted_device_pr.py"]
+        )
+        self.assertEqual(
+            protected_policy_paths,
+            [".github/workflows/quality-gate.yml", "scripts/check_trusted_device_pr.py"],
+        )
+
     def test_normalize_name_handles_punctuation_and_suffix_spacing(self) -> None:
         self.assertEqual(normalize_name("Angel's Glow & Oxygen-Bar"), "angel s glow and oxygen bar")
 
@@ -453,6 +495,20 @@ class SourceAuditTests(unittest.TestCase):
 
 
 class WorkflowTests(unittest.TestCase):
+    def test_trusted_device_workflow_never_executes_pull_request_code_or_merges(self) -> None:
+        workflow = (ROOT / ".github" / "workflows" / "trusted-device-pr-readiness.yml").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("pull_request:", workflow)
+        self.assertNotIn("pull_request_target:", workflow)
+        self.assertIn("ref: master", workflow)
+        self.assertIn("persist-credentials: false", workflow)
+        self.assertIn("permissions:\n  contents: read", workflow)
+        self.assertIn("head.repo.full_name == github.repository", workflow)
+        self.assertNotIn("gh pr merge", workflow)
+        self.assertNotIn("ref: ${{ github.event.pull_request.head.sha }}", workflow)
+
     def test_open_pr_context_is_compact_and_treats_titles_as_untrusted(self) -> None:
         pull_requests = [
             {
@@ -539,9 +595,34 @@ class WorkflowTests(unittest.TestCase):
         netlify = (
             '[build]\ncommand = "python scripts/verify_canonical_integration.py --source-only && python tools/build_netlify_deep_guide.py && python tools/inject_deluxe_legacy_context.py && python scripts/verify_canonical_integration.py"\n'
             'publish = "dist/tri-county-netlify-guide-deep"\n'
+            '[build.environment]\nPUBLIC_SITE_ORIGIN = "https://example.netlify.app"\n'
         )
+        generator += 'DEFAULT_SITE_ORIGIN = "https://example.netlify.app"\n'
 
         self.assertEqual(source_issues(generator, netlify), [])
+
+    def test_canonical_guard_rejects_mismatched_production_origin(self) -> None:
+        generator = (
+            'SOURCE_CSV = REPO_DATA / "tri_county_persona_resources.csv"\n'
+            'SOURCE_JSON = REPO_DATA / "tri_county_persona_resources.json"\n'
+            'PROMOTE_ROUTE_DEFS = [{"key": "events"}, {"key": "advertising"}, {"key": "businesses"}, '
+            '{"key": "nonprofits"}, {"key": "calendars"}, {"key": "galleries"}]\n'
+            'def navigation():\n'
+            '    nav_structure = [("link", "Home"), ("link", "Directory"), ("link", "Funding"), '
+            '("link", "Arts & Culture"), ("link", "Promote"), ("link", "Counties"), '
+            '("link", "Guide"), ("link", "Tools")]\n'
+            'DEFAULT_SITE_ORIGIN = "https://old.example"\n'
+        )
+        netlify = (
+            '[build]\ncommand = "python scripts/verify_canonical_integration.py --source-only && '
+            'python tools/build_netlify_deep_guide.py && python scripts/verify_canonical_integration.py"\n'
+            'publish = "dist/tri-county-netlify-guide-deep"\n'
+            '[build.environment]\nPUBLIC_SITE_ORIGIN = "https://current.example"\n'
+        )
+
+        issues = source_issues(generator, netlify)
+
+        self.assertTrue(any("fallback origin must agree" in issue for issue in issues))
 
     def test_canonical_guard_rejects_superseded_navigation(self) -> None:
         nav = '<nav class="site-nav" aria-label="Primary navigation">Home Guide Find Tasks</nav>'

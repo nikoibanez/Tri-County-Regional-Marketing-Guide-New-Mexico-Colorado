@@ -1,0 +1,69 @@
+name: Trusted device PR readiness
+
+on:
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+
+permissions:
+  contents: read
+
+jobs:
+  readiness:
+    if: >-
+      (
+        startsWith(github.head_ref, 'baby/') ||
+        startsWith(github.head_ref, 'luna/') ||
+        startsWith(github.head_ref, 'codex/baby-') ||
+        startsWith(github.head_ref, 'codex/luna-')
+      ) &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out trusted policy from master
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: master
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.11"
+
+      - name: Fetch the pull-request head without executing it
+        env:
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: git fetch --no-tags origin "$HEAD_SHA"
+
+      - name: Evaluate trusted-device scope
+        env:
+          ACTOR: ${{ github.actor }}
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_REF: ${{ github.head_ref }}
+          REPO_FULL_NAME: ${{ github.repository }}
+          HEAD_REPO_FULL_NAME: ${{ github.event.pull_request.head.repo.full_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          IS_DRAFT: ${{ github.event.pull_request.draft }}
+        run: |
+          args=()
+          if [ "$IS_DRAFT" = "true" ]; then
+            args+=(--draft)
+          fi
+          python scripts/check_trusted_device_pr.py \
+            --actor "$ACTOR" \
+            --base-ref "$BASE_REF" \
+            --head-ref "$HEAD_REF" \
+            --repo-full-name "$REPO_FULL_NAME" \
+            --head-repo-full-name "$HEAD_REPO_FULL_NAME" \
+            --base-sha "$BASE_SHA" \
+            --head-sha "$HEAD_SHA" \
+            "${args[@]}"
