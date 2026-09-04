@@ -1,6 +1,6 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-08-25T05:18:28-06:00
+Generated: 2026-09-04T19:41:17+00:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
@@ -49,10 +49,10 @@ Automation detects and drafts. A person approves public claims, directory change
 - Resource-discovery pages changed: 17
 - Confirmed broken resource-discovery hubs: 0
 - Resource-discovery checks needing attention: 5
-- Free-tool pages checked: 22
-- Free-tool pages changed: 0
-- Free-tool candidate links collected: 0
-- Free-tool checks needing attention: 5
+- Free-tool pages checked: 21
+- Free-tool pages changed: 2
+- Free-tool candidate links collected: 17
+- Free-tool checks needing attention: 6
 
 ## Action Queue
 
@@ -61,10 +61,11 @@ Automation detects and drafts. A person approves public claims, directory change
 - **MEDIUM - 176 resource candidate links waiting for review:** Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data.
 - **MEDIUM - 173 canonical rows without a website or source URL:** Enrich high-value entries first; do not invent contact paths.
 - **MEDIUM - 40 listing keyword sets proposed for review:** Review additions and removals in the latest keyword-sweep report before merging the keyword index.
-- **MEDIUM - 1 free-tool or nonprofit-offer pages waiting for wording review:** Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory.
+- **MEDIUM - 3 free-tool or nonprofit-offer pages waiting for wording review:** Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory.
 - **LOW - 620 listings without an identified promotion route:** Enrich these only when a public page or direct contact supports a useful route; do not invent availability.
 - **LOW - 36 keyword source pages needing attention:** Open failed pages normally before removing retained source-derived keywords.
+- **LOW - 17 free-tool candidate links waiting for review:** Open each official candidate and add it only when it fills a real guide task without duplicating an existing tool.
+- **LOW - 6 free-tool pages needing a normal-browser check:** Open failed pages normally; do not remove a tool solely because automation was blocked or timed out.
 - **LOW - 5 resource-discovery hubs needing a normal-browser check:** Open these pages normally; do not remove a source because of bot blocking or a temporary request failure.
-- **LOW - 5 free-tool pages needing a normal-browser check:** Open failed pages normally; do not remove a tool solely because automation was blocked or timed out.
 - **LOW - 4 national funding pages needing a normal-browser check:** Open these pages normally; do not treat bot blocking or a temporary network error as a closed program.
 - **LOW - 1 offline posting pathways awaiting a field check:** Confirm the physical location or owner-controlled posting policy locally.
