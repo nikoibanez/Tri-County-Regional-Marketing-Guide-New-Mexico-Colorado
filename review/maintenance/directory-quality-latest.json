@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25",
+  "generated_at": "2026-09-05",
   "status": "pass",
   "blocking": [],
   "warnings": [
@@ -8,7 +8,7 @@
     "The legacy 688-row consolidated export still contains structural cleanup work. It is not the active Network data source; keep it internal until rebuilt from published rows."
   ],
   "canonical_source": {
-    "path": "C:\\Temp\\tri-county-luna-integration\\data\\tri_county_persona_resources.csv",
+    "path": "C:\\Temp\\tri-county-raton-animation-palettes\\data\\tri_county_persona_resources.csv",
     "rows": 1498,
     "excluded_organization_rows": 0,
     "blank_names": 0,
@@ -41,7 +41,7 @@
     ]
   },
   "published_directory": {
-    "path": "C:\\Temp\\tri-county-luna-integration\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
+    "path": "C:\\Temp\\tri-county-raton-animation-palettes\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
     "rows": 1362,
     "excluded_organization_rows": 0,
     "blank_names": 0,
@@ -56,7 +56,7 @@
     "generic_description_sample": []
   },
   "consolidated_directory": {
-    "path": "C:\\Temp\\tri-county-luna-integration\\data\\directory_of_absolutely_everything.csv",
+    "path": "C:\\Temp\\tri-county-raton-animation-palettes\\data\\directory_of_absolutely_everything.csv",
     "rows": 687,
     "excluded_organization_rows": 0,
     "blank_names": 0,

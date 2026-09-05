@@ -24,6 +24,7 @@ MAX_REMOTE_BYTES = 12_000_000
 DEFAULT_PATHS = (
     "",
     "network/",
+    "events/",
     "resources/funding/",
     "resources/arts-culture/",
     "posting/",

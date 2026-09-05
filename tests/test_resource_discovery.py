@@ -16,6 +16,26 @@ import build_netlify_deep_guide as guide_builder  # noqa: E402
 
 
 class ResourceDiscoveryRegistryTests(unittest.TestCase):
+    def test_event_watch_registry_has_five_unique_hubs_per_county(self) -> None:
+        payload = json.loads((ROOT / "data" / "event-watch-sources.json").read_text(encoding="utf-8"))
+        sources = payload["sources"]
+        source_ids = [item["id"] for item in sources]
+        source_urls = [item["url"].rstrip("/").casefold() for item in sources]
+        self.assertEqual(len(sources), 15)
+        self.assertEqual(len(source_ids), len(set(source_ids)))
+        self.assertEqual(len(source_urls), len(set(source_urls)))
+        self.assertTrue(all(item["category"] == "events-calendars" for item in sources))
+        self.assertTrue(all(item["url"].startswith("https://") for item in sources))
+        self.assertEqual(
+            {county: sum(1 for item in sources if item["county"] == county) for county in ("Colfax", "Las Animas", "Huerfano")},
+            {"Colfax": 5, "Las Animas": 5, "Huerfano": 5},
+        )
+        directory_urls = {
+            str(item.get("url") or "").rstrip("/").casefold()
+            for item in guide_builder.DIRECTORY_SOURCES
+        }
+        self.assertTrue(set(source_urls).issubset(directory_urls))
+
     def test_registry_ids_urls_and_keyword_groups_are_complete(self) -> None:
         sources = json.loads((ROOT / "data" / "resource-discovery-sources.json").read_text(encoding="utf-8"))["sources"]
         groups = json.loads((ROOT / "data" / "resource-keyword-registry.json").read_text(encoding="utf-8"))["groups"]
@@ -91,6 +111,23 @@ class ResourceDiscoveryRegistryTests(unittest.TestCase):
 
 
 class GuideTaxonomyTests(unittest.TestCase):
+    def test_events_page_uses_current_hubs_and_searchable_routes(self) -> None:
+        page = guide_builder.events_page()
+        self.assertEqual(page.count("event-hub-card"), 15)
+        self.assertIn('id="event-results"', page)
+        self.assertIn('id="event-county-filter"', page)
+        self.assertIn('id="event-type-filter"', page)
+        self.assertIn('id="event-action-filter"', page)
+        self.assertIn("Visit Angel Fire - List Your Event", page)
+        self.assertNotIn("Angel Fire Chamber", page)
+        self.assertNotIn("verification", page.casefold())
+        self.assertEqual(guide_builder.ACTIVE_PATHS["events"], "events/")
+
+    def test_defunct_angel_fire_chamber_event_rows_are_not_published(self) -> None:
+        names = {item.get("name") for item in guide_builder.EVENT_POSTING_CHANNELS}
+        self.assertNotIn("Angel Fire Chamber - Event Schedule", names)
+        self.assertNotIn("Angel Fire Chamber Event Calendar", names)
+
     def test_art_term_does_not_match_starting(self) -> None:
         row = {"resource_name": "Starting a Business Center", "description": "General business planning"}
         self.assertFalse(guide_builder.row_matches_terms(row, ["art"]))

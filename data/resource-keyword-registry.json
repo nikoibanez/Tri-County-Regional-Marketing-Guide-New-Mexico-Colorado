@@ -234,6 +234,51 @@
         "stock art",
         "clip art"
       ]
+    },
+    {
+      "id": "events-calendars",
+      "label": "Event calendars and submission routes",
+      "include_phrases": [
+        "upcoming events",
+        "calendar of events",
+        "event calendar",
+        "events calendar",
+        "submit an event",
+        "submit your event",
+        "list your event",
+        "add new event",
+        "event registration",
+        "festival",
+        "farmers market",
+        "workshop",
+        "concert",
+        "performance",
+        "exhibition",
+        "parade",
+        "rodeo",
+        "open mic",
+        "community meeting"
+      ],
+      "decision_terms": [
+        "date",
+        "start time",
+        "venue",
+        "organizer",
+        "tickets",
+        "registration",
+        "event cost",
+        "free event",
+        "submission deadline",
+        "recurring event",
+        "contact"
+      ],
+      "exclude_phrases": [
+        "privacy policy",
+        "terms of use",
+        "login",
+        "weather forecast",
+        "past events"
+      ]
     }
   ]
 }

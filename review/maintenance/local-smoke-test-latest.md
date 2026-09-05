@@ -1,7 +1,7 @@
 # Site Smoke Test
 
-Generated: 2026-08-25
-Target: C:\Temp\tri-county-luna-integration\dist\tri-county-netlify-guide-deep
+Generated: 2026-09-05
+Target: C:\Temp\tri-county-raton-animation-palettes\dist\tri-county-netlify-guide-deep
 Mode: local
 Status: **PASS**
 
@@ -9,6 +9,7 @@ Status: **PASS**
 | --- | --- | --- |
 | `/` | PASS | Loaded and passed content checks. |
 | `/network/` | PASS | Loaded and passed content checks. |
+| `/events/` | PASS | Loaded and passed content checks. |
 | `/resources/funding/` | PASS | Loaded and passed content checks. |
 | `/resources/arts-culture/` | PASS | Loaded and passed content checks. |
 | `/posting/` | PASS | Loaded and passed content checks. |

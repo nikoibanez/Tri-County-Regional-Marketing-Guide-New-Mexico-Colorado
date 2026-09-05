@@ -1,0 +1,109 @@
+name: Weekly tri-county event source review
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 16 * * 4"
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: weekly-event-source-watch
+  cancel-in-progress: false
+
+jobs:
+  event-watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Verify current Luna/canonical checkpoint
+        id: canonical
+        run: |
+          git fetch origin master
+          python scripts/verify_canonical_integration.py --require-current-master --source-only
+          echo "base_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Capture open integration work
+        id: coordination
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/capture_open_pr_context.py
+
+      - name: Build canonical site
+        run: python tools/build_netlify_deep_guide.py
+
+      - name: Collect review-only event candidates
+        run: >-
+          python scripts/audit_resource_discovery_sources.py
+          --sources data/event-watch-sources.json
+          --keywords data/resource-keyword-registry.json
+          --state data/event-watch-state.json
+          --out-dir review/event-watch
+          --report-slug event-watch
+          --report-title "Tri-County Event Source Review"
+          --timeout 20
+
+      - name: Verify canonical generated structure
+        run: python scripts/verify_canonical_integration.py
+
+      - name: Prepare event-source review branch
+        id: review
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          review_count=$(python -c "import json; d=json.load(open('review/event-watch/event-watch-latest.json', encoding='utf-8')); s=d.get('summary', {}); print(int(s.get('changed', 0)) + int(s.get('new_baselines', 0)) + int(s.get('confirmed_broken', 0)))")
+          if [ "$review_count" -eq 0 ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git add data/event-watch-state.json
+          git add review/event-watch/event-watch-latest.json
+          git add review/event-watch/event-watch-latest.md
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            branch="automation/event-watch-${GITHUB_RUN_ID}"
+            git switch -c "$branch"
+            git commit -m "Refresh tri-county event source review"
+            git push --set-upstream origin "$branch"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open human-review pull request
+        if: steps.review.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEW_BRANCH: ${{ steps.review.outputs.branch }}
+          CANONICAL_BASE_SHA: ${{ steps.canonical.outputs.base_sha }}
+          OPEN_PR_CONTEXT: ${{ steps.coordination.outputs.open_pr_context }}
+        shell: bash
+        run: |
+          body="Canonical Luna/master checkpoint: $CANONICAL_BASE_SHA. Open review work checked before this run: $OPEN_PR_CONTEXT. This automated pull request contains a private review report for fifteen event calendars and submission hubs: five each for Colfax, Las Animas, and Huerfano counties. It does not change public event listings. Confirm dates, locations, costs, organizer details, submission rules, and public wording before moving any candidate into canonical event data."
+          if ! gh pr create --draft --base master --head "$REVIEW_BRANCH" --title "Review tri-county event source changes" --body "$body"; then
+            compare_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/master...${REVIEW_BRANCH}?expand=1"
+            gh issue create --title "Event source review branch is ready" --body "$body Branch: $REVIEW_BRANCH One-click draft PR: $compare_url"
+          fi
+
+      - name: Upload event-source report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: event-watch-${{ github.run_id }}
+          retention-days: 30
+          path: review/event-watch/

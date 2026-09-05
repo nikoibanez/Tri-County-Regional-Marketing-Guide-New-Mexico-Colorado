@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-25",
-  "target": "C:\\Temp\\tri-county-luna-integration\\dist\\tri-county-netlify-guide-deep",
+  "generated_at": "2026-09-05",
+  "target": "C:\\Temp\\tri-county-raton-animation-palettes\\dist\\tri-county-netlify-guide-deep",
   "mode": "local",
   "status": "pass",
-  "checked": 13,
+  "checked": 14,
   "failed": 0,
   "results": [
     {
@@ -13,6 +13,11 @@
     },
     {
       "route": "/network/",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "route": "/events/",
       "ok": true,
       "error": ""
     },

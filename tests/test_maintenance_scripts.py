@@ -543,6 +543,7 @@ class WorkflowTests(unittest.TestCase):
             "weekly-listing-keyword-sweep.yml",
             "weekly-national-funding-watch.yml",
             "weekly-resource-discovery.yml",
+            "weekly-event-source-watch.yml",
             "monthly-maintenance-snapshot.yml",
         )
 
@@ -681,7 +682,7 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("@media (hover: hover) and (pointer: fine)", css)
         self.assertIn("@keyframes navCursorGlow", css)
         self.assertIn("animation: navCursorGlow 1800ms ease-in-out infinite;", css)
-        for kind in ("route", "external", "email", "phone", "download", "action"):
+        for kind in ("route", "directory", "external", "email", "phone", "download", "action"):
             self.assertIn(f'raton-cursor-{kind}.svg', css)
             self.assertTrue((ROOT / "assets" / "brand" / f"raton-cursor-{kind}.svg").exists())
         self.assertIn(".guide-cursor-halo.is-visible", css)
@@ -689,8 +690,23 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("function guideCursorKind(element)", js)
         self.assertIn('lowerHref.startsWith("mailto:")', js)
         self.assertIn('lowerHref.startsWith("tel:")', js)
+        self.assertIn('anchor.closest(".resource-item, .source-card, .assistant-result")', js)
         self.assertIn("initGuideCursorCues();", js)
         self.assertIn("@media (prefers-reduced-motion: reduce)", css)
+
+    def test_physical_location_marker_uses_a_building_icon(self) -> None:
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+
+        physical_rule = css.split(".listing-marker--physical::before {", 1)[1].split("}", 1)[0]
+        self.assertIn("mask-image:", physical_rule)
+        self.assertIn("background-color: var(--route)", physical_rule)
+        self.assertNotIn("border:", physical_rule)
+        marker = guide_builder.resource_physical_indicator_badges({"has_physical_location": "true"})
+        self.assertIn("Physical location", marker)
 
     def test_primary_navigation_combines_direct_resources_with_county_promote_routes(self) -> None:
         page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
