@@ -3729,6 +3729,7 @@ def copy_assets() -> None:
         (ROOT / "assets" / "brand" / "stateline-tri-county-guide-logo.svg", ASSET_OUT / "stateline-tri-county-guide-logo.svg"),
         (ROOT / "assets" / "brand" / "raton-accessible-cursor.svg", ASSET_OUT / "raton-accessible-cursor.svg"),
         (ROOT / "assets" / "brand" / "raton-cursor-route.svg", ASSET_OUT / "raton-cursor-route.svg"),
+        (ROOT / "assets" / "brand" / "raton-cursor-directory.svg", ASSET_OUT / "raton-cursor-directory.svg"),
         (ROOT / "assets" / "brand" / "raton-cursor-external.svg", ASSET_OUT / "raton-cursor-external.svg"),
         (ROOT / "assets" / "brand" / "raton-cursor-email.svg", ASSET_OUT / "raton-cursor-email.svg"),
         (ROOT / "assets" / "brand" / "raton-cursor-phone.svg", ASSET_OUT / "raton-cursor-phone.svg"),
@@ -7377,6 +7378,7 @@ def write_static_assets() -> None:
     .guide-cursor-halo { display: none; }
     @media (hover: hover) and (pointer: fine) {
       :where([data-guide-cursor="route"]) { cursor: url("raton-cursor-route.svg") 4 2, pointer; }
+      :where([data-guide-cursor="directory"]) { cursor: url("raton-cursor-directory.svg") 12 2, pointer; }
       :where([data-guide-cursor="external"]) { cursor: url("raton-cursor-external.svg") 4 2, pointer; }
       :where([data-guide-cursor="email"]) { cursor: url("raton-cursor-email.svg") 4 2, pointer; }
       :where([data-guide-cursor="phone"]) { cursor: url("raton-cursor-phone.svg") 4 2, pointer; }
@@ -7401,6 +7403,7 @@ def write_static_assets() -> None:
         will-change: transform, opacity, box-shadow;
       }
       .guide-cursor-halo[data-kind="external"] { --cursor-halo-rgb: 217, 115, 69; }
+      .guide-cursor-halo[data-kind="directory"] { --cursor-halo-rgb: 20, 113, 118; }
       .guide-cursor-halo[data-kind="email"] { --cursor-halo-rgb: 102, 0, 1; }
       .guide-cursor-halo[data-kind="phone"] { --cursor-halo-rgb: 33, 189, 197; }
       .guide-cursor-halo[data-kind="download"] { --cursor-halo-rgb: 74, 34, 26; }
@@ -8236,12 +8239,17 @@ def write_static_assets() -> None:
       box-shadow: 0 0 0 2px rgba(143,79,58,0.13);
     }
     .listing-marker--physical::before {
-      width: 10px;
-      height: 10px;
-      border-radius: 2px;
-      border: 2px solid var(--route);
-      background: rgba(255,255,255,0.7);
-      box-shadow: 3px 3px 0 rgba(20,113,118,0.22);
+      width: 14px;
+      height: 14px;
+      background-color: var(--route);
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 14h12v-1h-1V3H3v10H2v1Zm3-9h2v2H5V5Zm4 0h2v2H9V5ZM5 9h2v2H5V9Zm4 0h2v2H9V9Z'/%3E%3C/svg%3E");
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 14h12v-1h-1V3H3v10H2v1Zm3-9h2v2H5V5Zm4 0h2v2H9V5ZM5 9h2v2H5V9Zm4 0h2v2H9V9Z'/%3E%3C/svg%3E");
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
     }
     .resource-outreach {
       display: grid;
@@ -9713,6 +9721,7 @@ def write_static_assets() -> None:
       if (!(element instanceof Element)) return "action";
       const anchor = element.closest("a[href]");
       if (!anchor) return "action";
+      if (anchor.closest(".resource-item, .source-card, .assistant-result")) return "directory";
       const href = String(anchor.getAttribute("href") || "").trim();
       const lowerHref = href.toLowerCase();
       if (lowerHref.startsWith("mailto:")) return "email";
