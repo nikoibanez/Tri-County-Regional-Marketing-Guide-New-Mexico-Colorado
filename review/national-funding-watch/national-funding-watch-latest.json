@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-18T15:55:29+00:00",
+  "generated_at": "2026-09-04T19:40:45+00:00",
   "review_policy": "These pages are monitored for change. Automation may flag new language or changed deadlines, but a person must confirm all public funding claims before publication.",
   "summary": {
     "sources": 10,
     "checked": 10,
-    "changed": 0,
-    "new_baselines": 1,
+    "changed": 3,
+    "new_baselines": 0,
     "confirmed_broken": 0,
     "script_access_limited": 4,
     "check_failures": 4,
@@ -14,9 +14,9 @@
       "ok": 6
     },
     "change_counts": {
+      "changed": 3,
       "check_failed": 4,
-      "new_baseline": 1,
-      "unchanged": 5
+      "unchanged": 3
     }
   },
   "results": [
@@ -38,7 +38,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.grants.gov/search-grants",
-        "elapsed_ms": 221,
+        "elapsed_ms": 450,
         "content_hash": "38914b2b42777149c8cb6a3532e06d61a0ef0edb5cf23f05c2f581fbe68a4bc1",
         "text_length": 1685,
         "signal_snippets": [
@@ -46,8 +46,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "38914b2b42777149c8cb6a3532e06d61a0ef0edb5cf23f05c2f581fbe68a4bc1"
     },
     {
       "source": {
@@ -66,7 +66,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.arts.gov/grants",
-        "elapsed_ms": 196,
+        "elapsed_ms": 587,
         "content_hash": "24949995dd6623de03d3902c8f960543236081915b4b5501e764a69a40eebf1c",
         "text_length": 6960,
         "signal_snippets": [
@@ -98,8 +98,8 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.imls.gov/find-funding/how-to-apply/funding-opportunities",
-        "elapsed_ms": 524,
-        "content_hash": "50b133542e339faf4631bb2459498cc1e487351ba97ec507857b402764b0a66d",
+        "elapsed_ms": 219,
+        "content_hash": "1ee080f2506f4d5e511d8b6b0ca887ecba36069b63b2171ba6446b013740f00a",
         "text_length": 2950,
         "signal_snippets": [
           "Institute of Museum and Library Services Skip to main content Menu Freedom 250 Find Funding How To Apply Funding Opportunities Additional Resources Manage Your Grant Guidance for Awardees Additional Resources Communities & Impact Summer Reading Challenge National Medals White House AI Challenge Celebrating America\u2019s 250th Anniversary Championing Veterans Combating Anti-Semitism Empowering HBCUs Promoting AI Literacy",
@@ -107,7 +107,7 @@
         ],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "50b133542e339faf4631bb2459498cc1e487351ba97ec507857b402764b0a66d"
     },
     {
@@ -213,15 +213,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nglcc.org/programs-initiatives",
-        "elapsed_ms": 2763,
-        "content_hash": "e0aff9e8fee96c588fdadf3db38f8cdd521327c7851c1f9e339fc08344eef1af",
-        "text_length": 2728,
+        "elapsed_ms": 687,
+        "content_hash": "e0db6125f44afa153ab3610959df79100eca6b79f7933b20e0d0e984657011a7",
+        "text_length": 2723,
         "signal_snippets": [
           "Core focus areas include leadership and management innovation, access to capital and financial literacy, mentorship, team development, and marketing, communications, and branding."
         ],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "e0aff9e8fee96c588fdadf3db38f8cdd521327c7851c1f9e339fc08344eef1af"
     },
     {
@@ -241,7 +241,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.firstpeoplesfund.org/programs/fellowships",
-        "elapsed_ms": 2233,
+        "elapsed_ms": 174,
         "content_hash": "ca747c6954617e593146c1a31725b86822cc873bee56006ca73d4d8759147c2d",
         "text_length": 42057,
         "signal_snippets": [
@@ -276,15 +276,15 @@
       },
       "check": {
         "status": "ok",
-        "status_code": 200,
+        "status_code": 202,
         "final_url": "https://www.nalac.org/grants/nalac-fund-for-the-arts/",
-        "elapsed_ms": 1548,
-        "content_hash": "7d9b5be43a7cb6e41660d6a216a0f72379526c75724063d5babcfc0a201048e7",
-        "text_length": 6141,
+        "elapsed_ms": 546,
+        "content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text_length": 0,
         "signal_snippets": [],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "7d9b5be43a7cb6e41660d6a216a0f72379526c75724063d5babcfc0a201048e7"
     }
   ]
