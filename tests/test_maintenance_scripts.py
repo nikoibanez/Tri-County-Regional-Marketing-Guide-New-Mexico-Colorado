@@ -543,6 +543,7 @@ class WorkflowTests(unittest.TestCase):
             "weekly-listing-keyword-sweep.yml",
             "weekly-national-funding-watch.yml",
             "weekly-resource-discovery.yml",
+            "weekly-event-source-watch.yml",
             "monthly-maintenance-snapshot.yml",
         )
 

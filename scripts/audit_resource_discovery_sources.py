@@ -286,10 +286,10 @@ def summarize(results: list[dict]) -> dict:
     }
 
 
-def write_markdown(payload: dict, path: Path) -> None:
+def write_markdown(payload: dict, path: Path, title: str = "Resource Discovery Review") -> None:
     summary = payload["summary"]
     lines = [
-        "# Resource Discovery Review",
+        f"# {clean_text(title) or 'Resource Discovery Review'}",
         "",
         f"Generated: {payload['generated_at']}",
         "",
@@ -346,9 +346,15 @@ def main() -> None:
     parser.add_argument("--state", type=Path, default=DEFAULT_STATE)
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT_DIR)
     parser.add_argument("--timeout", type=int, default=18)
+    parser.add_argument("--report-slug", default="resource-discovery")
+    parser.add_argument("--report-title", default="Resource Discovery Review")
     parser.add_argument("--no-network", action="store_true")
     parser.add_argument("--fail-on-broken", action="store_true")
     args = parser.parse_args()
+
+    report_slug = clean_text(args.report_slug).casefold()
+    if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", report_slug):
+        raise SystemExit("Report slug must contain lowercase letters, numbers, or hyphens.")
 
     source_payload = load_json(args.sources, {})
     keyword_payload = load_json(args.keywords, {})
@@ -369,12 +375,12 @@ def main() -> None:
         "results": results,
     }
     args.out_dir.mkdir(parents=True, exist_ok=True)
-    latest_json = args.out_dir / "resource-discovery-latest.json"
-    latest_md = args.out_dir / "resource-discovery-latest.md"
-    dated_json = args.out_dir / f"resource-discovery-{date.today().isoformat()}.json"
-    dated_md = args.out_dir / f"resource-discovery-{date.today().isoformat()}.md"
+    latest_json = args.out_dir / f"{report_slug}-latest.json"
+    latest_md = args.out_dir / f"{report_slug}-latest.md"
+    dated_json = args.out_dir / f"{report_slug}-{date.today().isoformat()}.json"
+    dated_md = args.out_dir / f"{report_slug}-{date.today().isoformat()}.md"
     latest_json.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    write_markdown(payload, latest_md)
+    write_markdown(payload, latest_md, args.report_title)
     shutil.copy2(latest_json, dated_json)
     shutil.copy2(latest_md, dated_md)
     if not args.no_network:

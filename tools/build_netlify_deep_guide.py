@@ -41,6 +41,8 @@ NATIONAL_FUNDING_JSON = REPO_DATA / "national-funding-opportunities.json"
 NATIONAL_FUNDING_WATCH_JSON = REPO_DATA / "national-funding-watch-sources.json"
 RESOURCE_DISCOVERY_JSON = REPO_DATA / "resource-discovery-sources.json"
 RESOURCE_KEYWORD_REGISTRY_JSON = REPO_DATA / "resource-keyword-registry.json"
+EVENT_CHANNELS_CSV = REPO_DATA / "event_posting_channels_combined_20260705.csv"
+EVENT_WATCH_JSON = REPO_DATA / "event-watch-sources.json"
 REGIONAL_AUDIO_JSON = REPO_DATA / "regional_audio_manifest.json"
 FREE_TOOLS_JSON = REPO_DATA / "free-tools.json"
 REAUDIT_NOTES = DOWNLOADS / "tri_county_reaudit" / "comprehensive_reaudit_source_notes.md"
@@ -124,9 +126,21 @@ def load_json_list(path: Path) -> list[dict]:
     return [item for item in payload if isinstance(item, dict)] if isinstance(payload, list) else []
 
 
+def load_csv_records(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    try:
+        with path.open("r", encoding="utf-8-sig", newline="") as handle:
+            return [dict(item) for item in csv.DictReader(handle)]
+    except (OSError, csv.Error):
+        return []
+
+
 NATIONAL_FUNDING_OPPORTUNITIES = load_json_records(NATIONAL_FUNDING_JSON, "opportunities")
 NATIONAL_FUNDING_WATCH_SOURCES = load_json_records(NATIONAL_FUNDING_WATCH_JSON, "sources")
 RESOURCE_DISCOVERY_SOURCES = load_json_records(RESOURCE_DISCOVERY_JSON, "sources")
+EVENT_POSTING_CHANNELS = load_csv_records(EVENT_CHANNELS_CSV)
+EVENT_WATCH_SOURCES = load_json_records(EVENT_WATCH_JSON, "sources")
 REGIONAL_AUDIO_TRACKS = load_json_list(REGIONAL_AUDIO_JSON)
 PROMOTION_TOOLS = load_json_records(FREE_TOOLS_JSON, "tools")
 FREE_TOOL_DISCOVERY_SOURCES = load_json_records(FREE_TOOLS_JSON, "discovery_sources")
@@ -152,6 +166,8 @@ def build_asset_version() -> str:
         NATIONAL_FUNDING_WATCH_JSON,
         RESOURCE_DISCOVERY_JSON,
         RESOURCE_KEYWORD_REGISTRY_JSON,
+        EVENT_CHANNELS_CSV,
+        EVENT_WATCH_JSON,
         REGIONAL_AUDIO_JSON,
         FREE_TOOLS_JSON,
     ):
@@ -167,6 +183,7 @@ ACTIVE_PATHS = {
     "plan": "plan/",
     "amplifiers": "amplifiers/",
     "promote": "promote/",
+    "events": "events/",
     "network": "network/",
     "posting": "posting/",
     "region": "region/",
@@ -196,6 +213,7 @@ HERO_ART_BY_ACTIVE = {
     "network": "hero-fishers-peak.svg",
     "amplifiers": "hero-garden-gods.svg",
     "promote": "hero-garden-gods.svg",
+    "events": "hero-plains-valley.svg",
     "posting": "hero-desert-buttes.svg",
     "region": "hero-raton-mesa.svg",
     "colfax": "hero-volcanic-field.svg",
@@ -1247,6 +1265,29 @@ DIRECTORY_SOURCES.extend(
     ]
 )
 
+_directory_source_urls = {
+    str(item.get("url") or "").strip().rstrip("/").casefold()
+    for item in DIRECTORY_SOURCES
+    if str(item.get("url") or "").strip()
+}
+for _event_source in EVENT_WATCH_SOURCES:
+    _event_url = str(_event_source.get("url") or "").strip()
+    _event_url_key = _event_url.rstrip("/").casefold()
+    if not _event_url or _event_url_key in _directory_source_urls:
+        continue
+    DIRECTORY_SOURCES.append(
+        {
+            "title": _event_source.get("name") or "Regional event route",
+            "county": _event_source.get("county") or "Regional",
+            "kind": _event_source.get("resource_type") or "Event calendar / submission route",
+            "url": _event_url,
+            "best_for": _event_source.get("public_use") or "Finding or submitting public events in the tri-county region.",
+            "action": _event_source.get("action") or "Open the event page for current dates and submission details.",
+        }
+    )
+    _directory_source_urls.add(_event_url_key)
+del _directory_source_urls
+
 
 AMPLIFIER_CHANNELS = [
     {
@@ -1799,6 +1840,7 @@ ROUTE_LABELS = {
     "plan": "Plan",
     "amplifiers": "Amplifiers",
     "promote": "Promote",
+    "events": "Events",
     "network": "Directory",
     "posting": "Physical locations",
     "region": "Region",
@@ -2129,6 +2171,13 @@ BASE_SITE_ROUTES = [
         "category": "Promotion finder",
         "summary": "Filter regional promotion routes by county and task, including events, advertising, businesses, nonprofits, calendars, and galleries.",
         "keywords": ["promote", "advertise", "events", "calendar", "business", "nonprofit", "gallery"],
+    },
+    {
+        "title": "Tri-county events directory",
+        "path": "events/",
+        "category": "Events",
+        "summary": "Find event calendars, current-event hubs, and public submission routes across Colfax, Las Animas, and Huerfano counties.",
+        "keywords": ["events", "event calendar", "submit event", "festival", "performance", "workshop", "community calendar"],
     },
     {
         "title": "Physical ad finder",
@@ -4090,6 +4139,40 @@ def write_data_files(rows: list[dict], summary: dict) -> None:
         }
         for item in RESOURCE_DISCOVERY_SOURCES
     ]
+    event_channels = [
+        {
+            key: public_text_value(item.get(key))
+            for key in (
+                "name",
+                "county_scope",
+                "channel_type",
+                "posting_route",
+                "public_facing_note",
+                "best_for",
+                "source_url",
+            )
+            if item.get(key) not in (None, "", [])
+        }
+        for item in EVENT_POSTING_CHANNELS
+    ]
+    event_watch_sources = [
+        {
+            key: public_text_value(item.get(key))
+            for key in (
+                "id",
+                "name",
+                "url",
+                "county",
+                "community",
+                "resource_type",
+                "action_label",
+                "public_use",
+                "action",
+            )
+            if item.get(key) not in (None, "", [])
+        }
+        for item in EVENT_WATCH_SOURCES
+    ]
     public_rows = [public_data_item(row) for row in rows]
     physical_ad_locations = []
     for row in physical_ad_location_rows(rows, limit=max(1, len(rows))):
@@ -4117,6 +4200,8 @@ def write_data_files(rows: list[dict], summary: dict) -> None:
         "national_funding_opportunities": national_funding,
         "national_funding_watch_sources": national_funding_sources,
         "resource_discovery_sources": resource_discovery_sources,
+        "event_channels": event_channels,
+        "event_watch_sources": event_watch_sources,
         "free_tools": [public_data_item(item) for item in tools_catalog()],
         "site_routes": [public_data_item(item) for item in assistant_site_routes()],
         "posting_spaces": [public_data_item(item) for item in POSTING_SPACES],
@@ -4570,6 +4655,32 @@ def source_cards(sources: list[dict], limit: int | None = None) -> str:
     return "\n".join(cards)
 
 
+def event_watch_cards(county: str) -> str:
+    cards = []
+    sources = sorted(
+        (item for item in EVENT_WATCH_SOURCES if item.get("county") == county),
+        key=lambda item: str(item.get("name") or "").casefold(),
+    )
+    for item in sources:
+        cards.append(
+            f"""
+            <article class="source-card event-hub-card" data-county="{html_escape(county)}">
+              <div class="source-card__meta">
+                <span>{html_escape(county)} County</span>
+                <span>{html_escape(item.get('resource_type') or 'Event route')}</span>
+              </div>
+              <h4><a href="{html_escape(item.get('url'))}" target="_blank" rel="noreferrer">{html_escape(item.get('name'))}</a></h4>
+              <p>{html_escape(item.get('public_use'))}</p>
+              <p class="action-line">{html_escape(item.get('action'))}</p>
+              <div class="resource-links">
+                <a class="resource-contact-link" href="{html_escape(item.get('url'))}" target="_blank" rel="noreferrer">{html_escape(item.get('action_label') or 'Open event page')}</a>
+              </div>
+            </article>
+            """
+        )
+    return "\n".join(cards)
+
+
 def source_group_cards(sources: list[dict], limit: int | None = None) -> str:
     groups = grouped_directory_sources(sources)
     if limit is not None:
@@ -4815,7 +4926,10 @@ def page_shell(
     schema_type: str = "WebPage",
 ) -> str:
     promote_nav_sections = []
-    promote_nav_links = [("All promotion routes", route_href(ACTIVE_PATHS["promote"]), "promote")]
+    promote_nav_links = [
+        ("All promotion routes", route_href(ACTIVE_PATHS["promote"]), "promote"),
+        ("Events directory", route_href(ACTIVE_PATHS["events"]), "events"),
+    ]
     for route_def in PROMOTE_ROUTE_DEFS:
         route_links = []
         for county in ("Colfax", "Las Animas", "Huerfano"):
@@ -4865,6 +4979,7 @@ def page_shell(
     )
     promote_menu = f"""
       {nav_link("All promotion routes", route_href(ACTIVE_PATHS["promote"]), "promote", "nav-menu-feature")}
+      {nav_link("Events directory", route_href(ACTIVE_PATHS["events"]), "events", "nav-menu-feature")}
       <div class="nav-menu-grid">{promote_menu_sections}</div>
     """
     nav_structure = [
@@ -4886,7 +5001,7 @@ def page_shell(
             continue
         _, label, children, extra_class, custom_menu = item
         group_active = any(key == active for _, _, key in children)
-        if label == "Promote" and active in {item["active"] for item in TASK_PAGE_DEFS} | {"amplifiers"}:
+        if label == "Promote" and active in {item["active"] for item in TASK_PAGE_DEFS} | {"amplifiers", "events"}:
             group_active = True
         child_links = custom_menu or "\n".join(nav_link(child_label, href, key) for child_label, href, key in children)
         menu_class = "nav-menu nav-menu--promote" if label == "Promote" else "nav-menu"
@@ -4925,7 +5040,7 @@ def page_shell(
             "Promote",
             [
                 ("Promotion finder", route_href(ACTIVE_PATHS["promote"])),
-                ("Events + calendars", route_href("promote/?route=events")),
+                ("Events directory", route_href(ACTIVE_PATHS["events"])),
                 ("Advertising + media", route_href("promote/?route=advertising")),
                 ("Physical locations", "posting/index.html"),
                 ("Message templates", "templates/index.html"),
@@ -5499,7 +5614,7 @@ def network_page(rows: list[dict]) -> str:
         "Directory",
         "Find a known business, organization, place, program, service, or support resource.",
         [("Search listings", "#local-listings"), ("Directory shortcuts", "#directory-shortcuts"), ("Directory tools", "#directory-tools")],
-        [("Find places to promote", "promote/"), ("Search funding", "resources/funding/"), ("Start with a county", "region/")],
+        [("Browse events", "events/"), ("Find places to promote", "promote/"), ("Search funding", "resources/funding/"), ("Start with a county", "region/")],
         1,
     )}
     <section id="local-listings" class="section tinted">
@@ -6125,6 +6240,110 @@ def arts_culture_page(rows: list[dict]) -> str:
     )
 
 
+def events_page() -> str:
+    county_hubs = "\n".join(
+        f"""
+        <section class="event-county-group" aria-labelledby="event-hubs-{county.casefold().replace(' ', '-')}">
+          <div class="section-heading section-heading--compact">
+            <h3 id="event-hubs-{county.casefold().replace(' ', '-')}">{html_escape(county)} County</h3>
+          </div>
+          <div class="source-grid compact">{event_watch_cards(county)}</div>
+        </section>
+        """
+        for county in ("Colfax", "Las Animas", "Huerfano")
+    )
+    county_routes = "\n".join(
+        f"""
+        <a class="mini-card category-route-card" href="../promote/?county={quote_plus(county)}&amp;route=events#promotion-results">
+          <h3>{html_escape(county)} County events</h3>
+          <p>Open event calendars, tourism routes, media contacts, venues, and local partners serving {html_escape(county)} County.</p>
+          <strong>Show county event routes</strong>
+        </a>
+        """
+        for county in ("Colfax", "Las Animas", "Huerfano")
+    )
+    content = f"""
+    <section class="page-hero">
+      <p class="eyebrow">Tri-county events</p>
+      <h1>Find events and places to submit them.</h1>
+      <p class="lede">Browse public event hubs and search {len(EVENT_POSTING_CHANNELS)} calendar, media, tourism, venue, and community-posting routes across Colfax, Las Animas, and Huerfano counties.</p>
+    </section>
+    {page_wayfinding(
+        "Events",
+        "Find a current calendar, discover what is happening, or choose a public route for sharing an event.",
+        [("Event hubs", "#event-hubs"), ("Search all event routes", "#event-directory"), ("County event routes", "#event-county-routes")],
+        [("Promotion finder", "promote/?route=events#promotion-results"), ("Message templates", "templates/"), ("Submit an update", "submit/")],
+        1,
+    )}
+    <section id="event-hubs" class="section" aria-labelledby="event-hubs-title">
+      <div class="section-heading">
+        <p class="eyebrow">Fifteen event hubs</p>
+        <h2 id="event-hubs-title">Five useful starting points for each county.</h2>
+        <p class="section-note">These public pages carry calendars, event listings, or submission routes. Open the linked page for current dates, costs, organizer details, and submission rules.</p>
+      </div>
+      <div class="event-county-groups">{county_hubs}</div>
+    </section>
+    <section id="event-directory" class="section tinted" aria-labelledby="event-directory-title">
+      <div class="section-heading">
+        <p class="eyebrow">Event route directory</p>
+        <h2 id="event-directory-title">Search every collected event-posting route.</h2>
+        <p class="section-note">Use a place name, event type, or task such as festival, workshop, calendar, media, venue, or submit event.</p>
+      </div>
+      <div class="promote-filter-panel" role="search" aria-label="Filter event calendars and submission routes">
+        <label class="promote-search-label" for="event-search">Search event routes</label>
+        <input id="event-search" class="search-input" type="search" placeholder="Try festival, workshop, calendar, Raton, Trinidad, La Veta...">
+        <div class="promote-filter-grid">
+          <label>County
+            <select id="event-county-filter">
+              <option value="All">All counties</option>
+              <option value="Colfax">Colfax</option>
+              <option value="Las Animas">Las Animas</option>
+              <option value="Huerfano">Huerfano</option>
+              <option value="Regional">Regional</option>
+            </select>
+          </label>
+          <label>Route type
+            <select id="event-type-filter"><option value="All">All route types</option></select>
+          </label>
+          <label>What do you need?
+            <select id="event-action-filter">
+              <option value="All">Browse and submit</option>
+              <option value="Browse">Browse events</option>
+              <option value="Submit">Submit or share an event</option>
+            </select>
+          </label>
+        </div>
+        <p id="event-results-note" class="results-note" role="status" aria-live="polite">Event routes are ready to filter.</p>
+      </div>
+      <div id="event-results" class="resource-list"></div>
+      <div class="section-actions">
+        <button id="event-load-more" class="button button-soft" type="button">Show more event routes</button>
+        <a class="button button-soft" href="../network/index.html?q=event+calendar#directory-shortcuts">Search the master directory</a>
+      </div>
+      <noscript><p class="section-note">JavaScript is needed for the searchable route list. The fifteen county hubs above remain available without it.</p></noscript>
+    </section>
+    <section id="event-county-routes" class="section" aria-labelledby="event-county-routes-title">
+      <div class="section-heading">
+        <p class="eyebrow">County routes</p>
+        <h2 id="event-county-routes-title">Narrow promotion contacts by county.</h2>
+      </div>
+      <div class="mini-grid">{county_routes}</div>
+      <div class="section-actions">
+        <a class="button button-primary" href="../templates/index.html">Prepare an event message</a>
+        <a class="button button-soft" href="../submit/index.html">Add or correct an event route</a>
+      </div>
+    </section>
+    """
+    return page_shell(
+        "Events in Colfax, Las Animas & Huerfano Counties | Stateline Tri-County Guide",
+        "Find public event calendars and event-submission routes across Colfax, Las Animas, and Huerfano counties in northern New Mexico and southern Colorado.",
+        "events",
+        content,
+        depth=1,
+        schema_type="CollectionPage",
+    )
+
+
 def promote_page() -> str:
     route_cards = "\n".join(
         f"""
@@ -6226,6 +6445,7 @@ def promote_page() -> str:
         <h2>Open the detail page only when it adds something.</h2>
       </div>
       <div class="section-actions">
+        <a class="button button-primary" href="../events/index.html">Open the events directory</a>
         <a class="button button-soft" href="../amplifiers/index.html">Calendars, media, and visitor guides</a>
         <a class="button button-soft" href="../posting/index.html">Physical promotion locations</a>
         <a class="button button-soft" href="../templates/index.html">Message templates</a>
@@ -7857,6 +8077,11 @@ def write_static_assets() -> None:
     .path-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .source-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
     .source-grid.compact { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .event-county-groups { display: grid; gap: 36px; }
+    .event-county-group { min-width: 0; }
+    .section-heading--compact { margin-bottom: 14px; }
+    .section-heading--compact::after { margin-top: 10px; }
+    .event-hub-card h4 { margin: 0 0 10px; font-size: 1.08rem; line-height: 1.08; }
     .mini-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
     .tool-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
     .tool-grid > * { min-width: 0; }
@@ -11372,6 +11597,117 @@ def write_static_assets() -> None:
       render();
     }
 
+    function eventActionMode(item) {
+      const blob = searchableText([
+        item.posting_route,
+        item.public_facing_note,
+        item.channel_type,
+        item.best_for
+      ]).toLowerCase();
+      return /submit|submission|send|email|contact|form|add (an )?event|post (an )?event|call /.test(blob)
+        ? "Submit"
+        : "Browse";
+    }
+
+    function eventCountyMatch(item, county) {
+      if (!county || county === "All") return true;
+      const blob = String(item.county_scope || "").toLowerCase();
+      if (county === "Regional") {
+        return /regional|all counties|southern colorado|northern new mexico|statewide|southwest|music \/|pikes peak|pueblo/.test(blob);
+      }
+      if (blob.includes(county.toLowerCase())) return true;
+      return /regional \/ all counties|huerfano \/ las animas \/ colfax|regional \/ soco/.test(blob);
+    }
+
+    function eventCard(item) {
+      const href = normalUrl(item.source_url || "");
+      const name = item.name || "Event route";
+      const actionMode = eventActionMode(item);
+      const actionLabel = actionMode === "Submit" ? "Open event or submission page" : "Open event page";
+      const title = href
+        ? `<a class="entity-name-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">${escapeHtml(name)}</a>`
+        : escapeHtml(name);
+      const links = href
+        ? `<div class="resource-links"><a class="resource-contact-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">${actionLabel}</a></div>`
+        : "";
+      return `
+        <article class="resource-item event-route-card" data-event-action="${actionMode}">
+          <div class="resource-item__head"><h3>${title}</h3></div>
+          <p class="resource-meta-line">${escapeHtml([item.county_scope, item.channel_type].filter(Boolean).join(" - "))}</p>
+          <p class="resource-description">${escapeHtml(item.public_facing_note || item.best_for || "Local event calendar or public event-posting route.")}</p>
+          <details class="resource-more" open>
+            <summary>Best use and posting route</summary>
+            <div class="resource-more__body">
+              <p><strong>Useful for:</strong> ${escapeHtml(item.best_for || "Finding or sharing regional events")}</p>
+              <p><strong>How to use it:</strong> ${escapeHtml(item.posting_route || "Open the linked page for current details.")}</p>
+            </div>
+          </details>
+          ${links}
+        </article>
+      `;
+    }
+
+    function initEventSearch() {
+      const host = document.querySelector("#event-results");
+      if (!host) return;
+      const input = document.querySelector("#event-search");
+      const countySelect = document.querySelector("#event-county-filter");
+      const typeSelect = document.querySelector("#event-type-filter");
+      const actionSelect = document.querySelector("#event-action-filter");
+      const note = document.querySelector("#event-results-note");
+      const moreButton = document.querySelector("#event-load-more");
+      const rows = DATA.event_channels || [];
+      populateSelect(typeSelect, uniqueValues(rows, "channel_type"), "All route types");
+      const params = new URLSearchParams(window.location.search);
+      const incomingQuery = params.get("q") || "";
+      const incomingCounty = params.get("county") || "All";
+      const incomingType = params.get("type") || "All";
+      const incomingAction = params.get("action") || "All";
+      if (input) input.value = incomingQuery;
+      if (countySelect && [...countySelect.options].some(option => option.value === incomingCounty)) countySelect.value = incomingCounty;
+      if (typeSelect && [...typeSelect.options].some(option => option.value === incomingType)) typeSelect.value = incomingType;
+      if (actionSelect && [...actionSelect.options].some(option => option.value === incomingAction)) actionSelect.value = incomingAction;
+      let visibleCount = directoryPageSize(8, 18);
+
+      function render() {
+        const query = String(input?.value || "").trim();
+        const county = countySelect?.value || "All";
+        const type = typeSelect?.value || "All";
+        const action = actionSelect?.value || "All";
+        const matched = rows
+          .filter(item => eventCountyMatch(item, county))
+          .filter(item => type === "All" || item.channel_type === type)
+          .filter(item => action === "All" || eventActionMode(item) === action)
+          .filter(item => !query || textMatch(item, query))
+          .sort((a, b) => String(a.name || "").localeCompare(String(b.name || "")));
+        const visible = matched.slice(0, visibleCount);
+        host.innerHTML = visible.map(eventCard).join("") || `<p class="section-note">No event routes match those filters. Try all counties or remove a search term.</p>`;
+        syncDirectoryDetails(host);
+        if (note) {
+          const countyLabel = county === "All" ? "all counties" : county === "Regional" ? "regional channels" : `${county} County plus region-wide channels`;
+          note.textContent = `Showing ${visible.length} of ${matched.length} matching event routes for ${countyLabel}.`;
+        }
+        if (moreButton) {
+          const remaining = Math.max(0, matched.length - visible.length);
+          moreButton.hidden = remaining === 0;
+          moreButton.textContent = remaining ? `Show ${Math.min(directoryPageSize(8, 18), remaining)} more event routes` : "All matching event routes shown";
+        }
+      }
+
+      [input, countySelect, typeSelect, actionSelect].forEach(control => {
+        if (!control) return;
+        control.addEventListener(control === input ? "input" : "change", () => {
+          visibleCount = directoryPageSize(8, 18);
+          render();
+        });
+      });
+      moreButton && moreButton.addEventListener("click", () => {
+        visibleCount += directoryPageSize(8, 18);
+        render();
+      });
+      render();
+    }
+
     function initPhysicalLocationSearch() {
       const host = document.querySelector("#physical-location-list");
       if (!host) return;
@@ -11910,6 +12246,7 @@ def write_static_assets() -> None:
     initNationalFundingSearch();
     initSourceSearch();
     initPromoteSearch();
+    initEventSearch();
     initPhysicalLocationSearch();
     initResourceSearch();
     initDirectoryOpenAnimations();
@@ -12112,6 +12449,7 @@ Before public launch, open the deployed Netlify preview and check:
 - Directory search for `chamber`, `artist`, `media`, `grant`, `Raton`, `Trinidad`, and `Walsenburg`.
 - Directory filters for resource type and access mode.
 - Directory physical-location filters for `Physical locations` and `Physical promotion contacts`.
+- Events page count, fifteen county-balanced hubs, search, county, route-type, and browse/submit filters.
 - Amplifier page rows for link URL and practical channel use.
 - Physical-location finder search, county/category filters, contact links, and one clear policy note.
 - County page nav paths.
@@ -12124,7 +12462,7 @@ Before public launch, open the deployed Netlify preview and check:
 
 def write_pages(rows: list[dict], summary: dict) -> None:
     (OUT / "index.html").write_text(home_page(summary), encoding="utf-8")
-    for folder in ["plan", "amplifiers", "promote", "network", "posting", "region", "templates", "tools/free-discounted", "submit", "appendix", "about", "resources/funding", "resources/arts-culture"]:
+    for folder in ["plan", "amplifiers", "promote", "events", "network", "posting", "region", "templates", "tools/free-discounted", "submit", "appendix", "about", "resources/funding", "resources/arts-culture"]:
         (OUT / folder).mkdir(parents=True, exist_ok=True)
     for item in TASK_PAGE_DEFS:
         path = OUT / ACTIVE_PATHS[item["active"]]
@@ -12132,6 +12470,7 @@ def write_pages(rows: list[dict], summary: dict) -> None:
     (OUT / "plan" / "index.html").write_text(plan_page(), encoding="utf-8")
     (OUT / "amplifiers" / "index.html").write_text(amplifiers_page(), encoding="utf-8")
     (OUT / "promote" / "index.html").write_text(promote_page(), encoding="utf-8")
+    (OUT / "events" / "index.html").write_text(events_page(), encoding="utf-8")
     (OUT / "network" / "index.html").write_text(network_page(rows), encoding="utf-8")
     (OUT / "resources" / "funding" / "index.html").write_text(funding_page(rows), encoding="utf-8")
     (OUT / "resources" / "arts-culture" / "index.html").write_text(arts_culture_page(rows), encoding="utf-8")
