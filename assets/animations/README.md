@@ -22,12 +22,31 @@ Use `yucca-banner.svg` as the visual hero background or inline it when deeper co
 | Layer | Animation |
 | --- | --- |
 | Background mountains | Very slow parallax |
-| Plains / desert floor | Static |
+| Plains / desert floor | Very slow overscanned parallax |
 | Yucca leaves | Tiny rotational sway |
 | Yucca flower stalks | Gentle 6-8 second wind sway |
 | Individual blossoms | Delayed micro-sway |
 | Wind lines | Slow horizontal drift |
 | CTA ribbon / marker | Subtle pulse |
+
+## Raton Brand Palettes
+
+The site and animation family use three separately documented color systems observed on the
+current public websites for the City of Raton, Explore Raton, and GrowRaton. They are not collapsed
+into a generic Southwest palette. City-led scenes use turquoise, teal, brick, brown, sand, and
+cream; Explore-led scenes use turquoise, blue, rust, orange, pale aqua, and cream; GrowRaton-led
+scenes use orange, deep green, burgundy, gray, and a limited bright blue.
+
+This implementation reflects the organizations' public web presentation and does not claim formal
+brand approval. Exact source colors, font-family observations, page mappings, and license-safe
+fallbacks are recorded in `docs/raton-brand-system.md`.
+
+## Edge Coverage
+
+Every full-width moving landscape layer must remain wider than the `1600 x 720` view box at
+both ends of its motion. Generated far and mid layers use at least `scaleX(1.014)` and plains
+layers use at least `scaleX(1.012)`. Hand-drawn edge shapes must extend beyond the view box.
+The `data-edge-overscan="true"` marker is enforced by the maintenance test.
 
 ## Reduced Motion
 

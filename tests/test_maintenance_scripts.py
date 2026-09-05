@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import sys
 import tempfile
 import unittest
@@ -21,6 +22,7 @@ from audit_free_tools import audit as audit_free_tools, candidate_links as free_
 from audit_update_sources import check_record, check_url, summarize  # noqa: E402
 from apply_directory_link_repairs import apply_repairs_to_rows  # noqa: E402
 import build_netlify_deep_guide as guide_builder  # noqa: E402
+from generate_geo_hero_svgs import BRAND_PALETTES  # noqa: E402
 from build_update_source_registry import normalize_posting  # noqa: E402
 from capture_open_pr_context import markdown_context, one_line_context  # noqa: E402
 from check_trusted_device_pr import classify_paths, policy_issues  # noqa: E402
@@ -660,18 +662,34 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("NAV_YUCCA_KEY", js)
         self.assertIn("initNavigationYucca();", js)
 
-    def test_navigation_uses_site_cursor_with_reduced_motion_safe_glow(self) -> None:
+    def test_navigation_uses_contextual_pointer_cursors_with_reduced_motion_safe_glow(self) -> None:
         with tempfile.TemporaryDirectory() as folder:
             asset_out = Path(folder)
             with patch.object(guide_builder, "ASSET_OUT", asset_out):
                 guide_builder.write_static_assets()
             css = (asset_out / "styles.css").read_text(encoding="utf-8")
+            js = (asset_out / "app.js").read_text(encoding="utf-8")
 
+        self.assertIn('html, body { cursor: url("raton-accessible-cursor.svg") 4 2, auto; }', css)
+        self.assertIn("button:not(:disabled)", css)
+        self.assertIn("[role=\"button\"]", css)
+        self.assertIn(") { cursor: pointer; }", css)
         nav_rule = css.split(".site-nav a, .nav-trigger {", 1)[1].split("}", 1)[0]
-        self.assertIn('cursor: url("raton-accessible-cursor.svg") 4 2, pointer;', nav_rule)
+        self.assertNotIn("cursor:", nav_rule)
+        self.assertIn(".site-nav a:active, .nav-trigger:active", css)
+        self.assertIn(".path-card:active", css)
         self.assertIn("@media (hover: hover) and (pointer: fine)", css)
         self.assertIn("@keyframes navCursorGlow", css)
         self.assertIn("animation: navCursorGlow 1800ms ease-in-out infinite;", css)
+        for kind in ("route", "external", "email", "phone", "download", "action"):
+            self.assertIn(f'raton-cursor-{kind}.svg', css)
+            self.assertTrue((ROOT / "assets" / "brand" / f"raton-cursor-{kind}.svg").exists())
+        self.assertIn(".guide-cursor-halo.is-visible", css)
+        self.assertIn("@keyframes guideCursorGlow", css)
+        self.assertIn("function guideCursorKind(element)", js)
+        self.assertIn('lowerHref.startsWith("mailto:")', js)
+        self.assertIn('lowerHref.startsWith("tel:")', js)
+        self.assertIn("initGuideCursorCues();", js)
         self.assertIn("@media (prefers-reduced-motion: reduce)", css)
 
     def test_primary_navigation_combines_direct_resources_with_county_promote_routes(self) -> None:
@@ -877,12 +895,38 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn('class="directory-assistant__desert-motion" aria-hidden="true"', page)
 
         landscape_files = sorted((ROOT / "assets" / "animations").glob("hero-*.svg"))
-        self.assertEqual(len(landscape_files), 11)
+        self.assertEqual(len(landscape_files), 12)
+        allowed_colors = {
+            color.lower()
+            for palette in BRAND_PALETTES.values()
+            for color in palette.values()
+            if color.startswith("#")
+        }
+        palette_names = set()
         for landscape_file in landscape_files:
             svg = landscape_file.read_text(encoding="utf-8")
             self.assertIn('class="plains-layer"', svg, landscape_file.name)
             self.assertIn("@keyframes geo-plains", svg, landscape_file.name)
             self.assertIn("prefers-reduced-motion: reduce", svg, landscape_file.name)
+            self.assertIn('data-edge-overscan="true"', svg, landscape_file.name)
+            self.assertIn("scaleX(1.014)", svg, landscape_file.name)
+            self.assertIn("scaleX(1.012)", svg, landscape_file.name)
+            match = re.search(r'data-brand-palette="([^"]+)"', svg)
+            self.assertIsNotNone(match, landscape_file.name)
+            palette_names.add(match.group(1))
+            colors = {color.lower() for color in re.findall(r"#[0-9a-fA-F]{6}", svg)}
+            self.assertFalse(colors - allowed_colors, landscape_file.name)
+
+        self.assertEqual(palette_names, {"city-of-raton", "explore-raton", "grow-raton"})
+
+        banner = (ROOT / "assets" / "animations" / "yucca-banner.svg").read_text(encoding="utf-8")
+        self.assertIn('data-brand-palette="explore-raton"', banner)
+        self.assertIn('data-edge-overscan="true"', banner)
+        self.assertIn("scaleX(1.014)", banner)
+        self.assertIn("222 23v207H-40V570", banner)
+
+        cta = (ROOT / "assets" / "animations" / "yucca-cta-loop.svg").read_text(encoding="utf-8")
+        self.assertIn('data-brand-palette="grow-raton"', cta)
 
         with tempfile.TemporaryDirectory() as folder:
             asset_out = Path(folder)
@@ -893,6 +937,16 @@ class SiteSmokeTests(unittest.TestCase):
 
         self.assertIn("assistant-desert-open", css)
         self.assertIn("assistant-desert-close", css)
+        self.assertIn("--city-brick: #772816", css)
+        self.assertIn("--city-turquoise: #21bdc5", css)
+        self.assertIn("--city-cream: #eeedd6", css)
+        self.assertIn("--explore-orange: #d97345", css)
+        self.assertIn("--explore-pale-aqua: #aae8ec", css)
+        self.assertIn("--grow-orange: #dd8500", css)
+        self.assertIn("--grow-green: #043e00", css)
+        self.assertIn("--grow-burgundy: #660001", css)
+        self.assertIn("--raton-city-turquoise: var(--city-turquoise)", css)
+        self.assertIn("fill: var(--raton-city-turquoise)", css)
         self.assertIn("replayAssistantMotion(panel, \"open\")", js)
         self.assertIn('panel.addEventListener("cancel"', js)
         self.assertIn('playGuideSfx("intro", { armOnGesture: true })', js)
