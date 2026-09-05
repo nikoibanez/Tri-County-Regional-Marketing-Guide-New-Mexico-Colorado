@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-09-04",
   "publication_note": "Automatically refreshed from watched public directory and tourism pages. Treat these as candidate updates, not official directory additions, until a human confirms the linked source.",
   "summary": {
     "sources_watched": 15,
     "pages_checked": 32,
-    "pages_failed": 8,
-    "already_represented": 284,
-    "possible_new_leads": 61,
+    "pages_failed": 11,
+    "already_represented": 219,
+    "possible_new_leads": 17,
     "priority_new_leads": 1,
-    "low_confidence_text_leads": 60
+    "low_confidence_text_leads": 16
   },
   "watched_sources": [
     {
@@ -19,7 +19,7 @@
       "source_role": "Business directory, local services, restaurants, visitor-facing businesses",
       "why_watch": "Raton-area chamber source for business names, local service anchors, restaurants, and potential outreach contacts.",
       "pages_checked": 2,
-      "possible_new_leads": 26,
+      "possible_new_leads": 4,
       "priority_new_leads": 0
     },
     {
@@ -52,7 +52,7 @@
       "source_role": "Tourist/travel spots, restaurants, events, lodging, visitor-facing listings",
       "why_watch": "Tourism-facing source for Angel Fire visitor pages, dining discovery, lodging, activities, and events.",
       "pages_checked": 3,
-      "possible_new_leads": 10,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -118,7 +118,7 @@
       "source_role": "Events, travel spots, regional visitor-facing listings",
       "why_watch": "Regional Southern Colorado event and tourism source that can surface Las Animas County travel and event leads.",
       "pages_checked": 2,
-      "possible_new_leads": 13,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -151,7 +151,7 @@
       "source_role": "Event spots, community calendar, event submission, visitor-facing activities",
       "why_watch": "Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.",
       "pages_checked": 2,
-      "possible_new_leads": 11,
+      "possible_new_leads": 12,
       "priority_new_leads": 0
     },
     {
@@ -192,414 +192,51 @@
   ],
   "low_confidence_text_leads": [
     {
-      "name": "107 Calle Arriba",
+      "name": "KYC vs No-KYC: What \"Anonymous\" Really Means",
       "county": "Colfax",
       "state": "NM",
       "source_title": "Raton Chamber Business Directory",
       "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
+      "source_page": "https://raton.info/",
+      "listing_url": "https://raton.info/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
     {
-      "name": "1115 Hwy 21",
+      "name": "KYC vs No-KYC: What \"Anonymous\" Really Means",
       "county": "Colfax",
       "state": "NM",
       "source_title": "Raton Chamber Business Directory",
       "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
+      "source_page": "https://raton.info/",
+      "listing_url": "https://raton.info/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
     {
-      "name": "1125 South 2nd Streetq",
+      "name": "Licensed & Regulated",
       "county": "Colfax",
       "state": "NM",
       "source_title": "Raton Chamber Business Directory",
       "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
+      "source_page": "https://raton.info/",
+      "listing_url": "https://raton.info/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
     {
-      "name": "1303 Calle de la Luna",
+      "name": "Licensed & Regulated",
       "county": "Colfax",
       "state": "NM",
       "source_title": "Raton Chamber Business Directory",
       "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "1550 Tiger Circle",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "1660 Old Pecos Trail",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "205 Elizabeth",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "2200.5 Arizona Avenue",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "303 South 2nd",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "904 Catron",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Bronze Member",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Fairgrounds",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Gold Member",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "HCR 62 Box 19",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Hwy 87",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "I-25 & Hwy 87",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "I-25 Exit 450",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "June 19, 20 & 21, 2026",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "LinkedIn",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/visitor/",
-      "listing_url": "https://angelfirechamber.org/visitor/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "LinkedIn",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "LinkedIn",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/visitor/arts-and-culture/",
-      "listing_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Member",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Mix",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/visitor/",
-      "listing_url": "https://angelfirechamber.org/visitor/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Mix",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Mix",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/visitor/arts-and-culture/",
-      "listing_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Pamela L. Seneff, GRI",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Platinum Member",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Qualifying Broker",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "RR 1 Box 33",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Silver Member",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Suite #1",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Suite 120",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Suite A",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://www.raton.info/business_directory.html",
-      "listing_url": "https://www.raton.info/business_directory.html",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Twitter",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/visitor/",
-      "listing_url": "https://angelfirechamber.org/visitor/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Twitter",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "listing_url": "https://angelfirechamber.org/annual-calendar-of-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Twitter",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Visit Angel Fire Tourism, Dining, and Events",
-      "source_type": "Tourism, events, dining, and travel source",
-      "source_page": "https://angelfirechamber.org/visitor/arts-and-culture/",
-      "listing_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
+      "source_page": "https://raton.info/",
+      "listing_url": "https://raton.info/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
     {
       "name": "Cuchara Farmers Market",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Darrell Scott",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -654,6 +291,17 @@
       "confidence": "low"
     },
     {
+      "name": "Jon Chandler",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "La Veta Farmers Market",
       "county": "Huerfano",
       "state": "CO",
@@ -687,6 +335,17 @@
       "confidence": "low"
     },
     {
+      "name": "MUSIC BY MIDI LIVE!!!!",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "Walsenburg Farm & Makers Market",
       "county": "Huerfano",
       "state": "CO",
@@ -705,149 +364,6 @@
       "source_type": "Tourism event calendar and submission source",
       "source_page": "https://spanishpeakscountry.com/spc-events/",
       "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "420 Festival at Central Park",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "April",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Christmas Tree Lighting",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Details",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Hometown Holidays Parade of Lights",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "June",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Literary Festival – GET LIT!",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "March",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "November",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "St. Patrick's Day Parade",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Stonewall Fishing Tournament",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Summer Arts Exhibits",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "The Annual Collector's Series Calendar",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     }
