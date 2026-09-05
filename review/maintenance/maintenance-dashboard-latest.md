@@ -1,6 +1,6 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-08-25T05:18:28-06:00
+Generated: 2026-08-25T06:19:55-06:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
@@ -14,8 +14,8 @@ Automation detects and drafts. A person approves public claims, directory change
 - Directory outreach rows reviewed: 1362
 - Directory shortcuts reviewed: 104
 - Total outreach records reviewed: 1466
-- Curated national funding opportunities: 73
-- National funding watch sources: 10
+- Curated regional and national funding opportunities: 99
+- National funding watch sources: 31
 - Resource-discovery source hubs: 45
 - Curated free tools and nonprofit offers: 22
 - Free-tool discovery pages: 5
@@ -40,11 +40,11 @@ Automation detects and drafts. A person approves public claims, directory change
 - Shortcuts with at least one listed outreach route: 19
 - Shortcuts with at least one ask-first outreach route: 44
 - Shortcuts without an identified outreach route: 52
-- National funding pages checked: 10
+- National funding pages checked: 31
 - National funding pages changed: 0
-- National funding watch baselines added: 1
+- National funding watch baselines added: 18
 - Confirmed broken national funding URLs: 0
-- National funding source checks needing attention: 4
+- National funding source checks needing attention: 7
 - Resource candidate links collected: 176
 - Resource-discovery pages changed: 17
 - Confirmed broken resource-discovery hubs: 0
@@ -56,15 +56,15 @@ Automation detects and drafts. A person approves public claims, directory change
 
 ## Action Queue
 
+- **HIGH - 18 national funding pages waiting for claim review:** Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory.
 - **HIGH - 1 priority directory candidates:** Confirm each linked listing page before adding it to canonical data.
-- **HIGH - 1 national funding pages waiting for claim review:** Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory.
 - **MEDIUM - 176 resource candidate links waiting for review:** Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data.
 - **MEDIUM - 173 canonical rows without a website or source URL:** Enrich high-value entries first; do not invent contact paths.
 - **MEDIUM - 40 listing keyword sets proposed for review:** Review additions and removals in the latest keyword-sweep report before merging the keyword index.
 - **MEDIUM - 1 free-tool or nonprofit-offer pages waiting for wording review:** Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory.
 - **LOW - 620 listings without an identified promotion route:** Enrich these only when a public page or direct contact supports a useful route; do not invent availability.
 - **LOW - 36 keyword source pages needing attention:** Open failed pages normally before removing retained source-derived keywords.
+- **LOW - 7 national funding pages needing a normal-browser check:** Open these pages normally; do not treat bot blocking or a temporary network error as a closed program.
 - **LOW - 5 resource-discovery hubs needing a normal-browser check:** Open these pages normally; do not remove a source because of bot blocking or a temporary request failure.
 - **LOW - 5 free-tool pages needing a normal-browser check:** Open failed pages normally; do not remove a tool solely because automation was blocked or timed out.
-- **LOW - 4 national funding pages needing a normal-browser check:** Open these pages normally; do not treat bot blocking or a temporary network error as a closed program.
 - **LOW - 1 offline posting pathways awaiting a field check:** Confirm the physical location or owner-controlled posting policy locally.
