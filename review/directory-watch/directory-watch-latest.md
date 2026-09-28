@@ -1,6 +1,6 @@
 # Weekly Directory Query Check
 
-Generated: 2026-08-24
+Generated: 2026-09-28
 
 Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.
 
@@ -9,11 +9,11 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Sources watched: 15
 - Pages checked: 32
 - Pages failed: 8
-- Listing-like candidates found: 345
-- Already represented in guide: 284
-- Possible new leads: 61
+- Listing-like candidates found: 260
+- Already represented in guide: 220
+- Possible new leads: 40
 - Priority new leads: 1
-- Low-confidence text leads: 60
+- Low-confidence text leads: 39
 
 ## Watch Sources
 
@@ -23,7 +23,7 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Chamber business directory
 - Why watch: Raton-area chamber source for business names, local service anchors, restaurants, and potential outreach contacts.
 - Pages checked: 2
-- Possible new leads: 26
+- Possible new leads: 4
 - Priority new leads: 0
 
 ### Angel Fire Chamber Member Business Directory
@@ -50,7 +50,7 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism, events, dining, and travel source
 - Why watch: Tourism-facing source for Angel Fire visitor pages, dining discovery, lodging, activities, and events.
 - Pages checked: 3
-- Possible new leads: 10
+- Possible new leads: 0
 - Priority new leads: 0
 
 ### Explore Raton Tourism and Event Pages
@@ -109,7 +109,7 @@ Fetch issues:
 - Source type: Digital local guide and business/event listings
 - Why watch: LocalStash is the current digital successor route to the Weekender-style local guide model and can surface Trinidad businesses, events, restaurants, and shops.
 - Pages checked: 2
-- Possible new leads: 0
+- Possible new leads: 8
 - Priority new leads: 0
 
 ### Southern Colorado Tourism Event and Travel Pages
@@ -145,7 +145,7 @@ Fetch issues:
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.
 - Pages checked: 2
-- Possible new leads: 11
+- Possible new leads: 14
 - Priority new leads: 0
 
 ### Town of La Veta Business Directory
@@ -176,55 +176,28 @@ These have linked listing-page evidence. They are still not publication-ready ad
 
 These came from directory page text rather than individual listing links. Review them more carefully before using.
 
-- 107 Calle Arriba - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- 1115 Hwy 21 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- 1125 South 2nd Streetq - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- 1303 Calle de la Luna - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- 1550 Tiger Circle - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- 1660 Old Pecos Trail - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- 205 Elizabeth - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- 2200.5 Arizona Avenue - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- 303 South 2nd - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- 904 Catron - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Bronze Member - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Fairgrounds - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Gold Member - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- HCR 62 Box 19 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Hwy 87 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- I-25 & Hwy 87 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- I-25 Exit 450 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- June 19, 20 & 21, 2026 - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/annual-calendar-of-events/
-- LinkedIn - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/
-- LinkedIn - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/annual-calendar-of-events/
-- LinkedIn - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/arts-and-culture/
-- Member - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Mix - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/
-- Mix - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/annual-calendar-of-events/
-- Mix - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/arts-and-culture/
-- Pamela L. Seneff, GRI - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Platinum Member - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Qualifying Broker - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- RR 1 Box 33 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Silver Member - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Suite #1 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Suite 120 - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Suite A - Colfax; Raton Chamber Business Directory; source page: https://www.raton.info/business_directory.html
-- Twitter - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/
-- Twitter - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/annual-calendar-of-events/
-- Twitter - Colfax; Visit Angel Fire Tourism, Dining, and Events; source page: https://angelfirechamber.org/visitor/arts-and-culture/
+- KYC vs No-KYC: What "Anonymous" Really Means - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
+- KYC vs No-KYC: What "Anonymous" Really Means - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
+- Licensed & Regulated - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
+- Licensed & Regulated - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
+- 200 S Main, La Veta, CO, United States - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Cuchara Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Darrell Scott - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Farmer and Craft Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Methodist Church - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Heritage Park - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- Kellen Goode Live at the Stokehouse! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- La Veta - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - La Veta Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - La Veta Library - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Mountain Mining Days - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- La Veta Oktoberfest - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- MUSIC BY MIDI LIVE!!!! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Walsenburg Farm & Makers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Walsenburg Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - 420 Festival at Central Park - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
+- An independent antiques stop on historic East Main Street. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - April - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
+- Check the official website for current contact information. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Christmas Tree Lighting - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Details - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Hometown Holidays Parade of Lights - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
@@ -232,33 +205,33 @@ These came from directory page text rather than individual listing links. Review
 - Literary Festival – GET LIT! - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - March - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - November - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
+- Permaculture Farm - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - St. Patrick's Day Parade - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
+- Stashes - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Stonewall Fishing Tournament - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
+- Stories worth pulling over for. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Summer Arts Exhibits - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
+- Tees Me Treat Me - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - The Annual Collector's Series Calendar - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
+- Way Out West Coffee Co. Posted - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
+- · Sep 15, 2026 - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 
 ## Already Represented Sample
 
 - 123’s -> Town of La Veta Business Directory (exact_url)
-- A Few Practical Notes -> LocalStash Trinidad Town Page (exact_url)
 - A Taylor Made Haircut -> Town of La Veta Business Directory (exact_url)
 - A&W -> A&W (exact_url)
 - A&W -> A&W (exact_url)
-- Advanced Air. LLC -> Advanced Air, LLC (exact_url)
-- Alderette Acupuncture and -> Raton Chamber Business Directory (exact_url)
-- Alpha Design -> Raton Chamber Business Directory (exact_url)
 - Alys' Restaurant -> Alys' Restaurant (exact_url)
 - Alys' Restaurant -> Alys' Restaurant (exact_url)
 - Alys' Restaurant -> Town of La Veta Business Directory (exact_url)
 - Anchor Motel -> Anchor Motel (exact_url)
 - Anchor Motel -> Anchor Motel (exact_url)
-- Angel’s Glow Tanning & Oxygen Bar -> Angel's Glow Tanning & Oxygen Bar (exact_url)
 - Antique Avenue -> Antique Avenue (exact_url)
 - Armidas -> Armidas (exact_url)
 - Artisans on Main -> Artisans on Main (exact_url)
 - Artisans on Main LLC -> Town of La Veta Business Directory (exact_url)
 - Arts & Antiques -> Arts & Antiques (exact_url)
-- AutoZone -> Raton Chamber Business Directory (exact_url)
 - Ayers Family Fitness -> Ayers Family Fitness (exact_url)
 - Bachman & Associates Real Estate -> Town of La Veta Business Directory (exact_url)
 - Become a Member -> Bachman & associates (exact_url)
@@ -267,15 +240,21 @@ These came from directory page text rather than individual listing links. Review
 - Big "R" -> Town of La Veta Business Directory (exact_url)
 - Big R -> Big R (exact_url)
 - Book Nook -> Town of La Veta Business Directory (exact_url)
-- Brodsky Bookkeeping -> Brodsky Bookkeeping (exact_url)
 - Bud Hut -> Bud Hut (exact_url)
 - C Cubed Training -> C Cubed Training (exact_url)
 - C1B True Organics -> C1B True Organics (exact_url)
 - Canna City -> Canna City (exact_url)
 - Cannaco -> Cannaco (exact_url)
 - Capture Colorado -> Town of La Veta Business Directory (exact_url)
-- CARQUEST of Raton -> Raton Chamber Business Directory (exact_url)
 - Casa de Pajaros -> Casa de Pajaros (exact_url)
 - Casa de Pajaros -> Town of La Veta Business Directory (exact_url)
 - Chae Organics -> Chae Organics (exact_normalized)
 - Charlie's Market -> Charlie's Market (exact_url)
+- Charlie's Market -> Town of La Veta Business Directory (exact_url)
+- Code of the West Real Estate -> Town of La Veta Business Directory (exact_url)
+- Contact Information -> Town of La Veta Business Directory (exact_url)
+- Corine’s Mexican Restaurant -> Corine’s Mexican Restaurant (exact_url)
+- Corine’s Mexican Restaurant -> Corine’s Mexican Restaurant (exact_url)
+- Corner Cottage Skin Care -> Town of La Veta Business Directory (exact_url)
+- Crafted in Colorado -> Crafted in Colorado (exact_url)
+- Crafted in Colorado -> Town of La Veta Business Directory (exact_url)
