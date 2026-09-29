@@ -1,6 +1,6 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-08-25T05:18:28-06:00
+Generated: 2026-09-29T20:04:04+00:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
@@ -26,8 +26,8 @@ Automation detects and drafts. A person approves public claims, directory change
 - Internal links: pass
 - Source URLs checked: 135
 - Confirmed broken or missing source URLs: 0
-- Source URLs requiring normal-browser confirmation: 0
-- Script-access limitations (not broken): 28
+- Source URLs requiring normal-browser confirmation: 1
+- Script-access limitations (not broken): 26
 - Offline field-check records: 1
 - Deep-watch pages checked: 32
 - Deep-watch pages failed: 8
@@ -67,4 +67,5 @@ Automation detects and drafts. A person approves public claims, directory change
 - **LOW - 5 resource-discovery hubs needing a normal-browser check:** Open these pages normally; do not remove a source because of bot blocking or a temporary request failure.
 - **LOW - 5 free-tool pages needing a normal-browser check:** Open failed pages normally; do not remove a tool solely because automation was blocked or timed out.
 - **LOW - 4 national funding pages needing a normal-browser check:** Open these pages normally; do not treat bot blocking or a temporary network error as a closed program.
+- **LOW - 1 sources the automated checker could not confirm:** Open these in a normal browser; do not remove a link solely because of a timeout, network problem, or temporary server response.
 - **LOW - 1 offline posting pathways awaiting a field check:** Confirm the physical location or owner-controlled posting policy locally.
