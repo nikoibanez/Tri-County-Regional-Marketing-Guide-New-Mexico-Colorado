@@ -1,6 +1,6 @@
 # Resource Discovery Review
 
-Generated: 2026-08-19T16:46:47+00:00
+Generated: 2026-09-30T20:48:57+00:00
 
 This is a private candidate queue. A link or page change is not proof that a resource fits the guide or that an opportunity is open.
 
@@ -8,9 +8,9 @@ This is a private candidate queue. A link or page change is not proof that a res
 
 - Source hubs configured: 45
 - Source hubs checked: 45
-- Candidate links collected: 176
-- Changed pages: 17
-- New baselines: 1
+- Candidate links collected: 154
+- Changed pages: 27
+- New baselines: 0
 - Confirmed broken URLs: 0
 - Script-access limitations: 5
 - Other check failures: 5
@@ -53,7 +53,7 @@ Category: grants-public-funding. Page status: unchanged.
 
 ### [National Endowment for the Humanities Grants](https://www.neh.gov/grants)
 
-Category: grants-public-funding. Page status: unchanged.
+Category: grants-public-funding. Page status: changed.
 
 - [Fellowships, Conferences, Seminars, and Workshops](https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5656) - matched: fellowships, grants
 - [Other Grant Opportunities](https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5661) - matched: grant, grants
@@ -63,15 +63,22 @@ Category: grants-public-funding. Page status: unchanged.
 - [Public Humanities Projects (Historic Sites, Exhibitions, Media, and Other Programs)](https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5651) - matched: grants, public humanities
 - [Application Review Process](https://www.neh.gov/grants/application-process) - matched: grants
 - [Books, Articles, and Other Publications](https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5631) - matched: grants
-- [Collaborative Research](https://www.neh.gov/grants/research/collaborative-research-grants) - matched: grants
 - [Curricula and Teaching Resources](https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5636) - matched: grants
 - [Digital Projects (Websites, Software, and Other Tools)](https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5641) - matched: grants
 - [Grantee Communications Toolkit](https://www.neh.gov/grants/manage/grantee-communications-toolkit) - matched: grants
+- [Landmarks of American History and Culture and Summer Institutes for Higher Education Faculty](https://www.neh.gov/grants/education/landmarks/highered) - matched: grants
+- [Landmarks of American History and Culture and Summer Institutes for K-12 Educators](https://www.neh.gov/grants/education/landmarks/k-12-educators) - matched: grants
 - [Manage Your Award](https://www.neh.gov/grants/manage) - matched: grants
+- [NEH Resources](https://www.neh.gov/grants/neh-resources) - matched: grants
 - [Professional Development](https://www.neh.gov/grants/professional-development) - matched: grants
 - [quiz](https://www.neh.gov/grants-quiz) - matched: grants
-- [Scholarly Editions and Translations](https://www.neh.gov/grants/research/scholarly-editions-and-translations-grants) - matched: grants
-- [Workshops, Resources, & Tools](https://www.neh.gov/grants/workshops-resources-tools) - matched: grants
+
+### [SBIR and STTR Funding Opportunities](https://www.sbir.gov/topics?page=0&program=&status=Open)
+
+Category: grants-public-funding. Page status: changed.
+
+- [NIH, CDC and FDA Small Business Innovation Research Grant (Parent SBIR [R43/R44] Clinical Trial Optional)](https://www.sbir.gov/topics/12563) - matched: grant, innovation, research, small business
+- [NIH Small Business Technology Transfer Grant (Parent STTR [R41/R42] Clinical Trial Optional)](https://www.sbir.gov/topics/12564) - matched: grant, small business, technology
 
 ### [CDFI Fund Certified CDFI List](https://www.cdfifund.gov/programs-training/certification/cdfi)
 
@@ -94,12 +101,13 @@ Category: business-capital. Page status: changed.
 
 Category: business-capital. Page status: changed.
 
+- [List of microlenders](https://www.sba.gov/loans/microloans/list-of-microlenders/) - matched: microloans
 - [Microloans](https://www.sba.gov/loans/microloans/) - matched: microloans
 - [Find a lender](https://lending.sba.gov/lender-match/) - matched: lender match
 
 ### [New Mexico Community Foundation Grants and Scholarships](https://nmcf.org/grants-and-scholarships/)
 
-Category: grants-public-funding. Page status: unchanged.
+Category: grants-public-funding. Page status: changed.
 
 - [Apply For A Scholarship](https://nmcf.org/scholarships/) - matched: scholarship, scholarships
 - [Apply For A Grant](https://nmcf.org/apply-for-a-grant/) - matched: grant
@@ -107,7 +115,7 @@ Category: grants-public-funding. Page status: unchanged.
 
 ### [El Pomar Foundation Grantmaking](https://www.elpomar.org/grant-making/)
 
-Category: grants-public-funding. Page status: unchanged.
+Category: grants-public-funding. Page status: changed.
 
 - [Search Grants](https://www.elpomar.org/grant-making/search-grants/) - matched: grant, grants
 - [Apply](https://www.elpomar.org/grant-making/apply/) - matched: grant
@@ -116,6 +124,7 @@ Category: grants-public-funding. Page status: unchanged.
 - [Grant Process & Guidelines](https://www.elpomar.org/grant-making/grant-process/) - matched: grant
 - [Grant Toolkit](https://www.elpomar.org/grant-making/grant-toolkit/) - matched: grant
 - [Leadership Development Developing and enhancing leadership throughout the state: Fellowship, Internship, ELD, and PeOPLE.](https://www.elpomar.org/programs/leadership-development/) - matched: fellowship
+- [Learn about our Fellowship](https://www.elpomar.org/fellowship) - matched: fellowship
 - [Our Funds](https://www.elpomar.org/grant-making/el-pomars-funds/) - matched: grant
 
 ### [Anschutz Family Foundation Grantmaking](https://anschutzfamilyfoundation.org/our-grantmaking/)
@@ -158,7 +167,7 @@ Category: fiscal-sponsorship. Page status: unchanged.
 
 ### [IRS Exempt Organizations Business Master File](https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf)
 
-Category: nonprofit-directories. Page status: unchanged.
+Category: nonprofit-directories. Page status: changed.
 
 - [Español](https://www.irs.gov/es/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf) - matched: EO BMF, exempt organizations business master file
 - [Kreyòl ayisyen](https://www.irs.gov/ht/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf) - matched: EO BMF, exempt organizations business master file
@@ -190,9 +199,8 @@ Category: nonprofit-directories. Page status: changed.
 
 Category: nonprofit-directories. Page status: changed.
 
-- [The Center for Contemporary Arts](https://www.groundworksnm.org/nonprofit-directory/nonprofit/45758) - matched: arts, nonprofit directory
+- [New Mexico Committee of the National Museum of Women in the Arts](https://www.groundworksnm.org/nonprofit-directory/nonprofit/27199) - matched: arts, nonprofit directory
 - [City](https://www.groundworksnm.org/nonprofit-directory?order=city&sort=asc) - matched: city, nonprofit directory
-- [Eastern New Mexico State Fair](https://www.groundworksnm.org/nonprofit-directory/nonprofit/11366) - matched: nonprofit directory, state
 - [2](https://www.groundworksnm.org/nonprofit-directory?page=1) - matched: nonprofit directory
 - [3](https://www.groundworksnm.org/nonprofit-directory?page=2) - matched: nonprofit directory
 - [4](https://www.groundworksnm.org/nonprofit-directory?page=3) - matched: nonprofit directory
@@ -201,19 +209,20 @@ Category: nonprofit-directories. Page status: changed.
 - [7](https://www.groundworksnm.org/nonprofit-directory?page=6) - matched: nonprofit directory
 - [8](https://www.groundworksnm.org/nonprofit-directory?page=7) - matched: nonprofit directory
 - [9](https://www.groundworksnm.org/nonprofit-directory?page=8) - matched: nonprofit directory
-- [Abode Inc.](https://www.groundworksnm.org/nonprofit-directory/nonprofit/5423) - matched: nonprofit directory
 - [Advanced Search](https://www.groundworksnm.org/nonprofit-directory/advanced-search) - matched: nonprofit directory
-- [Albuquerque Center for Hope and Recovery](https://www.groundworksnm.org/nonprofit-directory/nonprofit/757) - matched: nonprofit directory
-- [Always In Blue, Inc](https://www.groundworksnm.org/nonprofit-directory/nonprofit/40252) - matched: nonprofit directory
+- [Alamogordo Public Library Foundation](https://www.groundworksnm.org/nonprofit-directory/nonprofit/7244) - matched: nonprofit directory
 - [Browse by Name](https://www.groundworksnm.org/nonprofit-directory/all) - matched: nonprofit directory
-- [Casa Milagro](https://www.groundworksnm.org/nonprofit-directory/nonprofit/1000) - matched: nonprofit directory
-- [Crime Stoppers of Las Cruces and Dona Ana County](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26996) - matched: nonprofit directory
-- [Desert View Family Counseling](https://www.groundworksnm.org/nonprofit-directory/nonprofit/3318) - matched: nonprofit directory
-- [Friends of Coronado Historic Site](https://www.groundworksnm.org/nonprofit-directory/nonprofit/11348) - matched: nonprofit directory
-- [Home for Women and Children](https://www.groundworksnm.org/nonprofit-directory/nonprofit/1268) - matched: nonprofit directory
-- [Hostel Internacional de Santa Fe](https://www.groundworksnm.org/nonprofit-directory/nonprofit/27105) - matched: nonprofit directory
-- [Land of Enchantment Clean Cities Coalition](https://www.groundworksnm.org/nonprofit-directory/nonprofit/11005) - matched: nonprofit directory
+- [CAPPED (Cancer Awareness, Prevalence, Prevention and Early Detection)](https://www.groundworksnm.org/nonprofit-directory/nonprofit/12231) - matched: nonprofit directory
+- [Christian Believers Education](https://www.groundworksnm.org/nonprofit-directory/nonprofit/7671) - matched: nonprofit directory
+- [Coalition for Quality Children's Media (KIDS FIRST!)](https://www.groundworksnm.org/nonprofit-directory/nonprofit/10829) - matched: nonprofit directory
+- [DBSA ABQ Metro](https://www.groundworksnm.org/nonprofit-directory/nonprofit/46652) - matched: nonprofit directory
+- [Edgewood Womenade](https://www.groundworksnm.org/nonprofit-directory/nonprofit/43638) - matched: nonprofit directory
+- [Family Homecare Services](https://www.groundworksnm.org/nonprofit-directory/nonprofit/27037) - matched: nonprofit directory
+- [FAT Katz](https://www.groundworksnm.org/nonprofit-directory/nonprofit/13608) - matched: nonprofit directory
+- [Health Leadership Foundation](https://www.groundworksnm.org/nonprofit-directory/nonprofit/61165) - matched: nonprofit directory
+- [Helping Paws Across Borders](https://www.groundworksnm.org/nonprofit-directory/nonprofit/27565) - matched: nonprofit directory
 - [last »](https://www.groundworksnm.org/nonprofit-directory?page=108) - matched: nonprofit directory
+- [New Mexico Child Advocacy Networks](https://www.groundworksnm.org/nonprofit-directory/nonprofit/4074) - matched: nonprofit directory
 
 ### [Colorado Nonprofit Association Member Directory](https://coloradononprofits.org/member-resources/nonprofit-member-directory/)
 
@@ -231,12 +240,9 @@ Category: artists-creative-opportunities. Page status: changed.
 
 Category: artists-creative-opportunities. Page status: changed.
 
-- [Call for Artists Call for Artists: Exhibition Opportunity for NM Woman-Identifying Artists August 30, 2026 July 3, 2026](https://southwestcontemporary.com/classifieds/call-for-artists-exhibition-opportunity-for-nm-woman-identifying-artists/) - matched: call for artists, exhibition opportunity
 - [Call for Artists](https://southwestcontemporary.com/call-for-artists/) - matched: call for artists
-- [Call for Artists Call for Artists: Making Your Mark: Nevada Printmaking Network Statewide Exchange Portfolio September 1, 2026 June 29, 2026](https://southwestcontemporary.com/classifieds/call-for-artists-making-your-mark-nevada-printmaking-network-statewide-exchange-portfolio/) - matched: call for artists
-- [Call for Artists Call for Artists: Youth Temporary Public Art Projects Spring 2027 September 1, 2026 July 29, 2026](https://southwestcontemporary.com/classifieds/call-for-artists-youth-temporary-public-art-projects-spring-2027/) - matched: call for artists
-- [Call for Artists Call for Exhibition Proposals: 2027 5&J Exhibition Series September 15, 2026 July 21, 2026](https://southwestcontemporary.com/classifieds/call-for-exhibition-proposals-2027-5j-exhibition-series/) - matched: call for artists
-- [Call for Artists Call for Exhibition Proposals: LHUCA 2027-28 Season September 13, 2026 June 4, 2026](https://southwestcontemporary.com/classifieds/call-for-exhibition-proposals-lhuca-2027-28-season/) - matched: call for artists
+- [Call for Artists $4,500 Artist Grants | The Hopper Prize Fall 2026 November 17, 2026 September 23, 2026](https://southwestcontemporary.com/classifieds/4500-artist-grants-the-hopper-prize-fall-2026/) - matched: call for artists
+- [Call for Artists Call for Artists: Sutured Reality October 11, 2026 September 16, 2026](https://southwestcontemporary.com/classifieds/call-for-artists-sutured-reality/) - matched: call for artists
 
 ### [CaFE Public Art Calls](https://www.callforentry.org/public-art/)
 
@@ -252,6 +258,7 @@ Category: artists-creative-opportunities. Page status: changed.
 - [Bellevue Arts Fair 2026 - Food Vendor Application](https://www.zapplication.org/event-info.php?ID=14237) - matched: vendor, vendor application
 - [Oktoberfest 2026 Retail Vendor Application](https://www.zapplication.org/event-info.php?ID=14342) - matched: vendor, vendor application
 - [RiverArtsFest 2026 - Food Vendor Application](https://www.zapplication.org/event-info.php?ID=14136) - matched: vendor, vendor application
+- [Wesleyan Artist Market 2027 - Professional Artist Application](https://www.zapplication.org/event-info.php?ID=14799) - matched: artist application
 
 ### [Public Art Archive Artwork Submission](https://explore.publicartarchive.org/submission-form/)
 
@@ -261,35 +268,6 @@ Category: artists-creative-opportunities. Page status: changed.
 - [Review the Public Art Archive’s Content Submission Agreement .](https://explore.publicartarchive.org/content-submission-agreeement/) - matched: public art, public art archive
 - [Review the Public Art Archive’s Terms of Use](https://explore.publicartarchive.org/terms-of-use/) - matched: public art, public art archive
 
-### [Res Artis Open Calls](https://resartis.org/open-calls/)
-
-Category: artists-creative-opportunities. Page status: changed.
-
-- [2026-artist-residency-program-casa-de-mono](https://resartis.org/open-call/2026-artist-residency-program-casa-de-mono/) - matched: artist residency, open call
-- [2026-artist-residency-studio-programs-2](https://resartis.org/open-call/2026-artist-residency-studio-programs-2/) - matched: artist residency, open call
-- [artist-residency-apply-now](https://resartis.org/open-call/artist-residency-apply-now/) - matched: artist residency, open call
-- [artist-residency-aug-sept-last-minute-discount](https://resartis.org/open-call/artist-residency-aug-sept-last-minute-discount/) - matched: artist residency, open call
-- [artist-residency-in-hainan-china](https://resartis.org/open-call/artist-residency-in-hainan-china/) - matched: artist residency, open call
-- [artist-residency-in-the-swedish-high-coast](https://resartis.org/open-call/artist-residency-in-the-swedish-high-coast/) - matched: artist residency, open call
-- [artist-residency-opportunity-in-rural-portugal-atlas-residency-2026-2027](https://resartis.org/open-call/artist-residency-opportunity-in-rural-portugal-atlas-residency-2026-2027/) - matched: artist residency, open call
-- [beam-arts-international-artist-residency](https://resartis.org/open-call/beam-arts-international-artist-residency/) - matched: artist residency, open call
-- [casasanvito-call-artist-residency-in-marche-italy-last-call-for-2026](https://resartis.org/open-call/casasanvito-call-artist-residency-in-marche-italy-last-call-for-2026/) - matched: artist residency, open call
-- [chalk-hill-artist-residency-sonoma-county-california-2027](https://resartis.org/open-call/chalk-hill-artist-residency-sonoma-county-california-2027/) - matched: artist residency, open call
-- [chokechaka-artist-residency](https://resartis.org/open-call/chokechaka-artist-residency/) - matched: artist residency, open call
-- [fall-2026-artist-residency-in-a-medieval-water-mill](https://resartis.org/open-call/fall-2026-artist-residency-in-a-medieval-water-mill/) - matched: artist residency, open call
-- [fall-2027-artist-residency-in-morocco-with-green-olive-arts](https://resartis.org/open-call/fall-2027-artist-residency-in-morocco-with-green-olive-arts/) - matched: artist residency, open call
-- [farm-studio-india-international-artist-residency](https://resartis.org/open-call/farm-studio-india-international-artist-residency/) - matched: artist residency, open call
-- [guatemalan-artist-residency-black-sand-beaches](https://resartis.org/open-call/guatemalan-artist-residency-black-sand-beaches/) - matched: artist residency, open call
-- [guatemalan-artist-residency-on-the-pacific-coast](https://resartis.org/open-call/guatemalan-artist-residency-on-the-pacific-coast/) - matched: artist residency, open call
-- [hub-feenix-artist-residency-2026-27](https://resartis.org/open-call/hub-feenix-artist-residency-2026-27/) - matched: artist residency, open call
-- [international-artist-residency-spring-2027-residence-dartiste-internationale-printemps-2027](https://resartis.org/open-call/international-artist-residency-spring-2027-residence-dartiste-internationale-printemps-2027/) - matched: artist residency, open call
-- [kala-yatra-international-artist-residency-2025-2026](https://resartis.org/open-call/kala-yatra-international-artist-residency-2025-2026/) - matched: artist residency, open call
-- [kala-yatra-international-artist-residency-nepal-2025-2026](https://resartis.org/open-call/kala-yatra-international-artist-residency-nepal-2025-2026/) - matched: artist residency, open call
-- [onview-artist-residency-february-may-2027](https://resartis.org/open-call/onview-artist-residency-february-may-2027/) - matched: artist residency, open call
-- [onview-artist-residency-program](https://resartis.org/open-call/onview-artist-residency-program/) - matched: artist residency, open call
-- [peaceful-artist-residency-on-guatemalas-pacific-coast-4](https://resartis.org/open-call/peaceful-artist-residency-on-guatemalas-pacific-coast-4/) - matched: artist residency, open call
-- [spring-2027-artist-residency-in-morocco-with-green-olive-arts](https://resartis.org/open-call/spring-2027-artist-residency-in-morocco-with-green-olive-arts/) - matched: artist residency, open call
-
 ### [Creative Capital Artist Opportunities](https://creative-capital.org/artist-resources/)
 
 Category: artists-creative-opportunities. Page status: changed.
@@ -298,15 +276,15 @@ Category: artists-creative-opportunities. Page status: changed.
 
 ### [New Mexico Creative Industries Division Opportunities](https://www.edd.newmexico.gov/grants/cid-grants/)
 
-Category: artists-creative-opportunities. Page status: unchanged.
+Category: artists-creative-opportunities. Page status: changed.
 
 - [Creative Ambassadors](https://edd.newmexico.gov/divisions-and-offices/creative-industries/ci-ambassadors/) - matched: creative industries
 - [Creative Economy Insights](https://edd.newmexico.gov/creative-industries/) - matched: creative industries
 - [Creative Industries Division (CID)](https://edd.newmexico.gov/divisions-and-offices/creative-industries/) - matched: creative industries
 - [Creative Industries Division Study](https://edd.newmexico.gov/wp-content/uploads/2026/03/NM_CID_Report_2024UPDATEDDEC6.pdf) - matched: creative industries
+- [Creative Industries Division Toolbox](https://edd.newmexico.gov/divisions-and-offices/creative-industries/cid-toolbox/) - matched: creative industries
 - [Creative Industries Event Calendar](https://edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-events/) - matched: creative industries
 - [Creative Industries Season 2025](https://edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-season-2025/) - matched: creative industries
-- [Creative Industries Toolbox](https://edd.newmexico.gov/wp-content/uploads/2026/03/EDD_CreativeIndustriesToolbox_4_WEB_2026.pdf) - matched: creative industries
 - [Creative Resource Center](https://edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/) - matched: creative industries
 - [Knowledge Center](https://edd.newmexico.gov/divisions-and-offices/creative-industries/knowledge-center/) - matched: creative industries
 - [Meet Our Partners](https://edd.newmexico.gov/divisions-and-offices/creative-industries/cid-partners/) - matched: creative industries
