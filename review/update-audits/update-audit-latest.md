@@ -1,6 +1,6 @@
 # Update Source Audit
 
-Generated: 2026-08-18
+Generated: 2026-10-06
 
 This report separates confirmed link failures from pages that merely block or confuse scripted checks.
 
@@ -10,15 +10,15 @@ This report separates confirmed link failures from pages that merely block or co
 - Web sources checked: 135
 - Confirmed broken or missing: 0
 - Normal-browser confirmation required: 0
-- Script-access limitations (not broken): 28
+- Script-access limitations (not broken): 33
 - Offline field-check records: 1
 - Human approval required: 82
 
 ## Status Counts
 
-- access_blocked: 28
+- access_blocked: 33
 - field_check: 1
-- ok: 94
+- ok: 89
 - redirect: 13
 
 ## Confirmed Broken Or Missing
@@ -33,18 +33,22 @@ No inconclusive network or server response is waiting on a normal-browser confir
 
 These are informational results, not broken-link findings. The page blocked scripted access or the local certificate checker could not validate its chain.
 
+- [Trinidad / Las Animas](https://www.trinidad.co.gov/government/public_notice.php) - Regional; civic; access_blocked; HTTP Error 403: Forbidden
 - [Walsenburg / Huerfano](https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes) - Regional; civic; access_blocked; HTTP Error 403: Forbidden
 - [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
 - [Visit Angel Fire NM Get Listed](https://visitangelfirenm.com/get-listed/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
+- [The World Journal](https://worldjournalnewspaper.com/) - Huerfano; events; access_blocked; HTTP Error 403: Forbidden
 - [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; access_blocked; HTTP Error 403: Forbidden
+- [World Journal](https://worldjournalnewspaper.com/) - Huerfano / Walsenburg; events; access_blocked; HTTP Error 403: Forbidden
+- [City of Trinidad Economic Development Newsletter](https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php) - Las Animas; events; access_blocked; HTTP Error 403: Forbidden
 - [Visit Trinidad Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Las Animas; events; access_blocked; HTTP Error 403: Forbidden
 - [Visit Trinidad Submit Your Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Las Animas; events; access_blocked; HTTP Error 403: Forbidden
+- [City of Trinidad Economic Development](https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
 - [Visit Trinidad Submit Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
 - [Visit Trinidad Tourism / Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
-- [Trinidad Community Foundation](https://www.trinidadcf.org/board.html) - Las Animas; funding; access_blocked; HTTP Error 429: Too Many Requests
-- [Trinidad Community Foundation Grant Process](https://www.trinidadcf.org/grants.html) - Las Animas; funding; access_blocked; HTTP Error 429: Too Many Requests
+- [City of Trinidad Grants](https://www.trinidad.co.gov/services/grants.php) - Las Animas; funding; access_blocked; HTTP Error 403: Forbidden
 - [Candid Funding Search and Learning](https://learning.candid.org/free-access-to-foundation-directory) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [IFundWomen Grants](https://www.ifundwomen.com/grants/apply-for-grants) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - National; funding; access_blocked; HTTP Error 403: Forbidden
@@ -61,6 +65,7 @@ These are informational results, not broken-link findings. The page blocked scri
 - [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Las Animas County Government](https://lasanimascounty.colorado.gov/) - Las Animas; general; access_blocked; HTTP Error 403: Forbidden
 - [Visit Trinidad Outdoor Recreation](https://visittrinidadcolorado.com/outdoor-recreation/) - Las Animas; general; access_blocked; HTTP Error 403: Forbidden
+- [World Journal Services Directory](https://worldjournalnewspaper.com/services/) - Huerfano; media; access_blocked; HTTP Error 403: Forbidden
 
 ## Offline Field Checks
 
