@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T05:18:28-06:00",
+  "generated_at": "2026-10-07T21:18:06+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1498,
@@ -40,10 +40,10 @@
     "funding_watch_new_baselines": 1,
     "funding_watch_confirmed_broken": 0,
     "funding_watch_check_failures": 4,
-    "resource_discovery_candidates": 176,
-    "resource_discovery_changed": 17,
-    "resource_discovery_broken": 0,
-    "resource_discovery_failures": 5,
+    "resource_discovery_candidates": 172,
+    "resource_discovery_changed": 27,
+    "resource_discovery_broken": 1,
+    "resource_discovery_failures": 7,
     "free_tool_pages_checked": 22,
     "free_tool_pages_changed": 0,
     "free_tool_candidate_links": 0,
@@ -63,16 +63,22 @@
       "next_action": "Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory."
     },
     {
-      "priority": "medium",
-      "count": 176,
-      "label": "resource candidate links waiting for review",
-      "next_action": "Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data."
+      "priority": "high",
+      "count": 1,
+      "label": "confirmed broken resource-discovery hubs",
+      "next_action": "Replace or intentionally retire each hub URL before relying on its candidate queue."
     },
     {
       "priority": "medium",
       "count": 173,
       "label": "canonical rows without a website or source URL",
       "next_action": "Enrich high-value entries first; do not invent contact paths."
+    },
+    {
+      "priority": "medium",
+      "count": 172,
+      "label": "resource candidate links waiting for review",
+      "next_action": "Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data."
     },
     {
       "priority": "medium",
@@ -100,7 +106,7 @@
     },
     {
       "priority": "low",
-      "count": 5,
+      "count": 7,
       "label": "resource-discovery hubs needing a normal-browser check",
       "next_action": "Open these pages normally; do not remove a source because of bot blocking or a temporary request failure."
     },
