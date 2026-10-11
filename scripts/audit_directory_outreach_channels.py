@@ -176,7 +176,7 @@ def write_csv(payload: dict, path: Path) -> None:
         *channel_keys,
     ]
     with path.open("w", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         for entry in payload["entries"] + payload.get("shortcuts", []):
             row = {key: entry.get(key, "") for key in fieldnames if key not in channel_keys}

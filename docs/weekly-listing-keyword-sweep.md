@@ -17,7 +17,7 @@ The generator combines the reviewed keyword index with existing listing fields. 
 
 ## Rotation
 
-The scheduled workflow checks up to 120 distinct public pages each Wednesday. Pages with no prior check date run first. After a successful review branch is merged, older pages move ahead of recently checked pages, allowing the sweep to cover the full source set over several runs.
+The coordinated weekly workflow checks up to 120 distinct public pages each Monday. Pages with no prior check date run first. After a successful review branch is merged, older pages move ahead of recently checked pages, allowing the sweep to cover the full source set over several runs.
 
 Several listings may share one chamber, tourism, directory, or social page. The sweep fetches that URL once and applies matched source terms to the linked listing IDs.
 

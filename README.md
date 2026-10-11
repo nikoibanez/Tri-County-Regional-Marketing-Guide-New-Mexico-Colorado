@@ -81,14 +81,9 @@ This repo includes a no-secret maintenance system. Deterministic scripts build, 
 - `scripts/build_maintenance_dashboard.py` - combines audit counts into a private action queue.
 - `scripts/smoke_test_site.py` - checks critical local or live routes without browser dependencies.
 - `.github/workflows/quality-gate.yml` - builds and runs all deterministic checks on pull requests and pushes.
-- `.github/workflows/source-audit.yml` - checks the complete source registry and opens a review pull request.
-- `.github/workflows/weekly-national-funding-watch.yml` - checks the subject-tagged regional and national funding registry and opens a draft review pull request when the report changes.
-- `.github/workflows/weekly-resource-discovery.yml` - checks broader resource registries and opens a draft candidate-review pull request.
-- `.github/workflows/weekly-event-source-watch.yml` - checks the fifteen event hubs and opens a draft candidate-review pull request without changing public event listings.
-- `.github/workflows/weekly-directory-query-check.yml` - checks fifteen high-signal source groups and opens a candidate-review pull request.
-- `.github/workflows/weekly-listing-keyword-sweep.yml` - rotates through public listing pages and opens a review pull request for search-keyword changes.
+- `.github/workflows/weekly-guide-maintenance.yml` - coordinates directory, source, funding, keyword, resource, event, and free-tool reviews in one weekly run and refreshes one stable draft pull request.
 - `.github/workflows/live-site-smoke-test.yml` - checks the configured live site and opens or updates a failure issue.
-- `.github/workflows/monthly-maintenance-snapshot.yml` - stores a canonical deploy zip, checksum, data files, and reports as a 90-day artifact.
+- `.github/workflows/monthly-maintenance-snapshot.yml` - stores a canonical deploy zip, checksum, data files, and reports as a 90-day artifact without opening another review pull request.
 - `.github/workflows/codex-update-proposal.yml` - disabled-by-default Codex proposal workflow.
 - `docs/command-checklist.md` - local build, QA, grants-audit, GitHub, and Netlify commands.
 - `docs/weekly-directory-query-check.md` - weekly business-directory watcher documentation.

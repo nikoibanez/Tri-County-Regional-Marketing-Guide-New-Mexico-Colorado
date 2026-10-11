@@ -1,20 +1,20 @@
 # Directory Outreach Channel Review
 
-Generated: 2026-08-25T11:18:23.546817+00:00
+Generated: 2026-10-11T06:20:56.557862+00:00
 
 This report reviews every published directory listing for practical physical and digital outreach routes. A listed route means the attached listing information identifies that kind of channel. Ask first means the entity may be a sensible contact, but placement, sharing, price, eligibility, and acceptance are not promised.
 
 ## Summary
 
 - Published listings reviewed: 1362
-- Directory shortcuts reviewed: 104
-- Total directory records reviewed: 1466
+- Directory shortcuts reviewed: 117
+- Total directory records reviewed: 1479
 - Listings with at least one outreach route: 742
 - Listings with at least one listed route: 307
-- Listings with at least one ask-first route: 702
+- Listings with at least one ask-first route: 703
 - Listings without an identified outreach route: 620
 - Listings missing structured outreach fields: 0
-- Directory shortcuts with a listed or ask-first route: 52
+- Directory shortcuts with a listed or ask-first route: 65
 - Directory shortcuts without an identified route: 52
 - Directory shortcuts missing structured outreach fields: 0
 
@@ -22,13 +22,13 @@ This report reviews every published directory listing for practical physical and
 
 | Channel | Listed route | Ask first | Not indicated |
 | --- | ---: | ---: | ---: |
-| Flyers and posters | 0 | 334 | 1028 |
+| Flyers and posters | 0 | 335 | 1027 |
 | Brochures and rack cards | 0 | 103 | 1259 |
 | Bulletin boards | 0 | 24 | 1338 |
-| Front-desk referrals | 0 | 281 | 1081 |
+| Front-desk referrals | 0 | 282 | 1080 |
 | Directory profiles and listings | 305 | 13 | 1044 |
 | Event calendars | 1 | 117 | 1244 |
-| Social cross-promotion | 0 | 39 | 1323 |
+| Social cross-promotion | 0 | 38 | 1324 |
 | Newsletters and mailing lists | 0 | 183 | 1179 |
 | Paid digital advertising | 1 | 59 | 1302 |
 | Media and editorial coverage | 2 | 59 | 1301 |
@@ -39,18 +39,18 @@ This report reviews every published directory listing for practical physical and
 
 | Channel | Listed route | Ask first | Not indicated |
 | --- | ---: | ---: | ---: |
-| Flyers and posters | 0 | 0 | 104 |
-| Brochures and rack cards | 0 | 0 | 104 |
-| Bulletin boards | 0 | 0 | 104 |
-| Front-desk referrals | 0 | 0 | 104 |
-| Directory profiles and listings | 14 | 9 | 81 |
-| Event calendars | 6 | 10 | 88 |
-| Social cross-promotion | 1 | 0 | 103 |
-| Newsletters and mailing lists | 0 | 31 | 73 |
-| Paid digital advertising | 1 | 4 | 99 |
-| Media and editorial coverage | 1 | 4 | 99 |
-| Sponsorships | 0 | 13 | 91 |
-| Partner cross-promotion | 0 | 41 | 63 |
+| Flyers and posters | 0 | 0 | 117 |
+| Brochures and rack cards | 0 | 0 | 117 |
+| Bulletin boards | 0 | 0 | 117 |
+| Front-desk referrals | 0 | 0 | 117 |
+| Directory profiles and listings | 14 | 10 | 93 |
+| Event calendars | 14 | 15 | 88 |
+| Social cross-promotion | 1 | 0 | 116 |
+| Newsletters and mailing lists | 0 | 35 | 82 |
+| Paid digital advertising | 1 | 4 | 112 |
+| Media and editorial coverage | 2 | 4 | 111 |
+| Sponsorships | 0 | 24 | 93 |
+| Partner cross-promotion | 0 | 52 | 65 |
 
 ## Listings Without An Identified Route
 
@@ -208,7 +208,7 @@ This report reviews every published directory listing for practical physical and
 - McConnell, Steven L, ATTY - Raton, Colfax, NM; Local business or service
 - Medicine Shoppe - Raton, Colfax, NM; Local business or service
 - Mesa Vista Veterinary Hospital - Raton, Colfax, NM; Health & wellness
-- Mesalands Scenic Byway - Raton, Colfax, NM; Local business or service
+- Mesalands Scenic Byway - Raton, Colfax, NM; Arts & culture
 - Michael A Martinez, SW - Raton, Colfax, NM; Local business or service
 - Miner's Colfax Medical Center - Raton, Colfax, NM; Health & wellness
 - Miners' Colfax Medical Center - Raton, Colfax, NM; Health & wellness
@@ -223,7 +223,7 @@ This report reviews every published directory listing for practical physical and
 - Oasis Restaurant - Raton, Colfax, NM; Food & drink
 - The Pack Rat - Raton, Colfax, NM; Retail & local goods
 - Pappa's Sweet Shop - Raton, Colfax, NM; Food & drink
-- The Pecos, Canadian, Cimarron, and Mora Rivers - Raton, Colfax, NM; Local business or service
+- The Pecos, Canadian, Cimarron, and Mora Rivers - Raton, Colfax, NM; Tourism & visitor info
 - Phil Long Ford of Raton - Raton, Colfax, NM; Local business or service
 - Professional Home Health - Raton, Colfax, NM; Health & wellness
 - R & D Honda - Raton, Colfax, NM; Local business or service
@@ -637,7 +637,7 @@ This report reviews every published directory listing for practical physical and
 - Trinidad Lock & Key - Trinidad, Las Animas, CO; Local business or service
 - Trinidad Motor Inn - Trinidad, Las Animas, CO; Lodging & stays
 - Trinidad State College - Trinidad, Las Animas, CO; Education & learning
-- Trinidad Triggers - Trinidad, Las Animas, CO; Local business or service
+- Trinidad Triggers - Trinidad, Las Animas, CO; Health & wellness
 - TSJC Presidents House - Trinidad, Las Animas, CO; Local business or service
 - Tutti Scoops - Trinidad, Las Animas, CO; Local business or service
 - Two Feathers Salon - Trinidad, Las Animas, CO; Health & wellness

@@ -1,6 +1,6 @@
 # Regional and National Funding Source Watch
 
-Generated: 2026-08-25T06:17:26-06:00
+Generated: 2026-10-11T00:14:44-06:00
 
 This is a private review queue. A detected page change is not a verified deadline, eligibility rule, or award announcement.
 
@@ -8,11 +8,11 @@ This is a private review queue. A detected page change is not a verified deadlin
 
 - Sources configured: 31
 - Sources checked: 31
-- Pages changed since the previous successful check: 0
-- New baselines: 18
+- Pages changed since the previous successful check: 2
+- New baselines: 16
 - Confirmed broken URLs: 0
-- Script-access limitations (not broken): 7
-- Other check failures: 7
+- Script-access limitations (not broken): 9
+- Other check failures: 9
 
 ## Separate Subject Sweeps
 
@@ -24,7 +24,7 @@ Sources: Grants.gov; USDA Rural Development Programs and Services; U.S. Economic
 
 ### Education
 
-Configured 19; checked 19; successful 15; changed 0; new baselines 12; failed checks 4.
+Configured 19; checked 19; successful 13; changed 0; new baselines 10; failed checks 6.
 
 Sources: Grants.gov; Institute of Museum and Library Services Funding Opportunities; USDA Rural Development Programs and Services; Candid Funding Search and Learning; NGLCC Scholarships and Grants; Colorado OEDIT Programs and Funding; New Mexico Arts Grants and Programs; El Pomar Foundation Grant Making; Southern Colorado Community Foundation Grants; Taos Community Foundation Funding Opportunities; Trinidad State College Scholarships and Grants; Mary John Goree Las Animas County Scholarship; Cuchara Chapel Scholarship; First Southwest Community Fund Grants; Robert Hoag Rawlings Foundation Grants; John G. Duncan Charitable Trust; Brindle Foundation Grants; Spanish Peaks HealthCare Foundation; New Mexico Humanities Council Grants.
 
@@ -36,17 +36,34 @@ Sources: Grants.gov; USDA Rural Development Programs and Services; Candid Fundin
 
 ### Nonprofits
 
-Configured 21; checked 21; successful 16; changed 0; new baselines 12; failed checks 5.
+Configured 21; checked 21; successful 15; changed 2; new baselines 11; failed checks 6.
 
 Sources: Grants.gov; National Endowment for the Arts Grants; Institute of Museum and Library Services Funding Opportunities; USDA Rural Development Programs and Services; U.S. Economic Development Administration Funding Opportunities; Candid Funding Search and Learning; NALAC Fund for the Arts; Colorado OEDIT Programs and Funding; Colorado Creates Grant; New Mexico Economic Development Department Grants; New Mexico Creative Industries Grant Opportunities; New Mexico Arts Grants and Programs; El Pomar Foundation Grant Making; Southern Colorado Community Foundation Grants; Taos Community Foundation Funding Opportunities; Robert Hoag Rawlings Foundation Grants; John G. Duncan Charitable Trust; Brindle Foundation Grants; New Mexico Community Foundation Northeastern Health Fund; Health Solutions Community Sponsorship Requests; New Mexico Humanities Council Grants.
 
 ### Arts & culture
 
-Configured 17; checked 17; successful 14; changed 0; new baselines 9; failed checks 3.
+Configured 17; checked 17; successful 13; changed 2; new baselines 8; failed checks 4.
 
 Sources: Grants.gov; National Endowment for the Arts Grants; Institute of Museum and Library Services Funding Opportunities; Candid Funding Search and Learning; First Peoples Fund Fellowships; NALAC Fund for the Arts; Colorado OEDIT Programs and Funding; Colorado Creates Grant; New Mexico Economic Development Department Grants; New Mexico Creative Industries Grant Opportunities; New Mexico Arts Grants and Programs; New Mexico Arts Artist Opportunities; El Pomar Foundation Grant Making; Southern Colorado Community Foundation Grants; Taos Community Foundation Funding Opportunities; Robert Hoag Rawlings Foundation Grants; New Mexico Humanities Council Grants.
 
 ## Review First
+
+### [National Endowment for the Arts Grants](https://www.arts.gov/grants)
+
+Change status: changed. Sweeps: Nonprofits, Arts & culture. Focus: arts, culture, creative organizations, local arts agencies.
+
+Possible deadline, eligibility, fee, or award language to inspect:
+
+- Deadlines have passed.
+- Applications are accepted at the February or July deadlines.
+- Deadline: September 29, 2026.
+- *Deadline has passed.
+
+### [NALAC Fund for the Arts](https://www.nalac.org/grants/nalac-fund-for-the-arts/)
+
+Change status: changed. Sweeps: Nonprofits, Arts & culture. Focus: Latinx artists, Hispanic arts organizations, culture, creative practice.
+
+The page changed, but the text extractor found no targeted funding phrase. Review the page normally.
 
 ### [New Mexico Economic Development Department Grants](https://edd.newmexico.gov/grants/)
 
@@ -73,6 +90,8 @@ Change status: new_baseline. Sweeps: Economic development, Nonprofits, Arts & cu
 Possible deadline, eligibility, fee, or award language to inspect:
 
 - Eligible applicants include nonprofits, MainStreet organizations, Nations, Tribes, Pueblos, councils of governments, educational institutions, and other political subdivisions of the state, excluding local, county, municipal governments, and state agencies.
+- Projected program timeline: Grant Application Opens: Oct 5, 2026 Grant Application Closes: Oct 30, 2026, at 6 pm Review Period: Nov 2026 –Jan 2027 Projected Project Period: Mar 2027–Feb 2028 Eligibility Requirements (Pass/Fail): Applicants must: • Be a local government, Nation, Tribe, Pueblo, or nonprofit organization.
+- • Show a track record of programs, services, or initiatives that advance one or more of the Creative Industry clusters: • Performing Arts, Visual Arts, & Literary Arts • Entertainment, Media, Information & Broadcasting • Applied Arts & Design (Architecture, Landscape Architecture, Museums & Galleries) • Promotion, Marketing, Graphics & Industrial Design • Technology & Digital Media • Crafts & Artisan Professions (met
 - See the FAQ on allowable uses for the Business Development & Expansion Grant program below equipment marketing, promotion, digital presence small infrastructure improvements that can be completed within 12 months technology and software improvements capacity for impact measurement, engagement, evaluation, and economic contribution Non-allowable use: Hiring of full-time personnel Prospective applicants will be asked t
 - All eligible applicants are required to have submitted a Letter of Intent during the pre-application phase, which ended on June 30.
 - 2026 Grant program note: Creative Industries Division grant programs, eligibility requirements, award amounts, eligible expenses, and application timelines are subject to change by fiscal year.
@@ -91,8 +110,9 @@ Possible deadline, eligibility, fee, or award language to inspect:
 
 - All Programs Artist-in-Residence Arts & Cultural Districts Arts & Health Arts & the Military Folk Arts Governor’s Arts Awards Grants Poet Laureate Poetry Out Loud Public Art Grants Information The Grants Program is our annual funding program which allows Federal 501(c)(3) tax-exempt nonprofit organizations, units of government, schools, colleges, universities, and Indian tribal government entities to apply for fundin
 - New Mexico based organizations wishing to apply that are not listed above may enter a fiscal sponsorship with a nonprofit organization.
-- If an organization misses the FY2026 deadline, they will need to wait for two years until September 2026, to next apply for funding from New Mexico Arts.
-- Grant Application Life Cycle SEPTEMBER – Guidelines Available OCTOBER – Advance Review Deadline DECEMBER – Final Application Deadline WINTER – Staff Review APRIL – Panel Review JULY – Arts Commission Approval JULY – Late July Notification & Agreements Grants Team Anna Blyth, 505-412-0547, Anna.Blyth@dca.nm.gov , Colleges, Universities, & Government Entities Maggie Hanley, 505-470-9022, Maggie.Hanley@dca.nm.gov , Arts
+- Grant Application Life Cycle SEPTEMBER – Guidelines Available OCTOBER – Advance Review Deadline DECEMBER – Final Application Deadline WINTER – Staff Review SPRING – Panel Review JULY – Arts Commission Approval JULY – Late July Notification & Agreements Important for FY28 New Mexico Arts offers a two-year funding cycle.
+- New applicants must contact New Mexico Arts program staff to determine if the proposed program meets the eligibility requirements of a funding category.
+- Organizations who are changing proposed programs should also consult with program staff to ensure eligibility.
 
 ### [New Mexico Arts Artist Opportunities](https://nmarts.org/public-art/are-you-an-artist/)
 
@@ -151,30 +171,11 @@ Possible deadline, eligibility, fee, or award language to inspect:
 - Proof of need — any one of the following qualifies: FAFSA showing Pell grant eligibility, TANF, SNAP, Medicaid, SSI/Disability, Section 8 Housing Voucher, WIC, Free and Reduced Lunch income level, or income too low to require federal tax filing.
 - Always verify current eligibility with the Financial Aid Office.
 
-### [Mary John Goree Las Animas County Scholarship](https://goreescholarship.org/)
-
-Change status: new_baseline. Sweeps: Education. Focus: Las Animas County students, four-year college, tuition, need-based expenses.
-
-Possible deadline, eligibility, fee, or award language to inspect:
-
-- Mary John Goree Las Animas County Scholarship Foundation Mary John Goree Las Animas County Scholarship Foundation Skip to content Home About the Foundation About the John Family About Our Directors Prospective Scholars Eligibility Process Selection Criteria Scholarship Awards Application FAQs What’s New for 2026-2027?
-
 ### [First Southwest Community Fund Grants](https://www.fswcf.org/grants)
 
 Change status: new_baseline. Sweeps: Economic development, Education. Focus: rural entrepreneurs, small businesses, workshops, startup and growth.
 
 The page changed, but the text extractor found no targeted funding phrase. Review the page normally.
-
-### [Robert Hoag Rawlings Foundation Grants](https://rawlingsfoundation.com/grants/requests/)
-
-Change status: new_baseline. Sweeps: Education, Nonprofits, Arts & culture. Focus: community projects, education and youth, capital needs, Southern Colorado nonprofits.
-
-Possible deadline, eligibility, fee, or award language to inspect:
-
-- Grant Requests - Robert Hoag Rawlings Foundation Aspen Acres Fire Response Grants Now Available Home Who We Serve Grants Aspen Acres Fire Response Grants Grant Program Overview Eligibility & Guidelines Grant Intent Request How to Apply Professional Development Mini-Grants Grant Reports About Foundation Directors News Annual Reports Grants Apply News • • • More Eligibility & Grant Process Grant Intent Request Grant Re
-- Full Grant Application Deadline September 1, 2026 no later than 5 p.m.
-- Restrictions In general, the Foundation will not consider request that have the following characteristics: Programs that do not benefit people in our 18 county service area; Direct grants to individuals; Political organizations, campaigns, or candidates for political office; Efforts directed towards influencing legislation at any governmental level; Sectarian or religious organizations whose services are directed to
-- Aspen Acres Fire Response Grants Grants Program Overview Grant Intent Request Eligibility & Guidelines How to Apply Professional Development Mini-Grants Grant Reports Who We Serve Foundation Directors Annual Reports
 
 ### [John G. Duncan Charitable Trust](https://www.wellsfargo.com/private-foundations/duncan-charitable-trust/)
 
@@ -203,10 +204,10 @@ Change status: new_baseline. Sweeps: Healthcare, Nonprofits. Focus: food securit
 
 Possible deadline, eligibility, fee, or award language to inspect:
 
-- Northeastern Health Fund – NMCF NMCF Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern® NM True Aldo Leopold Charter School Anchorum Master’s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Support an existing fundholder Fiscal Sponsorship
+- Northeastern Health Fund – NMCF NMCF Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern® NM True Aldo Leopold Charter School Anchorum Master’s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Fiscal Sponsorship Fiscal Sponsorship About Us Ab
 - GRANT AMOUNT : Up to $5,000 TIMELINE Application opens in fall 2026 Application Deadline: TBD Grants Announced: TBD Grant Period: TBD Recent Recipients : Eagle Nest Horse Program – $5,000 For the Reining Hope summer program, a no-cost equine access and education program for children ages 5 to 14 who live in Colfax County.
-- Search account cart Contact 8 Calle Medico Santa Fe, NM 87505 505.820.6860 info@newmexicofoundation.org Facebook-f Linkedin-in Instagram Resources Grants and Scholarships Give Fiscal Sponsorships About Us Advisors Login © Copyright 2026.
-- NMCF Sub-Menu Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern® NM True Aldo Leopold Charter School Anchorum Master’s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Support an existing fundholder Fiscal Sponsorship Fiscal Sponsorship Spo
+- Contact 8 Calle Medico Santa Fe, NM 87505 505.820.6860 info@newmexicofoundation.org Facebook-f Linkedin-in Instagram Resources Grants and Scholarships Give Fiscal Sponsorships About Us Advisors Login © Copyright 2026.
+- NMCF Sub-Menu Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern® NM True Aldo Leopold Charter School Anchorum Master’s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Fiscal Sponsorship Fiscal Sponsorship About Us About Us History Staff &
 
 ### [Health Solutions Community Sponsorship Requests](https://www.health.solutions/requests/)
 
@@ -221,7 +222,7 @@ Change status: new_baseline. Sweeps: Education, Healthcare. Focus: healthcare ca
 Possible deadline, eligibility, fee, or award language to inspect:
 
 - Highway 160, Walsenburg, Colorado Our Mission Spanish Peaks HealthCare Foundation is a 501(c)(3) nonprofit organization established under the Colorado Nonprofit Foundation Act.
-- Highway 160, Walsenburg CO 81089 Telephone (719) 738-5100 Contact Us Privacy Policy cms-hpt.txt Marketing Resources Join PFAC Price Transparency District Transparency Website Accessibility Statement Powered by Streamline
+- Walsenburg, CO 81089 Copyright © 2026 Spanish Peaks Regional Health Center/VCLC Walsenburg CO 81089 Telephone (719) 738-5100 Contact Us Privacy Policy cms-hpt.txt Marketing Resources Join PFAC Price Transparency District Transparency Website Accessibility Statement Powered by Streamline
 
 ### [New Mexico Humanities Council Grants](https://newmexicohumanities.org/grants/)
 
@@ -239,4 +240,6 @@ Possible deadline, eligibility, fee, or award language to inspect:
 - [IFundWomen Grants](https://www.ifundwomen.com/grants/apply-for-grants) - access_blocked; HTTP Error 403: Forbidden
 - [Colorado OEDIT Programs and Funding](https://oedit.colorado.gov/programs-and-funding) - access_blocked; HTTP Error 403: Forbidden
 - [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - access_blocked; HTTP Error 403: Forbidden
+- [Mary John Goree Las Animas County Scholarship](https://goreescholarship.org/) - access_blocked; HTTP Error 403: Forbidden
 - [Cuchara Chapel Scholarship](https://www.cucharachapel.org/scholarship/) - tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)
+- [Robert Hoag Rawlings Foundation Grants](https://rawlingsfoundation.com/grants/requests/) - access_blocked; HTTP Error 403: Forbidden

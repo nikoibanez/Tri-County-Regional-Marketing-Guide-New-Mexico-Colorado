@@ -65,4 +65,4 @@ Repository auto-merge may be enabled so an exactly approved, check-passing pull 
 
 ## Weekly Coordination Review
 
-The weekly Codex maintenance task uses a clean worktree and this document as its contract. It should inspect open automation and integration pull requests, identify overlapping files or superseded structures, and propose the smallest safe reconciliation. It may prepare a draft pull request for code and infrastructure changes, but it must not merge, deploy, or publish unreviewed public claims.
+The weekly maintenance workflow uses a clean checkout and this document as its contract. Directory, source, funding, keyword, resource, event, and free-tool checks refresh the stable `automation/weekly-guide-maintenance` branch and one draft pull request instead of opening independent snapshot pull requests. It should inspect open integration work, identify overlapping files or superseded structures, and propose the smallest safe reconciliation. It must not merge, deploy, or publish unreviewed public claims.

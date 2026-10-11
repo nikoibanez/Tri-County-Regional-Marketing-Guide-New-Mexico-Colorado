@@ -1,18 +1,18 @@
 # Resource Discovery Automation
 
-The weekly resource-discovery job watches high-value registries for grants, business capital, fiscal sponsors, nonprofits, businesses, artists, and creative opportunities.
+The coordinated weekly maintenance job watches high-value registries for grants, business capital, fiscal sponsors, nonprofits, businesses, artists, and creative opportunities.
 
-A separate Thursday event-source run uses the same review-only engine for fifteen local calendars and event-submission hubs: five each for Colfax, Las Animas, and Huerfano counties.
+The same weekly run uses the review-only engine for fifteen local calendars and event-submission hubs: five each for Colfax, Las Animas, and Huerfano counties.
 
 ## Files
 
 - `data/resource-keyword-registry.json` controls phrases used to identify relevant candidate links.
 - `data/resource-discovery-sources.json` lists source hubs, their purpose, cadence, and automation mode.
 - `scripts/audit_resource_discovery_sources.py` checks pages and extracts review-only candidate links.
-- `.github/workflows/weekly-resource-discovery.yml` runs the process each Wednesday and opens a draft review pull request when tracked outputs change.
+- `.github/workflows/weekly-guide-maintenance.yml` runs resource discovery with the other maintenance checks and refreshes one stable draft review pull request when tracked outputs change.
 - `data/event-watch-sources.json` lists the fifteen county-balanced event hubs shown on the public Events page.
 - `data/event-watch-state.json` stores the last successful event-hub snapshots.
-- `.github/workflows/weekly-event-source-watch.yml` checks those hubs and opens a draft review pull request when a page changes or a new candidate event link appears.
+- The coordinated weekly workflow checks those hubs in the same review branch when a page changes or a new candidate event link appears.
 
 ## Safe Boundary
 

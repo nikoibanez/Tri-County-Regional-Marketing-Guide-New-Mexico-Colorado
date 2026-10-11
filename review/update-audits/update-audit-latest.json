@@ -1,21 +1,23 @@
 {
-  "generated_at": "2026-08-18",
-  "registry": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/update-source-registry.json",
+  "generated_at": "2026-10-11",
+  "registry": "C:\\Temp\\tri-county-raton-animation-palettes\\data\\update-source-registry.json",
   "summary": {
-    "checked": 136,
-    "web_checked": 135,
+    "checked": 170,
+    "web_checked": 169,
     "counts": {
-      "access_blocked": 28,
+      "access_blocked": 31,
       "field_check": 1,
-      "ok": 94,
-      "redirect": 13
+      "network_error": 1,
+      "ok": 122,
+      "redirect": 13,
+      "tls_error": 2
     },
     "confirmed_broken": 0,
     "needs_attention": 0,
-    "browser_check_needed": 0,
-    "script_access_limited": 28,
+    "browser_check_needed": 1,
+    "script_access_limited": 33,
     "field_checks": 1,
-    "human_approval_required": 82
+    "human_approval_required": 112
   },
   "results": [
     {
@@ -30,8 +32,8 @@
         "check_mode": "web",
         "update_domain": "civic",
         "cadence_days": 90,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-11-16",
+        "last_checked": "2026-10-11",
+        "next_check": "2027-01-09",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -43,7 +45,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.co.colfax.nm.us/government/county_clerk.php",
-        "elapsed_ms": 271,
+        "elapsed_ms": 772,
         "error": ""
       }
     },
@@ -59,8 +61,8 @@
         "check_mode": "field",
         "update_domain": "civic",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Local update needed",
         "review_level": "manual_verification_needed",
         "public_claim_boundary": "Verify physical board access, posting permission, office hours, and public-notice rules directly.",
@@ -87,8 +89,8 @@
         "check_mode": "web",
         "update_domain": "civic",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Hybrid - check current posting locations",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify physical board access, posting permission, office hours, and public-notice rules directly.",
@@ -100,7 +102,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.ratonnm.gov/government/agendas_minutes.php",
-        "elapsed_ms": 360,
+        "elapsed_ms": 1603,
         "error": ""
       }
     },
@@ -116,8 +118,8 @@
         "check_mode": "web",
         "update_domain": "civic",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Hybrid - check board rules and deadlines",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify physical board access, posting permission, office hours, and public-notice rules directly.",
@@ -129,7 +131,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidad.co.gov/government/public_notice.php",
-        "elapsed_ms": 136,
+        "elapsed_ms": 668,
         "error": ""
       }
     },
@@ -145,8 +147,8 @@
         "check_mode": "web",
         "update_domain": "civic",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Hybrid - check office-specific posting rules",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify physical board access, posting permission, office hours, and public-notice rules directly.",
@@ -173,8 +175,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -186,7 +188,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.ratonnm.gov/business/business_license_regulations.php",
-        "elapsed_ms": 286,
+        "elapsed_ms": 348,
         "error": ""
       }
     },
@@ -202,8 +204,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -215,7 +217,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.ratonnm.gov/business/index.php",
-        "elapsed_ms": 304,
+        "elapsed_ms": 324,
         "error": ""
       }
     },
@@ -231,8 +233,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -244,7 +246,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.ratonnm.gov/business/economic_development/local_business_resources.php",
-        "elapsed_ms": 293,
+        "elapsed_ms": 360,
         "error": ""
       }
     },
@@ -260,8 +262,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -273,7 +275,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.co.colfax.nm.us/business/index.php",
-        "elapsed_ms": 118,
+        "elapsed_ms": 466,
         "error": ""
       }
     },
@@ -289,8 +291,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -302,7 +304,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.enigma.com/directory/nm/raton/",
-        "elapsed_ms": 299,
+        "elapsed_ms": 742,
         "error": ""
       }
     },
@@ -318,8 +320,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -331,7 +333,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.exploreraton.com/shop",
-        "elapsed_ms": 250,
+        "elapsed_ms": 437,
         "error": ""
       }
     },
@@ -347,8 +349,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -360,7 +362,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.growraton.org/properties/",
-        "elapsed_ms": 1959,
+        "elapsed_ms": 2460,
         "error": ""
       }
     },
@@ -376,8 +378,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -389,7 +391,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://nmsbaprogram.org/",
-        "elapsed_ms": 806,
+        "elapsed_ms": 1087,
         "error": ""
       }
     },
@@ -405,8 +407,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -418,7 +420,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
-        "elapsed_ms": 299,
+        "elapsed_ms": 504,
         "error": ""
       }
     },
@@ -434,8 +436,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -447,7 +449,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
-        "elapsed_ms": 2983,
+        "elapsed_ms": 2060,
         "error": ""
       }
     },
@@ -463,8 +465,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -476,7 +478,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/",
-        "elapsed_ms": 1630,
+        "elapsed_ms": 2132,
         "error": ""
       }
     },
@@ -492,8 +494,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -505,7 +507,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://roamsnm.org/",
-        "elapsed_ms": 715,
+        "elapsed_ms": 1965,
         "error": ""
       }
     },
@@ -521,8 +523,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -534,7 +536,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
-        "elapsed_ms": 324,
+        "elapsed_ms": 603,
         "error": ""
       }
     },
@@ -550,21 +552,20 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
         "reader_action": "Use only as a secondary discovery source and confirm details elsewhere.",
-        "last_check_status": "ok",
-        "last_status_code": 200
+        "last_check_status": "access_blocked",
+        "last_status_code": 403
       },
       "check": {
-        "status": "ok",
-        "status_code": 200,
+        "status": "access_blocked",
+        "status_code": 403,
         "final_url": "https://www.yellowpages.com/raton-nm/business-listings/1",
-        "elapsed_ms": 439,
-        "error": ""
+        "error": "HTTP Error 403: Forbidden"
       }
     },
     {
@@ -579,8 +580,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -592,7 +593,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/add-business-listing/",
-        "elapsed_ms": 252,
+        "elapsed_ms": 1607,
         "error": ""
       }
     },
@@ -608,8 +609,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -621,7 +622,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/business-directory",
-        "elapsed_ms": 226,
+        "elapsed_ms": 217,
         "error": ""
       }
     },
@@ -637,8 +638,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -650,7 +651,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://townoflaveta-co.gov/business-directory/",
-        "elapsed_ms": 194,
+        "elapsed_ms": 294,
         "error": ""
       }
     },
@@ -666,8 +667,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -679,7 +680,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.wheelhouseincubator.org/",
-        "elapsed_ms": 241,
+        "elapsed_ms": 935,
         "error": ""
       }
     },
@@ -695,8 +696,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -708,7 +709,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/business-directory",
-        "elapsed_ms": 141,
+        "elapsed_ms": 229,
         "error": ""
       }
     },
@@ -724,8 +725,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -737,7 +738,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.bentcounty.net/businesses/business_development.php",
-        "elapsed_ms": 214,
+        "elapsed_ms": 683,
         "error": ""
       }
     },
@@ -753,8 +754,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -766,7 +767,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://artistssunday.com/directory/",
-        "elapsed_ms": 284,
+        "elapsed_ms": 595,
         "error": ""
       }
     },
@@ -782,8 +783,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -810,8 +811,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -838,8 +839,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -851,7 +852,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.coloradodirectory.com/",
-        "elapsed_ms": 460,
+        "elapsed_ms": 587,
         "error": ""
       }
     },
@@ -867,8 +868,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -880,7 +881,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://biz.nm.gov/business-navigator/licenses-and-permits/",
-        "elapsed_ms": 319,
+        "elapsed_ms": 575,
         "error": ""
       }
     },
@@ -896,8 +897,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -909,7 +910,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nmsbdc.org/",
-        "elapsed_ms": 1971,
+        "elapsed_ms": 2405,
         "error": ""
       }
     },
@@ -925,8 +926,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -938,7 +939,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://nmfamilyfriendlybusiness.org/premium-business-directory/",
-        "elapsed_ms": 3385,
+        "elapsed_ms": 2278,
         "error": ""
       }
     },
@@ -954,8 +955,8 @@
         "check_mode": "web",
         "update_domain": "directory",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -967,7 +968,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://www.sba.gov/counseling/local-assistance/resource-partners/#sbdcs",
-        "elapsed_ms": 962,
+        "elapsed_ms": 2504,
         "error": ""
       }
     },
@@ -983,8 +984,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -996,7 +997,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.angelfireresort.com/events/",
-        "elapsed_ms": 286,
+        "elapsed_ms": 2464,
         "error": ""
       }
     },
@@ -1012,8 +1013,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -1025,7 +1026,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.angelfireresortvacationrentals.com/plan-your-trip/summer-events/",
-        "elapsed_ms": 588,
+        "elapsed_ms": 2134,
         "error": ""
       }
     },
@@ -1041,8 +1042,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -1069,8 +1070,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -1097,8 +1098,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1110,7 +1111,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://angelfirechamber.org/local-businesses/",
-        "elapsed_ms": 769,
+        "elapsed_ms": 714,
         "error": ""
       }
     },
@@ -1126,8 +1127,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1139,7 +1140,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.exploreraton.com/",
-        "elapsed_ms": 94,
+        "elapsed_ms": 470,
         "error": ""
       }
     },
@@ -1155,8 +1156,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1168,7 +1169,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.exploreraton.com/events",
-        "elapsed_ms": 183,
+        "elapsed_ms": 214,
         "error": ""
       }
     },
@@ -1184,8 +1185,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1197,7 +1198,36 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.exploreraton.com/post/purchase-your-2026-raton-visitors-guide-ad",
-        "elapsed_ms": 143,
+        "elapsed_ms": 1254,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-krtn-area-events-927b3264",
+        "source_group": "directory_sources",
+        "title": "KRTN Area Events",
+        "county": "Colfax",
+        "category": "Regional community calendar",
+        "url": "https://krtnradio.com/calendar/",
+        "host": "krtnradio.com",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Review the area-events calendar and use KRTN's current contact route for listing questions.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://krtnradio.com/calendar/",
+        "elapsed_ms": 619,
         "error": ""
       }
     },
@@ -1213,8 +1243,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1226,7 +1256,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://krtnradio.com/advertising/",
-        "elapsed_ms": 692,
+        "elapsed_ms": 663,
         "error": ""
       }
     },
@@ -1242,21 +1272,20 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
         "reader_action": "Check this before building a fresh Raton contact list.",
-        "last_check_status": "ok",
-        "last_status_code": 200
+        "last_check_status": "access_blocked",
+        "last_status_code": 403
       },
       "check": {
-        "status": "ok",
-        "status_code": 200,
+        "status": "access_blocked",
+        "status_code": 403,
         "final_url": "https://www.raton.info/business-directory.html",
-        "elapsed_ms": 415,
-        "error": ""
+        "error": "HTTP Error 403: Forbidden"
       }
     },
     {
@@ -1271,8 +1300,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1284,8 +1313,93 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://ratonmainstreet.org/",
-        "elapsed_ms": 777,
+        "elapsed_ms": 1186,
         "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-raton-mainstreet-events-ae8e0a2e",
+        "source_group": "directory_sources",
+        "title": "Raton MainStreet Events",
+        "county": "Colfax",
+        "category": "Downtown event calendar",
+        "url": "https://ratonmainstreet.org/events/",
+        "host": "ratonmainstreet.org",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use the event page for current downtown dates and organizer links.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://ratonmainstreet.org/events/",
+        "elapsed_ms": 785,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-the-ratonian-community-calendar-115caeb7",
+        "source_group": "directory_sources",
+        "title": "The Ratonian Community Calendar",
+        "county": "Colfax",
+        "category": "Community calendar and submission route",
+        "url": "https://theratonian.com/calendar/",
+        "host": "theratonian.com",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Open the calendar to review current events or use its submission form.",
+        "last_check_status": "network_error",
+        "last_status_code": null
+      },
+      "check": {
+        "status": "network_error",
+        "status_code": null,
+        "final_url": "https://theratonian.com/calendar/",
+        "error": "[Errno 11001] getaddrinfo failed"
+      }
+    },
+    {
+      "record": {
+        "id": "directory-visit-angel-fire-list-your-event-818cecfe",
+        "source_group": "directory_sources",
+        "title": "Visit Angel Fire - List Your Event",
+        "county": "Colfax",
+        "category": "Visitor event submission form",
+        "url": "https://visitangelfirenm.com/list-your-event/",
+        "host": "visitangelfirenm.com",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use the current tourism submission form; inclusion remains at the publisher's discretion.",
+        "last_check_status": "access_blocked",
+        "last_status_code": 403
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://visitangelfirenm.com/list-your-event/",
+        "error": "HTTP Error 403: Forbidden"
       }
     },
     {
@@ -1300,8 +1414,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1313,7 +1427,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.discoverbachman.com/community-calendar/",
-        "elapsed_ms": 283,
+        "elapsed_ms": 474,
         "error": ""
       }
     },
@@ -1329,8 +1443,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1342,7 +1456,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.chamber.huerfano.org/resources",
-        "elapsed_ms": 582,
+        "elapsed_ms": 744,
         "error": ""
       }
     },
@@ -1358,8 +1472,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1371,7 +1485,36 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.chamber.huerfano.org/",
-        "elapsed_ms": 68,
+        "elapsed_ms": 676,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-huerfano-county-chamber-submit-an-event-da1fdd63",
+        "source_group": "directory_sources",
+        "title": "Huerfano County Chamber - Submit an Event",
+        "county": "Huerfano",
+        "category": "Business and community event submission form",
+        "url": "https://www.chamber.huerfano.org/submit-an-event",
+        "host": "chamber.huerfano.org",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use the chamber's current event form and provide complete organizer and event details.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.chamber.huerfano.org/submit-an-event",
+        "elapsed_ms": 613,
         "error": ""
       }
     },
@@ -1387,8 +1530,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1400,7 +1543,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://huerfano.us/",
-        "elapsed_ms": 391,
+        "elapsed_ms": 637,
         "error": ""
       }
     },
@@ -1416,8 +1559,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1429,7 +1572,36 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://huerfano.us/",
-        "elapsed_ms": 389,
+        "elapsed_ms": 573,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-huerfano-county-government-events-c769fd06",
+        "source_group": "directory_sources",
+        "title": "Huerfano County Government Events",
+        "county": "Huerfano",
+        "category": "County public calendar",
+        "url": "https://huerfano.us/events/",
+        "host": "huerfano.us",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use the county calendar for current public dates and links to the responsible office.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://huerfano.us/events/",
+        "elapsed_ms": 644,
         "error": ""
       }
     },
@@ -1445,8 +1617,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1458,7 +1630,94 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.lavetacreativedistrict.org/",
-        "elapsed_ms": 182,
+        "elapsed_ms": 466,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-la-veta-creative-district-festivals-and-signature-even-93aa88ea",
+        "source_group": "directory_sources",
+        "title": "La Veta Creative District Festivals and Signature Events",
+        "county": "Huerfano",
+        "category": "Arts and festival guide",
+        "url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
+        "host": "lavetacreativedistrict.org",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use the creative-district page for major arts dates and follow organizer links for current details.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
+        "elapsed_ms": 316,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-la-veta-public-library-full-calendar-8d9a42e5",
+        "source_group": "directory_sources",
+        "title": "La Veta Public Library Full Calendar",
+        "county": "Huerfano",
+        "category": "Community and library calendar",
+        "url": "https://lvpl.org/full-calendar/",
+        "host": "lvpl.org",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Check the full calendar for dates, locations, registration details, and organizer links.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://lvpl.org/full-calendar/",
+        "elapsed_ms": 1460,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-spanish-peaks-country-events-dcb0d2bc",
+        "source_group": "directory_sources",
+        "title": "Spanish Peaks Country Events",
+        "county": "Huerfano",
+        "category": "County visitor event calendar",
+        "url": "https://spanishpeakscountry.com/spc-events/",
+        "host": "spanishpeakscountry.com",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use the event calendar to review current dates or follow its community event-submission route.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://spanishpeakscountry.com/spc-events/",
+        "elapsed_ms": 454,
         "error": ""
       }
     },
@@ -1474,8 +1733,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1487,7 +1746,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
-        "elapsed_ms": 336,
+        "elapsed_ms": 210,
         "error": ""
       }
     },
@@ -1503,8 +1762,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1516,7 +1775,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.spld.org/connect/community-links/",
-        "elapsed_ms": 968,
+        "elapsed_ms": 1309,
         "error": ""
       }
     },
@@ -1532,21 +1791,20 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
         "reader_action": "Use for Huerfano media outreach and event/public notice timing.",
-        "last_check_status": "ok",
-        "last_status_code": 200
+        "last_check_status": "access_blocked",
+        "last_status_code": 403
       },
       "check": {
-        "status": "ok",
-        "status_code": 200,
+        "status": "access_blocked",
+        "status_code": 403,
         "final_url": "https://worldjournalnewspaper.com/",
-        "elapsed_ms": 206,
-        "error": ""
+        "error": "HTTP Error 403: Forbidden"
       }
     },
     {
@@ -1561,8 +1819,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1589,21 +1847,20 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
         "reader_action": "Ask about story coverage, event listings, classifieds, legal notices, advertising, and deadlines.",
-        "last_check_status": "ok",
-        "last_status_code": 200
+        "last_check_status": "access_blocked",
+        "last_status_code": 403
       },
       "check": {
-        "status": "ok",
-        "status_code": 200,
+        "status": "access_blocked",
+        "status_code": 403,
         "final_url": "https://worldjournalnewspaper.com/",
-        "elapsed_ms": 101,
-        "error": ""
+        "error": "HTTP Error 403: Forbidden"
       }
     },
     {
@@ -1618,8 +1875,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -1631,7 +1888,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
-        "elapsed_ms": 157,
+        "elapsed_ms": 200,
         "error": ""
       }
     },
@@ -1647,8 +1904,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -1660,7 +1917,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/newsletter-signup/",
-        "elapsed_ms": 945,
+        "elapsed_ms": 235,
         "error": ""
       }
     },
@@ -1676,8 +1933,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -1689,7 +1946,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
-        "elapsed_ms": 72,
+        "elapsed_ms": 522,
         "error": ""
       }
     },
@@ -1705,8 +1962,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1718,7 +1975,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php",
-        "elapsed_ms": 155,
+        "elapsed_ms": 727,
         "error": ""
       }
     },
@@ -1734,8 +1991,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1747,7 +2004,123 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidadcreativedistrict.org/",
-        "elapsed_ms": 351,
+        "elapsed_ms": 588,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-create-trinidad-events-d6104a91",
+        "source_group": "directory_sources",
+        "title": "CREATE Trinidad Events",
+        "county": "Las Animas",
+        "category": "Arts and culture event calendar",
+        "url": "https://www.trinidadcreativedistrict.org/trinidad-creative-district-events",
+        "host": "trinidadcreativedistrict.org",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Use the creative-district event page for current arts and culture dates and organizer information.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.trinidadcreativedistrict.org/trinidad-creative-district-events",
+        "elapsed_ms": 234,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-csu-extension-las-animas-county-events-2a974261",
+        "source_group": "directory_sources",
+        "title": "CSU Extension Las Animas County Events",
+        "county": "Las Animas",
+        "category": "Education and agriculture event calendar",
+        "url": "https://extension.colostate.edu/las-animas/events/",
+        "host": "extension.colostate.edu",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Check the county Extension calendar for current workshops, registrations, and program contacts.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://extension.colostate.edu/las-animas/events/",
+        "elapsed_ms": 1135,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-main-street-live-events-5b720740",
+        "source_group": "directory_sources",
+        "title": "Main Street LIVE Events",
+        "county": "Las Animas",
+        "category": "Performance calendar",
+        "url": "https://www.mainstreetlive.org/home",
+        "host": "mainstreetlive.org",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Open the current season or calendar link from the homepage for dates, tickets, and venue details.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.mainstreetlive.org/home",
+        "elapsed_ms": 616,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "directory-trinidad-carnegie-public-library-events-53101f8d",
+        "source_group": "directory_sources",
+        "title": "Trinidad Carnegie Public Library Events",
+        "county": "Las Animas",
+        "category": "Library program calendar",
+        "url": "https://trinidadpubliclibrary.org/events/",
+        "host": "trinidadpubliclibrary.org",
+        "check_mode": "web",
+        "update_domain": "events",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Source-linked lead",
+        "review_level": "standard_review",
+        "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+        "reader_action": "Check the calendar for current library-hosted programs and registration details.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://trinidadpubliclibrary.org/events/",
+        "elapsed_ms": 739,
         "error": ""
       }
     },
@@ -1763,20 +2136,21 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
         "reader_action": "Use when a Trinidad business, event, or attraction needs an official tourism channel.",
-        "last_check_status": "access_blocked",
-        "last_status_code": 403
+        "last_check_status": "ok",
+        "last_status_code": 200
       },
       "check": {
-        "status": "access_blocked",
-        "status_code": 403,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
-        "error": "HTTP Error 403: Forbidden"
+        "elapsed_ms": 285,
+        "error": ""
       }
     },
     {
@@ -1791,20 +2165,21 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
         "reader_action": "Use for events, not general advertising; follow the posted review rules.",
-        "last_check_status": "access_blocked",
-        "last_status_code": 403
+        "last_check_status": "ok",
+        "last_status_code": 200
       },
       "check": {
-        "status": "access_blocked",
-        "status_code": 403,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
-        "error": "HTTP Error 403: Forbidden"
+        "elapsed_ms": 285,
+        "error": ""
       }
     },
     {
@@ -1819,8 +2194,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -1832,7 +2207,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://weekender.pub/",
-        "elapsed_ms": 146,
+        "elapsed_ms": 311,
         "error": ""
       }
     },
@@ -1848,8 +2223,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -1861,7 +2236,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.redriverbrewing.com/",
-        "elapsed_ms": 306,
+        "elapsed_ms": 1850,
         "error": ""
       }
     },
@@ -1877,8 +2252,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -1890,7 +2265,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://redriver.org/events/",
-        "elapsed_ms": 423,
+        "elapsed_ms": 930,
         "error": ""
       }
     },
@@ -1906,8 +2281,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1919,7 +2294,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://tlacchamber.org/",
-        "elapsed_ms": 806,
+        "elapsed_ms": 1219,
         "error": ""
       }
     },
@@ -1935,8 +2310,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1948,7 +2323,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://weekender.pub/",
-        "elapsed_ms": 101,
+        "elapsed_ms": 290,
         "error": ""
       }
     },
@@ -1964,8 +2339,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -1977,7 +2352,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
-        "elapsed_ms": 2934,
+        "elapsed_ms": 2327,
         "error": ""
       }
     },
@@ -1993,8 +2368,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -2006,7 +2381,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php",
-        "elapsed_ms": 85,
+        "elapsed_ms": 657,
         "error": ""
       }
     },
@@ -2022,8 +2397,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -2035,7 +2410,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.mainstreetlive.org/",
-        "elapsed_ms": 160,
+        "elapsed_ms": 511,
         "error": ""
       }
     },
@@ -2051,8 +2426,8 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -2064,7 +2439,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.mainstreetlive.org/2026-calendar",
-        "elapsed_ms": 61,
+        "elapsed_ms": 297,
         "error": ""
       }
     },
@@ -2080,20 +2455,21 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
         "reader_action": "Submit events for review with complete public details and images.",
-        "last_check_status": "access_blocked",
-        "last_status_code": 403
+        "last_check_status": "ok",
+        "last_status_code": 200
       },
       "check": {
-        "status": "access_blocked",
-        "status_code": 403,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
-        "error": "HTTP Error 403: Forbidden"
+        "elapsed_ms": 291,
+        "error": ""
       }
     },
     {
@@ -2108,20 +2484,21 @@
         "check_mode": "web",
         "update_domain": "events",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
         "reader_action": "Ask about event support, attraction/business listings, co-promotion, and community calendar fit.",
-        "last_check_status": "access_blocked",
-        "last_status_code": 403
+        "last_check_status": "ok",
+        "last_status_code": 200
       },
       "check": {
-        "status": "access_blocked",
-        "status_code": 403,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
-        "error": "HTTP Error 403: Forbidden"
+        "elapsed_ms": 294,
+        "error": ""
       }
     },
     {
@@ -2136,8 +2513,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2149,7 +2526,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://nmarts.org/grants/grants-information/",
-        "elapsed_ms": 1572,
+        "elapsed_ms": 844,
         "error": ""
       }
     },
@@ -2165,8 +2542,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2178,7 +2555,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://biz.nm.gov/financial-assistance/",
-        "elapsed_ms": 244,
+        "elapsed_ms": 416,
         "error": ""
       }
     },
@@ -2194,8 +2571,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2207,7 +2584,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/grants/cid-grants/",
-        "elapsed_ms": 2413,
+        "elapsed_ms": 3205,
         "error": ""
       }
     },
@@ -2223,8 +2600,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2236,7 +2613,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nmfinance.com/project/opportunity-enterprise-commercial-development/",
-        "elapsed_ms": 1300,
+        "elapsed_ms": 1487,
         "error": ""
       }
     },
@@ -2252,8 +2629,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2265,7 +2642,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nmfinance.com/project/state-small-business-credit-initiative-ssbci/",
-        "elapsed_ms": 790,
+        "elapsed_ms": 1122,
         "error": ""
       }
     },
@@ -2281,8 +2658,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2294,7 +2671,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/programs-and-services/business-development/job-training-incentive-program/",
-        "elapsed_ms": 2721,
+        "elapsed_ms": 1905,
         "error": ""
       }
     },
@@ -2310,8 +2687,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2323,7 +2700,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/grants/local-economic-development-act/",
-        "elapsed_ms": 2220,
+        "elapsed_ms": 1894,
         "error": ""
       }
     },
@@ -2339,8 +2716,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2352,7 +2729,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/press-releases/state-opens-trails-grant-for-outdoor-recreation-projects/",
-        "elapsed_ms": 2026,
+        "elapsed_ms": 1774,
         "error": ""
       }
     },
@@ -2368,8 +2745,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2381,7 +2758,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://sharenm.org/",
-        "elapsed_ms": 1426,
+        "elapsed_ms": 1909,
         "error": ""
       }
     },
@@ -2397,8 +2774,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2410,7 +2787,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.wesst.org/lending",
-        "elapsed_ms": 153,
+        "elapsed_ms": 559,
         "error": ""
       }
     },
@@ -2426,8 +2803,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2439,7 +2816,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.huerfano.org/support",
-        "elapsed_ms": 859,
+        "elapsed_ms": 624,
         "error": ""
       }
     },
@@ -2455,8 +2832,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2468,7 +2845,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.spanishpeaks.foundation/",
-        "elapsed_ms": 287,
+        "elapsed_ms": 601,
         "error": ""
       }
     },
@@ -2484,8 +2861,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2497,7 +2874,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://barnicommunityfund.org/",
-        "elapsed_ms": 988,
+        "elapsed_ms": 603,
         "error": ""
       }
     },
@@ -2513,8 +2890,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2526,7 +2903,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidad.co.gov/services/grants.php",
-        "elapsed_ms": 141,
+        "elapsed_ms": 670,
         "error": ""
       }
     },
@@ -2542,8 +2919,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2555,7 +2932,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://sccfcolorado.org/nonprofit-directory/",
-        "elapsed_ms": 678,
+        "elapsed_ms": 1247,
         "error": ""
       }
     },
@@ -2571,20 +2948,21 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
         "reader_action": "Use alongside the City of Trinidad grants page; confirm current application instructions before promising deadlines or eligibility.",
-        "last_check_status": "access_blocked",
-        "last_status_code": 429
+        "last_check_status": "ok",
+        "last_status_code": 200
       },
       "check": {
-        "status": "access_blocked",
-        "status_code": 429,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://www.trinidadcf.org/board.html",
-        "error": "HTTP Error 429: Too Many Requests"
+        "elapsed_ms": 1556,
+        "error": ""
       }
     },
     {
@@ -2599,20 +2977,50 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
         "reader_action": "Use for Trinidad-area nonprofit projects and confirm the current city/foundation process before applying.",
-        "last_check_status": "access_blocked",
-        "last_status_code": 429
+        "last_check_status": "ok",
+        "last_status_code": 200
       },
       "check": {
-        "status": "access_blocked",
-        "status_code": 429,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://www.trinidadcf.org/grants.html",
-        "error": "HTTP Error 429: Too Many Requests"
+        "elapsed_ms": 273,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-brindle-foundation-grants-42fcdc66",
+        "source_group": "national_funding_sources",
+        "title": "Brindle Foundation Grants",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://www.brindlefoundation.org/grants",
+        "host": "brindlefoundation.org",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.brindlefoundation.org/grants",
+        "elapsed_ms": 453,
+        "error": ""
       }
     },
     {
@@ -2627,8 +3035,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 14,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-01",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-25",
         "verification_status": "Official source checked",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
@@ -2645,6 +3053,119 @@
     },
     {
       "record": {
+        "id": "national-funding-colorado-creates-grant-fad35e06",
+        "source_group": "national_funding_sources",
+        "title": "Colorado Creates Grant",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://oedit.colorado.gov/colorado-creates-grant",
+        "host": "oedit.colorado.gov",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "access_blocked",
+        "last_status_code": 403
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/colorado-creates-grant",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-colorado-oedit-programs-and-funding-1a44de43",
+        "source_group": "national_funding_sources",
+        "title": "Colorado OEDIT Programs and Funding",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://oedit.colorado.gov/programs-and-funding",
+        "host": "oedit.colorado.gov",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "access_blocked",
+        "last_status_code": 403
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/programs-and-funding",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-cuchara-chapel-scholarship-5e32ad6a",
+        "source_group": "national_funding_sources",
+        "title": "Cuchara Chapel Scholarship",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://www.cucharachapel.org/scholarship/",
+        "host": "cucharachapel.org",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "tls_error",
+        "last_status_code": null
+      },
+      "check": {
+        "status": "tls_error",
+        "status_code": null,
+        "final_url": "https://www.cucharachapel.org/scholarship/",
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)"
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-el-pomar-foundation-grant-making-23a6a218",
+        "source_group": "national_funding_sources",
+        "title": "El Pomar Foundation Grant Making",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://www.elpomar.org/grant-making/",
+        "host": "elpomar.org",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.elpomar.org/grant-making/",
+        "elapsed_ms": 629,
+        "error": ""
+      }
+    },
+    {
+      "record": {
         "id": "national-funding-first-peoples-fund-fellowships-25355092",
         "source_group": "national_funding_sources",
         "title": "First Peoples Fund Fellowships",
@@ -2655,8 +3176,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Official source checked",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
@@ -2668,7 +3189,36 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.firstpeoplesfund.org/programs/fellowships",
-        "elapsed_ms": 244,
+        "elapsed_ms": 475,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-first-southwest-community-fund-grants-843072cf",
+        "source_group": "national_funding_sources",
+        "title": "First Southwest Community Fund Grants",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://www.fswcf.org/grants",
+        "host": "fswcf.org",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.fswcf.org/grants",
+        "elapsed_ms": 887,
         "error": ""
       }
     },
@@ -2684,8 +3234,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Official source checked",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
@@ -2697,7 +3247,36 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.grants.gov/search-grants",
-        "elapsed_ms": 208,
+        "elapsed_ms": 463,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-health-solutions-community-sponsorship-requests-5774d1cf",
+        "source_group": "national_funding_sources",
+        "title": "Health Solutions Community Sponsorship Requests",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://www.health.solutions/requests/",
+        "host": "health.solutions",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.health.solutions/requests/",
+        "elapsed_ms": 1915,
         "error": ""
       }
     },
@@ -2713,8 +3292,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Official source checked",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
@@ -2741,8 +3320,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Official source checked",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
@@ -2754,8 +3333,65 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.imls.gov/find-funding/how-to-apply/funding-opportunities",
-        "elapsed_ms": 282,
+        "elapsed_ms": 1182,
         "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-john-g-duncan-charitable-trust-3a4c5848",
+        "source_group": "national_funding_sources",
+        "title": "John G. Duncan Charitable Trust",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://www.wellsfargo.com/private-foundations/duncan-charitable-trust/",
+        "host": "wellsfargo.com",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.wellsfargo.com/private-foundations/duncan-charitable-trust/",
+        "elapsed_ms": 726,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-mary-john-goree-las-animas-county-scholarship-0ddbe53e",
+        "source_group": "national_funding_sources",
+        "title": "Mary John Goree Las Animas County Scholarship",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://goreescholarship.org/",
+        "host": "goreescholarship.org",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "access_blocked",
+        "last_status_code": 403
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://goreescholarship.org/",
+        "error": "HTTP Error 403: Forbidden"
       }
     },
     {
@@ -2770,8 +3406,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Official source checked",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
@@ -2783,7 +3419,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nalac.org/grants/nalac-fund-for-the-arts/",
-        "elapsed_ms": 1099,
+        "elapsed_ms": 1070,
         "error": ""
       }
     },
@@ -2799,8 +3435,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Official source checked",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
@@ -2812,7 +3448,210 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.arts.gov/grants",
-        "elapsed_ms": 236,
+        "elapsed_ms": 572,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-new-mexico-arts-artist-opportunities-707e68a6",
+        "source_group": "national_funding_sources",
+        "title": "New Mexico Arts Artist Opportunities",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://nmarts.org/public-art/are-you-an-artist/",
+        "host": "nmarts.org",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://nmarts.org/public-art/are-you-an-artist/",
+        "elapsed_ms": 815,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-new-mexico-arts-grants-and-programs-762997f4",
+        "source_group": "national_funding_sources",
+        "title": "New Mexico Arts Grants and Programs",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://nmarts.org/grants/grants-information/",
+        "host": "nmarts.org",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://nmarts.org/grants/grants-information/",
+        "elapsed_ms": 533,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-new-mexico-community-foundation-northeastern-health-fu-cb4140e9",
+        "source_group": "national_funding_sources",
+        "title": "New Mexico Community Foundation Northeastern Health Fund",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://nmcf.org/northeastern-health-fund/",
+        "host": "nmcf.org",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://nmcf.org/northeastern-health-fund/",
+        "elapsed_ms": 3305,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-new-mexico-creative-industries-grant-opportunities-37db62f4",
+        "source_group": "national_funding_sources",
+        "title": "New Mexico Creative Industries Grant Opportunities",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://edd.newmexico.gov/grants/cid-grants/",
+        "host": "edd.newmexico.gov",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://edd.newmexico.gov/grants/cid-grants/",
+        "elapsed_ms": 1999,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-new-mexico-economic-development-department-grants-50e0f80b",
+        "source_group": "national_funding_sources",
+        "title": "New Mexico Economic Development Department Grants",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://edd.newmexico.gov/grants/",
+        "host": "edd.newmexico.gov",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://edd.newmexico.gov/grants/",
+        "elapsed_ms": 698,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-new-mexico-humanities-council-grants-47520abf",
+        "source_group": "national_funding_sources",
+        "title": "New Mexico Humanities Council Grants",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://newmexicohumanities.org/grants/",
+        "host": "newmexicohumanities.org",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://newmexicohumanities.org/grants/",
+        "elapsed_ms": 995,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-new-mexico-leads-community-economic-development-grants-5b910bf0",
+        "source_group": "national_funding_sources",
+        "title": "New Mexico LEADS Community Economic Development Grants",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://edd.newmexico.gov/grants/leads/",
+        "host": "edd.newmexico.gov",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://edd.newmexico.gov/grants/leads/",
+        "elapsed_ms": 751,
         "error": ""
       }
     },
@@ -2828,8 +3667,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Official source checked",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
@@ -2841,7 +3680,151 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://www.nglcc.org/programs-initiatives",
-        "elapsed_ms": 2697,
+        "elapsed_ms": 1079,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-robert-hoag-rawlings-foundation-grants-f1479cbd",
+        "source_group": "national_funding_sources",
+        "title": "Robert Hoag Rawlings Foundation Grants",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://rawlingsfoundation.com/grants/requests/",
+        "host": "rawlingsfoundation.com",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "access_blocked",
+        "last_status_code": 403
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://rawlingsfoundation.com/grants/requests/",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-southern-colorado-community-foundation-grants-d8dbb2db",
+        "source_group": "national_funding_sources",
+        "title": "Southern Colorado Community Foundation Grants",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://sccfcolorado.org/for-grantseekers/apply/",
+        "host": "sccfcolorado.org",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://sccfcolorado.org/for-grantseekers/apply/",
+        "elapsed_ms": 1245,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-spanish-peaks-healthcare-foundation-a222f9c5",
+        "source_group": "national_funding_sources",
+        "title": "Spanish Peaks HealthCare Foundation",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://www.sprhc.org/spanish-peaks-healthcare-foundation",
+        "host": "sprhc.org",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.sprhc.org/spanish-peaks-healthcare-foundation",
+        "elapsed_ms": 582,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-taos-community-foundation-funding-opportunities-e1677daa",
+        "source_group": "national_funding_sources",
+        "title": "Taos Community Foundation Funding Opportunities",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://www.taoscf.org/grants/",
+        "host": "taoscf.org",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.taoscf.org/grants/",
+        "elapsed_ms": 1111,
+        "error": ""
+      }
+    },
+    {
+      "record": {
+        "id": "national-funding-trinidad-state-college-scholarships-and-grants-3e7188dc",
+        "source_group": "national_funding_sources",
+        "title": "Trinidad State College Scholarships and Grants",
+        "county": "National",
+        "category": "National funding watch hub",
+        "url": "https://trinidadstate.edu/scholarships/index.html",
+        "host": "trinidadstate.edu",
+        "check_mode": "web",
+        "update_domain": "funding",
+        "cadence_days": 7,
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
+        "verification_status": "Official source checked",
+        "review_level": "human_approval_required",
+        "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+        "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
+        "last_check_status": "ok",
+        "last_status_code": 200
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://trinidadstate.edu/scholarships/index.html",
+        "elapsed_ms": 595,
         "error": ""
       }
     },
@@ -2857,8 +3840,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Official source checked",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
@@ -2885,8 +3868,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Official source checked",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
@@ -2913,8 +3896,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2926,7 +3909,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.redlineart.org/ais-apply-for-a-grant",
-        "elapsed_ms": 235,
+        "elapsed_ms": 655,
         "error": ""
       }
     },
@@ -2942,8 +3925,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2970,8 +3953,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -2998,8 +3981,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3026,8 +4009,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3054,8 +4037,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3082,8 +4065,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3110,8 +4093,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3138,8 +4121,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3151,7 +4134,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://gatesfamilyfoundation.org/types-of-support/capital-grants/",
-        "elapsed_ms": 262,
+        "elapsed_ms": 3169,
         "error": ""
       }
     },
@@ -3167,8 +4150,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3180,7 +4163,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.grants.gov/",
-        "elapsed_ms": 50,
+        "elapsed_ms": 199,
         "error": ""
       }
     },
@@ -3196,8 +4179,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3209,7 +4192,7 @@
         "status": "ok",
         "status_code": 202,
         "final_url": "https://www.historycolorado.org/state-historical-fund",
-        "elapsed_ms": 240,
+        "elapsed_ms": 704,
         "error": ""
       }
     },
@@ -3225,8 +4208,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3238,7 +4221,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.arts.gov/grants",
-        "elapsed_ms": 255,
+        "elapsed_ms": 575,
         "error": ""
       }
     },
@@ -3254,8 +4237,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3267,7 +4250,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/news-and-information/resource-map/",
-        "elapsed_ms": 2628,
+        "elapsed_ms": 2385,
         "error": ""
       }
     },
@@ -3283,8 +4266,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3296,7 +4279,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://www.sba.gov/loans/",
-        "elapsed_ms": 1162,
+        "elapsed_ms": 1669,
         "error": ""
       }
     },
@@ -3312,8 +4295,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3325,7 +4308,7 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://www.sba.gov/loans/lender-match/",
-        "elapsed_ms": 794,
+        "elapsed_ms": 1178,
         "error": ""
       }
     },
@@ -3341,8 +4324,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3354,7 +4337,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://sccfcolorado.org/for-grantseekers/grants/",
-        "elapsed_ms": 361,
+        "elapsed_ms": 1585,
         "error": ""
       }
     },
@@ -3370,8 +4353,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3383,7 +4366,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://sccfcolorado.org/madeline-mellers-memorial-girls-golf-scholarship/",
-        "elapsed_ms": 369,
+        "elapsed_ms": 683,
         "error": ""
       }
     },
@@ -3399,8 +4382,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3427,8 +4410,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3455,8 +4438,8 @@
         "check_mode": "web",
         "update_domain": "funding",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3483,8 +4466,8 @@
         "check_mode": "web",
         "update_domain": "general",
         "cadence_days": 90,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-11-16",
+        "last_checked": "2026-10-11",
+        "next_check": "2027-01-09",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3511,20 +4494,21 @@
         "check_mode": "web",
         "update_domain": "general",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
         "reader_action": "Use the guide to identify activity categories, then contact the named operator, park, or public office directly.",
-        "last_check_status": "access_blocked",
-        "last_status_code": 403
+        "last_check_status": "ok",
+        "last_status_code": 200
       },
       "check": {
-        "status": "access_blocked",
-        "status_code": 403,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
-        "error": "HTTP Error 403: Forbidden"
+        "elapsed_ms": 274,
+        "error": ""
       }
     },
     {
@@ -3539,8 +4523,8 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3552,7 +4536,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.ratonnm.gov/business/economic_development/index.php",
-        "elapsed_ms": 268,
+        "elapsed_ms": 1564,
         "error": ""
       }
     },
@@ -3568,8 +4552,8 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3581,7 +4565,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.elratonmediaworks.org/local-businesses",
-        "elapsed_ms": 613,
+        "elapsed_ms": 625,
         "error": ""
       }
     },
@@ -3597,8 +4581,8 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3610,7 +4594,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.groundworksnm.org/nonprofit-directory/new-mexico-busin?combine=&order=city&page=32&sort=desc",
-        "elapsed_ms": 1426,
+        "elapsed_ms": 1179,
         "error": ""
       }
     },
@@ -3626,8 +4610,8 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3639,7 +4623,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.growraton.org/",
-        "elapsed_ms": 403,
+        "elapsed_ms": 2388,
         "error": ""
       }
     },
@@ -3655,8 +4639,8 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3668,7 +4652,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.ratonarts.org/",
-        "elapsed_ms": 285,
+        "elapsed_ms": 509,
         "error": ""
       }
     },
@@ -3684,8 +4668,8 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3697,7 +4681,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nmartsandculturaldistricts.org/raton/",
-        "elapsed_ms": 532,
+        "elapsed_ms": 757,
         "error": ""
       }
     },
@@ -3713,8 +4697,8 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3726,7 +4710,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.taxexemptworld.com/organizations/colfax-county-nm-new-mexico.asp",
-        "elapsed_ms": 359,
+        "elapsed_ms": 1369,
         "error": ""
       }
     },
@@ -3742,21 +4726,20 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 30,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-09-17",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-11-10",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
         "reader_action": "Use for service-provider discovery and local advertising context.",
-        "last_check_status": "ok",
-        "last_status_code": 200
+        "last_check_status": "access_blocked",
+        "last_status_code": 403
       },
       "check": {
-        "status": "ok",
-        "status_code": 200,
+        "status": "access_blocked",
+        "status_code": 403,
         "final_url": "https://worldjournalnewspaper.com/services/",
-        "elapsed_ms": 93,
-        "error": ""
+        "error": "HTTP Error 403: Forbidden"
       }
     },
     {
@@ -3771,21 +4754,20 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
         "reader_action": "Use when a nonprofit needs a public giving/listing path.",
-        "last_check_status": "ok",
-        "last_status_code": 200
+        "last_check_status": "tls_error",
+        "last_status_code": null
       },
       "check": {
-        "status": "ok",
-        "status_code": 200,
+        "status": "tls_error",
+        "status_code": null,
         "final_url": "https://www.coloradogives.org/",
-        "elapsed_ms": 297,
-        "error": ""
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)"
       }
     },
     {
@@ -3800,8 +4782,8 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3813,7 +4795,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.thechronicle-news.com/",
-        "elapsed_ms": 1482,
+        "elapsed_ms": 1844,
         "error": ""
       }
     },
@@ -3829,8 +4811,8 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Do not infer free placement, ad availability, acceptance, audience size, or endorsement.",
@@ -3842,7 +4824,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://redriver.org/plan-your-trip/vacation-guide/",
-        "elapsed_ms": 368,
+        "elapsed_ms": 791,
         "error": ""
       }
     },
@@ -3858,8 +4840,8 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "human_approval_required",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3871,7 +4853,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://coloradononprofits.org/member-resources/nonprofit-member-directory/",
-        "elapsed_ms": 251,
+        "elapsed_ms": 787,
         "error": ""
       }
     },
@@ -3887,8 +4869,8 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3900,7 +4882,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://financenewmexico.org/resources/general-business-assistance/regional-economic-development-organizations/",
-        "elapsed_ms": 378,
+        "elapsed_ms": 632,
         "error": ""
       }
     },
@@ -3916,8 +4898,8 @@
         "check_mode": "web",
         "update_domain": "media",
         "cadence_days": 7,
-        "last_checked": "2026-08-18",
-        "next_check": "2026-08-25",
+        "last_checked": "2026-10-11",
+        "next_check": "2026-10-18",
         "verification_status": "Source-linked lead",
         "review_level": "standard_review",
         "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
@@ -3929,10 +4911,10 @@
         "status": "redirect",
         "status_code": 200,
         "final_url": "https://scedd.com/",
-        "elapsed_ms": 633,
+        "elapsed_ms": 2675,
         "error": ""
       }
     }
   ],
-  "registry_state_updates": 136
+  "registry_state_updates": 170
 }
