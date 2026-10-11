@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-08-25T11:18:23.546817+00:00",
-  "source": "C:\\Temp\\tri-county-luna-integration\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
+  "generated_at": "2026-10-11T06:20:56.557862+00:00",
+  "source": "C:\\Temp\\tri-county-raton-animation-palettes\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
   "summary": {
     "entries": 1362,
-    "directory_shortcuts": 104,
-    "total_records_reviewed": 1466,
+    "directory_shortcuts": 117,
+    "total_records_reviewed": 1479,
     "with_any_route": 742,
     "with_listed_route": 307,
-    "with_ask_route": 702,
+    "with_ask_route": 703,
     "without_outreach_route": 620,
     "missing_structured_fields": 0,
-    "shortcuts_with_any_route": 52,
-    "shortcuts_with_listed_route": 19,
-    "shortcuts_with_ask_route": 44,
+    "shortcuts_with_any_route": 65,
+    "shortcuts_with_listed_route": 27,
+    "shortcuts_with_ask_route": 56,
     "shortcuts_without_outreach_route": 52,
     "shortcuts_missing_structured_fields": 0,
     "channel_counts": {
       "physical_flyers": {
         "label": "Flyers and posters",
         "listed": 0,
-        "ask": 334,
-        "not_indicated": 1028
+        "ask": 335,
+        "not_indicated": 1027
       },
       "physical_brochures": {
         "label": "Brochures and rack cards",
@@ -37,8 +37,8 @@
       "front_desk_referrals": {
         "label": "Front-desk referrals",
         "listed": 0,
-        "ask": 281,
-        "not_indicated": 1081
+        "ask": 282,
+        "not_indicated": 1080
       },
       "directory_listing": {
         "label": "Directory profiles and listings",
@@ -55,8 +55,8 @@
       "social_cross_promotion": {
         "label": "Social cross-promotion",
         "listed": 0,
-        "ask": 39,
-        "not_indicated": 1323
+        "ask": 38,
+        "not_indicated": 1324
       },
       "newsletter_mailing_list": {
         "label": "Newsletters and mailing lists",
@@ -94,73 +94,73 @@
         "label": "Flyers and posters",
         "listed": 0,
         "ask": 0,
-        "not_indicated": 104
+        "not_indicated": 117
       },
       "physical_brochures": {
         "label": "Brochures and rack cards",
         "listed": 0,
         "ask": 0,
-        "not_indicated": 104
+        "not_indicated": 117
       },
       "physical_bulletin_board": {
         "label": "Bulletin boards",
         "listed": 0,
         "ask": 0,
-        "not_indicated": 104
+        "not_indicated": 117
       },
       "front_desk_referrals": {
         "label": "Front-desk referrals",
         "listed": 0,
         "ask": 0,
-        "not_indicated": 104
+        "not_indicated": 117
       },
       "directory_listing": {
         "label": "Directory profiles and listings",
         "listed": 14,
-        "ask": 9,
-        "not_indicated": 81
+        "ask": 10,
+        "not_indicated": 93
       },
       "event_calendar": {
         "label": "Event calendars",
-        "listed": 6,
-        "ask": 10,
+        "listed": 14,
+        "ask": 15,
         "not_indicated": 88
       },
       "social_cross_promotion": {
         "label": "Social cross-promotion",
         "listed": 1,
         "ask": 0,
-        "not_indicated": 103
+        "not_indicated": 116
       },
       "newsletter_mailing_list": {
         "label": "Newsletters and mailing lists",
         "listed": 0,
-        "ask": 31,
-        "not_indicated": 73
+        "ask": 35,
+        "not_indicated": 82
       },
       "paid_digital_advertising": {
         "label": "Paid digital advertising",
         "listed": 1,
         "ask": 4,
-        "not_indicated": 99
+        "not_indicated": 112
       },
       "media_editorial": {
         "label": "Media and editorial coverage",
-        "listed": 1,
+        "listed": 2,
         "ask": 4,
-        "not_indicated": 99
+        "not_indicated": 111
       },
       "sponsorship": {
         "label": "Sponsorships",
         "listed": 0,
-        "ask": 13,
-        "not_indicated": 91
+        "ask": 24,
+        "not_indicated": 93
       },
       "partner_cross_promotion": {
         "label": "Partner cross-promotion",
         "listed": 0,
-        "ask": 41,
-        "not_indicated": 63
+        "ask": 52,
+        "not_indicated": 65
       }
     }
   },

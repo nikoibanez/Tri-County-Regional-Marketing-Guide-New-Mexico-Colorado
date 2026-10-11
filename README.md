@@ -62,10 +62,11 @@ This repo includes a no-secret maintenance system. Deterministic scripts build, 
 - `scripts/build_update_source_registry.py` - builds the monitoring registry from public guide data.
 - `scripts/audit_update_sources.py` - checks monitored URLs and writes review reports.
 - `data/national-funding-opportunities.json` - curated national grants, fellowships, free support programs, deadlines, applicant rules, funding ranges, fiscal-sponsor notes, and marketing-cost guidance.
-- `scripts/audit_national_funding_sources.py` - compares ten national funding hubs with the previous successful snapshot and writes a human-review queue without changing public claims.
+- `scripts/audit_national_funding_sources.py` - runs separate economic-development, education, healthcare, nonprofit, and arts-and-culture sweeps across regional and national funding pages, then writes a human-review queue without changing public claims.
 - `scripts/validate_national_funding_data.py` - checks every funding record for required decision fields, searchable keywords, URLs, and sane funding ranges.
 - `data/resource-keyword-registry.json` - controlled phrases for grants, capital, fiscal sponsors, nonprofit directories, business directories, and artist opportunities.
 - `data/resource-discovery-sources.json` - high-value public registries and search hubs with cadence, purpose, and automation mode.
+- `data/event-watch-sources.json` - fifteen public event calendars and submission hubs, balanced at five sources per county.
 - `scripts/audit_resource_discovery_sources.py` - watches those hubs and collects candidate links into a private review queue without changing public listings.
 - `scripts/weekly_directory_query_check.py` - checks fifteen high-signal directory, tourism, events, food, venue, and chamber sources and writes an internal candidate-review queue.
 - `scripts/sweep_listing_keywords.py` - refreshes controlled search-keyword suggestions from canonical fields and current public-page title, metadata, and heading signals.
@@ -80,13 +81,9 @@ This repo includes a no-secret maintenance system. Deterministic scripts build, 
 - `scripts/build_maintenance_dashboard.py` - combines audit counts into a private action queue.
 - `scripts/smoke_test_site.py` - checks critical local or live routes without browser dependencies.
 - `.github/workflows/quality-gate.yml` - builds and runs all deterministic checks on pull requests and pushes.
-- `.github/workflows/source-audit.yml` - checks the complete source registry and opens a review pull request.
-- `.github/workflows/weekly-national-funding-watch.yml` - checks ten national funding hubs and opens a draft review pull request when the report changes.
-- `.github/workflows/weekly-resource-discovery.yml` - checks broader resource registries and opens a draft candidate-review pull request.
-- `.github/workflows/weekly-directory-query-check.yml` - checks fifteen high-signal source groups and opens a candidate-review pull request.
-- `.github/workflows/weekly-listing-keyword-sweep.yml` - rotates through public listing pages and opens a review pull request for search-keyword changes.
+- `.github/workflows/weekly-guide-maintenance.yml` - coordinates directory, source, funding, keyword, resource, event, and free-tool reviews in one weekly run and refreshes one stable draft pull request.
 - `.github/workflows/live-site-smoke-test.yml` - checks the configured live site and opens or updates a failure issue.
-- `.github/workflows/monthly-maintenance-snapshot.yml` - stores a canonical deploy zip, checksum, data files, and reports as a 90-day artifact.
+- `.github/workflows/monthly-maintenance-snapshot.yml` - stores a canonical deploy zip, checksum, data files, and reports as a 90-day artifact without opening another review pull request.
 - `.github/workflows/codex-update-proposal.yml` - disabled-by-default Codex proposal workflow.
 - `docs/command-checklist.md` - local build, QA, grants-audit, GitHub, and Netlify commands.
 - `docs/weekly-directory-query-check.md` - weekly business-directory watcher documentation.

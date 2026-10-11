@@ -7,12 +7,9 @@ The maintenance system uses Python, GitHub Actions, the built site, and reposito
 | Workflow | Trigger | Work | Public effect |
 | --- | --- | --- | --- |
 | Build and quality gate | Pull requests and pushes to `master` | Builds the site; checks Python, JavaScript, accessibility markers, SEO, directory quality, local links, anchors, and critical routes | Blocks a broken change; does not edit directory data |
-| Weekly directory query check | Monday at 15:00 UTC | Checks 15 high-signal source groups, compares candidates with canonical data, and refreshes listing-level physical and digital outreach classifications | Opens a review pull request or fallback issue |
-| Source registry audit | Tuesday at 15:23 UTC | Checks all registered directory, funding, events, civic, media, and creative URLs; records source-check history | Opens a review pull request or fallback issue |
-| National funding watch | Tuesday at 15:30 UTC | Compares ten national funding hubs with their last successful text fingerprints and extracts possible deadline, eligibility, fee, award, fiscal-sponsor, and allowed-use language | Opens a draft review pull request; never edits public opportunities |
-| Listing keyword sweep | Wednesday at 15:41 UTC | Rotates through up to 120 public listing pages and maps current page signals to controlled search terms | Opens a review pull request or fallback issue |
+| Coordinated weekly guide maintenance | Monday at 15:00 UTC | Runs directory, connection, source, funding, keyword, resource, event, and free-tool reviews from the same canonical checkpoint | Refreshes one stable draft review pull request instead of opening separate weekly snapshots |
 | Live site smoke test | Daily at 16:17 UTC | Loads critical public pages, data, sitemap, and robots routes | Opens or updates one GitHub issue on failure |
-| Monthly maintenance snapshot | First day of each month at 16:00 UTC | Builds the canonical deploy zip and stores data, reports, and a SHA-256 checksum | Creates a private GitHub Actions artifact retained for 90 days |
+| Monthly maintenance snapshot | First day of each month at 16:00 UTC | Builds the canonical deploy zip and stores data, reports, and a SHA-256 checksum | Creates a private GitHub Actions artifact retained for 90 days; does not open another pull request |
 | Weekly canonical integration review | Friday at 9:00 Mountain Time | Reconciles overlapping Codex task and automation work against the canonical generator, page skeleton, and review branches | May prepare one draft code/infrastructure pull request; never merges or publishes public claims |
 
 GitHub schedules use UTC and therefore shift by one local clock hour when Mountain Time enters or leaves daylight saving time.
@@ -47,7 +44,7 @@ In the repository, open **Settings > Actions > General** and confirm:
 2. Workflow permissions allow read and write access.
 3. GitHub Actions may create pull requests when that option is available.
 
-If pull-request creation is disabled, the workflows still push a dedicated review branch and open an issue naming it.
+If pull-request creation is disabled, the weekly workflow still pushes `automation/weekly-guide-maintenance` and opens an issue naming it.
 
 Add this non-secret repository variable under **Settings > Secrets and variables > Actions > Variables**:
 

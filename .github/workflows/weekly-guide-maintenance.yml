@@ -1,0 +1,189 @@
+name: Weekly guide maintenance review
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_limit:
+        description: Maximum distinct listing pages to inspect for keyword signals
+        required: false
+        default: "120"
+        type: string
+      domain:
+        description: Optional source-audit domain filter
+        required: false
+        type: string
+  schedule:
+    - cron: "0 15 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: weekly-guide-maintenance
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      PUBLIC_SITE_ORIGIN: ${{ vars.PUBLIC_SITE_ORIGIN }}
+      REVIEW_BRANCH: automation/weekly-guide-maintenance
+    steps:
+      - name: Check out canonical master
+        uses: actions/checkout@v6
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Verify current Luna/canonical checkpoint
+        id: canonical
+        run: |
+          git fetch origin master
+          python scripts/verify_canonical_integration.py --require-current-master --source-only
+          echo "base_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Capture open integration work
+        id: coordination
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/capture_open_pr_context.py
+
+      - name: Reuse the coordinated review branch
+        id: branch
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin "$REVIEW_BRANCH" >/dev/null 2>&1; then
+            git fetch origin "$REVIEW_BRANCH"
+            git switch -C "$REVIEW_BRANCH" "origin/$REVIEW_BRANCH"
+            git merge --no-edit origin/master
+          else
+            git switch -c "$REVIEW_BRANCH"
+          fi
+          echo "branch=$REVIEW_BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Build canonical site before network checks
+        run: python tools/build_netlify_deep_guide.py
+
+      - name: Refresh directory candidates and connection paths
+        run: |
+          python scripts/weekly_directory_query_check.py
+          python scripts/audit_directory_connectivity.py --workers 16 --timeout 10
+          python scripts/audit_directory_outreach_channels.py --fail-on-missing
+
+      - name: Refresh the source registry and audit source pages
+        env:
+          AUDIT_DOMAIN: ${{ inputs.domain }}
+        shell: bash
+        run: |
+          python scripts/build_update_source_registry.py
+          if [ -n "$AUDIT_DOMAIN" ]; then
+            python scripts/audit_update_sources.py --domain "$AUDIT_DOMAIN"
+          else
+            python scripts/audit_update_sources.py
+          fi
+          python scripts/build_update_source_registry.py
+
+      - name: Refresh funding, keyword, resource, event, and free-tool reviews
+        env:
+          SOURCE_LIMIT: ${{ inputs.source_limit || '120' }}
+        run: |
+          python scripts/validate_national_funding_data.py
+          python scripts/audit_national_funding_sources.py --timeout 20
+          python scripts/sweep_listing_keywords.py --limit "$SOURCE_LIMIT" --write-index
+          python scripts/audit_resource_discovery_sources.py --timeout 20
+          python scripts/audit_resource_discovery_sources.py --sources data/event-watch-sources.json --keywords data/resource-keyword-registry.json --state data/event-watch-state.json --out-dir review/event-watch --report-slug event-watch --report-title "Tri-County Event Source Review" --timeout 20
+          python scripts/audit_free_tools.py --timeout 20
+
+      - name: Rebuild and run deterministic checks
+        run: |
+          python tools/build_netlify_deep_guide.py
+          python tools/apply_directory_exclusions.py --check
+          python scripts/audit_ui_accessibility.py
+          python scripts/audit_seo_static.py
+          python scripts/audit_directory_quality.py --fail-on-blocking
+          python scripts/audit_directory_outreach_channels.py --fail-on-missing
+          python scripts/audit_internal_links.py --fail-on-broken
+          python scripts/smoke_test_site.py
+          python scripts/build_maintenance_dashboard.py
+          python scripts/verify_canonical_integration.py
+
+      - name: Refresh the single weekly review branch
+        id: review
+        shell: bash
+        run: |
+          git add data/directory-auto-update-candidates.json
+          git add data/directory-connectivity-status.json
+          git add data/event-watch-state.json
+          git add data/free-tools-state.json
+          git add data/listing-keyword-index.json
+          git add data/national-funding-watch-state.json
+          git add data/resource-discovery-state.json
+          git add data/update-source-registry.json data/update-source-registry.md
+          git add review/directory-connectivity/directory-connectivity-latest.csv
+          git add review/directory-connectivity/directory-connectivity-latest.json
+          git add review/directory-connectivity/directory-connectivity-latest.md
+          git add review/directory-outreach/directory-outreach-latest.csv
+          git add review/directory-outreach/directory-outreach-latest.json
+          git add review/directory-outreach/directory-outreach-latest.md
+          git add review/directory-watch/directory-watch-latest.json review/directory-watch/directory-watch-latest.md
+          git add review/event-watch/event-watch-latest.json review/event-watch/event-watch-latest.md
+          git add review/free-tools/free-tools-latest.json review/free-tools/free-tools-latest.md
+          git add review/keyword-sweep/keyword-sweep-latest.json review/keyword-sweep/keyword-sweep-latest.md
+          git add review/national-funding-watch/national-funding-watch-latest.json review/national-funding-watch/national-funding-watch-latest.md
+          git add review/resource-discovery/resource-discovery-latest.json review/resource-discovery/resource-discovery-latest.md
+          git add review/update-audits/update-audit-latest.json review/update-audits/update-audit-latest.md
+          git add review/maintenance/maintenance-dashboard-latest.json review/maintenance/maintenance-dashboard-latest.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh consolidated weekly maintenance review"
+          fi
+          if ! git diff --quiet origin/master...HEAD; then
+            git push --set-upstream origin "$REVIEW_BRANCH"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open or refresh one coordinated review pull request
+        if: steps.review.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANONICAL_BASE_SHA: ${{ steps.canonical.outputs.base_sha }}
+          OPEN_PR_CONTEXT: ${{ steps.coordination.outputs.open_pr_context }}
+        shell: bash
+        run: |
+          body="Canonical Luna/master checkpoint: $CANONICAL_BASE_SHA. Open review work checked before this run: $OPEN_PR_CONTEXT. This single weekly review combines directory candidates, connection paths, source status, funding-page changes, controlled keyword proposals, resource and event candidates, and free-tool changes. Candidate rows and detected wording are review evidence, not automatically approved public claims. Confirm directory inclusion, contacts, funding terms, event details, advertising availability, eligibility, deadlines, rates, and civic guidance before moving them into canonical public data."
+          existing=$(gh pr list --state open --base master --head "$REVIEW_BRANCH" --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            gh pr edit "$existing" --title "Review coordinated weekly guide maintenance" --body "$body"
+          elif ! gh pr create --draft --base master --head "$REVIEW_BRANCH" --title "Review coordinated weekly guide maintenance" --body "$body"; then
+            compare_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/master...${REVIEW_BRANCH}?expand=1"
+            gh issue create --title "Coordinated weekly review branch is ready" --body "$body Branch: $REVIEW_BRANCH One-click draft PR: $compare_url"
+          fi
+
+      - name: Upload coordinated review reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: tri-county-weekly-guide-maintenance-${{ github.run_id }}
+          retention-days: 30
+          path: |
+            review/directory-connectivity/
+            review/directory-outreach/
+            review/directory-watch/
+            review/event-watch/
+            review/free-tools/
+            review/keyword-sweep/
+            review/maintenance/
+            review/national-funding-watch/
+            review/resource-discovery/
+            review/update-audits/

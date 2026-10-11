@@ -60,13 +60,13 @@ The generator does not publish this candidate feed on the public Directory page.
 
 ## GitHub Actions
 
-The workflow lives at:
+The coordinated workflow lives at:
 
 ```text
-.github/workflows/weekly-directory-query-check.yml
+.github/workflows/weekly-guide-maintenance.yml
 ```
 
-It runs weekly and can also be started manually from GitHub Actions with `workflow_dispatch`. When candidate output changes, the workflow pushes a dedicated automation branch and opens a review pull request. If repository settings prevent Actions from opening pull requests, it opens a GitHub issue naming the ready review branch.
+It runs weekly and can also be started manually from GitHub Actions with `workflow_dispatch`. When reviewed output changes, it refreshes the stable `automation/weekly-guide-maintenance` branch and one draft pull request. If repository settings prevent Actions from opening pull requests, it opens a GitHub issue naming the ready review branch.
 
 Netlify may create a deploy preview for the review branch, but production does not change until a person reviews and merges the pull request.
 

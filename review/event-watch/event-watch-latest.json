@@ -1,0 +1,762 @@
+{
+  "generated_at": "2026-10-11T00:16:27-06:00",
+  "review_policy": "Automation may report page changes and candidate event links. A person must review dates, locations, costs, submission rules, and public wording before canonical event data changes.",
+  "summary": {
+    "sources": 15,
+    "checked": 15,
+    "changed": 0,
+    "new_baselines": 13,
+    "candidate_links": 24,
+    "confirmed_broken": 0,
+    "script_access_limited": 1,
+    "check_failures": 2,
+    "categories": {
+      "events-calendars": 15
+    },
+    "status_counts": {
+      "access_blocked": 1,
+      "network_error": 1,
+      "ok": 13
+    },
+    "change_counts": {
+      "check_failed": 2,
+      "new_baseline": 13
+    }
+  },
+  "results": [
+    {
+      "source": {
+        "id": "explore-raton-events",
+        "name": "Explore Raton Events",
+        "url": "https://www.exploreraton.com/events",
+        "county": "Colfax",
+        "community": "Raton",
+        "category": "events-calendars",
+        "authority": "Local tourism organization",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Visitor event calendar",
+        "action_label": "Open calendar",
+        "public_use": "Visitor-facing events, festivals, attractions, and activities in and around Raton.",
+        "action": "Check the current event page and follow its event links for dates and organizer details.",
+        "query_groups": [
+          "Raton",
+          "Colfax County",
+          "visitor events",
+          "festival"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.exploreraton.com/events",
+        "elapsed_ms": 900,
+        "content_hash": "0e68fa90eb95df45bf058c2dcffa880ef571f5eeb585eb78576a465519bf8659",
+        "text_length": 3094,
+        "link_count": 48,
+        "candidates": [
+          {
+            "title": "EXILE CANCELS SEPT 6 GATE CITY MUSIC FESTIVAL APPEARANCE IN RATON, NEW MEXICO",
+            "url": "https://www.exploreraton.com/post/exile-cancels-sept-6-gate-city-music-festival-appearance-in-raton-new-mexico",
+            "score": 8,
+            "matched_terms": [
+              "festival",
+              "Raton"
+            ]
+          },
+          {
+            "title": "4th of July in Raton Our small town charm is the perfect backdrop for the 4th of July parade, fun on Historic First Street, and the firework display held in the heart of Raton. The International Santa Fe Balloon rally kicks off the 4th of July holiday with rides, glows, and more! Each morning balloons ascend into the summer sky. LEARN MORE",
+            "url": "http://exploreraton.com/4th-of-july",
+            "score": 5,
+            "matched_terms": [
+              "parade",
+              "Raton"
+            ]
+          },
+          {
+            "title": "Gate City Music Festival GCMF is every Labor Day weekend with famous and talented musicians and headliners, dancing, food and drinks, and downtown fun. LEARN MORE",
+            "url": "https://www.gatecitymusicfestival.com",
+            "score": 5,
+            "matched_terms": [
+              "festival"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "raton-mainstreet-events",
+        "name": "Raton MainStreet Events",
+        "url": "https://ratonmainstreet.org/events/",
+        "county": "Colfax",
+        "community": "Raton",
+        "category": "events-calendars",
+        "authority": "MainStreet organization",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Downtown event calendar",
+        "action_label": "Open calendar",
+        "public_use": "Downtown Raton events, community activities, markets, and MainStreet programs.",
+        "action": "Use the event page for current downtown dates and organizer links.",
+        "query_groups": [
+          "Raton",
+          "downtown",
+          "MainStreet",
+          "market"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://ratonmainstreet.org/events/",
+        "elapsed_ms": 6741,
+        "content_hash": "51d7aa43463bc1d70784c41773ec03c318ff4e0748966e5825da453aeee26da6",
+        "text_length": 869,
+        "link_count": 25,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "krtn-area-events",
+        "name": "KRTN Area Events",
+        "url": "https://krtnradio.com/calendar/",
+        "county": "Colfax",
+        "community": "Raton and northeastern New Mexico",
+        "category": "events-calendars",
+        "authority": "Local radio and news outlet",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Regional community calendar",
+        "action_label": "Open calendar",
+        "public_use": "Public events, school activities, meetings, arts, sports, and community announcements across the Raton area.",
+        "action": "Review the area-events calendar and use KRTN's current contact route for listing questions.",
+        "query_groups": [
+          "Raton",
+          "northeastern New Mexico",
+          "area events",
+          "community calendar"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://krtnradio.com/calendar/",
+        "elapsed_ms": 1888,
+        "content_hash": "ef1322ff6048a86cf96de0f0df1fb4693a101594db3ed2e1529f0760dca8a226",
+        "text_length": 9488,
+        "link_count": 102,
+        "candidates": [
+          {
+            "title": "The Events Calendar",
+            "url": "https://theeventscalendar.com/products/wordpress-events-calendar/?utm_medium=plugin-tec&utm_source=banner&utm_campaign=in-app",
+            "score": 3,
+            "matched_terms": [
+              "events calendar"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "ratonian-community-calendar",
+        "name": "The Ratonian Community Calendar",
+        "url": "https://theratonian.com/calendar/",
+        "county": "Colfax",
+        "community": "Raton",
+        "category": "events-calendars",
+        "authority": "Local community publication",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Community calendar and submission route",
+        "action_label": "View or submit event",
+        "public_use": "Raton-area community events and a public route for proposing a calendar listing.",
+        "action": "Open the calendar to review current events or use its submission form.",
+        "query_groups": [
+          "Raton",
+          "community event",
+          "submit event",
+          "calendar"
+        ]
+      },
+      "check": {
+        "status": "network_error",
+        "status_code": null,
+        "final_url": "https://theratonian.com/calendar/",
+        "error": "[Errno 11001] getaddrinfo failed",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "visit-angel-fire-list-event",
+        "name": "Visit Angel Fire - List Your Event",
+        "url": "https://visitangelfirenm.com/list-your-event/",
+        "county": "Colfax",
+        "community": "Angel Fire and Moreno Valley",
+        "category": "events-calendars",
+        "authority": "Municipal tourism organization",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Visitor event submission form",
+        "action_label": "Submit event",
+        "public_use": "Visitor-facing events in Angel Fire and the Moreno Valley area.",
+        "action": "Use the current tourism submission form; inclusion remains at the publisher's discretion.",
+        "query_groups": [
+          "Angel Fire",
+          "Moreno Valley",
+          "list your event",
+          "visitor event"
+        ]
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://visitangelfirenm.com/list-your-event/",
+        "error": "HTTP Error 403: Forbidden",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "visit-trinidad-submit-event",
+        "name": "Visit Trinidad - Submit Your Event",
+        "url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+        "county": "Las Animas",
+        "community": "Trinidad",
+        "category": "events-calendars",
+        "authority": "Local tourism organization",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Visitor event submission form",
+        "action_label": "Submit event",
+        "public_use": "Visitor-facing events, activities, performances, and community happenings in Trinidad.",
+        "action": "Use the tourism submission form and allow time for editorial review before the event date.",
+        "query_groups": [
+          "Trinidad",
+          "Las Animas County",
+          "submit your event",
+          "visitor event"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+        "elapsed_ms": 510,
+        "content_hash": "c3a857578ef76f3e6af56185a43853895a390313a5a0f09e1d2a2d1d9ef1e757",
+        "text_length": 5665,
+        "link_count": 94,
+        "candidates": [
+          {
+            "title": "Upcoming Events",
+            "url": "https://visittrinidadcolorado.com/upcoming-events/",
+            "score": 4,
+            "matched_terms": [
+              "upcoming events"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "trinidad-library-events",
+        "name": "Trinidad Carnegie Public Library Events",
+        "url": "https://trinidadpubliclibrary.org/events/",
+        "county": "Las Animas",
+        "community": "Trinidad",
+        "category": "events-calendars",
+        "authority": "Public library",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Library program calendar",
+        "action_label": "Open calendar",
+        "public_use": "Library programs, classes, youth and family activities, meetings, and public learning events.",
+        "action": "Check the calendar for current library-hosted programs and registration details.",
+        "query_groups": [
+          "Trinidad",
+          "library",
+          "class",
+          "workshop"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://trinidadpubliclibrary.org/events/",
+        "elapsed_ms": 1036,
+        "content_hash": "8dc566653585b1408cc1bb5464619f0d97ee57a4829902be1e569ee991358b10",
+        "text_length": 6428,
+        "link_count": 51,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "create-trinidad-events",
+        "name": "CREATE Trinidad Events",
+        "url": "https://www.trinidadcreativedistrict.org/trinidad-creative-district-events",
+        "county": "Las Animas",
+        "community": "Trinidad",
+        "category": "events-calendars",
+        "authority": "State-certified creative district",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Arts and culture event calendar",
+        "action_label": "Open calendar",
+        "public_use": "Exhibitions, performances, workshops, creative-business events, and cultural activities in Trinidad.",
+        "action": "Use the creative-district event page for current arts and culture dates and organizer information.",
+        "query_groups": [
+          "Trinidad",
+          "creative district",
+          "art",
+          "performance"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.trinidadcreativedistrict.org/trinidad-creative-district-events",
+        "elapsed_ms": 850,
+        "content_hash": "eb82b3c5d3d1e7b152e070133c91ed56f07e7121b663848c3baccaf5f01eb037",
+        "text_length": 1602,
+        "link_count": 27,
+        "candidates": [
+          {
+            "title": "2026 GET LIT! Literary Festival",
+            "url": "https://www.trinidadcreativedistrict.org/2026-get-lit-literary-festival",
+            "score": 4,
+            "matched_terms": [
+              "festival"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "main-street-live-events",
+        "name": "Main Street LIVE Events",
+        "url": "https://www.mainstreetlive.org/home",
+        "county": "Las Animas",
+        "community": "Trinidad",
+        "category": "events-calendars",
+        "authority": "Local performing arts organization",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Performance calendar",
+        "action_label": "View performances",
+        "public_use": "Theater, music, performance, and ticketed cultural events in Trinidad.",
+        "action": "Open the current season or calendar link from the homepage for dates, tickets, and venue details.",
+        "query_groups": [
+          "Trinidad",
+          "theater",
+          "performance",
+          "tickets"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.mainstreetlive.org/home",
+        "elapsed_ms": 834,
+        "content_hash": "4c19f332b383fbc5d5b989ed348e516c78e9789de6356bc30ff34ec771a268a9",
+        "text_length": 1272,
+        "link_count": 34,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "csu-extension-las-animas-events",
+        "name": "CSU Extension Las Animas County Events",
+        "url": "https://extension.colostate.edu/las-animas/events/",
+        "county": "Las Animas",
+        "community": "Las Animas County",
+        "category": "events-calendars",
+        "authority": "Public university extension",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Education and agriculture event calendar",
+        "action_label": "Open calendar",
+        "public_use": "Agriculture, 4-H, family, food, natural-resource, and community education programs.",
+        "action": "Check the county Extension calendar for current workshops, registrations, and program contacts.",
+        "query_groups": [
+          "Las Animas County",
+          "Extension",
+          "4-H",
+          "workshop"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://extension.colostate.edu/las-animas/events/",
+        "elapsed_ms": 380,
+        "content_hash": "bf7768f01166727caa18d9cc5f502841f7e20ae18af6f1b543d36d3bb41c5e74",
+        "text_length": 674,
+        "link_count": 33,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "spanish-peaks-country-events",
+        "name": "Spanish Peaks Country Events",
+        "url": "https://spanishpeakscountry.com/spc-events/",
+        "county": "Huerfano",
+        "community": "Huerfano County",
+        "category": "events-calendars",
+        "authority": "County tourism organization",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "County visitor event calendar",
+        "action_label": "View or submit event",
+        "public_use": "Festivals, arts, recreation, markets, performances, and visitor-facing events throughout Huerfano County.",
+        "action": "Use the event calendar to review current dates or follow its community event-submission route.",
+        "query_groups": [
+          "Huerfano County",
+          "Spanish Peaks",
+          "festival",
+          "submit event"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://spanishpeakscountry.com/spc-events/",
+        "elapsed_ms": 660,
+        "content_hash": "df7539fe863a2362a3014cc094904f3bce1936a851f5d94e60d92b5688fbee14",
+        "text_length": 5945,
+        "link_count": 94,
+        "candidates": [
+          {
+            "title": "Cuchara Farmers Market",
+            "url": "https://spanishpeakscountry.com/series/cuchara-farmers-market/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          },
+          {
+            "title": "Cuchara Farmers Market",
+            "url": "https://spanishpeakscountry.com/spc-event/cuchara-farmers-market/2026-10-16/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          },
+          {
+            "title": "Cuchara Farmers Market",
+            "url": "https://spanishpeakscountry.com/spc-event/cuchara-farmers-market/2026-10-23/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          },
+          {
+            "title": "Gardner Farmers Market",
+            "url": "https://spanishpeakscountry.com/spc-event/gardner-farmer-and-craft-market/2026-10-10/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          },
+          {
+            "title": "Gardner Farmers Market",
+            "url": "https://spanishpeakscountry.com/spc-event/gardner-farmer-and-craft-market/2026-10-17/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          },
+          {
+            "title": "Gardner Farmers Market",
+            "url": "https://spanishpeakscountry.com/spc-event/gardner-farmer-and-craft-market/2026-10-24/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          },
+          {
+            "title": "La Veta Farmers Market",
+            "url": "https://spanishpeakscountry.com/series/la-veta-farmers-market-2/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          },
+          {
+            "title": "La Veta Farmers Market",
+            "url": "https://spanishpeakscountry.com/spc-event/la-veta-farmers-market-2/2026-10-15/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          },
+          {
+            "title": "La Veta Farmers Market",
+            "url": "https://spanishpeakscountry.com/spc-event/la-veta-farmers-market-2/2026-10-22/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          },
+          {
+            "title": "Submit an Event",
+            "url": "https://spanishpeakscountry.com/spc-events/community/add/",
+            "score": 4,
+            "matched_terms": [
+              "submit an event"
+            ]
+          },
+          {
+            "title": "Submit an Event",
+            "url": "https://spanishpeakscountry.com/submit-spc-event/",
+            "score": 4,
+            "matched_terms": [
+              "submit an event"
+            ]
+          },
+          {
+            "title": "Walsenburg Farmers Market",
+            "url": "https://spanishpeakscountry.com/spc-event/walsenburg-farm-makers-market/2026-10-11/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          },
+          {
+            "title": "Walsenburg Farmers Market",
+            "url": "https://spanishpeakscountry.com/spc-event/walsenburg-farm-makers-market/2026-10-18/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          },
+          {
+            "title": "Walsenburg Farmers Market",
+            "url": "https://spanishpeakscountry.com/spc-event/walsenburg-farm-makers-market/2026-10-25/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "huerfano-chamber-submit-event",
+        "name": "Huerfano County Chamber - Submit an Event",
+        "url": "https://www.chamber.huerfano.org/submit-an-event",
+        "county": "Huerfano",
+        "community": "Huerfano County",
+        "category": "events-calendars",
+        "authority": "County chamber of commerce",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Business and community event submission form",
+        "action_label": "Submit event",
+        "public_use": "Business, nonprofit, civic, arts, and public events serving Huerfano County.",
+        "action": "Use the chamber's current event form and provide complete organizer and event details.",
+        "query_groups": [
+          "Huerfano County",
+          "chamber",
+          "submit event",
+          "business event"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.chamber.huerfano.org/submit-an-event",
+        "elapsed_ms": 1594,
+        "content_hash": "9f3f6c4a4b1781852d6d72c5f425818960d752ff1fef3c2ea11ff89d6e7c1d5d",
+        "text_length": 862,
+        "link_count": 33,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "huerfano-county-government-events",
+        "name": "Huerfano County Government Events",
+        "url": "https://huerfano.us/events/",
+        "county": "Huerfano",
+        "community": "Huerfano County",
+        "category": "events-calendars",
+        "authority": "County government",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "County public calendar",
+        "action_label": "Open calendar",
+        "public_use": "County meetings, public notices, civic dates, and Huerfano County government events.",
+        "action": "Use the county calendar for current public dates and links to the responsible office.",
+        "query_groups": [
+          "Huerfano County",
+          "county meeting",
+          "public event",
+          "calendar"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://huerfano.us/events/",
+        "elapsed_ms": 1473,
+        "content_hash": "7947a5d4a2e756d22144887c27b23c46771d85f775b36b427d6a766b9bcf8d57",
+        "text_length": 5724,
+        "link_count": 123,
+        "candidates": [
+          {
+            "title": "Public Works Workshop",
+            "url": "https://huerfano.us/event/public-works-workshop-17/",
+            "score": 4,
+            "matched_terms": [
+              "workshop"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "la-veta-library-calendar",
+        "name": "La Veta Public Library Full Calendar",
+        "url": "https://lvpl.org/full-calendar/",
+        "county": "Huerfano",
+        "community": "La Veta and Huerfano County",
+        "category": "events-calendars",
+        "authority": "Public library district",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Community and library calendar",
+        "action_label": "Open calendar",
+        "public_use": "Library programs plus selected community, arts, education, and public events around La Veta and Huerfano County.",
+        "action": "Check the full calendar for dates, locations, registration details, and organizer links.",
+        "query_groups": [
+          "La Veta",
+          "Huerfano County",
+          "library",
+          "community event"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://lvpl.org/full-calendar/",
+        "elapsed_ms": 1884,
+        "content_hash": "d8bdf9a204ff6f990d6688b16a3b85523af476466edecdbf1154f7205928fa4a",
+        "text_length": 3166,
+        "link_count": 130,
+        "candidates": [
+          {
+            "title": "Huerfano Farmers Market",
+            "url": "https://lvpl.org/events/huerfano-farmers-market-21/",
+            "score": 4,
+            "matched_terms": [
+              "farmers market"
+            ]
+          },
+          {
+            "title": "Theatre Games Workshop at the Francisco Center for the Performing Arts",
+            "url": "https://lvpl.org/events/theatre-games-workshop-at-the-francisco-center-for-the-performing-arts-2/",
+            "score": 4,
+            "matched_terms": [
+              "workshop"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "la-veta-creative-district-events",
+        "name": "La Veta Creative District Festivals and Signature Events",
+        "url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
+        "county": "Huerfano",
+        "community": "La Veta",
+        "category": "events-calendars",
+        "authority": "State-certified creative district",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "resource_type": "Arts and festival guide",
+        "action_label": "View arts events",
+        "public_use": "Festivals, exhibitions, performances, markets, and signature arts events in La Veta.",
+        "action": "Use the creative-district page for major arts dates and follow organizer links for current details.",
+        "query_groups": [
+          "La Veta",
+          "creative district",
+          "festival",
+          "arts event"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
+        "elapsed_ms": 705,
+        "content_hash": "89e1855bda6969822ef3c6cff3df61f99a28fc48c294feaaf08005ef5205a916",
+        "text_length": 4311,
+        "link_count": 28,
+        "candidates": [
+          {
+            "title": "LEARN MORE",
+            "url": "https://www.franciscofort.org/events-calendar/2023/7/29/francisco-fort-day-watch-for-details-to-come-music-demonstrations-food-and-fun-for-all-ages",
+            "score": 3,
+            "matched_terms": [
+              "events calendar"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "new_baseline",
+      "previous_hash": ""
+    }
+  ]
+}

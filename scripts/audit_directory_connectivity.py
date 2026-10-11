@@ -317,7 +317,7 @@ def write_csv(entries: list[dict], path: Path) -> None:
         "address_available",
     ]
     with path.open("w", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for entry in entries:
             writer.writerow({field: entry.get(field, "") for field in fields})

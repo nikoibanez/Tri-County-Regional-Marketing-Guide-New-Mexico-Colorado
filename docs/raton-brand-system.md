@@ -63,7 +63,8 @@ and burgundy carry contrast-sensitive controls.
 - Funding, free tools, and growth-support surfaces: GrowRaton palette
 - Body text and shared navigation: Explore deep blue on City cream or near-white surfaces
 - Focus indicators: City brick, or GrowRaton burgundy on growth-support pages, for strong contrast
-- Contextual cursors: City brick arrow plus route-specific City, Explore, or GrowRaton badges
+- Contextual cursors: City brick arrow plus route-specific City, Explore, or GrowRaton badges;
+  directory cards use a City/Explore pointing hand so listing links read as unmistakably clickable
 
 Pale sky and surface tints are derived from the listed source colors by mixing with white. They are
 decorative only. Text, links, controls, focus states, and status indicators retain accessible

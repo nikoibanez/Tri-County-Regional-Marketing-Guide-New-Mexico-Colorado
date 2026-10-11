@@ -1,25 +1,27 @@
 # Update Source Audit
 
-Generated: 2026-08-18
+Generated: 2026-10-11
 
 This report separates confirmed link failures from pages that merely block or confuse scripted checks.
 
 ## Summary
 
-- Records checked: 136
-- Web sources checked: 135
+- Records checked: 170
+- Web sources checked: 169
 - Confirmed broken or missing: 0
-- Normal-browser confirmation required: 0
-- Script-access limitations (not broken): 28
+- Normal-browser confirmation required: 1
+- Script-access limitations (not broken): 33
 - Offline field-check records: 1
-- Human approval required: 82
+- Human approval required: 112
 
 ## Status Counts
 
-- access_blocked: 28
+- access_blocked: 31
 - field_check: 1
-- ok: 94
+- network_error: 1
+- ok: 122
 - redirect: 13
+- tls_error: 2
 
 ## Confirmed Broken Or Missing
 
@@ -27,26 +29,32 @@ No checked web source is confirmed broken or missing.
 
 ## Normal-Browser Confirmation Required
 
-No inconclusive network or server response is waiting on a normal-browser confirmation.
+These pages are not classified as broken. A timeout, network problem, or temporary server response prevented a conclusive scripted check.
+
+- [The Ratonian Community Calendar](https://theratonian.com/calendar/) - Colfax; events; network_error; [Errno 11001] getaddrinfo failed
 
 ## Script Access Limitations (Not Broken)
 
 These are informational results, not broken-link findings. The page blocked scripted access or the local certificate checker could not validate its chain.
 
 - [Walsenburg / Huerfano](https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes) - Regional; civic; access_blocked; HTTP Error 403: Forbidden
+- [Yellow Pages Raton Business Listings](https://www.yellowpages.com/raton-nm/business-listings/1) - Colfax; directory; access_blocked; HTTP Error 403: Forbidden
 - [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
 - [Visit Angel Fire NM Get Listed](https://visitangelfirenm.com/get-listed/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
+- [Raton Chamber Business Directory](https://www.raton.info/business-directory.html) - Colfax; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Angel Fire - List Your Event](https://visitangelfirenm.com/list-your-event/) - Colfax; events; access_blocked; HTTP Error 403: Forbidden
+- [The World Journal](https://worldjournalnewspaper.com/) - Huerfano; events; access_blocked; HTTP Error 403: Forbidden
 - [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; access_blocked; HTTP Error 403: Forbidden
-- [Visit Trinidad Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Las Animas; events; access_blocked; HTTP Error 403: Forbidden
-- [Visit Trinidad Submit Your Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Las Animas; events; access_blocked; HTTP Error 403: Forbidden
-- [Visit Trinidad Submit Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
-- [Visit Trinidad Tourism / Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
-- [Trinidad Community Foundation](https://www.trinidadcf.org/board.html) - Las Animas; funding; access_blocked; HTTP Error 429: Too Many Requests
-- [Trinidad Community Foundation Grant Process](https://www.trinidadcf.org/grants.html) - Las Animas; funding; access_blocked; HTTP Error 429: Too Many Requests
+- [World Journal](https://worldjournalnewspaper.com/) - Huerfano / Walsenburg; events; access_blocked; HTTP Error 403: Forbidden
 - [Candid Funding Search and Learning](https://learning.candid.org/free-access-to-foundation-directory) - National; funding; access_blocked; HTTP Error 403: Forbidden
+- [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - National; funding; access_blocked; HTTP Error 403: Forbidden
+- [Colorado OEDIT Programs and Funding](https://oedit.colorado.gov/programs-and-funding) - National; funding; access_blocked; HTTP Error 403: Forbidden
+- [Cuchara Chapel Scholarship](https://www.cucharachapel.org/scholarship/) - National; funding; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)
 - [IFundWomen Grants](https://www.ifundwomen.com/grants/apply-for-grants) - National; funding; access_blocked; HTTP Error 403: Forbidden
+- [Mary John Goree Las Animas County Scholarship](https://goreescholarship.org/) - National; funding; access_blocked; HTTP Error 403: Forbidden
+- [Robert Hoag Rawlings Foundation Grants](https://rawlingsfoundation.com/grants/requests/) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [USDA Rural Development Programs and Services](https://www.rd.usda.gov/programs-services) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [Colorado Advanced Industries Accelerator Programs](https://oedit.colorado.gov/advanced-industries-accelerator-programs) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
@@ -60,7 +68,8 @@ These are informational results, not broken-link findings. The page blocked scri
 - [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Las Animas County Government](https://lasanimascounty.colorado.gov/) - Las Animas; general; access_blocked; HTTP Error 403: Forbidden
-- [Visit Trinidad Outdoor Recreation](https://visittrinidadcolorado.com/outdoor-recreation/) - Las Animas; general; access_blocked; HTTP Error 403: Forbidden
+- [World Journal Services Directory](https://worldjournalnewspaper.com/services/) - Huerfano; media; access_blocked; HTTP Error 403: Forbidden
+- [Colorado Gives](https://www.coloradogives.org/) - Las Animas; media; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
 
 ## Offline Field Checks
 
@@ -84,14 +93,23 @@ These are informational results, not broken-link findings. The page blocked scri
 - [Angel Fire Chamber Member Business Directory](https://angelfirechamber.org/local-businesses/) - Colfax; Member business directory; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [Explore Raton Events](https://www.exploreraton.com/events) - Colfax; Event calendar; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [Explore Raton Visitors Guide Advertising](https://www.exploreraton.com/post/purchase-your-2026-raton-visitors-guide-ad) - Colfax; Visitor guide / promotion inquiry; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [KRTN Area Events](https://krtnradio.com/calendar/) - Colfax; Regional community calendar; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [KRTN Enchanted Air Radio](https://krtnradio.com/wp/advertising/) - Colfax; Media / advertising; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [Raton Chamber Business Directory](https://www.raton.info/business-directory.html) - Colfax; Business directory; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [Raton MainStreet Events](https://ratonmainstreet.org/events/) - Colfax; Downtown event calendar; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [The Ratonian Community Calendar](https://theratonian.com/calendar/) - Colfax; Community calendar and submission route; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [Visit Angel Fire - List Your Event](https://visitangelfirenm.com/list-your-event/) - Colfax; Visitor event submission form; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [Bachman Community Calendar](https://www.discoverbachman.com/community-calendar/) - Huerfano; Community calendar; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [Huerfano County Chamber - Submit an Event](https://www.chamber.huerfano.org/submit-an-event) - Huerfano; Business and community event submission form; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [Huerfano County Government](https://huerfano.us/) - Huerfano; County government; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [Huerfano County Government Events](https://huerfano.us/events/) - Huerfano; County public calendar; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [Spanish Peaks Country Events](https://spanishpeakscountry.com/spc-events/) - Huerfano; County visitor event calendar; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [Spanish Peaks Country Submit Event](https://spanishpeakscountry.com/spc-events/community/add/) - Huerfano; Event submission; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [The World Journal](https://worldjournalnewspaper.com/) - Huerfano; Media / submissions; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; Municipal forms / vendor permits; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [World Journal](https://worldjournalnewspaper.com/) - Huerfano / Walsenburg; Newspaper, events, classifieds, advertising inquiry possible; Do not infer free placement, ad availability, acceptance, audience size, or endorsement.
+- [CREATE Trinidad Events](https://www.trinidadcreativedistrict.org/trinidad-creative-district-events) - Las Animas; Arts and culture event calendar; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [CSU Extension Las Animas County Events](https://extension.colostate.edu/las-animas/events/) - Las Animas; Education and agriculture event calendar; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [Visit Trinidad Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Las Animas; Tourism / event support; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [Visit Trinidad Submit Your Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Las Animas; Event submission; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [LocalStash / Weekender regional events](https://weekender.pub/) - Las Animas, Huerfano, Colfax, and nearby SoCO / NoNM communities; Regional event list; visitor guide; magazine or sponsor inquiry; Do not infer free placement, ad availability, acceptance, audience size, or endorsement.
@@ -113,14 +131,35 @@ These are informational results, not broken-link findings. The page blocked scri
 - [Southern Colorado Community Foundation Nonprofit Directory](https://sccfcolorado.org/nonprofit-directory/) - Las Animas; Nonprofit directory; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [Trinidad Community Foundation](https://www.trinidadcf.org/board.html) - Las Animas; Local foundation / grantmaker; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
 - [Trinidad Community Foundation Grant Process](https://www.trinidadcf.org/grants.html) - Las Animas; Local nonprofit grants; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.
+- [Brindle Foundation Grants](https://www.brindlefoundation.org/grants) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
 - [Candid Funding Search and Learning](https://learning.candid.org/free-access-to-foundation-directory) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [Colorado OEDIT Programs and Funding](https://oedit.colorado.gov/programs-and-funding) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [Cuchara Chapel Scholarship](https://www.cucharachapel.org/scholarship/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [El Pomar Foundation Grant Making](https://www.elpomar.org/grant-making/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
 - [First Peoples Fund Fellowships](https://www.firstpeoplesfund.org/programs/fellowships) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [First Southwest Community Fund Grants](https://www.fswcf.org/grants) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
 - [Grants.gov](https://www.grants.gov/search-grants) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [Health Solutions Community Sponsorship Requests](https://www.health.solutions/requests/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
 - [IFundWomen Grants](https://www.ifundwomen.com/grants/apply-for-grants) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
 - [Institute of Museum and Library Services Funding Opportunities](https://www.imls.gov/find-funding/how-to-apply/funding-opportunities) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [John G. Duncan Charitable Trust](https://www.wellsfargo.com/private-foundations/duncan-charitable-trust/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [Mary John Goree Las Animas County Scholarship](https://goreescholarship.org/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
 - [NALAC Fund for the Arts](https://www.nalac.org/grants/nalac-fund-for-the-arts/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
 - [National Endowment for the Arts Grants](https://www.arts.gov/grants) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [New Mexico Arts Artist Opportunities](https://nmarts.org/public-art/are-you-an-artist/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [New Mexico Arts Grants and Programs](https://nmarts.org/grants/grants-information/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [New Mexico Community Foundation Northeastern Health Fund](https://nmcf.org/northeastern-health-fund/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [New Mexico Creative Industries Grant Opportunities](https://edd.newmexico.gov/grants/cid-grants/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [New Mexico Economic Development Department Grants](https://edd.newmexico.gov/grants/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [New Mexico Humanities Council Grants](https://newmexicohumanities.org/grants/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [New Mexico LEADS Community Economic Development Grants](https://edd.newmexico.gov/grants/leads/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
 - [NGLCC Scholarships and Grants](https://nglcc.org/programs-initiatives/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [Robert Hoag Rawlings Foundation Grants](https://rawlingsfoundation.com/grants/requests/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [Southern Colorado Community Foundation Grants](https://sccfcolorado.org/for-grantseekers/apply/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [Spanish Peaks HealthCare Foundation](https://www.sprhc.org/spanish-peaks-healthcare-foundation) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [Taos Community Foundation Funding Opportunities](https://www.taoscf.org/grants/) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
+- [Trinidad State College Scholarships and Grants](https://trinidadstate.edu/scholarships/index.html) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
 - [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
 - [USDA Rural Development Programs and Services](https://www.rd.usda.gov/programs-services) - National; National funding watch hub; Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.
 - [Arts in Society Grant](https://www.redlineart.org/ais-apply-for-a-grant) - Regional; Arts / civic grants; Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.

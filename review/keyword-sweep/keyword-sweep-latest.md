@@ -1,6 +1,6 @@
 # Listing Keyword Sweep
 
-Generated: 2026-08-19
+Generated: 2026-10-11
 
 This is a review queue. Source-page terms improve directory search only after the generated index change is reviewed and merged.
 
@@ -11,348 +11,165 @@ This is a review queue. Source-page terms improve directory search only after th
 - Distinct source URLs: 419
 - URLs selected this run: 120
 - URLs checked: 120
-- URL checks needing attention: 36
-- Listing keyword sets changed: 40
-- Source-derived keyword sets changed: 50
-- Entries with blocked inferences: 7
-- Misleading inferred keywords blocked: 7
+- URL checks needing attention: 76
+- Listing keyword sets changed: 9
+- Source-derived keyword sets changed: 19
+- Entries with blocked inferences: 2
+- Misleading inferred keywords blocked: 2
 
 ## Status
 
-- checked: 143
-- checked_no_name_match: 509
-- fetch_error: 152
+- checked: 232
+- checked_no_name_match: 866
+- fetch_error: 227
 - no_source: 173
-- pending_source_check: 521
 
 ## Proposed Keyword Changes
 
-### Angel’s Outback Adventure (Angel Fire, Colfax)
-
-- Status: pending_source_check
-- Add: None
-- Remove: hiking
-- Public page: https://visitangelfirenm.com/listing/angels-outback-adventures-llc/
-
-### Longhorn Lodge (Angel Fire, Colfax)
+### The Pecos, Canadian, Cimarron, and Mora Rivers (Raton, Colfax)
 
 - Status: checked
-- Add: vacation rental
+- Add: tourism
 - Remove: None
-- Public page: https://angelfirechamber.org/business/longhorn-lodge/
+- Public page: https://www.newmexico.org/things-to-do/outdoor-adventures/rafting-kayaking/pecos-canadian-cimarron-mora/
 
-### Monte Verde RV Park & Campground (Angel Fire, Colfax)
-
-- Status: checked
-- Add: catering
-- Remove: None
-- Public page: https://monteverderv.com/
-
-### Mountain Sports of Angel Fire (Angel Fire, Colfax)
-
-- Status: checked
-- Add: camping
-- Remove: None
-- Public page: https://angelfirechamber.org/business/mountain-sports-of-angel-fire/
-
-### Music from Angel Fire (Angel Fire, Colfax)
-
-- Status: checked
-- Add: festival, workshop
-- Remove: None
-- Public page: https://angelfirechamber.org/business/music-from-angel-fire/
-
-### Roadrunner Tours (Angel Fire, Colfax)
-
-- Status: checked
-- Add: horseback riding
-- Remove: None
-- Public page: https://angelfirechamber.org/business/road-runner-tours-ltd/
-
-### Explore Raton Arts and Culture Page (Raton, Colfax)
-
-- Status: checked
-- Add: theater
-- Remove: None
-- Public page: https://www.exploreraton.com/arts-culture
-
-### Mesalands CC Dinosaur Museum (Raton, Colfax)
-
-- Status: checked
-- Add: education
-- Remove: None
-- Public page: https://www.newmexico.org/listing/mesalands-community-college%e2%80%99s-dinosaur-museum/1411/
-
-### Pecos National Historical Park (Raton, Colfax)
-
-- Status: checked
-- Add: outdoor recreation
-- Remove: None
-- Public page: https://www.newmexico.org/listing/pecos-national-historical-park/1568/
-
-### Santa Fe Trail School for the Performing Arts (Raton, Colfax)
-
-- Status: checked
-- Add: theater
-- Remove: None
-- Public page: https://www.ratonnm.gov/business_detail_T7_R32.php
-
-### Bachman & associates (Huerfano)
-
-- Status: checked
-- Add: None
-- Remove: chamber of commerce
-- Public page: https://www.chamber.huerfano.org/bachman-and-associates
-
-### Cuchara Lokal (Cuchara, Huerfano)
-
-- Status: checked
-- Add: hotel
-- Remove: None
-- Public page: https://www.cucharalokalhotel.com/
-
-### Dodgeton Creek Inn (Cuchara, Huerfano)
-
-- Status: checked
-- Add: bed and breakfast
-- Remove: None
-- Public page: https://thedodgetoncreekinn.com/
-
-### Stonewall (Cuchara / La Veta, Huerfano)
-
-- Status: checked
-- Add: camping, directory
-- Remove: None
-- Public page: https://www.coloradodirectory.com/stonewall/
-
-### Artisans on Main (La Veta, Huerfano)
-
-- Status: checked
-- Add: jewelry, photography, pottery
-- Remove: None
-- Public page: https://www.artisansonmain.art/
-
-### Shalawalla Gallery & Batik Studio (La Veta, Huerfano)
-
-- Status: checked
-- Add: gift shop, jewelry, pottery
-- Remove: None
-- Public page: https://www.shalawalla.com/
-
-### DeWitt Enterprises (Walsenburg, Huerfano)
-
-- Status: checked
-- Add: retail, writing
-- Remove: artist, maker
-- Public page: https://www.walsenburgmercantile.com/vendors/dewitt-enterprise
-
-### Huerfano County Heritage Center (Walsenburg, Huerfano)
-
-- Status: pending_source_check
-- Add: museum, newspaper, nonprofit, visitor center
-- Remove: None
-- Public page: https://www.huerfanohistory.org/visit-us
-
-### Jeeping & 4WD (Walsenburg, Huerfano)
-
-- Status: checked
-- Add: hiking
-- Remove: None
-- Public page: https://www.coloradodirectory.com/jeeping/
-
-### Rafting/Kayaking (Walsenburg, Huerfano)
-
-- Status: checked
-- Add: workshop
-- Remove: None
-- Public page: https://www.coloradodirectory.com/rafting/
-
-### Walsenburg Mining Museum / Huerfano County Historical Society (Walsenburg, Huerfano)
-
-- Status: pending_source_check
-- Add: nonprofit
-- Remove: None
-- Public page: https://www.huerfanohistory.org/mining-museum
-
-### Whitewater Rafting & Kayaking (Walsenburg, Huerfano)
-
-- Status: checked
-- Add: workshop
-- Remove: None
-- Public page: https://www.coloradodirectory.com/rafting/
-
-### A.R. Mitchell Museum of Western Art (Trinidad, Las Animas)
-
-- Status: checked
-- Add: painting
-- Remove: None
-- Public page: https://armitchellmuseum.com/
-
-### Bent's Old Fort National Historic Site (Trinidad, Las Animas)
-
-- Status: checked
-- Add: hiking
-- Remove: None
-- Public page: https://www.coloradodirectory.com/nationalparks/bentsfort.html
-
-### Books & More Used Bookstore (Trinidad, Las Animas)
-
-- Status: pending_source_check
-- Add: library
-- Remove: None
-- Public page: https://carnegiepubliclibrary.org/about-us/friends-of-the-library/
-
-### Gluten Free in the 303 (Trinidad, Las Animas)
-
-- Status: checked
-- Add: bakery
-- Remove: None
-- Public page: https://glutenfreeinthe303.com
-
-### Jeeping & 4WD (Trinidad, Las Animas)
-
-- Status: checked
-- Add: hiking
-- Remove: None
-- Public page: https://www.coloradodirectory.com/jeeping/
-
-### Lucky Blue Tattoo (Trinidad, Las Animas)
+### Crafted in Colorado (La Veta, Huerfano)
 
 - Status: checked
 - Add: artist
 - Remove: None
-- Public page: https://www.luckybluetattootrinidad.com/
+- Public page: https://www.craftedincolorado.com
 
-### Rafting/Kayaking (Trinidad, Las Animas)
-
-- Status: checked
-- Add: workshop
-- Remove: None
-- Public page: https://www.coloradodirectory.com/rafting/
-
-### Stonewall (Trinidad, Las Animas)
+### Fox Theatre Walsenburg (Walsenburg, Huerfano)
 
 - Status: checked
-- Add: camping, directory
+- Add: live music
 - Remove: None
-- Public page: https://www.coloradodirectory.com/stonewall/
+- Public page: https://foxtheatrewalsenburg.org
 
-### Whitewater Rafting & Kayaking (Trinidad, Las Animas)
+### Story Creek Outfitters (Walsenburg, Huerfano)
 
 - Status: checked
-- Add: workshop
+- Add: hunting, lodging, transportation
 - Remove: None
-- Public page: https://www.coloradodirectory.com/rafting/
+- Public page: https://storycreek.com/wp/
 
-### Advanced Air, LLC (Angel Fire, Colfax)
-
-- Status: pending_source_check
-- Add: transportation
-- Remove: None
-- Public page: https://advancedairlines.com/landing-pages/angel-fire-new-mexico/
-
-### Angel's Glow Tanning & Oxygen Bar (Angel Fire, Colfax)
-
-- Status: pending_source_check
-- Add: salon, spa and wellness
-- Remove: None
-- Public page: https://www.google.com/maps/search/?api=1&query=Angel%27s+Glow+Tanning+%26+Oxygen+Bar+3379+Mountain+View+Blvd+Angel+Fire+NM
-
-### Brodsky Bookkeeping (Angel Fire, Colfax)
-
-- Status: pending_source_check
-- Add: accounting, business support, professional services
-- Remove: None
-- Public page: https://www.brodskybookkeeping.com/
-
-### Comanche Creek Brewing Company (Eagle Nest, Colfax)
-
-- Status: pending_source_check
-- Add: brewery
-- Remove: None
-- Public page: https://www.comanchecreekbrewingco.com/
-
-### Double Black Design, LLC (Angel Fire, Colfax)
+### Walsenburg Mining Museum / Huerfano County Historical Society (Walsenburg, Huerfano)
 
 - Status: checked
-- Add: construction, contractor
+- Add: cultural heritage
 - Remove: None
-- Public page: https://www.doubleblackdesign.co/
+- Public page: https://www.huerfanohistory.org/mining-museum
 
-### Holy Angels Catholic Mission Church (Angel Fire, Colfax)
+### Weddings & Elopements (Walsenburg, Huerfano)
 
-- Status: pending_source_check
-- Add: community organization, nonprofit
+- Status: checked
+- Add: catering, lodging
 - Remove: None
-- Public page: https://www.angelfirecatholic.com/
+- Public page: https://www.coloradodirectory.com/Weddings/planning.html
 
-### C Cubed Training (Walsenburg, Huerfano)
+### AR Mitchell Museum of Western Art (Trinidad, Las Animas)
 
-- Status: pending_source_check
-- Add: education, nonprofit, training
+- Status: checked
+- Add: antiques, gift shop
 - Remove: None
-- Public page: https://www.ccubedtraining.com/
+- Public page: https://visittrinidadcolorado.com/shop/
 
-### My One Hour Office (Walsenburg, Huerfano)
+### Trinidad Triggers (Trinidad, Las Animas)
 
-- Status: pending_source_check
-- Add: business support, coworking, professional services
+- Status: checked
+- Add: spa and wellness
 - Remove: None
-- Public page: https://myonehouroffice.com/
+- Public page: https://visittrinidadcolorado.com/more-fun/
 
-### The World Journal (Walsenburg, Huerfano)
+### Weddings & Elopements (Trinidad, Las Animas)
 
-- Status: pending_source_check
-- Add: advertising, newspaper
+- Status: checked
+- Add: catering, lodging
 - Remove: None
-- Public page: https://worldjournalnewspaper.com/
+- Public page: https://www.coloradodirectory.com/Weddings/planning.html
 
 
 ## Blocked Inferences
 
-- Bobcat Pass Wilderness Adventures (Angel Fire, Colfax): agriculture
-- Music from Angel Fire (Angel Fire, Colfax): chamber of commerce
-- Mesalands CC Dinosaur Museum (Raton, Colfax): outdoor recreation
-- Bachman & associates (Huerfano): chamber of commerce
-- The T/M Ranch (Walsenburg, Huerfano): agriculture
-- Walsenburg Studio (Walsenburg, Huerfano): main street
-- Peaceful Peaks Ranch - Glamping Off-The-Grid (Trinidad, Las Animas): agriculture
+- Fox Theatre Walsenburg (Walsenburg, Huerfano): main street
+- Story Creek Outfitters (Walsenburg, Huerfano): agriculture
 
 ## Fetches Needing Attention
 
-- https://anchormotelandcottages.com/: <urlopen error [Errno -5] No address associated with hostname>
-- https://charlies-market.com/: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1016)>
-- https://thelvesa.org/: <urlopen error [Errno -2] Name or service not known>
+- https://221bgallery.com/: <urlopen error [Errno 11001] getaddrinfo failed>
+- https://aguilarcountrycottages.com: <urlopen error [Errno 11001] getaddrinfo failed>
+- https://allseasonsgiftshop.business.site/: HTTP 404
+- https://bigronline.com/locations/: HTTP 403
+- https://boom-noodles.com: HTTP 404
+- https://c1btrueorganics.com/: <urlopen error [Errno 11001] getaddrinfo failed>
+- https://cawthonpark.com: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1028)>
+- https://county.pueblo.org/energy-and-economic-development-department/small-business-development-center: HTTP 403
+- https://franciscofort.org: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028)>
+- https://huerfanofair.com: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)>
+- https://jimandmelissa.org: HTTP 404
+- https://missionatthebell.com: HTTP 403
+- https://oedit.colorado.gov/colorado-creative-districts: HTTP 403
+- https://thelvesa.org/: <urlopen error [Errno 11001] getaddrinfo failed>
+- https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html: HTTP 404
 - https://trinidadstate.edu/collaboratory/index.html: HTTP 404
+- https://visitangelfirenm.com/catering/: HTTP 403
+- https://visitangelfirenm.com/listing/allen-fields-sports-complex/: HTTP 403
+- https://visitangelfirenm.com/listing/alpine-lumber-company/: HTTP 403
+- https://visitangelfirenm.com/listing/angel-fire-community-center/: HTTP 403
 - https://visitangelfirenm.com/listing/angel-fire-ebikes-llc/: HTTP 403
-- https://visitangelfirenm.com/listing/capulin-camp-rv-park/: HTTP 403
+- https://visitangelfirenm.com/listing/angel-fire-resort-nordic-center-golf-course/: HTTP 403
+- https://visitangelfirenm.com/listing/angel-fire-resort-vacation-rentals/: HTTP 403
+- https://visitangelfirenm.com/listing/angel-fire-visitors-center/: HTTP 403
+- https://visitangelfirenm.com/listing/angel-fired-pizza/: HTTP 403
+- https://visitangelfirenm.com/listing/angels-outback-adventures-llc/: HTTP 403
+- https://visitangelfirenm.com/listing/arias-taqueria-food-truck/: HTTP 403
+- https://visitangelfirenm.com/listing/aspen-gold-laundromat/: HTTP 403
+- https://visitangelfirenm.com/listing/blue-dawg-furnishings/: HTTP 403
 - https://visitangelfirenm.com/listing/chisum-group-berkshire-hathaway-homeservices-angel-fire-real-estate/: HTTP 403
 - https://visitangelfirenm.com/listing/clean-af-llc/: HTTP 403
-- https://visitangelfirenm.com/listing/desert-sky-realty-investments/: HTTP 403
+- https://visitangelfirenm.com/listing/coyote-creek-state-park/: HTTP 403
 - https://visitangelfirenm.com/listing/dollar-general/: HTTP 403
+- https://visitangelfirenm.com/listing/elevated-pour/: HTTP 403
 - https://visitangelfirenm.com/listing/enchanted-circle-campground-rv-park/: HTTP 403
-- https://visitangelfirenm.com/listing/enchanted-outpost-magazine/: HTTP 403
-- https://visitangelfirenm.com/listing/family-dollar/: HTTP 403
+- https://visitangelfirenm.com/listing/enchanted-circle-campground/: HTTP 403
+- https://visitangelfirenm.com/listing/high-country-ski-rental/: HTTP 403
+- https://visitangelfirenm.com/listing/jc-critter-control-llc/: HTTP 403
 - https://visitangelfirenm.com/listing/jeanettes-specialty-foods-catering/: HTTP 403
 - https://visitangelfirenm.com/listing/legacy-silver-company/: HTTP 403
-- https://visitangelfirenm.com/listing/los-rios-river-runners/: HTTP 403
-- https://visitangelfirenm.com/listing/mi-cocina-mexicana/: HTTP 403
-- https://visitangelfirenm.com/listing/mikuna-grill/: HTTP 403
-- https://visitangelfirenm.com/listing/monte-verde-lake/: HTTP 403
+- https://visitangelfirenm.com/listing/lindsey-homes/: HTTP 403
+- https://visitangelfirenm.com/listing/lowes-market/: HTTP 403
+- https://visitangelfirenm.com/listing/maverick-campground/: HTTP 403
+- https://visitangelfirenm.com/listing/mountain-serenity-rentals/: HTTP 403
+- https://visitangelfirenm.com/listing/north-country-real-estate/: HTTP 403
+- https://visitangelfirenm.com/listing/off-grid-grow-co-dispensary/: HTTP 403
+- https://visitangelfirenm.com/listing/pizza-stop/: HTTP 403
+- https://visitangelfirenm.com/listing/pub-and-grub/: HTTP 403
 - https://visitangelfirenm.com/listing/purple-sage-studio/: HTTP 403
 - https://visitangelfirenm.com/listing/ridgewalk-treehouse/: HTTP 403
 - https://visitangelfirenm.com/listing/rio-grande-balloons/: HTTP 403
+- https://visitangelfirenm.com/listing/santa-fe-party-rentals/: HTTP 403
+- https://visitangelfirenm.com/listing/sierra-bonita-cabins-rv-park/: HTTP 403
+- https://visitangelfirenm.com/listing/ski-tech-bluebird-mountain-sports/: HTTP 403
+- https://visitangelfirenm.com/listing/slope-side-sports/: HTTP 403
 - https://visitangelfirenm.com/listing/smoke-rings-bbq/: HTTP 403
+- https://visitangelfirenm.com/listing/snowblaze-ski-shop/: HTTP 403
 - https://visitangelfirenm.com/listing/southern-exposure-photography/: HTTP 403
-- https://visitangelfirenm.com/listing/taty-at-the-bump/: HTTP 403
+- https://visitangelfirenm.com/listing/sweet-shirt-co/: HTTP 403
+- https://visitangelfirenm.com/listing/taos-community-foundation/: HTTP 403
+- https://visitangelfirenm.com/listing/thai-angel/: HTTP 403
 - https://visitangelfirenm.com/listing/the-bakery-and-cafe/: HTTP 403
-- https://visitangelfirenm.com/listing/the-indigo-market/: HTTP 403
-- https://visitangelfirenm.com/listing/tolby-campground-cimarron-valley/: HTTP 403
-- https://visitangelfirenm.com/listing/trailhead-ski-shop/: HTTP 403
+- https://visitangelfirenm.com/listing/the-shuter-library-of-angel-fire/: HTTP 403
+- https://visitangelfirenm.com/listing/the-vietnam-veterans-memorial/: HTTP 403
+- https://visitangelfirenm.com/listing/vacasa-new-mexico-llc/: HTTP 403
 - https://visitangelfirenm.com/listing/village-ski-shop/: HTTP 403
+- https://visitangelfirenm.com/listing/weezies-wild-rides/: HTTP 403
 - https://visitangelfirenm.com/listing/whatville/: HTTP 403
 - https://visitangelfirenm.com/listing/zebs-restaurant-and-bar/: HTTP 403
-- https://visittrinidadcolorado.com/attraction/trinidad-history-museum/: HTTP 403
-- https://visittrinidadcolorado.com/shop/: HTTP 403
 - https://www.bestwestern.com/en_US/book/hotels-in-walsenburg/best-western-rambler/propertyCode.06038.html: HTTP 403
-- https://www.lavetatheaterweb.org: <urlopen error [Errno -2] Name or service not known>
+- https://www.cannacity.us/home: <urlopen error [Errno 11001] getaddrinfo failed>
+- https://www.marketplacegallery.net: <urlopen error [Errno 11001] getaddrinfo failed>
+- https://www.tabularasa.gallery: <urlopen error [Errno 11001] getaddrinfo failed>
+- https://www.twofoxcabins.com/: HTTP 403
+- https://www.yellowpages.com/angel-fire-nm/business-listings/1: HTTP 403
+- https://www.yellowpages.com/la-veta-co: HTTP 403

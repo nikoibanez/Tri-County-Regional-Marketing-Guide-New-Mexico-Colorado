@@ -26,9 +26,16 @@ class NationalFundingDataTests(unittest.TestCase):
     def test_curated_directory_and_watch_list_are_complete(self) -> None:
         self.assertEqual(validate(OPPORTUNITIES, WATCH_SOURCES), [])
         opportunities = json.loads(OPPORTUNITIES.read_text(encoding="utf-8"))["opportunities"]
-        sources = json.loads(WATCH_SOURCES.read_text(encoding="utf-8"))["sources"]
-        self.assertGreaterEqual(len(opportunities), 73)
-        self.assertEqual(len(sources), 10)
+        watch_payload = json.loads(WATCH_SOURCES.read_text(encoding="utf-8"))
+        sources = watch_payload["sources"]
+        self.assertGreaterEqual(len(opportunities), 99)
+        self.assertGreaterEqual(len(sources), 30)
+        self.assertEqual(
+            {item["id"] for item in watch_payload["required_sweeps"]},
+            {"economic-development", "education", "healthcare", "nonprofits", "arts-culture"},
+        )
+        covered = {topic for source in sources for topic in source["sweep_topics"]}
+        self.assertEqual(covered, {"economic-development", "education", "healthcare", "nonprofits", "arts-culture"})
 
     def test_regional_infographic_programs_are_structured_directory_records(self) -> None:
         opportunities = json.loads(OPPORTUNITIES.read_text(encoding="utf-8"))["opportunities"]
@@ -48,6 +55,28 @@ class NationalFundingDataTests(unittest.TestCase):
                 "nm-creative-support-organization-grant",
                 "nm-creative-business-development-grant",
                 "nm-creative-public-development-projects-grant",
+            }.issubset(opportunity_ids)
+        )
+
+    def test_five_subject_sweeps_added_region_specific_non_loan_support(self) -> None:
+        opportunities = json.loads(OPPORTUNITIES.read_text(encoding="utf-8"))["opportunities"]
+        opportunity_ids = {item["id"] for item in opportunities}
+        self.assertTrue(
+            {
+                "nm-edd-leads",
+                "first-southwest-workshop-grants",
+                "trinidad-state-learn-local-scholarship",
+                "mary-john-goree-scholarship",
+                "cuchara-chapel-scholarship",
+                "nmcf-northeastern-regional-health-fund",
+                "health-solutions-community-sponsorship",
+                "spanish-peaks-healthcare-foundation-scholarships",
+                "brindle-early-childhood-grants",
+                "robert-hoag-rawlings-foundation-grants",
+                "john-g-duncan-charitable-trust",
+                "taos-community-foundation-impact-grants",
+                "nm-arts-southwest-artist-purchase",
+                "nm-arts-indigenous-artist-purchase",
             }.issubset(opportunity_ids)
         )
 
@@ -74,6 +103,16 @@ class NationalFundingDataTests(unittest.TestCase):
                 "Loans and capital",
             },
         )
+
+    def test_non_loan_awards_use_the_cash_grant_filter(self) -> None:
+        for program_type in (
+            "Education scholarship",
+            "Healthcare scholarship",
+            "Community sponsorship or donation",
+            "Artwork purchase award",
+            "Artist stipend",
+        ):
+            self.assertEqual(guide_builder.funding_program_group({"program_type": program_type}), "Cash grants")
 
     def test_directory_assistant_searches_funding_records(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -113,6 +152,35 @@ class NationalFundingDataTests(unittest.TestCase):
 
 
 class NationalFundingWatchTests(unittest.TestCase):
+    def test_each_requested_subject_is_a_distinct_reported_sweep(self) -> None:
+        payload = json.loads(WATCH_SOURCES.read_text(encoding="utf-8"))
+        self.assertEqual(funding_watch.validate_watch_registry(payload), [])
+        results = [
+            {
+                "source": source,
+                "check": {"status": "ok"},
+                "change_status": "unchanged",
+            }
+            for source in payload["sources"]
+        ]
+        summary = funding_watch.summarize(results)
+        self.assertEqual(set(summary["sweep_counts"]), set(funding_watch.SWEEP_TOPIC_LABELS))
+        for counts in summary["sweep_counts"].values():
+            self.assertGreater(counts["configured"], 0)
+            self.assertEqual(counts["checked"], counts["configured"])
+
+        report_payload = {
+            "generated_at": "2026-08-25T12:00:00-06:00",
+            "summary": summary,
+            "results": results,
+        }
+        with tempfile.TemporaryDirectory() as temp_dir:
+            report_path = Path(temp_dir) / "funding-watch.md"
+            funding_watch.write_markdown(report_payload, report_path)
+            report = report_path.read_text(encoding="utf-8")
+        for label in funding_watch.SWEEP_TOPIC_LABELS.values():
+            self.assertIn(f"### {label}", report)
+
     def test_text_extractor_ignores_scripts_and_keeps_review_signals(self) -> None:
         markup = """
         <html><head><script>deadline = 'wrong';</script></head>

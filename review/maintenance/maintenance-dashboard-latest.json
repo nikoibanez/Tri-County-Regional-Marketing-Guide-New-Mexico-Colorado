@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-08-25T05:18:28-06:00",
+  "generated_at": "2026-10-11T00:22:21-06:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1498,
     "consolidated_directory_entries": 687,
-    "registered_update_sources": 136,
+    "registered_update_sources": 170,
     "deep_watch_sources": 15,
     "keyword_index_entries": 1498,
     "outreach_review_entries": 1362,
-    "outreach_review_shortcuts": 104,
-    "outreach_review_total": 1466,
-    "national_funding_opportunities": 73,
-    "national_funding_watch_sources": 10,
+    "outreach_review_shortcuts": 117,
+    "outreach_review_total": 1479,
+    "national_funding_opportunities": 99,
+    "national_funding_watch_sources": 31,
     "resource_discovery_sources": 45,
     "free_tools": 22,
     "free_tool_discovery_sources": 5
@@ -19,48 +19,48 @@
   "latest_checks": {
     "directory_quality": "pass",
     "internal_links": "pass",
-    "source_urls_checked": 135,
+    "source_urls_checked": 169,
     "source_urls_confirmed_broken": 0,
-    "source_urls_browser_check": 0,
-    "source_urls_script_limited": 28,
+    "source_urls_browser_check": 1,
+    "source_urls_script_limited": 33,
     "source_field_checks": 1,
     "watch_pages_checked": 32,
-    "watch_pages_failed": 8,
+    "watch_pages_failed": 2,
     "priority_new_leads": 1,
     "keyword_urls_checked": 120,
-    "keyword_entries_changed": 40,
+    "keyword_entries_changed": 9,
     "outreach_listed_routes": 307,
-    "outreach_ask_routes": 702,
+    "outreach_ask_routes": 703,
     "outreach_without_routes": 620,
-    "shortcut_outreach_listed_routes": 19,
-    "shortcut_outreach_ask_routes": 44,
+    "shortcut_outreach_listed_routes": 27,
+    "shortcut_outreach_ask_routes": 56,
     "shortcut_outreach_without_routes": 52,
-    "funding_watch_pages_checked": 10,
-    "funding_watch_pages_changed": 0,
-    "funding_watch_new_baselines": 1,
+    "funding_watch_pages_checked": 31,
+    "funding_watch_pages_changed": 2,
+    "funding_watch_new_baselines": 16,
     "funding_watch_confirmed_broken": 0,
-    "funding_watch_check_failures": 4,
+    "funding_watch_check_failures": 9,
     "resource_discovery_candidates": 176,
-    "resource_discovery_changed": 17,
+    "resource_discovery_changed": 6,
     "resource_discovery_broken": 0,
-    "resource_discovery_failures": 5,
-    "free_tool_pages_checked": 22,
-    "free_tool_pages_changed": 0,
+    "resource_discovery_failures": 7,
+    "free_tool_pages_checked": 21,
+    "free_tool_pages_changed": 1,
     "free_tool_candidate_links": 0,
-    "free_tool_checks_failed": 5
+    "free_tool_checks_failed": 6
   },
   "action_queue": [
+    {
+      "priority": "high",
+      "count": 18,
+      "label": "national funding pages waiting for claim review",
+      "next_action": "Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory."
+    },
     {
       "priority": "high",
       "count": 1,
       "label": "priority directory candidates",
       "next_action": "Confirm each linked listing page before adding it to canonical data."
-    },
-    {
-      "priority": "high",
-      "count": 1,
-      "label": "national funding pages waiting for claim review",
-      "next_action": "Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory."
     },
     {
       "priority": "medium",
@@ -76,13 +76,13 @@
     },
     {
       "priority": "medium",
-      "count": 40,
+      "count": 9,
       "label": "listing keyword sets proposed for review",
       "next_action": "Review additions and removals in the latest keyword-sweep report before merging the keyword index."
     },
     {
       "priority": "medium",
-      "count": 1,
+      "count": 2,
       "label": "free-tool or nonprofit-offer pages waiting for wording review",
       "next_action": "Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory."
     },
@@ -94,27 +94,33 @@
     },
     {
       "priority": "low",
-      "count": 36,
+      "count": 76,
       "label": "keyword source pages needing attention",
       "next_action": "Open failed pages normally before removing retained source-derived keywords."
     },
     {
       "priority": "low",
-      "count": 5,
+      "count": 9,
+      "label": "national funding pages needing a normal-browser check",
+      "next_action": "Open these pages normally; do not treat bot blocking or a temporary network error as a closed program."
+    },
+    {
+      "priority": "low",
+      "count": 7,
       "label": "resource-discovery hubs needing a normal-browser check",
       "next_action": "Open these pages normally; do not remove a source because of bot blocking or a temporary request failure."
     },
     {
       "priority": "low",
-      "count": 5,
+      "count": 6,
       "label": "free-tool pages needing a normal-browser check",
       "next_action": "Open failed pages normally; do not remove a tool solely because automation was blocked or timed out."
     },
     {
       "priority": "low",
-      "count": 4,
-      "label": "national funding pages needing a normal-browser check",
-      "next_action": "Open these pages normally; do not treat bot blocking or a temporary network error as a closed program."
+      "count": 1,
+      "label": "sources the automated checker could not confirm",
+      "next_action": "Open these in a normal browser; do not remove a link solely because of a timeout, network problem, or temporary server response."
     },
     {
       "priority": "low",

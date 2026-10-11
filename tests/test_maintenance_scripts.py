@@ -530,21 +530,22 @@ class WorkflowTests(unittest.TestCase):
         self.assertIn("`codex/luna-automation-integration`", markdown)
 
     def test_weekly_directory_query_check_builds_before_connectivity_audit(self) -> None:
-        workflow = (ROOT / ".github" / "workflows" / "weekly-directory-query-check.yml").read_text(encoding="utf-8")
+        workflow = (ROOT / ".github" / "workflows" / "weekly-guide-maintenance.yml").read_text(encoding="utf-8")
         self.assertLess(
             workflow.index("python tools/build_netlify_deep_guide.py"),
             workflow.index("python scripts/audit_directory_connectivity.py --workers 16 --timeout 10"),
         )
 
+    def test_audit_csv_writers_use_stable_line_endings(self) -> None:
+        for relative_path in (
+            "scripts/audit_directory_connectivity.py",
+            "scripts/audit_directory_outreach_channels.py",
+        ):
+            source = (ROOT / relative_path).read_text(encoding="utf-8")
+            self.assertIn('lineterminator="\\n"', source, relative_path)
+
     def test_all_automated_review_workflows_cross_check_canonical_master(self) -> None:
-        workflows = (
-            "weekly-directory-query-check.yml",
-            "source-audit.yml",
-            "weekly-listing-keyword-sweep.yml",
-            "weekly-national-funding-watch.yml",
-            "weekly-resource-discovery.yml",
-            "monthly-maintenance-snapshot.yml",
-        )
+        workflows = ("weekly-guide-maintenance.yml",)
 
         for filename in workflows:
             workflow = (ROOT / ".github" / "workflows" / filename).read_text(encoding="utf-8")
@@ -562,6 +563,35 @@ class WorkflowTests(unittest.TestCase):
             self.assertIn("OPEN_PR_CONTEXT", workflow, filename)
             self.assertIn("Open review work checked before this run", workflow, filename)
             self.assertIn("gh pr create --draft --base master", workflow, filename)
+
+    def test_weekly_review_uses_one_stable_branch_and_one_schedule(self) -> None:
+        workflow_dir = ROOT / ".github" / "workflows"
+        workflow = (workflow_dir / "weekly-guide-maintenance.yml").read_text(encoding="utf-8")
+
+        self.assertEqual(workflow.count("cron:"), 1)
+        self.assertIn("automation/weekly-guide-maintenance", workflow)
+        self.assertIn('gh pr list --state open --base master --head "$REVIEW_BRANCH"', workflow)
+        self.assertNotIn('branch="automation/', workflow)
+        for command in (
+            "weekly_directory_query_check.py",
+            "audit_update_sources.py",
+            "audit_national_funding_sources.py",
+            "sweep_listing_keywords.py",
+            "audit_resource_discovery_sources.py",
+            "audit_free_tools.py",
+        ):
+            self.assertIn(command, workflow)
+
+        retired = (
+            "weekly-directory-query-check.yml",
+            "source-audit.yml",
+            "weekly-listing-keyword-sweep.yml",
+            "weekly-national-funding-watch.yml",
+            "weekly-resource-discovery.yml",
+            "weekly-event-source-watch.yml",
+        )
+        for filename in retired:
+            self.assertFalse((workflow_dir / filename).exists(), filename)
 
     def test_codex_proposal_prompt_uses_the_same_canonical_checkpoint(self) -> None:
         workflow = (ROOT / ".github" / "workflows" / "codex-update-proposal.yml").read_text(encoding="utf-8")
@@ -681,7 +711,7 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("@media (hover: hover) and (pointer: fine)", css)
         self.assertIn("@keyframes navCursorGlow", css)
         self.assertIn("animation: navCursorGlow 1800ms ease-in-out infinite;", css)
-        for kind in ("route", "external", "email", "phone", "download", "action"):
+        for kind in ("route", "directory", "external", "email", "phone", "download", "action"):
             self.assertIn(f'raton-cursor-{kind}.svg', css)
             self.assertTrue((ROOT / "assets" / "brand" / f"raton-cursor-{kind}.svg").exists())
         self.assertIn(".guide-cursor-halo.is-visible", css)
@@ -689,8 +719,23 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("function guideCursorKind(element)", js)
         self.assertIn('lowerHref.startsWith("mailto:")', js)
         self.assertIn('lowerHref.startsWith("tel:")', js)
+        self.assertIn('anchor.closest(".resource-item, .source-card, .assistant-result")', js)
         self.assertIn("initGuideCursorCues();", js)
         self.assertIn("@media (prefers-reduced-motion: reduce)", css)
+
+    def test_physical_location_marker_uses_a_building_icon(self) -> None:
+        with tempfile.TemporaryDirectory() as folder:
+            asset_out = Path(folder)
+            with patch.object(guide_builder, "ASSET_OUT", asset_out):
+                guide_builder.write_static_assets()
+            css = (asset_out / "styles.css").read_text(encoding="utf-8")
+
+        physical_rule = css.split(".listing-marker--physical::before {", 1)[1].split("}", 1)[0]
+        self.assertIn("mask-image:", physical_rule)
+        self.assertIn("background-color: var(--route)", physical_rule)
+        self.assertNotIn("border:", physical_rule)
+        marker = guide_builder.resource_physical_indicator_badges({"has_physical_location": "true"})
+        self.assertIn("Physical location", marker)
 
     def test_primary_navigation_combines_direct_resources_with_county_promote_routes(self) -> None:
         page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
