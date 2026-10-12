@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-11T00:17:12-06:00",
-  "data_file": "C:\\Temp\\tri-county-raton-animation-palettes\\data\\free-tools.json",
+  "generated_at": "2026-10-12T22:29:12+00:00",
+  "data_file": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/free-tools.json",
   "summary": {
     "tools_configured": 22,
     "discovery_sources": 5,
-    "checked_ok": 21,
+    "checked_ok": 22,
     "changed": 1,
     "new_baselines": 0,
-    "unchanged": 20,
-    "failed": 6,
+    "unchanged": 21,
+    "failed": 5,
     "new_failures": 0,
     "automation_blocked": 5,
     "term_reviews": 1,
     "new_term_reviews": 0,
-    "candidate_links": 0,
-    "candidate_links_seen": 47,
-    "review_count": 1
+    "candidate_links": 16,
+    "candidate_links_seen": 63,
+    "review_count": 17
   },
   "results": [
     {
@@ -59,7 +59,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.adobe.com/nonprofits/express.html",
-        "elapsed_ms": 455,
+        "elapsed_ms": 129,
         "content_hash": "eff16c8b0bd3868e41cabc533ab6bacdc3aad4d6689fdad0267331fdaa9d5749",
         "text_length": 8208,
         "link_count": 33,
@@ -91,10 +91,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.gimp.org/",
-        "elapsed_ms": 761,
-        "content_hash": "7df6333f7edf58e3c82a8a4cfac4e083dbcd9d0e7943305b55d68178f26932d1",
-        "text_length": 2681,
-        "link_count": 63,
+        "elapsed_ms": 172,
+        "content_hash": "949337ff45b09269b0c7d3722097a2b764de76cccdc70558d902032f68584344",
+        "text_length": 2683,
+        "link_count": 65,
         "error": ""
       },
       "change_status": "unchanged",
@@ -120,13 +120,20 @@
         ]
       },
       "check": {
-        "status": "timeout",
-        "status_code": null,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://inkscape.org/about/",
-        "error": "The read operation timed out"
+        "elapsed_ms": 3306,
+        "content_hash": "c26c3dbe1717b65825446fcc1539a99385945e1bf8c1209e313b2bbb0651e3d5",
+        "text_length": 2887,
+        "link_count": 90,
+        "error": ""
       },
-      "change_status": "check_failed",
-      "term_hits": [],
+      "change_status": "unchanged",
+      "term_hits": [
+        "free",
+        "open source"
+      ],
       "term_review": false,
       "new_term_review": false,
       "new_failure": false,
@@ -148,8 +155,8 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.scribus.net/",
-        "elapsed_ms": 2309,
-        "content_hash": "b794950e1ca913b54ed938d4bd6d70002c38d03be46428bb94f8a7348502196f",
+        "elapsed_ms": 1249,
+        "content_hash": "d10fff30493168a81511db4ef66314b23c2504360b1bbc5f46ea97628a26c811",
         "text_length": 2889,
         "link_count": 53,
         "error": ""
@@ -180,8 +187,8 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://workspace.google.com/products/forms/",
-        "elapsed_ms": 2075,
-        "content_hash": "7d910429d8eb00d7fb82259440ccb22a250c39c42bced7a2ff1f201f1c63687d",
+        "elapsed_ms": 110,
+        "content_hash": "3f1bc7b4c6c40c0b24f3ba162e294e594bc94c187700f289d76b1013383c3598",
         "text_length": 33515,
         "link_count": 496,
         "error": ""
@@ -211,7 +218,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.libreoffice.org/#screenshots",
-        "elapsed_ms": 2041,
+        "elapsed_ms": 1052,
         "content_hash": "44ed4478ccb7b2c4a891d5d297878fd751158e34bad54934a787e22bfb5aee09",
         "text_length": 5163,
         "link_count": 70,
@@ -244,7 +251,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.google.com/nonprofits/about/program-overview/",
-        "elapsed_ms": 826,
+        "elapsed_ms": 88,
         "content_hash": "e0a799523f67d308ff0cb4897192fa6f10ba736a636727f9d9243d71833d11d0",
         "text_length": 6573,
         "link_count": 71,
@@ -277,7 +284,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.hubspot.com/pricing/crm",
-        "elapsed_ms": 1265,
+        "elapsed_ms": 183,
         "content_hash": "8ffc2a06a49e2e79ddc1fb069550dc815eb6a350ce2a1e2ef45bb43ee2e7a217",
         "text_length": 20,
         "link_count": 0,
@@ -308,7 +315,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://mailchimp.com/help/about-mailchimp-pricing-plans/",
-        "elapsed_ms": 756,
+        "elapsed_ms": 277,
         "content_hash": "15d631ac6234ebe0d3a3cf427804623e9b41401ddfda126dc42a1b1cf7942449",
         "text_length": 13172,
         "link_count": 273,
@@ -365,7 +372,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://business.google.com/en-all/business-profile/",
-        "elapsed_ms": 1028,
+        "elapsed_ms": 226,
         "content_hash": "25d45d4489889e0fec41568cef2879b912f7a293a80b9be59727580b28543987",
         "text_length": 11835,
         "link_count": 177,
@@ -396,11 +403,11 @@
       "check": {
         "status": "ok",
         "status_code": 200,
-        "final_url": "https://www.facebook.com/business",
-        "elapsed_ms": 3058,
-        "content_hash": "d0c17daff93f0b190a6e8a4abefb6343e8caf443fcda13272861c2bf0f77314b",
-        "text_length": 2627,
-        "link_count": 44,
+        "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fbusiness",
+        "elapsed_ms": 583,
+        "content_hash": "b46abe531324abb6a62cc8e62c83b05b8afc4f0064e79c101f0791e9bb3c24be",
+        "text_length": 510,
+        "link_count": 35,
         "error": ""
       },
       "change_status": "unchanged",
@@ -426,9 +433,9 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://buffer.com/pricing",
-        "elapsed_ms": 1136,
-        "content_hash": "c7dfa3030b7e828b3eca2a704a5a74dd16bf88f406f7d0608d8ef1fcd384013f",
-        "text_length": 26019,
+        "elapsed_ms": 293,
+        "content_hash": "ee96c1d58336566ecb12dd564ac569b75404321417037ae16e94af017e6b18ae",
+        "text_length": 25910,
         "link_count": 184,
         "error": ""
       },
@@ -458,7 +465,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.audacityteam.org/faq/",
-        "elapsed_ms": 612,
+        "elapsed_ms": 291,
         "content_hash": "748a66920071160cecae06b486d811234c41523df17b0fd8fd30bcb0611c108d",
         "text_length": 11551,
         "link_count": 88,
@@ -490,7 +497,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://obsproject.com/",
-        "elapsed_ms": 835,
+        "elapsed_ms": 324,
         "content_hash": "152cdc1fe8d684244181b8532cfd638fdb707d09a6d197cde778f42446b3f72e",
         "text_length": 3386,
         "link_count": 62,
@@ -522,7 +529,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.shotcut.org/",
-        "elapsed_ms": 493,
+        "elapsed_ms": 195,
         "content_hash": "c7f58b647ade8f43634d6ed11e7bdb1d6dc8fba8a149cbb1e06f79c9b3cf372c",
         "text_length": 2951,
         "link_count": 37,
@@ -605,8 +612,8 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.microsoft.com/en-us/nonprofits/eligibility",
-        "elapsed_ms": 780,
-        "content_hash": "46bd6aedaf85b3188d688fdf0bd8dfc4de1130e4af96ad9694590d4fad12619f",
+        "elapsed_ms": 143,
+        "content_hash": "769909f1fe2b73bb898bb55cb4b81aa53f10f2c59c9f2832243b234789178507",
         "text_length": 10471,
         "link_count": 148,
         "error": ""
@@ -639,7 +646,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://slack.com/help/articles/204368833-Apply-for-the-Slack-for-Nonprofits-discount",
-        "elapsed_ms": 956,
+        "elapsed_ms": 90,
         "content_hash": "029ba3685b3abf029a941c3885788087872ef0c1f8b65c499913f8080aec7b68",
         "text_length": 10216,
         "link_count": 136,
@@ -673,7 +680,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://support.zeffy.com/what-is-zeffy-t8qzy",
-        "elapsed_ms": 711,
+        "elapsed_ms": 173,
         "content_hash": "ad92f01b242de82d3591ec42a33fd0c72dc3015839ccc36e5a145a3f8b3d1196",
         "text_length": 7472,
         "link_count": 103,
@@ -708,10 +715,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.techsoup.org/",
-        "elapsed_ms": 407,
-        "content_hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
-        "text_length": 0,
-        "link_count": 0,
+        "elapsed_ms": 1875,
+        "content_hash": "547133e7c77f512edbf74275fcad759d16e399472c7c7b7b3312fc8deefdbaa3",
+        "text_length": 8760,
+        "link_count": 97,
         "error": ""
       },
       "change_status": "changed",
@@ -719,8 +726,140 @@
       "term_review": false,
       "new_term_review": false,
       "new_failure": false,
-      "candidate_count": 0,
-      "candidates": []
+      "candidate_count": 16,
+      "candidates": [
+        {
+          "title": "AI Services",
+          "url": "https://page.techsoup.org/ai-services-for-nonprofits",
+          "matched_terms": [
+            "nonprofit",
+            "service"
+          ],
+          "score": 2
+        },
+        {
+          "title": "IT Help Desk Services",
+          "url": "https://page.techsoup.org/help-desk-for-nonprofits",
+          "matched_terms": [
+            "nonprofit",
+            "service"
+          ],
+          "score": 2
+        },
+        {
+          "title": "TechSoup Services Services for Nonprofits ​​Expert support for your nonprofit’s tech challenges​​​",
+          "url": "https://page.techsoup.org/nonprofit-technology-services",
+          "matched_terms": [
+            "nonprofit",
+            "service"
+          ],
+          "score": 2
+        },
+        {
+          "title": "Accounting & QuickBooks Services",
+          "url": "https://page.techsoup.org/services?category=accounting?category=accounting",
+          "matched_terms": [
+            "service"
+          ],
+          "score": 1
+        },
+        {
+          "title": "All Services Overview",
+          "url": "https://page.techsoup.org/services",
+          "matched_terms": [
+            "service"
+          ],
+          "score": 1
+        },
+        {
+          "title": "amazon-web-services",
+          "url": "https://www.techsoup.org/amazon-web-services",
+          "matched_terms": [
+            "service"
+          ],
+          "score": 1
+        },
+        {
+          "title": "Autodesk",
+          "url": "https://page.techsoup.org/autodesk-for-nonprofits",
+          "matched_terms": [
+            "nonprofit"
+          ],
+          "score": 1
+        },
+        {
+          "title": "Cybersecurity Services",
+          "url": "https://page.techsoup.org/services?category=cybersecurity?category=cybersecurity",
+          "matched_terms": [
+            "service"
+          ],
+          "score": 1
+        },
+        {
+          "title": "Digital Marketing & Social Media Services",
+          "url": "https://page.techsoup.org/services-web-marketing-ai",
+          "matched_terms": [
+            "service"
+          ],
+          "score": 1
+        },
+        {
+          "title": "Full Catalog",
+          "url": "https://www.techsoup.org/get-product-donations",
+          "matched_terms": [
+            "donation"
+          ],
+          "score": 1
+        },
+        {
+          "title": "Get Started",
+          "url": "https://www.techsoup.org/products/microsoft-copilot-nonprofit-cloud-subscriptions-g-58498-",
+          "matched_terms": [
+            "nonprofit"
+          ],
+          "score": 1
+        },
+        {
+          "title": "Google Ad Grants Services",
+          "url": "https://page.techsoup.org/google-ad-grants-managed-services",
+          "matched_terms": [
+            "service"
+          ],
+          "score": 1
+        },
+        {
+          "title": "Google Services",
+          "url": "https://page.techsoup.org/services?category=google?category=google",
+          "matched_terms": [
+            "service"
+          ],
+          "score": 1
+        },
+        {
+          "title": "Grant Preparation Services",
+          "url": "https://page.techsoup.org/services?category=grants?category=grants",
+          "matched_terms": [
+            "service"
+          ],
+          "score": 1
+        },
+        {
+          "title": "HR Services",
+          "url": "https://page.techsoup.org/services?category=human-resources?category=human-resources",
+          "matched_terms": [
+            "service"
+          ],
+          "score": 1
+        },
+        {
+          "title": "Microsoft Services",
+          "url": "https://page.techsoup.org/services?category=microsoft-services",
+          "matched_terms": [
+            "service"
+          ],
+          "score": 1
+        }
+      ]
     },
     {
       "record": {
@@ -740,7 +879,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.google.com/nonprofits/about/program-overview/",
-        "elapsed_ms": 471,
+        "elapsed_ms": 52,
         "content_hash": "e0a799523f67d308ff0cb4897192fa6f10ba736a636727f9d9243d71833d11d0",
         "text_length": 6573,
         "link_count": 71,
@@ -772,8 +911,8 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.microsoft.com/en-us/nonprofits/offers-for-nonprofits",
-        "elapsed_ms": 643,
-        "content_hash": "0a44cba6a964506ffda88e6cf5a69b09f02f71c9d3e3940e1eaa7fccb175dd59",
+        "elapsed_ms": 112,
+        "content_hash": "ea1e516bd12a97390c52e2cd3c1701759311a0705f5f3f9df082dd9c1e4b5689",
         "text_length": 10970,
         "link_count": 166,
         "error": ""
@@ -830,7 +969,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.adobe.com/nonprofits/express.html",
-        "elapsed_ms": 618,
+        "elapsed_ms": 83,
         "content_hash": "eff16c8b0bd3868e41cabc533ab6bacdc3aad4d6689fdad0267331fdaa9d5749",
         "text_length": 8208,
         "link_count": 33,
