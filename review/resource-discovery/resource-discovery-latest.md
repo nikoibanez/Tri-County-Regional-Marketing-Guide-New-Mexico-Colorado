@@ -1,6 +1,6 @@
 # Resource Discovery Review
 
-Generated: 2026-10-11T00:18:33-06:00
+Generated: 2026-10-12T22:28:49+00:00
 
 This is a private candidate queue. A link or page change is not proof that a resource fits the guide or that an opportunity is open.
 
@@ -8,8 +8,8 @@ This is a private candidate queue. A link or page change is not proof that a res
 
 - Source hubs configured: 45
 - Source hubs checked: 45
-- Candidate links collected: 176
-- Changed pages: 6
+- Candidate links collected: 175
+- Changed pages: 14
 - New baselines: 0
 - Confirmed broken URLs: 0
 - Script-access limitations: 7
@@ -179,8 +179,10 @@ Category: nonprofit-directories. Page status: changed.
 
 ### [Groundworks New Mexico Nonprofit Directory](https://www.groundworksnm.org/nonprofit-directory)
 
-Category: nonprofit-directories. Page status: unchanged.
+Category: nonprofit-directories. Page status: changed.
 
+- [Moreno Valley Arts Council](https://www.groundworksnm.org/nonprofit-directory/nonprofit/1032) - matched: arts, nonprofit directory
+- [Spanish Colonial Arts Society | Nuevo Mexicano Heritage Arts Museum](https://www.groundworksnm.org/nonprofit-directory/nonprofit/6932) - matched: arts, nonprofit directory
 - [City](https://www.groundworksnm.org/nonprofit-directory?order=city&sort=asc) - matched: city, nonprofit directory
 - [2](https://www.groundworksnm.org/nonprofit-directory?page=1) - matched: nonprofit directory
 - [3](https://www.groundworksnm.org/nonprofit-directory?page=2) - matched: nonprofit directory
@@ -191,20 +193,18 @@ Category: nonprofit-directories. Page status: unchanged.
 - [8](https://www.groundworksnm.org/nonprofit-directory?page=7) - matched: nonprofit directory
 - [9](https://www.groundworksnm.org/nonprofit-directory?page=8) - matched: nonprofit directory
 - [Advanced Search](https://www.groundworksnm.org/nonprofit-directory/advanced-search) - matched: nonprofit directory
-- [Assistance League of Carlsbad](https://www.groundworksnm.org/nonprofit-directory/nonprofit/11387) - matched: nonprofit directory
-- [Basement Films](https://www.groundworksnm.org/nonprofit-directory/nonprofit/6304) - matched: nonprofit directory
+- [Albuquerque North Science Center](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26903) - matched: nonprofit directory
+- [Albuquerque SCORE](https://www.groundworksnm.org/nonprofit-directory/nonprofit/6614) - matched: nonprofit directory
+- [American Association for International Aging](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26908) - matched: nonprofit directory
+- [American Village Communities](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26912) - matched: nonprofit directory
+- [Black River Center for Learning](https://www.groundworksnm.org/nonprofit-directory/nonprofit/11840) - matched: nonprofit directory
 - [Browse by Name](https://www.groundworksnm.org/nonprofit-directory/all) - matched: nonprofit directory
-- [Cancer Support Services - a Program Of Holy Cross Medical Center](https://www.groundworksnm.org/nonprofit-directory/nonprofit/59718) - matched: nonprofit directory
-- [CareNet Pregnancy Center of Las Cruces](https://www.groundworksnm.org/nonprofit-directory/nonprofit/34162) - matched: nonprofit directory
-- [Casa Aliento](https://www.groundworksnm.org/nonprofit-directory/nonprofit/40968) - matched: nonprofit directory
-- [Center on Alcoholism and Substance Abuse Addictions](https://www.groundworksnm.org/nonprofit-directory/nonprofit/7249) - matched: nonprofit directory
-- [Conserv America](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26988) - matched: nonprofit directory
-- [East Mountain High School Foundation](https://www.groundworksnm.org/nonprofit-directory/nonprofit/867) - matched: nonprofit directory
-- [FairVote](https://www.groundworksnm.org/nonprofit-directory/nonprofit/41300) - matched: nonprofit directory
-- [Friends Forever Serving New Mexico Children with Cancer](https://www.groundworksnm.org/nonprofit-directory/nonprofit/27059) - matched: nonprofit directory
-- [Gallup Inter-Tribal Indian Ceremonial Association](https://www.groundworksnm.org/nonprofit-directory/nonprofit/13043) - matched: nonprofit directory
-- [Habitat for Humanity of Taos](https://www.groundworksnm.org/nonprofit-directory/nonprofit/926) - matched: nonprofit directory
-- [Humane Society of Southern New Mexico](https://www.groundworksnm.org/nonprofit-directory/nonprofit/8419) - matched: nonprofit directory
+- [Cibola High School Golden Regiment Band Booster Club](https://www.groundworksnm.org/nonprofit-directory/nonprofit/43365) - matched: nonprofit directory
+- [Coalition to Stop Violence Against Native Women](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26977) - matched: nonprofit directory
+- [Crime Stoppers of Las Cruces and Dona Ana County](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26996) - matched: nonprofit directory
+- [Dreams Drama Drums](https://www.groundworksnm.org/nonprofit-directory/nonprofit/27013) - matched: nonprofit directory
+- [Earth Alert](https://www.groundworksnm.org/nonprofit-directory/nonprofit/13516) - matched: nonprofit directory
+- [Ecoversity](https://www.groundworksnm.org/nonprofit-directory/nonprofit/27020) - matched: nonprofit directory
 
 ### [Colorado Nonprofit Association Member Directory](https://coloradononprofits.org/member-resources/nonprofit-member-directory/)
 
@@ -220,20 +220,17 @@ Category: artists-creative-opportunities. Page status: unchanged.
 
 ### [Southwest Contemporary Classifieds](https://southwestcontemporary.com/classifieds/)
 
-Category: artists-creative-opportunities. Page status: unchanged.
+Category: artists-creative-opportunities. Page status: changed.
 
 - [Residency Call for Artists in Residence: Taliesin West December 31, 2026 October 5, 2026](https://southwestcontemporary.com/classifieds/call-for-artists-in-residence-taliesin-west/) - matched: call for artists, residency
 - [Call for Artists](https://southwestcontemporary.com/?page_id=12119) - matched: call for artists
 - [Call for Artists $4,500 Artist Grants | The Hopper Prize Fall 2026 November 17, 2026 September 23, 2026](https://southwestcontemporary.com/classifieds/4500-artist-grants-the-hopper-prize-fall-2026/) - matched: call for artists
-- [Call for Artists Call for Artists: Sutured Reality October 11, 2026 September 16, 2026](https://southwestcontemporary.com/classifieds/call-for-artists-sutured-reality/) - matched: call for artists
 - [Residency Printmaking Artist Residency October 26, 2026 October 5, 2026](https://southwestcontemporary.com/classifieds/printmaking-artist-residency/) - matched: artist residency, residency
 
 ### [Creative West Opportunities Portal](https://opportunities.wearecreativewest.org/)
 
 Category: artists-creative-opportunities. Page status: changed.
 
-- [Exhibition 2027 Los Angeles . Gallery Row Open Call Los Angeles, California Application fee: $35](https://opportunities.wearecreativewest.org/opportunity/18336/CAFE) - matched: application fee, exhibition, open call
-- [Exhibition 2027 Open Studio Tour Tubac, Arizona Application fee: $125](https://opportunities.wearecreativewest.org/opportunity/18186/CAFE) - matched: application fee, exhibition, studio tour
 - [Competitions OPEN CALL: ONGOING Los Angeles, California Application fee: $32](https://opportunities.wearecreativewest.org/opportunity/16993/CAFE) - matched: application fee, open call
 - [Public Art Archive™](https://publicartarchive.org/) - matched: public art, public art archive
 
@@ -246,8 +243,10 @@ Category: artists-creative-opportunities. Page status: unchanged.
 
 ### [ZAPP Artist Event Applications](https://www.zapplication.org/)
 
-Category: artists-creative-opportunities. Page status: unchanged.
+Category: artists-creative-opportunities. Page status: changed.
 
+- [Ann Arbor State Street District Art Fair 2027 - Artist Application](https://www.zapplication.org/event-info.php?ID=14856) - matched: art fair, artist application
+- [Ann Arbor State Street District MarketPlace 2027 - Vendor Application](https://www.zapplication.org/event-info.php?ID=14857) - matched: vendor, vendor application
 - [Bellevue Arts Fair 2026 - Food Vendor Application](https://www.zapplication.org/event-info.php?ID=14237) - matched: vendor, vendor application
 - [Oktoberfest 2026 Retail Vendor Application](https://www.zapplication.org/event-info.php?ID=14342) - matched: vendor, vendor application
 - [RiverArtsFest 2026 - Food Vendor Application](https://www.zapplication.org/event-info.php?ID=14136) - matched: vendor, vendor application
@@ -263,7 +262,7 @@ Category: artists-creative-opportunities. Page status: changed.
 
 ### [Res Artis Open Calls](https://resartis.org/open-calls/)
 
-Category: artists-creative-opportunities. Page status: unchanged.
+Category: artists-creative-opportunities. Page status: changed.
 
 - [chilkoot-trail-artist-residency-call-for-artists](https://resartis.org/open-call/chilkoot-trail-artist-residency-call-for-artists/) - matched: artist residency, call for artists, open call
 - [haihatus-artist-residency-open-call-february-april-2027](https://resartis.org/open-call/haihatus-artist-residency-open-call-february-april-2027/) - matched: artist residency, open call, residency open call
@@ -318,7 +317,7 @@ Category: artists-creative-opportunities. Page status: unchanged.
 - [USDA Rural Development Business Programs](https://www.rd.usda.gov/programs-services/business-programs) - access_blocked; HTTP Error 403: Forbidden
 - [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - access_blocked; HTTP Error 403: Forbidden
 - [Candid Foundation Directory Free Access](https://learning.candid.org/free-access-to-foundation-directory) - access_blocked; HTTP Error 403: Forbidden
-- [Anschutz Family Foundation Grantmaking](https://anschutzfamilyfoundation.org/our-grantmaking/) - tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1028)
-- [ColoradoGives.org Organization Search](https://www.coloradogives.org/search) - tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
+- [Anschutz Family Foundation Grantmaking](https://anschutzfamilyfoundation.org/our-grantmaking/) - tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1016)
 - [Colorado Secretary of State Business Database](https://www.sos.state.co.us/biz/BusinessEntityCriteriaExt.do) - access_blocked; HTTP Error 403: Forbidden
 - [Colorado Creative Industries](https://oedit.colorado.gov/colorado-creative-industries) - access_blocked; HTTP Error 403: Forbidden
+- [Taos Center for the Arts Calls for Submission](https://tcataos.org/calls-for-submission) - access_blocked; HTTP Error 403: Forbidden

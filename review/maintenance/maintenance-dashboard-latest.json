@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T00:22:21-06:00",
+  "generated_at": "2026-10-12T22:29:34+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1498,
@@ -21,14 +21,14 @@
     "internal_links": "pass",
     "source_urls_checked": 169,
     "source_urls_confirmed_broken": 0,
-    "source_urls_browser_check": 1,
-    "source_urls_script_limited": 33,
+    "source_urls_browser_check": 2,
+    "source_urls_script_limited": 34,
     "source_field_checks": 1,
     "watch_pages_checked": 32,
-    "watch_pages_failed": 2,
+    "watch_pages_failed": 10,
     "priority_new_leads": 1,
     "keyword_urls_checked": 120,
-    "keyword_entries_changed": 9,
+    "keyword_entries_changed": 1,
     "outreach_listed_routes": 307,
     "outreach_ask_routes": 703,
     "outreach_without_routes": 620,
@@ -36,26 +36,20 @@
     "shortcut_outreach_ask_routes": 56,
     "shortcut_outreach_without_routes": 52,
     "funding_watch_pages_checked": 31,
-    "funding_watch_pages_changed": 2,
-    "funding_watch_new_baselines": 16,
+    "funding_watch_pages_changed": 1,
+    "funding_watch_new_baselines": 0,
     "funding_watch_confirmed_broken": 0,
     "funding_watch_check_failures": 9,
-    "resource_discovery_candidates": 176,
-    "resource_discovery_changed": 6,
+    "resource_discovery_candidates": 175,
+    "resource_discovery_changed": 14,
     "resource_discovery_broken": 0,
     "resource_discovery_failures": 7,
-    "free_tool_pages_checked": 21,
+    "free_tool_pages_checked": 22,
     "free_tool_pages_changed": 1,
-    "free_tool_candidate_links": 0,
-    "free_tool_checks_failed": 6
+    "free_tool_candidate_links": 16,
+    "free_tool_checks_failed": 5
   },
   "action_queue": [
-    {
-      "priority": "high",
-      "count": 18,
-      "label": "national funding pages waiting for claim review",
-      "next_action": "Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory."
-    },
     {
       "priority": "high",
       "count": 1,
@@ -63,8 +57,14 @@
       "next_action": "Confirm each linked listing page before adding it to canonical data."
     },
     {
+      "priority": "high",
+      "count": 1,
+      "label": "national funding pages waiting for claim review",
+      "next_action": "Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory."
+    },
+    {
       "priority": "medium",
-      "count": 176,
+      "count": 175,
       "label": "resource candidate links waiting for review",
       "next_action": "Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data."
     },
@@ -76,15 +76,15 @@
     },
     {
       "priority": "medium",
-      "count": 9,
-      "label": "listing keyword sets proposed for review",
-      "next_action": "Review additions and removals in the latest keyword-sweep report before merging the keyword index."
-    },
-    {
-      "priority": "medium",
       "count": 2,
       "label": "free-tool or nonprofit-offer pages waiting for wording review",
       "next_action": "Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory."
+    },
+    {
+      "priority": "medium",
+      "count": 1,
+      "label": "listing keyword sets proposed for review",
+      "next_action": "Review additions and removals in the latest keyword-sweep report before merging the keyword index."
     },
     {
       "priority": "low",
@@ -94,9 +94,15 @@
     },
     {
       "priority": "low",
-      "count": 76,
+      "count": 118,
       "label": "keyword source pages needing attention",
       "next_action": "Open failed pages normally before removing retained source-derived keywords."
+    },
+    {
+      "priority": "low",
+      "count": 16,
+      "label": "free-tool candidate links waiting for review",
+      "next_action": "Open each official candidate and add it only when it fills a real guide task without duplicating an existing tool."
     },
     {
       "priority": "low",
@@ -112,13 +118,13 @@
     },
     {
       "priority": "low",
-      "count": 6,
+      "count": 5,
       "label": "free-tool pages needing a normal-browser check",
       "next_action": "Open failed pages normally; do not remove a tool solely because automation was blocked or timed out."
     },
     {
       "priority": "low",
-      "count": 1,
+      "count": 2,
       "label": "sources the automated checker could not confirm",
       "next_action": "Open these in a normal browser; do not remove a link solely because of a timeout, network problem, or temporary server response."
     },

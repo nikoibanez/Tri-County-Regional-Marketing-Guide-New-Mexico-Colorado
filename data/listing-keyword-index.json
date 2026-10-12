@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-11",
+  "generated_at": "2026-10-12",
   "description": "Controlled search keywords derived from canonical listing fields and current public-page title, metadata, and heading signals.",
   "entries": {
     "the-candy-crate-colfax-retail-sweets": {
@@ -170,12 +170,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-allen-fields-sports-complex-angel-fire-colfax": {
       "resource_name": "Allen Fields Sports Complex",
@@ -206,7 +206,7 @@
       "final_url": "https://visitangelfirenm.com/listing/alpine-lumber-company/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -250,12 +250,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-angel-fire-appraisers-angel-fire-colfax": {
       "resource_name": "Angel Fire Appraisers",
@@ -265,12 +265,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-angel-fire-baptist-church-angel-fire-colfax": {
       "resource_name": "Angel Fire Baptist Church",
@@ -280,12 +280,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "angel-fire-chamber-artists-galleries-and-studios-directory-angel-fire-colfax-chamber-a": {
       "resource_name": "Angel Fire Chamber Artists, Galleries, and Studios Directory",
@@ -324,7 +324,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-community-center/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -339,7 +339,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-ebikes-llc/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -352,12 +352,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-angel-fire-family-dentistry-angel-fire-colfax": {
       "resource_name": "Angel Fire Family Dentistry",
@@ -367,12 +367,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-angel-fire-homes-angel-fire-colfax": {
       "resource_name": "Angel Fire Homes",
@@ -384,7 +384,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-homes/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -403,12 +403,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-angel-fire-mini-mart-angel-fire-colfax": {
       "resource_name": "Angel Fire Mini-Mart",
@@ -418,12 +418,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-angel-fire-mountain-rentals-angel-fire-colfax": {
       "resource_name": "Angel Fire Mountain Rentals",
@@ -433,12 +433,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "angel-fire-resort-colfax-recreation-tourism": {
       "resource_name": "Angel Fire Resort",
@@ -505,7 +505,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-resort-nordic-center-golf-course/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -524,7 +524,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-resort-vacation-rentals/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -556,12 +556,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-angel-fire-visitor-center-angel-fire-colfax": {
       "resource_name": "Angel Fire Visitor Center",
@@ -577,7 +577,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-visitors-center/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -592,7 +592,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fired-pizza/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -605,12 +605,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-angel-s-outback-adventure-angel-fire-colfax": {
       "resource_name": "Angel’s Outback Adventure",
@@ -626,7 +626,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-08-19",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -641,7 +641,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -660,7 +660,7 @@
       "final_url": "https://visitangelfirenm.com/listing/arias-taqueria-food-truck/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -698,7 +698,7 @@
       "final_url": "https://visitangelfirenm.com/listing/aspen-gold-laundromat/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -732,12 +732,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-bakery-and-cafe-angel-fire-colfax": {
       "resource_name": "The Bakery & Cafe",
@@ -757,7 +757,7 @@
       "final_url": "https://visitangelfirenm.com/listing/the-bakery-and-cafe/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -802,12 +802,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-barwick-s-flooring-store-angel-fire-colfax": {
       "resource_name": "Barwick's Flooring Store",
@@ -817,12 +817,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-bestcare-pharmacy-angel-fire-colfax": {
       "resource_name": "Bestcare Pharmacy",
@@ -832,12 +832,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-big-river-raft-trips-angel-fire-colfax": {
       "resource_name": "Big River Raft Trips",
@@ -872,7 +872,7 @@
       "final_url": "https://visitangelfirenm.com/listing/blue-dawg-furnishings/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -889,12 +889,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-bluebird-mountain-sports-ski-tech-angel-fire-colfax": {
       "resource_name": "Bluebird Mountain Sports (Ski Tech)",
@@ -910,7 +910,7 @@
       "final_url": "https://visitangelfirenm.com/listing/ski-tech-bluebird-mountain-sports/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -923,12 +923,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-bobcat-pass-wilderness-adventures-angel-fire-colfax": {
       "resource_name": "Bobcat Pass Wilderness Adventures",
@@ -957,12 +957,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-brenda-johnson-s-property-management-angel-fire-colfax": {
       "resource_name": "Brenda Johnson’s Property Management",
@@ -995,7 +995,7 @@
       "final_url": "https://visitangelfirenm.com/listing/cabin-comforts/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1014,7 +1014,7 @@
       "final_url": "https://visitangelfirenm.com/listing/capulin-camp-rv-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1048,7 +1048,7 @@
       "final_url": "https://visitangelfirenm.com/listing/chisum-group-berkshire-hathaway-homeservices-angel-fire-real-estate/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1061,12 +1061,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-cimarron-canyon-state-park-angel-fire-colfax": {
       "resource_name": "Cimarron Canyon State Park",
@@ -1078,7 +1078,7 @@
       "final_url": "https://visitangelfirenm.com/listing/cimarron-canyon-state-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1093,7 +1093,7 @@
       "final_url": "https://visitangelfirenm.com/listing/clean-af-llc/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1106,12 +1106,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-coldwell-banker-mountain-properties-angel-fire-colfax": {
       "resource_name": "Coldwell Banker Mountain Properties",
@@ -1123,7 +1123,7 @@
       "final_url": "https://visitangelfirenm.com/listing/coldwell-banker-mountain-properties/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1138,7 +1138,7 @@
       "final_url": "https://visitangelfirenm.com/listing/community-center-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1157,7 +1157,7 @@
       "final_url": "https://visitangelfirenm.com/listing/cottams-of-angel-fire/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1172,7 +1172,7 @@
       "final_url": "https://visitangelfirenm.com/listing/coyote-creek-state-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1210,7 +1210,7 @@
       "final_url": "https://visitangelfirenm.com/listing/desert-sky-realty-investments/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1223,12 +1223,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-dollar-general-angel-fire-colfax": {
       "resource_name": "Dollar General",
@@ -1244,7 +1244,7 @@
       "final_url": "https://visitangelfirenm.com/listing/dollar-general/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1287,12 +1287,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-elevated-pour-angel-fire-colfax": {
       "resource_name": "Elevated Pour",
@@ -1321,12 +1321,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-enchanted-circle-campground-angel-fire-colfax": {
       "resource_name": "Enchanted Circle Campground",
@@ -1342,7 +1342,7 @@
       "final_url": "https://visitangelfirenm.com/listing/enchanted-circle-campground/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1361,7 +1361,7 @@
       "final_url": "https://visitangelfirenm.com/listing/enchanted-circle-campground-rv-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1402,7 +1402,7 @@
       "final_url": "https://visitangelfirenm.com/listing/enchanted-outpost-magazine/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1421,7 +1421,7 @@
       "final_url": "https://visitangelfirenm.com/listing/family-dollar/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1455,7 +1455,7 @@
       "final_url": "https://visitangelfirenm.com/listing/four-seasons-of-angel-fire/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1470,7 +1470,7 @@
       "final_url": "https://visitangelfirenm.com/listing/frontier-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1491,7 +1491,7 @@
       "final_url": "https://visitangelfirenm.com/listing/girl-scouts-of-new-mexico-trails/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1527,12 +1527,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-high-country-ski-rental-angel-fire-colfax": {
       "resource_name": "High Country Ski Rental",
@@ -1548,7 +1548,7 @@
       "final_url": "https://visitangelfirenm.com/listing/high-country-ski-rental/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1561,12 +1561,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-indigo-market-angel-fire-colfax": {
       "resource_name": "The Indigo Market",
@@ -1582,7 +1582,7 @@
       "final_url": "https://visitangelfirenm.com/listing/the-indigo-market/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1599,12 +1599,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-j-and-a-s-cafe-roadrunner-angel-fire-colfax": {
       "resource_name": "J & A’s Cafe @ the Roadrunner",
@@ -1654,12 +1654,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-jc-critter-control-angel-fire-colfax": {
       "resource_name": "JC Critter Control, LLC",
@@ -1690,7 +1690,7 @@
       "final_url": "https://visitangelfirenm.com/listing/jeanettes-specialty-foods-catering/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1703,12 +1703,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-just-joe-coffee-angel-fire-colfax": {
       "resource_name": "Just Joe Coffee",
@@ -1718,12 +1718,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-kwk-events-angel-fire-colfax": {
       "resource_name": "KWK Events",
@@ -1784,7 +1784,7 @@
       "final_url": "https://visitangelfirenm.com/listing/las-petacas-campground/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1803,7 +1803,7 @@
       "final_url": "https://visitangelfirenm.com/listing/legacy-silver-company/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1822,7 +1822,7 @@
       "final_url": "https://visitangelfirenm.com/listing/legends-bar-and-grill/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1879,7 +1879,7 @@
       "final_url": "https://visitangelfirenm.com/listing/lindsey-homes/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1898,7 +1898,7 @@
       "final_url": "https://angelfirechamber.org/business/lindsey-living/",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -1913,7 +1913,7 @@
       "final_url": "https://visitangelfirenm.com/listing/lindsey-vacation-rentals/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1926,12 +1926,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "lk-creative-angel-fire-colfax-freelance-graphic-design-online-resource": {
       "resource_name": "LK Creative",
@@ -1949,7 +1949,7 @@
       "final_url": "https://www.startupspace.app/resource?page=62",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1983,12 +1983,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-longhorn-lodge-angel-fire-colfax": {
       "resource_name": "Longhorn Lodge",
@@ -2022,7 +2022,7 @@
       "final_url": "https://visitangelfirenm.com/listing/los-rios-river-runners/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2043,7 +2043,7 @@
       "final_url": "https://visitangelfirenm.com/listing/lowes-market/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2062,7 +2062,7 @@
       "final_url": "https://visitangelfirenm.com/listing/maverick-campground/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2075,12 +2075,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "mi-cocina-mexicana-colfax-food-beverage": {
       "resource_name": "Mi Cocina Mexicana",
@@ -2092,7 +2092,7 @@
       "final_url": "https://visitangelfirenm.com/listing/mi-cocina-mexicana/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2111,7 +2111,7 @@
       "final_url": "https://visitangelfirenm.com/listing/mikuna-grill/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2149,7 +2149,7 @@
       "final_url": "https://visitangelfirenm.com/listing/monte-verde-lake/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2162,12 +2162,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-monte-verde-rv-park-and-campground-angel-fire-colfax": {
       "resource_name": "Monte Verde RV Park & Campground",
@@ -2208,12 +2208,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-moreno-valley-high-school-angel-fire-colfax": {
       "resource_name": "Moreno Valley High School",
@@ -2227,12 +2227,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-moreno-valley-taos-pines-substation-angel-fire-colfax": {
       "resource_name": "Moreno Valley-Taos Pines Substation",
@@ -2242,12 +2242,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-morning-star-express-angel-fire-colfax": {
       "resource_name": "Morning Star Express",
@@ -2257,12 +2257,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-morning-star-restaurant-angel-fire-colfax": {
       "resource_name": "Morning Star Restaurant",
@@ -2306,12 +2306,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "mountain-sports-of-angel-fire-colfax-retail-outdoor": {
       "resource_name": "Mountain Sports of Angel Fire",
@@ -2349,7 +2349,7 @@
       "final_url": "https://visitangelfirenm.com/listing/mountain-supply-true-value/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2364,7 +2364,7 @@
       "final_url": "https://visitangelfirenm.com/listing/mountain-view-event-center/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2402,12 +2402,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-new-mexico-river-adventures-angel-fire-colfax": {
       "resource_name": "New Mexico River Adventures",
@@ -2446,7 +2446,7 @@
       "final_url": "https://visitangelfirenm.com/listing/north-country-real-estate/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2463,12 +2463,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-northern-new-mexico-gas-company-angel-fire-colfax": {
       "resource_name": "Northern New Mexico Gas Company",
@@ -2478,12 +2478,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-nuckolls-brewing-angel-fire-colfax": {
       "resource_name": "Nuckolls Brewing Co.",
@@ -2520,7 +2520,7 @@
       "final_url": "https://visitangelfirenm.com/listing/off-grid-grow-co-dispensary/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2535,7 +2535,7 @@
       "final_url": "https://visitangelfirenm.com/listing/olympic-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2554,7 +2554,7 @@
       "final_url": "https://visitangelfirenm.com/listing/one-peoples-kitchen/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2586,12 +2586,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-piedra-lumbre-excavation-angel-fire-colfax": {
       "resource_name": "Piedra Lumbre Excavation Inc",
@@ -2601,12 +2601,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-pine-and-peak-home-decor-angel-fire-colfax": {
       "resource_name": "Pine & Peak Home Decor",
@@ -2622,7 +2622,7 @@
       "final_url": "https://visitangelfirenm.com/listing/pine-peak-home-decor/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2641,7 +2641,7 @@
       "final_url": "https://visitangelfirenm.com/listing/pizza-stop/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2675,12 +2675,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-prodpendingtest4-angel-fire-colfax": {
       "resource_name": "prodPendingTest4",
@@ -2690,12 +2690,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-professional-auto-parts-service-repair-angel-fire-colfax": {
       "resource_name": "Professional Auto Parts Service & Repair",
@@ -2705,12 +2705,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-pub-and-grub-angel-fire-colfax": {
       "resource_name": "Pub and Grub",
@@ -2726,7 +2726,7 @@
       "final_url": "https://visitangelfirenm.com/listing/pub-and-grub/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2764,7 +2764,7 @@
       "final_url": "https://visitangelfirenm.com/listing/purple-sage-studio/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2777,12 +2777,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-re-max-mountain-realty-angel-fire-colfax": {
       "resource_name": "RE/MAX Mountain Realty",
@@ -2798,7 +2798,7 @@
       "final_url": "https://visitangelfirenm.com/listing/re-max-mountain-realty/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2832,7 +2832,7 @@
       "final_url": "https://visitangelfirenm.com/listing/ridgewalk-treehouse/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2847,7 +2847,7 @@
       "final_url": "https://visitangelfirenm.com/listing/rio-grande-balloons/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2882,12 +2882,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-rockies-angel-fire-colfax": {
       "resource_name": "Rockies",
@@ -2897,12 +2897,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-rockies-market-angel-fire-colfax": {
       "resource_name": "Rockies Market",
@@ -2914,7 +2914,7 @@
       "final_url": "https://visitangelfirenm.com/listing/rockies-market/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2927,12 +2927,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-samuels-construction-angel-fire-colfax": {
       "resource_name": "Samuels Construction Co",
@@ -2946,12 +2946,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-santa-fe-party-rentals-angel-fire-colfax": {
       "resource_name": "Santa Fe Party Rentals",
@@ -2963,7 +2963,7 @@
       "final_url": "https://visitangelfirenm.com/listing/santa-fe-party-rentals/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2976,12 +2976,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-shell-angel-fire-colfax": {
       "resource_name": "Shell",
@@ -2991,12 +2991,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-shuter-library-of-angel-fire-angel-fire-colfax": {
       "resource_name": "The Shuter Library of Angel Fire",
@@ -3012,7 +3012,7 @@
       "final_url": "https://visitangelfirenm.com/listing/the-shuter-library-of-angel-fire/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3031,7 +3031,7 @@
       "final_url": "https://visitangelfirenm.com/listing/sierra-bonita-cabins-rv-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3065,7 +3065,7 @@
       "final_url": "https://visitangelfirenm.com/listing/smoke-rings-bbq/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3105,7 +3105,7 @@
       "final_url": "https://visitangelfirenm.com/listing/snowblaze-ski-shop/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3143,7 +3143,7 @@
       "final_url": "https://visitangelfirenm.com/listing/southern-exposure-photography/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3160,12 +3160,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-suburban-propane-angel-fire-colfax": {
       "resource_name": "Suburban Propane",
@@ -3175,12 +3175,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-subway-angel-fire-colfax": {
       "resource_name": "Subway",
@@ -3215,7 +3215,7 @@
       "final_url": "https://visitangelfirenm.com/listing/subway-lowes-pay-save/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3247,12 +3247,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-survey-consultants-angel-fire-colfax": {
       "resource_name": "Survey Consultants Inc",
@@ -3262,12 +3262,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-sweet-shirt-angel-fire-colfax": {
       "resource_name": "Sweet Shirt Co",
@@ -3283,7 +3283,7 @@
       "final_url": "https://visitangelfirenm.com/listing/sweet-shirt-co/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3298,7 +3298,7 @@
       "final_url": "https://visitangelfirenm.com/listing/taos-community-foundation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3381,7 +3381,7 @@
       "final_url": "https://visitangelfirenm.com/listing/taty-at-the-bump/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3415,12 +3415,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-thai-angel-angel-fire-colfax": {
       "resource_name": "Thai Angel",
@@ -3432,7 +3432,7 @@
       "final_url": "https://visitangelfirenm.com/listing/thai-angel/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3451,7 +3451,7 @@
       "final_url": "https://visitangelfirenm.com/listing/tolby-campground-cimarron-valley/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3489,7 +3489,7 @@
       "final_url": "https://visitangelfirenm.com/listing/trailhead-ski-shop/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3502,12 +3502,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-united-states-postal-service-angel-fire-colfax": {
       "resource_name": "United States Postal Service",
@@ -3517,12 +3517,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-vacasa-new-mexico-angel-fire-colfax": {
       "resource_name": "Vacasa New Mexico LLC",
@@ -3534,7 +3534,7 @@
       "final_url": "https://visitangelfirenm.com/listing/vacasa-new-mexico-llc/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3547,12 +3547,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-valley-market-angel-fire-colfax": {
       "resource_name": "Valley Market",
@@ -3562,12 +3562,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-vietnam-veterans-memorial-angel-fire-colfax": {
       "resource_name": "Vietnam Veterans Memorial",
@@ -3583,7 +3583,7 @@
       "final_url": "https://visitangelfirenm.com/listing/the-vietnam-veterans-memorial/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3596,12 +3596,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-village-haus-angel-fire-colfax": {
       "resource_name": "The Village Haus",
@@ -3636,7 +3636,7 @@
       "final_url": "https://visitangelfirenm.com/listing/village-ski-shop/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3672,7 +3672,7 @@
       "final_url": "https://visitangelfirenm.com/catering/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3687,7 +3687,7 @@
       "final_url": "https://visitangelfirenm.com/listing/weezies-wild-rides/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3721,12 +3721,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-whatville-angel-fire-colfax": {
       "resource_name": "Whatville",
@@ -3738,7 +3738,7 @@
       "final_url": "https://visitangelfirenm.com/listing/whatville/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3770,12 +3770,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-working-bird-angel-fire-colfax": {
       "resource_name": "The Working Bird",
@@ -3785,12 +3785,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "yellowpages-lead-z-mechanical-angel-fire-colfax": {
       "resource_name": "Z Mechanical LLC.",
@@ -3800,12 +3800,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
       "final_url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e5a16a7668a46587aab562943bedd3ba7c553eb3e45bee578aa6f2a48ae4df3",
+      "error": ""
     },
     "travel-guide-zeb-s-restaurant-and-bar-angel-fire-colfax": {
       "resource_name": "Zeb’s Restaurant and Bar",
@@ -3821,7 +3821,7 @@
       "final_url": "https://visitangelfirenm.com/listing/zebs-restaurant-and-bar/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3840,7 +3840,7 @@
       "final_url": "https://visitangelfirenm.com/listing/zia-bar/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -4337,7 +4337,7 @@
       "final_url": "https://www.eaglenestmercantile.com",
       "status": "fetch_error",
       "status_code": 429,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 429: Too Many Requests"
@@ -5039,7 +5039,7 @@
       "final_url": "https://locations.arbys.com/nm/raton/415-clayton-hwy.html",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -6487,7 +6487,7 @@
       "final_url": "https://innovativejournaling.com/",
       "status": "fetch_error",
       "status_code": 429,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 429: Too Many Requests"
@@ -7502,7 +7502,7 @@
       "final_url": "https://www.mcdonalds.com/us/en-us/location/nm/raton/542-clayton-rd/6011.html?cid=RF:YXT:GMB::Clicks",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -9631,7 +9631,7 @@
       "final_url": "https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -10173,7 +10173,7 @@
       "final_url": "https://county.pueblo.org/energy-and-economic-development-department/small-business-development-center",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -10309,10 +10309,10 @@
       "final_url": "https://huerfanofair.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1016)>"
     },
     "travel-guide-lake-isabel-entry-huerfano": {
       "resource_name": "Lake Isabel",
@@ -10903,12 +10903,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "alys-restaurant-huerfano-restaurant-food": {
       "resource_name": "Alys' Restaurant",
@@ -11224,7 +11224,7 @@
       "final_url": "https://charlies-market.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1016)>"
@@ -11396,12 +11396,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "estelle-center-for-creative-arts-huerfano-creative-arts-center": {
       "resource_name": "Estelle Center for Creative Arts",
@@ -11457,10 +11457,10 @@
       "final_url": "https://franciscofort.org",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028)>"
+      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)>"
     },
     "gardner-public-improvement-district-huerfano-government-special-district": {
       "resource_name": "Gardner Public Improvement District",
@@ -11639,12 +11639,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "heather-curtis-huerfano-photography-independent-artist": {
       "resource_name": "Heather Curtis",
@@ -11924,7 +11924,7 @@
       "final_url": "https://lavetacountrystore.com/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -12051,12 +12051,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "la-veta-fire-protection-district-huerfano-government-fire-district": {
       "resource_name": "La Veta Fire Protection District",
@@ -12091,12 +12091,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "la-veta-inn-huerfano-lodging": {
       "resource_name": "La Veta Inn",
@@ -12132,12 +12132,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "la-veta-liquors-huerfano-retail": {
       "resource_name": "La Veta Liquors",
@@ -12184,21 +12184,25 @@
     "la-veta-oil-company-huerfano-service-fuel": {
       "resource_name": "La Veta Oil Company",
       "keywords": [
-        "directory"
+        "directory",
+        "business directory"
       ],
       "canonical_keywords": [
         "directory"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "business directory",
+        "directory"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
+      "last_changed": "2026-10-12",
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "la-veta-physical-therapy-huerfano-healthcare": {
       "resource_name": "La Veta Physical Therapy",
@@ -12269,12 +12273,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "la-veta-public-library-district-huerfano-library-community": {
       "resource_name": "La Veta Public Library District",
@@ -12313,10 +12317,10 @@
       "final_url": "https://thelvesa.org/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "la-veta-schools-of-the-arts-huerfano-arts-culture-education": {
       "resource_name": "La Veta Schools of the Arts",
@@ -12345,12 +12349,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "la-veta-yoga-studio-huerfano-healthcare-wellness": {
       "resource_name": "La Veta Yoga Studio",
@@ -12741,12 +12745,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "peggy-zehring-la-veta-school-of-the-arts-huerfano-painting-art-teacher": {
       "resource_name": "Peggy Zehring / La Veta School of the Arts",
@@ -12867,7 +12871,7 @@
       "final_url": "https://www.roomsattheclub.com/",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -13069,12 +13073,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "travel-guide-skinny-s-diner-and-bar-la-veta-huerfano": {
       "resource_name": "Skinny's Diner and Bar",
@@ -13090,7 +13094,7 @@
       "final_url": "https://www.skinnysdinerandbar.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -13216,12 +13220,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "travel-guide-timbers-steak-and-spirits-la-veta-huerfano": {
       "resource_name": "The Timbers Steak and Spirits",
@@ -13305,7 +13309,7 @@
       "final_url": "https://www.twofoxcabins.com/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -13362,12 +13366,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.yellowpages.com/la-veta-co",
       "final_url": "https://www.yellowpages.com/la-veta-co",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-11",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9fd9875103c44ebcf497797a2fd311e337469cf2b82187c4450b6d7a1d088905",
+      "error": ""
     },
     "upper-huerfano-fire-district-huerfano-government-fire-district": {
       "resource_name": "Upper Huerfano Fire District",
@@ -13984,7 +13988,7 @@
       "final_url": "https://www.bestwestern.com/en_US/book/hotels-in-walsenburg/best-western-rambler/propertyCode.06038.html",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -14288,10 +14292,10 @@
       "final_url": "https://c1btrueorganics.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "travel-guide-calendars-of-events-walsenburg-huerfano": {
       "resource_name": "Calendars of Events",
@@ -14322,10 +14326,10 @@
       "final_url": "https://www.cannacity.us/home",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "travel-guide-cannaco-walsenburg-huerfano": {
       "resource_name": "Cannaco",
@@ -14517,7 +14521,7 @@
       "final_url": "https://cityofwalsenburg.colorado.gov",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -15514,9 +15518,7 @@
         "live music",
         "theater"
       ],
-      "blocked_source_keywords": [
-        "main street"
-      ],
+      "blocked_source_keywords": [],
       "source_url": "https://foxtheatrewalsenburg.org",
       "final_url": "https://www.foxwalsenburg.com/",
       "status": "checked",
@@ -16466,7 +16468,7 @@
       "final_url": "https://la-h-health.colorado.gov",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -18283,9 +18285,7 @@
         "outfitter",
         "transportation"
       ],
-      "blocked_source_keywords": [
-        "agriculture"
-      ],
+      "blocked_source_keywords": [],
       "source_url": "https://storycreek.com/wp/",
       "final_url": "https://storycreek.com/wp/",
       "status": "checked",
@@ -19392,7 +19392,7 @@
       "final_url": "https://aguilarstation.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -19641,10 +19641,10 @@
       "final_url": "https://221bgallery.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "yellowpages-lead-a-1-automatics-towing-trinidad-las-animas": {
       "resource_name": "A-1 Automatics & Towing",
@@ -20037,7 +20037,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -20179,7 +20179,7 @@
       "final_url": "https://boom-noodles.com",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -20274,7 +20274,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -20325,7 +20325,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -20361,10 +20361,10 @@
       "final_url": "https://cawthonpark.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1028)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1016)>"
     },
     "yellowpages-lead-cedar-street-printing-trinidad-las-animas": {
       "resource_name": "Cedar Street Printing",
@@ -21101,7 +21101,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -21569,7 +21569,7 @@
       "final_url": "https://visittrinidadcolorado.com/state-parks/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -21844,7 +21844,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -21907,7 +21907,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -22087,7 +22087,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -22106,7 +22106,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -22146,7 +22146,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -22268,7 +22268,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -22639,7 +22639,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -22903,7 +22903,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -23083,10 +23083,10 @@
       "final_url": "https://www.marketplacegallery.net",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "yellowpages-lead-massage-center-trinidad-las-animas": {
       "resource_name": "The Massage Center",
@@ -23181,7 +23181,7 @@
       "final_url": "https://missionatthebell.com",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -23241,7 +23241,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -23413,7 +23413,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -23432,7 +23432,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -23711,7 +23711,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -23932,7 +23932,7 @@
       "final_url": "https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -24555,7 +24555,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -24576,10 +24576,10 @@
       "final_url": "https://www.tabularasa.gallery",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "yellowpages-lead-taco-bell-trinidad-las-animas": {
       "resource_name": "Taco Bell",
@@ -24625,7 +24625,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -24803,7 +24803,7 @@
       "final_url": "https://jimandmelissa.org",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -24822,7 +24822,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -25201,7 +25201,7 @@
       "final_url": "https://trinidadstate.edu/collaboratory/index.html",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -25239,7 +25239,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -25424,7 +25424,7 @@
       "final_url": "https://visittrinidadcolorado.com/arts-culture/visual-arts/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -25458,7 +25458,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -25537,7 +25537,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -25799,7 +25799,7 @@
       "final_url": "https://oedit.colorado.gov/colorado-creative-districts",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -27168,7 +27168,7 @@
       "final_url": "https://worldjournalnewspaper.com/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-07",
+      "last_checked": "2026-10-12",
       "last_changed": "2026-08-19",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
