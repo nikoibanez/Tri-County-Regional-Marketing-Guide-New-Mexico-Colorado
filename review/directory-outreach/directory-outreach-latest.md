@@ -1,6 +1,6 @@
 # Directory Outreach Channel Review
 
-Generated: 2026-10-12T22:29:28.777650+00:00
+Generated: 2026-10-19T20:29:33.230174+00:00
 
 This report reviews every published directory listing for practical physical and digital outreach routes. A listed route means the attached listing information identifies that kind of channel. Ask first means the entity may be a sensible contact, but placement, sharing, price, eligibility, and acceptance are not promised.
 
@@ -28,7 +28,7 @@ This report reviews every published directory listing for practical physical and
 | Front-desk referrals | 0 | 282 | 1080 |
 | Directory profiles and listings | 305 | 13 | 1044 |
 | Event calendars | 1 | 117 | 1244 |
-| Social cross-promotion | 0 | 38 | 1324 |
+| Social cross-promotion | 0 | 39 | 1323 |
 | Newsletters and mailing lists | 0 | 183 | 1179 |
 | Paid digital advertising | 1 | 59 | 1302 |
 | Media and editorial coverage | 2 | 59 | 1301 |

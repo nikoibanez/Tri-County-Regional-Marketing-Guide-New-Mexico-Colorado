@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-10-12T22:29:00+00:00",
+  "generated_at": "2026-10-19T20:28:46+00:00",
   "review_policy": "Automation may report page changes and candidate event links. A person must review dates, locations, costs, submission rules, and public wording before canonical event data changes.",
   "summary": {
     "sources": 15,
     "checked": 15,
-    "changed": 3,
-    "new_baselines": 0,
-    "candidate_links": 23,
+    "changed": 5,
+    "new_baselines": 1,
+    "candidate_links": 22,
     "confirmed_broken": 0,
     "script_access_limited": 2,
-    "check_failures": 3,
+    "check_failures": 2,
     "categories": {
       "events-calendars": 15
     },
     "status_counts": {
       "access_blocked": 2,
-      "network_error": 1,
-      "ok": 12
+      "ok": 13
     },
     "change_counts": {
-      "changed": 3,
-      "check_failed": 3,
-      "unchanged": 9
+      "changed": 5,
+      "check_failed": 2,
+      "new_baseline": 1,
+      "unchanged": 7
     }
   },
   "results": [
@@ -51,7 +51,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.exploreraton.com/events",
-        "elapsed_ms": 369,
+        "elapsed_ms": 268,
         "content_hash": "0e68fa90eb95df45bf058c2dcffa880ef571f5eeb585eb78576a465519bf8659",
         "text_length": 3094,
         "link_count": 48,
@@ -114,7 +114,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://ratonmainstreet.org/events/",
-        "elapsed_ms": 732,
+        "elapsed_ms": 1949,
         "content_hash": "51d7aa43463bc1d70784c41773ec03c318ff4e0748966e5825da453aeee26da6",
         "text_length": 869,
         "link_count": 25,
@@ -150,10 +150,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://krtnradio.com/calendar/",
-        "elapsed_ms": 1394,
-        "content_hash": "84c20e54e4f42087939a168c1f31d2a1abd496245ad9381bd93a6abfddbd9845",
-        "text_length": 9508,
-        "link_count": 103,
+        "elapsed_ms": 1259,
+        "content_hash": "16de77e41991011d05cfdf16a4ed4205b8acbc7a36b96d22e3479ab7e06a3257",
+        "text_length": 9079,
+        "link_count": 108,
         "candidates": [
           {
             "title": "The Events Calendar",
@@ -167,7 +167,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "ef1322ff6048a86cf96de0f0df1fb4693a101594db3ed2e1529f0760dca8a226"
+      "previous_hash": "84c20e54e4f42087939a168c1f31d2a1abd496245ad9381bd93a6abfddbd9845"
     },
     {
       "source": {
@@ -192,13 +192,17 @@
         ]
       },
       "check": {
-        "status": "network_error",
-        "status_code": null,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://theratonian.com/calendar/",
-        "error": "[Errno -5] No address associated with hostname",
-        "candidates": []
+        "elapsed_ms": 2714,
+        "content_hash": "6fc12a0b32c8426a8aeefbf937ae6ad984614bf598f160eb20ddd702680594a8",
+        "text_length": 305,
+        "link_count": 2,
+        "candidates": [],
+        "error": ""
       },
-      "change_status": "check_failed",
+      "change_status": "new_baseline",
       "previous_hash": ""
     },
     {
@@ -291,14 +295,14 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://trinidadpubliclibrary.org/events/",
-        "elapsed_ms": 4803,
-        "content_hash": "8dc566653585b1408cc1bb5464619f0d97ee57a4829902be1e569ee991358b10",
-        "text_length": 6428,
+        "elapsed_ms": 4245,
+        "content_hash": "4377feaf986efe09bb024b3892b1b946dc53fea696c6eb8e731828a1044f9047",
+        "text_length": 6310,
         "link_count": 51,
         "candidates": [],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "8dc566653585b1408cc1bb5464619f0d97ee57a4829902be1e569ee991358b10"
     },
     {
@@ -327,7 +331,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidadcreativedistrict.org/trinidad-creative-district-events",
-        "elapsed_ms": 96,
+        "elapsed_ms": 428,
         "content_hash": "eb82b3c5d3d1e7b152e070133c91ed56f07e7121b663848c3baccaf5f01eb037",
         "text_length": 1602,
         "link_count": 27,
@@ -372,7 +376,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.mainstreetlive.org/home",
-        "elapsed_ms": 143,
+        "elapsed_ms": 487,
         "content_hash": "4c19f332b383fbc5d5b989ed348e516c78e9789de6356bc30ff34ec771a268a9",
         "text_length": 1272,
         "link_count": 34,
@@ -408,7 +412,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://extension.colostate.edu/las-animas/events/",
-        "elapsed_ms": 34,
+        "elapsed_ms": 78,
         "content_hash": "bf7768f01166727caa18d9cc5f502841f7e20ae18af6f1b543d36d3bb41c5e74",
         "text_length": 674,
         "link_count": 33,
@@ -444,22 +448,14 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/spc-events/",
-        "elapsed_ms": 74,
-        "content_hash": "03579815d4250d518b323e78eb28d484ab7ed8f252b6867a808e68f9ca507a77",
-        "text_length": 5157,
-        "link_count": 94,
+        "elapsed_ms": 66,
+        "content_hash": "d50220b8399c30da8b429a5ca6a7ef7d7c7abd4101e92a7342ab5dcac0efc6a5",
+        "text_length": 6355,
+        "link_count": 92,
         "candidates": [
           {
             "title": "Cuchara Farmers Market",
             "url": "https://spanishpeakscountry.com/series/cuchara-farmers-market/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "Cuchara Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/cuchara-farmers-market/2026-10-16/",
             "score": 4,
             "matched_terms": [
               "farmers market"
@@ -474,8 +470,8 @@
             ]
           },
           {
-            "title": "Gardner Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/gardner-farmer-and-craft-market/2026-10-17/",
+            "title": "Cuchara Farmers Market",
+            "url": "https://spanishpeakscountry.com/spc-event/cuchara-farmers-market/2026-10-30/",
             "score": 4,
             "matched_terms": [
               "farmers market"
@@ -490,8 +486,8 @@
             ]
           },
           {
-            "title": "La Veta Farmers Market",
-            "url": "https://spanishpeakscountry.com/series/la-veta-farmers-market-2/",
+            "title": "Gardner Farmers Market",
+            "url": "https://spanishpeakscountry.com/spc-event/gardner-farmer-and-craft-market/2026-10-31/",
             "score": 4,
             "matched_terms": [
               "farmers market"
@@ -499,7 +495,7 @@
           },
           {
             "title": "La Veta Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/la-veta-farmers-market-2/2026-10-15/",
+            "url": "https://spanishpeakscountry.com/series/la-veta-farmers-market-2/",
             "score": 4,
             "matched_terms": [
               "farmers market"
@@ -539,22 +535,6 @@
           },
           {
             "title": "Walsenburg Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/walsenburg-farm-makers-market/2026-10-11/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "Walsenburg Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/walsenburg-farm-makers-market/2026-10-18/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "Walsenburg Farmers Market",
             "url": "https://spanishpeakscountry.com/spc-event/walsenburg-farm-makers-market/2026-10-25/",
             "score": 4,
             "matched_terms": [
@@ -565,7 +545,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "df7539fe863a2362a3014cc094904f3bce1936a851f5d94e60d92b5688fbee14"
+      "previous_hash": "03579815d4250d518b323e78eb28d484ab7ed8f252b6867a808e68f9ca507a77"
     },
     {
       "source": {
@@ -593,7 +573,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.chamber.huerfano.org/submit-an-event",
-        "elapsed_ms": 102,
+        "elapsed_ms": 480,
         "content_hash": "9f3f6c4a4b1781852d6d72c5f425818960d752ff1fef3c2ea11ff89d6e7c1d5d",
         "text_length": 862,
         "link_count": 33,
@@ -629,14 +609,22 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://huerfano.us/events/",
-        "elapsed_ms": 1010,
-        "content_hash": "7e949d8c29fe3a4c051965c4ac9bde05c2a90523d6d25575f44186088dbf6d89",
-        "text_length": 5724,
-        "link_count": 123,
+        "elapsed_ms": 901,
+        "content_hash": "ca831b07e1e9689e8bb06d71d7f85118ca9e00ba7ccc9718b1a0d1d78d1b8d5b",
+        "text_length": 5930,
+        "link_count": 124,
         "candidates": [
           {
-            "title": "Public Works Workshop",
-            "url": "https://huerfano.us/event/public-works-workshop-17/",
+            "title": "Human Services Workshop",
+            "url": "https://huerfano.us/event/human-services-workshop-10/",
+            "score": 4,
+            "matched_terms": [
+              "workshop"
+            ]
+          },
+          {
+            "title": "Road and Bridge Workshop",
+            "url": "https://huerfano.us/event/road-and-bridge-workshop-17/",
             "score": 4,
             "matched_terms": [
               "workshop"
@@ -646,7 +634,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "7947a5d4a2e756d22144887c27b23c46771d85f775b36b427d6a766b9bcf8d57"
+      "previous_hash": "7e949d8c29fe3a4c051965c4ac9bde05c2a90523d6d25575f44186088dbf6d89"
     },
     {
       "source": {
@@ -674,22 +662,32 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://lvpl.org/full-calendar/",
-        "elapsed_ms": 1466,
-        "content_hash": "d8bdf9a204ff6f990d6688b16a3b85523af476466edecdbf1154f7205928fa4a",
-        "text_length": 3166,
+        "elapsed_ms": 1233,
+        "content_hash": "90354bae8da1e3eb6372ec9b6172b3d7384b29cefe16811ad055cb8570f43115",
+        "text_length": 3339,
         "link_count": 130,
         "candidates": [
           {
-            "title": "Huerfano Farmers Market",
-            "url": "https://lvpl.org/events/huerfano-farmers-market-21/",
-            "score": 4,
+            "title": "Little Monsters Haunted House Workshop & Movie at the La Veta Library",
+            "url": "https://lvpl.org/events/little-monsters-haunted-house-workshop-movie-at-the-la-veta-library/",
+            "score": 8,
             "matched_terms": [
-              "farmers market"
+              "La Veta",
+              "library",
+              "workshop"
             ]
           },
           {
-            "title": "Theatre Games Workshop at the Francisco Center for the Performing Arts",
-            "url": "https://lvpl.org/events/theatre-games-workshop-at-the-francisco-center-for-the-performing-arts-2/",
+            "title": "Little Monsters\u2019 Haunted House Workshop & Movie!",
+            "url": "https://lvpl.org/events/little-monsters-haunted-house-workshop-movie/",
+            "score": 4,
+            "matched_terms": [
+              "workshop"
+            ]
+          },
+          {
+            "title": "Petals & Potions \u2013 Floral Centerpiece Workshop at the Stokehouse",
+            "url": "https://lvpl.org/events/petals-potions-floral-centerpiece-workshop-at-the-stokehouse/",
             "score": 4,
             "matched_terms": [
               "workshop"
@@ -698,7 +696,7 @@
         ],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "d8bdf9a204ff6f990d6688b16a3b85523af476466edecdbf1154f7205928fa4a"
     },
     {
@@ -727,7 +725,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
-        "elapsed_ms": 122,
+        "elapsed_ms": 154,
         "content_hash": "89e1855bda6969822ef3c6cff3df61f99a28fc48c294feaaf08005ef5205a916",
         "text_length": 4311,
         "link_count": 28,

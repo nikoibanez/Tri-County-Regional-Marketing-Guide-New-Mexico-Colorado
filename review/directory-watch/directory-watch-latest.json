@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12",
+  "generated_at": "2026-10-19",
   "config": "data/directory-watch-sources.json",
   "directory_files": [
     "data/directory_of_absolutely_everything.csv",
@@ -9,9 +9,9 @@
   "summary": {
     "sources": 15,
     "pages_checked": 32,
-    "pages_failed": 10,
-    "candidates": 249,
-    "already_in_guide": 224,
+    "pages_failed": 12,
+    "candidates": 250,
+    "already_in_guide": 225,
     "possible_new_leads": 25,
     "priority_new_leads": 1,
     "low_confidence_new_leads": 24
@@ -29,100 +29,26 @@
         {
           "url": "https://www.raton.info/business_directory.html",
           "fetch": {
-            "ok": true,
-            "status_code": 200,
-            "final_url": "https://raton.info/",
-            "content_type": "text/html; charset=utf-8",
-            "elapsed_ms": 1256,
-            "error": ""
+            "ok": false,
+            "status_code": 403,
+            "final_url": "https://www.raton.info/business_directory.html",
+            "content_type": "",
+            "elapsed_ms": 104,
+            "error": "HTTP Error 403: Forbidden"
           },
-          "candidates": [
-            {
-              "id": "kyc-vs-no-kyc-what-anonymous-really-means-f8bdab020a",
-              "name": "KYC vs No-KYC: What \"Anonymous\" Really Means",
-              "source_id": "colfax-raton-chamber-business-directory",
-              "source_title": "Raton Chamber Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber business directory",
-              "source_page": "https://raton.info/",
-              "listing_url": "https://raton.info/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "licensed-regulated-f1ee91fc72",
-              "name": "Licensed & Regulated",
-              "source_id": "colfax-raton-chamber-business-directory",
-              "source_title": "Raton Chamber Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber business directory",
-              "source_page": "https://raton.info/",
-              "listing_url": "https://raton.info/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            }
-          ]
+          "candidates": []
         },
         {
           "url": "https://www.raton.info/business-directory.html",
           "fetch": {
-            "ok": true,
-            "status_code": 200,
-            "final_url": "https://raton.info/",
-            "content_type": "text/html; charset=utf-8",
-            "elapsed_ms": 1129,
-            "error": ""
+            "ok": false,
+            "status_code": 403,
+            "final_url": "https://www.raton.info/business-directory.html",
+            "content_type": "",
+            "elapsed_ms": 201,
+            "error": "HTTP Error 403: Forbidden"
           },
-          "candidates": [
-            {
-              "id": "kyc-vs-no-kyc-what-anonymous-really-means-f8bdab020a",
-              "name": "KYC vs No-KYC: What \"Anonymous\" Really Means",
-              "source_id": "colfax-raton-chamber-business-directory",
-              "source_title": "Raton Chamber Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber business directory",
-              "source_page": "https://raton.info/",
-              "listing_url": "https://raton.info/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "licensed-regulated-f1ee91fc72",
-              "name": "Licensed & Regulated",
-              "source_id": "colfax-raton-chamber-business-directory",
-              "source_title": "Raton Chamber Business Directory",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber business directory",
-              "source_page": "https://raton.info/",
-              "listing_url": "https://raton.info/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            }
-          ]
+          "candidates": []
         }
       ]
     },
@@ -142,7 +68,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/local-businesses/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 936,
+            "elapsed_ms": 752,
             "error": ""
           },
           "candidates": []
@@ -165,7 +91,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/business/category/restaurants/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 682,
+            "elapsed_ms": 546,
             "error": ""
           },
           "candidates": []
@@ -177,7 +103,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/business/tags/catering/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 648,
+            "elapsed_ms": 431,
             "error": ""
           },
           "candidates": []
@@ -189,7 +115,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/business/category/catering/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 535,
+            "elapsed_ms": 544,
             "error": ""
           },
           "candidates": []
@@ -212,7 +138,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/visitor/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 472,
+            "elapsed_ms": 441,
             "error": ""
           },
           "candidates": []
@@ -224,7 +150,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/annual-calendar-of-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 580,
+            "elapsed_ms": 422,
             "error": ""
           },
           "candidates": []
@@ -236,7 +162,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 522,
+            "elapsed_ms": 455,
             "error": ""
           },
           "candidates": []
@@ -259,7 +185,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 284,
+            "elapsed_ms": 213,
             "error": ""
           },
           "candidates": []
@@ -271,7 +197,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/events",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 80,
+            "elapsed_ms": 1284,
             "error": ""
           },
           "candidates": []
@@ -283,7 +209,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/blog",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1491,
+            "elapsed_ms": 153,
             "error": ""
           },
           "candidates": []
@@ -306,7 +232,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/dine/",
             "content_type": "",
-            "elapsed_ms": 214,
+            "elapsed_ms": 192,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -318,7 +244,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/stay/",
             "content_type": "",
-            "elapsed_ms": 50,
+            "elapsed_ms": 145,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -330,7 +256,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/shop/",
             "content_type": "",
-            "elapsed_ms": 36,
+            "elapsed_ms": 83,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -342,7 +268,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
             "content_type": "",
-            "elapsed_ms": 44,
+            "elapsed_ms": 82,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -365,7 +291,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/upcoming-events/",
             "content_type": "",
-            "elapsed_ms": 36,
+            "elapsed_ms": 93,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -377,7 +303,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
             "content_type": "",
-            "elapsed_ms": 50,
+            "elapsed_ms": 160,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -400,7 +326,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/meetings-conventions/",
             "content_type": "",
-            "elapsed_ms": 20,
+            "elapsed_ms": 147,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -412,7 +338,7 @@
             "status_code": 403,
             "final_url": "https://visittrinidadcolorado.com/weddings/",
             "content_type": "",
-            "elapsed_ms": 34,
+            "elapsed_ms": 166,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -435,7 +361,7 @@
             "status_code": 200,
             "final_url": "https://localstash.com/colorado/towns/trinidad-co",
             "content_type": "text/html; charset=utf-8",
-            "elapsed_ms": 845,
+            "elapsed_ms": 913,
             "error": ""
           },
           "candidates": [
@@ -454,6 +380,24 @@
               "priority_candidate": false,
               "match_status": "already_in_guide",
               "matched_name": "Colorado Welcome Center at Trinidad",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "mt-san-rafael-hospital-f073ab285c",
+              "name": "Mt. San Rafael Hospital",
+              "source_id": "las-animas-localstash-trinidad",
+              "source_title": "LocalStash Trinidad",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Digital local guide and business/event listings",
+              "source_page": "https://localstash.com/colorado/towns/trinidad-co",
+              "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "Mt. San Rafael Hospital",
               "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
@@ -584,8 +528,8 @@
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
-              "id": "mt-san-rafael-hospital-emergency-department-4486236595",
-              "name": "Mt. San Rafael Hospital Emergency Department",
+              "id": "kcrt-am-fm-radio-9429a12f3b",
+              "name": "KCRT AM-FM Radio",
               "source_id": "las-animas-localstash-trinidad",
               "source_title": "LocalStash Trinidad",
               "county": "Las Animas",
@@ -654,6 +598,24 @@
               "matched_name": "",
               "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "world-journal-trinidad-branch-40083c90a6",
+              "name": "World Journal - Trinidad Branch",
+              "source_id": "las-animas-localstash-trinidad",
+              "source_title": "LocalStash Trinidad",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Digital local guide and business/event listings",
+              "source_page": "https://localstash.com/colorado/towns/trinidad-co",
+              "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
             }
           ]
         },
@@ -664,7 +626,7 @@
             "status_code": 200,
             "final_url": "https://weekender.pub/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 101,
+            "elapsed_ms": 533,
             "error": ""
           },
           "candidates": []
@@ -687,7 +649,7 @@
             "status_code": null,
             "final_url": "https://southerncoloradotourism.com/events/",
             "content_type": "",
-            "elapsed_ms": 18097,
+            "elapsed_ms": 18190,
             "error": "<urlopen error timed out>"
           },
           "candidates": []
@@ -699,7 +661,7 @@
             "status_code": null,
             "final_url": "https://southerncoloradotourism.com/",
             "content_type": "",
-            "elapsed_ms": 18089,
+            "elapsed_ms": 18115,
             "error": "<urlopen error timed out>"
           },
           "candidates": []
@@ -722,7 +684,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 99,
+            "elapsed_ms": 1349,
             "error": ""
           },
           "candidates": [
@@ -2636,7 +2598,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory/categories/dining",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 204,
+            "elapsed_ms": 67,
             "error": ""
           },
           "candidates": [
@@ -3189,7 +3151,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory/categories/lodging",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 235,
+            "elapsed_ms": 89,
             "error": ""
           },
           "candidates": [
@@ -3598,7 +3560,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1065,
+            "elapsed_ms": 721,
             "error": ""
           },
           "candidates": []
@@ -3621,7 +3583,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/spc-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 204,
+            "elapsed_ms": 113,
             "error": ""
           },
           "candidates": [
@@ -3677,24 +3639,6 @@
               "match_status": "already_in_guide",
               "matched_name": "The Stokehouse",
               "match_type": "exact_normalized",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "caleb-wilbourn-texas-artist-live-at-the-stokehouse-34aa74f7ac",
-              "name": "Caleb Wilbourn Texas Artist Live at the Stokehouse!",
-              "source_id": "huerfano-spanish-peaks-events",
-              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Tourism event calendar and submission source",
-              "source_page": "https://spanishpeakscountry.com/spc-events/",
-              "listing_url": "https://spanishpeakscountry.com/spc-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -3788,8 +3732,44 @@
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
+              "id": "halloweentown-movie-night-at-fiesta-park-9321b9d827",
+              "name": "Halloweentown Movie Night at Fiesta Park",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
               "id": "heritage-park-5223d13b15",
               "name": "Heritage Park",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "kellen-goode-live-at-the-stokehouse-fa6031dafe",
+              "name": "Kellen Goode Live at the Stokehouse!",
               "source_id": "huerfano-spanish-peaks-events",
               "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
               "county": "Huerfano",
@@ -3826,6 +3806,42 @@
             {
               "id": "la-veta-library-77e0cb126c",
               "name": "La Veta Library",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "mason-davis-live-at-the-stokehouse-f15f42edf5",
+              "name": "Mason Davis Live at the Stokehouse!",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "music-by-midi-live-b62d40990d",
+              "name": "MUSIC BY MIDI LIVE!!!!",
               "source_id": "huerfano-spanish-peaks-events",
               "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
               "county": "Huerfano",
@@ -3886,7 +3902,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 229,
+            "elapsed_ms": 1820,
             "error": ""
           },
           "candidates": [
@@ -3946,7 +3962,7 @@
             "status_code": 200,
             "final_url": "https://townoflaveta-co.gov/business-directory/",
             "content_type": "text/html",
-            "elapsed_ms": 102,
+            "elapsed_ms": 530,
             "error": ""
           },
           "candidates": [
@@ -4996,7 +5012,7 @@
             "status_code": 200,
             "final_url": "https://www.chamber.huerfano.org/membership-directory",
             "content_type": "text/html;charset=utf-8",
-            "elapsed_ms": 258,
+            "elapsed_ms": 958,
             "error": ""
           },
           "candidates": [

@@ -1,6 +1,6 @@
 # Monthly Free Tools Review
 
-Generated: 2026-10-12T22:29:12+00:00
+Generated: 2026-10-19T20:29:17+00:00
 
 This is a review queue. It does not change public pricing, eligibility, or tool recommendations automatically.
 
@@ -8,15 +8,23 @@ This is a review queue. It does not change public pricing, eligibility, or tool 
 
 - Public tools configured: 22
 - Discovery pages configured: 5
-- Pages checked successfully: 22
+- Pages checked successfully: 21
 - Changed pages: 1
 - New baselines: 0
-- Failed checks: 5 (5 automation-blocked)
-- Newly failed checks: 0
+- Failed checks: 6 (5 automation-blocked)
+- Newly failed checks: 1
 - Tool claims currently missing an expected term: 1 (0 new)
-- Candidate links found: 63 (16 new)
+- Candidate links found: 63 (1 new)
 
 ## Review Queue
+
+### Inkscape
+
+- Kind: tool
+- URL: https://inkscape.org/about/
+- Check: timeout / check_failed
+- Expected-term hits: none
+- Error: The read operation timed out
 
 ### TechSoup nonprofit technology catalog
 
@@ -25,22 +33,7 @@ This is a review queue. It does not change public pricing, eligibility, or tool 
 - Check: ok / changed
 - Expected-term hits: none
 - Candidate links:
-  - [AI Services](https://page.techsoup.org/ai-services-for-nonprofits)
-  - [IT Help Desk Services](https://page.techsoup.org/help-desk-for-nonprofits)
-  - [TechSoup Services Services for Nonprofits ​​Expert support for your nonprofit’s tech challenges​​​](https://page.techsoup.org/nonprofit-technology-services)
-  - [Accounting & QuickBooks Services](https://page.techsoup.org/services?category=accounting?category=accounting)
-  - [All Services Overview](https://page.techsoup.org/services)
-  - [amazon-web-services](https://www.techsoup.org/amazon-web-services)
-  - [Autodesk](https://page.techsoup.org/autodesk-for-nonprofits)
-  - [Cybersecurity Services](https://page.techsoup.org/services?category=cybersecurity?category=cybersecurity)
-  - [Digital Marketing & Social Media Services](https://page.techsoup.org/services-web-marketing-ai)
-  - [Full Catalog](https://www.techsoup.org/get-product-donations)
-  - [Get Started](https://www.techsoup.org/products/microsoft-copilot-nonprofit-cloud-subscriptions-g-58498-)
-  - [Google Ad Grants Services](https://page.techsoup.org/google-ad-grants-managed-services)
-  - [Google Services](https://page.techsoup.org/services?category=google?category=google)
-  - [Grant Preparation Services](https://page.techsoup.org/services?category=grants?category=grants)
-  - [HR Services](https://page.techsoup.org/services?category=human-resources?category=human-resources)
-  - [Microsoft Services](https://page.techsoup.org/services?category=microsoft-services)
+  - [View offer](https://www.techsoup.org/products/xero-for-nonprofits-access-to-discounted-rates-g-60782-)
 
 ## Human Review
 

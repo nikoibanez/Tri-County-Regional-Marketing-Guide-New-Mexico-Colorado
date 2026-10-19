@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-12",
+  "generated_at": "2026-10-19",
   "publication_note": "Automatically refreshed from watched public directory and tourism pages. Treat these as candidate updates, not official directory additions, until a human confirms the linked source.",
   "summary": {
     "sources_watched": 15,
     "pages_checked": 32,
-    "pages_failed": 10,
-    "already_represented": 224,
+    "pages_failed": 12,
+    "already_represented": 225,
     "possible_new_leads": 25,
     "priority_new_leads": 1,
     "low_confidence_text_leads": 24
@@ -19,7 +19,7 @@
       "source_role": "Business directory, local services, restaurants, visitor-facing businesses",
       "why_watch": "Raton-area chamber source for business names, local service anchors, restaurants, and potential outreach contacts.",
       "pages_checked": 2,
-      "possible_new_leads": 4,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -107,7 +107,7 @@
       "source_role": "Digital-only business listings, events, restaurants, shops, visitor-facing local guide",
       "why_watch": "LocalStash is the current digital successor route to the Weekender-style local guide model and can surface Trinidad businesses, events, restaurants, and shops.",
       "pages_checked": 2,
-      "possible_new_leads": 9,
+      "possible_new_leads": 10,
       "priority_new_leads": 0
     },
     {
@@ -151,7 +151,7 @@
       "source_role": "Event spots, community calendar, event submission, visitor-facing activities",
       "why_watch": "Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.",
       "pages_checked": 2,
-      "possible_new_leads": 11,
+      "possible_new_leads": 14,
       "priority_new_leads": 0
     },
     {
@@ -191,61 +191,6 @@
     }
   ],
   "low_confidence_text_leads": [
-    {
-      "name": "KYC vs No-KYC: What \"Anonymous\" Really Means",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://raton.info/",
-      "listing_url": "https://raton.info/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "KYC vs No-KYC: What \"Anonymous\" Really Means",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://raton.info/",
-      "listing_url": "https://raton.info/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Licensed & Regulated",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://raton.info/",
-      "listing_url": "https://raton.info/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Licensed & Regulated",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://raton.info/",
-      "listing_url": "https://raton.info/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Caleb Wilbourn Texas Artist Live at the Stokehouse!",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
     {
       "name": "Causa Mortis: A Hospital Comedy",
       "county": "Huerfano",
@@ -302,7 +247,29 @@
       "confidence": "low"
     },
     {
+      "name": "Halloweentown Movie Night at Fiesta Park",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "Heritage Park",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Kellen Goode Live at the Stokehouse!",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -325,6 +292,28 @@
     },
     {
       "name": "La Veta Library",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Mason Davis Live at the Stokehouse!",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "MUSIC BY MIDI LIVE!!!!",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -412,7 +401,7 @@
       "confidence": "low"
     },
     {
-      "name": "Mt. San Rafael Hospital Emergency Department",
+      "name": "KCRT AM-FM Radio",
       "county": "Las Animas",
       "state": "CO",
       "source_title": "LocalStash Trinidad",
@@ -446,6 +435,17 @@
     },
     {
       "name": "Visit Trinidad Colorado Tourism and Events Office",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "LocalStash Trinidad",
+      "source_type": "Digital local guide and business/event listings",
+      "source_page": "https://localstash.com/colorado/towns/trinidad-co",
+      "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "World Journal - Trinidad Branch",
       "county": "Las Animas",
       "state": "CO",
       "source_title": "LocalStash Trinidad",

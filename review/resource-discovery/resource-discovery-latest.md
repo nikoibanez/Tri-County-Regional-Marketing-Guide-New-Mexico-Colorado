@@ -1,6 +1,6 @@
 # Resource Discovery Review
 
-Generated: 2026-10-12T22:28:49+00:00
+Generated: 2026-10-19T20:28:32+00:00
 
 This is a private candidate queue. A link or page change is not proof that a resource fits the guide or that an opportunity is open.
 
@@ -8,12 +8,12 @@ This is a private candidate queue. A link or page change is not proof that a res
 
 - Source hubs configured: 45
 - Source hubs checked: 45
-- Candidate links collected: 175
-- Changed pages: 14
+- Candidate links collected: 179
+- Changed pages: 19
 - New baselines: 0
 - Confirmed broken URLs: 0
-- Script-access limitations: 7
-- Other check failures: 7
+- Script-access limitations: 6
+- Other check failures: 6
 
 ## Candidate Links
 
@@ -52,13 +52,12 @@ Category: grants-public-funding. Page status: unchanged.
 
 ### [National Endowment for the Humanities Grants](https://www.neh.gov/grants)
 
-Category: grants-public-funding. Page status: unchanged.
+Category: grants-public-funding. Page status: changed.
 
 - [Fellowships, Conferences, Seminars, and Workshops](https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5656) - matched: fellowships, grants
 - [Other Grant Opportunities](https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5661) - matched: grant, grants
 - [Search Grant Programs](https://www.neh.gov/grants/listing) - matched: grant, grants
 - [Preservation & Access Projects](https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5646) - matched: grants, preservation
-- [Public Humanities Projects](https://www.neh.gov/grants/public/public-humanities-projects) - matched: grants, public humanities
 - [Public Humanities Projects (Historic Sites, Exhibitions, Media, and Other Programs)](https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5651) - matched: grants, public humanities
 - [Application Review Process](https://www.neh.gov/grants/application-process) - matched: grants
 - [Books, Articles, and Other Publications](https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5631) - matched: grants
@@ -91,7 +90,7 @@ Category: business-capital. Page status: unchanged.
 
 ### [SBA Lender Match](https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders)
 
-Category: business-capital. Page status: unchanged.
+Category: business-capital. Page status: changed.
 
 - [List of microlenders](https://www.sba.gov/loans/microloans/list-of-microlenders/) - matched: microloans
 - [Microloans](https://www.sba.gov/loans/microloans/) - matched: microloans
@@ -99,7 +98,7 @@ Category: business-capital. Page status: unchanged.
 
 ### [New Mexico Community Foundation Grants and Scholarships](https://nmcf.org/grants-and-scholarships/)
 
-Category: grants-public-funding. Page status: unchanged.
+Category: grants-public-funding. Page status: changed.
 
 - [Apply For A Scholarship](https://nmcf.org/scholarships/) - matched: scholarship, scholarships
 - [Apply For A Grant](https://nmcf.org/apply-for-a-grant/) - matched: grant
@@ -119,6 +118,16 @@ Category: grants-public-funding. Page status: unchanged.
 - [Learn about our Fellowship](https://www.elpomar.org/fellowship) - matched: fellowship
 - [Our Funds](https://www.elpomar.org/grant-making/el-pomars-funds/) - matched: grant
 
+### [Anschutz Family Foundation Grantmaking](https://anschutzfamilyfoundation.org/our-grantmaking/)
+
+Category: grants-public-funding. Page status: changed.
+
+- [APPLY FOR A GRANT](https://anschutzfamilyfoundation.org/our-grantmaking/how-to-apply/) - matched: grant
+- [past grants](https://anschutzfamilyfoundation.org/about/search-our-past-grants/) - matched: grants
+- [region](https://anschutzfamilyfoundation.org/about/map-of-grants/) - matched: grants
+- [SEARCH OUR PAST GRANTS](https://anschutzfamilyfoundation.org/search-our-past-grants/) - matched: grants
+- [GRANTEE LOGIN](https://anschutzfamilyfdn.my.site.com/grants/s/) - matched: grants
+
 ### [National Network of Fiscal Sponsors Member Directory](https://www.fiscalsponsors.org/member-directory)
 
 Category: fiscal-sponsorship. Page status: unchanged.
@@ -127,7 +136,7 @@ Category: fiscal-sponsorship. Page status: unchanged.
 
 ### [Fiscal Sponsor Directory](https://fiscalsponsordirectory.org/)
 
-Category: fiscal-sponsorship. Page status: unchanged.
+Category: fiscal-sponsorship. Page status: changed.
 
 - [Fiscal Sponsorship](https://fiscalsponsordirectory.org/what-it-is/) - matched: fiscal sponsorship
 - [Fiscal Sponsorship: 6 Ways To Do It Right (eBook)](https://fiscalsponsordirectory.org/product/fiscal-sponsorship-6-ways-to-do-it-right-e-book/) - matched: fiscal sponsorship
@@ -149,7 +158,7 @@ Category: fiscal-sponsorship. Page status: unchanged.
 
 ### [IRS Exempt Organizations Business Master File](https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf)
 
-Category: nonprofit-directories. Page status: unchanged.
+Category: nonprofit-directories. Page status: changed.
 
 - [Español](https://www.irs.gov/es/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf) - matched: EO BMF, exempt organizations business master file
 - [Kreyòl ayisyen](https://www.irs.gov/ht/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf) - matched: EO BMF, exempt organizations business master file
@@ -181,8 +190,6 @@ Category: nonprofit-directories. Page status: changed.
 
 Category: nonprofit-directories. Page status: changed.
 
-- [Moreno Valley Arts Council](https://www.groundworksnm.org/nonprofit-directory/nonprofit/1032) - matched: arts, nonprofit directory
-- [Spanish Colonial Arts Society | Nuevo Mexicano Heritage Arts Museum](https://www.groundworksnm.org/nonprofit-directory/nonprofit/6932) - matched: arts, nonprofit directory
 - [City](https://www.groundworksnm.org/nonprofit-directory?order=city&sort=asc) - matched: city, nonprofit directory
 - [2](https://www.groundworksnm.org/nonprofit-directory?page=1) - matched: nonprofit directory
 - [3](https://www.groundworksnm.org/nonprofit-directory?page=2) - matched: nonprofit directory
@@ -192,19 +199,21 @@ Category: nonprofit-directories. Page status: changed.
 - [7](https://www.groundworksnm.org/nonprofit-directory?page=6) - matched: nonprofit directory
 - [8](https://www.groundworksnm.org/nonprofit-directory?page=7) - matched: nonprofit directory
 - [9](https://www.groundworksnm.org/nonprofit-directory?page=8) - matched: nonprofit directory
+- [ACLU of New Mexico](https://www.groundworksnm.org/nonprofit-directory/nonprofit/45149) - matched: nonprofit directory
 - [Advanced Search](https://www.groundworksnm.org/nonprofit-directory/advanced-search) - matched: nonprofit directory
-- [Albuquerque North Science Center](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26903) - matched: nonprofit directory
-- [Albuquerque SCORE](https://www.groundworksnm.org/nonprofit-directory/nonprofit/6614) - matched: nonprofit directory
-- [American Association for International Aging](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26908) - matched: nonprofit directory
-- [American Village Communities](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26912) - matched: nonprofit directory
-- [Black River Center for Learning](https://www.groundworksnm.org/nonprofit-directory/nonprofit/11840) - matched: nonprofit directory
+- [Albuquerque Philharmonic Orchestra](https://www.groundworksnm.org/nonprofit-directory/nonprofit/761) - matched: nonprofit directory
+- [Ariel Investigations](https://www.groundworksnm.org/nonprofit-directory/nonprofit/55284) - matched: nonprofit directory
+- [Art for the Heart](https://www.groundworksnm.org/nonprofit-directory/nonprofit/7304) - matched: nonprofit directory
+- [Arthritis Foundation New Mexico](https://www.groundworksnm.org/nonprofit-directory/nonprofit/61225) - matched: nonprofit directory
+- [Bridging the Worlds Animal Sanctuary](https://www.groundworksnm.org/nonprofit-directory/nonprofit/11371) - matched: nonprofit directory
 - [Browse by Name](https://www.groundworksnm.org/nonprofit-directory/all) - matched: nonprofit directory
-- [Cibola High School Golden Regiment Band Booster Club](https://www.groundworksnm.org/nonprofit-directory/nonprofit/43365) - matched: nonprofit directory
-- [Coalition to Stop Violence Against Native Women](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26977) - matched: nonprofit directory
-- [Crime Stoppers of Las Cruces and Dona Ana County](https://www.groundworksnm.org/nonprofit-directory/nonprofit/26996) - matched: nonprofit directory
-- [Dreams Drama Drums](https://www.groundworksnm.org/nonprofit-directory/nonprofit/27013) - matched: nonprofit directory
-- [Earth Alert](https://www.groundworksnm.org/nonprofit-directory/nonprofit/13516) - matched: nonprofit directory
-- [Ecoversity](https://www.groundworksnm.org/nonprofit-directory/nonprofit/27020) - matched: nonprofit directory
+- [Clovis MainStreet](https://www.groundworksnm.org/nonprofit-directory/nonprofit/13684) - matched: nonprofit directory
+- [Forget-Me-Not Veteran's Park](https://www.groundworksnm.org/nonprofit-directory/nonprofit/62058) - matched: nonprofit directory
+- [GLOBAL HUMANITARIAN AID & SOCIAL DEVELOPMENT](https://www.groundworksnm.org/nonprofit-directory/nonprofit/60206) - matched: nonprofit directory
+- [Gynecological Cancer Awareness Project, The](https://www.groundworksnm.org/nonprofit-directory/nonprofit/23521) - matched: nonprofit directory
+- [Las Colcheras Quilt Guild](https://www.groundworksnm.org/nonprofit-directory/nonprofit/13524) - matched: nonprofit directory
+- [last »](https://www.groundworksnm.org/nonprofit-directory?page=109) - matched: nonprofit directory
+- [Manzano Day School](https://www.groundworksnm.org/nonprofit-directory/nonprofit/3718) - matched: nonprofit directory
 
 ### [Colorado Nonprofit Association Member Directory](https://coloradononprofits.org/member-resources/nonprofit-member-directory/)
 
@@ -220,7 +229,7 @@ Category: artists-creative-opportunities. Page status: unchanged.
 
 ### [Southwest Contemporary Classifieds](https://southwestcontemporary.com/classifieds/)
 
-Category: artists-creative-opportunities. Page status: changed.
+Category: artists-creative-opportunities. Page status: unchanged.
 
 - [Residency Call for Artists in Residence: Taliesin West December 31, 2026 October 5, 2026](https://southwestcontemporary.com/classifieds/call-for-artists-in-residence-taliesin-west/) - matched: call for artists, residency
 - [Call for Artists](https://southwestcontemporary.com/?page_id=12119) - matched: call for artists
@@ -268,6 +277,7 @@ Category: artists-creative-opportunities. Page status: changed.
 - [haihatus-artist-residency-open-call-february-april-2027](https://resartis.org/open-call/haihatus-artist-residency-open-call-february-april-2027/) - matched: artist residency, open call, residency open call
 - [2026-anderson-center-at-tower-view-artist-residency-program](https://resartis.org/open-call/2026-anderson-center-at-tower-view-artist-residency-program/) - matched: artist residency, open call
 - [2026-artist-residency-studio-programs-2](https://resartis.org/open-call/2026-artist-residency-studio-programs-2/) - matched: artist residency, open call
+- [application-round-for-peripeteia-artist-residency-2](https://resartis.org/open-call/application-round-for-peripeteia-artist-residency-2/) - matched: artist residency, open call
 - [artist-residency-apply-now](https://resartis.org/open-call/artist-residency-apply-now/) - matched: artist residency, open call
 - [artist-residency-in-hainan-china](https://resartis.org/open-call/artist-residency-in-hainan-china/) - matched: artist residency, open call
 - [artist-residency-opportunity-in-rural-portugal-atlas-residency-2026-2027](https://resartis.org/open-call/artist-residency-opportunity-in-rural-portugal-atlas-residency-2026-2027/) - matched: artist residency, open call
@@ -287,7 +297,6 @@ Category: artists-creative-opportunities. Page status: changed.
 - [september-2025-anderson-center-at-tower-view-early-career-artist-residency-for-mn-nyc-artists](https://resartis.org/open-call/september-2025-anderson-center-at-tower-view-early-career-artist-residency-for-mn-nyc-artists/) - matched: artist residency, open call
 - [spring-2026-artist-residency-in-south-west-of-france](https://resartis.org/open-call/spring-2026-artist-residency-in-south-west-of-france/) - matched: artist residency, open call
 - [studio-luce-guatemalan-artist-residency](https://resartis.org/open-call/studio-luce-guatemalan-artist-residency/) - matched: artist residency, open call
-- [summer-2027-artist-residency-in-morocco-with-green-olive-art](https://resartis.org/open-call/summer-2027-artist-residency-in-morocco-with-green-olive-art/) - matched: artist residency, open call
 
 ### [Creative Capital Artist Opportunities](https://creative-capital.org/artist-resources/)
 
@@ -297,7 +306,7 @@ Category: artists-creative-opportunities. Page status: changed.
 
 ### [New Mexico Creative Industries Division Opportunities](https://www.edd.newmexico.gov/grants/cid-grants/)
 
-Category: artists-creative-opportunities. Page status: unchanged.
+Category: artists-creative-opportunities. Page status: changed.
 
 - [Creative Ambassadors](https://edd.newmexico.gov/divisions-and-offices/creative-industries/ci-ambassadors/) - matched: creative industries
 - [Creative Economy Insights](https://edd.newmexico.gov/creative-industries/) - matched: creative industries
@@ -317,7 +326,6 @@ Category: artists-creative-opportunities. Page status: unchanged.
 - [USDA Rural Development Business Programs](https://www.rd.usda.gov/programs-services/business-programs) - access_blocked; HTTP Error 403: Forbidden
 - [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - access_blocked; HTTP Error 403: Forbidden
 - [Candid Foundation Directory Free Access](https://learning.candid.org/free-access-to-foundation-directory) - access_blocked; HTTP Error 403: Forbidden
-- [Anschutz Family Foundation Grantmaking](https://anschutzfamilyfoundation.org/our-grantmaking/) - tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1016)
 - [Colorado Secretary of State Business Database](https://www.sos.state.co.us/biz/BusinessEntityCriteriaExt.do) - access_blocked; HTTP Error 403: Forbidden
 - [Colorado Creative Industries](https://oedit.colorado.gov/colorado-creative-industries) - access_blocked; HTTP Error 403: Forbidden
 - [Taos Center for the Arts Calls for Submission](https://tcataos.org/calls-for-submission) - access_blocked; HTTP Error 403: Forbidden

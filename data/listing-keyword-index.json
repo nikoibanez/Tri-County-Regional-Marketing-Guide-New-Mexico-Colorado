@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-12",
+  "generated_at": "2026-10-19",
   "description": "Controlled search keywords derived from canonical listing fields and current public-page title, metadata, and heading signals.",
   "entries": {
     "the-candy-crate-colfax-retail-sweets": {
@@ -187,7 +187,7 @@
       "final_url": "https://visitangelfirenm.com/listing/allen-fields-sports-complex/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -206,7 +206,7 @@
       "final_url": "https://visitangelfirenm.com/listing/alpine-lumber-company/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -324,7 +324,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-community-center/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -339,7 +339,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-ebikes-llc/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -384,7 +384,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-homes/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -505,7 +505,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-resort-nordic-center-golf-course/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -577,7 +577,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-visitors-center/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -592,7 +592,7 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fired-pizza/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -660,7 +660,7 @@
       "final_url": "https://visitangelfirenm.com/listing/arias-taqueria-food-truck/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -698,7 +698,7 @@
       "final_url": "https://visitangelfirenm.com/listing/aspen-gold-laundromat/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -757,7 +757,7 @@
       "final_url": "https://visitangelfirenm.com/listing/the-bakery-and-cafe/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -872,7 +872,7 @@
       "final_url": "https://visitangelfirenm.com/listing/blue-dawg-furnishings/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -995,7 +995,7 @@
       "final_url": "https://visitangelfirenm.com/listing/cabin-comforts/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1014,7 +1014,7 @@
       "final_url": "https://visitangelfirenm.com/listing/capulin-camp-rv-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1048,7 +1048,7 @@
       "final_url": "https://visitangelfirenm.com/listing/chisum-group-berkshire-hathaway-homeservices-angel-fire-real-estate/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1078,7 +1078,7 @@
       "final_url": "https://visitangelfirenm.com/listing/cimarron-canyon-state-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1093,7 +1093,7 @@
       "final_url": "https://visitangelfirenm.com/listing/clean-af-llc/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1123,7 +1123,7 @@
       "final_url": "https://visitangelfirenm.com/listing/coldwell-banker-mountain-properties/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1138,7 +1138,7 @@
       "final_url": "https://visitangelfirenm.com/listing/community-center-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1157,7 +1157,7 @@
       "final_url": "https://visitangelfirenm.com/listing/cottams-of-angel-fire/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1210,7 +1210,7 @@
       "final_url": "https://visitangelfirenm.com/listing/desert-sky-realty-investments/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1244,7 +1244,7 @@
       "final_url": "https://visitangelfirenm.com/listing/dollar-general/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1308,7 +1308,7 @@
       "final_url": "https://visitangelfirenm.com/listing/elevated-pour/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1342,7 +1342,7 @@
       "final_url": "https://visitangelfirenm.com/listing/enchanted-circle-campground/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1361,7 +1361,7 @@
       "final_url": "https://visitangelfirenm.com/listing/enchanted-circle-campground-rv-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1402,7 +1402,7 @@
       "final_url": "https://visitangelfirenm.com/listing/enchanted-outpost-magazine/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1421,7 +1421,7 @@
       "final_url": "https://visitangelfirenm.com/listing/family-dollar/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1455,7 +1455,7 @@
       "final_url": "https://visitangelfirenm.com/listing/four-seasons-of-angel-fire/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1470,7 +1470,7 @@
       "final_url": "https://visitangelfirenm.com/listing/frontier-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1491,7 +1491,7 @@
       "final_url": "https://visitangelfirenm.com/listing/girl-scouts-of-new-mexico-trails/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1548,7 +1548,7 @@
       "final_url": "https://visitangelfirenm.com/listing/high-country-ski-rental/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1582,7 +1582,7 @@
       "final_url": "https://visitangelfirenm.com/listing/the-indigo-market/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1671,7 +1671,7 @@
       "final_url": "https://visitangelfirenm.com/listing/jc-critter-control-llc/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1690,7 +1690,7 @@
       "final_url": "https://visitangelfirenm.com/listing/jeanettes-specialty-foods-catering/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1784,7 +1784,7 @@
       "final_url": "https://visitangelfirenm.com/listing/las-petacas-campground/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1803,7 +1803,7 @@
       "final_url": "https://visitangelfirenm.com/listing/legacy-silver-company/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1822,7 +1822,7 @@
       "final_url": "https://visitangelfirenm.com/listing/legends-bar-and-grill/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1879,7 +1879,7 @@
       "final_url": "https://visitangelfirenm.com/listing/lindsey-homes/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1898,7 +1898,7 @@
       "final_url": "https://angelfirechamber.org/business/lindsey-living/",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -1913,7 +1913,7 @@
       "final_url": "https://visitangelfirenm.com/listing/lindsey-vacation-rentals/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -1949,7 +1949,7 @@
       "final_url": "https://www.startupspace.app/resource?page=62",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2022,7 +2022,7 @@
       "final_url": "https://visitangelfirenm.com/listing/los-rios-river-runners/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2043,7 +2043,7 @@
       "final_url": "https://visitangelfirenm.com/listing/lowes-market/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2062,7 +2062,7 @@
       "final_url": "https://visitangelfirenm.com/listing/maverick-campground/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2092,7 +2092,7 @@
       "final_url": "https://visitangelfirenm.com/listing/mi-cocina-mexicana/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2111,7 +2111,7 @@
       "final_url": "https://visitangelfirenm.com/listing/mikuna-grill/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2149,7 +2149,7 @@
       "final_url": "https://visitangelfirenm.com/listing/monte-verde-lake/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2293,7 +2293,7 @@
       "final_url": "https://visitangelfirenm.com/listing/mountain-serenity-rentals/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2349,7 +2349,7 @@
       "final_url": "https://visitangelfirenm.com/listing/mountain-supply-true-value/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2364,7 +2364,7 @@
       "final_url": "https://visitangelfirenm.com/listing/mountain-view-event-center/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2446,7 +2446,7 @@
       "final_url": "https://visitangelfirenm.com/listing/north-country-real-estate/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2520,7 +2520,7 @@
       "final_url": "https://visitangelfirenm.com/listing/off-grid-grow-co-dispensary/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2535,7 +2535,7 @@
       "final_url": "https://visitangelfirenm.com/listing/olympic-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2554,7 +2554,7 @@
       "final_url": "https://visitangelfirenm.com/listing/one-peoples-kitchen/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2622,7 +2622,7 @@
       "final_url": "https://visitangelfirenm.com/listing/pine-peak-home-decor/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2641,7 +2641,7 @@
       "final_url": "https://visitangelfirenm.com/listing/pizza-stop/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2726,7 +2726,7 @@
       "final_url": "https://visitangelfirenm.com/listing/pub-and-grub/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2764,7 +2764,7 @@
       "final_url": "https://visitangelfirenm.com/listing/purple-sage-studio/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2798,7 +2798,7 @@
       "final_url": "https://visitangelfirenm.com/listing/re-max-mountain-realty/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2832,7 +2832,7 @@
       "final_url": "https://visitangelfirenm.com/listing/ridgewalk-treehouse/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2847,7 +2847,7 @@
       "final_url": "https://visitangelfirenm.com/listing/rio-grande-balloons/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2914,7 +2914,7 @@
       "final_url": "https://visitangelfirenm.com/listing/rockies-market/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2963,7 +2963,7 @@
       "final_url": "https://visitangelfirenm.com/listing/santa-fe-party-rentals/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3012,7 +3012,7 @@
       "final_url": "https://visitangelfirenm.com/listing/the-shuter-library-of-angel-fire/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3031,7 +3031,7 @@
       "final_url": "https://visitangelfirenm.com/listing/sierra-bonita-cabins-rv-park/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3050,7 +3050,7 @@
       "final_url": "https://visitangelfirenm.com/listing/slope-side-sports/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3065,7 +3065,7 @@
       "final_url": "https://visitangelfirenm.com/listing/smoke-rings-bbq/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3105,7 +3105,7 @@
       "final_url": "https://visitangelfirenm.com/listing/snowblaze-ski-shop/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3143,7 +3143,7 @@
       "final_url": "https://visitangelfirenm.com/listing/southern-exposure-photography/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3215,7 +3215,7 @@
       "final_url": "https://visitangelfirenm.com/listing/subway-lowes-pay-save/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3283,7 +3283,7 @@
       "final_url": "https://visitangelfirenm.com/listing/sweet-shirt-co/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3298,7 +3298,7 @@
       "final_url": "https://visitangelfirenm.com/listing/taos-community-foundation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3381,7 +3381,7 @@
       "final_url": "https://visitangelfirenm.com/listing/taty-at-the-bump/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3432,7 +3432,7 @@
       "final_url": "https://visitangelfirenm.com/listing/thai-angel/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3451,7 +3451,7 @@
       "final_url": "https://visitangelfirenm.com/listing/tolby-campground-cimarron-valley/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3489,7 +3489,7 @@
       "final_url": "https://visitangelfirenm.com/listing/trailhead-ski-shop/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3534,7 +3534,7 @@
       "final_url": "https://visitangelfirenm.com/listing/vacasa-new-mexico-llc/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3636,7 +3636,7 @@
       "final_url": "https://visitangelfirenm.com/listing/village-ski-shop/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3672,7 +3672,7 @@
       "final_url": "https://visitangelfirenm.com/catering/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3687,7 +3687,7 @@
       "final_url": "https://visitangelfirenm.com/listing/weezies-wild-rides/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3738,7 +3738,7 @@
       "final_url": "https://visitangelfirenm.com/listing/whatville/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3821,7 +3821,7 @@
       "final_url": "https://visitangelfirenm.com/listing/zebs-restaurant-and-bar/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -3840,7 +3840,7 @@
       "final_url": "https://visitangelfirenm.com/listing/zia-bar/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -4337,7 +4337,7 @@
       "final_url": "https://www.eaglenestmercantile.com",
       "status": "fetch_error",
       "status_code": 429,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 429: Too Many Requests"
@@ -4926,7 +4926,7 @@
       "final_url": "https://allseasonsgiftshop.business.site/",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -5039,7 +5039,7 @@
       "final_url": "https://locations.arbys.com/nm/raton/415-clayton-hwy.html",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -6487,7 +6487,7 @@
       "final_url": "https://innovativejournaling.com/",
       "status": "fetch_error",
       "status_code": 429,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 429: Too Many Requests"
@@ -7502,7 +7502,7 @@
       "final_url": "https://www.mcdonalds.com/us/en-us/location/nm/raton/542-clayton-rd/6011.html?cid=RF:YXT:GMB::Clicks",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -9631,7 +9631,7 @@
       "final_url": "https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -10173,7 +10173,7 @@
       "final_url": "https://county.pueblo.org/energy-and-economic-development-department/small-business-development-center",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -10309,7 +10309,7 @@
       "final_url": "https://huerfanofair.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1016)>"
@@ -11062,7 +11062,7 @@
       "final_url": "https://bigronline.com/locations/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -11224,7 +11224,7 @@
       "final_url": "https://charlies-market.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1016)>"
@@ -11457,7 +11457,7 @@
       "final_url": "https://franciscofort.org",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)>"
@@ -11924,7 +11924,7 @@
       "final_url": "https://lavetacountrystore.com/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -12317,7 +12317,7 @@
       "final_url": "https://thelvesa.org/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -12871,7 +12871,7 @@
       "final_url": "https://www.roomsattheclub.com/",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -13094,7 +13094,7 @@
       "final_url": "https://www.skinnysdinerandbar.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -13309,7 +13309,7 @@
       "final_url": "https://www.twofoxcabins.com/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -13988,7 +13988,7 @@
       "final_url": "https://www.bestwestern.com/en_US/book/hotels-in-walsenburg/best-western-rambler/propertyCode.06038.html",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -14292,10 +14292,10 @@
       "final_url": "https://c1btrueorganics.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno -5] No address associated with hostname>"
     },
     "travel-guide-calendars-of-events-walsenburg-huerfano": {
       "resource_name": "Calendars of Events",
@@ -14326,7 +14326,7 @@
       "final_url": "https://www.cannacity.us/home",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -14521,7 +14521,7 @@
       "final_url": "https://cityofwalsenburg.colorado.gov",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -16468,7 +16468,7 @@
       "final_url": "https://la-h-health.colorado.gov",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -19136,10 +19136,10 @@
       "final_url": "https://aguilarcountrycottages.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-11",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "yellowpages-lead-aguilar-elementary-school-aguilar-las-animas": {
       "resource_name": "Aguilar Elementary School",
@@ -19392,7 +19392,7 @@
       "final_url": "https://aguilarstation.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -19641,7 +19641,7 @@
       "final_url": "https://221bgallery.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -20037,7 +20037,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -20179,7 +20179,7 @@
       "final_url": "https://boom-noodles.com",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -20274,7 +20274,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -20325,7 +20325,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -21101,7 +21101,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -21569,7 +21569,7 @@
       "final_url": "https://visittrinidadcolorado.com/state-parks/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -21844,7 +21844,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -21907,7 +21907,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -22087,7 +22087,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -22106,7 +22106,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -22146,7 +22146,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -22268,7 +22268,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -22639,7 +22639,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -22903,7 +22903,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -23083,7 +23083,7 @@
       "final_url": "https://www.marketplacegallery.net",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -23181,7 +23181,7 @@
       "final_url": "https://missionatthebell.com",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -23241,7 +23241,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -23413,7 +23413,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -23432,7 +23432,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -23711,7 +23711,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -23931,11 +23931,11 @@
       "source_url": "https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html",
       "final_url": "https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html",
       "status": "fetch_error",
-      "status_code": 404,
-      "last_checked": "2026-10-12",
+      "status_code": 403,
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "HTTP Error 404: Not Found"
+      "error": "HTTP Error 403: Forbidden"
     },
     "yellowpages-lead-safelite-autoglass-trinidad-las-animas": {
       "resource_name": "Safelite AutoGlass",
@@ -24555,7 +24555,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -24576,7 +24576,7 @@
       "final_url": "https://www.tabularasa.gallery",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -24625,7 +24625,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -24803,7 +24803,7 @@
       "final_url": "https://jimandmelissa.org",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -24822,7 +24822,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -25201,7 +25201,7 @@
       "final_url": "https://trinidadstate.edu/collaboratory/index.html",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -25239,7 +25239,7 @@
       "final_url": "https://visittrinidadcolorado.com/stay/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -25424,7 +25424,7 @@
       "final_url": "https://visittrinidadcolorado.com/arts-culture/visual-arts/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -25458,7 +25458,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -25537,7 +25537,7 @@
       "final_url": "https://visittrinidadcolorado.com/outdoor-recreation/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -25799,7 +25799,7 @@
       "final_url": "https://oedit.colorado.gov/colorado-creative-districts",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -27168,7 +27168,7 @@
       "final_url": "https://worldjournalnewspaper.com/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-12",
+      "last_checked": "2026-10-19",
       "last_changed": "2026-08-19",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"

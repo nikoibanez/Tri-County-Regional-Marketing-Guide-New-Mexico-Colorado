@@ -1,6 +1,6 @@
 # Update Source Audit
 
-Generated: 2026-10-12
+Generated: 2026-10-19
 
 This report separates confirmed link failures from pages that merely block or confuse scripted checks.
 
@@ -9,18 +9,18 @@ This report separates confirmed link failures from pages that merely block or co
 - Records checked: 170
 - Web sources checked: 169
 - Confirmed broken or missing: 0
-- Normal-browser confirmation required: 2
-- Script-access limitations (not broken): 34
+- Normal-browser confirmation required: 1
+- Script-access limitations (not broken): 36
 - Offline field-check records: 1
 - Human approval required: 112
 
 ## Status Counts
 
-- access_blocked: 33
+- access_blocked: 35
 - field_check: 1
-- network_error: 2
 - ok: 119
-- redirect: 14
+- redirect: 13
+- timeout: 1
 - tls_error: 1
 
 ## Confirmed Broken Or Missing
@@ -31,8 +31,7 @@ No checked web source is confirmed broken or missing.
 
 These pages are not classified as broken. A timeout, network problem, or temporary server response prevented a conclusive scripted check.
 
-- [The Ratonian Community Calendar](https://theratonian.com/calendar/) - Colfax; events; network_error; [Errno -5] No address associated with hostname
-- [USDA Rural Development Programs and Services](https://www.rd.usda.gov/programs-services) - National; funding; network_error; [Errno -3] Temporary failure in name resolution
+- [NM Family Friendly Business Directory](https://nmfamilyfriendlybusiness.org/premium-business-directory/) - Regional; directory; timeout; The read operation timed out
 
 ## Script Access Limitations (Not Broken)
 
@@ -43,6 +42,7 @@ These are informational results, not broken-link findings. The page blocked scri
 - [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
 - [Visit Angel Fire NM Get Listed](https://visitangelfirenm.com/get-listed/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
+- [Raton Chamber Business Directory](https://www.raton.info/business-directory.html) - Colfax; events; access_blocked; HTTP Error 403: Forbidden
 - [Visit Angel Fire - List Your Event](https://visitangelfirenm.com/list-your-event/) - Colfax; events; access_blocked; HTTP Error 403: Forbidden
 - [The World Journal](https://worldjournalnewspaper.com/) - Huerfano; events; access_blocked; HTTP Error 403: Forbidden
 - [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; access_blocked; HTTP Error 403: Forbidden
@@ -59,6 +59,7 @@ These are informational results, not broken-link findings. The page blocked scri
 - [Mary John Goree Las Animas County Scholarship](https://goreescholarship.org/) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [Robert Hoag Rawlings Foundation Grants](https://rawlingsfoundation.com/grants/requests/) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - National; funding; access_blocked; HTTP Error 403: Forbidden
+- [USDA Rural Development Programs and Services](https://www.rd.usda.gov/programs-services) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [Colorado Advanced Industries Accelerator Programs](https://oedit.colorado.gov/advanced-industries-accelerator-programs) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Colorado Business Funding and Incentives](https://oedit.colorado.gov/business-funding-and-incentives) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Colorado Community Revitalization Grant](https://oedit.colorado.gov/colorado-community-revitalization-grant) - Regional; funding; access_blocked; HTTP Error 403: Forbidden

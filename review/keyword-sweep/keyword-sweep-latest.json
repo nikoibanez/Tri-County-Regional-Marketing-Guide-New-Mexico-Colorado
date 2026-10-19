@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12",
+  "generated_at": "2026-10-19",
   "index_path": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/listing-keyword-index.json",
   "network_enabled": true,
   "summary": {
@@ -8,9 +8,9 @@
     "distinct_source_urls": 419,
     "urls_selected": 120,
     "urls_checked": 120,
-    "urls_failed": 118,
-    "entries_changed": 1,
-    "source_keyword_changes": 1,
+    "urls_failed": 120,
+    "entries_changed": 0,
+    "source_keyword_changes": 0,
     "entries_with_blocked_inferences": 0,
     "blocked_inference_count": 0,
     "status_counts": {
@@ -20,25 +20,18 @@
       "no_source": 173
     }
   },
-  "changes": [
-    {
-      "id": "la-veta-oil-company-huerfano-service-fuel",
-      "name": "La Veta Oil Company",
-      "county": "Huerfano",
-      "town": "La Veta",
-      "added": [
-        "business directory"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://www.yellowpages.com/la-veta-co"
-    }
-  ],
+  "changes": [],
   "blocked_inferences": [],
   "guardrail_path": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/keyword-inference-guardrails.json",
   "fetch_failures": [
     {
       "url": "https://221bgallery.com/",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "url": "https://aguilarcountrycottages.com",
       "status": "fetch_error",
       "status_code": null,
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -50,10 +43,22 @@
       "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     {
+      "url": "https://allseasonsgiftshop.business.site/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
       "url": "https://angelfirechamber.org/business/lindsey-living/",
       "status": "fetch_error",
       "status_code": 404,
       "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://bigronline.com/locations/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://boom-noodles.com",
@@ -65,13 +70,7 @@
       "url": "https://c1btrueorganics.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "url": "https://cawthonpark.com",
-      "status": "fetch_error",
-      "status_code": null,
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1016)>"
+      "error": "<urlopen error [Errno -5] No address associated with hostname>"
     },
     {
       "url": "https://charlies-market.com/",
@@ -160,8 +159,8 @@
     {
       "url": "https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html",
       "status": "fetch_error",
-      "status_code": 404,
-      "error": "HTTP Error 404: Not Found"
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://trinidadstate.edu/collaboratory/index.html",
@@ -171,6 +170,12 @@
     },
     {
       "url": "https://visitangelfirenm.com/catering/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/allen-fields-sports-complex/",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -206,12 +211,6 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://visitangelfirenm.com/listing/angel-fire-resort-vacation-rentals/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
       "url": "https://visitangelfirenm.com/listing/angel-fire-visitors-center/",
       "status": "fetch_error",
       "status_code": 403,
@@ -219,12 +218,6 @@
     },
     {
       "url": "https://visitangelfirenm.com/listing/angel-fired-pizza/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -296,12 +289,6 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://visitangelfirenm.com/listing/coyote-creek-state-park/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
       "url": "https://visitangelfirenm.com/listing/desert-sky-realty-investments/",
       "status": "fetch_error",
       "status_code": 403,
@@ -309,6 +296,12 @@
     },
     {
       "url": "https://visitangelfirenm.com/listing/dollar-general/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/elevated-pour/",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -357,6 +350,12 @@
     },
     {
       "url": "https://visitangelfirenm.com/listing/high-country-ski-rental/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/jc-critter-control-llc/",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -429,6 +428,12 @@
     },
     {
       "url": "https://visitangelfirenm.com/listing/monte-verde-lake/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/mountain-serenity-rentals/",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -530,7 +535,7 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://visitangelfirenm.com/listing/ski-tech-bluebird-mountain-sports/",
+      "url": "https://visitangelfirenm.com/listing/slope-side-sports/",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -597,12 +602,6 @@
     },
     {
       "url": "https://visitangelfirenm.com/listing/the-shuter-library-of-angel-fire/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/the-vietnam-veterans-memorial/",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"

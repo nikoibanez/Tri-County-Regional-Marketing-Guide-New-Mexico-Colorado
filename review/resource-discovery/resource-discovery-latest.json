@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-12T22:28:49+00:00",
+  "generated_at": "2026-10-19T20:28:32+00:00",
   "review_policy": "These hubs can suggest candidate resources. Automation may collect page links and change signals, but a person must confirm relevance, eligibility, deadlines, contact details, and public wording before publication.",
   "summary": {
     "sources": 45,
     "checked": 45,
-    "changed": 14,
+    "changed": 19,
     "new_baselines": 0,
-    "candidate_links": 175,
+    "candidate_links": 179,
     "confirmed_broken": 0,
-    "script_access_limited": 7,
-    "check_failures": 7,
+    "script_access_limited": 6,
+    "check_failures": 6,
     "categories": {
       "artists-creative-opportunities": 19,
       "business-capital": 2,
@@ -20,13 +20,12 @@
     },
     "status_counts": {
       "access_blocked": 6,
-      "ok": 38,
-      "tls_error": 1
+      "ok": 39
     },
     "change_counts": {
-      "changed": 14,
-      "check_failed": 7,
-      "unchanged": 24
+      "changed": 19,
+      "check_failed": 6,
+      "unchanged": 20
     }
   },
   "results": [
@@ -52,7 +51,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.grants.gov/api/api-guide",
-        "elapsed_ms": 137,
+        "elapsed_ms": 450,
         "content_hash": "d4e3e57e27171e716ea928fce4ce60b39a5aa6c5e5a80b50e16a53c51c4a781d",
         "text_length": 5581,
         "link_count": 40,
@@ -109,7 +108,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://sam.gov/assistance-listings",
-        "elapsed_ms": 655,
+        "elapsed_ms": 528,
         "content_hash": "449975f8ac9db8ed1e60d6cbac835be2d19e8dee7396b2844db3e64248f04d2d",
         "text_length": 2873,
         "link_count": 35,
@@ -166,7 +165,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.arts.gov/grants",
-        "elapsed_ms": 105,
+        "elapsed_ms": 371,
         "content_hash": "153622322f599b2f5595cc1f7ca4d834776b365b3f1878534d937ef757280c67",
         "text_length": 6455,
         "link_count": 110,
@@ -299,9 +298,9 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.neh.gov/grants",
-        "elapsed_ms": 58,
-        "content_hash": "0e8399df27e6150a907001eef2c7f3a3cb8e2a6a6dba1b4329aef0cc5aec1bdc",
-        "text_length": 2901,
+        "elapsed_ms": 759,
+        "content_hash": "b45c860c5cfeeb9f53aac58dabbeece9c87892fec92e4198a6a8973f3c6f7e8e",
+        "text_length": 2910,
         "link_count": 86,
         "candidates": [
           {
@@ -338,15 +337,6 @@
             "matched_terms": [
               "grants",
               "preservation"
-            ]
-          },
-          {
-            "title": "Public Humanities Projects",
-            "url": "https://www.neh.gov/grants/public/public-humanities-projects",
-            "score": 6,
-            "matched_terms": [
-              "grants",
-              "public humanities"
             ]
           },
           {
@@ -449,7 +439,7 @@
         ],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "0e8399df27e6150a907001eef2c7f3a3cb8e2a6a6dba1b4329aef0cc5aec1bdc"
     },
     {
@@ -531,15 +521,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.sbir.gov/topics?page=0&program=&status=Open",
-        "elapsed_ms": 339,
+        "elapsed_ms": 919,
         "content_hash": "2d32adce9ab33754660ca2306d8bb099e5978191f80fdb6ef72279b60b7264fc",
         "text_length": 10145,
         "link_count": 68,
         "candidates": [],
         "error": ""
       },
-      "change_status": "changed",
-      "previous_hash": "55e8e487bad19d23911c7448b656a7a7ae9361467cca846428f45162d85c3d07"
+      "change_status": "unchanged",
+      "previous_hash": "2d32adce9ab33754660ca2306d8bb099e5978191f80fdb6ef72279b60b7264fc"
     },
     {
       "source": {
@@ -563,7 +553,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.cdfifund.gov/programs-training/certification/cdfi",
-        "elapsed_ms": 8422,
+        "elapsed_ms": 10252,
         "content_hash": "b076fb47336ff3bdc2a1d7e70458efc67449ca07643bef5e485c3178b42b80c3",
         "text_length": 5162,
         "link_count": 109,
@@ -692,8 +682,8 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.sba.gov/loans/lender-match/",
-        "elapsed_ms": 439,
-        "content_hash": "a7056a589b11e90ae4f466207e07300a6a82af67d173eee9ed002a4296b6a06f",
+        "elapsed_ms": 1641,
+        "content_hash": "225154ff710b9de600418ef6387b58a0cbdf4b77c359337a2c06d773b5df6f02",
         "text_length": 5528,
         "link_count": 115,
         "candidates": [
@@ -724,7 +714,7 @@
         ],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "a7056a589b11e90ae4f466207e07300a6a82af67d173eee9ed002a4296b6a06f"
     },
     {
@@ -776,10 +766,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://nmcf.org/grants-and-scholarships/",
-        "elapsed_ms": 677,
-        "content_hash": "03763bccdfc8d420fb37c7a1c5912b8173f2cf3a216c7a2db8d32ed01d1627b5",
-        "text_length": 3756,
-        "link_count": 167,
+        "elapsed_ms": 482,
+        "content_hash": "02aff0e2ff8f40579b3569d87382a39fa25c82218d1a288c0c887677a1bac23d",
+        "text_length": 3846,
+        "link_count": 171,
         "candidates": [
           {
             "title": "Apply For A Scholarship",
@@ -809,7 +799,7 @@
         ],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "03763bccdfc8d420fb37c7a1c5912b8173f2cf3a216c7a2db8d32ed01d1627b5"
     },
     {
@@ -835,7 +825,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.elpomar.org/grant-making/",
-        "elapsed_ms": 254,
+        "elapsed_ms": 198,
         "content_hash": "c828be4ad5cbc9265e65a78b6f55985f801f9d3794790e4266127fe705c6380e",
         "text_length": 10617,
         "link_count": 117,
@@ -939,13 +929,58 @@
         ]
       },
       "check": {
-        "status": "tls_error",
-        "status_code": null,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://anschutzfamilyfoundation.org/our-grantmaking/",
-        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1016)",
-        "candidates": []
+        "elapsed_ms": 531,
+        "content_hash": "b41e593b3db9eeb518c5c371e29fb4365bdf5f79661b89ab85f36440143c28f2",
+        "text_length": 2970,
+        "link_count": 36,
+        "candidates": [
+          {
+            "title": "APPLY FOR A GRANT",
+            "url": "https://anschutzfamilyfoundation.org/our-grantmaking/how-to-apply/",
+            "score": 4,
+            "matched_terms": [
+              "grant"
+            ]
+          },
+          {
+            "title": "past grants",
+            "url": "https://anschutzfamilyfoundation.org/about/search-our-past-grants/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "region",
+            "url": "https://anschutzfamilyfoundation.org/about/map-of-grants/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "SEARCH OUR PAST GRANTS",
+            "url": "https://anschutzfamilyfoundation.org/search-our-past-grants/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "GRANTEE LOGIN",
+            "url": "https://anschutzfamilyfdn.my.site.com/grants/s/",
+            "score": 3,
+            "matched_terms": [
+              "grants"
+            ]
+          }
+        ],
+        "error": ""
       },
-      "change_status": "check_failed",
+      "change_status": "changed",
       "previous_hash": "3d056dc1383d483816a1806d6db88a650092b8b25feee2c92fa2d7a7536ddf66"
     },
     {
@@ -970,7 +1005,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.fiscalsponsors.org/member-directory",
-        "elapsed_ms": 121,
+        "elapsed_ms": 565,
         "content_hash": "d7092235d54fcb4845044eff9ea1d76c04e7b463add679fc2b00adf0794a3def",
         "text_length": 1002,
         "link_count": 54,
@@ -1011,8 +1046,8 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://fiscalsponsordirectory.org/",
-        "elapsed_ms": 1241,
-        "content_hash": "e83f810fc4c9ff471c930fd7a3c0e2f48ba8c592694ece60652b48eac8b5b102",
+        "elapsed_ms": 1138,
+        "content_hash": "f32f49d3a95f9b57aa9a189231464eba448d1f652af06e5c041661a1c0b165e2",
         "text_length": 5321,
         "link_count": 82,
         "candidates": [
@@ -1091,7 +1126,7 @@
         ],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "e83f810fc4c9ff471c930fd7a3c0e2f48ba8c592694ece60652b48eac8b5b102"
     },
     {
@@ -1115,7 +1150,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.fracturedatlas.org/fiscal-sponsorship",
-        "elapsed_ms": 493,
+        "elapsed_ms": 644,
         "content_hash": "5f54e33b686dfac64269f3d30632d43961638302ed083600cf503f987999a7c0",
         "text_length": 2852,
         "link_count": 51,
@@ -1173,10 +1208,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
-        "elapsed_ms": 114,
-        "content_hash": "c748298714cce16304d3052f862c886b6194500016644e7141d5d5c86853106b",
-        "text_length": 8784,
-        "link_count": 280,
+        "elapsed_ms": 160,
+        "content_hash": "5e1667cf499af5fd662c65f4639280a04d6e83e0edae0f0d9e418f13cf3469c3",
+        "text_length": 8862,
+        "link_count": 282,
         "candidates": [
           {
             "title": "Espa\u00f1ol",
@@ -1301,7 +1336,7 @@
         ],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "c748298714cce16304d3052f862c886b6194500016644e7141d5d5c86853106b"
     },
     {
@@ -1327,8 +1362,8 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://projects.propublica.org/nonprofits/api/",
-        "elapsed_ms": 85,
-        "content_hash": "d7185097c5aea2070c566afe1dd59dfc1b5c09af8f2c8bfa3c4b23cf225f9b66",
+        "elapsed_ms": 232,
+        "content_hash": "17c868c339fa79bb75d63b14f13d1cc7d1798427ef7b85acd4ce5ab8d5edf4eb",
         "text_length": 18200,
         "link_count": 57,
         "candidates": [
@@ -1386,7 +1421,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "72b9be07537af71aeff065f9df6840d1aaccade192bb0abfa8539c37dcd67439"
+      "previous_hash": "d7185097c5aea2070c566afe1dd59dfc1b5c09af8f2c8bfa3c4b23cf225f9b66"
     },
     {
       "source": {
@@ -1410,7 +1445,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.guidestar.org/search",
-        "elapsed_ms": 338,
+        "elapsed_ms": 234,
         "content_hash": "f1299718d4a3259df3fe4ef2cfe5a431da0f13e82ad692a9f4879b35c3d288e6",
         "text_length": 23820,
         "link_count": 16,
@@ -1442,29 +1477,11 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.groundworksnm.org/nonprofit-directory",
-        "elapsed_ms": 76,
-        "content_hash": "b91696d3906b9d1b4a05ae917ad2e8d6670abce9038cb20494ae92311a6121ec",
-        "text_length": 7271,
+        "elapsed_ms": 153,
+        "content_hash": "9a4a27e0a3f0832200190c6466d84e3c6f9cd04b1f550846f7dc9844d854c195",
+        "text_length": 7749,
         "link_count": 117,
         "candidates": [
-          {
-            "title": "Moreno Valley Arts Council",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/1032",
-            "score": 6,
-            "matched_terms": [
-              "arts",
-              "nonprofit directory"
-            ]
-          },
-          {
-            "title": "Spanish Colonial Arts Society | Nuevo Mexicano Heritage Arts Museum",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/6932",
-            "score": 6,
-            "matched_terms": [
-              "arts",
-              "nonprofit directory"
-            ]
-          },
           {
             "title": "City",
             "url": "https://www.groundworksnm.org/nonprofit-directory?order=city&sort=asc",
@@ -1539,6 +1556,14 @@
             ]
           },
           {
+            "title": "ACLU of New Mexico",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/45149",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
             "title": "Advanced Search",
             "url": "https://www.groundworksnm.org/nonprofit-directory/advanced-search",
             "score": 4,
@@ -1547,40 +1572,40 @@
             ]
           },
           {
-            "title": "Albuquerque North Science Center",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/26903",
+            "title": "Albuquerque Philharmonic Orchestra",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/761",
             "score": 4,
             "matched_terms": [
               "nonprofit directory"
             ]
           },
           {
-            "title": "Albuquerque SCORE",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/6614",
+            "title": "Ariel Investigations",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/55284",
             "score": 4,
             "matched_terms": [
               "nonprofit directory"
             ]
           },
           {
-            "title": "American Association for International Aging",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/26908",
+            "title": "Art for the Heart",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/7304",
             "score": 4,
             "matched_terms": [
               "nonprofit directory"
             ]
           },
           {
-            "title": "American Village Communities",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/26912",
+            "title": "Arthritis Foundation New Mexico",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/61225",
             "score": 4,
             "matched_terms": [
               "nonprofit directory"
             ]
           },
           {
-            "title": "Black River Center for Learning",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/11840",
+            "title": "Bridging the Worlds Animal Sanctuary",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/11371",
             "score": 4,
             "matched_terms": [
               "nonprofit directory"
@@ -1595,48 +1620,56 @@
             ]
           },
           {
-            "title": "Cibola High School Golden Regiment Band Booster Club",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/43365",
+            "title": "Clovis MainStreet",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/13684",
             "score": 4,
             "matched_terms": [
               "nonprofit directory"
             ]
           },
           {
-            "title": "Coalition to Stop Violence Against Native Women",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/26977",
+            "title": "Forget-Me-Not Veteran's Park",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/62058",
             "score": 4,
             "matched_terms": [
               "nonprofit directory"
             ]
           },
           {
-            "title": "Crime Stoppers of Las Cruces and Dona Ana County",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/26996",
+            "title": "GLOBAL HUMANITARIAN AID & SOCIAL DEVELOPMENT",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/60206",
             "score": 4,
             "matched_terms": [
               "nonprofit directory"
             ]
           },
           {
-            "title": "Dreams Drama Drums",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/27013",
+            "title": "Gynecological Cancer Awareness Project, The",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/23521",
             "score": 4,
             "matched_terms": [
               "nonprofit directory"
             ]
           },
           {
-            "title": "Earth Alert",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/13516",
+            "title": "Las Colcheras Quilt Guild",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/13524",
             "score": 4,
             "matched_terms": [
               "nonprofit directory"
             ]
           },
           {
-            "title": "Ecoversity",
-            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/27020",
+            "title": "last \u00bb",
+            "url": "https://www.groundworksnm.org/nonprofit-directory?page=109",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "Manzano Day School",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/3718",
             "score": 4,
             "matched_terms": [
               "nonprofit directory"
@@ -1646,7 +1679,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "1ef1b6f76dbfa75afeb2a056a8c80c20e351acfe2bac7454db83563f7a8a9699"
+      "previous_hash": "b91696d3906b9d1b4a05ae917ad2e8d6670abce9038cb20494ae92311a6121ec"
     },
     {
       "source": {
@@ -1670,7 +1703,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://coloradononprofits.org/member-resources/nonprofit-member-directory/",
-        "elapsed_ms": 253,
+        "elapsed_ms": 69,
         "content_hash": "36f342fa9eefa077c54331675fc7ca743c830f5b729ee66b4683a5b87e792b11",
         "text_length": 1271,
         "link_count": 45,
@@ -1712,7 +1745,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.sharenm.org/",
-        "elapsed_ms": 1469,
+        "elapsed_ms": 1797,
         "content_hash": "b1753763d3f72baed9dacc4687da51163dc30eb87b5121436bb3749899a00f0f",
         "text_length": 3944,
         "link_count": 27,
@@ -1744,16 +1777,16 @@
       "check": {
         "status": "ok",
         "status_code": 200,
-        "final_url": "https://www.coloradogives.org/search?sid=180a5193",
-        "elapsed_ms": 1031,
-        "content_hash": "a82a4c161bb11765dc0237e8d8fa99e82233d105eabe1ec0e437506616b4fe23",
-        "text_length": 1485,
+        "final_url": "https://www.coloradogives.org/search?sid=e884c11d",
+        "elapsed_ms": 739,
+        "content_hash": "dc40294e51d1d421716aa5e7f6e23ab102b4d81aeccc9f61cf70de3886893952",
+        "text_length": 1444,
         "link_count": 29,
         "candidates": [],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "4834723532baed92d967dcd44ab1791de9fb162c9f4d72b78a9174063ad6bf7e"
+      "previous_hash": "a82a4c161bb11765dc0237e8d8fa99e82233d105eabe1ec0e437506616b4fe23"
     },
     {
       "source": {
@@ -1777,7 +1810,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://enterprise.sos.nm.gov/search/business",
-        "elapsed_ms": 391,
+        "elapsed_ms": 173,
         "content_hash": "6df41d1fe61422b48f4d79fc2d671a7a704127780a228444629368a63bc31f81",
         "text_length": 18,
         "link_count": 0,
@@ -1837,7 +1870,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://search.certifications.sba.gov:443/",
-        "elapsed_ms": 134,
+        "elapsed_ms": 661,
         "content_hash": "61b12b9cb165f2bd278eee2af8270fd883440ccaf774748937274989f170e510",
         "text_length": 25,
         "link_count": 0,
@@ -1870,7 +1903,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://nmarts.org/public-art/are-you-an-artist/",
-        "elapsed_ms": 1672,
+        "elapsed_ms": 2268,
         "content_hash": "3fff8819c0d571c40cd68ffb95b1d6831cc79bba38fa2002458f540b9073468c",
         "text_length": 13917,
         "link_count": 146,
@@ -1975,7 +2008,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://armitchellmuseum.com/resonance",
-        "elapsed_ms": 198,
+        "elapsed_ms": 497,
         "content_hash": "fb05aa28a8a4e8efeda5998e1f36c5a8fc4c41292ee57a5904d237dcad7bf2c9",
         "text_length": 2239,
         "link_count": 78,
@@ -2009,7 +2042,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://taosarts.org/",
-        "elapsed_ms": 462,
+        "elapsed_ms": 919,
         "content_hash": "87d7ea32e46633b15b3b78a6638d5ac182186d7f031a6e413b0b3d1c58926546",
         "text_length": 2222,
         "link_count": 42,
@@ -2045,7 +2078,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://southwestcontemporary.com/classifieds/",
-        "elapsed_ms": 258,
+        "elapsed_ms": 310,
         "content_hash": "5e988a366757985ca54c29592e2913b5191bfa5b4c90808c5faf8c8328098d79",
         "text_length": 2022,
         "link_count": 111,
@@ -2087,8 +2120,8 @@
         ],
         "error": ""
       },
-      "change_status": "changed",
-      "previous_hash": "8f88ac1d75658fe33c61e506d2c44ee9015083680d0acdea4652aaa9fbc63290"
+      "change_status": "unchanged",
+      "previous_hash": "5e988a366757985ca54c29592e2913b5191bfa5b4c90808c5faf8c8328098d79"
     },
     {
       "source": {
@@ -2114,15 +2147,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://newmexicowomeninthearts.org/artist-registry-sign-up/",
-        "elapsed_ms": 422,
-        "content_hash": "1bc2c65864764d9f3a2a26e901c0457227ad7ff0a4addfc4209b99eafc1855ce",
-        "text_length": 7427,
-        "link_count": 71,
+        "elapsed_ms": 177,
+        "content_hash": "fbaad21eb5ed6d7634a4a5be7694e02895b57369e6c696dd37d720472036d76b",
+        "text_length": 7757,
+        "link_count": 73,
         "candidates": [],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "9a4709474a7b570565b5457e51f43e1a1e14564f9778ca534e0fae21cc2abdea"
+      "previous_hash": "1bc2c65864764d9f3a2a26e901c0457227ad7ff0a4addfc4209b99eafc1855ce"
     },
     {
       "source": {
@@ -2149,7 +2182,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.highroadnewmexico.com/",
-        "elapsed_ms": 138,
+        "elapsed_ms": 366,
         "content_hash": "b742eef88e68b01ce66b407aeddc319516a59dc6a839bd42cff36285a7fe057a",
         "text_length": 3383,
         "link_count": 128,
@@ -2183,15 +2216,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.newmexicoartistdirectory.com/",
-        "elapsed_ms": 218,
-        "content_hash": "68696b934bc912722d168e4e6d6730f63c19973b10afdc8c3c33b5eeb580a51e",
+        "elapsed_ms": 172,
+        "content_hash": "94f75fe8bff87a505da2acf42b474d6a4da270d9523b936eac9c46a154c36fe3",
         "text_length": 3616,
         "link_count": 104,
         "candidates": [],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "9a952fd3e4e6a8d96c638faccf56c70f2bd4f173c919d7501d622b6e7105b0a1"
+      "previous_hash": "68696b934bc912722d168e4e6d6730f63c19973b10afdc8c3c33b5eeb580a51e"
     },
     {
       "source": {
@@ -2218,15 +2251,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://focoma.org/directory/artists",
-        "elapsed_ms": 339,
-        "content_hash": "9e615d7149a84444d0ea8901f61f0c55d7abab6817a36a5fb6ef1b9c0dd4c784",
-        "text_length": 8747,
-        "link_count": 204,
+        "elapsed_ms": 738,
+        "content_hash": "0d23c80027043022d27546dbc49d698bf12f28df0ea03ab96b72c5d70946c341",
+        "text_length": 8707,
+        "link_count": 207,
         "candidates": [],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "da835bac719ae0ea5a9e5a289c26de0a3dc47a66a40a64d96da4c7757c5f2982"
+      "previous_hash": "9e615d7149a84444d0ea8901f61f0c55d7abab6817a36a5fb6ef1b9c0dd4c784"
     },
     {
       "source": {
@@ -2252,10 +2285,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://opportunities.wearecreativewest.org/",
-        "elapsed_ms": 1069,
-        "content_hash": "d0a5f956dbeda28f45b45b47ee5535d7fdf50c6a0aaba257c5dd3b80bef562eb",
-        "text_length": 3425,
-        "link_count": 59,
+        "elapsed_ms": 1086,
+        "content_hash": "59353f56cc32f5dc0f5bb5e10cfa3cd780925ef91b817ef2ec65e0a8db14551c",
+        "text_length": 2757,
+        "link_count": 50,
         "candidates": [
           {
             "title": "Competitions OPEN CALL: ONGOING Los Angeles, California Application fee: $32",
@@ -2279,7 +2312,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "b31f000e86576bd230aae4df881a500fe63040717168b5345a680d08b1c5984f"
+      "previous_hash": "d0a5f956dbeda28f45b45b47ee5535d7fdf50c6a0aaba257c5dd3b80bef562eb"
     },
     {
       "source": {
@@ -2306,7 +2339,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.callforentry.org/public-art/",
-        "elapsed_ms": 2676,
+        "elapsed_ms": 2455,
         "content_hash": "e95997c6d07eb13d1da77ae15767ab12c8c0010d752f4bd19acf1c48428b9075",
         "text_length": 4133,
         "link_count": 62,
@@ -2361,10 +2394,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.zapplication.org/",
-        "elapsed_ms": 961,
-        "content_hash": "2543c6053fe4a21fdc3d27a4865ed347259a2e5cb7dac7b4106d9ebe2b756028",
-        "text_length": 40697,
-        "link_count": 928,
+        "elapsed_ms": 1334,
+        "content_hash": "53cb4413fcbaa1b0336df3918795e1f1a4757ebf47fac66be4392ac677b488b7",
+        "text_length": 40594,
+        "link_count": 934,
         "candidates": [
           {
             "title": "Ann Arbor State Street District Art Fair 2027 - Artist Application",
@@ -2423,7 +2456,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "9c1a77cb0ab2963669ffecf928fd1a4ba8f522e415d64bf8bb410e1607dc5bbf"
+      "previous_hash": "2543c6053fe4a21fdc3d27a4865ed347259a2e5cb7dac7b4106d9ebe2b756028"
     },
     {
       "source": {
@@ -2450,9 +2483,9 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://explore.publicartarchive.org/submission-form/",
-        "elapsed_ms": 1181,
-        "content_hash": "0b27421e0dbcd3f8a176e8529bc1febb93abc72cdf669503dd41ee7318f5c276",
-        "text_length": 9173,
+        "elapsed_ms": 806,
+        "content_hash": "2c9934b3e48bc213830b99102ba4b5fb56376fda36507e92de0332395d8ed965",
+        "text_length": 9172,
         "link_count": 64,
         "candidates": [
           {
@@ -2486,7 +2519,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "afc883efd53321fcd64b91703c1847bb1283b2dc2f5d4ccdbfbe8ae45f00c1be"
+      "previous_hash": "0b27421e0dbcd3f8a176e8529bc1febb93abc72cdf669503dd41ee7318f5c276"
     },
     {
       "source": {
@@ -2512,15 +2545,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://artistcommunities.org/directory",
-        "elapsed_ms": 304,
-        "content_hash": "b8a0f612b829e6e264cd89bb2b962d1f9dc4db240e8320fdd5945af4462f0e1a",
-        "text_length": 4186,
-        "link_count": 124,
+        "elapsed_ms": 383,
+        "content_hash": "688a122b9199b28c2be5f7b5484033e2fd8a6f1ebb876b46409cd24913ef9b3b",
+        "text_length": 4212,
+        "link_count": 125,
         "candidates": [],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "0744ba998c0eb5467799bf32125d4f0ee3f2a5be5541b7bc79a5dc30adfcdf18"
+      "previous_hash": "b8a0f612b829e6e264cd89bb2b962d1f9dc4db240e8320fdd5945af4462f0e1a"
     },
     {
       "source": {
@@ -2547,10 +2580,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://resartis.org/open-calls/",
-        "elapsed_ms": 3768,
-        "content_hash": "f8cf6b9f0dfceedda6be477061c290390613406b1aeddf0ebe561b2e3b7401aa",
-        "text_length": 36299,
-        "link_count": 778,
+        "elapsed_ms": 2912,
+        "content_hash": "c95dce57806db7550f881232186ba72bd6e07737c6612cd6544cedff87eb780a",
+        "text_length": 35824,
+        "link_count": 770,
         "candidates": [
           {
             "title": "chilkoot-trail-artist-residency-call-for-artists",
@@ -2584,6 +2617,15 @@
           {
             "title": "2026-artist-residency-studio-programs-2",
             "url": "https://resartis.org/open-call/2026-artist-residency-studio-programs-2/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "application-round-for-peripeteia-artist-residency-2",
+            "url": "https://resartis.org/open-call/application-round-for-peripeteia-artist-residency-2/",
             "score": 11,
             "matched_terms": [
               "artist residency",
@@ -2760,21 +2802,12 @@
               "artist residency",
               "open call"
             ]
-          },
-          {
-            "title": "summer-2027-artist-residency-in-morocco-with-green-olive-art",
-            "url": "https://resartis.org/open-call/summer-2027-artist-residency-in-morocco-with-green-olive-art/",
-            "score": 11,
-            "matched_terms": [
-              "artist residency",
-              "open call"
-            ]
           }
         ],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "f130e858196119f2871e13c0d0221d16d404c816fea5ff1df3adbad482914c47"
+      "previous_hash": "f8cf6b9f0dfceedda6be477061c290390613406b1aeddf0ebe561b2e3b7401aa"
     },
     {
       "source": {
@@ -2800,8 +2833,8 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://creative-capital.org/artist-resources/",
-        "elapsed_ms": 260,
-        "content_hash": "ef29e85b22a563248488f091e4f1d6395e30701c20b14068434e285c651f8b47",
+        "elapsed_ms": 370,
+        "content_hash": "3fcfb290f64e4e8aac705105596d5887cd8ae66ed8a63642f086140528ee892a",
         "text_length": 4823,
         "link_count": 59,
         "candidates": [
@@ -2817,7 +2850,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "3a7a1c96e35ebcda0b4a2f027be6fd11db41b91696d036e6a7459ee63f000838"
+      "previous_hash": "ef29e85b22a563248488f091e4f1d6395e30701c20b14068434e285c651f8b47"
     },
     {
       "source": {
@@ -2845,7 +2878,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.submittable.com/discover",
-        "elapsed_ms": 277,
+        "elapsed_ms": 175,
         "content_hash": "a8fbcbcd5382ecf52eb8f5cd5ec05e626910b09ac1430c55a192be3b66504a26",
         "text_length": 824,
         "link_count": 16,
@@ -2879,10 +2912,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/grants/cid-grants/",
-        "elapsed_ms": 3351,
-        "content_hash": "de27a5de8bf7e465d03fe5f21f99ff9aa87cf784f93857adfbc097114b2e5b5f",
-        "text_length": 37394,
-        "link_count": 181,
+        "elapsed_ms": 3099,
+        "content_hash": "804bda3a7605c032799ac4563baa76db5ef920d9eaaefc876143d8da0b265562",
+        "text_length": 37479,
+        "link_count": 183,
         "candidates": [
           {
             "title": "Creative Ambassadors",
@@ -2983,7 +3016,7 @@
         ],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "de27a5de8bf7e465d03fe5f21f99ff9aa87cf784f93857adfbc097114b2e5b5f"
     }
   ]

@@ -1,6 +1,6 @@
 # Update Source Registry
 
-Generated: 2026-10-12
+Generated: 2026-10-19
 
 Automation may propose updates. Human approval is required for public claims, eligibility, rates, deadlines, contact changes, listing removal, and civic/legal guidance.
 
@@ -12,173 +12,173 @@ Automation may propose updates. Human approval is required for public claims, el
 
 ## Records
 
-- [Colfax County Clerk](https://www.co.colfax.nm.us/government/county_clerk.php) - Colfax; civic; every 90 days; standard_review; last checked 2026-10-12; ok; next 2027-01-10
-- General regional pattern - Regional; civic; every 7 days; manual_verification_needed; last checked 2026-10-12; field_check; next 2026-10-19
-- [Raton / Colfax](https://www.ratonnm.gov/government/agendas_minutes.php) - Regional; civic; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Trinidad / Las Animas](https://www.trinidad.co.gov/government/public_notice.php) - Regional; civic; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Walsenburg / Huerfano](https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes) - Regional; civic; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [City of Raton Business Licenses and Regulations](https://www.ratonnm.gov/business/business_license_regulations.php) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-10-12; ok; next 2026-11-11
-- [City of Raton Business Services](https://www.ratonnm.gov/business/index.php) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-10-12; ok; next 2026-11-11
-- [City of Raton Local Business Support](https://www.ratonnm.gov/business/economic_development/local_business_resources.php) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [Colfax County Business Resources](https://www.co.colfax.nm.us/business/index.php) - Colfax; directory; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Enigma Directory: Raton Business Entities](https://www.enigma.com/directory/nm/raton/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [Explore Raton Shopping](https://www.exploreraton.com/shop) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-10-12; ok; next 2026-11-11
-- [GrowRaton Commercial Properties](https://www.growraton.org/properties/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [New Mexico Small Business Assistance Program](https://nmsbaprogram.org/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [New Mexico True Northeast and Raton Guide](https://www.newmexico.org/places-to-visit/regions/northeast/raton/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [NM Creative Industries Resource Center](https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-12; redirect; next 2026-11-11
-- [RAIN Colfax Business Licenses](https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-10-12; ok; next 2026-11-11
-- [ROAMS Local Resources](https://roamsnm.org/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [Village of Eagle Nest Business Directory](https://www.eaglenest.org/water_waste_water/businessdirectory) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-10-12; ok; next 2026-11-11
-- [Yellow Pages Raton Business Listings](https://www.yellowpages.com/raton-nm/business-listings/1) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [Spanish Peaks Country Add Business Listing](https://spanishpeakscountry.com/add-business-listing/) - Huerfano; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [Spanish Peaks Country Business Directory](https://spanishpeakscountry.com/business-directory) - Huerfano; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [Town of La Veta Business Directory](https://townoflaveta-co.gov/business-directory/) - Huerfano; directory; every 30 days; human_approval_required; last checked 2026-10-12; ok; next 2026-11-11
-- [Wheelhouse Retail Incubator & Makerspace](https://www.wheelhouseincubator.org/) - Huerfano; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [Spanish Peaks Country Business Directory](https://spanishpeakscountry.com/business-directory) - Huerfano County; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [Bent County Business Development](https://www.bentcounty.net/businesses/business_development.php) - Las Animas; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [Artists Sunday Artist Directory](https://artistssunday.com/directory/) - Regional; directory; every 30 days; human_approval_required; last checked 2026-10-12; ok; next 2026-11-11
-- [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; every 30 days; standard_review; last checked 2026-10-12; access_blocked; next 2026-11-11
-- [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; every 30 days; standard_review; last checked 2026-10-12; access_blocked; next 2026-11-11
-- [Colorado Vacation Directory](https://www.coloradodirectory.com/) - Regional; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [New Mexico Business Portal](https://biz.nm.gov/business-navigator/licenses-and-permits/) - Regional; directory; every 30 days; human_approval_required; last checked 2026-10-12; ok; next 2026-11-11
-- [New Mexico Small Business Development Center](https://www.nmsbdc.org/) - Regional; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [NM Family Friendly Business Directory](https://nmfamilyfriendlybusiness.org/premium-business-directory/) - Regional; directory; every 30 days; standard_review; last checked 2026-10-12; ok; next 2026-11-11
-- [SBA SBDC Finder](https://www.sba.gov/local-assistance/resource-partners/small-business-development-centers-sbdc) - Regional; directory; every 30 days; standard_review; last checked 2026-10-12; redirect; next 2026-11-11
-- [Angel Fire Resort Events](https://www.angelfireresort.com/events/) - Angel Fire / Colfax; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Angel Fire Resort Vacation Rentals](https://www.angelfireresortvacationrentals.com/plan-your-trip/summer-events/) - Angel Fire / Colfax; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; every 7 days; standard_review; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Visit Angel Fire NM Get Listed](https://visitangelfirenm.com/get-listed/) - Angel Fire / Colfax; events; every 7 days; standard_review; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Angel Fire Chamber Member Business Directory](https://angelfirechamber.org/local-businesses/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Explore Raton](https://www.exploreraton.com/) - Colfax; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Explore Raton Events](https://www.exploreraton.com/events) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Explore Raton Visitors Guide Advertising](https://www.exploreraton.com/post/purchase-your-2026-raton-visitors-guide-ad) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [KRTN Area Events](https://krtnradio.com/calendar/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [KRTN Enchanted Air Radio](https://krtnradio.com/wp/advertising/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-12; redirect; next 2026-10-19
-- [Raton Chamber Business Directory](https://www.raton.info/business-directory.html) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-12; redirect; next 2026-10-19
-- [Raton MainStreet](https://ratonmainstreet.org/) - Colfax; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Raton MainStreet Events](https://ratonmainstreet.org/events/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [The Ratonian Community Calendar](https://theratonian.com/calendar/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-12; network_error; next 2026-10-19
-- [Visit Angel Fire - List Your Event](https://visitangelfirenm.com/list-your-event/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Bachman Community Calendar](https://www.discoverbachman.com/community-calendar/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Huerfano Chamber Resources](https://www.chamber.huerfano.org/resources) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Huerfano County Chamber](https://www.chamber.huerfano.org/) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Huerfano County Chamber - Submit an Event](https://www.chamber.huerfano.org/submit-an-event) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Huerfano County Government](https://huerfano.us/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Huerfano County Government Calendar](https://huerfano.us/) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Huerfano County Government Events](https://huerfano.us/events/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [La Veta Creative District](https://www.lavetacreativedistrict.org/) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [La Veta Creative District Festivals and Signature Events](https://www.lavetacreativedistrict.org/festivals-and-signature-events) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [La Veta Public Library Full Calendar](https://lvpl.org/full-calendar/) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Spanish Peaks Country Events](https://spanishpeakscountry.com/spc-events/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Spanish Peaks Country Submit Event](https://spanishpeakscountry.com/spc-events/community/add/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Spanish Peaks Library Community Links](https://www.spld.org/connect/community-links/) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [The World Journal](https://worldjournalnewspaper.com/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [World Journal](https://worldjournalnewspaper.com/) - Huerfano / Walsenburg; events; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Spanish Peaks Country Submit Event](https://spanishpeakscountry.com/spc-events/community/add/) - Huerfano County; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Spanish Peaks Country Newsletter](https://spanishpeakscountry.com/newsletter-signup/) - Huerfano County / Walsenburg / La Veta / Cuchara; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [La Veta Creative District](https://www.lavetacreativedistrict.org/festivals-and-signature-events) - La Veta / Huerfano; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [City of Trinidad Economic Development Newsletter](https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php) - Las Animas; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [CREATE Trinidad](https://www.trinidadcreativedistrict.org/) - Las Animas; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [CREATE Trinidad Events](https://www.trinidadcreativedistrict.org/trinidad-creative-district-events) - Las Animas; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [CSU Extension Las Animas County Events](https://extension.colostate.edu/las-animas/events/) - Las Animas; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Main Street LIVE Events](https://www.mainstreetlive.org/home) - Las Animas; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Trinidad Carnegie Public Library Events](https://trinidadpubliclibrary.org/events/) - Las Animas; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Visit Trinidad Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Las Animas; events; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Visit Trinidad Submit Your Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Las Animas; events; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [LocalStash / Weekender regional events](https://weekender.pub/) - Las Animas, Huerfano, Colfax, and nearby SoCO / NoNM communities; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Red River Brewing Company & Distillery](https://www.redriverbrewing.com/) - Red River / Colfax; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Red River Chamber / RedRiver.org Events](https://redriver.org/events/) - Red River / Colfax; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Colexico Alliance / TLAC Chamber Regional Hub](https://tlacchamber.org/) - Regional; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [LocalStash / Weekender regional events](https://weekender.pub/) - Regional; events; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [NM Creative Industries Resource Submission / Update](https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/) - Regional; events; every 7 days; standard_review; last checked 2026-10-12; redirect; next 2026-10-19
-- [City of Trinidad Economic Development](https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php) - Trinidad / Las Animas; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Main Street LIVE](https://www.mainstreetlive.org/) - Trinidad / Las Animas; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Main Street LIVE 2026 Calendar](https://www.mainstreetlive.org/2026-calendar) - Trinidad / Las Animas; events; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Visit Trinidad Submit Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Trinidad / Las Animas; events; every 7 days; standard_review; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Visit Trinidad Tourism / Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Trinidad / Las Animas; events; every 7 days; standard_review; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [New Mexico Arts Grants](https://nmarts.org/grants/grants-information/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [New Mexico Business Portal Financial Assistance](https://biz.nm.gov/financial-assistance/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [New Mexico Creative Industries Division Grants](https://www.edd.newmexico.gov/grants/cid-grants/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-12; redirect; next 2026-10-19
-- [New Mexico Finance Authority Opportunity Enterprise](https://www.nmfinance.com/project/opportunity-enterprise-commercial-development/) - Colfax; funding; every 30 days; human_approval_required; last checked 2026-10-12; ok; next 2026-11-11
-- [New Mexico Finance Authority SSBCI](https://www.nmfinance.com/project/state-small-business-credit-initiative-ssbci/) - Colfax; funding; every 30 days; human_approval_required; last checked 2026-10-12; ok; next 2026-11-11
-- [New Mexico Job Training Incentive Program](https://www.edd.newmexico.gov/programs-and-services/business-development/job-training-incentive-program/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-12; redirect; next 2026-10-19
-- [New Mexico Local Economic Development Act](https://www.edd.newmexico.gov/grants/local-economic-development-act/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-12; redirect; next 2026-10-19
-- [New Mexico Trails+ Grant](https://www.edd.newmexico.gov/press-releases/state-opens-trails-grant-for-outdoor-recreation-projects/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-12; redirect; next 2026-10-19
-- [SHARE New Mexico](https://sharenm.org/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [WESST Lending](https://www.wesst.org/lending) - Colfax; funding; every 30 days; human_approval_required; last checked 2026-10-12; ok; next 2026-11-11
-- [Huerfano County Economic Development Support & Incentives](https://www.huerfano.org/support) - Huerfano; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Spanish Peaks Community Foundation](https://www.spanishpeaks.foundation/) - Huerfano; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Bar NI Community Fund](https://barnicommunityfund.org/) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [City of Trinidad Grants](https://www.trinidad.co.gov/services/grants.php) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Southern Colorado Community Foundation Nonprofit Directory](https://sccfcolorado.org/nonprofit-directory/) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Trinidad Community Foundation](https://www.trinidadcf.org/board.html) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Trinidad Community Foundation Grant Process](https://www.trinidadcf.org/grants.html) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Brindle Foundation Grants](https://www.brindlefoundation.org/grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Candid Funding Search and Learning](https://learning.candid.org/free-access-to-foundation-directory) - National; funding; every 14 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-26
-- [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Colorado OEDIT Programs and Funding](https://oedit.colorado.gov/programs-and-funding) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Cuchara Chapel Scholarship](https://www.cucharachapel.org/scholarship/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; tls_error; next 2026-10-19
-- [El Pomar Foundation Grant Making](https://www.elpomar.org/grant-making/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [First Peoples Fund Fellowships](https://www.firstpeoplesfund.org/programs/fellowships) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [First Southwest Community Fund Grants](https://www.fswcf.org/grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Grants.gov](https://www.grants.gov/search-grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Health Solutions Community Sponsorship Requests](https://www.health.solutions/requests/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [IFundWomen Grants](https://www.ifundwomen.com/grants/apply-for-grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Institute of Museum and Library Services Funding Opportunities](https://www.imls.gov/find-funding/how-to-apply/funding-opportunities) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [John G. Duncan Charitable Trust](https://www.wellsfargo.com/private-foundations/duncan-charitable-trust/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Mary John Goree Las Animas County Scholarship](https://goreescholarship.org/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [NALAC Fund for the Arts](https://www.nalac.org/grants/nalac-fund-for-the-arts/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [National Endowment for the Arts Grants](https://www.arts.gov/grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [New Mexico Arts Artist Opportunities](https://nmarts.org/public-art/are-you-an-artist/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [New Mexico Arts Grants and Programs](https://nmarts.org/grants/grants-information/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [New Mexico Community Foundation Northeastern Health Fund](https://nmcf.org/northeastern-health-fund/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [New Mexico Creative Industries Grant Opportunities](https://edd.newmexico.gov/grants/cid-grants/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [New Mexico Economic Development Department Grants](https://edd.newmexico.gov/grants/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [New Mexico Humanities Council Grants](https://newmexicohumanities.org/grants/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [New Mexico LEADS Community Economic Development Grants](https://edd.newmexico.gov/grants/leads/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [NGLCC Scholarships and Grants](https://nglcc.org/programs-initiatives/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; redirect; next 2026-10-19
-- [Robert Hoag Rawlings Foundation Grants](https://rawlingsfoundation.com/grants/requests/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Southern Colorado Community Foundation Grants](https://sccfcolorado.org/for-grantseekers/apply/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Spanish Peaks HealthCare Foundation](https://www.sprhc.org/spanish-peaks-healthcare-foundation) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Taos Community Foundation Funding Opportunities](https://www.taoscf.org/grants/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Trinidad State College Scholarships and Grants](https://trinidadstate.edu/scholarships/index.html) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [USDA Rural Development Programs and Services](https://www.rd.usda.gov/programs-services) - National; funding; every 7 days; human_approval_required; last checked 2026-10-12; network_error; next 2026-10-19
-- [Arts in Society Grant](https://www.redlineart.org/ais-apply-for-a-grant) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Colorado Advanced Industries Accelerator Programs](https://oedit.colorado.gov/advanced-industries-accelerator-programs) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Colorado Business Funding and Incentives](https://oedit.colorado.gov/business-funding-and-incentives) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Colorado Community Revitalization Grant](https://oedit.colorado.gov/colorado-community-revitalization-grant) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Colorado Creative Industries](https://oedit.colorado.gov/colorado-creative-industries) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Colorado Rural Jump-Start Program](https://oedit.colorado.gov/rural-jump-start-program) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Folk and Traditional Arts Project Grant](https://oedit.colorado.gov/folk-and-traditional-arts-project-grant) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Gates Family Foundation Capital Grants](https://gatesfamilyfoundation.org/types-of-support/capital-grants/) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Grants.gov](https://www.grants.gov/) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [History Colorado State Historical Fund](https://www.historycolorado.org/state-historical-fund) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [National Endowment for the Arts Grants](https://www.arts.gov/grants) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [NM EDD Business Resource Map](https://www.edd.newmexico.gov/resource-map/) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; redirect; next 2026-10-19
-- [SBA Funding Programs](https://www.sba.gov/funding-programs) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; redirect; next 2026-10-19
-- [SBA Lender Match](https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; redirect; next 2026-10-19
-- [Southern Colorado Community Foundation Grants](https://sccfcolorado.org/for-grantseekers/grants/) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Southern Colorado Community Foundation Scholarship](https://sccfcolorado.org/madeline-mellers-memorial-girls-golf-scholarship/) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-10-19
-- [Las Animas County Government](https://lasanimascounty.colorado.gov/) - Las Animas; general; every 90 days; standard_review; last checked 2026-10-12; access_blocked; next 2027-01-10
-- [Visit Trinidad Outdoor Recreation](https://visittrinidadcolorado.com/outdoor-recreation/) - Las Animas; general; every 30 days; standard_review; last checked 2026-10-12; access_blocked; next 2026-11-11
-- [City of Raton Economic Development Programs](https://www.ratonnm.gov/business/economic_development/index.php) - Colfax; media; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [El Raton Media Works Local Businesses](https://www.elratonmediaworks.org/local-businesses) - Colfax; media; every 30 days; human_approval_required; last checked 2026-10-12; ok; next 2026-11-11
-- [Groundworks New Mexico Nonprofit Directory](https://www.groundworksnm.org/nonprofit-directory/new-mexico-busin?combine=&order=city&page=32&sort=desc) - Colfax; media; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [GrowRaton](https://www.growraton.org/) - Colfax; media; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Raton Arts & Humanities Council](https://www.ratonarts.org/) - Colfax; media; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Raton Arts and Cultural District](https://www.nmartsandculturaldistricts.org/raton/) - Colfax; media; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Tax Exempt World Colfax County Organizations](https://www.taxexemptworld.com/organizations/colfax-county-nm-new-mexico.asp) - Colfax; media; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [World Journal Services Directory](https://worldjournalnewspaper.com/services/) - Huerfano; media; every 30 days; human_approval_required; last checked 2026-10-12; access_blocked; next 2026-11-11
-- [Colorado Gives](https://www.coloradogives.org/) - Las Animas; media; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [The Chronicle-News](https://www.thechronicle-news.com/) - Las Animas; media; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Red River Chamber Vacation Guide](https://redriver.org/plan-your-trip/vacation-guide/) - Red River / Colfax; media; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Colorado Nonprofit Association Directory](https://coloradononprofits.org/member-resources/nonprofit-member-directory/) - Regional; media; every 7 days; human_approval_required; last checked 2026-10-12; ok; next 2026-10-19
-- [Finance New Mexico Regional Economic Development Organizations](https://financenewmexico.org/resources/general-business-assistance/regional-economic-development-organizations/) - Regional; media; every 7 days; standard_review; last checked 2026-10-12; ok; next 2026-10-19
-- [Southern Colorado Economic Development District](https://www.scedd.com/) - Regional; media; every 7 days; standard_review; last checked 2026-10-12; redirect; next 2026-10-19
+- [Colfax County Clerk](https://www.co.colfax.nm.us/government/county_clerk.php) - Colfax; civic; every 90 days; standard_review; last checked 2026-10-19; ok; next 2027-01-17
+- General regional pattern - Regional; civic; every 7 days; manual_verification_needed; last checked 2026-10-19; field_check; next 2026-10-26
+- [Raton / Colfax](https://www.ratonnm.gov/government/agendas_minutes.php) - Regional; civic; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Trinidad / Las Animas](https://www.trinidad.co.gov/government/public_notice.php) - Regional; civic; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Walsenburg / Huerfano](https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes) - Regional; civic; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [City of Raton Business Licenses and Regulations](https://www.ratonnm.gov/business/business_license_regulations.php) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-10-19; ok; next 2026-11-18
+- [City of Raton Business Services](https://www.ratonnm.gov/business/index.php) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-10-19; ok; next 2026-11-18
+- [City of Raton Local Business Support](https://www.ratonnm.gov/business/economic_development/local_business_resources.php) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [Colfax County Business Resources](https://www.co.colfax.nm.us/business/index.php) - Colfax; directory; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Enigma Directory: Raton Business Entities](https://www.enigma.com/directory/nm/raton/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [Explore Raton Shopping](https://www.exploreraton.com/shop) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-10-19; ok; next 2026-11-18
+- [GrowRaton Commercial Properties](https://www.growraton.org/properties/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [New Mexico Small Business Assistance Program](https://nmsbaprogram.org/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [New Mexico True Northeast and Raton Guide](https://www.newmexico.org/places-to-visit/regions/northeast/raton/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [NM Creative Industries Resource Center](https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-19; redirect; next 2026-11-18
+- [RAIN Colfax Business Licenses](https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-10-19; ok; next 2026-11-18
+- [ROAMS Local Resources](https://roamsnm.org/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [Village of Eagle Nest Business Directory](https://www.eaglenest.org/water_waste_water/businessdirectory) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-10-19; ok; next 2026-11-18
+- [Yellow Pages Raton Business Listings](https://www.yellowpages.com/raton-nm/business-listings/1) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [Spanish Peaks Country Add Business Listing](https://spanishpeakscountry.com/add-business-listing/) - Huerfano; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [Spanish Peaks Country Business Directory](https://spanishpeakscountry.com/business-directory) - Huerfano; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [Town of La Veta Business Directory](https://townoflaveta-co.gov/business-directory/) - Huerfano; directory; every 30 days; human_approval_required; last checked 2026-10-19; ok; next 2026-11-18
+- [Wheelhouse Retail Incubator & Makerspace](https://www.wheelhouseincubator.org/) - Huerfano; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [Spanish Peaks Country Business Directory](https://spanishpeakscountry.com/business-directory) - Huerfano County; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [Bent County Business Development](https://www.bentcounty.net/businesses/business_development.php) - Las Animas; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [Artists Sunday Artist Directory](https://artistssunday.com/directory/) - Regional; directory; every 30 days; human_approval_required; last checked 2026-10-19; ok; next 2026-11-18
+- [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; every 30 days; standard_review; last checked 2026-10-19; access_blocked; next 2026-11-18
+- [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; every 30 days; standard_review; last checked 2026-10-19; access_blocked; next 2026-11-18
+- [Colorado Vacation Directory](https://www.coloradodirectory.com/) - Regional; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [New Mexico Business Portal](https://biz.nm.gov/business-navigator/licenses-and-permits/) - Regional; directory; every 30 days; human_approval_required; last checked 2026-10-19; ok; next 2026-11-18
+- [New Mexico Small Business Development Center](https://www.nmsbdc.org/) - Regional; directory; every 30 days; standard_review; last checked 2026-10-19; ok; next 2026-11-18
+- [NM Family Friendly Business Directory](https://nmfamilyfriendlybusiness.org/premium-business-directory/) - Regional; directory; every 30 days; standard_review; last checked 2026-10-19; timeout; next 2026-11-18
+- [SBA SBDC Finder](https://www.sba.gov/local-assistance/resource-partners/small-business-development-centers-sbdc) - Regional; directory; every 30 days; standard_review; last checked 2026-10-19; redirect; next 2026-11-18
+- [Angel Fire Resort Events](https://www.angelfireresort.com/events/) - Angel Fire / Colfax; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Angel Fire Resort Vacation Rentals](https://www.angelfireresortvacationrentals.com/plan-your-trip/summer-events/) - Angel Fire / Colfax; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; every 7 days; standard_review; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Visit Angel Fire NM Get Listed](https://visitangelfirenm.com/get-listed/) - Angel Fire / Colfax; events; every 7 days; standard_review; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Angel Fire Chamber Member Business Directory](https://angelfirechamber.org/local-businesses/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Explore Raton](https://www.exploreraton.com/) - Colfax; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Explore Raton Events](https://www.exploreraton.com/events) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Explore Raton Visitors Guide Advertising](https://www.exploreraton.com/post/purchase-your-2026-raton-visitors-guide-ad) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [KRTN Area Events](https://krtnradio.com/calendar/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [KRTN Enchanted Air Radio](https://krtnradio.com/wp/advertising/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-19; redirect; next 2026-10-26
+- [Raton Chamber Business Directory](https://www.raton.info/business-directory.html) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Raton MainStreet](https://ratonmainstreet.org/) - Colfax; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Raton MainStreet Events](https://ratonmainstreet.org/events/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [The Ratonian Community Calendar](https://theratonian.com/calendar/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Visit Angel Fire - List Your Event](https://visitangelfirenm.com/list-your-event/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Bachman Community Calendar](https://www.discoverbachman.com/community-calendar/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Huerfano Chamber Resources](https://www.chamber.huerfano.org/resources) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Huerfano County Chamber](https://www.chamber.huerfano.org/) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Huerfano County Chamber - Submit an Event](https://www.chamber.huerfano.org/submit-an-event) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Huerfano County Government](https://huerfano.us/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Huerfano County Government Calendar](https://huerfano.us/) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Huerfano County Government Events](https://huerfano.us/events/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [La Veta Creative District](https://www.lavetacreativedistrict.org/) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [La Veta Creative District Festivals and Signature Events](https://www.lavetacreativedistrict.org/festivals-and-signature-events) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [La Veta Public Library Full Calendar](https://lvpl.org/full-calendar/) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Spanish Peaks Country Events](https://spanishpeakscountry.com/spc-events/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Spanish Peaks Country Submit Event](https://spanishpeakscountry.com/spc-events/community/add/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Spanish Peaks Library Community Links](https://www.spld.org/connect/community-links/) - Huerfano; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [The World Journal](https://worldjournalnewspaper.com/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [World Journal](https://worldjournalnewspaper.com/) - Huerfano / Walsenburg; events; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Spanish Peaks Country Submit Event](https://spanishpeakscountry.com/spc-events/community/add/) - Huerfano County; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Spanish Peaks Country Newsletter](https://spanishpeakscountry.com/newsletter-signup/) - Huerfano County / Walsenburg / La Veta / Cuchara; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [La Veta Creative District](https://www.lavetacreativedistrict.org/festivals-and-signature-events) - La Veta / Huerfano; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [City of Trinidad Economic Development Newsletter](https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php) - Las Animas; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [CREATE Trinidad](https://www.trinidadcreativedistrict.org/) - Las Animas; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [CREATE Trinidad Events](https://www.trinidadcreativedistrict.org/trinidad-creative-district-events) - Las Animas; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [CSU Extension Las Animas County Events](https://extension.colostate.edu/las-animas/events/) - Las Animas; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Main Street LIVE Events](https://www.mainstreetlive.org/home) - Las Animas; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Trinidad Carnegie Public Library Events](https://trinidadpubliclibrary.org/events/) - Las Animas; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Visit Trinidad Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Las Animas; events; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Visit Trinidad Submit Your Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Las Animas; events; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [LocalStash / Weekender regional events](https://weekender.pub/) - Las Animas, Huerfano, Colfax, and nearby SoCO / NoNM communities; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Red River Brewing Company & Distillery](https://www.redriverbrewing.com/) - Red River / Colfax; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Red River Chamber / RedRiver.org Events](https://redriver.org/events/) - Red River / Colfax; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Colexico Alliance / TLAC Chamber Regional Hub](https://tlacchamber.org/) - Regional; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [LocalStash / Weekender regional events](https://weekender.pub/) - Regional; events; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [NM Creative Industries Resource Submission / Update](https://www.edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/) - Regional; events; every 7 days; standard_review; last checked 2026-10-19; redirect; next 2026-10-26
+- [City of Trinidad Economic Development](https://www.trinidad.co.gov/services/economicdevelopment_newsletter.php) - Trinidad / Las Animas; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Main Street LIVE](https://www.mainstreetlive.org/) - Trinidad / Las Animas; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Main Street LIVE 2026 Calendar](https://www.mainstreetlive.org/2026-calendar) - Trinidad / Las Animas; events; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Visit Trinidad Submit Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Trinidad / Las Animas; events; every 7 days; standard_review; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Visit Trinidad Tourism / Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Trinidad / Las Animas; events; every 7 days; standard_review; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [New Mexico Arts Grants](https://nmarts.org/grants/grants-information/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [New Mexico Business Portal Financial Assistance](https://biz.nm.gov/financial-assistance/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [New Mexico Creative Industries Division Grants](https://www.edd.newmexico.gov/grants/cid-grants/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-19; redirect; next 2026-10-26
+- [New Mexico Finance Authority Opportunity Enterprise](https://www.nmfinance.com/project/opportunity-enterprise-commercial-development/) - Colfax; funding; every 30 days; human_approval_required; last checked 2026-10-19; ok; next 2026-11-18
+- [New Mexico Finance Authority SSBCI](https://www.nmfinance.com/project/state-small-business-credit-initiative-ssbci/) - Colfax; funding; every 30 days; human_approval_required; last checked 2026-10-19; ok; next 2026-11-18
+- [New Mexico Job Training Incentive Program](https://www.edd.newmexico.gov/programs-and-services/business-development/job-training-incentive-program/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-19; redirect; next 2026-10-26
+- [New Mexico Local Economic Development Act](https://www.edd.newmexico.gov/grants/local-economic-development-act/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-19; redirect; next 2026-10-26
+- [New Mexico Trails+ Grant](https://www.edd.newmexico.gov/press-releases/state-opens-trails-grant-for-outdoor-recreation-projects/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-19; redirect; next 2026-10-26
+- [SHARE New Mexico](https://sharenm.org/) - Colfax; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [WESST Lending](https://www.wesst.org/lending) - Colfax; funding; every 30 days; human_approval_required; last checked 2026-10-19; ok; next 2026-11-18
+- [Huerfano County Economic Development Support & Incentives](https://www.huerfano.org/support) - Huerfano; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Spanish Peaks Community Foundation](https://www.spanishpeaks.foundation/) - Huerfano; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Bar NI Community Fund](https://barnicommunityfund.org/) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [City of Trinidad Grants](https://www.trinidad.co.gov/services/grants.php) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Southern Colorado Community Foundation Nonprofit Directory](https://sccfcolorado.org/nonprofit-directory/) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Trinidad Community Foundation](https://www.trinidadcf.org/board.html) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Trinidad Community Foundation Grant Process](https://www.trinidadcf.org/grants.html) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Brindle Foundation Grants](https://www.brindlefoundation.org/grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Candid Funding Search and Learning](https://learning.candid.org/free-access-to-foundation-directory) - National; funding; every 14 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-11-02
+- [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Colorado OEDIT Programs and Funding](https://oedit.colorado.gov/programs-and-funding) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Cuchara Chapel Scholarship](https://www.cucharachapel.org/scholarship/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; tls_error; next 2026-10-26
+- [El Pomar Foundation Grant Making](https://www.elpomar.org/grant-making/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [First Peoples Fund Fellowships](https://www.firstpeoplesfund.org/programs/fellowships) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [First Southwest Community Fund Grants](https://www.fswcf.org/grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Grants.gov](https://www.grants.gov/search-grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Health Solutions Community Sponsorship Requests](https://www.health.solutions/requests/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [IFundWomen Grants](https://www.ifundwomen.com/grants/apply-for-grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Institute of Museum and Library Services Funding Opportunities](https://www.imls.gov/find-funding/how-to-apply/funding-opportunities) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [John G. Duncan Charitable Trust](https://www.wellsfargo.com/private-foundations/duncan-charitable-trust/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Mary John Goree Las Animas County Scholarship](https://goreescholarship.org/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [NALAC Fund for the Arts](https://www.nalac.org/grants/nalac-fund-for-the-arts/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [National Endowment for the Arts Grants](https://www.arts.gov/grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [New Mexico Arts Artist Opportunities](https://nmarts.org/public-art/are-you-an-artist/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [New Mexico Arts Grants and Programs](https://nmarts.org/grants/grants-information/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [New Mexico Community Foundation Northeastern Health Fund](https://nmcf.org/northeastern-health-fund/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [New Mexico Creative Industries Grant Opportunities](https://edd.newmexico.gov/grants/cid-grants/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [New Mexico Economic Development Department Grants](https://edd.newmexico.gov/grants/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [New Mexico Humanities Council Grants](https://newmexicohumanities.org/grants/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [New Mexico LEADS Community Economic Development Grants](https://edd.newmexico.gov/grants/leads/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [NGLCC Scholarships and Grants](https://nglcc.org/programs-initiatives/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; redirect; next 2026-10-26
+- [Robert Hoag Rawlings Foundation Grants](https://rawlingsfoundation.com/grants/requests/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Southern Colorado Community Foundation Grants](https://sccfcolorado.org/for-grantseekers/apply/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Spanish Peaks HealthCare Foundation](https://www.sprhc.org/spanish-peaks-healthcare-foundation) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Taos Community Foundation Funding Opportunities](https://www.taoscf.org/grants/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Trinidad State College Scholarships and Grants](https://trinidadstate.edu/scholarships/index.html) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [USDA Rural Development Programs and Services](https://www.rd.usda.gov/programs-services) - National; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Arts in Society Grant](https://www.redlineart.org/ais-apply-for-a-grant) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Colorado Advanced Industries Accelerator Programs](https://oedit.colorado.gov/advanced-industries-accelerator-programs) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Colorado Business Funding and Incentives](https://oedit.colorado.gov/business-funding-and-incentives) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Colorado Community Revitalization Grant](https://oedit.colorado.gov/colorado-community-revitalization-grant) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Colorado Creative Industries](https://oedit.colorado.gov/colorado-creative-industries) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Colorado Rural Jump-Start Program](https://oedit.colorado.gov/rural-jump-start-program) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Folk and Traditional Arts Project Grant](https://oedit.colorado.gov/folk-and-traditional-arts-project-grant) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Gates Family Foundation Capital Grants](https://gatesfamilyfoundation.org/types-of-support/capital-grants/) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Grants.gov](https://www.grants.gov/) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [History Colorado State Historical Fund](https://www.historycolorado.org/state-historical-fund) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [National Endowment for the Arts Grants](https://www.arts.gov/grants) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [NM EDD Business Resource Map](https://www.edd.newmexico.gov/resource-map/) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; redirect; next 2026-10-26
+- [SBA Funding Programs](https://www.sba.gov/funding-programs) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; redirect; next 2026-10-26
+- [SBA Lender Match](https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; redirect; next 2026-10-26
+- [Southern Colorado Community Foundation Grants](https://sccfcolorado.org/for-grantseekers/grants/) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Southern Colorado Community Foundation Scholarship](https://sccfcolorado.org/madeline-mellers-memorial-girls-golf-scholarship/) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-10-26
+- [Las Animas County Government](https://lasanimascounty.colorado.gov/) - Las Animas; general; every 90 days; standard_review; last checked 2026-10-19; access_blocked; next 2027-01-17
+- [Visit Trinidad Outdoor Recreation](https://visittrinidadcolorado.com/outdoor-recreation/) - Las Animas; general; every 30 days; standard_review; last checked 2026-10-19; access_blocked; next 2026-11-18
+- [City of Raton Economic Development Programs](https://www.ratonnm.gov/business/economic_development/index.php) - Colfax; media; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [El Raton Media Works Local Businesses](https://www.elratonmediaworks.org/local-businesses) - Colfax; media; every 30 days; human_approval_required; last checked 2026-10-19; ok; next 2026-11-18
+- [Groundworks New Mexico Nonprofit Directory](https://www.groundworksnm.org/nonprofit-directory/new-mexico-busin?combine=&order=city&page=32&sort=desc) - Colfax; media; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [GrowRaton](https://www.growraton.org/) - Colfax; media; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Raton Arts & Humanities Council](https://www.ratonarts.org/) - Colfax; media; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Raton Arts and Cultural District](https://www.nmartsandculturaldistricts.org/raton/) - Colfax; media; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Tax Exempt World Colfax County Organizations](https://www.taxexemptworld.com/organizations/colfax-county-nm-new-mexico.asp) - Colfax; media; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [World Journal Services Directory](https://worldjournalnewspaper.com/services/) - Huerfano; media; every 30 days; human_approval_required; last checked 2026-10-19; access_blocked; next 2026-11-18
+- [Colorado Gives](https://www.coloradogives.org/) - Las Animas; media; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [The Chronicle-News](https://www.thechronicle-news.com/) - Las Animas; media; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Red River Chamber Vacation Guide](https://redriver.org/plan-your-trip/vacation-guide/) - Red River / Colfax; media; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Colorado Nonprofit Association Directory](https://coloradononprofits.org/member-resources/nonprofit-member-directory/) - Regional; media; every 7 days; human_approval_required; last checked 2026-10-19; ok; next 2026-10-26
+- [Finance New Mexico Regional Economic Development Organizations](https://financenewmexico.org/resources/general-business-assistance/regional-economic-development-organizations/) - Regional; media; every 7 days; standard_review; last checked 2026-10-19; ok; next 2026-10-26
+- [Southern Colorado Economic Development District](https://www.scedd.com/) - Regional; media; every 7 days; standard_review; last checked 2026-10-19; redirect; next 2026-10-26

@@ -1,6 +1,6 @@
 # Weekly Directory Query Check
 
-Generated: 2026-10-12
+Generated: 2026-10-19
 
 Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.
 
@@ -8,9 +8,9 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 
 - Sources watched: 15
 - Pages checked: 32
-- Pages failed: 10
-- Listing-like candidates found: 249
-- Already represented in guide: 224
+- Pages failed: 12
+- Listing-like candidates found: 250
+- Already represented in guide: 225
 - Possible new leads: 25
 - Priority new leads: 1
 - Low-confidence text leads: 24
@@ -23,8 +23,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Chamber business directory
 - Why watch: Raton-area chamber source for business names, local service anchors, restaurants, and potential outreach contacts.
 - Pages checked: 2
-- Possible new leads: 4
+- Possible new leads: 0
 - Priority new leads: 0
+
+Fetch issues:
+- [https://www.raton.info/business_directory.html](https://www.raton.info/business_directory.html) - HTTP Error 403: Forbidden
+- [https://www.raton.info/business-directory.html](https://www.raton.info/business-directory.html) - HTTP Error 403: Forbidden
 
 ### Angel Fire Chamber Member Business Directory
 
@@ -109,7 +113,7 @@ Fetch issues:
 - Source type: Digital local guide and business/event listings
 - Why watch: LocalStash is the current digital successor route to the Weekender-style local guide model and can surface Trinidad businesses, events, restaurants, and shops.
 - Pages checked: 2
-- Possible new leads: 9
+- Possible new leads: 10
 - Priority new leads: 0
 
 ### Southern Colorado Tourism Event and Travel Pages
@@ -149,7 +153,7 @@ Fetch issues:
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.
 - Pages checked: 2
-- Possible new leads: 11
+- Possible new leads: 14
 - Priority new leads: 0
 
 ### Town of La Veta Business Directory
@@ -180,19 +184,18 @@ These have linked listing-page evidence. They are still not publication-ready ad
 
 These came from directory page text rather than individual listing links. Review them more carefully before using.
 
-- KYC vs No-KYC: What "Anonymous" Really Means - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
-- KYC vs No-KYC: What "Anonymous" Really Means - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
-- Licensed & Regulated - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
-- Licensed & Regulated - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
-- Caleb Wilbourn Texas Artist Live at the Stokehouse! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Causa Mortis: A Hospital Comedy - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Cuchara Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Farmer and Craft Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Methodist Church - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- Halloweentown Movie Night at Fiesta Park - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Heritage Park - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- Kellen Goode Live at the Stokehouse! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - La Veta Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - La Veta Library - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- Mason Davis Live at the Stokehouse! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- MUSIC BY MIDI LIVE!!!! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Walsenburg Farm & Makers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Walsenburg Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - (719) 846-9843 ext. 160 - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
@@ -200,10 +203,11 @@ These came from directory page text rather than individual listing links. Review
 - City of Trinidad City Hall - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Colorado - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Find city services, official notices and municipal contact information. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
-- Mt. San Rafael Hospital Emergency Department - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
+- KCRT AM-FM Radio - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Stashes - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Stop for local visitor information, maps and help planning a Trinidad visit. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Visit Trinidad Colorado Tourism and Events Office - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
+- World Journal - Trinidad Branch - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 
 ## Already Represented Sample
 
