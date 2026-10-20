@@ -17,6 +17,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCES = ROOT / "data" / "national-funding-watch-sources.json"
+DEFAULT_OPPORTUNITIES = ROOT / "data" / "national-funding-opportunities.json"
 DEFAULT_STATE = ROOT / "data" / "national-funding-watch-state.json"
 DEFAULT_OUT_DIR = ROOT / "review" / "national-funding-watch"
 MAX_RESPONSE_BYTES = 2_000_000
@@ -279,6 +280,27 @@ def summarize(results: list[dict]) -> dict:
     }
 
 
+def expired_dated_entries(opportunities: list[dict], as_of: date) -> list[dict]:
+    expired = []
+    for item in opportunities:
+        value = str(item.get("deadline_date") or "")
+        if not value:
+            continue
+        try:
+            deadline = date.fromisoformat(value)
+        except ValueError:
+            continue
+        if deadline < as_of:
+            expired.append({
+                "id": item.get("id", ""),
+                "name": item.get("name", ""),
+                "deadline_date": value,
+                "status": item.get("status", ""),
+                "source_url": item.get("source_url", ""),
+            })
+    return sorted(expired, key=lambda item: (item["deadline_date"], item["name"]))
+
+
 def write_markdown(payload: dict, path: Path) -> None:
     summary = payload["summary"]
     lines = [
@@ -297,10 +319,26 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"- Confirmed broken URLs: {summary['confirmed_broken']}",
         f"- Script-access limitations (not broken): {summary['script_access_limited']}",
         f"- Other check failures: {summary['check_failures']}",
+        f"- Expired dated entries needing review: {summary.get('expired_dated_entries', 0)}",
+        "",
+        "## Expired Dated Entries",
+        "",
+        "These records need a human check. A passed deadline does not by itself prove that a program has closed or reopened.",
+        "",
+    ]
+    expired = payload.get("expired_dated_entries") or []
+    if expired:
+        lines.extend(
+            f"- [{item['name']}]({item['source_url']}) - listed deadline {item['deadline_date']}; current card status: {item['status']}."
+            for item in expired
+        )
+    else:
+        lines.append("No expired deadline_date values in the curated funding entries.")
+    lines.extend([
         "",
         "## Separate Subject Sweeps",
         "",
-    ]
+    ])
     for topic_id, counts in summary["sweep_counts"].items():
         source_names = [
             result["source"].get("name", result["source"].get("id", "Unnamed source"))
@@ -364,6 +402,7 @@ def write_markdown(payload: dict, path: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run five subject-specific regional and national funding sweeps and create a human-review report.")
     parser.add_argument("--sources", type=Path, default=DEFAULT_SOURCES)
+    parser.add_argument("--opportunities", type=Path, default=DEFAULT_OPPORTUNITIES)
     parser.add_argument("--state", type=Path, default=DEFAULT_STATE)
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT_DIR)
     parser.add_argument("--timeout", type=int, default=18)
@@ -378,10 +417,17 @@ def main() -> None:
         raise SystemExit("Invalid funding watch registry:\n- " + "\n- ".join(registry_errors))
     previous_state = load_json(args.state, {"schema_version": 1, "sources": {}})
     results, state = audit_sources(sources, previous_state, args.timeout, args.no_network)
+    opportunities = load_json(args.opportunities, {}).get("opportunities") or []
+    if not opportunities:
+        raise SystemExit(f"No curated funding opportunities found in {args.opportunities}.")
+    expired = expired_dated_entries(opportunities, date.today())
+    summary = summarize(results)
+    summary["expired_dated_entries"] = len(expired)
     payload = {
         "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
         "review_policy": source_payload.get("review_policy", "Human review is required before public funding claims change."),
-        "summary": summarize(results),
+        "summary": summary,
+        "expired_dated_entries": expired,
         "results": results,
     }
 

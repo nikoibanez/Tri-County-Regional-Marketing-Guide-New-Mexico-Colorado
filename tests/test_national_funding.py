@@ -5,6 +5,7 @@ import json
 import sys
 import tempfile
 import unittest
+from datetime import date
 from pathlib import Path
 from unittest.mock import patch
 
@@ -152,6 +153,18 @@ class NationalFundingDataTests(unittest.TestCase):
 
 
 class NationalFundingWatchTests(unittest.TestCase):
+    def test_expired_funding_dates_are_queued_without_changing_public_records(self) -> None:
+        entries = [
+            {"id": "past", "name": "Past", "deadline_date": "2026-10-01", "status": "Open", "source_url": "https://example.org/past"},
+            {"id": "past-monitor", "name": "Past monitor", "deadline_date": "2026-10-02", "status": "Monitor next cycle", "source_url": "https://example.org/monitor"},
+            {"id": "today", "name": "Today", "deadline_date": "2026-10-20", "status": "Open"},
+            {"id": "rolling", "name": "Rolling", "deadline_date": "", "status": "Open rolling"},
+            {"id": "future", "name": "Future", "deadline_date": "2027-03-01", "status": "Upcoming"},
+        ]
+        expired = funding_watch.expired_dated_entries(entries, date(2026, 10, 20))
+        self.assertEqual([item["id"] for item in expired], ["past", "past-monitor"])
+        self.assertEqual(entries[0]["status"], "Open")
+
     def test_each_requested_subject_is_a_distinct_reported_sweep(self) -> None:
         payload = json.loads(WATCH_SOURCES.read_text(encoding="utf-8"))
         self.assertEqual(funding_watch.validate_watch_registry(payload), [])
@@ -180,6 +193,7 @@ class NationalFundingWatchTests(unittest.TestCase):
             report = report_path.read_text(encoding="utf-8")
         for label in funding_watch.SWEEP_TOPIC_LABELS.values():
             self.assertIn(f"### {label}", report)
+        self.assertIn("## Expired Dated Entries", report)
 
     def test_text_extractor_ignores_scripts_and_keeps_review_signals(self) -> None:
         markup = """
