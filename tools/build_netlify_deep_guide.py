@@ -5254,6 +5254,7 @@ def page_shell(
               </span>
               <span>Stateline Tri-County Guide</span>
             </a>
+            <button class="directory-assistant__mobile-toggle" type="button" aria-label="Ask for a route" aria-expanded="false" aria-haspopup="dialog" aria-controls="directory-assistant-panel" title="Ask for a route">?</button>
             <nav class="site-nav" aria-label="Primary navigation">
               {nav}
             </nav>
@@ -5302,15 +5303,15 @@ def page_shell(
               </svg>
             </div>
           </header>
+          <div class="corner-controls" aria-label="Page controls">
+            {music_bar}
+            <a class="back-to-top" href="#main">Back to top</a>
+          </div>
           <main id="main">
             <noscript><section class="noscript">Search, filters, and copy buttons need JavaScript. The pages, tables, links, downloads, and appendix content still work without it.</section></noscript>
             {breadcrumb_nav(active, depth)}
             {content}
           </main>
-          <div class="corner-controls" aria-label="Page controls">
-            {music_bar}
-            <a class="back-to-top" href="#main">Back to top</a>
-          </div>
           <section class="directory-assistant" data-directory-assistant data-site-root="{rel('', depth)}" data-network-url="{rel('network/index.html', depth)}" data-submit-url="{rel('submit/index.html', depth)}" aria-label="Directory assistant">
             <button class="directory-assistant__toggle" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="directory-assistant-panel">
               <span class="assistant-dot" aria-hidden="true"></span>
@@ -7727,6 +7728,7 @@ def write_static_assets() -> None:
       backdrop-filter: blur(18px);
     }
     .brand { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; }
+    .directory-assistant__mobile-toggle { display: none; }
     .brand-mark { display: grid; place-items: center; width: 38px; height: 32px; color: var(--ink); }
     .brand-mark svg { display: block; width: 100%; height: 100%; overflow: visible; }
     .brand-mark__mesa { fill: var(--ink); }
@@ -9374,24 +9376,45 @@ def write_static_assets() -> None:
       .nav-yucca-flourish { right: 24px; }
     }
     @media (max-width: 860px) {
-      .site-header { align-items: flex-start; flex-direction: column; }
+      .site-header { position: relative; align-items: flex-start; flex-direction: column; }
+      .brand { max-width: calc(100% - 52px); min-height: 44px; }
+      .directory-assistant__mobile-toggle {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        z-index: 3;
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        background: var(--city-cream);
+        color: var(--ink);
+        font: inherit;
+        font-weight: 900;
+        box-shadow: 0 2px 7px rgba(34,73,90,0.12);
+      }
+      .directory-assistant__mobile-toggle:hover,
+      .directory-assistant__mobile-toggle[aria-expanded="true"] { background: var(--city-turquoise); }
       .site-nav { width: 100%; justify-content: flex-start; }
       .path-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .two-col, .site-footer, .advanced-filters, .form-grid, .submit-card { grid-template-columns: 1fr; }
       .page-wayfinding { grid-template-columns: 1fr 1fr; }
       .page-wayfinding__intro { grid-column: 1 / -1; }
-      .nav-yucca-flourish { top: 1px; right: 7px; width: 118px; height: 46px; }
+      .nav-yucca-flourish { top: 1px; right: 70px; width: 118px; height: 46px; }
       .footer-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .footer-logos { justify-content: flex-start; }
       .next-action-list { grid-template-columns: 1fr; }
       .lead-list { columns: 1; }
       h1 { max-width: 12ch; }
       .back-to-top, .music-summary, .music-toggle { min-height: 38px; padding: 7px 10px; font-size: 0.74rem; }
-      .corner-controls { width: min(360px, calc(100vw - 24px)); }
+      .corner-controls { position: static; width: 100%; max-width: none; padding: 8px 12px 0; align-items: flex-end; }
+      .back-to-top { display: none !important; }
       .music-panel { padding: 9px; }
       .music-track-select { width: 140px; }
-      .directory-assistant { width: min(390px, calc(100vw - 24px)); left: 12px; bottom: 74px; }
-      .directory-assistant__toggle { min-height: 40px; padding: 8px 11px; font-size: 0.78rem; }
+      .directory-assistant__toggle { display: none; }
       .directory-assistant__panel { left: 12px; bottom: 128px; width: min(390px, calc(100vw - 24px)); max-height: min(76vh, 580px); padding: 13px; }
       .directory-assistant__desert-motion { margin: -13px -13px 10px; }
     }
@@ -9404,7 +9427,7 @@ def write_static_assets() -> None:
       .site-nav a, .nav-trigger { width: 100%; min-height: 40px; white-space: normal; text-align: center; padding: 5px 6px; font-size: 0.76rem; line-height: 1.2; }
       .nav-group { position: static; min-width: 0; }
       .nav-menu,
-      .nav-menu--promote { position: absolute; top: calc(100% + 6px); right: 0; left: 0; width: 100%; min-width: 0; max-width: none; margin-top: 0; padding: 8px; box-shadow: var(--shadow); }
+      .nav-menu--promote { position: absolute; top: calc(100% + 6px); right: 0; left: 0; width: 100%; min-width: 0; max-width: none; margin-top: 0; padding: 8px; background: #fffdf8; backdrop-filter: none; box-shadow: var(--shadow); }
       .nav-menu a { white-space: normal; justify-content: flex-start; text-align: left; }
       .nav-menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 10px; }
       .nav-menu-section { padding: 2px 0 3px; }
@@ -9500,10 +9523,8 @@ def write_static_assets() -> None:
       .directory-secondary-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .directory-secondary-actions .button { padding: 8px; text-align: center; }
       .directory-support-details > summary { font-size: 0.9rem; }
-      .corner-controls { left: auto; right: 12px; bottom: 12px; width: auto; max-width: calc(100vw - 156px); flex-direction: column; align-items: flex-end; justify-content: flex-end; }
       .back-to-top, .music-summary, .music-toggle { font-size: 0.72rem; min-height: 38px; padding: 6px 9px; background-color: rgba(16,40,61,0.48); max-width: none; white-space: nowrap; }
       .music-toggle { position: static; left: auto; right: auto; bottom: auto; }
-      .back-to-top { position: static; left: auto; right: auto; bottom: auto; align-self: flex-end; }
       .music-summary { align-self: flex-end; min-width: 116px; }
       .music-label-prefix { display: none; }
       .page-network:not([data-music-state="playing"]) .music-bar {
@@ -9526,8 +9547,6 @@ def write_static_assets() -> None:
       .music-bar__bottom { align-items: flex-start; flex-direction: column; gap: 6px; }
       .music-credit-block { max-width: none; }
       .music-volume { width: 76px; }
-      .directory-assistant { width: auto; max-width: calc(100vw - 156px); left: 12px; bottom: 12px; }
-      .directory-assistant__toggle { min-height: 38px; padding: 7px 10px; background: rgba(34,73,90,0.56); font-size: 0.75rem; }
       .directory-assistant__panel { inset: auto 12px 12px 12px; width: auto; max-width: none; max-height: calc(100vh - 24px); }
       .directory-assistant__search-row { grid-template-columns: 1fr; }
       .directory-assistant__footer .button { width: 100%; justify-content: center; }
@@ -9727,8 +9746,9 @@ def write_static_assets() -> None:
       }
     }
     @media (max-width: 420px) {
-      .site-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
-      .site-nav a, .nav-trigger { min-height: 42px; padding: 6px 5px; font-size: 0.78rem; }
+      .site-nav { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; }
+      .site-nav a, .nav-trigger { min-height: 44px; padding: 5px 2px; font-size: 0.74rem; }
+      .nav-yucca-flourish { display: none; }
       .nav-menu--promote { max-height: min(68vh, 520px); }
       .site-watermark { bottom: max(9vh, env(safe-area-inset-bottom)); padding-inline: 10px; font-size: 0.82rem; letter-spacing: 0.08em; }
     }
@@ -10998,6 +11018,8 @@ def write_static_assets() -> None:
       const root = document.querySelector("[data-directory-assistant]");
       if (!root) return;
       const toggle = root.querySelector(".directory-assistant__toggle");
+      const mobileToggle = document.querySelector(".directory-assistant__mobile-toggle");
+      const toggles = [toggle, mobileToggle].filter(Boolean);
       const panel = root.querySelector(".directory-assistant__panel");
       const close = root.querySelector(".directory-assistant__close");
       const form = root.querySelector(".directory-assistant__form");
@@ -11046,7 +11068,7 @@ def write_static_assets() -> None:
             }
           }
           replayAssistantMotion(panel, "open");
-          toggle.setAttribute("aria-expanded", "true");
+          toggles.forEach(button => button.setAttribute("aria-expanded", "true"));
           root.dataset.open = "true";
           window.setTimeout(() => input.focus(), 40);
           return;
@@ -11073,7 +11095,7 @@ def write_static_assets() -> None:
         }
         isClosing = false;
         panel.classList.remove("is-southwest-opening", "is-southwest-closing");
-        toggle.setAttribute("aria-expanded", "false");
+        toggles.forEach(button => button.setAttribute("aria-expanded", "false"));
         root.dataset.open = "false";
         if (renderTimer) {
           window.clearTimeout(renderTimer);
@@ -11135,13 +11157,13 @@ def write_static_assets() -> None:
         results.innerHTML = matches.map(assistantCard).join("");
       }
 
-      toggle.addEventListener("click", () => {
+      toggles.forEach(button => button.addEventListener("click", () => {
         const shouldOpen = !panel.open || isClosing;
         setOpen(shouldOpen);
         if (shouldOpen && !status.textContent.trim()) {
           render(input.value);
         }
-      });
+      }));
       close && close.addEventListener("click", () => setOpen(false));
       panel.addEventListener("cancel", event => {
         event.preventDefault();
@@ -12509,6 +12531,14 @@ def zip_output() -> Path:
     return zip_path
 
 
+def write_redirect_rules() -> None:
+    (OUT / "_redirects").write_text(
+        "/funding /resources/funding/ 301!\n"
+        "/funding/ /resources/funding/ 301!\n",
+        encoding="utf-8",
+    )
+
+
 def reset_output_dir(path: Path) -> None:
     path.mkdir(parents=True, exist_ok=True)
     for child in path.iterdir():
@@ -12526,6 +12556,7 @@ def main() -> None:
     write_data_files(rows, summary)
     write_static_assets()
     write_pages(rows, summary)
+    write_redirect_rules()
     copy_site_extras()
     write_readme(summary)
     write_research_notes(summary)
