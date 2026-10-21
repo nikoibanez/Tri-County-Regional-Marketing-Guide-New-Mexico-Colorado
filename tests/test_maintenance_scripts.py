@@ -810,9 +810,16 @@ class SiteSmokeTests(unittest.TestCase):
             css = (asset_out / "styles.css").read_text(encoding="utf-8")
 
         narrow_rule = css.split("@media (max-width: 420px)", 1)[1].split("@media print", 1)[0]
-        self.assertIn("grid-template-columns: repeat(2, minmax(0, 1fr))", narrow_rule)
-        self.assertIn("font-size: 0.78rem", narrow_rule)
-        self.assertIn("min-height: 42px", narrow_rule)
+        self.assertIn("grid-template-columns: repeat(4, minmax(0, 1fr))", narrow_rule)
+        self.assertIn("font-size: 0.74rem", narrow_rule)
+        self.assertIn("min-height: 44px", narrow_rule)
+        tablet_rule = css.split("@media (max-width: 860px)", 1)[1].split("@media (max-width: 640px)", 1)[0]
+        self.assertIn(".site-header { position: relative;", tablet_rule)
+        self.assertIn(".corner-controls { position: static;", tablet_rule)
+        self.assertIn(".directory-assistant__toggle { display: none; }", tablet_rule)
+        self.assertIn(".back-to-top { display: none !important; }", tablet_rule)
+        phone_rule = css.split("@media (max-width: 640px)", 1)[1].split("@media (max-width: 420px)", 1)[0]
+        self.assertIn("background: #fffdf8; backdrop-filter: none;", phone_rule)
 
     def test_directory_assistant_is_labeled_as_a_secondary_route_helper(self) -> None:
         page = guide_builder.page_shell("Test", "Test page", "about", "<section>Test</section>")
@@ -821,6 +828,16 @@ class SiteSmokeTests(unittest.TestCase):
         self.assertIn("This helper suggests routes.", page)
         self.assertIn("search the Directory directly", page)
         self.assertNotIn(">Ask directory<", page)
+        self.assertIn('class="directory-assistant__mobile-toggle"', page)
+        self.assertLess(page.index('class="corner-controls"'), page.index('<main id="main">'))
+
+    def test_funding_short_route_redirects_to_canonical_page(self) -> None:
+        with tempfile.TemporaryDirectory() as folder:
+            with patch.object(guide_builder, "OUT", Path(folder)):
+                guide_builder.write_redirect_rules()
+            rules = (Path(folder) / "_redirects").read_text(encoding="utf-8")
+        self.assertIn("/funding /resources/funding/ 301!", rules)
+        self.assertIn("/funding/ /resources/funding/ 301!", rules)
 
     def test_accessibility_idref_check_accepts_additional_descriptions(self) -> None:
         document = '<dialog aria-describedby="intro scope hint extra"></dialog>'
