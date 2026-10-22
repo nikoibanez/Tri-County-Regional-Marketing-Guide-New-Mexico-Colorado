@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-19",
-  "index_path": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/listing-keyword-index.json",
+  "generated_at": "2026-10-22",
+  "index_path": "C:\\Temp\\tri-county-weekly-pr83\\data\\listing-keyword-index.json",
   "network_enabled": true,
   "summary": {
     "rows": 1498,
@@ -8,45 +8,135 @@
     "distinct_source_urls": 419,
     "urls_selected": 120,
     "urls_checked": 120,
-    "urls_failed": 120,
-    "entries_changed": 0,
-    "source_keyword_changes": 0,
-    "entries_with_blocked_inferences": 0,
-    "blocked_inference_count": 0,
+    "urls_failed": 114,
+    "entries_changed": 4,
+    "source_keyword_changes": 5,
+    "entries_with_blocked_inferences": 5,
+    "blocked_inference_count": 6,
     "status_counts": {
-      "checked": 235,
-      "checked_no_name_match": 943,
-      "fetch_error": 147,
+      "checked": 241,
+      "checked_no_name_match": 963,
+      "fetch_error": 121,
       "no_source": 173
     }
   },
-  "changes": [],
-  "blocked_inferences": [],
-  "guardrail_path": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/keyword-inference-guardrails.json",
+  "changes": [
+    {
+      "id": "eagle-nest-mercantile-colfax-retail",
+      "name": "Eagle Nest Mercantile",
+      "county": "Colfax",
+      "town": "Eagle Nest",
+      "added": [
+        "gift shop",
+        "jewelry"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://www.eaglenestmercantile.com"
+    },
+    {
+      "id": "budget-host-summit-rv-park-las-animas-motel-rv-park",
+      "name": "Budget Host & Summit RV Park",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "added": [
+        "lodging"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://visittrinidadcolorado.com/stay/"
+    },
+    {
+      "id": "fishers-peak-state-park-las-animas-outdoor-recreation-tourism",
+      "name": "Fishers Peak State Park",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "added": [
+        "hiking"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://visittrinidadcolorado.com/state-parks/"
+    },
+    {
+      "id": "summit-rv-park-las-animas-rv-park",
+      "name": "Summit RV Park",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "added": [
+        "lodging"
+      ],
+      "removed": [],
+      "status": "checked",
+      "source_url": "https://visittrinidadcolorado.com/stay/"
+    }
+  ],
+  "blocked_inferences": [
+    {
+      "id": "summit-rv-park-las-animas-rv-park",
+      "name": "Summit RV Park",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "blocked": [
+        "hotel"
+      ],
+      "source_url": "https://visittrinidadcolorado.com/stay/"
+    },
+    {
+      "id": "la-veta-oil-company-huerfano-service-fuel",
+      "name": "La Veta Oil Company",
+      "county": "Huerfano",
+      "town": "La Veta",
+      "blocked": [
+        "business directory",
+        "directory"
+      ],
+      "source_url": "https://www.yellowpages.com/la-veta-co"
+    },
+    {
+      "id": "spanish-peaks-country-galleries-directory-la-veta-walsenburg-huerfano-visitor-facing-g",
+      "name": "Spanish Peaks Country Galleries Directory",
+      "county": "Huerfano",
+      "town": "La Veta / Walsenburg",
+      "blocked": [
+        "business directory"
+      ],
+      "source_url": "https://spanishpeakscountry.com/business-directory/categories/galleries"
+    },
+    {
+      "id": "fox-theatre-walsenburg-huerfano-arts-culture-venue",
+      "name": "Fox Theatre Walsenburg",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "blocked": [
+        "main street"
+      ],
+      "source_url": "https://foxtheatrewalsenburg.org"
+    },
+    {
+      "id": "travel-guide-story-creek-outfitters-walsenburg-huerfano",
+      "name": "Story Creek Outfitters",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "blocked": [
+        "agriculture"
+      ],
+      "source_url": "https://storycreek.com/wp/"
+    }
+  ],
+  "guardrail_path": "C:\\Temp\\tri-county-weekly-pr83\\data\\keyword-inference-guardrails.json",
   "fetch_failures": [
     {
       "url": "https://221bgallery.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "url": "https://aguilarcountrycottages.com",
-      "status": "fetch_error",
-      "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://aguilarstation.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "url": "https://allseasonsgiftshop.business.site/",
-      "status": "fetch_error",
-      "status_code": 404,
-      "error": "HTTP Error 404: Not Found"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://angelfirechamber.org/business/lindsey-living/",
@@ -70,13 +160,19 @@
       "url": "https://c1btrueorganics.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -5] No address associated with hostname>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "url": "https://cawthonpark.com",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1028)>"
     },
     {
       "url": "https://charlies-market.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1016)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1028)>"
     },
     {
       "url": "https://cityofwalsenburg.colorado.gov",
@@ -94,19 +190,13 @@
       "url": "https://franciscofort.org",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)>"
+      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028)>"
     },
     {
       "url": "https://huerfanofair.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1016)>"
-    },
-    {
-      "url": "https://innovativejournaling.com/",
-      "status": "fetch_error",
-      "status_code": 429,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)>"
     },
     {
       "url": "https://jimandmelissa.org",
@@ -130,7 +220,7 @@
       "url": "https://locations.arbys.com/nm/raton/415-clayton-hwy.html",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://missionatthebell.com",
@@ -154,13 +244,13 @@
       "url": "https://thelvesa.org/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html",
       "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "url": "https://trinidadstate.edu/collaboratory/index.html",
@@ -170,12 +260,6 @@
     },
     {
       "url": "https://visitangelfirenm.com/catering/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/allen-fields-sports-complex/",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -211,6 +295,12 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://visitangelfirenm.com/listing/angel-fire-resort-vacation-rentals/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://visitangelfirenm.com/listing/angel-fire-visitors-center/",
       "status": "fetch_error",
       "status_code": 403,
@@ -218,6 +308,12 @@
     },
     {
       "url": "https://visitangelfirenm.com/listing/angel-fired-pizza/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -289,6 +385,12 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://visitangelfirenm.com/listing/coyote-creek-state-park/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://visitangelfirenm.com/listing/desert-sky-realty-investments/",
       "status": "fetch_error",
       "status_code": 403,
@@ -296,12 +398,6 @@
     },
     {
       "url": "https://visitangelfirenm.com/listing/dollar-general/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/elevated-pour/",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -433,12 +529,6 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://visitangelfirenm.com/listing/mountain-serenity-rentals/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
       "url": "https://visitangelfirenm.com/listing/mountain-supply-true-value/",
       "status": "fetch_error",
       "status_code": 403,
@@ -535,7 +625,7 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://visitangelfirenm.com/listing/slope-side-sports/",
+      "url": "https://visitangelfirenm.com/listing/ski-tech-bluebird-mountain-sports/",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -607,6 +697,12 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://visitangelfirenm.com/listing/the-vietnam-veterans-memorial/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://visitangelfirenm.com/listing/tolby-campground-cimarron-valley/",
       "status": "fetch_error",
       "status_code": 403,
@@ -655,30 +751,6 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://visittrinidadcolorado.com/arts-culture/visual-arts/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visittrinidadcolorado.com/outdoor-recreation/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visittrinidadcolorado.com/state-parks/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visittrinidadcolorado.com/stay/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
       "url": "https://worldjournalnewspaper.com/",
       "status": "fetch_error",
       "status_code": 403,
@@ -694,19 +766,13 @@
       "url": "https://www.cannacity.us/home",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "url": "https://www.eaglenestmercantile.com",
-      "status": "fetch_error",
-      "status_code": 429,
-      "error": "HTTP Error 429: Too Many Requests"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://www.marketplacegallery.net",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://www.mcdonalds.com/us/en-us/location/nm/raton/542-clayton-rd/6011.html?cid=RF:YXT:GMB::Clicks",
@@ -724,7 +790,7 @@
       "url": "https://www.skinnysdinerandbar.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://www.startupspace.app/resource?page=62",
@@ -736,7 +802,7 @@
       "url": "https://www.tabularasa.gallery",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://www.twofoxcabins.com/",

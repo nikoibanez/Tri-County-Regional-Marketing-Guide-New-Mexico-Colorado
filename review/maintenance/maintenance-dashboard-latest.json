@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T20:29:40+00:00",
+  "generated_at": "2026-10-22T13:00:13-06:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1498,
@@ -28,7 +28,7 @@
     "watch_pages_failed": 12,
     "priority_new_leads": 1,
     "keyword_urls_checked": 120,
-    "keyword_entries_changed": 0,
+    "keyword_entries_changed": 4,
     "outreach_listed_routes": 307,
     "outreach_ask_routes": 703,
     "outreach_without_routes": 620,
@@ -76,6 +76,12 @@
     },
     {
       "priority": "medium",
+      "count": 4,
+      "label": "listing keyword sets proposed for review",
+      "next_action": "Review additions and removals in the latest keyword-sweep report before merging the keyword index."
+    },
+    {
+      "priority": "medium",
       "count": 2,
       "label": "free-tool or nonprofit-offer pages waiting for wording review",
       "next_action": "Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory."
@@ -88,7 +94,7 @@
     },
     {
       "priority": "low",
-      "count": 120,
+      "count": 114,
       "label": "keyword source pages needing attention",
       "next_action": "Open failed pages normally before removing retained source-derived keywords."
     },

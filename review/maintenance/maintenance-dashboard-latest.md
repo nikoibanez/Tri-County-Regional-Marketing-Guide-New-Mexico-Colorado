@@ -1,6 +1,6 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-10-19T20:29:40+00:00
+Generated: 2026-10-22T13:00:13-06:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
@@ -33,7 +33,7 @@ Automation detects and drafts. A person approves public claims, directory change
 - Deep-watch pages failed: 12
 - Priority new leads: 1
 - Keyword source URLs checked: 120
-- Keyword sets proposed for review: 0
+- Keyword sets proposed for review: 4
 - Listings with at least one listed outreach route: 307
 - Listings with at least one ask-first outreach route: 703
 - Listings without an identified outreach route: 620
@@ -60,9 +60,10 @@ Automation detects and drafts. A person approves public claims, directory change
 - **HIGH - 1 priority directory candidates:** Confirm each linked listing page before adding it to canonical data.
 - **MEDIUM - 179 resource candidate links waiting for review:** Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data.
 - **MEDIUM - 173 canonical rows without a website or source URL:** Enrich high-value entries first; do not invent contact paths.
+- **MEDIUM - 4 listing keyword sets proposed for review:** Review additions and removals in the latest keyword-sweep report before merging the keyword index.
 - **MEDIUM - 2 free-tool or nonprofit-offer pages waiting for wording review:** Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory.
 - **LOW - 620 listings without an identified promotion route:** Enrich these only when a public page or direct contact supports a useful route; do not invent availability.
-- **LOW - 120 keyword source pages needing attention:** Open failed pages normally before removing retained source-derived keywords.
+- **LOW - 114 keyword source pages needing attention:** Open failed pages normally before removing retained source-derived keywords.
 - **LOW - 9 national funding pages needing a normal-browser check:** Open these pages normally; do not treat bot blocking or a temporary network error as a closed program.
 - **LOW - 6 resource-discovery hubs needing a normal-browser check:** Open these pages normally; do not remove a source because of bot blocking or a temporary request failure.
 - **LOW - 6 free-tool pages needing a normal-browser check:** Open failed pages normally; do not remove a tool solely because automation was blocked or timed out.

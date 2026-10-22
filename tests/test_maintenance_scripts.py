@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import argparse
+import json
 import re
 import sys
 import tempfile
@@ -52,6 +54,7 @@ from sweep_listing_keywords import (  # noqa: E402
     filter_source_keywords,
     listing_name_matches_signal,
     primary_source_url,
+    run_sweep,
     select_urls,
 )
 
@@ -1144,6 +1147,68 @@ class KeywordSweepTests(unittest.TestCase):
         )
         self.assertEqual(allowed, ["library"])
         self.assertEqual(blocked, [])
+
+    def test_business_directory_host_does_not_reclassify_a_member(self) -> None:
+        row = {
+            "id": "la-veta-oil-company-huerfano-service-fuel",
+            "resource_name": "La Veta Oil Company",
+            "category": "Service / fuel",
+            "resource_type": "Resource",
+            "notes": "Commercial-directory sweep also surfaced this listing; treat that signal as a source-check cue.",
+        }
+        guardrails = json.loads(
+            (ROOT / "data" / "keyword-inference-guardrails.json").read_text(encoding="utf-8")
+        )
+
+        self.assertNotIn("directory", extract_controlled_keywords(canonical_signal(row)))
+        allowed, blocked = filter_source_keywords(row, ["business directory", "directory"], guardrails)
+        self.assertEqual(allowed, [])
+        self.assertEqual(blocked, ["business directory", "directory"])
+
+    def test_shared_lodging_page_does_not_make_rv_park_a_hotel(self) -> None:
+        row = {
+            "id": "summit-rv-park-las-animas-rv-park",
+            "resource_name": "Summit RV Park",
+            "category": "RV park",
+            "resource_type": "Media",
+        }
+        guardrails = json.loads(
+            (ROOT / "data" / "keyword-inference-guardrails.json").read_text(encoding="utf-8")
+        )
+        allowed, blocked = filter_source_keywords(row, ["hotel", "lodging"], guardrails)
+        self.assertEqual(allowed, ["lodging"])
+        self.assertEqual(blocked, ["hotel"])
+
+    def test_keyword_sweep_retains_blocked_terms_when_source_is_not_checked(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            directory = Path(temp_dir)
+            source = directory / "resources.csv"
+            source.write_text(
+                "id,resource_name,category,website\n"
+                "example,Example Theater,Performing arts,https://example.org/theater\n",
+                encoding="utf-8",
+            )
+            index = directory / "keyword-index.json"
+            index.write_text(json.dumps({"entries": {"example": {
+                "resource_name": "Example Theater",
+                "keywords": [],
+                "canonical_keywords": [],
+                "source_keywords": [],
+                "blocked_source_keywords": ["main street"],
+                "source_url": "https://example.org/theater",
+                "status": "fetch_error",
+            }}}), encoding="utf-8")
+            guardrails = directory / "guardrails.json"
+            guardrails.write_text('{"global_rules": {}, "listing_rules": {}}', encoding="utf-8")
+            args = argparse.Namespace(
+                source=source, index=index, guardrails=guardrails, no_network=True,
+                reset_source_keywords=False, limit=1, retry_errors_first=False,
+                workers=1, timeout=1, write_index=True,
+            )
+
+            run_sweep(args)
+            retained = json.loads(index.read_text(encoding="utf-8"))["entries"]["example"]
+            self.assertEqual(retained["blocked_source_keywords"], ["main street"])
 
 
 if __name__ == "__main__":
