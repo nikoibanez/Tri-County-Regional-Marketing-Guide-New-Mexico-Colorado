@@ -3,6 +3,14 @@
   "reviewed_on": "2026-08-13",
   "description": "Prevents source-page navigation, host branding, nearby listings, and legal-status language from becoming misleading public search keywords. These rules apply only to automated source-page inferences; canonical editor-reviewed keywords remain unchanged.",
   "global_rules": {
+    "business directory": {
+      "required_canonical_phrases": [
+        "business directory",
+        "member directory",
+        "merchant directory"
+      ],
+      "reason": "A business appearing on a directory page is not itself a business directory."
+    },
     "agriculture": {
       "required_canonical_phrases": [
         "agriculture",
@@ -55,6 +63,19 @@
     }
   },
   "listing_rules": {
+    "summit-rv-park-las-animas-rv-park": {
+      "blocked_source_keywords": [
+        "hotel"
+      ],
+      "reason": "A shared stay page lists hotels and RV parks; it does not establish that this RV park is a hotel."
+    },
+    "la-veta-oil-company-huerfano-service-fuel": {
+      "blocked_source_keywords": [
+        "business directory",
+        "directory"
+      ],
+      "reason": "This fuel-service listing appears on a commercial directory page; the directory describes the host, not the business."
+    },
     "travel-guide-bobcat-pass-wilderness-adventures-angel-fire-colfax": {
       "blocked_source_keywords": [
         "agriculture"

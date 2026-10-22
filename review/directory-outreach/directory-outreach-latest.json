@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-11T06:20:56.557862+00:00",
-  "source": "C:\\Temp\\tri-county-raton-animation-palettes\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
+  "generated_at": "2026-10-19T20:29:33.230174+00:00",
+  "source": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/dist/tri-county-netlify-guide-deep/data/guide-data.json",
   "summary": {
     "entries": 1362,
     "directory_shortcuts": 117,
@@ -55,8 +55,8 @@
       "social_cross_promotion": {
         "label": "Social cross-promotion",
         "listed": 0,
-        "ask": 38,
-        "not_indicated": 1324
+        "ask": 39,
+        "not_indicated": 1323
       },
       "newsletter_mailing_list": {
         "label": "Newsletters and mailing lists",

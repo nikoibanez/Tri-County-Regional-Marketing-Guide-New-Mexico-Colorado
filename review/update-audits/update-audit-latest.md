@@ -1,6 +1,6 @@
 # Update Source Audit
 
-Generated: 2026-10-11
+Generated: 2026-10-19
 
 This report separates confirmed link failures from pages that merely block or confuse scripted checks.
 
@@ -10,18 +10,18 @@ This report separates confirmed link failures from pages that merely block or co
 - Web sources checked: 169
 - Confirmed broken or missing: 0
 - Normal-browser confirmation required: 1
-- Script-access limitations (not broken): 33
+- Script-access limitations (not broken): 36
 - Offline field-check records: 1
 - Human approval required: 112
 
 ## Status Counts
 
-- access_blocked: 31
+- access_blocked: 35
 - field_check: 1
-- network_error: 1
-- ok: 122
+- ok: 119
 - redirect: 13
-- tls_error: 2
+- timeout: 1
+- tls_error: 1
 
 ## Confirmed Broken Or Missing
 
@@ -31,14 +31,13 @@ No checked web source is confirmed broken or missing.
 
 These pages are not classified as broken. A timeout, network problem, or temporary server response prevented a conclusive scripted check.
 
-- [The Ratonian Community Calendar](https://theratonian.com/calendar/) - Colfax; events; network_error; [Errno 11001] getaddrinfo failed
+- [NM Family Friendly Business Directory](https://nmfamilyfriendlybusiness.org/premium-business-directory/) - Regional; directory; timeout; The read operation timed out
 
 ## Script Access Limitations (Not Broken)
 
 These are informational results, not broken-link findings. The page blocked scripted access or the local certificate checker could not validate its chain.
 
 - [Walsenburg / Huerfano](https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes) - Regional; civic; access_blocked; HTTP Error 403: Forbidden
-- [Yellow Pages Raton Business Listings](https://www.yellowpages.com/raton-nm/business-listings/1) - Colfax; directory; access_blocked; HTTP Error 403: Forbidden
 - [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; access_blocked; HTTP Error 403: Forbidden
@@ -48,10 +47,14 @@ These are informational results, not broken-link findings. The page blocked scri
 - [The World Journal](https://worldjournalnewspaper.com/) - Huerfano; events; access_blocked; HTTP Error 403: Forbidden
 - [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; access_blocked; HTTP Error 403: Forbidden
 - [World Journal](https://worldjournalnewspaper.com/) - Huerfano / Walsenburg; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Las Animas; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Submit Your Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Las Animas; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Submit Event](https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Tourism / Resources for Locals](https://visittrinidadcolorado.com/resources-for-locals/) - Trinidad / Las Animas; events; access_blocked; HTTP Error 403: Forbidden
 - [Candid Funding Search and Learning](https://learning.candid.org/free-access-to-foundation-directory) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [Colorado OEDIT Programs and Funding](https://oedit.colorado.gov/programs-and-funding) - National; funding; access_blocked; HTTP Error 403: Forbidden
-- [Cuchara Chapel Scholarship](https://www.cucharachapel.org/scholarship/) - National; funding; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)
+- [Cuchara Chapel Scholarship](https://www.cucharachapel.org/scholarship/) - National; funding; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1016)
 - [IFundWomen Grants](https://www.ifundwomen.com/grants/apply-for-grants) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [Mary John Goree Las Animas County Scholarship](https://goreescholarship.org/) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [Robert Hoag Rawlings Foundation Grants](https://rawlingsfoundation.com/grants/requests/) - National; funding; access_blocked; HTTP Error 403: Forbidden
@@ -68,8 +71,8 @@ These are informational results, not broken-link findings. The page blocked scri
 - [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Las Animas County Government](https://lasanimascounty.colorado.gov/) - Las Animas; general; access_blocked; HTTP Error 403: Forbidden
+- [Visit Trinidad Outdoor Recreation](https://visittrinidadcolorado.com/outdoor-recreation/) - Las Animas; general; access_blocked; HTTP Error 403: Forbidden
 - [World Journal Services Directory](https://worldjournalnewspaper.com/services/) - Huerfano; media; access_blocked; HTTP Error 403: Forbidden
-- [Colorado Gives](https://www.coloradogives.org/) - Las Animas; media; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
 
 ## Offline Field Checks
 

@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-11",
+  "generated_at": "2026-10-19",
   "publication_note": "Automatically refreshed from watched public directory and tourism pages. Treat these as candidate updates, not official directory additions, until a human confirms the linked source.",
   "summary": {
     "sources_watched": 15,
     "pages_checked": 32,
-    "pages_failed": 2,
-    "already_represented": 288,
-    "possible_new_leads": 37,
+    "pages_failed": 12,
+    "already_represented": 225,
+    "possible_new_leads": 25,
     "priority_new_leads": 1,
-    "low_confidence_text_leads": 36
+    "low_confidence_text_leads": 24
   },
   "watched_sources": [
     {
@@ -85,7 +85,7 @@
       "source_role": "Event spots, event calendar, event submission, visitor-facing programs",
       "why_watch": "Primary visitor-facing source for Trinidad events and event submission routes.",
       "pages_checked": 2,
-      "possible_new_leads": 1,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -96,7 +96,7 @@
       "source_role": "Venues, event facilities, travel groups, catering-adjacent planning routes",
       "why_watch": "Useful for venues, event spaces, group travel, weddings, and catering-adjacent outreach.",
       "pages_checked": 2,
-      "possible_new_leads": 2,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -107,7 +107,7 @@
       "source_role": "Digital-only business listings, events, restaurants, shops, visitor-facing local guide",
       "why_watch": "LocalStash is the current digital successor route to the Weekender-style local guide model and can surface Trinidad businesses, events, restaurants, and shops.",
       "pages_checked": 2,
-      "possible_new_leads": 9,
+      "possible_new_leads": 10,
       "priority_new_leads": 0
     },
     {
@@ -118,7 +118,7 @@
       "source_role": "Events, travel spots, regional visitor-facing listings",
       "why_watch": "Regional Southern Colorado event and tourism source that can surface Las Animas County travel and event leads.",
       "pages_checked": 2,
-      "possible_new_leads": 13,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
@@ -151,7 +151,7 @@
       "source_role": "Event spots, community calendar, event submission, visitor-facing activities",
       "why_watch": "Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.",
       "pages_checked": 2,
-      "possible_new_leads": 11,
+      "possible_new_leads": 14,
       "priority_new_leads": 0
     },
     {
@@ -191,17 +191,6 @@
     }
   ],
   "low_confidence_text_leads": [
-    {
-      "name": "Caleb Wilbourn Texas Artist Live at the Stokehouse!",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
     {
       "name": "Causa Mortis: A Hospital Comedy",
       "county": "Huerfano",
@@ -258,7 +247,29 @@
       "confidence": "low"
     },
     {
+      "name": "Halloweentown Movie Night at Fiesta Park",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "Heritage Park",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Kellen Goode Live at the Stokehouse!",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -281,6 +292,28 @@
     },
     {
       "name": "La Veta Library",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Mason Davis Live at the Stokehouse!",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "MUSIC BY MIDI LIVE!!!!",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -324,17 +357,6 @@
       "confidence": "low"
     },
     {
-      "name": "420 Festival at Central Park",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "An independent antiques stop on historic East Main Street.",
       "county": "Las Animas",
       "state": "CO",
@@ -342,28 +364,6 @@
       "source_type": "Digital local guide and business/event listings",
       "source_page": "https://localstash.com/colorado/towns/trinidad-co",
       "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "April",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Christmas Tree Lighting",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -390,17 +390,6 @@
       "confidence": "low"
     },
     {
-      "name": "Details",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Find city services, official notices and municipal contact information.",
       "county": "Las Animas",
       "state": "CO",
@@ -412,79 +401,13 @@
       "confidence": "low"
     },
     {
-      "name": "Hometown Holidays Parade of Lights",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "June",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Literary Festival – GET LIT!",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "March",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Mt. San Rafael Hospital Emergency Department",
+      "name": "KCRT AM-FM Radio",
       "county": "Las Animas",
       "state": "CO",
       "source_title": "LocalStash Trinidad",
       "source_type": "Digital local guide and business/event listings",
       "source_page": "https://localstash.com/colorado/towns/trinidad-co",
       "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "November",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "St. Patrick's Day Parade",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -500,17 +423,6 @@
       "confidence": "low"
     },
     {
-      "name": "Stonewall Fishing Tournament",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Stop for local visitor information, maps and help planning a Trinidad visit.",
       "county": "Las Animas",
       "state": "CO",
@@ -518,28 +430,6 @@
       "source_type": "Digital local guide and business/event listings",
       "source_page": "https://localstash.com/colorado/towns/trinidad-co",
       "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Summer Arts Exhibits",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "The Annual Collector's Series Calendar",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Southern Colorado Tourism Event and Travel Pages",
-      "source_type": "Regional tourism and event source",
-      "source_page": "https://southerncoloradotourism.com/events/",
-      "listing_url": "https://southerncoloradotourism.com/events/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -555,35 +445,13 @@
       "confidence": "low"
     },
     {
-      "name": "Visit Trinidad Colorado –",
+      "name": "World Journal - Trinidad Branch",
       "county": "Las Animas",
       "state": "CO",
-      "source_title": "Visit Trinidad Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://visittrinidadcolorado.com/upcoming-events/",
-      "listing_url": "https://visittrinidadcolorado.com/upcoming-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Visit Trinidad Colorado –",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Visit Trinidad Meetings, Weddings, and Venue Routes",
-      "source_type": "Meetings, conventions, weddings, and venue tourism source",
-      "source_page": "https://visittrinidadcolorado.com/meetings-conventions/",
-      "listing_url": "https://visittrinidadcolorado.com/meetings-conventions/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Visit Trinidad Colorado –",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "Visit Trinidad Meetings, Weddings, and Venue Routes",
-      "source_type": "Meetings, conventions, weddings, and venue tourism source",
-      "source_page": "https://visittrinidadcolorado.com/weddings/",
-      "listing_url": "https://visittrinidadcolorado.com/weddings/",
+      "source_title": "LocalStash Trinidad",
+      "source_type": "Digital local guide and business/event listings",
+      "source_page": "https://localstash.com/colorado/towns/trinidad-co",
+      "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     }
