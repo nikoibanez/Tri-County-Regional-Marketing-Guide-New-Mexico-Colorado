@@ -273,6 +273,89 @@
       "priority_link_candidates": false,
       "include_url_path_contains": [],
       "exclude_url_path_contains": ["/cart", "/about", "/contact", "/calendar", "/submit"]
+    },
+    {
+      "id": "colfax-red-river-chamber-member-spotlights",
+      "title": "Red River Chamber Member Spotlights",
+      "county": "Colfax",
+      "state": "NM",
+      "source_type": "Chamber business profiles",
+      "source_role": "Red River businesses, lodging, food, wellness, and member contact paths",
+      "why_watch": "Current chamber profiles link to individual Red River businesses; review each town before importing because some members serve nearby areas.",
+      "seed_urls": ["https://redriverchamber.org/business-listing/"],
+      "allow_link_candidates": true,
+      "allow_text_candidates": false,
+      "priority_link_candidates": true,
+      "include_url_path_contains": ["member-spotlight-"],
+      "exclude_url_path_contains": ["/jobs/", "/calendar/"]
+    },
+    {
+      "id": "regional-el-raton-media-works-businesses",
+      "title": "El Raton Media Works Local Businesses",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_type": "Local business profiles",
+      "source_role": "Colfax-centered businesses, catering, shops, lodging, and film-production services",
+      "why_watch": "The directory includes nearby Colorado and Union County listings, so every candidate needs a town check before county assignment.",
+      "seed_urls": ["https://www.elratonmediaworks.org/local-businesses"],
+      "allow_link_candidates": true,
+      "allow_text_candidates": false,
+      "priority_link_candidates": true,
+      "include_url_path_contains": ["/businesses/"],
+      "exclude_url_path_contains": ["/businesses/category/"]
+    },
+    {
+      "id": "las-animas-canyons-plains-attractions",
+      "title": "Canyons & Plains Las Animas County Attractions",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_type": "Regional tourism attraction guide",
+      "source_role": "Museums, heritage sites, performance venues, and visitor destinations",
+      "why_watch": "County-specific attraction links provide direct destination or operator pages; check each linked page for current details.",
+      "seed_urls": ["https://canyonsandplains.org/destination-item/las-animas-county/"],
+      "allow_link_candidates": true,
+      "allow_text_candidates": false,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/stories/", "/events/", "/donate/"],
+      "external_links_only": true,
+      "exclude_url_hosts": ["tripadvisor.com", "9news.com", "goo.gl"]
+    },
+    {
+      "id": "las-animas-trinidad-community-foundation-support",
+      "title": "Trinidad Community Foundation Support",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_type": "Community foundation program pages",
+      "source_role": "Fiscal sponsorship, community partnerships, and supported organizations",
+      "why_watch": "The foundation describes fiscal sponsorship and local partnerships; program and organization names remain leads until individually checked.",
+      "seed_urls": [
+        "https://www.trinidadcf.org/organizations.html",
+        "https://www.trinidadcf.org/education.html"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": false,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": []
+    },
+    {
+      "id": "huerfano-wheelhouse-retailers",
+      "title": "Wheelhouse Incubator Retailers",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_type": "Business incubator retailer directory",
+      "source_role": "Walsenburg retailers, makers, business incubation, and workshops",
+      "why_watch": "The incubator publishes current retailer names and business-support routes; check each retailer's own page before publishing contacts.",
+      "seed_urls": [
+        "https://www.wheelhouseincubator.org/our-retailers"
+      ],
+      "allow_link_candidates": false,
+      "allow_text_candidates": false,
+      "candidate_heading_tags": ["h4"],
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": []
     }
   ]
 }

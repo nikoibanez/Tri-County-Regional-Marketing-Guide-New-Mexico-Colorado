@@ -149,6 +149,57 @@ class DirectoryQualityTests(unittest.TestCase):
 
         self.assertEqual([candidate["name"] for candidate in candidates], ["Allowed Gallery"])
 
+    def test_directory_sweep_can_read_retailer_headings(self) -> None:
+        source = {
+            "id": "incubator-retailers",
+            "title": "Incubator Retailers",
+            "county": "Huerfano",
+            "state": "CO",
+            "source_type": "Incubator",
+            "allow_link_candidates": False,
+            "candidate_heading_tags": ["h4"],
+        }
+        html = '<h2>Our Retailers</h2><h4>SoapBox</h4><p>Handmade soaps and gifts.</p>'
+        candidates = extract_candidates(source, "https://example.org/our-retailers", html, {})
+        self.assertEqual([candidate["name"] for candidate in candidates], ["SoapBox"])
+
+    def test_shared_retailer_page_does_not_mark_all_headings_as_existing(self) -> None:
+        source = {
+            "id": "incubator-retailers",
+            "title": "Incubator Retailers",
+            "county": "Huerfano",
+            "state": "CO",
+            "source_type": "Incubator",
+            "allow_link_candidates": False,
+            "candidate_heading_tags": ["h4"],
+        }
+        html = '<h4>Existing Shop</h4><h4>New Shop</h4>'
+        existing = {"existing shop": {"Existing Shop"}}
+        existing_urls = {"example.org/our-retailers": {"Existing Shop"}}
+        candidates = extract_candidates(source, "https://example.org/our-retailers", html, existing, existing_urls)
+        self.assertEqual(
+            {item["name"]: item["match_status"] for item in candidates},
+            {"Existing Shop": "already_in_guide", "New Shop": "possible_new_lead"},
+        )
+
+    def test_directory_sweep_excludes_navigation_and_generic_external_sites(self) -> None:
+        source = {
+            "id": "county-attractions",
+            "title": "County Attractions",
+            "county": "Las Animas",
+            "state": "CO",
+            "source_type": "Tourism",
+            "external_links_only": True,
+            "exclude_url_hosts": ["tripadvisor.com"],
+        }
+        html = (
+            '<a href="/about">About The Area</a>'
+            '<a href="https://www.tripadvisor.com/Attraction_Review">Reviews</a>'
+            '<a href="https://museum.example.com/visit">Local Museum</a>'
+        )
+        candidates = extract_candidates(source, "https://example.org/county", html, {})
+        self.assertEqual([candidate["name"] for candidate in candidates], ["Local Museum"])
+
     def test_weekly_directory_sweep_matches_aliases_and_known_listing_urls(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             directory_path = Path(temp_dir) / "directory.csv"

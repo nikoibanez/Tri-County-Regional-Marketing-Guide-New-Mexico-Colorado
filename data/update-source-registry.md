@@ -1,13 +1,13 @@
 # Update Source Registry
 
-Generated: 2026-10-11
+Generated: 2026-10-22
 
 Automation may propose updates. Human approval is required for public claims, eligibility, rates, deadlines, contact changes, listing removal, and civic/legal guidance.
 
 ## Counts
 
-- Records: 170
-- Human approval required: 112
+- Records: 178
+- Human approval required: 118
 - Manual verification needed: 1
 
 ## Records
@@ -58,6 +58,7 @@ Automation may propose updates. Human approval is required for public claims, el
 - [Raton Chamber Business Directory](https://www.raton.info/business-directory.html) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-11; access_blocked; next 2026-10-18
 - [Raton MainStreet](https://ratonmainstreet.org/) - Colfax; events; every 7 days; standard_review; last checked 2026-10-11; ok; next 2026-10-18
 - [Raton MainStreet Events](https://ratonmainstreet.org/events/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
+- [Red River Chamber Member Spotlights](https://redriverchamber.org/business-listing/) - Colfax; events; every 7 days; human_approval_required; not checked yet
 - [The Ratonian Community Calendar](https://theratonian.com/calendar/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-11; network_error; next 2026-10-18
 - [Visit Angel Fire - List Your Event](https://visitangelfirenm.com/list-your-event/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-11; access_blocked; next 2026-10-18
 - [Bachman Community Calendar](https://www.discoverbachman.com/community-calendar/) - Huerfano; events; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
@@ -115,20 +116,25 @@ Automation may propose updates. Human approval is required for public claims, el
 - [Southern Colorado Community Foundation Nonprofit Directory](https://sccfcolorado.org/nonprofit-directory/) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [Trinidad Community Foundation](https://www.trinidadcf.org/board.html) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [Trinidad Community Foundation Grant Process](https://www.trinidadcf.org/grants.html) - Las Animas; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
+- [Boettcher Foundation Rural Catalyst Grants](https://boettcherfoundation.org/grantmaking/rural-catalyst-grants/) - National; funding; every 7 days; human_approval_required; not checked yet
 - [Brindle Foundation Grants](https://www.brindlefoundation.org/grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [Candid Funding Search and Learning](https://learning.candid.org/free-access-to-foundation-directory) - National; funding; every 14 days; human_approval_required; last checked 2026-10-11; access_blocked; next 2026-10-25
 - [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; access_blocked; next 2026-10-18
 - [Colorado OEDIT Programs and Funding](https://oedit.colorado.gov/programs-and-funding) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; access_blocked; next 2026-10-18
+- [Con Alma Health Foundation Annual Grants](https://www.conalma.org/grant-making) - National; funding; every 7 days; human_approval_required; not checked yet
 - [Cuchara Chapel Scholarship](https://www.cucharachapel.org/scholarship/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; tls_error; next 2026-10-18
+- [Daniels Fund Grants Program](https://danielsfund.org/our-work/grants/) - National; funding; every 7 days; human_approval_required; not checked yet
 - [El Pomar Foundation Grant Making](https://www.elpomar.org/grant-making/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [First Peoples Fund Fellowships](https://www.firstpeoplesfund.org/programs/fellowships) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [First Southwest Community Fund Grants](https://www.fswcf.org/grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
+- [Gates Family Foundation Capital Grants](https://gatesfamilyfoundation.org/types-of-support/capital-grants/) - National; funding; every 7 days; human_approval_required; not checked yet
 - [Grants.gov](https://www.grants.gov/search-grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [Health Solutions Community Sponsorship Requests](https://www.health.solutions/requests/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [IFundWomen Grants](https://www.ifundwomen.com/grants/apply-for-grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; access_blocked; next 2026-10-18
 - [Institute of Museum and Library Services Funding Opportunities](https://www.imls.gov/find-funding/how-to-apply/funding-opportunities) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [John G. Duncan Charitable Trust](https://www.wellsfargo.com/private-foundations/duncan-charitable-trust/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [Mary John Goree Las Animas County Scholarship](https://goreescholarship.org/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; access_blocked; next 2026-10-18
+- [McCune Charitable Foundation Grants](https://nmmccune.org/grant-eligibility/) - National; funding; every 7 days; human_approval_required; not checked yet
 - [NALAC Fund for the Arts](https://www.nalac.org/grants/nalac-fund-for-the-arts/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [National Endowment for the Arts Grants](https://www.arts.gov/grants) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [New Mexico Arts Artist Opportunities](https://nmarts.org/public-art/are-you-an-artist/) - National; funding; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
@@ -166,6 +172,7 @@ Automation may propose updates. Human approval is required for public claims, el
 - [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-11; access_blocked; next 2026-10-18
 - [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-11; access_blocked; next 2026-10-18
 - [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; every 7 days; human_approval_required; last checked 2026-10-11; access_blocked; next 2026-10-18
+- [Canyons & Plains Las Animas Attractions](https://canyonsandplains.org/destination-item/las-animas-county/) - Las Animas; general; every 30 days; standard_review; not checked yet
 - [Las Animas County Government](https://lasanimascounty.colorado.gov/) - Las Animas; general; every 90 days; standard_review; last checked 2026-10-11; access_blocked; next 2027-01-09
 - [Visit Trinidad Outdoor Recreation](https://visittrinidadcolorado.com/outdoor-recreation/) - Las Animas; general; every 30 days; standard_review; last checked 2026-10-11; ok; next 2026-11-10
 - [City of Raton Economic Development Programs](https://www.ratonnm.gov/business/economic_development/index.php) - Colfax; media; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
@@ -178,6 +185,7 @@ Automation may propose updates. Human approval is required for public claims, el
 - [World Journal Services Directory](https://worldjournalnewspaper.com/services/) - Huerfano; media; every 30 days; human_approval_required; last checked 2026-10-11; access_blocked; next 2026-11-10
 - [Colorado Gives](https://www.coloradogives.org/) - Las Animas; media; every 7 days; standard_review; last checked 2026-10-11; tls_error; next 2026-10-18
 - [The Chronicle-News](https://www.thechronicle-news.com/) - Las Animas; media; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
+- [Trinidad Community Foundation Fiscal Sponsorship](https://www.trinidadcf.org/organizations.html) - Las Animas; media; every 7 days; standard_review; not checked yet
 - [Red River Chamber Vacation Guide](https://redriver.org/plan-your-trip/vacation-guide/) - Red River / Colfax; media; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [Colorado Nonprofit Association Directory](https://coloradononprofits.org/member-resources/nonprofit-member-directory/) - Regional; media; every 7 days; human_approval_required; last checked 2026-10-11; ok; next 2026-10-18
 - [Finance New Mexico Regional Economic Development Organizations](https://financenewmexico.org/resources/general-business-assistance/regional-economic-development-organizations/) - Regional; media; every 7 days; standard_review; last checked 2026-10-11; ok; next 2026-10-18

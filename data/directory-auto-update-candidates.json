@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-11",
+  "generated_at": "2026-10-22",
   "publication_note": "Automatically refreshed from watched public directory and tourism pages. Treat these as candidate updates, not official directory additions, until a human confirms the linked source.",
   "summary": {
-    "sources_watched": 15,
-    "pages_checked": 32,
+    "sources_watched": 20,
+    "pages_checked": 38,
     "pages_failed": 2,
-    "already_represented": 288,
-    "possible_new_leads": 37,
-    "priority_new_leads": 1,
-    "low_confidence_text_leads": 36
+    "already_represented": 282,
+    "possible_new_leads": 85,
+    "priority_new_leads": 15,
+    "low_confidence_text_leads": 70
   },
   "watched_sources": [
     {
@@ -74,7 +74,7 @@
       "source_role": "Restaurants, lodging, shopping, visitor-facing businesses, local listing support",
       "why_watch": "High-signal Trinidad tourism pages for visitor-facing businesses and listing-support routes.",
       "pages_checked": 4,
-      "possible_new_leads": 0,
+      "possible_new_leads": 10,
       "priority_new_leads": 0
     },
     {
@@ -85,7 +85,7 @@
       "source_role": "Event spots, event calendar, event submission, visitor-facing programs",
       "why_watch": "Primary visitor-facing source for Trinidad events and event submission routes.",
       "pages_checked": 2,
-      "possible_new_leads": 1,
+      "possible_new_leads": 4,
       "priority_new_leads": 0
     },
     {
@@ -107,7 +107,7 @@
       "source_role": "Digital-only business listings, events, restaurants, shops, visitor-facing local guide",
       "why_watch": "LocalStash is the current digital successor route to the Weekender-style local guide model and can surface Trinidad businesses, events, restaurants, and shops.",
       "pages_checked": 2,
-      "possible_new_leads": 9,
+      "possible_new_leads": 10,
       "priority_new_leads": 0
     },
     {
@@ -151,7 +151,7 @@
       "source_role": "Event spots, community calendar, event submission, visitor-facing activities",
       "why_watch": "Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.",
       "pages_checked": 2,
-      "possible_new_leads": 11,
+      "possible_new_leads": 14,
       "priority_new_leads": 0
     },
     {
@@ -162,7 +162,7 @@
       "source_role": "Local businesses, restaurants, lodging, galleries, catering, services",
       "why_watch": "Municipal business directory for La Veta-area businesses, including restaurants, galleries, lodging, services, and catering-style entries.",
       "pages_checked": 1,
-      "possible_new_leads": 0,
+      "possible_new_leads": 10,
       "priority_new_leads": 0
     },
     {
@@ -173,11 +173,99 @@
       "source_role": "Business directory, member exposure, events, local services",
       "why_watch": "Countywide chamber source for business collaboration, member exposure, events, and local business updates.",
       "pages_checked": 1,
+      "possible_new_leads": 3,
+      "priority_new_leads": 0
+    },
+    {
+      "id": "colfax-red-river-chamber-member-spotlights",
+      "title": "Red River Chamber Member Spotlights",
+      "county": "Colfax",
+      "source_type": "Chamber business profiles",
+      "source_role": "Red River businesses, lodging, food, wellness, and member contact paths",
+      "why_watch": "Current chamber profiles link to individual Red River businesses; review each town before importing because some members serve nearby areas.",
+      "pages_checked": 1,
+      "possible_new_leads": 3,
+      "priority_new_leads": 3
+    },
+    {
+      "id": "regional-el-raton-media-works-businesses",
+      "title": "El Raton Media Works Local Businesses",
+      "county": "Regional",
+      "source_type": "Local business profiles",
+      "source_role": "Colfax-centered businesses, catering, shops, lodging, and film-production services",
+      "why_watch": "The directory includes nearby Colorado and Union County listings, so every candidate needs a town check before county assignment.",
+      "pages_checked": 1,
+      "possible_new_leads": 11,
+      "priority_new_leads": 11
+    },
+    {
+      "id": "las-animas-canyons-plains-attractions",
+      "title": "Canyons & Plains Las Animas County Attractions",
+      "county": "Las Animas",
+      "source_type": "Regional tourism attraction guide",
+      "source_role": "Museums, heritage sites, performance venues, and visitor destinations",
+      "why_watch": "County-specific attraction links provide direct destination or operator pages; check each linked page for current details.",
+      "pages_checked": 1,
+      "possible_new_leads": 2,
+      "priority_new_leads": 0
+    },
+    {
+      "id": "las-animas-trinidad-community-foundation-support",
+      "title": "Trinidad Community Foundation Support",
+      "county": "Las Animas",
+      "source_type": "Community foundation program pages",
+      "source_role": "Fiscal sponsorship, community partnerships, and supported organizations",
+      "why_watch": "The foundation describes fiscal sponsorship and local partnerships; program and organization names remain leads until individually checked.",
+      "pages_checked": 2,
       "possible_new_leads": 0,
+      "priority_new_leads": 0
+    },
+    {
+      "id": "huerfano-wheelhouse-retailers",
+      "title": "Wheelhouse Incubator Retailers",
+      "county": "Huerfano",
+      "source_type": "Business incubator retailer directory",
+      "source_role": "Walsenburg retailers, makers, business incubation, and workshops",
+      "why_watch": "The incubator publishes current retailer names and business-support routes; check each retailer's own page before publishing contacts.",
+      "pages_checked": 1,
+      "possible_new_leads": 2,
       "priority_new_leads": 0
     }
   ],
   "priority_new_leads": [
+    {
+      "name": "Apothecary Shoppe of TX",
+      "county": "Colfax",
+      "state": "NM",
+      "source_title": "Red River Chamber Member Spotlights",
+      "source_type": "Chamber business profiles",
+      "source_page": "https://redriverchamber.org/business-listing/",
+      "listing_url": "https://redriverchamber.org/2026-member-spotlight-apothecary-shoppe-of-tx/",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Questa Lumber and Hardware Co.",
+      "county": "Colfax",
+      "state": "NM",
+      "source_title": "Red River Chamber Member Spotlights",
+      "source_type": "Chamber business profiles",
+      "source_page": "https://redriverchamber.org/business-listing/",
+      "listing_url": "https://redriverchamber.org/2026-member-spotlight-questa-lumber-hardware-co/",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "The Vault",
+      "county": "Colfax",
+      "state": "NM",
+      "source_title": "Red River Chamber Member Spotlights",
+      "source_type": "Chamber business profiles",
+      "source_page": "https://redriverchamber.org/business-listing/",
+      "listing_url": "https://redriverchamber.org/2026-member-spotlight-the-vault/",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
     {
       "name": "Cuchara Mountain Trail Ride - Guided Horseback Rides",
       "county": "Huerfano",
@@ -188,17 +276,149 @@
       "listing_url": "https://spanishpeakscountry.com/business-directory/listing/cuchara-mountain-trail-ride",
       "evidence_type": "linked_text",
       "confidence": "medium-high"
+    },
+    {
+      "name": "111 Park - Espresso Bar & Cafe",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_title": "El Raton Media Works Local Businesses",
+      "source_type": "Local business profiles",
+      "source_page": "https://www.elratonmediaworks.org/local-businesses",
+      "listing_url": "https://www.elratonmediaworks.org/businesses/111-park",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Blue Sky Ranch",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_title": "El Raton Media Works Local Businesses",
+      "source_type": "Local business profiles",
+      "source_page": "https://www.elratonmediaworks.org/local-businesses",
+      "listing_url": "https://www.elratonmediaworks.org/businesses/blue-sky-ranch",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Deadeye Inc",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_title": "El Raton Media Works Local Businesses",
+      "source_type": "Local business profiles",
+      "source_page": "https://www.elratonmediaworks.org/local-businesses",
+      "listing_url": "https://www.elratonmediaworks.org/businesses/dead-eye-inc",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Howard Johnson",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_title": "El Raton Media Works Local Businesses",
+      "source_type": "Local business profiles",
+      "source_page": "https://www.elratonmediaworks.org/local-businesses",
+      "listing_url": "https://www.elratonmediaworks.org/businesses/howard-johnson-hotel",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Patchwork Phoenix",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_title": "El Raton Media Works Local Businesses",
+      "source_type": "Local business profiles",
+      "source_page": "https://www.elratonmediaworks.org/local-businesses",
+      "listing_url": "https://www.elratonmediaworks.org/businesses/patchwork-phoenix-raton",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Raton Motor Pass Inn",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_title": "El Raton Media Works Local Businesses",
+      "source_type": "Local business profiles",
+      "source_page": "https://www.elratonmediaworks.org/local-businesses",
+      "listing_url": "https://www.elratonmediaworks.org/businesses/well-hotel-taproom-meyn7",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Shuler Theater",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_title": "El Raton Media Works Local Businesses",
+      "source_type": "Local business profiles",
+      "source_page": "https://www.elratonmediaworks.org/local-businesses",
+      "listing_url": "https://www.elratonmediaworks.org/businesses/shuler-theater",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "The Heart's Desire Bed and Breakfast",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_title": "El Raton Media Works Local Businesses",
+      "source_type": "Local business profiles",
+      "source_page": "https://www.elratonmediaworks.org/local-businesses",
+      "listing_url": "https://www.elratonmediaworks.org/businesses/hearts-desire-bnb-raton",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Trinidad Tech Shop",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_title": "El Raton Media Works Local Businesses",
+      "source_type": "Local business profiles",
+      "source_page": "https://www.elratonmediaworks.org/local-businesses",
+      "listing_url": "https://www.elratonmediaworks.org/businesses/trinidad-tech-shop",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Union County Insurance Agency, LLC",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_title": "El Raton Media Works Local Businesses",
+      "source_type": "Local business profiles",
+      "source_page": "https://www.elratonmediaworks.org/local-businesses",
+      "listing_url": "https://www.elratonmediaworks.org/businesses/union-county-insurance-agency-llc",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Well Hotel & Taproom",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_title": "El Raton Media Works Local Businesses",
+      "source_type": "Local business profiles",
+      "source_page": "https://www.elratonmediaworks.org/local-businesses",
+      "listing_url": "https://www.elratonmediaworks.org/businesses/well-hotel-taproom",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
     }
   ],
   "low_confidence_text_leads": [
     {
-      "name": "Caleb Wilbourn Texas Artist Live at the Stokehouse!",
+      "name": "123’s",
       "county": "Huerfano",
       "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "source_title": "Town of La Veta Business Directory",
+      "source_type": "Municipal business directory",
+      "source_page": "https://townoflaveta-co.gov/business-directory/",
+      "listing_url": "https://townoflaveta-co.gov/business-directory/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Become a Member",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Huerfano County Chamber Directory",
+      "source_type": "Chamber member directory",
+      "source_page": "https://www.chamber.huerfano.org/membership-directory",
+      "listing_url": "https://www.chamber.huerfano.org/membership-directory",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -214,6 +434,17 @@
       "confidence": "low"
     },
     {
+      "name": "Contact Information",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Town of La Veta Business Directory",
+      "source_type": "Municipal business directory",
+      "source_page": "https://townoflaveta-co.gov/business-directory/",
+      "listing_url": "https://townoflaveta-co.gov/business-directory/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "Cuchara Farmers Market",
       "county": "Huerfano",
       "state": "CO",
@@ -221,6 +452,39 @@
       "source_type": "Tourism event calendar and submission source",
       "source_page": "https://spanishpeakscountry.com/spc-events/",
       "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Danae's Diner",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Town of La Veta Business Directory",
+      "source_type": "Municipal business directory",
+      "source_page": "https://townoflaveta-co.gov/business-directory/",
+      "listing_url": "https://townoflaveta-co.gov/business-directory/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Forms & Permits",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Town of La Veta Business Directory",
+      "source_type": "Municipal business directory",
+      "source_page": "https://townoflaveta-co.gov/business-directory/",
+      "listing_url": "https://townoflaveta-co.gov/business-directory/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Frequently Asked Questions",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Town of La Veta Business Directory",
+      "source_type": "Municipal business directory",
+      "source_page": "https://townoflaveta-co.gov/business-directory/",
+      "listing_url": "https://townoflaveta-co.gov/business-directory/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -258,7 +522,29 @@
       "confidence": "low"
     },
     {
+      "name": "Halloweentown Movie Night at Fiesta Park",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "Heritage Park",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Kellen Goode Live at the Stokehouse!",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -280,6 +566,17 @@
       "confidence": "low"
     },
     {
+      "name": "La Veta Flower Company",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Town of La Veta Business Directory",
+      "source_type": "Municipal business directory",
+      "source_page": "https://townoflaveta-co.gov/business-directory/",
+      "listing_url": "https://townoflaveta-co.gov/business-directory/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "La Veta Library",
       "county": "Huerfano",
       "state": "CO",
@@ -287,6 +584,116 @@
       "source_type": "Tourism event calendar and submission source",
       "source_page": "https://spanishpeakscountry.com/spc-events/",
       "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Marshal — Harold Willburn",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Town of La Veta Business Directory",
+      "source_type": "Municipal business directory",
+      "source_page": "https://townoflaveta-co.gov/business-directory/",
+      "listing_url": "https://townoflaveta-co.gov/business-directory/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Member Directory | Connect Locally — huerfano county chamber of commerce",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Huerfano County Chamber Directory",
+      "source_type": "Chamber member directory",
+      "source_page": "https://www.chamber.huerfano.org/membership-directory",
+      "listing_url": "https://www.chamber.huerfano.org/membership-directory",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Mountain Oasis Designs",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Wheelhouse Incubator Retailers",
+      "source_type": "Business incubator retailer directory",
+      "source_page": "https://www.wheelhouseincubator.org/our-retailers",
+      "listing_url": "https://www.wheelhouseincubator.org/our-retailers",
+      "evidence_type": "listing_heading",
+      "confidence": "low"
+    },
+    {
+      "name": "Mountain Time Physical Therapy",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Town of La Veta Business Directory",
+      "source_type": "Municipal business directory",
+      "source_page": "https://townoflaveta-co.gov/business-directory/",
+      "listing_url": "https://townoflaveta-co.gov/business-directory/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Museum of Friends Fifth Biennial Gala",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "MUSIC BY MIDI LIVE!!!!",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Off-Grid Hub’s Kampot Kitchen Pepper",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Wheelhouse Incubator Retailers",
+      "source_type": "Business incubator retailer directory",
+      "source_page": "https://www.wheelhouseincubator.org/our-retailers",
+      "listing_url": "https://www.wheelhouseincubator.org/our-retailers",
+      "evidence_type": "listing_heading",
+      "confidence": "low"
+    },
+    {
+      "name": "Office Hours",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Town of La Veta Business Directory",
+      "source_type": "Municipal business directory",
+      "source_page": "https://townoflaveta-co.gov/business-directory/",
+      "listing_url": "https://townoflaveta-co.gov/business-directory/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Shalawalla",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Town of La Veta Business Directory",
+      "source_type": "Municipal business directory",
+      "source_page": "https://townoflaveta-co.gov/business-directory/",
+      "listing_url": "https://townoflaveta-co.gov/business-directory/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Storage",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Huerfano County Chamber Directory",
+      "source_type": "Chamber member directory",
+      "source_page": "https://www.chamber.huerfano.org/membership-directory",
+      "listing_url": "https://www.chamber.huerfano.org/membership-directory",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -353,6 +760,17 @@
       "source_type": "Regional tourism and event source",
       "source_page": "https://southerncoloradotourism.com/events/",
       "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Books & More",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Business and Visitor Listings",
+      "source_type": "Tourism business and visitor directory",
+      "source_page": "https://visittrinidadcolorado.com/shop/",
+      "listing_url": "https://visittrinidadcolorado.com/shop/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -434,6 +852,17 @@
       "confidence": "low"
     },
     {
+      "name": "KCRT AM-FM Radio",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "LocalStash Trinidad",
+      "source_type": "Digital local guide and business/event listings",
+      "source_page": "https://localstash.com/colorado/towns/trinidad-co",
+      "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "Literary Festival – GET LIT!",
       "county": "Las Animas",
       "state": "CO",
@@ -443,6 +872,28 @@
       "listing_url": "https://southerncoloradotourism.com/events/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
+    },
+    {
+      "name": "Lou Ann Peters",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Business and Visitor Listings",
+      "source_type": "Tourism business and visitor directory",
+      "source_page": "https://visittrinidadcolorado.com/resources-for-locals/",
+      "listing_url": "https://visittrinidadcolorado.com/resources-for-locals/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Ludlow Massacre History Site",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Canyons & Plains Las Animas County Attractions",
+      "source_type": "Regional tourism attraction guide",
+      "source_page": "https://canyonsandplains.org/destination-item/las-animas-county/",
+      "listing_url": "https://visittrinidadcolorado.com/ludlow-massacre",
+      "evidence_type": "linked_text",
+      "confidence": "medium"
     },
     {
       "name": "March",
@@ -456,17 +907,6 @@
       "confidence": "low"
     },
     {
-      "name": "Mt. San Rafael Hospital Emergency Department",
-      "county": "Las Animas",
-      "state": "CO",
-      "source_title": "LocalStash Trinidad",
-      "source_type": "Digital local guide and business/event listings",
-      "source_page": "https://localstash.com/colorado/towns/trinidad-co",
-      "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "November",
       "county": "Las Animas",
       "state": "CO",
@@ -474,6 +914,72 @@
       "source_type": "Regional tourism and event source",
       "source_page": "https://southerncoloradotourism.com/events/",
       "listing_url": "https://southerncoloradotourism.com/events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Organizer",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+      "listing_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Scenic Highway of Legends",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Canyons & Plains Las Animas County Attractions",
+      "source_type": "Regional tourism attraction guide",
+      "source_page": "https://canyonsandplains.org/destination-item/las-animas-county/",
+      "listing_url": "https://spanishpeakscountry.com/highway-of-legends-scenic-byway/",
+      "evidence_type": "linked_text",
+      "confidence": "medium"
+    },
+    {
+      "name": "Show Filters",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Business and Visitor Listings",
+      "source_type": "Tourism business and visitor directory",
+      "source_page": "https://visittrinidadcolorado.com/dine/",
+      "listing_url": "https://visittrinidadcolorado.com/dine/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Show Filters",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Business and Visitor Listings",
+      "source_type": "Tourism business and visitor directory",
+      "source_page": "https://visittrinidadcolorado.com/stay/",
+      "listing_url": "https://visittrinidadcolorado.com/stay/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Show Filters",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Business and Visitor Listings",
+      "source_type": "Tourism business and visitor directory",
+      "source_page": "https://visittrinidadcolorado.com/shop/",
+      "listing_url": "https://visittrinidadcolorado.com/shop/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Space To Create & Tourism Coordinator",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Business and Visitor Listings",
+      "source_type": "Tourism business and visitor directory",
+      "source_page": "https://visittrinidadcolorado.com/resources-for-locals/",
+      "listing_url": "https://visittrinidadcolorado.com/resources-for-locals/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -544,6 +1050,17 @@
       "confidence": "low"
     },
     {
+      "name": "Victor Gutierrez",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+      "listing_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "Visit Trinidad Colorado Tourism and Events Office",
       "county": "Las Animas",
       "state": "CO",
@@ -558,10 +1075,65 @@
       "name": "Visit Trinidad Colorado –",
       "county": "Las Animas",
       "state": "CO",
+      "source_title": "Visit Trinidad Business and Visitor Listings",
+      "source_type": "Tourism business and visitor directory",
+      "source_page": "https://visittrinidadcolorado.com/dine/",
+      "listing_url": "https://visittrinidadcolorado.com/dine/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Visit Trinidad Colorado –",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Business and Visitor Listings",
+      "source_type": "Tourism business and visitor directory",
+      "source_page": "https://visittrinidadcolorado.com/stay/",
+      "listing_url": "https://visittrinidadcolorado.com/stay/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Visit Trinidad Colorado –",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Business and Visitor Listings",
+      "source_type": "Tourism business and visitor directory",
+      "source_page": "https://visittrinidadcolorado.com/shop/",
+      "listing_url": "https://visittrinidadcolorado.com/shop/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Visit Trinidad Colorado –",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Business and Visitor Listings",
+      "source_type": "Tourism business and visitor directory",
+      "source_page": "https://visittrinidadcolorado.com/resources-for-locals/",
+      "listing_url": "https://visittrinidadcolorado.com/resources-for-locals/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Visit Trinidad Colorado –",
+      "county": "Las Animas",
+      "state": "CO",
       "source_title": "Visit Trinidad Events and Submit-Event Routes",
       "source_type": "Tourism event calendar and submission source",
       "source_page": "https://visittrinidadcolorado.com/upcoming-events/",
       "listing_url": "https://visittrinidadcolorado.com/upcoming-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Visit Trinidad Colorado –",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
+      "listing_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -584,6 +1156,17 @@
       "source_type": "Meetings, conventions, weddings, and venue tourism source",
       "source_page": "https://visittrinidadcolorado.com/weddings/",
       "listing_url": "https://visittrinidadcolorado.com/weddings/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "World Journal - Trinidad Branch",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "LocalStash Trinidad",
+      "source_type": "Digital local guide and business/event listings",
+      "source_page": "https://localstash.com/colorado/towns/trinidad-co",
+      "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     }

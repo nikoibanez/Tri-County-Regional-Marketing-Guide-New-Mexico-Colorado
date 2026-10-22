@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-11",
+  "generated_at": "2026-10-22",
   "source": "dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
   "review_policy": "Automation may propose updates. Human approval is required for public claims, eligibility, rates, deadlines, contact changes, listing removal, and civic/legal guidance.",
   "counts": {
-    "records": 170,
-    "human_approval_required": 112,
+    "records": 178,
+    "human_approval_required": 118,
     "manual_verification_needed": 1
   },
   "records": [
@@ -464,7 +464,7 @@
       "verification_status": "Source-linked lead",
       "review_level": "standard_review",
       "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
-      "reader_action": "Use for product-based businesses, makers, and local retail experimentation.",
+      "reader_action": "Browse current retailers or ask about incubator and makerspace access.",
       "last_check_status": "ok",
       "last_status_code": 200
     },
@@ -927,6 +927,24 @@
       "reader_action": "Use the event page for current downtown dates and organizer links.",
       "last_check_status": "ok",
       "last_status_code": 200
+    },
+    {
+      "id": "directory-red-river-chamber-member-spotlights-ae1c5f74",
+      "source_group": "directory_sources",
+      "title": "Red River Chamber Member Spotlights",
+      "county": "Colfax",
+      "category": "Business directory",
+      "url": "https://redriverchamber.org/business-listing/",
+      "host": "redriverchamber.org",
+      "check_mode": "web",
+      "update_domain": "events",
+      "cadence_days": 7,
+      "last_checked": null,
+      "next_check": "2026-10-22",
+      "verification_status": "Source-linked lead",
+      "review_level": "human_approval_required",
+      "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+      "reader_action": "Open a member profile for the business website or contact route."
     },
     {
       "id": "directory-the-ratonian-community-calendar-115caeb7",
@@ -2069,6 +2087,24 @@
       "last_status_code": 200
     },
     {
+      "id": "national-funding-boettcher-foundation-rural-catalyst-grants-6411a44a",
+      "source_group": "national_funding_sources",
+      "title": "Boettcher Foundation Rural Catalyst Grants",
+      "county": "National",
+      "category": "National funding watch hub",
+      "url": "https://boettcherfoundation.org/grantmaking/rural-catalyst-grants/",
+      "host": "boettcherfoundation.org",
+      "check_mode": "web",
+      "update_domain": "funding",
+      "cadence_days": 7,
+      "last_checked": null,
+      "next_check": "2026-10-22",
+      "verification_status": "Official source checked",
+      "review_level": "human_approval_required",
+      "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+      "reader_action": "Review changed funding language before editing the curated public opportunity directory."
+    },
+    {
       "id": "national-funding-brindle-foundation-grants-42fcdc66",
       "source_group": "national_funding_sources",
       "title": "Brindle Foundation Grants",
@@ -2149,6 +2185,24 @@
       "last_status_code": 403
     },
     {
+      "id": "national-funding-con-alma-health-foundation-annual-grants-42d0df19",
+      "source_group": "national_funding_sources",
+      "title": "Con Alma Health Foundation Annual Grants",
+      "county": "National",
+      "category": "National funding watch hub",
+      "url": "https://www.conalma.org/grant-making",
+      "host": "conalma.org",
+      "check_mode": "web",
+      "update_domain": "funding",
+      "cadence_days": 7,
+      "last_checked": null,
+      "next_check": "2026-10-22",
+      "verification_status": "Official source checked",
+      "review_level": "human_approval_required",
+      "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+      "reader_action": "Review changed funding language before editing the curated public opportunity directory."
+    },
+    {
       "id": "national-funding-cuchara-chapel-scholarship-5e32ad6a",
       "source_group": "national_funding_sources",
       "title": "Cuchara Chapel Scholarship",
@@ -2167,6 +2221,24 @@
       "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
       "last_check_status": "tls_error",
       "last_status_code": null
+    },
+    {
+      "id": "national-funding-daniels-fund-grants-program-4edfd6f1",
+      "source_group": "national_funding_sources",
+      "title": "Daniels Fund Grants Program",
+      "county": "National",
+      "category": "National funding watch hub",
+      "url": "https://danielsfund.org/our-work/grants/",
+      "host": "danielsfund.org",
+      "check_mode": "web",
+      "update_domain": "funding",
+      "cadence_days": 7,
+      "last_checked": null,
+      "next_check": "2026-10-22",
+      "verification_status": "Official source checked",
+      "review_level": "human_approval_required",
+      "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+      "reader_action": "Review changed funding language before editing the curated public opportunity directory."
     },
     {
       "id": "national-funding-el-pomar-foundation-grant-making-23a6a218",
@@ -2227,6 +2299,24 @@
       "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
       "last_check_status": "ok",
       "last_status_code": 200
+    },
+    {
+      "id": "national-funding-gates-family-foundation-capital-grants-082e555b",
+      "source_group": "national_funding_sources",
+      "title": "Gates Family Foundation Capital Grants",
+      "county": "National",
+      "category": "National funding watch hub",
+      "url": "https://gatesfamilyfoundation.org/types-of-support/capital-grants/",
+      "host": "gatesfamilyfoundation.org",
+      "check_mode": "web",
+      "update_domain": "funding",
+      "cadence_days": 7,
+      "last_checked": null,
+      "next_check": "2026-10-22",
+      "verification_status": "Official source checked",
+      "review_level": "human_approval_required",
+      "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+      "reader_action": "Review changed funding language before editing the curated public opportunity directory."
     },
     {
       "id": "national-funding-grants-gov-e5fcdb2e",
@@ -2347,6 +2437,24 @@
       "reader_action": "Review changed funding language before editing the curated public opportunity directory.",
       "last_check_status": "access_blocked",
       "last_status_code": 403
+    },
+    {
+      "id": "national-funding-mccune-charitable-foundation-grants-72fbb0ac",
+      "source_group": "national_funding_sources",
+      "title": "McCune Charitable Foundation Grants",
+      "county": "National",
+      "category": "National funding watch hub",
+      "url": "https://nmmccune.org/grant-eligibility/",
+      "host": "nmmccune.org",
+      "check_mode": "web",
+      "update_domain": "funding",
+      "cadence_days": 7,
+      "last_checked": null,
+      "next_check": "2026-10-22",
+      "verification_status": "Official source checked",
+      "review_level": "human_approval_required",
+      "public_claim_boundary": "Confirm every deadline, award range, applicant type, 501(c)(3) rule, fiscal-sponsor policy, fee, and allowed use on the current program page before publication.",
+      "reader_action": "Review changed funding language before editing the curated public opportunity directory."
     },
     {
       "id": "national-funding-nalac-fund-for-the-arts-0bf04680",
@@ -3089,6 +3197,24 @@
       "last_status_code": 403
     },
     {
+      "id": "directory-canyons-plains-las-animas-attractions-0a565178",
+      "source_group": "directory_sources",
+      "title": "Canyons & Plains Las Animas Attractions",
+      "county": "Las Animas",
+      "category": "Tourism attraction guide",
+      "url": "https://canyonsandplains.org/destination-item/las-animas-county/",
+      "host": "canyonsandplains.org",
+      "check_mode": "web",
+      "update_domain": "general",
+      "cadence_days": 30,
+      "last_checked": null,
+      "next_check": "2026-10-22",
+      "verification_status": "Source-linked lead",
+      "review_level": "standard_review",
+      "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+      "reader_action": "Open the destination's own page for current hours and contact details."
+    },
+    {
       "id": "directory-las-animas-county-government-389a8f70",
       "source_group": "directory_sources",
       "title": "Las Animas County Government",
@@ -3164,7 +3290,7 @@
       "verification_status": "Source-linked lead",
       "review_level": "human_approval_required",
       "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
-      "reader_action": "Use as a supplemental contact discovery source, then check details.",
+      "reader_action": "Open the business profile and check its town and current contact details.",
       "last_check_status": "ok",
       "last_status_code": 200
     },
@@ -3327,6 +3453,24 @@
       "reader_action": "Use for media pitches, classifieds, public notices, jobs, and regional news awareness.",
       "last_check_status": "ok",
       "last_status_code": 200
+    },
+    {
+      "id": "directory-trinidad-community-foundation-fiscal-sponsorship-c282f3d8",
+      "source_group": "directory_sources",
+      "title": "Trinidad Community Foundation Fiscal Sponsorship",
+      "county": "Las Animas",
+      "category": "Fiscal sponsorship",
+      "url": "https://www.trinidadcf.org/organizations.html",
+      "host": "trinidadcf.org",
+      "check_mode": "web",
+      "update_domain": "media",
+      "cadence_days": 7,
+      "last_checked": null,
+      "next_check": "2026-10-22",
+      "verification_status": "Source-linked lead",
+      "review_level": "standard_review",
+      "public_claim_boundary": "Verify current page, eligibility, contact path, rates, deadlines, and acceptance rules before publishing stronger claims.",
+      "reader_action": "Contact the foundation to discuss mission fit and current terms."
     },
     {
       "id": "amplifier-red-river-chamber-vacation-guide-6cbf6448",
