@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-11T00:16:05-06:00",
+  "updated_at": "2026-10-19T20:28:32+00:00",
   "sources": {
     "explore-raton-events": {
       "name": "Explore Raton Events",
       "url": "https://www.exploreraton.com/events",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "0e68fa90eb95df45bf058c2dcffa880ef571f5eeb585eb78576a465519bf8659",
@@ -16,7 +16,7 @@
     "raton-mainstreet-events": {
       "name": "Raton MainStreet Events",
       "url": "https://ratonmainstreet.org/events/",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "51d7aa43463bc1d70784c41773ec03c318ff4e0748966e5825da453aeee26da6",
@@ -27,26 +27,29 @@
     "krtn-area-events": {
       "name": "KRTN Area Events",
       "url": "https://krtnradio.com/calendar/",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "ef1322ff6048a86cf96de0f0df1fb4693a101594db3ed2e1529f0760dca8a226",
-      "text_length": 9488,
-      "link_count": 102,
+      "content_hash": "16de77e41991011d05cfdf16a4ed4205b8acbc7a36b96d22e3479ab7e06a3257",
+      "text_length": 9079,
+      "link_count": 108,
       "candidate_count": 1
     },
     "ratonian-community-calendar": {
       "name": "The Ratonian Community Calendar",
       "url": "https://theratonian.com/calendar/",
-      "last_checked": "2026-10-11T00:16:05-06:00",
-      "last_status": "network_error",
-      "status_code": null,
-      "last_error": "[Errno 11001] getaddrinfo failed"
+      "last_checked": "2026-10-19T20:28:32+00:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "6fc12a0b32c8426a8aeefbf937ae6ad984614bf598f160eb20ddd702680594a8",
+      "text_length": 305,
+      "link_count": 2,
+      "candidate_count": 0
     },
     "visit-angel-fire-list-event": {
       "name": "Visit Angel Fire - List Your Event",
       "url": "https://visitangelfirenm.com/list-your-event/",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -54,29 +57,30 @@
     "visit-trinidad-submit-event": {
       "name": "Visit Trinidad - Submit Your Event",
       "url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
-      "last_checked": "2026-10-11T00:16:05-06:00",
-      "last_status": "ok",
-      "status_code": 200,
+      "last_checked": "2026-10-19T20:28:32+00:00",
+      "last_status": "access_blocked",
+      "status_code": 403,
       "content_hash": "c3a857578ef76f3e6af56185a43853895a390313a5a0f09e1d2a2d1d9ef1e757",
       "text_length": 5665,
       "link_count": 94,
-      "candidate_count": 1
+      "candidate_count": 1,
+      "last_error": "HTTP Error 403: Forbidden"
     },
     "trinidad-library-events": {
       "name": "Trinidad Carnegie Public Library Events",
       "url": "https://trinidadpubliclibrary.org/events/",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "8dc566653585b1408cc1bb5464619f0d97ee57a4829902be1e569ee991358b10",
-      "text_length": 6428,
+      "content_hash": "4377feaf986efe09bb024b3892b1b946dc53fea696c6eb8e731828a1044f9047",
+      "text_length": 6310,
       "link_count": 51,
       "candidate_count": 0
     },
     "create-trinidad-events": {
       "name": "CREATE Trinidad Events",
       "url": "https://www.trinidadcreativedistrict.org/trinidad-creative-district-events",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "eb82b3c5d3d1e7b152e070133c91ed56f07e7121b663848c3baccaf5f01eb037",
@@ -87,7 +91,7 @@
     "main-street-live-events": {
       "name": "Main Street LIVE Events",
       "url": "https://www.mainstreetlive.org/home",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "4c19f332b383fbc5d5b989ed348e516c78e9789de6356bc30ff34ec771a268a9",
@@ -98,7 +102,7 @@
     "csu-extension-las-animas-events": {
       "name": "CSU Extension Las Animas County Events",
       "url": "https://extension.colostate.edu/las-animas/events/",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "bf7768f01166727caa18d9cc5f502841f7e20ae18af6f1b543d36d3bb41c5e74",
@@ -109,18 +113,18 @@
     "spanish-peaks-country-events": {
       "name": "Spanish Peaks Country Events",
       "url": "https://spanishpeakscountry.com/spc-events/",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "df7539fe863a2362a3014cc094904f3bce1936a851f5d94e60d92b5688fbee14",
-      "text_length": 5945,
-      "link_count": 94,
-      "candidate_count": 14
+      "content_hash": "d50220b8399c30da8b429a5ca6a7ef7d7c7abd4101e92a7342ab5dcac0efc6a5",
+      "text_length": 6355,
+      "link_count": 92,
+      "candidate_count": 11
     },
     "huerfano-chamber-submit-event": {
       "name": "Huerfano County Chamber - Submit an Event",
       "url": "https://www.chamber.huerfano.org/submit-an-event",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "9f3f6c4a4b1781852d6d72c5f425818960d752ff1fef3c2ea11ff89d6e7c1d5d",
@@ -131,29 +135,29 @@
     "huerfano-county-government-events": {
       "name": "Huerfano County Government Events",
       "url": "https://huerfano.us/events/",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "7947a5d4a2e756d22144887c27b23c46771d85f775b36b427d6a766b9bcf8d57",
-      "text_length": 5724,
-      "link_count": 123,
-      "candidate_count": 1
+      "content_hash": "ca831b07e1e9689e8bb06d71d7f85118ca9e00ba7ccc9718b1a0d1d78d1b8d5b",
+      "text_length": 5930,
+      "link_count": 124,
+      "candidate_count": 2
     },
     "la-veta-library-calendar": {
       "name": "La Veta Public Library Full Calendar",
       "url": "https://lvpl.org/full-calendar/",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "d8bdf9a204ff6f990d6688b16a3b85523af476466edecdbf1154f7205928fa4a",
-      "text_length": 3166,
+      "content_hash": "90354bae8da1e3eb6372ec9b6172b3d7384b29cefe16811ad055cb8570f43115",
+      "text_length": 3339,
       "link_count": 130,
-      "candidate_count": 2
+      "candidate_count": 3
     },
     "la-veta-creative-district-events": {
       "name": "La Veta Creative District Festivals and Signature Events",
       "url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
-      "last_checked": "2026-10-11T00:16:05-06:00",
+      "last_checked": "2026-10-19T20:28:32+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "89e1855bda6969822ef3c6cff3df61f99a28fc48c294feaaf08005ef5205a916",

@@ -1,6 +1,6 @@
 # Directory Online Connection Review
 
-Generated: 2026-10-11T06:20:56.419978+00:00
+Generated: 2026-10-19T20:25:28.800619+00:00
 
 This review distinguishes a first-party website from a hosted directory, tourism page, social profile, email, phone, street address, or missing contact route. An HTTP response does not prove that an organization is active or that page content is current.
 
@@ -8,16 +8,16 @@ This review distinguishes a first-party website from a hosted directory, tourism
 
 - Published directory entries reviewed: 1362
 - First-party website candidates: 195
-- Live first-party business links eligible for the public animation: 128
-- Live direct websites: 168
-- Direct website links needing a normal-browser check: 27
-- Live hosted profiles or directory pages: 344
-- Hosted links needing a normal-browser check: 691
+- Live first-party business links eligible for the public animation: 126
+- Live direct websites: 164
+- Direct website links needing a normal-browser check: 31
+- Live hosted profiles or directory pages: 907
+- Hosted links needing a normal-browser check: 128
 - Entries with contact details but no URL: 74
 - Entries with no online or direct contact path: 58
 - Unique URLs checked: 589
 - Confirmed broken URLs: 0
-- Script-access limits such as 403 or TLS errors: 130
+- Script-access limits such as 403 or TLS errors: 134
 
 The companion CSV contains all entries and their assigned connection group.
 

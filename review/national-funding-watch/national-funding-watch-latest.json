@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-11T00:14:44-06:00",
+  "generated_at": "2026-10-19T20:27:42+00:00",
   "review_policy": "These pages are monitored in five independent subject sweeps. Automation may flag new language or changed deadlines, but a person must confirm all public funding claims before publication.",
   "summary": {
     "sources": 31,
     "checked": 31,
-    "changed": 2,
-    "new_baselines": 16,
+    "changed": 8,
+    "new_baselines": 0,
     "confirmed_broken": 0,
     "script_access_limited": 9,
     "check_failures": 9,
@@ -15,10 +15,9 @@
       "tls_error": 1
     },
     "change_counts": {
-      "changed": 2,
+      "changed": 8,
       "check_failed": 9,
-      "new_baseline": 16,
-      "unchanged": 4
+      "unchanged": 14
     },
     "sweep_counts": {
       "economic-development": {
@@ -26,8 +25,8 @@
         "configured": 13,
         "checked": 13,
         "ok": 8,
-        "changed": 0,
-        "new_baselines": 5,
+        "changed": 3,
+        "new_baselines": 0,
         "check_failures": 5
       },
       "education": {
@@ -35,8 +34,8 @@
         "configured": 19,
         "checked": 19,
         "ok": 13,
-        "changed": 0,
-        "new_baselines": 10,
+        "changed": 3,
+        "new_baselines": 0,
         "check_failures": 6
       },
       "healthcare": {
@@ -44,8 +43,8 @@
         "configured": 14,
         "checked": 14,
         "ok": 12,
-        "changed": 0,
-        "new_baselines": 11,
+        "changed": 6,
+        "new_baselines": 0,
         "check_failures": 2
       },
       "nonprofits": {
@@ -53,8 +52,8 @@
         "configured": 21,
         "checked": 21,
         "ok": 15,
-        "changed": 2,
-        "new_baselines": 11,
+        "changed": 7,
+        "new_baselines": 0,
         "check_failures": 6
       },
       "arts-culture": {
@@ -62,8 +61,8 @@
         "configured": 17,
         "checked": 17,
         "ok": 13,
-        "changed": 2,
-        "new_baselines": 8,
+        "changed": 4,
+        "new_baselines": 0,
         "check_failures": 4
       }
     }
@@ -99,7 +98,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.grants.gov/search-grants",
-        "elapsed_ms": 1525,
+        "elapsed_ms": 245,
         "content_hash": "38914b2b42777149c8cb6a3532e06d61a0ef0edb5cf23f05c2f581fbe68a4bc1",
         "text_length": 1685,
         "signal_snippets": [
@@ -136,7 +135,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.arts.gov/grants",
-        "elapsed_ms": 848,
+        "elapsed_ms": 360,
         "content_hash": "f5a9654d192c601eb411520cb9af8fec43ed228118d9418b09ca8978c3175ede",
         "text_length": 6455,
         "signal_snippets": [
@@ -147,8 +146,8 @@
         ],
         "error": ""
       },
-      "change_status": "changed",
-      "previous_hash": "24949995dd6623de03d3902c8f960543236081915b4b5501e764a69a40eebf1c"
+      "change_status": "unchanged",
+      "previous_hash": "f5a9654d192c601eb411520cb9af8fec43ed228118d9418b09ca8978c3175ede"
     },
     {
       "source": {
@@ -176,7 +175,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.imls.gov/find-funding/how-to-apply/funding-opportunities",
-        "elapsed_ms": 647,
+        "elapsed_ms": 133,
         "content_hash": "1ee080f2506f4d5e511d8b6b0ca887ecba36069b63b2171ba6446b013740f00a",
         "text_length": 2950,
         "signal_snippets": [
@@ -342,7 +341,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nglcc.org/programs-initiatives",
-        "elapsed_ms": 1284,
+        "elapsed_ms": 491,
         "content_hash": "138712c78374426a44433fcd25d12b2cea9fd1833fef5c3cd789edef79d2301d",
         "text_length": 2737,
         "signal_snippets": [
@@ -379,7 +378,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.firstpeoplesfund.org/programs/fellowships",
-        "elapsed_ms": 440,
+        "elapsed_ms": 96,
         "content_hash": "ca747c6954617e593146c1a31725b86822cc873bee56006ca73d4d8759147c2d",
         "text_length": 42057,
         "signal_snippets": [
@@ -425,14 +424,14 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nalac.org/grants/nalac-fund-for-the-arts/",
-        "elapsed_ms": 1540,
+        "elapsed_ms": 1530,
         "content_hash": "7d9b5be43a7cb6e41660d6a216a0f72379526c75724063d5babcfc0a201048e7",
         "text_length": 6141,
         "signal_snippets": [],
         "error": ""
       },
-      "change_status": "changed",
-      "previous_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "change_status": "unchanged",
+      "previous_hash": "7d9b5be43a7cb6e41660d6a216a0f72379526c75724063d5babcfc0a201048e7"
     },
     {
       "source": {
@@ -529,16 +528,16 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/grants/",
-        "elapsed_ms": 2888,
-        "content_hash": "fe0e4d4a08c32ebe9b4191aae8baaf21c86e10e5ce34b2071cd3c8998c2875e4",
-        "text_length": 8108,
+        "elapsed_ms": 1690,
+        "content_hash": "54aa7f9cb237ac51a25ed299cec4ef50645b33e2f3fac937f75f174bb1ba6031",
+        "text_length": 8193,
         "signal_snippets": [
           "Marketing Marketing The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes."
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "fe0e4d4a08c32ebe9b4191aae8baaf21c86e10e5ce34b2071cd3c8998c2875e4"
     },
     {
       "source": {
@@ -564,9 +563,9 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/grants/leads/",
-        "elapsed_ms": 2754,
-        "content_hash": "4385bbaaaa55a6ac8fad58ca531c9df7d7585bc0053e95dd7ebf2429620a4291",
-        "text_length": 9581,
+        "elapsed_ms": 2131,
+        "content_hash": "69573e297c9a515b854193b12072367df919f4869376d0b503b452f621d71103",
+        "text_length": 9666,
         "signal_snippets": [
           "Eligible Applicants Are involved in an economic development effort with both public and private participation, demonstrating the ability to drive economic growth.",
           "Have an up-to-date community economic development plan and a marketing plan supporting business development and job growth.",
@@ -574,8 +573,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "4385bbaaaa55a6ac8fad58ca531c9df7d7585bc0053e95dd7ebf2429620a4291"
     },
     {
       "source": {
@@ -602,9 +601,9 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/grants/cid-grants/",
-        "elapsed_ms": 2821,
-        "content_hash": "33b898e1bf777a1def78ee87788df06902459a35576963a1735b79946b8b8e96",
-        "text_length": 37394,
+        "elapsed_ms": 2053,
+        "content_hash": "0dd16821ba40e0dc122ef772269f4d8c67b705f01f317eaa27cd1e429d6c088e",
+        "text_length": 37479,
         "signal_snippets": [
           "Eligible applicants include nonprofits, MainStreet organizations, Nations, Tribes, Pueblos, councils of governments, educational institutions, and other political subdivisions of the state, excluding local, county, municipal governments, and state agencies.",
           "Projected program timeline: Grant Application Opens: Oct 5, 2026 Grant Application Closes: Oct 30, 2026, at 6 pm Review Period: Nov 2026 \u2013Jan 2027 Projected Project Period: Mar 2027\u2013Feb 2028 Eligibility Requirements (Pass/Fail): Applicants must: \u2022 Be a local government, Nation, Tribe, Pueblo, or nonprofit organization.",
@@ -621,8 +620,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "33b898e1bf777a1def78ee87788df06902459a35576963a1735b79946b8b8e96"
     },
     {
       "source": {
@@ -654,7 +653,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://nmarts.org/grants/grants-information/",
-        "elapsed_ms": 1831,
+        "elapsed_ms": 2343,
         "content_hash": "760cb9fc113ea8723d8cc71e1fef91619d1883aefe5330fde365009c176acd48",
         "text_length": 5850,
         "signal_snippets": [
@@ -666,8 +665,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "760cb9fc113ea8723d8cc71e1fef91619d1883aefe5330fde365009c176acd48"
     },
     {
       "source": {
@@ -694,7 +693,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://nmarts.org/public-art/are-you-an-artist/",
-        "elapsed_ms": 1538,
+        "elapsed_ms": 2331,
         "content_hash": "3a360c2ec5b8bde32a1de2eff720ea3f4d91b28198c0e5b17bfad57a61ea5c24",
         "text_length": 13917,
         "signal_snippets": [
@@ -702,8 +701,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "3a360c2ec5b8bde32a1de2eff720ea3f4d91b28198c0e5b17bfad57a61ea5c24"
     },
     {
       "source": {
@@ -736,7 +735,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.elpomar.org/grant-making/",
-        "elapsed_ms": 1773,
+        "elapsed_ms": 64,
         "content_hash": "737e28836ad78de979f3d55a926b0104a2d97970c3366c9279d7f8fe50ca9a6e",
         "text_length": 10617,
         "signal_snippets": [
@@ -750,8 +749,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "737e28836ad78de979f3d55a926b0104a2d97970c3366c9279d7f8fe50ca9a6e"
     },
     {
       "source": {
@@ -782,9 +781,9 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://sccfcolorado.org/for-grantseekers/apply/",
-        "elapsed_ms": 1024,
-        "content_hash": "86d240d19bad246ec082f78e5e70dc460bfa8da5b70012cb10ff5b6272e37ac4",
-        "text_length": 3993,
+        "elapsed_ms": 1089,
+        "content_hash": "55bbd7049a31a687ac7728026eb0f9a6c448330a4ddf6e588f2b88ed1b8e7a6d",
+        "text_length": 3995,
         "signal_snippets": [
           "Grant Application \u2013 Southern Colorado Community Foundation Menu Home About Our Role Board Financials Contact For Grantseekers Eligibility & Guidelines Available Grants Apply Grant Reporting Awarded Grants Scholarships Madeline Mellers Golf Scholarship For Donors Circle of 100 Donations Donor Advised Funds Planned & Legacy Giving Nonprofit Directory CLOSE MENU Grant Application Note: All fields are required.",
           "Grant Deadlines: March 1 and September 1 REMINDER: We only provide funds to organizations that support Alamosa, Baca, Bent, Chaffee, Conejos, Costilla, Crowley, Custer, Fremont, Huerfano, Kiowa, Las Animas, Mineral, Otero, Prowers, Pueblo, Rio Grande, and Saguache counties.",
@@ -795,8 +794,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "fe49b21eb8b6e3d8eaa04dba8721cc32bea007a517c69bec57ce64abeaf82508"
     },
     {
       "source": {
@@ -830,16 +829,16 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.taoscf.org/grants/",
-        "elapsed_ms": 1050,
-        "content_hash": "6b4ebdd5325d225156ac7c7872c513ee34c1449f6bb38a428d602c6a7bd20311",
-        "text_length": 5596,
+        "elapsed_ms": 614,
+        "content_hash": "b7fcb9af43b2ccccd0b68f3cdd65cbfd29e7b17f12c9b2b69756d2ba72126a10",
+        "text_length": 5616,
         "signal_snippets": [
           "Hold tax-exempt status under Section 501(c)(3) of the Internal Revenue Code, are a public or governmental agency, a federally recognized tribe in the State of New Mexico, or have a fiscal sponsor."
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "6b4ebdd5325d225156ac7c7872c513ee34c1449f6bb38a428d602c6a7bd20311"
     },
     {
       "source": {
@@ -869,7 +868,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://trinidadstate.edu/scholarships/index.html",
-        "elapsed_ms": 743,
+        "elapsed_ms": 337,
         "content_hash": "9f118d28c2f7fe7328b082f67caa109b9c51f19aacc81175bea975828e163c92",
         "text_length": 10623,
         "signal_snippets": [
@@ -883,8 +882,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "9f118d28c2f7fe7328b082f67caa109b9c51f19aacc81175bea975828e163c92"
     },
     {
       "source": {
@@ -938,7 +937,7 @@
         "status": "tls_error",
         "status_code": null,
         "final_url": "https://www.cucharachapel.org/scholarship/",
-        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)"
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1016)"
       },
       "change_status": "check_failed",
       "previous_hash": ""
@@ -969,14 +968,14 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.fswcf.org/grants",
-        "elapsed_ms": 886,
+        "elapsed_ms": 397,
         "content_hash": "6d329dc95a0b9d865039eb73fd64dfc803fbde4f02d65a2a6bbf57424ab90683",
         "text_length": 3182,
         "signal_snippets": [],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "6d329dc95a0b9d865039eb73fd64dfc803fbde4f02d65a2a6bbf57424ab90683"
     },
     {
       "source": {
@@ -1035,9 +1034,9 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.wellsfargo.com/private-foundations/duncan-charitable-trust/",
-        "elapsed_ms": 921,
-        "content_hash": "1a19d2826789b0b81d6bf06b29bcbe2601afe7a220ec680c977816db329a5480",
-        "text_length": 8972,
+        "elapsed_ms": 224,
+        "content_hash": "ed4fb4e9a75dfb3fff8709fee75d3ff5e9d23af98d2a483b8d10b3c640c06c35",
+        "text_length": 8980,
         "signal_snippets": [
           "Annual application deadlines January 1 to March 31 Applications are accepted during this time period for organizations whose primary focus is Education.",
           "However, the organization does not need to be based or established in one of these counties (any Colorado-based organization that targets these counties through programs or other outreach is sufficient): Crowley Bent Costilla Saguache Huerfano Prowers Conejos Otero Baca Las Animas Alamosa Pueblo Average giving Average grant size: $10,000 to $20,000 Average total giving per year: $250,000 to $300,000 Annual applicatio",
@@ -1045,8 +1044,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "1a19d2826789b0b81d6bf06b29bcbe2601afe7a220ec680c977816db329a5480"
     },
     {
       "source": {
@@ -1075,7 +1074,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.brindlefoundation.org/grants",
-        "elapsed_ms": 263,
+        "elapsed_ms": 87,
         "content_hash": "87fcff1e9d3acaf684c38cab4ffad92e6cf18ab8e547701865191340bdf70e84",
         "text_length": 6362,
         "signal_snippets": [
@@ -1086,8 +1085,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "87fcff1e9d3acaf684c38cab4ffad92e6cf18ab8e547701865191340bdf70e84"
     },
     {
       "source": {
@@ -1115,19 +1114,19 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://nmcf.org/northeastern-health-fund/",
-        "elapsed_ms": 2655,
-        "content_hash": "98196fc3a2c429a4372412d3d3da274998add079e0e34662cb890588806a654b",
-        "text_length": 4977,
+        "elapsed_ms": 224,
+        "content_hash": "1c87756097ea4be9f0408c598c0929409ae44f52868f929a30aa0f484883079e",
+        "text_length": 5067,
         "signal_snippets": [
-          "Northeastern Health Fund \u2013 NMCF NMCF Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern\u00ae NM True Aldo Leopold Charter School Anchorum Master\u2019s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Fiscal Sponsorship Fiscal Sponsorship About Us Ab",
+          "Northeastern Health Fund \u2013 NMCF NMCF Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern\u00ae NM True Aldo Leopold Charter School Anchorum Master\u2019s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Fiscal Sponsorship Fiscal Sponsorship Sponsored O",
           "GRANT AMOUNT : Up to $5,000 TIMELINE Application opens in fall 2026 Application Deadline: TBD Grants Announced: TBD Grant Period: TBD Recent Recipients : Eagle Nest Horse Program \u2013 $5,000 For the Reining Hope summer program, a no-cost equine access and education program for children ages 5 to 14 who live in Colfax County.",
           "Contact 8 Calle Medico Santa Fe, NM 87505 505.820.6860 info@newmexicofoundation.org Facebook-f Linkedin-in Instagram Resources Grants and Scholarships Give Fiscal Sponsorships About Us Advisors Login \u00a9 Copyright 2026.",
-          "NMCF Sub-Menu Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern\u00ae NM True Aldo Leopold Charter School Anchorum Master\u2019s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Fiscal Sponsorship Fiscal Sponsorship About Us About Us History Staff &"
+          "NMCF Sub-Menu Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern\u00ae NM True Aldo Leopold Charter School Anchorum Master\u2019s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Fiscal Sponsorship Fiscal Sponsorship Sponsored Organizations About Us A"
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "98196fc3a2c429a4372412d3d3da274998add079e0e34662cb890588806a654b"
     },
     {
       "source": {
@@ -1156,14 +1155,14 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.health.solutions/requests/",
-        "elapsed_ms": 2015,
-        "content_hash": "c8f93b937151e5a4dddf8c48018e3d22083490cd9c8b5ba1c31ec2d87f2ccf85",
-        "text_length": 6468,
+        "elapsed_ms": 335,
+        "content_hash": "a962cb56f83577878c52dc2ac14ae1b7b51ed965abfae8f968c9793519fde4f3",
+        "text_length": 6380,
         "signal_snippets": [],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "c8f93b937151e5a4dddf8c48018e3d22083490cd9c8b5ba1c31ec2d87f2ccf85"
     },
     {
       "source": {
@@ -1189,7 +1188,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.sprhc.org/spanish-peaks-healthcare-foundation",
-        "elapsed_ms": 2071,
+        "elapsed_ms": 220,
         "content_hash": "d708e7161f86734f2cd8244b0c30ac0e463243eb25431f3d402f3da401260fbd",
         "text_length": 4187,
         "signal_snippets": [
@@ -1198,8 +1197,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "d708e7161f86734f2cd8244b0c30ac0e463243eb25431f3d402f3da401260fbd"
     },
     {
       "source": {
@@ -1227,7 +1226,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://newmexicohumanities.org/grants/",
-        "elapsed_ms": 1518,
+        "elapsed_ms": 1303,
         "content_hash": "3a587015c8280e22ebfef80b7a4e4de7009a764a634fd98c931d07fcbdfe170b",
         "text_length": 4990,
         "signal_snippets": [
@@ -1235,8 +1234,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "3a587015c8280e22ebfef80b7a4e4de7009a764a634fd98c931d07fcbdfe170b"
     }
   ]
 }

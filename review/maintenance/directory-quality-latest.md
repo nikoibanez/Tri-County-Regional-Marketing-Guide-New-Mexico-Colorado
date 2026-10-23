@@ -1,6 +1,6 @@
 # Directory Quality Report
 
-Generated: 2026-10-11
+Generated: 2026-10-22
 
 Status: **PASS**
 
@@ -16,17 +16,17 @@ Status: **PASS**
 
 ## Canonical Resource Rows
 
-- Rows: 1498
+- Rows: 1507
 - Explicitly excluded organization rows: 0
 - Exact name/place duplicate groups: 0
 - Without website or source URL: 173
-- Without phone: 1294
-- Without email: 1461
-- Without address: 1025
+- Without phone: 1300
+- Without email: 1468
+- Without address: 1031
 
 ## Published Network Directory
 
-- Entries: 1362
+- Entries: 1371
 - Explicitly excluded organization rows: 0
 - Exact name/place duplicate groups: 0
 - Generalized ideas presented as listings: 0

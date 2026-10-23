@@ -1,56 +1,56 @@
 # Directory Outreach Channel Review
 
-Generated: 2026-10-11T06:20:56.557862+00:00
+Generated: 2026-10-22T19:05:14.650977+00:00
 
 This report reviews every published directory listing for practical physical and digital outreach routes. A listed route means the attached listing information identifies that kind of channel. Ask first means the entity may be a sensible contact, but placement, sharing, price, eligibility, and acceptance are not promised.
 
 ## Summary
 
-- Published listings reviewed: 1362
-- Directory shortcuts reviewed: 117
-- Total directory records reviewed: 1479
-- Listings with at least one outreach route: 742
-- Listings with at least one listed route: 307
-- Listings with at least one ask-first route: 703
-- Listings without an identified outreach route: 620
+- Published listings reviewed: 1371
+- Directory shortcuts reviewed: 120
+- Total directory records reviewed: 1491
+- Listings with at least one outreach route: 748
+- Listings with at least one listed route: 308
+- Listings with at least one ask-first route: 708
+- Listings without an identified outreach route: 623
 - Listings missing structured outreach fields: 0
-- Directory shortcuts with a listed or ask-first route: 65
-- Directory shortcuts without an identified route: 52
+- Directory shortcuts with a listed or ask-first route: 67
+- Directory shortcuts without an identified route: 53
 - Directory shortcuts missing structured outreach fields: 0
 
 ## Channel Coverage
 
 | Channel | Listed route | Ask first | Not indicated |
 | --- | ---: | ---: | ---: |
-| Flyers and posters | 0 | 335 | 1027 |
-| Brochures and rack cards | 0 | 103 | 1259 |
-| Bulletin boards | 0 | 24 | 1338 |
-| Front-desk referrals | 0 | 282 | 1080 |
-| Directory profiles and listings | 305 | 13 | 1044 |
-| Event calendars | 1 | 117 | 1244 |
-| Social cross-promotion | 0 | 38 | 1324 |
-| Newsletters and mailing lists | 0 | 183 | 1179 |
-| Paid digital advertising | 1 | 59 | 1302 |
-| Media and editorial coverage | 2 | 59 | 1301 |
-| Sponsorships | 0 | 209 | 1153 |
-| Partner cross-promotion | 0 | 396 | 966 |
+| Flyers and posters | 0 | 337 | 1034 |
+| Brochures and rack cards | 0 | 106 | 1265 |
+| Bulletin boards | 0 | 25 | 1346 |
+| Front-desk referrals | 0 | 285 | 1086 |
+| Directory profiles and listings | 306 | 16 | 1049 |
+| Event calendars | 1 | 120 | 1250 |
+| Social cross-promotion | 0 | 39 | 1332 |
+| Newsletters and mailing lists | 0 | 187 | 1184 |
+| Paid digital advertising | 1 | 59 | 1311 |
+| Media and editorial coverage | 2 | 59 | 1310 |
+| Sponsorships | 0 | 212 | 1159 |
+| Partner cross-promotion | 0 | 401 | 970 |
 
 ## Directory Shortcut Coverage
 
 | Channel | Listed route | Ask first | Not indicated |
 | --- | ---: | ---: | ---: |
-| Flyers and posters | 0 | 0 | 117 |
-| Brochures and rack cards | 0 | 0 | 117 |
-| Bulletin boards | 0 | 0 | 117 |
-| Front-desk referrals | 0 | 0 | 117 |
-| Directory profiles and listings | 14 | 10 | 93 |
-| Event calendars | 14 | 15 | 88 |
-| Social cross-promotion | 1 | 0 | 116 |
-| Newsletters and mailing lists | 0 | 35 | 82 |
-| Paid digital advertising | 1 | 4 | 112 |
-| Media and editorial coverage | 2 | 4 | 111 |
-| Sponsorships | 0 | 24 | 93 |
-| Partner cross-promotion | 0 | 52 | 65 |
+| Flyers and posters | 0 | 0 | 120 |
+| Brochures and rack cards | 0 | 0 | 120 |
+| Bulletin boards | 0 | 0 | 120 |
+| Front-desk referrals | 0 | 0 | 120 |
+| Directory profiles and listings | 16 | 10 | 94 |
+| Event calendars | 14 | 16 | 90 |
+| Social cross-promotion | 1 | 0 | 119 |
+| Newsletters and mailing lists | 0 | 37 | 83 |
+| Paid digital advertising | 1 | 4 | 115 |
+| Media and editorial coverage | 2 | 4 | 114 |
+| Sponsorships | 0 | 25 | 95 |
+| Partner cross-promotion | 0 | 54 | 66 |
 
 ## Listings Without An Identified Route
 
@@ -674,6 +674,9 @@ This report reviews every published directory listing for practical physical and
 - Small-business loans, loan guarantees, and credit support - Regional, Regional, NM / CO; Funding & support
 - Tourism, arts, event, and creative-economy grants - Regional, Regional, NM / CO; Arts & culture
 - Workforce and job-training incentives - Regional, Regional, NM / CO; Business support
+- Canyons & Plains Las Animas County Guide - Las Animas, CO; Tourism & visitor info
+- SoapBox - Walsenburg, Huerfano, CO; Retail & local goods
+- O'BeDazzle Boutique - Walsenburg, Huerfano, CO; Retail & local goods
 
 ## Review Boundary
 
