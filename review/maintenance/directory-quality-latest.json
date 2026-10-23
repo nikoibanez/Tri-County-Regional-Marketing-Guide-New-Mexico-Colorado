@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11",
+  "generated_at": "2026-10-22",
   "status": "pass",
   "blocking": [],
   "warnings": [
@@ -9,14 +9,14 @@
   ],
   "canonical_source": {
     "path": "C:\\Temp\\tri-county-raton-animation-palettes\\data\\tri_county_persona_resources.csv",
-    "rows": 1498,
+    "rows": 1507,
     "excluded_organization_rows": 0,
     "blank_names": 0,
     "exact_name_place_duplicate_groups": 0,
     "without_website_or_source": 173,
-    "without_phone": 1294,
-    "without_email": 1461,
-    "without_address": 1025,
+    "without_phone": 1300,
+    "without_email": 1468,
+    "without_address": 1031,
     "contact_enrichment_sample": [
       "111 Park Espresso Bar / Enchanted Grounds Espresso Bar",
       "A Taylor Made Haircut",
@@ -42,7 +42,7 @@
   },
   "published_directory": {
     "path": "C:\\Temp\\tri-county-raton-animation-palettes\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
-    "rows": 1362,
+    "rows": 1371,
     "excluded_organization_rows": 0,
     "blank_names": 0,
     "exact_name_place_duplicate_groups": 0,

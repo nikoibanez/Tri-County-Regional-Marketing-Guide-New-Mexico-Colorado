@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11",
+  "generated_at": "2026-10-22",
   "config": "data\\directory-watch-sources.json",
   "directory_files": [
     "data\\directory_of_absolutely_everything.csv",
@@ -7,14 +7,14 @@
   ],
   "review_policy": "Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.",
   "summary": {
-    "sources": 15,
-    "pages_checked": 32,
+    "sources": 20,
+    "pages_checked": 38,
     "pages_failed": 2,
-    "candidates": 325,
-    "already_in_guide": 288,
-    "possible_new_leads": 37,
-    "priority_new_leads": 1,
-    "low_confidence_new_leads": 36
+    "candidates": 367,
+    "already_in_guide": 282,
+    "possible_new_leads": 85,
+    "priority_new_leads": 15,
+    "low_confidence_new_leads": 70
   },
   "results": [
     {
@@ -33,7 +33,7 @@
             "status_code": 403,
             "final_url": "https://www.raton.info/business_directory.html",
             "content_type": "",
-            "elapsed_ms": 503,
+            "elapsed_ms": 224,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -45,7 +45,7 @@
             "status_code": 403,
             "final_url": "https://www.raton.info/business-directory.html",
             "content_type": "",
-            "elapsed_ms": 227,
+            "elapsed_ms": 266,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -68,7 +68,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/local-businesses/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1100,
+            "elapsed_ms": 949,
             "error": ""
           },
           "candidates": []
@@ -91,7 +91,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/business/category/restaurants/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 504,
+            "elapsed_ms": 574,
             "error": ""
           },
           "candidates": []
@@ -103,7 +103,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/business/tags/catering/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 602,
+            "elapsed_ms": 598,
             "error": ""
           },
           "candidates": []
@@ -115,7 +115,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/business/category/catering/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 503,
+            "elapsed_ms": 938,
             "error": ""
           },
           "candidates": []
@@ -138,7 +138,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/visitor/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 559,
+            "elapsed_ms": 1079,
             "error": ""
           },
           "candidates": []
@@ -150,7 +150,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/annual-calendar-of-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 636,
+            "elapsed_ms": 588,
             "error": ""
           },
           "candidates": []
@@ -162,7 +162,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 635,
+            "elapsed_ms": 1850,
             "error": ""
           },
           "candidates": []
@@ -185,7 +185,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1834,
+            "elapsed_ms": 804,
             "error": ""
           },
           "candidates": []
@@ -197,7 +197,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/events",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 820,
+            "elapsed_ms": 625,
             "error": ""
           },
           "candidates": []
@@ -209,7 +209,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/blog",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 594,
+            "elapsed_ms": 566,
             "error": ""
           },
           "candidates": []
@@ -232,7 +232,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/dine/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2406,
+            "elapsed_ms": 552,
             "error": ""
           },
           "candidates": [
@@ -251,7 +251,7 @@
               "priority_candidate": false,
               "match_status": "already_in_guide",
               "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -268,8 +268,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Bella Luna Pizzeria",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -286,8 +286,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Bob & Earl's",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -304,8 +304,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Boom Noodles (Food Court at the Marketplace)",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -322,8 +322,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Brick Road Bakery",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -340,26 +340,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "family-seed-ii-d300756fa7",
-              "name": "Family Seed II",
-              "source_id": "las-animas-visit-trinidad-business-visitor-pages",
-              "source_title": "Visit Trinidad Business and Visitor Listings",
-              "county": "Las Animas",
-              "state": "CO",
-              "source_type": "Tourism business and visitor directory",
-              "source_page": "https://visittrinidadcolorado.com/dine/",
-              "listing_url": "https://visittrinidadcolorado.com/dine/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "El Rancho Mexican Restaurant",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -376,8 +358,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Flatt's Burgers & Shakes (Food Court at the Marketplace)",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -394,8 +376,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Gagliardi's 489 (At the Hilton Garden Inn)",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -412,8 +394,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Gluten Free in the 303",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -430,8 +412,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Grampa Charlie's",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -448,8 +430,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Great Wall",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -466,8 +448,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Grill 14 (Food Court at the Marketplace)",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -484,8 +466,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Hollywood Bar & Cafe",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -502,8 +484,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "I Love Sugar Sweets & Eats",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -520,8 +502,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Kangaroo Coffee (Food Court at the Marketplace)",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -538,8 +520,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Las Animas Grill",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -556,8 +538,26 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "matched_name": "Lee's BBQ",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "little-rox-s-ice-cream-shop-f3a870bb21",
+              "name": "Little Rox's Ice Cream Shop",
+              "source_id": "las-animas-visit-trinidad-business-visitor-pages",
+              "source_title": "Visit Trinidad Business and Visitor Listings",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Tourism business and visitor directory",
+              "source_page": "https://visittrinidadcolorado.com/dine/",
+              "listing_url": "https://visittrinidadcolorado.com/dine/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "Little Rox's Ice Cream Shop",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -573,9 +573,9 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -591,9 +591,9 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "AlMack's Kitchen",
-              "match_type": "exact_url",
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             }
           ]
@@ -605,7 +605,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/stay/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1775,
+            "elapsed_ms": 551,
             "error": ""
           },
           "candidates": [
@@ -624,7 +624,7 @@
               "priority_candidate": false,
               "match_status": "already_in_guide",
               "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -641,8 +641,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Cawthon RV Park & Motel",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -659,8 +659,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Days Inn & Suites by Wyndham",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -677,8 +677,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Hilton Garden Inn",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -695,8 +695,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Holiday Inn Express and Suites",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -713,8 +713,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "La Quinta Inn & Suites",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -731,8 +731,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Monument Lake Resort",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -749,26 +749,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "show-filters-679679f881",
-              "name": "Show Filters",
-              "source_id": "las-animas-visit-trinidad-business-visitor-pages",
-              "source_title": "Visit Trinidad Business and Visitor Listings",
-              "county": "Las Animas",
-              "state": "CO",
-              "source_type": "Tourism business and visitor directory",
-              "source_page": "https://visittrinidadcolorado.com/stay/",
-              "listing_url": "https://visittrinidadcolorado.com/stay/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Quality Inn",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -785,8 +767,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Summit RV Park",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -803,8 +785,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Tarabino Inn",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -821,8 +803,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "The Well Hotel & Taproom",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -839,8 +821,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Tower 64 Motel & RV Park",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -857,8 +839,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Trails End Motel",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -875,8 +857,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Travelodge by Wyndham",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -893,8 +875,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Trinidad Lake State Park",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -911,8 +893,26 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "matched_name": "Trinidad Super 8",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "show-filters-679679f881",
+              "name": "Show Filters",
+              "source_id": "las-animas-visit-trinidad-business-visitor-pages",
+              "source_title": "Visit Trinidad Business and Visitor Listings",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Tourism business and visitor directory",
+              "source_page": "https://visittrinidadcolorado.com/stay/",
+              "listing_url": "https://visittrinidadcolorado.com/stay/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -928,9 +928,9 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Budget Host & Summit RV Park",
-              "match_type": "exact_url",
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             }
           ]
@@ -942,7 +942,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/shop/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 551,
+            "elapsed_ms": 513,
             "error": ""
           },
           "candidates": [
@@ -961,7 +961,7 @@
               "priority_candidate": false,
               "match_status": "already_in_guide",
               "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -978,26 +978,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "books-more-2f607b38ff",
-              "name": "Books & More",
-              "source_id": "las-animas-visit-trinidad-business-visitor-pages",
-              "source_title": "Visit Trinidad Business and Visitor Listings",
-              "county": "Las Animas",
-              "state": "CO",
-              "source_type": "Tourism business and visitor directory",
-              "source_page": "https://visittrinidadcolorado.com/shop/",
-              "listing_url": "https://visittrinidadcolorado.com/shop/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Big R",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1014,8 +996,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Brick City Tattoo",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1032,8 +1014,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Brick Road Bakery",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1050,8 +1032,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Coin Dancer Antiques",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1068,8 +1050,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Compton Ridge Clothiers",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1086,8 +1068,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Corazon Gallery",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1104,8 +1086,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Curly's Beads and Gift Shop",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1122,8 +1104,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Doug and Lori Art",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1140,8 +1122,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Fishers Peak Outfitters",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1158,8 +1140,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Francesca\u2019s",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1176,8 +1158,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Frank Images",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1194,8 +1176,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Hometown Pharmacy and Medical",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1212,8 +1194,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Hops & Vines",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1230,8 +1212,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "I Love Sugar",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1248,8 +1230,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "Jupiter\u2019s Child",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1266,8 +1248,26 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "matched_name": "KCRT Radio Station",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "books-more-2f607b38ff",
+              "name": "Books & More",
+              "source_id": "las-animas-visit-trinidad-business-visitor-pages",
+              "source_title": "Visit Trinidad Business and Visitor Listings",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Tourism business and visitor directory",
+              "source_page": "https://visittrinidadcolorado.com/shop/",
+              "listing_url": "https://visittrinidadcolorado.com/shop/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1283,9 +1283,9 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1301,9 +1301,9 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "AR Mitchell Museum of Western Art",
-              "match_type": "exact_url",
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             }
           ]
@@ -1315,7 +1315,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 459,
+            "elapsed_ms": 456,
             "error": ""
           },
           "candidates": [
@@ -1333,8 +1333,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Visit Trinidad Resources for Locals",
-              "match_type": "exact_url",
+              "matched_name": "City of Trinidad",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1350,9 +1350,9 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Visit Trinidad Resources for Locals",
-              "match_type": "exact_url",
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1368,9 +1368,9 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Visit Trinidad Resources for Locals",
-              "match_type": "exact_url",
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1386,9 +1386,9 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Visit Trinidad Resources for Locals",
-              "match_type": "exact_url",
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             }
           ]
@@ -1411,7 +1411,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/upcoming-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1706,
+            "elapsed_ms": 1847,
             "error": ""
           },
           "candidates": [
@@ -1442,7 +1442,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1936,
+            "elapsed_ms": 524,
             "error": ""
           },
           "candidates": [
@@ -1459,9 +1459,9 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Visit Trinidad Submit Your Event",
-              "match_type": "exact_url",
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1477,9 +1477,9 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Visit Trinidad Submit Your Event",
-              "match_type": "exact_url",
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -1495,9 +1495,9 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Visit Trinidad Submit Your Event",
-              "match_type": "exact_url",
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             }
           ]
@@ -1520,7 +1520,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/meetings-conventions/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 416,
+            "elapsed_ms": 487,
             "error": ""
           },
           "candidates": [
@@ -1551,7 +1551,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/weddings/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1610,
+            "elapsed_ms": 545,
             "error": ""
           },
           "candidates": [
@@ -1593,7 +1593,7 @@
             "status_code": 200,
             "final_url": "https://localstash.com/colorado/towns/trinidad-co",
             "content_type": "text/html; charset=utf-8",
-            "elapsed_ms": 1395,
+            "elapsed_ms": 1163,
             "error": ""
           },
           "candidates": [
@@ -1612,6 +1612,24 @@
               "priority_candidate": false,
               "match_status": "already_in_guide",
               "matched_name": "Colorado Welcome Center at Trinidad",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "mt-san-rafael-hospital-f073ab285c",
+              "name": "Mt. San Rafael Hospital",
+              "source_id": "las-animas-localstash-trinidad",
+              "source_title": "LocalStash Trinidad",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Digital local guide and business/event listings",
+              "source_page": "https://localstash.com/colorado/towns/trinidad-co",
+              "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "Mt. San Rafael Hospital",
               "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
@@ -1742,8 +1760,8 @@
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
-              "id": "mt-san-rafael-hospital-emergency-department-4486236595",
-              "name": "Mt. San Rafael Hospital Emergency Department",
+              "id": "kcrt-am-fm-radio-9429a12f3b",
+              "name": "KCRT AM-FM Radio",
               "source_id": "las-animas-localstash-trinidad",
               "source_title": "LocalStash Trinidad",
               "county": "Las Animas",
@@ -1812,6 +1830,24 @@
               "matched_name": "",
               "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "world-journal-trinidad-branch-40083c90a6",
+              "name": "World Journal - Trinidad Branch",
+              "source_id": "las-animas-localstash-trinidad",
+              "source_title": "LocalStash Trinidad",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Digital local guide and business/event listings",
+              "source_page": "https://localstash.com/colorado/towns/trinidad-co",
+              "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
             }
           ]
         },
@@ -1821,8 +1857,8 @@
             "ok": true,
             "status_code": 200,
             "final_url": "https://weekender.pub/",
-            "content_type": "text/html; charset=utf-8",
-            "elapsed_ms": 1546,
+            "content_type": "text/html; charset=UTF-8",
+            "elapsed_ms": 374,
             "error": ""
           },
           "candidates": []
@@ -1845,7 +1881,7 @@
             "status_code": 200,
             "final_url": "https://southerncoloradotourism.com/events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 11737,
+            "elapsed_ms": 10903,
             "error": ""
           },
           "candidates": [
@@ -2092,7 +2128,7 @@
             "status_code": 200,
             "final_url": "https://southerncoloradotourism.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 8864,
+            "elapsed_ms": 2287,
             "error": ""
           },
           "candidates": []
@@ -2115,7 +2151,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 845,
+            "elapsed_ms": 682,
             "error": ""
           },
           "candidates": [
@@ -4029,7 +4065,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory/categories/dining",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 461,
+            "elapsed_ms": 472,
             "error": ""
           },
           "candidates": [
@@ -4582,7 +4618,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory/categories/lodging",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 448,
+            "elapsed_ms": 464,
             "error": ""
           },
           "candidates": [
@@ -4991,7 +5027,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1295,
+            "elapsed_ms": 592,
             "error": ""
           },
           "candidates": []
@@ -5014,7 +5050,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/spc-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 437,
+            "elapsed_ms": 433,
             "error": ""
           },
           "candidates": [
@@ -5055,6 +5091,24 @@
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
+              "id": "museum-of-friends-42ed5bc304",
+              "name": "Museum of Friends",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "Museum of Friends",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
               "id": "the-stokehouse-d422b2b0b8",
               "name": "The Stokehouse",
               "source_id": "huerfano-spanish-peaks-events",
@@ -5070,24 +5124,6 @@
               "match_status": "already_in_guide",
               "matched_name": "The Stokehouse",
               "match_type": "exact_normalized",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "caleb-wilbourn-texas-artist-live-at-the-stokehouse-34aa74f7ac",
-              "name": "Caleb Wilbourn Texas Artist Live at the Stokehouse!",
-              "source_id": "huerfano-spanish-peaks-events",
-              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Tourism event calendar and submission source",
-              "source_page": "https://spanishpeakscountry.com/spc-events/",
-              "listing_url": "https://spanishpeakscountry.com/spc-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5181,8 +5217,44 @@
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
+              "id": "halloweentown-movie-night-at-fiesta-park-9321b9d827",
+              "name": "Halloweentown Movie Night at Fiesta Park",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
               "id": "heritage-park-5223d13b15",
               "name": "Heritage Park",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "kellen-goode-live-at-the-stokehouse-fa6031dafe",
+              "name": "Kellen Goode Live at the Stokehouse!",
               "source_id": "huerfano-spanish-peaks-events",
               "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
               "county": "Huerfano",
@@ -5219,6 +5291,42 @@
             {
               "id": "la-veta-library-77e0cb126c",
               "name": "La Veta Library",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "museum-of-friends-fifth-biennial-gala-99b0285632",
+              "name": "Museum of Friends Fifth Biennial Gala",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "music-by-midi-live-b62d40990d",
+              "name": "MUSIC BY MIDI LIVE!!!!",
               "source_id": "huerfano-spanish-peaks-events",
               "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
               "county": "Huerfano",
@@ -5279,7 +5387,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2705,
+            "elapsed_ms": 489,
             "error": ""
           },
           "candidates": [
@@ -5297,8 +5405,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Spanish Peaks Country Submit Event",
-              "match_type": "exact_url",
+              "matched_name": "Cuchara Mountain Mercantile",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5315,8 +5423,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Spanish Peaks Country Submit Event",
-              "match_type": "exact_url",
+              "matched_name": "Cuchara Mountain Park",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             }
           ]
@@ -5339,28 +5447,10 @@
             "status_code": 200,
             "final_url": "https://townoflaveta-co.gov/business-directory/",
             "content_type": "text/html",
-            "elapsed_ms": 764,
+            "elapsed_ms": 458,
             "error": ""
           },
           "candidates": [
-            {
-              "id": "123-s-f388629b1a",
-              "name": "123\u2019s",
-              "source_id": "huerfano-la-veta-business-directory",
-              "source_title": "Town of La Veta Business Directory",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Municipal business directory",
-              "source_page": "https://townoflaveta-co.gov/business-directory/",
-              "listing_url": "https://townoflaveta-co.gov/business-directory/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
             {
               "id": "a-taylor-made-haircut-b4fcf8ff32",
               "name": "A Taylor Made Haircut",
@@ -5375,8 +5465,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "A Taylor Made Haircut",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5393,8 +5483,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Alys' Restaurant",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5411,8 +5501,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Artisans on Main",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5429,8 +5519,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Bachman & Associates Real Estate",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5447,8 +5537,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Big R",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5465,8 +5555,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Book Nook",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5483,8 +5573,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Capture Colorado",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5501,8 +5591,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Casa de Pajaros",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5519,8 +5609,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Charlie's Market",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5537,26 +5627,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "contact-information-a98ca8f898",
-              "name": "Contact Information",
-              "source_id": "huerfano-la-veta-business-directory",
-              "source_title": "Town of La Veta Business Directory",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Municipal business directory",
-              "source_page": "https://townoflaveta-co.gov/business-directory/",
-              "listing_url": "https://townoflaveta-co.gov/business-directory/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Code of the West Real Estate",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5573,8 +5645,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Corner Cottage Skin Care",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5591,8 +5663,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Crafted in Colorado",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5609,62 +5681,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "danae-s-diner-c0828b604a",
-              "name": "Danae's Diner",
-              "source_id": "huerfano-la-veta-business-directory",
-              "source_title": "Town of La Veta Business Directory",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Municipal business directory",
-              "source_page": "https://townoflaveta-co.gov/business-directory/",
-              "listing_url": "https://townoflaveta-co.gov/business-directory/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "forms-permits-58dbd8e2d4",
-              "name": "Forms & Permits",
-              "source_id": "huerfano-la-veta-business-directory",
-              "source_title": "Town of La Veta Business Directory",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Municipal business directory",
-              "source_page": "https://townoflaveta-co.gov/business-directory/",
-              "listing_url": "https://townoflaveta-co.gov/business-directory/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "frequently-asked-questions-759d3c2d6f",
-              "name": "Frequently Asked Questions",
-              "source_id": "huerfano-la-veta-business-directory",
-              "source_title": "Town of La Veta Business Directory",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Municipal business directory",
-              "source_page": "https://townoflaveta-co.gov/business-directory/",
-              "listing_url": "https://townoflaveta-co.gov/business-directory/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Cuchara Valley Mini Storage",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5681,8 +5699,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Go Ask Alys Catering",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5699,8 +5717,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "H Unlimited",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5717,8 +5735,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Just in Time Bakery",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5735,8 +5753,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Kathy Hills Studio Gallery / Spanish Peaks Art",
+              "match_type": "exact_compact",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5753,26 +5771,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "la-veta-flower-company-e811ec5434",
-              "name": "La Veta Flower Company",
-              "source_id": "huerfano-la-veta-business-directory",
-              "source_title": "Town of La Veta Business Directory",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Municipal business directory",
-              "source_page": "https://townoflaveta-co.gov/business-directory/",
-              "listing_url": "https://townoflaveta-co.gov/business-directory/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "La Veta Country Store",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5789,8 +5789,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "La Veta Inn",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5807,8 +5807,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "La Veta Liquors",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5825,8 +5825,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "La Veta Mercantile",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5843,8 +5843,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "La Veta Oil Company",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5861,8 +5861,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "La Veta Physical Therapy",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5879,8 +5879,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "La Veta Pines RV Park",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5897,8 +5897,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "La Veta Propane",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5915,8 +5915,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "La Veta Schools of the Arts",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5933,8 +5933,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "La Veta Yoga Studio",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5951,8 +5951,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Legends on Main",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -5969,26 +5969,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "marshal-harold-willburn-599ee6ab65",
-              "name": "Marshal \u2014 Harold Willburn",
-              "source_id": "huerfano-la-veta-business-directory",
-              "source_title": "Town of La Veta Business Directory",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Municipal business directory",
-              "source_page": "https://townoflaveta-co.gov/business-directory/",
-              "listing_url": "https://townoflaveta-co.gov/business-directory/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Lou's Diner",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6005,26 +5987,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "mountain-time-physical-therapy-4f0c992e5c",
-              "name": "Mountain Time Physical Therapy",
-              "source_id": "huerfano-la-veta-business-directory",
-              "source_title": "Town of La Veta Business Directory",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Municipal business directory",
-              "source_page": "https://townoflaveta-co.gov/business-directory/",
-              "listing_url": "https://townoflaveta-co.gov/business-directory/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Mountain Merman Brewing Company",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6041,26 +6005,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "office-hours-6ed048fd52",
-              "name": "Office Hours",
-              "source_id": "huerfano-la-veta-business-directory",
-              "source_title": "Town of La Veta Business Directory",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Municipal business directory",
-              "source_page": "https://townoflaveta-co.gov/business-directory/",
-              "listing_url": "https://townoflaveta-co.gov/business-directory/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Mountain Time Pilates",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6077,8 +6023,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Parmelee's",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6095,8 +6041,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Peakview Self-Storage",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6113,8 +6059,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Petrichor IV Hydration",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6131,8 +6077,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Ranch House Inn",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6149,8 +6095,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Roger Batchelor, DAOM Acupuncture",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6167,26 +6113,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "shalawalla-937c2714c1",
-              "name": "Shalawalla",
-              "source_id": "huerfano-la-veta-business-directory",
-              "source_title": "Town of La Veta Business Directory",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Municipal business directory",
-              "source_page": "https://townoflaveta-co.gov/business-directory/",
-              "listing_url": "https://townoflaveta-co.gov/business-directory/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Sammie's RV Park",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6203,8 +6131,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Silvershoe",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6221,8 +6149,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Spanish Peaks Arts Council / SPACe Gallery",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6239,8 +6167,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "The Salon LTD",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6257,8 +6185,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Trailhead General Store / Sinclair",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6275,8 +6203,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Tutu's Washateria",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6293,8 +6221,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Two Fox Cabins & RVs",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6311,8 +6239,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Two Mountain Treasures",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6329,8 +6257,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Two Peaks Fitness",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6347,8 +6275,8 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "We RV Champions of La Veta",
+              "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6365,8 +6293,188 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Town of La Veta Business Directory",
-              "match_type": "exact_url",
+              "matched_name": "Whispering Oaks",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "123-s-f388629b1a",
+              "name": "123\u2019s",
+              "source_id": "huerfano-la-veta-business-directory",
+              "source_title": "Town of La Veta Business Directory",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Municipal business directory",
+              "source_page": "https://townoflaveta-co.gov/business-directory/",
+              "listing_url": "https://townoflaveta-co.gov/business-directory/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "contact-information-a98ca8f898",
+              "name": "Contact Information",
+              "source_id": "huerfano-la-veta-business-directory",
+              "source_title": "Town of La Veta Business Directory",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Municipal business directory",
+              "source_page": "https://townoflaveta-co.gov/business-directory/",
+              "listing_url": "https://townoflaveta-co.gov/business-directory/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "danae-s-diner-c0828b604a",
+              "name": "Danae's Diner",
+              "source_id": "huerfano-la-veta-business-directory",
+              "source_title": "Town of La Veta Business Directory",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Municipal business directory",
+              "source_page": "https://townoflaveta-co.gov/business-directory/",
+              "listing_url": "https://townoflaveta-co.gov/business-directory/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "forms-permits-58dbd8e2d4",
+              "name": "Forms & Permits",
+              "source_id": "huerfano-la-veta-business-directory",
+              "source_title": "Town of La Veta Business Directory",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Municipal business directory",
+              "source_page": "https://townoflaveta-co.gov/business-directory/",
+              "listing_url": "https://townoflaveta-co.gov/business-directory/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "frequently-asked-questions-759d3c2d6f",
+              "name": "Frequently Asked Questions",
+              "source_id": "huerfano-la-veta-business-directory",
+              "source_title": "Town of La Veta Business Directory",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Municipal business directory",
+              "source_page": "https://townoflaveta-co.gov/business-directory/",
+              "listing_url": "https://townoflaveta-co.gov/business-directory/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "la-veta-flower-company-e811ec5434",
+              "name": "La Veta Flower Company",
+              "source_id": "huerfano-la-veta-business-directory",
+              "source_title": "Town of La Veta Business Directory",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Municipal business directory",
+              "source_page": "https://townoflaveta-co.gov/business-directory/",
+              "listing_url": "https://townoflaveta-co.gov/business-directory/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "marshal-harold-willburn-599ee6ab65",
+              "name": "Marshal \u2014 Harold Willburn",
+              "source_id": "huerfano-la-veta-business-directory",
+              "source_title": "Town of La Veta Business Directory",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Municipal business directory",
+              "source_page": "https://townoflaveta-co.gov/business-directory/",
+              "listing_url": "https://townoflaveta-co.gov/business-directory/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "mountain-time-physical-therapy-4f0c992e5c",
+              "name": "Mountain Time Physical Therapy",
+              "source_id": "huerfano-la-veta-business-directory",
+              "source_title": "Town of La Veta Business Directory",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Municipal business directory",
+              "source_page": "https://townoflaveta-co.gov/business-directory/",
+              "listing_url": "https://townoflaveta-co.gov/business-directory/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "office-hours-6ed048fd52",
+              "name": "Office Hours",
+              "source_id": "huerfano-la-veta-business-directory",
+              "source_title": "Town of La Veta Business Directory",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Municipal business directory",
+              "source_page": "https://townoflaveta-co.gov/business-directory/",
+              "listing_url": "https://townoflaveta-co.gov/business-directory/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "shalawalla-937c2714c1",
+              "name": "Shalawalla",
+              "source_id": "huerfano-la-veta-business-directory",
+              "source_title": "Town of La Veta Business Directory",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Municipal business directory",
+              "source_page": "https://townoflaveta-co.gov/business-directory/",
+              "listing_url": "https://townoflaveta-co.gov/business-directory/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             }
           ]
@@ -6389,7 +6497,7 @@
             "status_code": 200,
             "final_url": "https://www.chamber.huerfano.org/membership-directory",
             "content_type": "text/html;charset=utf-8",
-            "elapsed_ms": 1810,
+            "elapsed_ms": 1288,
             "error": ""
           },
           "candidates": [
@@ -6406,9 +6514,9 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Bachman & associates",
-              "match_type": "exact_url",
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6424,9 +6532,788 @@
               "evidence_type": "text_listing_block",
               "confidence": "low",
               "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "storage-4618fd7480",
+              "name": "Storage",
+              "source_id": "huerfano-chamber-member-directory",
+              "source_title": "Huerfano County Chamber Directory",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Chamber member directory",
+              "source_page": "https://www.chamber.huerfano.org/membership-directory",
+              "listing_url": "https://www.chamber.huerfano.org/membership-directory",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colfax-red-river-chamber-member-spotlights",
+      "title": "Red River Chamber Member Spotlights",
+      "county": "Colfax",
+      "state": "NM",
+      "source_type": "Chamber business profiles",
+      "why_watch": "Current chamber profiles link to individual Red River businesses; review each town before importing because some members serve nearby areas.",
+      "source_role": "Red River businesses, lodging, food, wellness, and member contact paths",
+      "pages": [
+        {
+          "url": "https://redriverchamber.org/business-listing/",
+          "fetch": {
+            "ok": true,
+            "status_code": 200,
+            "final_url": "https://redriverchamber.org/business-listing/",
+            "content_type": "text/html; charset=UTF-8",
+            "elapsed_ms": 1403,
+            "error": ""
+          },
+          "candidates": [
+            {
+              "id": "bearly-awake-coffee-co-2fc444b3e8",
+              "name": "Bearly Awake Coffee Co.",
+              "source_id": "colfax-red-river-chamber-member-spotlights",
+              "source_title": "Red River Chamber Member Spotlights",
+              "county": "Colfax",
+              "state": "NM",
+              "source_type": "Chamber business profiles",
+              "source_page": "https://redriverchamber.org/business-listing/",
+              "listing_url": "https://redriverchamber.org/2026-member-spotlight-bearly-awake-coffee-co/",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
               "match_status": "already_in_guide",
-              "matched_name": "Bachman & associates",
+              "matched_name": "Bearly Awake Coffee Co.",
               "match_type": "exact_url",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "mountain-body-mind-6143a08c9e",
+              "name": "Mountain, Body, & Mind",
+              "source_id": "colfax-red-river-chamber-member-spotlights",
+              "source_title": "Red River Chamber Member Spotlights",
+              "county": "Colfax",
+              "state": "NM",
+              "source_type": "Chamber business profiles",
+              "source_page": "https://redriverchamber.org/business-listing/",
+              "listing_url": "https://redriverchamber.org/2026-member-spotlight-mountain-body-and-mind/",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "already_in_guide",
+              "matched_name": "Mountain Body & Mind",
+              "match_type": "exact_url",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "rio-colorado-cabins-6ae45a7a29",
+              "name": "Rio Colorado Cabins",
+              "source_id": "colfax-red-river-chamber-member-spotlights",
+              "source_title": "Red River Chamber Member Spotlights",
+              "county": "Colfax",
+              "state": "NM",
+              "source_type": "Chamber business profiles",
+              "source_page": "https://redriverchamber.org/business-listing/",
+              "listing_url": "https://redriverchamber.org/2026-member-spotlight-rio-colorado-cabins/",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "already_in_guide",
+              "matched_name": "Rio Colorado Cabins",
+              "match_type": "exact_url",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "apothecary-shoppe-of-tx-3a08548a87",
+              "name": "Apothecary Shoppe of TX",
+              "source_id": "colfax-red-river-chamber-member-spotlights",
+              "source_title": "Red River Chamber Member Spotlights",
+              "county": "Colfax",
+              "state": "NM",
+              "source_type": "Chamber business profiles",
+              "source_page": "https://redriverchamber.org/business-listing/",
+              "listing_url": "https://redriverchamber.org/2026-member-spotlight-apothecary-shoppe-of-tx/",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "questa-lumber-and-hardware-co-b643a66d1e",
+              "name": "Questa Lumber and Hardware Co.",
+              "source_id": "colfax-red-river-chamber-member-spotlights",
+              "source_title": "Red River Chamber Member Spotlights",
+              "county": "Colfax",
+              "state": "NM",
+              "source_type": "Chamber business profiles",
+              "source_page": "https://redriverchamber.org/business-listing/",
+              "listing_url": "https://redriverchamber.org/2026-member-spotlight-questa-lumber-hardware-co/",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "the-vault-83948705a1",
+              "name": "The Vault",
+              "source_id": "colfax-red-river-chamber-member-spotlights",
+              "source_title": "Red River Chamber Member Spotlights",
+              "county": "Colfax",
+              "state": "NM",
+              "source_type": "Chamber business profiles",
+              "source_page": "https://redriverchamber.org/business-listing/",
+              "listing_url": "https://redriverchamber.org/2026-member-spotlight-the-vault/",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "regional-el-raton-media-works-businesses",
+      "title": "El Raton Media Works Local Businesses",
+      "county": "Regional",
+      "state": "NM / CO",
+      "source_type": "Local business profiles",
+      "why_watch": "The directory includes nearby Colorado and Union County listings, so every candidate needs a town check before county assignment.",
+      "source_role": "Colfax-centered businesses, catering, shops, lodging, and film-production services",
+      "pages": [
+        {
+          "url": "https://www.elratonmediaworks.org/local-businesses",
+          "fetch": {
+            "ok": true,
+            "status_code": 200,
+            "final_url": "https://www.elratonmediaworks.org/local-businesses",
+            "content_type": "text/html;charset=utf-8",
+            "elapsed_ms": 882,
+            "error": ""
+          },
+          "candidates": [
+            {
+              "id": "gate-city-craft-bar-15868f2eee",
+              "name": "Gate City Craft Bar",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/gate-city-craft-bar",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "already_in_guide",
+              "matched_name": "Gate City Craft Bar",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "k-bob-s-steakhouse-feb4893591",
+              "name": "K-Bob\u2019s Steakhouse",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/kbobs-raton",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "already_in_guide",
+              "matched_name": "K-Bob's Steakhouse",
+              "match_type": "exact_compact",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "solano-s-boot-western-wear-1dc6e4f30b",
+              "name": "Solano's Boot & Western Wear",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/solanos-western-wear",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "already_in_guide",
+              "matched_name": "Solano's Boot & Western Wear",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "the-heirloom-shop-fa6ff3928c",
+              "name": "The Heirloom Shop",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/heirloom-shop",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "already_in_guide",
+              "matched_name": "The Heirloom Shop",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "zancana-bakery-243ec10b1e",
+              "name": "Zancana Bakery",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/zancana-bakery",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "already_in_guide",
+              "matched_name": "Zancana Bakery",
+              "match_type": "exact_url",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "111-park-espresso-bar-cafe-9b681e7585",
+              "name": "111 Park - Espresso Bar & Cafe",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/111-park",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "blue-sky-ranch-a411ad90c1",
+              "name": "Blue Sky Ranch",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/blue-sky-ranch",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "deadeye-inc-806335d4d6",
+              "name": "Deadeye Inc",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/dead-eye-inc",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "howard-johnson-d957e15a47",
+              "name": "Howard Johnson",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/howard-johnson-hotel",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "patchwork-phoenix-a8582af103",
+              "name": "Patchwork Phoenix",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/patchwork-phoenix-raton",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "raton-motor-pass-inn-a4ccdd25c9",
+              "name": "Raton Motor Pass Inn",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/well-hotel-taproom-meyn7",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "shuler-theater-b0e45b182d",
+              "name": "Shuler Theater",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/shuler-theater",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "the-heart-s-desire-bed-and-breakfast-d8065ea36d",
+              "name": "The Heart's Desire Bed and Breakfast",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/hearts-desire-bnb-raton",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "trinidad-tech-shop-9a3b925ee3",
+              "name": "Trinidad Tech Shop",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/trinidad-tech-shop",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "union-county-insurance-agency-llc-783d747d60",
+              "name": "Union County Insurance Agency, LLC",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/union-county-insurance-agency-llc",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "well-hotel-taproom-f4be76186e",
+              "name": "Well Hotel & Taproom",
+              "source_id": "regional-el-raton-media-works-businesses",
+              "source_title": "El Raton Media Works Local Businesses",
+              "county": "Regional",
+              "state": "NM / CO",
+              "source_type": "Local business profiles",
+              "source_page": "https://www.elratonmediaworks.org/local-businesses",
+              "listing_url": "https://www.elratonmediaworks.org/businesses/well-hotel-taproom",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "las-animas-canyons-plains-attractions",
+      "title": "Canyons & Plains Las Animas County Attractions",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_type": "Regional tourism attraction guide",
+      "why_watch": "County-specific attraction links provide direct destination or operator pages; check each linked page for current details.",
+      "source_role": "Museums, heritage sites, performance venues, and visitor destinations",
+      "pages": [
+        {
+          "url": "https://canyonsandplains.org/destination-item/las-animas-county/",
+          "fetch": {
+            "ok": true,
+            "status_code": 200,
+            "final_url": "https://canyonsandplains.org/destination-item/las-animas-county/",
+            "content_type": "text/html; charset=UTF-8",
+            "elapsed_ms": 1227,
+            "error": ""
+          },
+          "candidates": [
+            {
+              "id": "fishers-peak-state-park-8ef81b5e2d",
+              "name": "Fishers Peak State Park",
+              "source_id": "las-animas-canyons-plains-attractions",
+              "source_title": "Canyons & Plains Las Animas County Attractions",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism attraction guide",
+              "source_page": "https://canyonsandplains.org/destination-item/las-animas-county/",
+              "listing_url": "https://cpw.state.co.us/placestogo/parks/FishersPeak",
+              "evidence_type": "linked_text",
+              "confidence": "medium",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "Fishers Peak State Park",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "louden-henritze-archaeological-museum-b999035f1d",
+              "name": "Louden-Henritze Archaeological Museum",
+              "source_id": "las-animas-canyons-plains-attractions",
+              "source_title": "Canyons & Plains Las Animas County Attractions",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism attraction guide",
+              "source_page": "https://canyonsandplains.org/destination-item/las-animas-county/",
+              "listing_url": "https://trinidadstate.edu/archaeology-museum/index.html",
+              "evidence_type": "linked_text",
+              "confidence": "medium",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "Louden-Henritze Archaeology Museum",
+              "match_type": "exact_url",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "trinidad-history-museum-0028332410",
+              "name": "Trinidad History Museum",
+              "source_id": "las-animas-canyons-plains-attractions",
+              "source_title": "Canyons & Plains Las Animas County Attractions",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism attraction guide",
+              "source_page": "https://canyonsandplains.org/destination-item/las-animas-county/",
+              "listing_url": "https://www.historycolorado.org/trinidad-history-museum",
+              "evidence_type": "linked_text",
+              "confidence": "medium",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "Trinidad History Museum",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "trinidad-lake-state-park-050aeb0564",
+              "name": "Trinidad Lake State Park",
+              "source_id": "las-animas-canyons-plains-attractions",
+              "source_title": "Canyons & Plains Las Animas County Attractions",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism attraction guide",
+              "source_page": "https://canyonsandplains.org/destination-item/las-animas-county/",
+              "listing_url": "https://cpw.state.co.us/placestogo/parks/TrinidadLake",
+              "evidence_type": "linked_text",
+              "confidence": "medium",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "Trinidad Lake State Park",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "ludlow-massacre-history-site-075580a85c",
+              "name": "Ludlow Massacre History Site",
+              "source_id": "las-animas-canyons-plains-attractions",
+              "source_title": "Canyons & Plains Las Animas County Attractions",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism attraction guide",
+              "source_page": "https://canyonsandplains.org/destination-item/las-animas-county/",
+              "listing_url": "https://visittrinidadcolorado.com/ludlow-massacre",
+              "evidence_type": "linked_text",
+              "confidence": "medium",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "scenic-highway-of-legends-ead025b3e7",
+              "name": "Scenic Highway of Legends",
+              "source_id": "las-animas-canyons-plains-attractions",
+              "source_title": "Canyons & Plains Las Animas County Attractions",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism attraction guide",
+              "source_page": "https://canyonsandplains.org/destination-item/las-animas-county/",
+              "listing_url": "https://spanishpeakscountry.com/highway-of-legends-scenic-byway/",
+              "evidence_type": "linked_text",
+              "confidence": "medium",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "las-animas-trinidad-community-foundation-support",
+      "title": "Trinidad Community Foundation Support",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_type": "Community foundation program pages",
+      "why_watch": "The foundation describes fiscal sponsorship and local partnerships; program and organization names remain leads until individually checked.",
+      "source_role": "Fiscal sponsorship, community partnerships, and supported organizations",
+      "pages": [
+        {
+          "url": "https://www.trinidadcf.org/organizations.html",
+          "fetch": {
+            "ok": true,
+            "status_code": 200,
+            "final_url": "https://www.trinidadcf.org/organizations.html",
+            "content_type": "text/html; charset=UTF-8",
+            "elapsed_ms": 485,
+            "error": ""
+          },
+          "candidates": []
+        },
+        {
+          "url": "https://www.trinidadcf.org/education.html",
+          "fetch": {
+            "ok": true,
+            "status_code": 200,
+            "final_url": "https://www.trinidadcf.org/education.html",
+            "content_type": "text/html; charset=UTF-8",
+            "elapsed_ms": 284,
+            "error": ""
+          },
+          "candidates": []
+        }
+      ]
+    },
+    {
+      "id": "huerfano-wheelhouse-retailers",
+      "title": "Wheelhouse Incubator Retailers",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_type": "Business incubator retailer directory",
+      "why_watch": "The incubator publishes current retailer names and business-support routes; check each retailer's own page before publishing contacts.",
+      "source_role": "Walsenburg retailers, makers, business incubation, and workshops",
+      "pages": [
+        {
+          "url": "https://www.wheelhouseincubator.org/our-retailers",
+          "fetch": {
+            "ok": true,
+            "status_code": 200,
+            "final_url": "https://www.wheelhouseincubator.org/our-retailers",
+            "content_type": "text/html;charset=utf-8",
+            "elapsed_ms": 857,
+            "error": ""
+          },
+          "candidates": [
+            {
+              "id": "eve-s-crafts-creations-5868d5c8d7",
+              "name": "Eve\u2019s Crafts & Creations",
+              "source_id": "huerfano-wheelhouse-retailers",
+              "source_title": "Wheelhouse Incubator Retailers",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Business incubator retailer directory",
+              "source_page": "https://www.wheelhouseincubator.org/our-retailers",
+              "listing_url": "https://www.wheelhouseincubator.org/our-retailers",
+              "evidence_type": "listing_heading",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "Eves Crafts and Creations",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "o-bedazzle-boutique-e1568d48a1",
+              "name": "O\u2019BeDazzle Boutique",
+              "source_id": "huerfano-wheelhouse-retailers",
+              "source_title": "Wheelhouse Incubator Retailers",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Business incubator retailer directory",
+              "source_page": "https://www.wheelhouseincubator.org/our-retailers",
+              "listing_url": "https://www.wheelhouseincubator.org/our-retailers",
+              "evidence_type": "listing_heading",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "O'BeDazzle Boutique",
+              "match_type": "exact_compact",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "soapbox-5c677ef218",
+              "name": "SoapBox",
+              "source_id": "huerfano-wheelhouse-retailers",
+              "source_title": "Wheelhouse Incubator Retailers",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Business incubator retailer directory",
+              "source_page": "https://www.wheelhouseincubator.org/our-retailers",
+              "listing_url": "https://www.wheelhouseincubator.org/our-retailers",
+              "evidence_type": "listing_heading",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "SoapBox",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "sofia-s-sugar-shack-774f16669e",
+              "name": "Sofia\u2019s Sugar Shack",
+              "source_id": "huerfano-wheelhouse-retailers",
+              "source_title": "Wheelhouse Incubator Retailers",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Business incubator retailer directory",
+              "source_page": "https://www.wheelhouseincubator.org/our-retailers",
+              "listing_url": "https://www.wheelhouseincubator.org/our-retailers",
+              "evidence_type": "listing_heading",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "Sofia Sugar Shack",
+              "match_type": "near_match",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "whispering-paws-4539ace914",
+              "name": "Whispering Paws",
+              "source_id": "huerfano-wheelhouse-retailers",
+              "source_title": "Wheelhouse Incubator Retailers",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Business incubator retailer directory",
+              "source_page": "https://www.wheelhouseincubator.org/our-retailers",
+              "listing_url": "https://www.wheelhouseincubator.org/our-retailers",
+              "evidence_type": "listing_heading",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "already_in_guide",
+              "matched_name": "Whispering Paws",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "mountain-oasis-designs-7252e11b04",
+              "name": "Mountain Oasis Designs",
+              "source_id": "huerfano-wheelhouse-retailers",
+              "source_title": "Wheelhouse Incubator Retailers",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Business incubator retailer directory",
+              "source_page": "https://www.wheelhouseincubator.org/our-retailers",
+              "listing_url": "https://www.wheelhouseincubator.org/our-retailers",
+              "evidence_type": "listing_heading",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "off-grid-hub-s-kampot-kitchen-pepper-495f400f46",
+              "name": "Off-Grid Hub\u2019s Kampot Kitchen Pepper",
+              "source_id": "huerfano-wheelhouse-retailers",
+              "source_title": "Wheelhouse Incubator Retailers",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Business incubator retailer directory",
+              "source_page": "https://www.wheelhouseincubator.org/our-retailers",
+              "listing_url": "https://www.wheelhouseincubator.org/our-retailers",
+              "evidence_type": "listing_heading",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             }
           ]

@@ -1,6 +1,6 @@
 # Monthly Free Tools Review
 
-Generated: 2026-10-11T00:17:12-06:00
+Generated: 2026-10-19T20:29:17+00:00
 
 This is a review queue. It does not change public pricing, eligibility, or tool recommendations automatically.
 
@@ -12,11 +12,19 @@ This is a review queue. It does not change public pricing, eligibility, or tool 
 - Changed pages: 1
 - New baselines: 0
 - Failed checks: 6 (5 automation-blocked)
-- Newly failed checks: 0
+- Newly failed checks: 1
 - Tool claims currently missing an expected term: 1 (0 new)
-- Candidate links found: 47 (0 new)
+- Candidate links found: 63 (1 new)
 
 ## Review Queue
+
+### Inkscape
+
+- Kind: tool
+- URL: https://inkscape.org/about/
+- Check: timeout / check_failed
+- Expected-term hits: none
+- Error: The read operation timed out
 
 ### TechSoup nonprofit technology catalog
 
@@ -24,6 +32,8 @@ This is a review queue. It does not change public pricing, eligibility, or tool 
 - URL: https://www.techsoup.org/
 - Check: ok / changed
 - Expected-term hits: none
+- Candidate links:
+  - [View offer](https://www.techsoup.org/products/xero-for-nonprofits-access-to-discounted-rates-g-60782-)
 
 ## Human Review
 

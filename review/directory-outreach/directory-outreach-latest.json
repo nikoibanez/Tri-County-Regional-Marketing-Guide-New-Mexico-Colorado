@@ -1,92 +1,92 @@
 {
-  "generated_at": "2026-10-11T06:20:56.557862+00:00",
+  "generated_at": "2026-10-22T19:05:14.650977+00:00",
   "source": "C:\\Temp\\tri-county-raton-animation-palettes\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
   "summary": {
-    "entries": 1362,
-    "directory_shortcuts": 117,
-    "total_records_reviewed": 1479,
-    "with_any_route": 742,
-    "with_listed_route": 307,
-    "with_ask_route": 703,
-    "without_outreach_route": 620,
+    "entries": 1371,
+    "directory_shortcuts": 120,
+    "total_records_reviewed": 1491,
+    "with_any_route": 748,
+    "with_listed_route": 308,
+    "with_ask_route": 708,
+    "without_outreach_route": 623,
     "missing_structured_fields": 0,
-    "shortcuts_with_any_route": 65,
-    "shortcuts_with_listed_route": 27,
-    "shortcuts_with_ask_route": 56,
-    "shortcuts_without_outreach_route": 52,
+    "shortcuts_with_any_route": 67,
+    "shortcuts_with_listed_route": 29,
+    "shortcuts_with_ask_route": 58,
+    "shortcuts_without_outreach_route": 53,
     "shortcuts_missing_structured_fields": 0,
     "channel_counts": {
       "physical_flyers": {
         "label": "Flyers and posters",
         "listed": 0,
-        "ask": 335,
-        "not_indicated": 1027
+        "ask": 337,
+        "not_indicated": 1034
       },
       "physical_brochures": {
         "label": "Brochures and rack cards",
         "listed": 0,
-        "ask": 103,
-        "not_indicated": 1259
+        "ask": 106,
+        "not_indicated": 1265
       },
       "physical_bulletin_board": {
         "label": "Bulletin boards",
         "listed": 0,
-        "ask": 24,
-        "not_indicated": 1338
+        "ask": 25,
+        "not_indicated": 1346
       },
       "front_desk_referrals": {
         "label": "Front-desk referrals",
         "listed": 0,
-        "ask": 282,
-        "not_indicated": 1080
+        "ask": 285,
+        "not_indicated": 1086
       },
       "directory_listing": {
         "label": "Directory profiles and listings",
-        "listed": 305,
-        "ask": 13,
-        "not_indicated": 1044
+        "listed": 306,
+        "ask": 16,
+        "not_indicated": 1049
       },
       "event_calendar": {
         "label": "Event calendars",
         "listed": 1,
-        "ask": 117,
-        "not_indicated": 1244
+        "ask": 120,
+        "not_indicated": 1250
       },
       "social_cross_promotion": {
         "label": "Social cross-promotion",
         "listed": 0,
-        "ask": 38,
-        "not_indicated": 1324
+        "ask": 39,
+        "not_indicated": 1332
       },
       "newsletter_mailing_list": {
         "label": "Newsletters and mailing lists",
         "listed": 0,
-        "ask": 183,
-        "not_indicated": 1179
+        "ask": 187,
+        "not_indicated": 1184
       },
       "paid_digital_advertising": {
         "label": "Paid digital advertising",
         "listed": 1,
         "ask": 59,
-        "not_indicated": 1302
+        "not_indicated": 1311
       },
       "media_editorial": {
         "label": "Media and editorial coverage",
         "listed": 2,
         "ask": 59,
-        "not_indicated": 1301
+        "not_indicated": 1310
       },
       "sponsorship": {
         "label": "Sponsorships",
         "listed": 0,
-        "ask": 209,
-        "not_indicated": 1153
+        "ask": 212,
+        "not_indicated": 1159
       },
       "partner_cross_promotion": {
         "label": "Partner cross-promotion",
         "listed": 0,
-        "ask": 396,
-        "not_indicated": 966
+        "ask": 401,
+        "not_indicated": 970
       }
     },
     "shortcut_channel_counts": {
@@ -94,73 +94,73 @@
         "label": "Flyers and posters",
         "listed": 0,
         "ask": 0,
-        "not_indicated": 117
+        "not_indicated": 120
       },
       "physical_brochures": {
         "label": "Brochures and rack cards",
         "listed": 0,
         "ask": 0,
-        "not_indicated": 117
+        "not_indicated": 120
       },
       "physical_bulletin_board": {
         "label": "Bulletin boards",
         "listed": 0,
         "ask": 0,
-        "not_indicated": 117
+        "not_indicated": 120
       },
       "front_desk_referrals": {
         "label": "Front-desk referrals",
         "listed": 0,
         "ask": 0,
-        "not_indicated": 117
+        "not_indicated": 120
       },
       "directory_listing": {
         "label": "Directory profiles and listings",
-        "listed": 14,
+        "listed": 16,
         "ask": 10,
-        "not_indicated": 93
+        "not_indicated": 94
       },
       "event_calendar": {
         "label": "Event calendars",
         "listed": 14,
-        "ask": 15,
-        "not_indicated": 88
+        "ask": 16,
+        "not_indicated": 90
       },
       "social_cross_promotion": {
         "label": "Social cross-promotion",
         "listed": 1,
         "ask": 0,
-        "not_indicated": 116
+        "not_indicated": 119
       },
       "newsletter_mailing_list": {
         "label": "Newsletters and mailing lists",
         "listed": 0,
-        "ask": 35,
-        "not_indicated": 82
+        "ask": 37,
+        "not_indicated": 83
       },
       "paid_digital_advertising": {
         "label": "Paid digital advertising",
         "listed": 1,
         "ask": 4,
-        "not_indicated": 112
+        "not_indicated": 115
       },
       "media_editorial": {
         "label": "Media and editorial coverage",
         "listed": 2,
         "ask": 4,
-        "not_indicated": 111
+        "not_indicated": 114
       },
       "sponsorship": {
         "label": "Sponsorships",
         "listed": 0,
-        "ask": 24,
-        "not_indicated": 93
+        "ask": 25,
+        "not_indicated": 95
       },
       "partner_cross_promotion": {
         "label": "Partner cross-promotion",
         "listed": 0,
-        "ask": 52,
-        "not_indicated": 65
+        "ask": 54,
+        "not_indicated": 66
       }
     }
   },

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import argparse
+import json
 import re
 import sys
 import tempfile
@@ -52,6 +54,7 @@ from sweep_listing_keywords import (  # noqa: E402
     filter_source_keywords,
     listing_name_matches_signal,
     primary_source_url,
+    run_sweep,
     select_urls,
 )
 
@@ -148,6 +151,57 @@ class DirectoryQualityTests(unittest.TestCase):
         candidates = extract_candidates(source, "https://example.org/directory/", html, {})
 
         self.assertEqual([candidate["name"] for candidate in candidates], ["Allowed Gallery"])
+
+    def test_directory_sweep_can_read_retailer_headings(self) -> None:
+        source = {
+            "id": "incubator-retailers",
+            "title": "Incubator Retailers",
+            "county": "Huerfano",
+            "state": "CO",
+            "source_type": "Incubator",
+            "allow_link_candidates": False,
+            "candidate_heading_tags": ["h4"],
+        }
+        html = '<h2>Our Retailers</h2><h4>SoapBox</h4><p>Handmade soaps and gifts.</p>'
+        candidates = extract_candidates(source, "https://example.org/our-retailers", html, {})
+        self.assertEqual([candidate["name"] for candidate in candidates], ["SoapBox"])
+
+    def test_shared_retailer_page_does_not_mark_all_headings_as_existing(self) -> None:
+        source = {
+            "id": "incubator-retailers",
+            "title": "Incubator Retailers",
+            "county": "Huerfano",
+            "state": "CO",
+            "source_type": "Incubator",
+            "allow_link_candidates": False,
+            "candidate_heading_tags": ["h4"],
+        }
+        html = '<h4>Existing Shop</h4><h4>New Shop</h4>'
+        existing = {"existing shop": {"Existing Shop"}}
+        existing_urls = {"example.org/our-retailers": {"Existing Shop"}}
+        candidates = extract_candidates(source, "https://example.org/our-retailers", html, existing, existing_urls)
+        self.assertEqual(
+            {item["name"]: item["match_status"] for item in candidates},
+            {"Existing Shop": "already_in_guide", "New Shop": "possible_new_lead"},
+        )
+
+    def test_directory_sweep_excludes_navigation_and_generic_external_sites(self) -> None:
+        source = {
+            "id": "county-attractions",
+            "title": "County Attractions",
+            "county": "Las Animas",
+            "state": "CO",
+            "source_type": "Tourism",
+            "external_links_only": True,
+            "exclude_url_hosts": ["tripadvisor.com"],
+        }
+        html = (
+            '<a href="/about">About The Area</a>'
+            '<a href="https://www.tripadvisor.com/Attraction_Review">Reviews</a>'
+            '<a href="https://museum.example.com/visit">Local Museum</a>'
+        )
+        candidates = extract_candidates(source, "https://example.org/county", html, {})
+        self.assertEqual([candidate["name"] for candidate in candidates], ["Local Museum"])
 
     def test_weekly_directory_sweep_matches_aliases_and_known_listing_urls(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -1161,6 +1215,68 @@ class KeywordSweepTests(unittest.TestCase):
         )
         self.assertEqual(allowed, ["library"])
         self.assertEqual(blocked, [])
+
+    def test_business_directory_host_does_not_reclassify_a_member(self) -> None:
+        row = {
+            "id": "la-veta-oil-company-huerfano-service-fuel",
+            "resource_name": "La Veta Oil Company",
+            "category": "Service / fuel",
+            "resource_type": "Resource",
+            "notes": "Commercial-directory sweep also surfaced this listing; treat that signal as a source-check cue.",
+        }
+        guardrails = json.loads(
+            (ROOT / "data" / "keyword-inference-guardrails.json").read_text(encoding="utf-8")
+        )
+
+        self.assertNotIn("directory", extract_controlled_keywords(canonical_signal(row)))
+        allowed, blocked = filter_source_keywords(row, ["business directory", "directory"], guardrails)
+        self.assertEqual(allowed, [])
+        self.assertEqual(blocked, ["business directory", "directory"])
+
+    def test_shared_lodging_page_does_not_make_rv_park_a_hotel(self) -> None:
+        row = {
+            "id": "summit-rv-park-las-animas-rv-park",
+            "resource_name": "Summit RV Park",
+            "category": "RV park",
+            "resource_type": "Media",
+        }
+        guardrails = json.loads(
+            (ROOT / "data" / "keyword-inference-guardrails.json").read_text(encoding="utf-8")
+        )
+        allowed, blocked = filter_source_keywords(row, ["hotel", "lodging"], guardrails)
+        self.assertEqual(allowed, ["lodging"])
+        self.assertEqual(blocked, ["hotel"])
+
+    def test_keyword_sweep_retains_blocked_terms_when_source_is_not_checked(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            directory = Path(temp_dir)
+            source = directory / "resources.csv"
+            source.write_text(
+                "id,resource_name,category,website\n"
+                "example,Example Theater,Performing arts,https://example.org/theater\n",
+                encoding="utf-8",
+            )
+            index = directory / "keyword-index.json"
+            index.write_text(json.dumps({"entries": {"example": {
+                "resource_name": "Example Theater",
+                "keywords": [],
+                "canonical_keywords": [],
+                "source_keywords": [],
+                "blocked_source_keywords": ["main street"],
+                "source_url": "https://example.org/theater",
+                "status": "fetch_error",
+            }}}), encoding="utf-8")
+            guardrails = directory / "guardrails.json"
+            guardrails.write_text('{"global_rules": {}, "listing_rules": {}}', encoding="utf-8")
+            args = argparse.Namespace(
+                source=source, index=index, guardrails=guardrails, no_network=True,
+                reset_source_keywords=False, limit=1, retry_errors_first=False,
+                workers=1, timeout=1, write_index=True,
+            )
+
+            run_sweep(args)
+            retained = json.loads(index.read_text(encoding="utf-8"))["entries"]["example"]
+            self.assertEqual(retained["blocked_source_keywords"], ["main street"])
 
 
 if __name__ == "__main__":

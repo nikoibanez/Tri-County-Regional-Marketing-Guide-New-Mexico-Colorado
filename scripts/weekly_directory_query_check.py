@@ -381,6 +381,12 @@ def is_listing_link(source: dict, page_url: str, href: str) -> bool:
     parsed = urlparse(href)
     if parsed.scheme not in {"http", "https"}:
         return False
+    host = parsed.netloc.casefold().removeprefix("www.")
+    excluded_hosts = [str(value).casefold().removeprefix("www.") for value in source.get("exclude_url_hosts", [])]
+    if any(host == excluded or host.endswith(f".{excluded}") for excluded in excluded_hosts):
+        return False
+    if source.get("external_links_only") and same_site(page_url, href):
+        return False
     path = parsed.path.casefold()
     configured_excludes = [str(part).casefold() for part in source.get("exclude_url_path_contains", [])]
     configured_includes = [str(part).casefold() for part in source.get("include_url_path_contains", [])]
@@ -623,7 +629,8 @@ def extract_candidates(
         key = normalize_name(name)
         if not key:
             return
-        match = match_existing(name, existing_names, url, existing_urls)
+        listing_specific_url = url if evidence_type == "linked_text" else ""
+        match = match_existing(name, existing_names, listing_specific_url, existing_urls)
         existing = candidates.get(key)
         candidate = {
             "id": stable_id(name, url, source["id"]),
@@ -667,6 +674,12 @@ def extract_candidates(
     if source.get("allow_text_candidates", False):
         for line in contextual_text_candidates(parser.lines()):
             add_candidate(line, page_url, "text_listing_block", "low")
+
+    heading_tags = {str(tag).lower() for tag in source.get("candidate_heading_tags", [])}
+    if heading_tags:
+        for heading in parser.headings:
+            if heading["tag"] in heading_tags:
+                add_candidate(heading["text"], page_url, "listing_heading", "low")
 
     return sorted(candidates.values(), key=lambda item: (item["match_status"], item["name"].casefold()))
 
