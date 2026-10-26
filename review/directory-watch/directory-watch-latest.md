@@ -1,6 +1,6 @@
 # Weekly Directory Query Check
 
-Generated: 2026-10-22
+Generated: 2026-10-26
 
 Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.
 
@@ -8,12 +8,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 
 - Sources watched: 20
 - Pages checked: 38
-- Pages failed: 2
-- Listing-like candidates found: 367
-- Already represented in guide: 282
-- Possible new leads: 85
+- Pages failed: 0
+- Listing-like candidates found: 370
+- Already represented in guide: 281
+- Possible new leads: 89
 - Priority new leads: 15
-- Low-confidence text leads: 70
+- Low-confidence text leads: 74
 
 ## Watch Sources
 
@@ -23,12 +23,8 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Chamber business directory
 - Why watch: Raton-area chamber source for business names, local service anchors, restaurants, and potential outreach contacts.
 - Pages checked: 2
-- Possible new leads: 0
+- Possible new leads: 4
 - Priority new leads: 0
-
-Fetch issues:
-- [https://www.raton.info/business_directory.html](https://www.raton.info/business_directory.html) - HTTP Error 403: Forbidden
-- [https://www.raton.info/business-directory.html](https://www.raton.info/business-directory.html) - HTTP Error 403: Forbidden
 
 ### Angel Fire Chamber Member Business Directory
 
@@ -225,9 +221,13 @@ These have linked listing-page evidence. They are still not publication-ready ad
 
 These came from directory page text rather than individual listing links. Review them more carefully before using.
 
+- KYC vs No-KYC: What "Anonymous" Really Means - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
+- KYC vs No-KYC: What "Anonymous" Really Means - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
+- Licensed & Regulated - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
+- Licensed & Regulated - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
 - 123’s - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
+- Annual Holiday Bell Ringing in La Veta - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Become a Member - Huerfano; Huerfano County Chamber Directory; source page: https://www.chamber.huerfano.org/membership-directory
-- Causa Mortis: A Hospital Comedy - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Contact Information - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Cuchara Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Danae's Diner - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
@@ -237,23 +237,23 @@ These came from directory page text rather than individual listing links. Review
 - Gardner Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Gardner Methodist Church - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Halloweentown Movie Night at Fiesta Park - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Heritage Park - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Kellen Goode Live at the Stokehouse! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - La Veta Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - La Veta Flower Company - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - La Veta Library - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Marshal — Harold Willburn - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
+- Mason Davis Live at the Stokehouse! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Member Directory | Connect Locally — huerfano county chamber of commerce - Huerfano; Huerfano County Chamber Directory; source page: https://www.chamber.huerfano.org/membership-directory
 - Mountain Oasis Designs - Huerfano; Wheelhouse Incubator Retailers; source page: https://www.wheelhouseincubator.org/our-retailers
 - Mountain Time Physical Therapy - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Museum of Friends Fifth Biennial Gala - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - MUSIC BY MIDI LIVE!!!! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- November 28 - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Off-Grid Hub’s Kampot Kitchen Pepper - Huerfano; Wheelhouse Incubator Retailers; source page: https://www.wheelhouseincubator.org/our-retailers
 - Office Hours - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
+- Parade of Lights - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Shalawalla - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Storage - Huerfano; Huerfano County Chamber Directory; source page: https://www.chamber.huerfano.org/membership-directory
-- Walsenburg Farm & Makers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Walsenburg Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - (719) 846-9843 ext. 160 - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - 420 Festival at Central Park - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - An independent antiques stop on historic East Main Street. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
