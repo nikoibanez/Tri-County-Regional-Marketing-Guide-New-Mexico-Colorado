@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-19",
+  "generated_at": "2026-10-26",
   "publication_note": "Automatically refreshed from watched public directory and tourism pages. Treat these as candidate updates, not official directory additions, until a human confirms the linked source.",
   "summary": {
     "sources_watched": 15,
     "pages_checked": 32,
-    "pages_failed": 12,
-    "already_represented": 225,
-    "possible_new_leads": 25,
+    "pages_failed": 2,
+    "already_represented": 290,
+    "possible_new_leads": 32,
     "priority_new_leads": 1,
-    "low_confidence_text_leads": 24
+    "low_confidence_text_leads": 31
   },
   "watched_sources": [
     {
@@ -19,7 +19,7 @@
       "source_role": "Business directory, local services, restaurants, visitor-facing businesses",
       "why_watch": "Raton-area chamber source for business names, local service anchors, restaurants, and potential outreach contacts.",
       "pages_checked": 2,
-      "possible_new_leads": 0,
+      "possible_new_leads": 4,
       "priority_new_leads": 0
     },
     {
@@ -85,7 +85,7 @@
       "source_role": "Event spots, event calendar, event submission, visitor-facing programs",
       "why_watch": "Primary visitor-facing source for Trinidad events and event submission routes.",
       "pages_checked": 2,
-      "possible_new_leads": 0,
+      "possible_new_leads": 1,
       "priority_new_leads": 0
     },
     {
@@ -96,7 +96,7 @@
       "source_role": "Venues, event facilities, travel groups, catering-adjacent planning routes",
       "why_watch": "Useful for venues, event spaces, group travel, weddings, and catering-adjacent outreach.",
       "pages_checked": 2,
-      "possible_new_leads": 0,
+      "possible_new_leads": 2,
       "priority_new_leads": 0
     },
     {
@@ -192,7 +192,51 @@
   ],
   "low_confidence_text_leads": [
     {
-      "name": "Causa Mortis: A Hospital Comedy",
+      "name": "KYC vs No-KYC: What \"Anonymous\" Really Means",
+      "county": "Colfax",
+      "state": "NM",
+      "source_title": "Raton Chamber Business Directory",
+      "source_type": "Chamber business directory",
+      "source_page": "https://raton.info/",
+      "listing_url": "https://raton.info/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "KYC vs No-KYC: What \"Anonymous\" Really Means",
+      "county": "Colfax",
+      "state": "NM",
+      "source_title": "Raton Chamber Business Directory",
+      "source_type": "Chamber business directory",
+      "source_page": "https://raton.info/",
+      "listing_url": "https://raton.info/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Licensed & Regulated",
+      "county": "Colfax",
+      "state": "NM",
+      "source_title": "Raton Chamber Business Directory",
+      "source_type": "Chamber business directory",
+      "source_page": "https://raton.info/",
+      "listing_url": "https://raton.info/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Licensed & Regulated",
+      "county": "Colfax",
+      "state": "NM",
+      "source_title": "Raton Chamber Business Directory",
+      "source_type": "Chamber business directory",
+      "source_page": "https://raton.info/",
+      "listing_url": "https://raton.info/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Annual Holiday Bell Ringing in La Veta",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -258,17 +302,6 @@
       "confidence": "low"
     },
     {
-      "name": "Heritage Park",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Kellen Goode Live at the Stokehouse!",
       "county": "Huerfano",
       "state": "CO",
@@ -313,6 +346,17 @@
       "confidence": "low"
     },
     {
+      "name": "Museum of Friends Fifth Biennial Gala",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "MUSIC BY MIDI LIVE!!!!",
       "county": "Huerfano",
       "state": "CO",
@@ -324,7 +368,7 @@
       "confidence": "low"
     },
     {
-      "name": "Walsenburg Farm & Makers Market",
+      "name": "November 28",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -335,7 +379,7 @@
       "confidence": "low"
     },
     {
-      "name": "Walsenburg Farmers Market",
+      "name": "Parade of Lights",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -441,6 +485,39 @@
       "source_type": "Digital local guide and business/event listings",
       "source_page": "https://localstash.com/colorado/towns/trinidad-co",
       "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Visit Trinidad Colorado –",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://visittrinidadcolorado.com/upcoming-events/",
+      "listing_url": "https://visittrinidadcolorado.com/upcoming-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Visit Trinidad Colorado –",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Meetings, Weddings, and Venue Routes",
+      "source_type": "Meetings, conventions, weddings, and venue tourism source",
+      "source_page": "https://visittrinidadcolorado.com/meetings-conventions/",
+      "listing_url": "https://visittrinidadcolorado.com/meetings-conventions/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Visit Trinidad Colorado –",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Visit Trinidad Meetings, Weddings, and Venue Routes",
+      "source_type": "Meetings, conventions, weddings, and venue tourism source",
+      "source_page": "https://visittrinidadcolorado.com/weddings/",
+      "listing_url": "https://visittrinidadcolorado.com/weddings/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },

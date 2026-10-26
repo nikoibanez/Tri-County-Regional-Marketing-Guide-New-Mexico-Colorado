@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-19T20:27:23+00:00",
+  "updated_at": "2026-10-26T20:23:21+00:00",
   "sources": {
     "grants-gov-search": {
       "name": "Grants.gov",
       "url": "https://www.grants.gov/search-grants",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "38914b2b42777149c8cb6a3532e06d61a0ef0edb5cf23f05c2f581fbe68a4bc1",
@@ -17,7 +17,7 @@
     "nea-grants": {
       "name": "National Endowment for the Arts Grants",
       "url": "https://www.arts.gov/grants",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "f5a9654d192c601eb411520cb9af8fec43ed228118d9418b09ca8978c3175ede",
@@ -32,7 +32,7 @@
     "imls-funding": {
       "name": "Institute of Museum and Library Services Funding Opportunities",
       "url": "https://www.imls.gov/find-funding/how-to-apply/funding-opportunities",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "1ee080f2506f4d5e511d8b6b0ca887ecba36069b63b2171ba6446b013740f00a",
@@ -45,7 +45,7 @@
     "usda-rural-development": {
       "name": "USDA Rural Development Programs and Services",
       "url": "https://www.rd.usda.gov/programs-services",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -53,7 +53,7 @@
     "eda-funding": {
       "name": "U.S. Economic Development Administration Funding Opportunities",
       "url": "https://www.eda.gov/funding/funding-opportunities",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -61,15 +61,17 @@
     "candid-funding-search": {
       "name": "Candid Funding Search and Learning",
       "url": "https://learning.candid.org/free-access-to-foundation-directory",
-      "last_checked": "2026-10-19T20:27:23+00:00",
-      "last_status": "access_blocked",
-      "status_code": 403,
-      "last_error": "HTTP Error 403: Forbidden"
+      "last_checked": "2026-10-26T20:23:21+00:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "70a9931c16dea0bc84bc7d8133ba0ed5dbd86418d887d563ce3d06784a7da18f",
+      "text_length": 1269,
+      "signal_snippets": []
     },
     "ifundwomen-grants": {
       "name": "IFundWomen Grants",
       "url": "https://www.ifundwomen.com/grants/apply-for-grants",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -77,7 +79,7 @@
     "nglcc-grants": {
       "name": "NGLCC Scholarships and Grants",
       "url": "https://nglcc.org/programs-initiatives/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "138712c78374426a44433fcd25d12b2cea9fd1833fef5c3cd789edef79d2301d",
@@ -89,7 +91,7 @@
     "first-peoples-fund": {
       "name": "First Peoples Fund Fellowships",
       "url": "https://www.firstpeoplesfund.org/programs/fellowships",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "ca747c6954617e593146c1a31725b86822cc873bee56006ca73d4d8759147c2d",
@@ -110,7 +112,7 @@
     "nalac-fund-for-the-arts": {
       "name": "NALAC Fund for the Arts",
       "url": "https://www.nalac.org/grants/nalac-fund-for-the-arts/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "7d9b5be43a7cb6e41660d6a216a0f72379526c75724063d5babcfc0a201048e7",
@@ -120,7 +122,7 @@
     "colorado-oedit-programs": {
       "name": "Colorado OEDIT Programs and Funding",
       "url": "https://oedit.colorado.gov/programs-and-funding",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -128,7 +130,7 @@
     "colorado-creates": {
       "name": "Colorado Creates Grant",
       "url": "https://oedit.colorado.gov/colorado-creates-grant",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "access_blocked",
       "status_code": 403,
       "last_error": "HTTP Error 403: Forbidden"
@@ -136,11 +138,11 @@
     "nm-edd-grants": {
       "name": "New Mexico Economic Development Department Grants",
       "url": "https://edd.newmexico.gov/grants/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "54aa7f9cb237ac51a25ed299cec4ef50645b33e2f3fac937f75f174bb1ba6031",
-      "text_length": 8193,
+      "content_hash": "f524b703f8523f6785f083f2677fd219dd70fdb36807c10d15f31cc14a3ca4da",
+      "text_length": 8158,
       "signal_snippets": [
         "Marketing Marketing The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes."
       ]
@@ -148,11 +150,11 @@
     "nm-edd-leads": {
       "name": "New Mexico LEADS Community Economic Development Grants",
       "url": "https://edd.newmexico.gov/grants/leads/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "69573e297c9a515b854193b12072367df919f4869376d0b503b452f621d71103",
-      "text_length": 9666,
+      "content_hash": "6d8564a165aef0540a274150f8a4f691af39a22e66e90994a2c7017acfcca7c3",
+      "text_length": 9596,
       "signal_snippets": [
         "Eligible Applicants Are involved in an economic development effort with both public and private participation, demonstrating the ability to drive economic growth.",
         "Have an up-to-date community economic development plan and a marketing plan supporting business development and job growth.",
@@ -162,11 +164,11 @@
     "nm-edd-creative-industries": {
       "name": "New Mexico Creative Industries Grant Opportunities",
       "url": "https://edd.newmexico.gov/grants/cid-grants/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "0dd16821ba40e0dc122ef772269f4d8c67b705f01f317eaa27cd1e429d6c088e",
-      "text_length": 37479,
+      "content_hash": "8796babb148d93e015b624b53736a1a6aba71a079d79c2c4df8eb01ca571c975",
+      "text_length": 37444,
       "signal_snippets": [
         "Eligible applicants include nonprofits, MainStreet organizations, Nations, Tribes, Pueblos, councils of governments, educational institutions, and other political subdivisions of the state, excluding local, county, municipal governments, and state agencies.",
         "Projected program timeline: Grant Application Opens: Oct 5, 2026 Grant Application Closes: Oct 30, 2026, at 6 pm Review Period: Nov 2026 \u2013Jan 2027 Projected Project Period: Mar 2027\u2013Feb 2028 Eligibility Requirements (Pass/Fail): Applicants must: \u2022 Be a local government, Nation, Tribe, Pueblo, or nonprofit organization.",
@@ -185,7 +187,7 @@
     "new-mexico-arts-grants": {
       "name": "New Mexico Arts Grants and Programs",
       "url": "https://nmarts.org/grants/grants-information/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "760cb9fc113ea8723d8cc71e1fef91619d1883aefe5330fde365009c176acd48",
@@ -201,19 +203,19 @@
     "new-mexico-arts-artist-opportunities": {
       "name": "New Mexico Arts Artist Opportunities",
       "url": "https://nmarts.org/public-art/are-you-an-artist/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "3a360c2ec5b8bde32a1de2eff720ea3f4d91b28198c0e5b17bfad57a61ea5c24",
-      "text_length": 13917,
+      "content_hash": "f72b467972b79e54367cb4a81cef699cf2692fcdbb070c54439f8a3af3a463dc",
+      "text_length": 12035,
       "signal_snippets": [
-        "Deadline to apply: 9/4/2026 Link to call: https://opportunities.wearecreativewest.org/opportunity/17633/CAFE NATIVE AMERICAN & INDIGENOUS ARTIST PURCHASE INITIATIVE Application opens September 1 st , 2026."
+        "Read the entire notice HERE Art in Public Places (AIPP) Purchase Initiatives for 2026 NATIVE AMERICAN & INDIGENOUS ARTIST PURCHASE INITIATIVE Deadline November 1 st , 2026."
       ]
     },
     "el-pomar-grants": {
       "name": "El Pomar Foundation Grant Making",
       "url": "https://www.elpomar.org/grant-making/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "737e28836ad78de979f3d55a926b0104a2d97970c3366c9279d7f8fe50ca9a6e",
@@ -231,11 +233,11 @@
     "southern-colorado-community-foundation": {
       "name": "Southern Colorado Community Foundation Grants",
       "url": "https://sccfcolorado.org/for-grantseekers/apply/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "55bbd7049a31a687ac7728026eb0f9a6c448330a4ddf6e588f2b88ed1b8e7a6d",
-      "text_length": 3995,
+      "content_hash": "3d151d0a97d5de038d88b9d16a48933c9bad7b68e96d8266d7ef77a1c15a0531",
+      "text_length": 3991,
       "signal_snippets": [
         "Grant Application \u2013 Southern Colorado Community Foundation Menu Home About Our Role Board Financials Contact For Grantseekers Eligibility & Guidelines Available Grants Apply Grant Reporting Awarded Grants Scholarships Madeline Mellers Golf Scholarship For Donors Circle of 100 Donations Donor Advised Funds Planned & Legacy Giving Nonprofit Directory CLOSE MENU Grant Application Note: All fields are required.",
         "Grant Deadlines: March 1 and September 1 REMINDER: We only provide funds to organizations that support Alamosa, Baca, Bent, Chaffee, Conejos, Costilla, Crowley, Custer, Fremont, Huerfano, Kiowa, Las Animas, Mineral, Otero, Prowers, Pueblo, Rio Grande, and Saguache counties.",
@@ -248,7 +250,7 @@
     "taos-community-foundation-funding": {
       "name": "Taos Community Foundation Funding Opportunities",
       "url": "https://www.taoscf.org/grants/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "b7fcb9af43b2ccccd0b68f3cdd65cbfd29e7b17f12c9b2b69756d2ba72126a10",
@@ -260,7 +262,7 @@
     "trinidad-state-scholarships": {
       "name": "Trinidad State College Scholarships and Grants",
       "url": "https://trinidadstate.edu/scholarships/index.html",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "9f118d28c2f7fe7328b082f67caa109b9c51f19aacc81175bea975828e163c92",
@@ -278,15 +280,19 @@
     "goree-scholarship": {
       "name": "Mary John Goree Las Animas County Scholarship",
       "url": "https://goreescholarship.org/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
-      "last_status": "access_blocked",
-      "status_code": 403,
-      "last_error": "HTTP Error 403: Forbidden"
+      "last_checked": "2026-10-26T20:23:21+00:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "32b89db0989ac8861ab0d676e3f0f5aae138a975a7c65aeea7a3feb56db5171e",
+      "text_length": 6088,
+      "signal_snippets": [
+        "Mary John Goree Las Animas County Scholarship Foundation Mary John Goree Las Animas County Scholarship Foundation Skip to content Home About the Foundation About the John Family About Our Directors Prospective Scholars Eligibility Process Selection Criteria Scholarship Awards Application FAQs What\u2019s New for 2026-2027?"
+      ]
     },
     "cuchara-chapel-scholarship": {
       "name": "Cuchara Chapel Scholarship",
       "url": "https://www.cucharachapel.org/scholarship/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "tls_error",
       "status_code": null,
       "last_error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1016)"
@@ -294,7 +300,7 @@
     "first-southwest-workshop-grants": {
       "name": "First Southwest Community Fund Grants",
       "url": "https://www.fswcf.org/grants",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "6d329dc95a0b9d865039eb73fd64dfc803fbde4f02d65a2a6bbf57424ab90683",
@@ -304,15 +310,22 @@
     "rawlings-foundation-grants": {
       "name": "Robert Hoag Rawlings Foundation Grants",
       "url": "https://rawlingsfoundation.com/grants/requests/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
-      "last_status": "access_blocked",
-      "status_code": 403,
-      "last_error": "HTTP Error 403: Forbidden"
+      "last_checked": "2026-10-26T20:23:21+00:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "7477c88e3204af6e60bdc757576c1b8c4f5f5f269bca127f1a18d18e66dc3520",
+      "text_length": 7747,
+      "signal_snippets": [
+        "Grant Requests - Robert Hoag Rawlings Foundation Aspen Acres Fire Response Grants Now Available Home Who We Serve Grants Grant Program Overview Eligibility & Guidelines Grant Intent Request How to Apply Aspen Acres Fire Response Grants Professional Development Mini-Grants Grant Reports About Foundation Directors News Annual Reports Grants Apply News \u2022 \u2022 \u2022 More Eligibility & Grant Process Grant Intent Request Grant Re",
+        "Full Grant Application Deadline March 10, 2027 no later than 5 p.m.",
+        "Restrictions In general, the Foundation will not consider request that have the following characteristics: Programs that do not benefit people in our 18 county service area; Direct grants to individuals; Political organizations, campaigns, or candidates for political office; Efforts directed towards influencing legislation at any governmental level; Sectarian or religious organizations whose services are directed to",
+        "Aspen Acres Fire Response Grants Grants Program Overview Grant Intent Request Eligibility & Guidelines How to Apply Professional Development Mini-Grants Grant Reports Who We Serve Foundation Directors Annual Reports"
+      ]
     },
     "duncan-charitable-trust": {
       "name": "John G. Duncan Charitable Trust",
       "url": "https://www.wellsfargo.com/private-foundations/duncan-charitable-trust/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "ed4fb4e9a75dfb3fff8709fee75d3ff5e9d23af98d2a483b8d10b3c640c06c35",
@@ -326,7 +339,7 @@
     "brindle-foundation-grants": {
       "name": "Brindle Foundation Grants",
       "url": "https://www.brindlefoundation.org/grants",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "87fcff1e9d3acaf684c38cab4ffad92e6cf18ab8e547701865191340bdf70e84",
@@ -341,22 +354,22 @@
     "nmcf-northeastern-health-fund": {
       "name": "New Mexico Community Foundation Northeastern Health Fund",
       "url": "https://nmcf.org/northeastern-health-fund/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
-      "content_hash": "1c87756097ea4be9f0408c598c0929409ae44f52868f929a30aa0f484883079e",
-      "text_length": 5067,
+      "content_hash": "e40a70379f6450c52b8556ba9cb08a356d3ff1cd65e179bb6c15b1b5f69cd3b7",
+      "text_length": 5153,
       "signal_snippets": [
-        "Northeastern Health Fund \u2013 NMCF NMCF Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern\u00ae NM True Aldo Leopold Charter School Anchorum Master\u2019s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Fiscal Sponsorship Fiscal Sponsorship Sponsored O",
+        "Northeastern Health Fund \u2013 NMCF NMCF Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern\u00ae NM True Aldo Leopold Charter School Anchorum Master\u2019s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Support an Existing Fund Fiscal Sponsorship Fisca",
         "GRANT AMOUNT : Up to $5,000 TIMELINE Application opens in fall 2026 Application Deadline: TBD Grants Announced: TBD Grant Period: TBD Recent Recipients : Eagle Nest Horse Program \u2013 $5,000 For the Reining Hope summer program, a no-cost equine access and education program for children ages 5 to 14 who live in Colfax County.",
-        "Contact 8 Calle Medico Santa Fe, NM 87505 505.820.6860 info@newmexicofoundation.org Facebook-f Linkedin-in Instagram Resources Grants and Scholarships Give Fiscal Sponsorships About Us Advisors Login \u00a9 Copyright 2026.",
-        "NMCF Sub-Menu Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern\u00ae NM True Aldo Leopold Charter School Anchorum Master\u2019s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Fiscal Sponsorship Fiscal Sponsorship Sponsored Organizations About Us A"
+        "Contact 8 Calle Medico Santa Fe, NM 87505 505.820.6860 info@newmexicofoundation.org Facebook-f Linkedin-in Instagram Resources Grants and Scholarships Give Fiscal Sponsorships About Us Advisors Login Learn more \u00a9 Copyright 2026.",
+        "NMCF Sub-Menu Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern\u00ae NM True Aldo Leopold Charter School Anchorum Master\u2019s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Support an Existing Fund Fiscal Sponsorship Fiscal Sponsorship Sponsored"
       ]
     },
     "health-solutions-sponsorships": {
       "name": "Health Solutions Community Sponsorship Requests",
       "url": "https://www.health.solutions/requests/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "a962cb56f83577878c52dc2ac14ae1b7b51ed965abfae8f968c9793519fde4f3",
@@ -366,7 +379,7 @@
     "spanish-peaks-health-foundation": {
       "name": "Spanish Peaks HealthCare Foundation",
       "url": "https://www.sprhc.org/spanish-peaks-healthcare-foundation",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "d708e7161f86734f2cd8244b0c30ac0e463243eb25431f3d402f3da401260fbd",
@@ -379,13 +392,117 @@
     "new-mexico-humanities-grants": {
       "name": "New Mexico Humanities Council Grants",
       "url": "https://newmexicohumanities.org/grants/",
-      "last_checked": "2026-10-19T20:27:23+00:00",
+      "last_checked": "2026-10-26T20:23:21+00:00",
       "last_status": "ok",
       "status_code": 200,
       "content_hash": "3a587015c8280e22ebfef80b7a4e4de7009a764a634fd98c931d07fcbdfe170b",
       "text_length": 4990,
       "signal_snippets": [
         "Below are more specifics about the types of projects that are funded, eligibility requirements, grant guidelines / project planning requirements, the pre-application process and more."
+      ]
+    },
+    "boettcher-rural-catalyst-grants": {
+      "name": "Boettcher Foundation Rural Catalyst Grants",
+      "url": "https://boettcherfoundation.org/grantmaking/rural-catalyst-grants/",
+      "last_checked": "2026-10-26T20:23:21+00:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "7272f434e100861ac8e911ef475aa7403a747869da06dd12768123f8cd074fb2",
+      "text_length": 5310,
+      "signal_snippets": [
+        "One-time operating costs: Covering expenses related to the operation of the organization or program that are not recurring, such as tap fees, application fees, public outreach, or education material expenses."
+      ]
+    },
+    "gates-family-capital-grants": {
+      "name": "Gates Family Foundation Capital Grants",
+      "url": "https://gatesfamilyfoundation.org/types-of-support/capital-grants/",
+      "last_checked": "2026-10-26T20:23:21+00:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "697b5254efd889f0fb3e0caa55bae612426c7317b5e6b448049127d174bf93db",
+      "text_length": 254546,
+      "signal_snippets": [
+        "We support capital projects that: serve a majority of students from low-income families (who qualify for free or reduced-price lunch) build or improve education facilities that will be heavily used by a majority of the community increase access to education in rural areas provide life-long learning to a broad audience Funding examples and limitations: We prioritize facilities for high-performing charter schools and o",
+        "We prioritize capital projects that: develop greater self-sufficiency, including the well-being and independence of disadvantaged families and the elderly increase leadership and life skills promote good health and well-being rather than cure disease Funding examples and limitations: We support job training centers, family resource centers, and transitional housing facilities We support youth mentoring organizations,",
+        "Applicants must have at least 30% of their project budget secured before being considered.Deadlines Gates reviews capital grant applications TWICE each year.",
+        "Annual deadlines are: March 15 at 5:00 p.m.",
+        "(for a mid-December decision; NOTE this is changed from previous deadline of Sept.",
+        "15) Please note: If the application deadline falls on a weekend or holiday, the due date will move to the next business day.",
+        "O n November 11, 2025, the seven states reliant on the Colorado River \u2014Arizona, California, Colorado, Nevada, New Mexico, Utah, and Wyoming\u2014 failed to meet a federal deadline to produce the outline of a joint agreement on managing the river\u2019s dwindling water supply .",
+        "The local news landscape in Colorado\u2014like much of the nation\u2014 continues to face existential challenges: declining advertising revenue, journalist burnout, and the collapse of legacy media institutions .",
+        "Finally, also in 2023 a total of $410,956 previously committed by Gates to the Colorado Media Project was combined with a total of $854,045 from other Colorado and national donors to provide: \u2014 $302,640 total to 25 grantees through the second round of CMP\u2019s Advancing Equity in Local News Fund , which aims to increase diversity and inclusion within Colorado newsrooms, strengthen connections between Colorado newsrooms",
+        "To support informed communities, we focus our attention and resources on three strategies: In 2022, Gates\u2019 Informed Communities program committed a total of $1,342,956 to nine grantees, including: A total of $1,110,956 committed to the Colorado Media Project over the next three years , of which $410,956 was released in 2022 and combined with funds from five other Colorado and national foundations to support: \u2014 The se",
+        "A two-year, $112,000 commitment to the National Trust for Local News , to add operational capacity to the Colorado News Conservancy and Colorado Community Media, in support of a $750,000 impact investment from Gates awarded in 2021 A $50,000 grant to The Colorado Sun , to help drive reader revenue through marketing and membership, in support of an eight-year, $1.5 million impact investment from Gates awarded in 2020"
+      ]
+    },
+    "daniels-fund-grants": {
+      "name": "Daniels Fund Grants Program",
+      "url": "https://danielsfund.org/our-work/grants/",
+      "last_checked": "2026-10-26T20:23:21+00:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "ce08c8d1886c6a08a76a7dfe2a9d72a58a3bfb9d18ae5b6053a7666044ded489",
+      "text_length": 10597,
+      "signal_snippets": [
+        "Grants Program - Daniels Fund Skip to content Our Work Big Bets Scalable Solutions for Complex Challenges Restoring Civic Knowledge Increasing Educational Options Expanding Access To Youth Sports Addressing Homelessness & Addiction Applying Principle-Based Ethics Restoring Civic Knowledge Increasing educational options Expanding access to youth sports Addressing homelessness & addiction Applying principle-based ethic",
+        "Keep Reading Keep Reading About Us Our Mission Public Disclosures Our People Join Our Team Contact News & Publications Book Our Meeting Space Book Our Meeting Space A premier meeting place designed to facilitate a productive, comfortable, and impactful experience for nonprofits and public entities Book Now Book Now Location, Hours & Parking Location, Hours & Parking \u00d7 Our Work Big Bets Scalable Solutions for Complex",
+        "Keep Reading Keep Reading About Us Our Mission Public Disclosures Our People Join Our Team Contact News & Publications Book Our Meeting Space Book Our Meeting Space A premier meeting place designed to facilitate a productive, comfortable, and impactful experience for nonprofits and public entities Book Now Book Now Location, Hours & Parking Location, Hours & Parking \u00d7 Search Grants Program Investing in outstanding no",
+        "Grants Eligibility Quiz Our State-Specific Grantmaking Approach Grants.",
+        "Eligibility & Guidelines The Daniels Fund seeks to support high-impact, proven programs that align with our funding priorities and 4-state region.",
+        "If your program aligns well, check your grants eligibility to determine if you should proceed with a grant inquiry.",
+        "If your organization received a Daniels Fund grant more than two years ago, check your grants eligibility to determine if you should proceed with a inquiry, or log in to the Grants Portal .",
+        "Status Be a 501(c)(3) nonprofit or government equivalent.",
+        "Click here to check your grants eligibility and start your grant inquiry.",
+        "FAQ General Questions and Eligibility What types of programs do you fund?",
+        "We welcome all grant inquiries, regardless of project type or size, and encourage organizations to complete the Grants Eligibility Quiz to determine alignment with our priorities.",
+        "All grantees must be nonprofit organizations with 501(c)(3) status or a government-equivalent entity.",
+        "Are we eligible if we are using a fiscal sponsor?",
+        "In some cases, organizations working with a fiscal sponsor may be eligible.",
+        "The missions of the fiscal sponsor and the sponsored organization/project must be closely aligned and have a memorandum of understanding between the two entities.",
+        "If invited to apply, you will be asked to submit specific documentation related to the fiscal sponsorship arrangement.",
+        "If you are interested in applying, we encourage you to complete the Grants Eligibility Quiz to determine if you should proceed with a grant inquiry.",
+        "If your organization received a grant within the past two years, please contact your program officer to confirm your eligibility to apply again.",
+        "If it has been more than two years, please complete the Grants Eligibility Quiz .",
+        "When are your application deadlines?",
+        "If your organization has previously received a grant, please contact your program officer to discuss reapplication eligibility."
+      ]
+    },
+    "con-alma-annual-grants": {
+      "name": "Con Alma Health Foundation Annual Grants",
+      "url": "https://www.conalma.org/grant-making",
+      "last_checked": "2026-10-26T20:23:21+00:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "495983890964462cb35e16b1cfe15083d91302b5dc316cb0d750692f5cf76a10",
+      "text_length": 2383,
+      "signal_snippets": [
+        "KEY DATES in 2026: 27 APRIL CAHF Applications OPEN 15 MAY CAHF Applications DEADLINE 01 JUNE NNMHGG Applications OPEN 29 JUNE NNMHGG Applications DEADLINE NOV EARLY All Grant Awards ANNOUNCED DEC MID All Grant PAYMENTS DISTRIBUTED Become a COMMUNITY GRANT REVIEWER Con Alma partners with community members from across New Mexico to help guide our grantmaking."
+      ]
+    },
+    "mccune-charitable-foundation-grants": {
+      "name": "McCune Charitable Foundation Grants",
+      "url": "https://nmmccune.org/grant-eligibility/",
+      "last_checked": "2026-10-26T20:23:21+00:00",
+      "last_status": "ok",
+      "status_code": 200,
+      "content_hash": "6a9129e44d7083006fd0308202519c0b86d2ea6944f71406d73b5b0246cfe419",
+      "text_length": 20342,
+      "signal_snippets": [
+        "Grant Eligibility",
+        "SW, Albuquerque, NM Cafe Hours: 7-2 weekdays (opens in a new tab) (opens in a new tab) Who We Are Grant Eligibility Grant Recipients Apply Connect With Us (opens in a new tab) (opens in a new tab) Grant Eligibility Grant Eligibility The McCune Charitable Foundation supports community-based work in the State of New Mexico that aligns with our nine Foundation Priorities and their corresponding Leverage Points.",
+        "Eligibility Guide Eligibility Guide Learn more Types of Grants Types of Grants Learn more Foundation Priorities Foundation Priorities Learn more FAQ FAQ Learn more Eligibility Guide Eligibility Guide Learn more Types of Grants Types of Grants Learn more Foundation Priorities Foundation Priorities Learn more FAQ FAQ Learn more Eligibility Guide Eligibility Guide Learn more Types of Grants Types of Grants Learn more Fo",
+        "Grants can be awarded to qualified 501(c)(3) non-profit organizations [ specifically, only the sub-classifications 509(a)(1) and 509(a)(2) ], federally-recognized Native American tribes, public schools, and governmental agencies.",
+        "While we recognize the value of the broad range of work being done by organizations in the non-profit sector, the McCune Charitable Foundation is not currently awarding grants for the following: Direct donations or grants to individuals Direct grants to for-profit institutions Projects in the area of health addressing and/or providing medical research related to particular diseases or conditions Projects that serve r",
+        "Multi-year Grants FAQ Discretionary Grants (on a rolling basis during the calendar year) You can get more information about General Operating Support Grants by scrolling up to Resources for Determining Eligibility in the Eligibility Guide section of this page.",
+        "Here, you can download the \u201cMcCune Foundation's Grantmaking Overview.\u201d For information about Discretionary Grants, click on the FAQ box above the Eligibility Guide section of this page.",
+        "The Foundation makes grants for general operating expenses to qualified 501(c)(3) non-profit organizations [ specifically, only the sub-classifications 509(a)(1) and 509(a)(2) ], federally-recognized Native American tribes, public schools, and governmental agencies.",
+        "( see Eligibility Guide, Resources for Determining Eligibility, \u201cDownload the McCune Foundation\u2019s Grantmaking Overview\u201d ) \u25b8 What is the range of grant awards?",
+        "See the \u201cGrantmaking Overview\u201d document located on this page for more information regarding the range and eligibility requirements for each category.",
+        "( see Eligibility Guide, Resources for Determining Eligibility, \u201cDownload the McCune Foundation\u2019s Grantmaking Overview\u201d ) Discretionary grants are up to a maximum of $5,000 per year; however, due to budget considerations, the average grant size is generally closer to $1,000.",
+        "\u25b8 What if I have a fiscal sponsor?",
+        "If you have a fiscal sponsor, you will need to coordinate filling out the application form with a representative from the sponsoring organization.",
+        "More Information on the Foundation\u2019s Grantmaking More Information on the Foundation\u2019s Grantmaking Eligibility Guide Eligibility Guide Foundation Priorities Foundation Priorities About McCune News Eligibility Guide Foundation Priorities Apply Contact Us About McCune News Eligibility Guide Foundation Priorities Apply Contact Us 109 Gold Ave.",
+        "John unless otherwise noted copyright 2020 McCune Charitable Foundation Who We Are Grant Eligibility Grant Recipients Apply Connect With Us Who We Are Grant Eligibility Grant Recipients Apply Connect With Us Who We Are Grant Eligibility Grant Recipients Apply Connect With Us Who We Are Grant Eligibility Grant Recipients Apply Connect With Us"
       ]
     }
   }

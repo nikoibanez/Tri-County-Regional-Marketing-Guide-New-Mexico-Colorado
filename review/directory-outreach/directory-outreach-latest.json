@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T20:29:33.230174+00:00",
+  "generated_at": "2026-10-26T20:25:42.532192+00:00",
   "source": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/dist/tri-county-netlify-guide-deep/data/guide-data.json",
   "summary": {
     "entries": 1362,
@@ -37,8 +37,8 @@
       "front_desk_referrals": {
         "label": "Front-desk referrals",
         "listed": 0,
-        "ask": 282,
-        "not_indicated": 1080
+        "ask": 283,
+        "not_indicated": 1079
       },
       "directory_listing": {
         "label": "Directory profiles and listings",
@@ -55,8 +55,8 @@
       "social_cross_promotion": {
         "label": "Social cross-promotion",
         "listed": 0,
-        "ask": 39,
-        "not_indicated": 1323
+        "ask": 38,
+        "not_indicated": 1324
       },
       "newsletter_mailing_list": {
         "label": "Newsletters and mailing lists",

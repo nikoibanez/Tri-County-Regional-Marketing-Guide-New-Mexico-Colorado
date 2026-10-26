@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-22",
+  "generated_at": "2026-10-26",
   "description": "Controlled search keywords derived from canonical listing fields and current public-page title, metadata, and heading signals.",
   "entries": {
     "the-candy-crate-colfax-retail-sweets": {
@@ -185,12 +185,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/allen-fields-sports-complex/",
       "final_url": "https://visitangelfirenm.com/listing/allen-fields-sports-complex/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-19",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "118732e0284512c4b76bde1d8b6db065737e8083ae732ee4edca5bf77b6029bf",
+      "error": ""
     },
     "travel-guide-alpine-lumber-angel-fire-colfax": {
       "resource_name": "Alpine Lumber Company",
@@ -204,12 +204,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/alpine-lumber-company/",
       "final_url": "https://visitangelfirenm.com/listing/alpine-lumber-company/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "a63c05687a9c4f0f1f89d2ad724575e721226831728c644b8f31f1789567b922",
+      "error": ""
     },
     "angel-fire-colfax-resort-and-visitor-economy-hub-with-lodging-recreation": {
       "resource_name": "Angel Fire",
@@ -322,27 +322,31 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/angel-fire-community-center/",
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-community-center/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "2938dd0dc86eae5e240d5d77e2f6ba3261f226be141df77416d6b35f69e47dfa",
+      "error": ""
     },
     "travel-guide-angel-fire-ebikes-angel-fire-colfax": {
       "resource_name": "Angel Fire Ebikes LLC",
-      "keywords": [],
+      "keywords": [
+        "hiking"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "hiking"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/angel-fire-ebikes-llc/",
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-ebikes-llc/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "c9b5270fda6cba60f03fd24e7273de148e9e28b8c1296863f45e3841f6db80cf",
+      "error": ""
     },
     "yellowpages-lead-angel-fire-environmental-architectural-control-angel-fire-colfax": {
       "resource_name": "Angel Fire Environmental Architectural Control",
@@ -376,18 +380,22 @@
     },
     "travel-guide-angel-fire-homes-angel-fire-colfax": {
       "resource_name": "Angel Fire Homes",
-      "keywords": [],
+      "keywords": [
+        "outdoor recreation"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "outdoor recreation"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/angel-fire-homes/",
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-homes/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "77fdf5fa9b7099c53b7af0b050ba8f9c05186d54aa17da9c2e134ce95ba9898e",
+      "error": ""
     },
     "yellowpages-lead-angel-fire-homes-real-estate-construction-angel-fire-colfax": {
       "resource_name": "Angel Fire Homes Real Estate And Construction",
@@ -499,16 +507,18 @@
         "outdoor recreation",
         "tourism"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "golf"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/angel-fire-resort-nordic-center-golf-course/",
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-resort-nordic-center-golf-course/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "3625d3a0352164f89b7892b0c4b642abaa03a7ac86c5e42d0f5910d064f14b9e",
+      "error": ""
     },
     "angel-fire-resort-vacation-rentals-colfax-lodging": {
       "resource_name": "Angel Fire Resort Vacation Rentals",
@@ -518,16 +528,18 @@
       "canonical_keywords": [
         "lodging"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "lodging"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/angel-fire-resort-vacation-rentals/",
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-resort-vacation-rentals/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "cf84d154f4b2bb744443e0488e25c3e302ee3200b2add04b2fd84c5a025c8dbe",
+      "error": ""
     },
     "angel-fire-rv-resort-colfax-lodging": {
       "resource_name": "Angel Fire RV Resort",
@@ -571,16 +583,18 @@
       "canonical_keywords": [
         "visitor center"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "visitor center"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/angel-fire-visitors-center/",
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-visitors-center/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "34e74e0e52462ccc25544303cfa369ab2ab109536edddb54ff5a8d97aba75956",
+      "error": ""
     },
     "angel-fired-pizza-colfax-food-beverage": {
       "resource_name": "Angel Fired Pizza",
@@ -590,12 +604,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/angel-fired-pizza/",
       "final_url": "https://visitangelfirenm.com/listing/angel-fired-pizza/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "607e3c4603c6e9a1fa937460ed61187ba64ae8094a64088d7873e179b77b3503",
+      "error": ""
     },
     "yellowpages-lead-angelfire-flooring-angel-fire-colfax": {
       "resource_name": "Angelfire Flooring",
@@ -620,31 +634,37 @@
       "canonical_keywords": [
         "outdoor recreation"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "outdoor recreation"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/",
       "final_url": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-08-19",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "0e81a45b75a2cdf42b07d80b9798042083b59548a99f633b573ec677521cf9c2",
+      "error": ""
     },
     "travel-guide-angel-s-outback-adventures-angel-fire-colfax": {
       "resource_name": "Angel’s Outback Adventures, LLC",
-      "keywords": [],
+      "keywords": [
+        "outdoor recreation"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "outdoor recreation"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/",
       "final_url": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "0e81a45b75a2cdf42b07d80b9798042083b59548a99f633b573ec677521cf9c2",
+      "error": ""
     },
     "travel-guide-arias-taqueria-food-truck-angel-fire-colfax": {
       "resource_name": "Arias Taqueria Food Truck",
@@ -654,16 +674,18 @@
       "canonical_keywords": [
         "food truck"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "food truck"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/arias-taqueria-food-truck/",
       "final_url": "https://visitangelfirenm.com/listing/arias-taqueria-food-truck/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1bdda63cf54ab0d8123d84ea566dac59172a7d309cbced4f0353107973cc280a",
+      "error": ""
     },
     "art-up-northern-new-mexico-colfax-arts-nonprofit-artist-membership-organiz": {
       "resource_name": "Art Up Northern New Mexico",
@@ -696,12 +718,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/aspen-gold-laundromat/",
       "final_url": "https://visitangelfirenm.com/listing/aspen-gold-laundromat/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "85fbd642c7fe9e7b455cb9ff8efdacc2296881a634d9ff2c94e38c194fe4d0d4",
+      "error": ""
     },
     "travel-guide-aspen-springs-at-angel-fire-angel-fire-colfax": {
       "resource_name": "Aspen Springs at Angel Fire",
@@ -751,16 +773,19 @@
         "cafe",
         "restaurant"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "bakery",
+        "cafe"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/the-bakery-and-cafe/",
       "final_url": "https://visitangelfirenm.com/listing/the-bakery-and-cafe/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "dc9194fe74c1658b744a356831502334be5ac2b4f742e41b24dec71cd7807edb",
+      "error": ""
     },
     "the-bakery-cafe-colfax-food-beverage": {
       "resource_name": "The Bakery & Cafe @ Angel Fire",
@@ -870,12 +895,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/blue-dawg-furnishings/",
       "final_url": "https://visitangelfirenm.com/listing/blue-dawg-furnishings/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "0c2db49f2728e5f79389087488032e160aa21281facdeb4be5e1ab8685f4a63a",
+      "error": ""
     },
     "yellowpages-lead-blue-mountain-real-estate-angel-fire-colfax": {
       "resource_name": "Blue Mountain Real Estate",
@@ -908,12 +933,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/ski-tech-bluebird-mountain-sports/",
       "final_url": "https://visitangelfirenm.com/listing/ski-tech-bluebird-mountain-sports/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "b71bca158cd47715a360915c4454f0ebeeba7cbc91a5b6f8569d844e2b6e834c",
+      "error": ""
     },
     "yellowpages-lead-bob-s-yard-angel-fire-colfax": {
       "resource_name": "Bob's Yard",
@@ -993,12 +1018,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/cabin-comforts/",
       "final_url": "https://visitangelfirenm.com/listing/cabin-comforts/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "f8fe8a03ef9e18782255f2607c31a7d6cb74ca8e4d2edf07bd96a39fb7308d72",
+      "error": ""
     },
     "travel-guide-capulin-camp-and-rv-park-angel-fire-colfax": {
       "resource_name": "Capulin Camp & RV Park",
@@ -1008,16 +1033,18 @@
       "canonical_keywords": [
         "camping"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "camping"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/capulin-camp-rv-park/",
       "final_url": "https://visitangelfirenm.com/listing/capulin-camp-rv-park/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "2762cbe976cb84597cf94a65a25efcaac2599d4339d7fdd80e8eb3b0954c7740",
+      "error": ""
     },
     "travel-guide-casa-de-artesanias-angel-fire-colfax": {
       "resource_name": "Casa de Artesanias",
@@ -1040,18 +1067,22 @@
     },
     "travel-guide-chisum-group-berkshire-hathaway-homeservices-angel-fire-colfax": {
       "resource_name": "Chisum Group | Berkshire Hathaway HomeServices",
-      "keywords": [],
+      "keywords": [
+        "real estate"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "real estate"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/chisum-group-berkshire-hathaway-homeservices-angel-fire-real-estate/",
       "final_url": "https://visitangelfirenm.com/listing/chisum-group-berkshire-hathaway-homeservices-angel-fire-real-estate/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "21e8c2232dfd11ce2e7ef121b6ba13a341ffef842e008a29e4ad2036f5260e2b",
+      "error": ""
     },
     "yellowpages-lead-chris-s-plumbing-angel-fire-colfax": {
       "resource_name": "Chris's Plumbing",
@@ -1076,12 +1107,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/cimarron-canyon-state-park/",
       "final_url": "https://visitangelfirenm.com/listing/cimarron-canyon-state-park/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "71fd473eabf486da40bf8708db9296b824a6dfa4b1514b2edaed997814dcb974",
+      "error": ""
     },
     "travel-guide-clean-af-angel-fire-colfax": {
       "resource_name": "Clean AF LLC",
@@ -1091,12 +1122,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/clean-af-llc/",
       "final_url": "https://visitangelfirenm.com/listing/clean-af-llc/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "ceb85a54b752849c884d9a3c9480418b741ef11a98934233c1454c5588f224f8",
+      "error": ""
     },
     "yellowpages-lead-coinstar-angel-fire-colfax": {
       "resource_name": "Coinstar",
@@ -1115,18 +1146,22 @@
     },
     "travel-guide-coldwell-banker-mountain-properties-angel-fire-colfax": {
       "resource_name": "Coldwell Banker Mountain Properties",
-      "keywords": [],
+      "keywords": [
+        "real estate"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "real estate"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/coldwell-banker-mountain-properties/",
       "final_url": "https://visitangelfirenm.com/listing/coldwell-banker-mountain-properties/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "1a066ab9a30342add5680da2c209ca2a4f37922baf9233a88446b2cc208e4cf4",
+      "error": ""
     },
     "travel-guide-community-center-park-angel-fire-colfax": {
       "resource_name": "Community Center Park",
@@ -1136,46 +1171,53 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/community-center-park/",
       "final_url": "https://visitangelfirenm.com/listing/community-center-park/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "62ef23dc56ba26a545b18b9aeda49d048354f9da39e50305ae6d09373527df98",
+      "error": ""
     },
     "cottam-s-of-angel-fire-colfax-retail": {
       "resource_name": "Cottam's of Angel Fire",
       "keywords": [
-        "retail"
+        "retail",
+        "skiing"
       ],
       "canonical_keywords": [
         "retail"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "skiing"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/cottams-of-angel-fire/",
       "final_url": "https://visitangelfirenm.com/listing/cottams-of-angel-fire/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "54f9c8701cca8e17bd84460184f5472528f70ccb7b6c607e47e0ebc9c3891a2d",
+      "error": ""
     },
     "travel-guide-coyote-creek-state-park-angel-fire-colfax": {
       "resource_name": "Coyote Creek State Park",
-      "keywords": [],
+      "keywords": [
+        "camping"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "camping"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/coyote-creek-state-park/",
       "final_url": "https://visitangelfirenm.com/listing/coyote-creek-state-park/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "c1d0a388f53b81cba9defe41eace8f960cc9bf0ab92beda03805d154ad095ed7",
+      "error": ""
     },
     "travel-guide-dan-s-flooring-and-window-covering-angel-fire-colfax": {
       "resource_name": "Dan’s Flooring & Window Covering Inc.",
@@ -1204,16 +1246,18 @@
       "canonical_keywords": [
         "real estate"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "real estate"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/desert-sky-realty-investments/",
       "final_url": "https://visitangelfirenm.com/listing/desert-sky-realty-investments/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "ae34964e55712bf54b6147ff4a941bafeac7a7eb13257363daa5d350883e070c",
+      "error": ""
     },
     "yellowpages-lead-dish-network-angel-fire-colfax": {
       "resource_name": "Dish Network",
@@ -1242,12 +1286,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/dollar-general/",
       "final_url": "https://visitangelfirenm.com/listing/dollar-general/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "c8f6d16ed1470fe6c45ca0ffbb66b6afd52b0adb52c9f7a260f8c2993e21dfc4",
+      "error": ""
     },
     "el-jefe-colfax-food-beverage": {
       "resource_name": "El Jefe",
@@ -1306,12 +1350,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/elevated-pour/",
       "final_url": "https://visitangelfirenm.com/listing/elevated-pour/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-19",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "13391812352d7464f58e3a8639edf0e7140b40bea704015a4732d14aa0b4358d",
+      "error": ""
     },
     "yellowpages-lead-elks-lodge-angel-fire-colfax": {
       "resource_name": "Elks Lodge",
@@ -1336,16 +1380,18 @@
       "canonical_keywords": [
         "camping"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "camping"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/enchanted-circle-campground/",
       "final_url": "https://visitangelfirenm.com/listing/enchanted-circle-campground/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "b802a5fe6da025e58ee2717f0550e63299192d3985358564471282a9f2ddcf94",
+      "error": ""
     },
     "travel-guide-enchanted-circle-campground-and-rv-park-angel-fire-colfax": {
       "resource_name": "Enchanted Circle Campground & RV Park",
@@ -1355,16 +1401,18 @@
       "canonical_keywords": [
         "camping"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "camping"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/enchanted-circle-campground-rv-park/",
       "final_url": "https://visitangelfirenm.com/listing/enchanted-circle-campground-rv-park/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "778a1e3f60824e1196d2f7b7eba3c8db419287c625ad50388d52766a41d00cc5",
+      "error": ""
     },
     "travel-guide-enchanted-circle-pottery-angel-fire-colfax": {
       "resource_name": "Enchanted Circle Pottery",
@@ -1394,37 +1442,46 @@
     },
     "travel-guide-enchanted-outpost-magazine-angel-fire-colfax": {
       "resource_name": "Enchanted Outpost Magazine",
-      "keywords": [],
+      "keywords": [
+        "marketing",
+        "visitor guide"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "marketing",
+        "visitor guide"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/enchanted-outpost-magazine/",
       "final_url": "https://visitangelfirenm.com/listing/enchanted-outpost-magazine/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "d19626ea9c540b157c37dd7a30db315f5364fd708203567a8a935c042c49023a",
+      "error": ""
     },
     "travel-guide-family-dollar-angel-fire-colfax": {
       "resource_name": "Family Dollar",
       "keywords": [
-        "retail"
+        "retail",
+        "grocery"
       ],
       "canonical_keywords": [
         "retail"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "grocery"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/family-dollar/",
       "final_url": "https://visitangelfirenm.com/listing/family-dollar/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "a438b0bca7402a7298f92c9a03c538b7d48e7c2fdca5694007b8c16ea0e452d6",
+      "error": ""
     },
     "travel-guide-far-flung-adventures-angel-fire-colfax": {
       "resource_name": "Far Flung Adventures",
@@ -1453,27 +1510,31 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/four-seasons-of-angel-fire/",
       "final_url": "https://visitangelfirenm.com/listing/four-seasons-of-angel-fire/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "d45b64b107ad7aa90b90f814ef4cdf6c8c2194683021e47b63811bdcc7ede135",
+      "error": ""
     },
     "travel-guide-frontier-park-angel-fire-colfax": {
       "resource_name": "Frontier Park",
-      "keywords": [],
+      "keywords": [
+        "live music"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "live music"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/frontier-park/",
       "final_url": "https://visitangelfirenm.com/listing/frontier-park/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "1583ef1b616adf3de8a8df6251a438b304f78487627b3a4f10f693420ea9fec6",
+      "error": ""
     },
     "travel-guide-girl-scouts-of-new-mexico-trails-angel-fire-colfax": {
       "resource_name": "Girl Scouts of New Mexico Trails",
@@ -1485,16 +1546,18 @@
         "hiking",
         "retail"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "hiking"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/girl-scouts-of-new-mexico-trails/",
       "final_url": "https://visitangelfirenm.com/listing/girl-scouts-of-new-mexico-trails/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "8b7fdb3fabcde9fda6fa9be3ce9ff70f212a928015b40c5ddf3d97c34f9d9c99",
+      "error": ""
     },
     "travel-guide-golden-eagle-rv-park-and-resort-angel-fire-colfax": {
       "resource_name": "Golden Eagle RV Park & Resort",
@@ -1546,12 +1609,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/high-country-ski-rental/",
       "final_url": "https://visitangelfirenm.com/listing/high-country-ski-rental/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "05017d5cc94fdc0b2f5846aa1bda1ce57adf972f9a7e4c6b76e0e55b9e92ce65",
+      "error": ""
     },
     "yellowpages-lead-high-country-ski-rentals-angel-fire-colfax": {
       "resource_name": "High Country Ski Rentals",
@@ -1580,12 +1643,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/the-indigo-market/",
       "final_url": "https://visitangelfirenm.com/listing/the-indigo-market/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "a787cb832255160bb81690b88802e736e1c8f3a2467ccfff6f2fba5b07314934",
+      "error": ""
     },
     "yellowpages-lead-interior-exterior-painting-by-jose-angel-fire-colfax": {
       "resource_name": "Interior & Exterior Painting by Jose",
@@ -1669,12 +1732,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/jc-critter-control-llc/",
       "final_url": "https://visitangelfirenm.com/listing/jc-critter-control-llc/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "35284b2be9489ee15c28e09bf530bd24b8074a939a2ac87d729e359647a41937",
+      "error": ""
     },
     "travel-guide-jeanette-s-specialty-foods-and-catering-angel-fire-colfax": {
       "resource_name": "Jeanette’s Specialty Foods & Catering",
@@ -1684,16 +1747,18 @@
       "canonical_keywords": [
         "catering"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "catering"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/jeanettes-specialty-foods-catering/",
       "final_url": "https://visitangelfirenm.com/listing/jeanettes-specialty-foods-catering/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "07962b427566fbcf1ef499ace736be9227b64a36791da659e980e99ef679426f",
+      "error": ""
     },
     "yellowpages-lead-john-r-sutton-general-building-angel-fire-colfax": {
       "resource_name": "John R Sutton General Building",
@@ -1778,16 +1843,18 @@
       "canonical_keywords": [
         "camping"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "camping"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/las-petacas-campground/",
       "final_url": "https://visitangelfirenm.com/listing/las-petacas-campground/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "d00ed88c60c7d1a691ecf1e9c0e9b1318f4b0954e6022883115956564ac607ba",
+      "error": ""
     },
     "travel-guide-legacy-silver-angel-fire-colfax": {
       "resource_name": "Legacy Silver Company",
@@ -1801,12 +1868,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/legacy-silver-company/",
       "final_url": "https://visitangelfirenm.com/listing/legacy-silver-company/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "0eb78ef647edb8d91051ae63d99ebd717a21bed4adb4985cff340951aeaab4dc",
+      "error": ""
     },
     "travel-guide-legends-bar-and-grill-angel-fire-colfax": {
       "resource_name": "Legends Bar and Grill",
@@ -1816,16 +1883,18 @@
       "canonical_keywords": [
         "restaurant"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "restaurant"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/legends-bar-and-grill/",
       "final_url": "https://visitangelfirenm.com/listing/legends-bar-and-grill/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "bb757637600ac34b652166fa31e8bd15900ee1571a7511f3d07fb82cd222a998",
+      "error": ""
     },
     "travel-guide-legends-grill-angel-fire-colfax": {
       "resource_name": "Legends Grill",
@@ -1871,18 +1940,22 @@
     },
     "travel-guide-lindsey-homes-angel-fire-colfax": {
       "resource_name": "Lindsey Homes",
-      "keywords": [],
+      "keywords": [
+        "real estate"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "real estate"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/lindsey-homes/",
       "final_url": "https://visitangelfirenm.com/listing/lindsey-homes/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "3538c28fe5aab3345a5972357415571bb6dfb0e9fc4693c230033c62b40ef6fb",
+      "error": ""
     },
     "travel-guide-lindsey-living-angel-fire-colfax": {
       "resource_name": "Lindsey Living",
@@ -1898,25 +1971,29 @@
       "final_url": "https://angelfirechamber.org/business/lindsey-living/",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
     },
     "travel-guide-lindsey-vacation-rentals-angel-fire-colfax": {
       "resource_name": "Lindsey Vacation Rentals",
-      "keywords": [],
+      "keywords": [
+        "outdoor recreation"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "outdoor recreation"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/lindsey-vacation-rentals/",
       "final_url": "https://visitangelfirenm.com/listing/lindsey-vacation-rentals/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "4d519e7d963a1e6cf6dabfed2514e451cf986e74f37554dc32fae4e86ac2701a",
+      "error": ""
     },
     "yellowpages-lead-line-of-sight-surveying-angel-fire-colfax": {
       "resource_name": "Line of Sight Surveying",
@@ -1949,7 +2026,7 @@
       "final_url": "https://www.startupspace.app/resource?page=62",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2020,12 +2097,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/los-rios-river-runners/",
       "final_url": "https://visitangelfirenm.com/listing/los-rios-river-runners/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "854767c4466f06dd234d0dad21c290d79fed392b7dde0826130133518ed6114d",
+      "error": ""
     },
     "lowe-s-market-colfax-retail-grocery": {
       "resource_name": "Lowe's Market",
@@ -2037,16 +2114,18 @@
         "grocery",
         "retail"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "grocery"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/lowes-market/",
       "final_url": "https://visitangelfirenm.com/listing/lowes-market/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "7212ebb2fc0a6557d9e2fb34c5d980a8560a66eb18375faa5341d1b2c096e872",
+      "error": ""
     },
     "travel-guide-maverick-campground-angel-fire-colfax": {
       "resource_name": "Maverick Campground",
@@ -2056,16 +2135,18 @@
       "canonical_keywords": [
         "camping"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "camping"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/maverick-campground/",
       "final_url": "https://visitangelfirenm.com/listing/maverick-campground/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "6e3d948c57f234bd741bf29fa5b4ecc2d5a27a31bf010da870cada0cfe980d75",
+      "error": ""
     },
     "yellowpages-lead-mccash-strider-a-dds-angel-fire-colfax": {
       "resource_name": "McCash, Strider A, DDS",
@@ -2084,18 +2165,22 @@
     },
     "mi-cocina-mexicana-colfax-food-beverage": {
       "resource_name": "Mi Cocina Mexicana",
-      "keywords": [],
+      "keywords": [
+        "restaurant"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "restaurant"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/mi-cocina-mexicana/",
       "final_url": "https://visitangelfirenm.com/listing/mi-cocina-mexicana/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "0778b47307fa1db1b1c1406bfd558da107c832c3caf5ecf6f661da3bffacabe3",
+      "error": ""
     },
     "travel-guide-mikuna-grill-angel-fire-colfax": {
       "resource_name": "Mikuna Grill",
@@ -2109,12 +2194,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/mikuna-grill/",
       "final_url": "https://visitangelfirenm.com/listing/mikuna-grill/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "f38d6f8a3b59cb323fd3f0b11db3c68f17c4c9871c44ae0ccf7b3b5bc375da5b",
+      "error": ""
     },
     "travel-guide-mikuna-grill-is-temporarily-at-bakery-and-cafe-angel-fire-angel-fire-colfax": {
       "resource_name": "Mikuna Grill is temporarily at The Bakery & Cafe @Angel Fire",
@@ -2141,18 +2226,22 @@
     },
     "travel-guide-monte-verde-lake-angel-fire-colfax": {
       "resource_name": "Monte Verde Lake",
-      "keywords": [],
+      "keywords": [
+        "fishing"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "fishing"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/monte-verde-lake/",
       "final_url": "https://visitangelfirenm.com/listing/monte-verde-lake/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "6a078dd33df196d3ec4eb37d0966761db2b4d4054f8ec5a411151454415f6d04",
+      "error": ""
     },
     "yellowpages-lead-monte-verde-lake-office-angel-fire-colfax": {
       "resource_name": "Monte Verde Lake Office",
@@ -2285,18 +2374,22 @@
     },
     "travel-guide-mountain-serenity-rentals-angel-fire-colfax": {
       "resource_name": "Mountain Serenity Rentals",
-      "keywords": [],
+      "keywords": [
+        "vacation rental"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "vacation rental"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/mountain-serenity-rentals/",
       "final_url": "https://visitangelfirenm.com/listing/mountain-serenity-rentals/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-19",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "8b4c480da4344f4a07821385d8de4cab232ab1dbd06a993eb3f339b17b7c73c9",
+      "error": ""
     },
     "yellowpages-lead-mountain-sports-angel-fire-colfax": {
       "resource_name": "Mountain Sports",
@@ -2347,27 +2440,31 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/mountain-supply-true-value/",
       "final_url": "https://visitangelfirenm.com/listing/mountain-supply-true-value/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "cad315b3c4b638c4057ab8655ae9e7eefe83fccc29d6ec4f836a4b26d44152d5",
+      "error": ""
     },
     "travel-guide-mountain-view-event-center-angel-fire-colfax": {
       "resource_name": "Mountain View Event Center",
-      "keywords": [],
+      "keywords": [
+        "event venue"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "event venue"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/mountain-view-event-center/",
       "final_url": "https://visitangelfirenm.com/listing/mountain-view-event-center/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "7461215b59c4e11746e8fc9a7f3547e3b5611845e16f0ac34c649638a2b3cc37",
+      "error": ""
     },
     "travel-guide-music-from-angel-fire-angel-fire-colfax": {
       "resource_name": "Music from Angel Fire",
@@ -2440,16 +2537,18 @@
       "canonical_keywords": [
         "real estate"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "real estate"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/north-country-real-estate/",
       "final_url": "https://visitangelfirenm.com/listing/north-country-real-estate/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "c7e19823db8c684bd3f9cf283cede821d5077e81939e159e54070b53d34d2bb7",
+      "error": ""
     },
     "yellowpages-lead-northeastern-construction-angel-fire-colfax": {
       "resource_name": "Northeastern Construction",
@@ -2509,36 +2608,45 @@
     "travel-guide-off-grid-grow-dispensary-angel-fire-colfax": {
       "resource_name": "Off Grid Grow Co. Dispensary",
       "keywords": [
-        "retail"
+        "retail",
+        "outdoor recreation"
       ],
       "canonical_keywords": [
         "retail"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "outdoor recreation"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/off-grid-grow-co-dispensary/",
       "final_url": "https://visitangelfirenm.com/listing/off-grid-grow-co-dispensary/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "87ef9e1866f104529c29b10077b2a35ba861174f3b1f77e1a4bee89053ba1a04",
+      "error": ""
     },
     "travel-guide-olympic-park-angel-fire-colfax": {
       "resource_name": "Olympic Park",
-      "keywords": [],
+      "keywords": [
+        "hiking",
+        "outdoor recreation"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "hiking",
+        "outdoor recreation"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/olympic-park/",
       "final_url": "https://visitangelfirenm.com/listing/olympic-park/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "f1da5a59d6851530f8d67b13783775c5390a859660130dd1cd25236ae7e60e67",
+      "error": ""
     },
     "travel-guide-one-people-s-kitchen-angel-fire-colfax": {
       "resource_name": "One People’s Kitchen",
@@ -2548,16 +2656,18 @@
       "canonical_keywords": [
         "restaurant"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "restaurant"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/one-peoples-kitchen/",
       "final_url": "https://visitangelfirenm.com/listing/one-peoples-kitchen/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "df39b075d4638f99b836ff0aef2f245228b01971dbe8e5d37eb448c9ec98ce08",
+      "error": ""
     },
     "travel-guide-par-and-grill-angel-fire-colfax": {
       "resource_name": "Par & Grill",
@@ -2611,21 +2721,26 @@
     "travel-guide-pine-and-peak-home-decor-angel-fire-colfax": {
       "resource_name": "Pine & Peak Home Decor",
       "keywords": [
-        "retail"
+        "retail",
+        "gift shop",
+        "jewelry"
       ],
       "canonical_keywords": [
         "retail"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "gift shop",
+        "jewelry"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/pine-peak-home-decor/",
       "final_url": "https://visitangelfirenm.com/listing/pine-peak-home-decor/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "f83a5c6c4e09791dcbb074cd203e21cea4dfd826e1f72a3a8b0b2a65bbc721d1",
+      "error": ""
     },
     "travel-guide-pizza-stop-angel-fire-colfax": {
       "resource_name": "Pizza Stop",
@@ -2639,12 +2754,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/pizza-stop/",
       "final_url": "https://visitangelfirenm.com/listing/pizza-stop/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "88a1f31fb6d8ec66cb88ceba25e90b92cade11824e2ecc287b2c7a0e0e861aef",
+      "error": ""
     },
     "travel-guide-ponce-de-leon-creations-angel-fire-colfax": {
       "resource_name": "Ponce de Leon Creations",
@@ -2715,21 +2830,24 @@
     "travel-guide-pub-and-grub-angel-fire-colfax": {
       "resource_name": "Pub and Grub",
       "keywords": [
-        "restaurant"
+        "restaurant",
+        "outdoor recreation"
       ],
       "canonical_keywords": [
         "restaurant"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "outdoor recreation"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/pub-and-grub/",
       "final_url": "https://visitangelfirenm.com/listing/pub-and-grub/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "743886468279563af838d654de726f474772e9a4249d7ed325fa16f4fc21019a",
+      "error": ""
     },
     "travel-guide-pub-n-grub-angel-fire-colfax": {
       "resource_name": "Pub n’grub",
@@ -2762,12 +2880,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/purple-sage-studio/",
       "final_url": "https://visitangelfirenm.com/listing/purple-sage-studio/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "be76bac18ab01954da91b2d099b98b31c42f22e58ec007e9c55b8520fc57a5ac",
+      "error": ""
     },
     "yellowpages-lead-rbs-true-value-angel-fire-colfax": {
       "resource_name": "Rbs True Value",
@@ -2792,16 +2910,18 @@
       "canonical_keywords": [
         "real estate"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "real estate"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/re-max-mountain-realty/",
       "final_url": "https://visitangelfirenm.com/listing/re-max-mountain-realty/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "f04965112e3399dd62f256431900f27b4d13d6af80d8677f9dc9d2a9167bd91a",
+      "error": ""
     },
     "travel-guide-resort-properties-of-angel-fire-angel-fire-colfax": {
       "resource_name": "Resort Properties of Angel Fire",
@@ -2830,27 +2950,31 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/ridgewalk-treehouse/",
       "final_url": "https://visitangelfirenm.com/listing/ridgewalk-treehouse/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "35332363673cb76027cc00ffe1af7f59dcff654d5a66c8b98a9dc3bb925b84cb",
+      "error": ""
     },
     "travel-guide-rio-grande-balloons-angel-fire-colfax": {
       "resource_name": "Rio Grande Balloons",
-      "keywords": [],
+      "keywords": [
+        "outdoor recreation"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "outdoor recreation"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/rio-grande-balloons/",
       "final_url": "https://visitangelfirenm.com/listing/rio-grande-balloons/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "a0b7b6180fb99af78cadfb9a1d23e88a927abed8870f8428b99dde265787f7a1",
+      "error": ""
     },
     "travel-guide-roadrunner-tours-angel-fire-colfax": {
       "resource_name": "Roadrunner Tours",
@@ -2912,12 +3036,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/rockies-market/",
       "final_url": "https://visitangelfirenm.com/listing/rockies-market/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "97f2b9ac4fe91c4dcf360004924ff8ea9f70a1c880139080e3d7f88f92375997",
+      "error": ""
     },
     "yellowpages-lead-rustic-chalet-angel-fire-colfax": {
       "resource_name": "Rustic Chalet",
@@ -2961,12 +3085,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/santa-fe-party-rentals/",
       "final_url": "https://visitangelfirenm.com/listing/santa-fe-party-rentals/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "65365b391a31bffd246866d6c0f77f4dc396a55b7261de5f3a8b27e0abc568ce",
+      "error": ""
     },
     "yellowpages-lead-security-mini-storage-angel-fire-colfax": {
       "resource_name": "Security Mini Storage",
@@ -3006,16 +3130,18 @@
       "canonical_keywords": [
         "library"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "library"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/the-shuter-library-of-angel-fire/",
       "final_url": "https://visitangelfirenm.com/listing/the-shuter-library-of-angel-fire/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "3e3aa4b7f9ec647266337d105441e85e2b65f8720828546c269a0f90963ae47e",
+      "error": ""
     },
     "travel-guide-sierra-bonita-cabins-and-rv-park-angel-fire-colfax": {
       "resource_name": "Sierra Bonita Cabins & RV Park",
@@ -3025,35 +3151,40 @@
       "canonical_keywords": [
         "camping"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "camping"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/sierra-bonita-cabins-rv-park/",
       "final_url": "https://visitangelfirenm.com/listing/sierra-bonita-cabins-rv-park/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "08d099a1f526fbb4f91094485e5fcab54f4f122deb766977442ce1636e379173",
+      "error": ""
     },
     "travel-guide-slope-side-sports-angel-fire-colfax": {
       "resource_name": "Slope Side Sports",
       "keywords": [
-        "retail"
+        "retail",
+        "gift shop"
       ],
       "canonical_keywords": [
         "retail"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "gift shop"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/slope-side-sports/",
       "final_url": "https://visitangelfirenm.com/listing/slope-side-sports/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-19",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "f937454d1a3d3016259bebde1f78846bf229efa4053b4d4af746e2d7bda8bf01",
+      "error": ""
     },
     "travel-guide-smoke-rings-bbq-angel-fire-colfax": {
       "resource_name": "Smoke Rings BBQ",
@@ -3063,12 +3194,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/smoke-rings-bbq/",
       "final_url": "https://visitangelfirenm.com/listing/smoke-rings-bbq/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "1e984c76fcf6759f262841053843877ced4178d4d10b37f415ca5684c4d6e3c5",
+      "error": ""
     },
     "travel-guide-snowball-lodge-angel-fire-colfax": {
       "resource_name": "Snowball Lodge, LLC",
@@ -3094,21 +3225,24 @@
     "travel-guide-snowblaze-ski-shop-angel-fire-colfax": {
       "resource_name": "Snowblaze Ski Shop",
       "keywords": [
-        "retail"
+        "retail",
+        "outdoor recreation"
       ],
       "canonical_keywords": [
         "retail"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "outdoor recreation"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/snowblaze-ski-shop/",
       "final_url": "https://visitangelfirenm.com/listing/snowblaze-ski-shop/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "47d892fa159b2420fdac6c291074e8f0b529b4a09a0d5e55b6fcb81b5e39a8cc",
+      "error": ""
     },
     "travel-guide-snowfish-ski-and-outdoor-formerly-cottam-s-of-angel-fire-angel-fire-colfax": {
       "resource_name": "Snowfish Ski & Outdoor formerly Cottam’s of Angel Fire",
@@ -3137,16 +3271,18 @@
       "canonical_keywords": [
         "photography"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "photography"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/southern-exposure-photography/",
       "final_url": "https://visitangelfirenm.com/listing/southern-exposure-photography/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "a79d66a971f03118bf0391a22ccefd86847dc2a544d29ad04eff09bb2d6d5518",
+      "error": ""
     },
     "yellowpages-lead-sticks-stones-custom-builder-angel-fire-colfax": {
       "resource_name": "Sticks & Stones Custom Builder",
@@ -3213,12 +3349,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/subway-lowes-pay-save/",
       "final_url": "https://visitangelfirenm.com/listing/subway-lowes-pay-save/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "5e915d6377a102eb1131c4836294b009f6add398526c9b2f82c7a73537e7bceb",
+      "error": ""
     },
     "travel-guide-summit-haus-angel-fire-colfax": {
       "resource_name": "Summit Haus",
@@ -3272,21 +3408,24 @@
     "travel-guide-sweet-shirt-angel-fire-colfax": {
       "resource_name": "Sweet Shirt Co",
       "keywords": [
-        "retail"
+        "retail",
+        "gift shop"
       ],
       "canonical_keywords": [
         "retail"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "gift shop"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/sweet-shirt-co/",
       "final_url": "https://visitangelfirenm.com/listing/sweet-shirt-co/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "e71467f46187aca4c451b9bd5450f4f37d7d5d9a1027cb64a77cc9c3b4dc933f",
+      "error": ""
     },
     "travel-guide-taos-community-foundation-angel-fire-colfax": {
       "resource_name": "Taos Community Foundation",
@@ -3296,12 +3435,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/taos-community-foundation/",
       "final_url": "https://visitangelfirenm.com/listing/taos-community-foundation/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "27b3e815a6772136ef2d6d0f57e863a8edd3c7162138d6f2d6c938e9c1425c0c",
+      "error": ""
     },
     "travel-guide-taos-lifestyle-angel-fire-colfax": {
       "resource_name": "Taos Lifestyle",
@@ -3369,22 +3508,27 @@
       "resource_name": "Taty at the Bump",
       "keywords": [
         "restaurant",
-        "retail"
+        "retail",
+        "bakery",
+        "cafe"
       ],
       "canonical_keywords": [
         "restaurant",
         "retail"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "bakery",
+        "cafe"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/taty-at-the-bump/",
       "final_url": "https://visitangelfirenm.com/listing/taty-at-the-bump/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "5a74d4e8b040e35f4f1359a71642cd900c2cac2f3b9c5cee8b7d024206e68a6a",
+      "error": ""
     },
     "taty-at-the-bump-colfax-food-beverage": {
       "resource_name": "Taty @ the Bump",
@@ -3424,18 +3568,22 @@
     },
     "travel-guide-thai-angel-angel-fire-colfax": {
       "resource_name": "Thai Angel",
-      "keywords": [],
+      "keywords": [
+        "restaurant"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "restaurant"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/thai-angel/",
       "final_url": "https://visitangelfirenm.com/listing/thai-angel/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "b0b796ba14650981dc98c772f049fa07ff5049613134ebb4659882d7b7a056b7",
+      "error": ""
     },
     "travel-guide-tolby-campground-cimarron-valley-angel-fire-colfax": {
       "resource_name": "Tolby Campground, Cimarron Valley",
@@ -3445,16 +3593,18 @@
       "canonical_keywords": [
         "camping"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "camping"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/tolby-campground-cimarron-valley/",
       "final_url": "https://visitangelfirenm.com/listing/tolby-campground-cimarron-valley/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "8123b824842b9c9a59e08ba6650e4e9b183fd9ff250829447e8ff03c6c803234",
+      "error": ""
     },
     "travel-guide-trailhead-angel-fire-colfax": {
       "resource_name": "The Trailhead",
@@ -3478,21 +3628,26 @@
     "travel-guide-trailhead-ski-shop-angel-fire-colfax": {
       "resource_name": "Trailhead Ski Shop",
       "keywords": [
-        "retail"
+        "retail",
+        "bakery",
+        "cafe"
       ],
       "canonical_keywords": [
         "retail"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "bakery",
+        "cafe"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/trailhead-ski-shop/",
       "final_url": "https://visitangelfirenm.com/listing/trailhead-ski-shop/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "9bb8204d9079362dc0664c663ea2507266c286ef307ad22e3f3c23aa7c71779d",
+      "error": ""
     },
     "yellowpages-lead-united-church-of-angel-fire-angel-fire-colfax": {
       "resource_name": "United Church of Angel Fire",
@@ -3526,18 +3681,22 @@
     },
     "travel-guide-vacasa-new-mexico-angel-fire-colfax": {
       "resource_name": "Vacasa New Mexico LLC",
-      "keywords": [],
+      "keywords": [
+        "vacation rental"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "vacation rental"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/vacasa-new-mexico-llc/",
       "final_url": "https://visitangelfirenm.com/listing/vacasa-new-mexico-llc/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "d7afa1c8b940b01f3e90ea4aaaee77902c3376ad43ee6fa17b21e33299b05a16",
+      "error": ""
     },
     "yellowpages-lead-valero-angel-fire-colfax": {
       "resource_name": "Valero",
@@ -3581,12 +3740,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/the-vietnam-veterans-memorial/",
       "final_url": "https://visitangelfirenm.com/listing/the-vietnam-veterans-memorial/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "ac61540a2d19d5055a65a511ba7af2ea87aa3b7dad611a4c5c3778b450dcaa00",
+      "error": ""
     },
     "yellowpages-lead-village-church-angel-fire-colfax": {
       "resource_name": "Village Church",
@@ -3634,12 +3793,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/village-ski-shop/",
       "final_url": "https://visitangelfirenm.com/listing/village-ski-shop/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "0331535d4e7f74c18a2e218fd5d5256d3e4b13e5cd3303ae5aaa40ca6247afd2",
+      "error": ""
     },
     "travel-guide-village-ski-shop-and-ski-rentals-angel-fire-colfax": {
       "resource_name": "Village Ski Shop & Ski Rentals",
@@ -3670,27 +3829,31 @@
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/catering/",
       "final_url": "https://visitangelfirenm.com/catering/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "29052d0347062fe6b57fa30b48720b6656b274efbb8f4b08462bef400e469d09",
+      "error": ""
     },
     "travel-guide-weezie-s-wild-rides-angel-fire-colfax": {
       "resource_name": "Weezie’s Wild Rides",
-      "keywords": [],
+      "keywords": [
+        "outfitter"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "outfitter"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/weezies-wild-rides/",
       "final_url": "https://visitangelfirenm.com/listing/weezies-wild-rides/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "1e2ae6de568afb9a36c56545b899003152aefedf2822a621fbfa028082aaaf95",
+      "error": ""
     },
     "travel-guide-wende-woolley-photography-angel-fire-colfax": {
       "resource_name": "Wende Woolley Photography",
@@ -3730,18 +3893,22 @@
     },
     "travel-guide-whatville-angel-fire-colfax": {
       "resource_name": "Whatville",
-      "keywords": [],
+      "keywords": [
+        "sculpture"
+      ],
       "canonical_keywords": [],
-      "source_keywords": [],
+      "source_keywords": [
+        "sculpture"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/whatville/",
       "final_url": "https://visitangelfirenm.com/listing/whatville/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "f928afb394d988bbeb714044c49dce43f12ef48ae72c7d702d92577023ded6ce",
+      "error": ""
     },
     "travel-guide-winter-sports-angel-fire-colfax": {
       "resource_name": "Winter Sports",
@@ -3815,35 +3982,40 @@
       "canonical_keywords": [
         "restaurant"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "restaurant"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/zebs-restaurant-and-bar/",
       "final_url": "https://visitangelfirenm.com/listing/zebs-restaurant-and-bar/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "ff13bb94e07c2552b9c1bb809054c5e54f45b4f8c76c739d76b003eefbaf9d56",
+      "error": ""
     },
     "travel-guide-zia-bar-angel-fire-colfax": {
       "resource_name": "Zia Bar",
       "keywords": [
-        "restaurant"
+        "restaurant",
+        "outdoor recreation"
       ],
       "canonical_keywords": [
         "restaurant"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "outdoor recreation"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://visitangelfirenm.com/listing/zia-bar/",
       "final_url": "https://visitangelfirenm.com/listing/zia-bar/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
+      "last_changed": "2026-10-26",
+      "content_hash": "0db3681ccf6aca5df7ca9472f7fccd76ba1e2badedbb7aa7fe13f6a0f41608c8",
+      "error": ""
     },
     "casa-del-gavilan-historic-inn-colfax-lodging": {
       "resource_name": "Casa del Gavilan Historic Inn",
@@ -4932,7 +5104,7 @@
       "final_url": "https://allseasonsgiftshop.business.site/",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-19",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -5045,10 +5217,10 @@
       "final_url": "https://locations.arbys.com/nm/raton/415-clayton-hwy.html",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "travel-guide-art-of-snacks-raton-colfax": {
       "resource_name": "The Art of Snacks",
@@ -7508,7 +7680,7 @@
       "final_url": "https://www.mcdonalds.com/us/en-us/location/nm/raton/542-clayton-rd/6011.html?cid=RF:YXT:GMB::Clicks",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -9637,7 +9809,7 @@
       "final_url": "https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -10173,16 +10345,18 @@
         "technical assistance",
         "workshop"
       ],
-      "source_keywords": [],
+      "source_keywords": [
+        "business support"
+      ],
       "blocked_source_keywords": [],
       "source_url": "https://county.pueblo.org/energy-and-economic-development-department/small-business-development-center",
       "final_url": "https://county.pueblo.org/energy-and-economic-development-department/small-business-development-center",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "58855fa2572fb9a7adf3323a9bdf9ecaf2fa1a6f1aff974c3f21f3edd151091f",
+      "error": ""
     },
     "travel-guide-dakota-wall-entry-huerfano": {
       "resource_name": "The Dakota Wall",
@@ -10315,10 +10489,10 @@
       "final_url": "https://huerfanofair.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1016)>"
     },
     "travel-guide-lake-isabel-entry-huerfano": {
       "resource_name": "Lake Isabel",
@@ -11066,12 +11240,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://bigronline.com/locations/",
       "final_url": "https://bigronline.com/locations/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "a1cdf4320c9fbbba2fe3b3e79a630e972b0946681088eb593f1aaf02c415d2a3",
+      "error": ""
     },
     "big-r-la-veta-huerfano-retail-farm-ranch": {
       "resource_name": "Big R La Veta",
@@ -11230,10 +11404,10 @@
       "final_url": "https://charlies-market.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1028)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1016)>"
     },
     "code-of-the-west-real-estate-huerfano-professional-services-real-estate": {
       "resource_name": "Code of the West Real Estate",
@@ -11463,10 +11637,10 @@
       "final_url": "https://franciscofort.org",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028)>"
+      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)>"
     },
     "gardner-public-improvement-district-huerfano-government-special-district": {
       "resource_name": "Gardner Public Improvement District",
@@ -11930,7 +12104,7 @@
       "final_url": "https://lavetacountrystore.com/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -12318,10 +12492,10 @@
       "final_url": "https://thelvesa.org/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "la-veta-schools-of-the-arts-huerfano-arts-culture-education": {
       "resource_name": "La Veta Schools of the Arts",
@@ -12872,7 +13046,7 @@
       "final_url": "https://www.roomsattheclub.com/",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -13095,10 +13269,10 @@
       "final_url": "https://www.skinnysdinerandbar.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "travel-guide-space-gallery-la-veta-huerfano": {
       "resource_name": "SPACe Gallery",
@@ -13307,13 +13481,13 @@
       "source_keywords": [],
       "blocked_source_keywords": [],
       "source_url": "https://www.twofoxcabins.com/",
-      "final_url": "https://www.twofoxcabins.com/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "final_url": "https://twofoxcabins.com/",
+      "status": "checked_no_name_match",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "9dfeb81bafe6f7e4dd5d8c9f37f2860e7cceb89528aa0105de2327d30cda4032",
+      "error": ""
     },
     "two-mountain-treasures-huerfano-retail": {
       "resource_name": "Two Mountain Treasures",
@@ -13989,7 +14163,7 @@
       "final_url": "https://www.bestwestern.com/en_US/book/hotels-in-walsenburg/best-western-rambler/propertyCode.06038.html",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -14293,10 +14467,10 @@
       "final_url": "https://c1btrueorganics.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -5] No address associated with hostname>"
     },
     "travel-guide-calendars-of-events-walsenburg-huerfano": {
       "resource_name": "Calendars of Events",
@@ -14327,10 +14501,10 @@
       "final_url": "https://www.cannacity.us/home",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "travel-guide-cannaco-walsenburg-huerfano": {
       "resource_name": "Cannaco",
@@ -14522,7 +14696,7 @@
       "final_url": "https://cityofwalsenburg.colorado.gov",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -16471,7 +16645,7 @@
       "final_url": "https://la-h-health.colorado.gov",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -19141,7 +19315,7 @@
       "final_url": "https://aguilarcountrycottages.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-19",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -19397,10 +19571,10 @@
       "final_url": "https://aguilarstation.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "yellowpages-lead-tina-s-family-cafe-aguilar-las-animas": {
       "resource_name": "Tina's Family Cafe",
@@ -19646,10 +19820,10 @@
       "final_url": "https://221bgallery.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "yellowpages-lead-a-1-automatics-towing-trinidad-las-animas": {
       "resource_name": "A-1 Automatics & Towing",
@@ -20184,7 +20358,7 @@
       "final_url": "https://boom-noodles.com",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -20371,10 +20545,10 @@
       "final_url": "https://cawthonpark.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1028)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1016)>"
     },
     "yellowpages-lead-cedar-street-printing-trinidad-las-animas": {
       "resource_name": "Cedar Street Printing",
@@ -23096,10 +23270,10 @@
       "final_url": "https://www.marketplacegallery.net",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "yellowpages-lead-massage-center-trinidad-las-animas": {
       "resource_name": "The Massage Center",
@@ -23193,11 +23367,11 @@
       "source_url": "https://missionatthebell.com",
       "final_url": "https://missionatthebell.com",
       "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status_code": null,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "error": "<urlopen error [Errno 101] Network is unreachable>"
     },
     "yellowpages-lead-mission-at-bell-restaurant-trinidad-las-animas": {
       "resource_name": "Mission at the Bell Restaurant",
@@ -23947,7 +24121,7 @@
       "final_url": "https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -24597,10 +24771,10 @@
       "final_url": "https://www.tabularasa.gallery",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "yellowpages-lead-taco-bell-trinidad-las-animas": {
       "resource_name": "Taco Bell",
@@ -24824,7 +24998,7 @@
       "final_url": "https://jimandmelissa.org",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -25222,7 +25396,7 @@
       "final_url": "https://trinidadstate.edu/collaboratory/index.html",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -25820,7 +25994,7 @@
       "final_url": "https://oedit.colorado.gov/colorado-creative-districts",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-22",
+      "last_checked": "2026-10-26",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -27187,12 +27361,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://worldjournalnewspaper.com/",
       "final_url": "https://worldjournalnewspaper.com/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "last_checked": "2026-10-22",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-10-26",
       "last_changed": "2026-08-19",
-      "content_hash": "",
-      "error": "HTTP Error 403: Forbidden"
+      "content_hash": "4c387756530816d6f99ce57d0ed451131126967ee3c1384811b84a39982e0a92",
+      "error": ""
     }
   }
 }
