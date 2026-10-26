@@ -77,6 +77,24 @@
       "funding_forms": ["grants"], "regional_scope": "Colorado, including Huerfano and Las Animas counties", "cadence_days": 7
     },
     {
+      "id": "boettcher-rural-catalyst-grants", "name": "Boettcher Foundation Rural Catalyst Grants", "url": "https://boettcherfoundation.org/grantmaking/rural-catalyst-grants/",
+      "focus": ["rural Colorado", "nonprofit capacity", "housing", "childcare", "mental health", "rural placemaking"],
+      "sweep_topics": ["economic-development", "education", "healthcare", "nonprofits"],
+      "funding_forms": ["capacity-building grants"], "regional_scope": "Rural Colorado, including potential Huerfano and Las Animas projects that meet program conditions", "cadence_days": 7
+    },
+    {
+      "id": "gates-family-capital-grants", "name": "Gates Family Foundation Capital Grants", "url": "https://gatesfamilyfoundation.org/types-of-support/capital-grants/",
+      "focus": ["rural Colorado", "community facilities", "main streets", "heritage tourism", "arts spaces", "education"],
+      "sweep_topics": ["economic-development", "education", "nonprofits", "arts-culture"],
+      "funding_forms": ["capital grants"], "regional_scope": "Colorado projects, including eligible capital projects in Huerfano and Las Animas counties", "cadence_days": 7
+    },
+    {
+      "id": "daniels-fund-grants", "name": "Daniels Fund Grants Program", "url": "https://danielsfund.org/our-work/grants/",
+      "focus": ["youth development", "early childhood", "disabilities", "addiction recovery", "nonprofit programs"],
+      "sweep_topics": ["education", "healthcare", "nonprofits"],
+      "funding_forms": ["program grants", "operating grants", "capital grants"], "regional_scope": "Colorado and New Mexico programs serving the tri-county region, subject to state-specific priorities and invitation requirements", "cadence_days": 7
+    },
+    {
       "id": "nm-edd-grants", "name": "New Mexico Economic Development Department Grants", "url": "https://edd.newmexico.gov/grants/",
       "focus": ["community economic development", "business development", "creative industries", "food access", "outdoor recreation"],
       "sweep_topics": ["economic-development", "healthcare", "nonprofits", "arts-culture"], "funding_forms": ["grants", "reimbursements", "matching grants"],
@@ -103,6 +121,18 @@
       "id": "new-mexico-arts-artist-opportunities", "name": "New Mexico Arts Artist Opportunities", "url": "https://nmarts.org/public-art/are-you-an-artist/",
       "focus": ["artists", "galleries", "public art", "artwork purchases"], "sweep_topics": ["arts-culture"],
       "funding_forms": ["purchase awards", "commissions"], "regional_scope": "New Mexico and Southwest calls that include Colorado artists", "cadence_days": 7
+    },
+    {
+      "id": "con-alma-annual-grants", "name": "Con Alma Health Foundation Annual Grants", "url": "https://www.conalma.org/grant-making",
+      "focus": ["community health", "health equity", "New Mexico nonprofits", "annual grants"],
+      "sweep_topics": ["healthcare", "nonprofits"],
+      "funding_forms": ["annual grants"], "regional_scope": "Annual Grants serve New Mexico statewide, including Colfax County; the separate Northern New Mexico Health Grants have narrower county coverage", "cadence_days": 7
+    },
+    {
+      "id": "mccune-charitable-foundation-grants", "name": "McCune Charitable Foundation Grants", "url": "https://nmmccune.org/grant-eligibility/",
+      "focus": ["New Mexico nonprofits", "community development", "education", "health", "arts", "rural communities"],
+      "sweep_topics": ["economic-development", "education", "healthcare", "nonprofits", "arts-culture"],
+      "funding_forms": ["general operating grants", "discretionary grants"], "regional_scope": "Community-based projects across New Mexico, including Colfax County, subject to the foundation's grant criteria", "cadence_days": 7
     },
     {
       "id": "el-pomar-grants", "name": "El Pomar Foundation Grant Making", "url": "https://www.elpomar.org/grant-making/",
