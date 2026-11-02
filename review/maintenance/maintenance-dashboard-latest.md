@@ -1,6 +1,6 @@
 # Tri-County Guide Maintenance Dashboard
 
-Generated: 2026-10-26T20:25:49+00:00
+Generated: 2026-11-02T23:06:09+00:00
 
 Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.
 
@@ -30,10 +30,10 @@ Automation detects and drafts. A person approves public claims, directory change
 - Script-access limitations (not broken): 21
 - Offline field-check records: 1
 - Deep-watch pages checked: 32
-- Deep-watch pages failed: 2
+- Deep-watch pages failed: 3
 - Priority new leads: 1
 - Keyword source URLs checked: 120
-- Keyword sets proposed for review: 31
+- Keyword sets proposed for review: 3
 - Listings with at least one listed outreach route: 307
 - Listings with at least one ask-first outreach route: 703
 - Listings without an identified outreach route: 620
@@ -42,30 +42,31 @@ Automation detects and drafts. A person approves public claims, directory change
 - Shortcuts without an identified outreach route: 52
 - National funding pages checked: 36
 - National funding pages changed: 6
-- National funding watch baselines added: 8
+- National funding watch baselines added: 0
 - Confirmed broken national funding URLs: 0
 - National funding source checks needing attention: 6
-- Resource candidate links collected: 178
-- Resource-discovery pages changed: 22
+- Resource candidate links collected: 180
+- Resource-discovery pages changed: 20
 - Confirmed broken resource-discovery hubs: 1
-- Resource-discovery checks needing attention: 5
+- Resource-discovery checks needing attention: 4
 - Free-tool pages checked: 22
-- Free-tool pages changed: 0
-- Free-tool candidate links collected: 0
+- Free-tool pages changed: 1
+- Free-tool candidate links collected: 1
 - Free-tool checks needing attention: 5
 
 ## Action Queue
 
-- **HIGH - 14 national funding pages waiting for claim review:** Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory.
+- **HIGH - 6 national funding pages waiting for claim review:** Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory.
 - **HIGH - 1 priority directory candidates:** Confirm each linked listing page before adding it to canonical data.
 - **HIGH - 1 confirmed broken resource-discovery hubs:** Replace or intentionally retire each hub URL before relying on its candidate queue.
-- **MEDIUM - 178 resource candidate links waiting for review:** Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data.
+- **MEDIUM - 180 resource candidate links waiting for review:** Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data.
 - **MEDIUM - 173 canonical rows without a website or source URL:** Enrich high-value entries first; do not invent contact paths.
-- **MEDIUM - 31 listing keyword sets proposed for review:** Review additions and removals in the latest keyword-sweep report before merging the keyword index.
-- **MEDIUM - 1 free-tool or nonprofit-offer pages waiting for wording review:** Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory.
+- **MEDIUM - 3 listing keyword sets proposed for review:** Review additions and removals in the latest keyword-sweep report before merging the keyword index.
+- **MEDIUM - 2 free-tool or nonprofit-offer pages waiting for wording review:** Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory.
 - **LOW - 620 listings without an identified promotion route:** Enrich these only when a public page or direct contact supports a useful route; do not invent availability.
-- **LOW - 30 keyword source pages needing attention:** Open failed pages normally before removing retained source-derived keywords.
+- **LOW - 32 keyword source pages needing attention:** Open failed pages normally before removing retained source-derived keywords.
 - **LOW - 6 national funding pages needing a normal-browser check:** Open these pages normally; do not treat bot blocking or a temporary network error as a closed program.
-- **LOW - 5 resource-discovery hubs needing a normal-browser check:** Open these pages normally; do not remove a source because of bot blocking or a temporary request failure.
 - **LOW - 5 free-tool pages needing a normal-browser check:** Open failed pages normally; do not remove a tool solely because automation was blocked or timed out.
+- **LOW - 4 resource-discovery hubs needing a normal-browser check:** Open these pages normally; do not remove a source because of bot blocking or a temporary request failure.
 - **LOW - 1 offline posting pathways awaiting a field check:** Confirm the physical location or owner-controlled posting policy locally.
+- **LOW - 1 free-tool candidate links waiting for review:** Open each official candidate and add it only when it fills a real guide task without duplicating an existing tool.

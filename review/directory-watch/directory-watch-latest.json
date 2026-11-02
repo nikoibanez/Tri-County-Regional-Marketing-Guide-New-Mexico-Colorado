@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26",
+  "generated_at": "2026-11-02",
   "config": "data/directory-watch-sources.json",
   "directory_files": [
     "data/directory_of_absolutely_everything.csv",
@@ -9,12 +9,12 @@
   "summary": {
     "sources": 15,
     "pages_checked": 32,
-    "pages_failed": 2,
-    "candidates": 322,
-    "already_in_guide": 290,
-    "possible_new_leads": 32,
+    "pages_failed": 3,
+    "candidates": 313,
+    "already_in_guide": 288,
+    "possible_new_leads": 25,
     "priority_new_leads": 1,
-    "low_confidence_new_leads": 31
+    "low_confidence_new_leads": 24
   },
   "results": [
     {
@@ -33,7 +33,7 @@
             "status_code": 200,
             "final_url": "https://raton.info/",
             "content_type": "text/html; charset=utf-8",
-            "elapsed_ms": 1650,
+            "elapsed_ms": 1476,
             "error": ""
           },
           "candidates": [
@@ -82,7 +82,7 @@
             "status_code": 200,
             "final_url": "https://raton.info/",
             "content_type": "text/html; charset=utf-8",
-            "elapsed_ms": 730,
+            "elapsed_ms": 1024,
             "error": ""
           },
           "candidates": [
@@ -142,7 +142,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/local-businesses/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 797,
+            "elapsed_ms": 579,
             "error": ""
           },
           "candidates": []
@@ -165,7 +165,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/business/category/restaurants/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 588,
+            "elapsed_ms": 551,
             "error": ""
           },
           "candidates": []
@@ -177,7 +177,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/business/tags/catering/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 635,
+            "elapsed_ms": 504,
             "error": ""
           },
           "candidates": []
@@ -189,7 +189,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/business/category/catering/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 613,
+            "elapsed_ms": 685,
             "error": ""
           },
           "candidates": []
@@ -212,7 +212,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/visitor/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 730,
+            "elapsed_ms": 661,
             "error": ""
           },
           "candidates": []
@@ -224,7 +224,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/annual-calendar-of-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 729,
+            "elapsed_ms": 507,
             "error": ""
           },
           "candidates": []
@@ -236,7 +236,7 @@
             "status_code": 200,
             "final_url": "https://angelfirechamber.org/visitor/arts-and-culture/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 510,
+            "elapsed_ms": 504,
             "error": ""
           },
           "candidates": []
@@ -259,7 +259,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1700,
+            "elapsed_ms": 1611,
             "error": ""
           },
           "candidates": []
@@ -271,7 +271,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/events",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 232,
+            "elapsed_ms": 154,
             "error": ""
           },
           "candidates": []
@@ -283,7 +283,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/blog",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 103,
+            "elapsed_ms": 139,
             "error": ""
           },
           "candidates": []
@@ -306,7 +306,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/dine/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 228,
+            "elapsed_ms": 510,
             "error": ""
           },
           "candidates": [
@@ -679,7 +679,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/stay/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 176,
+            "elapsed_ms": 193,
             "error": ""
           },
           "candidates": [
@@ -1016,7 +1016,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/shop/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 169,
+            "elapsed_ms": 173,
             "error": ""
           },
           "candidates": [
@@ -1389,7 +1389,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 162,
+            "elapsed_ms": 188,
             "error": ""
           },
           "candidates": [
@@ -1481,33 +1481,14 @@
         {
           "url": "https://visittrinidadcolorado.com/upcoming-events/",
           "fetch": {
-            "ok": true,
-            "status_code": 200,
+            "ok": false,
+            "status_code": null,
             "final_url": "https://visittrinidadcolorado.com/upcoming-events/",
-            "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2275,
-            "error": ""
+            "content_type": "",
+            "elapsed_ms": 18079,
+            "error": "The read operation timed out"
           },
-          "candidates": [
-            {
-              "id": "visit-trinidad-colorado-fa8e60dd20",
-              "name": "Visit Trinidad Colorado \u2013",
-              "source_id": "las-animas-visit-trinidad-events",
-              "source_title": "Visit Trinidad Events and Submit-Event Routes",
-              "county": "Las Animas",
-              "state": "CO",
-              "source_type": "Tourism event calendar and submission source",
-              "source_page": "https://visittrinidadcolorado.com/upcoming-events/",
-              "listing_url": "https://visittrinidadcolorado.com/upcoming-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            }
-          ]
+          "candidates": []
         },
         {
           "url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
@@ -1516,7 +1497,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 191,
+            "elapsed_ms": 13145,
             "error": ""
           },
           "candidates": [
@@ -1594,7 +1575,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/meetings-conventions/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 182,
+            "elapsed_ms": 6288,
             "error": ""
           },
           "candidates": [
@@ -1625,7 +1606,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/weddings/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 159,
+            "elapsed_ms": 162,
             "error": ""
           },
           "candidates": [
@@ -1667,7 +1648,7 @@
             "status_code": 200,
             "final_url": "https://localstash.com/colorado/towns/trinidad-co",
             "content_type": "text/html; charset=utf-8",
-            "elapsed_ms": 659,
+            "elapsed_ms": 872,
             "error": ""
           },
           "candidates": [
@@ -1931,8 +1912,8 @@
             "ok": true,
             "status_code": 200,
             "final_url": "https://weekender.pub/",
-            "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 373,
+            "content_type": "text/html; charset=utf-8",
+            "elapsed_ms": 1813,
             "error": ""
           },
           "candidates": []
@@ -1955,7 +1936,7 @@
             "status_code": null,
             "final_url": "https://southerncoloradotourism.com/events/",
             "content_type": "",
-            "elapsed_ms": 18144,
+            "elapsed_ms": 18139,
             "error": "<urlopen error timed out>"
           },
           "candidates": []
@@ -1967,7 +1948,7 @@
             "status_code": null,
             "final_url": "https://southerncoloradotourism.com/",
             "content_type": "",
-            "elapsed_ms": 18201,
+            "elapsed_ms": 18156,
             "error": "<urlopen error timed out>"
           },
           "candidates": []
@@ -1990,7 +1971,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2088,
+            "elapsed_ms": 1830,
             "error": ""
           },
           "candidates": [
@@ -3904,7 +3885,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory/categories/dining",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2068,
+            "elapsed_ms": 164,
             "error": ""
           },
           "candidates": [
@@ -4457,7 +4438,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory/categories/lodging",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1531,
+            "elapsed_ms": 188,
             "error": ""
           },
           "candidates": [
@@ -4866,7 +4847,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1053,
+            "elapsed_ms": 1066,
             "error": ""
           },
           "candidates": []
@@ -4889,28 +4870,10 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/spc-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 102,
+            "elapsed_ms": 1706,
             "error": ""
           },
           "candidates": [
-            {
-              "id": "cuchara-mountain-mercantile-c629a942c4",
-              "name": "Cuchara Mountain Mercantile",
-              "source_id": "huerfano-spanish-peaks-events",
-              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Tourism event calendar and submission source",
-              "source_page": "https://spanishpeakscountry.com/spc-events/",
-              "listing_url": "https://spanishpeakscountry.com/spc-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Cuchara Mountain Mercantile",
-              "match_type": "exact_normalized",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
             {
               "id": "museum-of-friends-42ed5bc304",
               "name": "Museum of Friends",
@@ -4948,6 +4911,24 @@
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
+              "id": "82nd-gardner-chuckwagon-dinner-90fd518bcb",
+              "name": "82ND GARDNER CHUCKWAGON DINNER",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
               "id": "annual-holiday-bell-ringing-in-la-veta-4ebc37dc3e",
               "name": "Annual Holiday Bell Ringing in La Veta",
               "source_id": "huerfano-spanish-peaks-events",
@@ -4966,134 +4947,8 @@
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
-              "id": "cuchara-farmers-market-ab761e24e5",
-              "name": "Cuchara Farmers Market",
-              "source_id": "huerfano-spanish-peaks-events",
-              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Tourism event calendar and submission source",
-              "source_page": "https://spanishpeakscountry.com/spc-events/",
-              "listing_url": "https://spanishpeakscountry.com/spc-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "gardner-farmer-and-craft-market-a9dae7b02a",
-              "name": "Gardner Farmer and Craft Market",
-              "source_id": "huerfano-spanish-peaks-events",
-              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Tourism event calendar and submission source",
-              "source_page": "https://spanishpeakscountry.com/spc-events/",
-              "listing_url": "https://spanishpeakscountry.com/spc-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "gardner-farmers-market-4c5c25b9f3",
-              "name": "Gardner Farmers Market",
-              "source_id": "huerfano-spanish-peaks-events",
-              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Tourism event calendar and submission source",
-              "source_page": "https://spanishpeakscountry.com/spc-events/",
-              "listing_url": "https://spanishpeakscountry.com/spc-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "gardner-methodist-church-423f904e91",
-              "name": "Gardner Methodist Church",
-              "source_id": "huerfano-spanish-peaks-events",
-              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Tourism event calendar and submission source",
-              "source_page": "https://spanishpeakscountry.com/spc-events/",
-              "listing_url": "https://spanishpeakscountry.com/spc-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "halloweentown-movie-night-at-fiesta-park-9321b9d827",
-              "name": "Halloweentown Movie Night at Fiesta Park",
-              "source_id": "huerfano-spanish-peaks-events",
-              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Tourism event calendar and submission source",
-              "source_page": "https://spanishpeakscountry.com/spc-events/",
-              "listing_url": "https://spanishpeakscountry.com/spc-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
               "id": "kellen-goode-live-at-the-stokehouse-fa6031dafe",
               "name": "Kellen Goode Live at the Stokehouse!",
-              "source_id": "huerfano-spanish-peaks-events",
-              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Tourism event calendar and submission source",
-              "source_page": "https://spanishpeakscountry.com/spc-events/",
-              "listing_url": "https://spanishpeakscountry.com/spc-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "la-veta-farmers-market-a2098f9eca",
-              "name": "La Veta Farmers Market",
-              "source_id": "huerfano-spanish-peaks-events",
-              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Tourism event calendar and submission source",
-              "source_page": "https://spanishpeakscountry.com/spc-events/",
-              "listing_url": "https://spanishpeakscountry.com/spc-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "la-veta-library-77e0cb126c",
-              "name": "La Veta Library",
               "source_id": "huerfano-spanish-peaks-events",
               "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
               "county": "Huerfano",
@@ -5208,7 +5063,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2065,
+            "elapsed_ms": 1792,
             "error": ""
           },
           "candidates": [
@@ -5268,7 +5123,7 @@
             "status_code": 200,
             "final_url": "https://townoflaveta-co.gov/business-directory/",
             "content_type": "text/html",
-            "elapsed_ms": 740,
+            "elapsed_ms": 232,
             "error": ""
           },
           "candidates": [
@@ -6318,7 +6173,7 @@
             "status_code": 200,
             "final_url": "https://www.chamber.huerfano.org/membership-directory",
             "content_type": "text/html;charset=utf-8",
-            "elapsed_ms": 1356,
+            "elapsed_ms": 733,
             "error": ""
           },
           "candidates": [
@@ -6343,24 +6198,6 @@
             {
               "id": "member-directory-connect-locally-huerfano-county-c-4edfcb67b7",
               "name": "Member Directory | Connect Locally \u2014 huerfano county chamber of commerce",
-              "source_id": "huerfano-chamber-member-directory",
-              "source_title": "Huerfano County Chamber Directory",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Chamber member directory",
-              "source_page": "https://www.chamber.huerfano.org/membership-directory",
-              "listing_url": "https://www.chamber.huerfano.org/membership-directory",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "already_in_guide",
-              "matched_name": "Bachman & associates",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "storage-4618fd7480",
-              "name": "Storage",
               "source_id": "huerfano-chamber-member-directory",
               "source_title": "Huerfano County Chamber Directory",
               "county": "Huerfano",

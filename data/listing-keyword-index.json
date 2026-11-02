@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-26",
+  "generated_at": "2026-11-02",
   "description": "Controlled search keywords derived from canonical listing fields and current public-page title, metadata, and heading signals.",
   "entries": {
     "the-candy-crate-colfax-retail-sweets": {
@@ -452,26 +452,23 @@
       "resource_name": "Angel Fire Resort",
       "keywords": [
         "outdoor recreation",
-        "tourism",
-        "golf",
-        "skiing"
+        "tourism"
       ],
       "canonical_keywords": [
         "outdoor recreation",
         "tourism"
       ],
-      "source_keywords": [
-        "golf",
-        "skiing"
+      "source_keywords": [],
+      "blocked_source_keywords": [
+        "chamber of commerce"
       ],
-      "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/hotels-motels-lodges/",
       "final_url": "https://angelfirechamber.org/business/hotels-motels-lodges/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "df2c0229e5bb4107ef301d2b6a972bd15b33f9e53c9b7dc663a069a8f754df1d",
+      "last_checked": "2026-11-02",
+      "last_changed": "2026-11-02",
+      "content_hash": "123f0964fd97b4380ef2e16963a00f0f5a7b7dedd7bf4e9f3c586b021f151fe3",
       "error": ""
     },
     "travel-guide-angel-fire-resort-hotel-and-conference-center-angel-fire-colfax": {
@@ -482,17 +479,15 @@
       "canonical_keywords": [
         "hotel"
       ],
-      "source_keywords": [
-        "hotel"
-      ],
+      "source_keywords": [],
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/angel-fire-resort-2/",
       "final_url": "https://angelfirechamber.org/business/angel-fire-resort-2/",
-      "status": "checked",
+      "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "24b527a365c18eb1577c9997948f4a5d5d44ee3517f61759a1ab52dc9d4d676e",
+      "content_hash": "123f0964fd97b4380ef2e16963a00f0f5a7b7dedd7bf4e9f3c586b021f151fe3",
       "error": ""
     },
     "angel-fire-resort-nordic-golf-center-colfax-recreation-tourism": {
@@ -808,7 +803,7 @@
       "final_url": "https://thebakeryatangelfire.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "4e7be3390051f9d3f8340f3bac60dbb1bedaed5b051389e526dedf3e734b8602",
       "error": ""
@@ -1904,17 +1899,15 @@
       "canonical_keywords": [
         "restaurant"
       ],
-      "source_keywords": [
-        "restaurant"
-      ],
+      "source_keywords": [],
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/legends-grill/",
       "final_url": "https://angelfirechamber.org/business/legends-grill/",
-      "status": "checked",
+      "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "4015ce26be010f2ee24e359b14ef26c3341025ef3ec28495fcb3330fe440e053",
+      "content_hash": "123f0964fd97b4380ef2e16963a00f0f5a7b7dedd7bf4e9f3c586b021f151fe3",
       "error": ""
     },
     "travel-guide-lift-cafe-angel-fire-colfax": {
@@ -1971,7 +1964,7 @@
       "final_url": "https://angelfirechamber.org/business/lindsey-living/",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -2026,7 +2019,7 @@
       "final_url": "https://www.startupspace.app/resource?page=62",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2509,24 +2502,20 @@
     "travel-guide-new-mexico-river-adventures-angel-fire-colfax": {
       "resource_name": "New Mexico River Adventures",
       "keywords": [
-        "outdoor recreation",
-        "outfitter"
+        "outdoor recreation"
       ],
       "canonical_keywords": [
         "outdoor recreation"
       ],
-      "source_keywords": [
-        "outdoor recreation",
-        "outfitter"
-      ],
+      "source_keywords": [],
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/new-mexico-river-adventures/",
       "final_url": "https://angelfirechamber.org/business/new-mexico-river-adventures/",
-      "status": "checked",
+      "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "f02ec6b09581bcd25dc2da58dc6f1790c7eb6e43e6901e13dce0cd7c5ca4ce9e",
+      "last_checked": "2026-11-02",
+      "last_changed": "2026-11-02",
+      "content_hash": "123f0964fd97b4380ef2e16963a00f0f5a7b7dedd7bf4e9f3c586b021f151fe3",
       "error": ""
     },
     "travel-guide-north-country-real-estate-angel-fire-colfax": {
@@ -2861,11 +2850,11 @@
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/pub-ngrub/",
       "final_url": "https://angelfirechamber.org/business/pub-ngrub/",
-      "status": "checked",
+      "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "8223cf75bfac10e54803f7d25b0e344db7fb4599a7b5209fe9a9373ae4380e48",
+      "content_hash": "123f0964fd97b4380ef2e16963a00f0f5a7b7dedd7bf4e9f3c586b021f151fe3",
       "error": ""
     },
     "travel-guide-purple-sage-studio-angel-fire-colfax": {
@@ -3246,21 +3235,17 @@
     },
     "travel-guide-snowfish-ski-and-outdoor-formerly-cottam-s-of-angel-fire-angel-fire-colfax": {
       "resource_name": "Snowfish Ski & Outdoor formerly Cottam’s of Angel Fire",
-      "keywords": [
-        "fishing"
-      ],
+      "keywords": [],
       "canonical_keywords": [],
-      "source_keywords": [
-        "fishing"
-      ],
+      "source_keywords": [],
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/cottams-of-angel-fire/",
       "final_url": "https://angelfirechamber.org/business/cottams-of-angel-fire/",
-      "status": "checked",
+      "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
-      "last_changed": "2026-07-22",
-      "content_hash": "9eef91b8d99fb585eac8387a61079dfde7a418cd61fcab39acead6c4c697e7b8",
+      "last_checked": "2026-11-02",
+      "last_changed": "2026-11-02",
+      "content_hash": "123f0964fd97b4380ef2e16963a00f0f5a7b7dedd7bf4e9f3c586b021f151fe3",
       "error": ""
     },
     "travel-guide-southern-exposure-photography-angel-fire-colfax": {
@@ -3863,17 +3848,15 @@
       "canonical_keywords": [
         "photography"
       ],
-      "source_keywords": [
-        "photography"
-      ],
+      "source_keywords": [],
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/wende-woolley-photography/",
       "final_url": "https://angelfirechamber.org/business/wende-woolley-photography/",
-      "status": "checked",
+      "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "6dd0de381a00498fad85687a97bfeebef647011be9c461520289d293855b7ac5",
+      "content_hash": "123f0964fd97b4380ef2e16963a00f0f5a7b7dedd7bf4e9f3c586b021f151fe3",
       "error": ""
     },
     "yellowpages-lead-western-union-angel-fire-colfax": {
@@ -4031,7 +4014,7 @@
       "final_url": "https://casadelgavilan.com",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f17052c696395ca760466722541fcc11a119f898db36a4d5a2d9608329d0f8c9",
       "error": ""
@@ -4298,7 +4281,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4351,7 +4334,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4381,7 +4364,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4463,7 +4446,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4530,7 +4513,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4560,7 +4543,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4575,7 +4558,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4613,7 +4596,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4632,7 +4615,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4670,7 +4653,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4719,7 +4702,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4734,7 +4717,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4749,7 +4732,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4764,7 +4747,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4779,7 +4762,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4794,7 +4777,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4809,7 +4792,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4824,7 +4807,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4839,7 +4822,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4854,7 +4837,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4869,7 +4852,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4884,7 +4867,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4903,7 +4886,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -4922,7 +4905,7 @@
       "final_url": "https://www.eaglenest.org/water_waste_water/businessdirectory",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b50be96f23a6969573ef8d7a4880f59a1aeeb0eecb940fc55a3c4d5f774d507",
       "error": ""
@@ -5104,7 +5087,7 @@
       "final_url": "https://allseasonsgiftshop.business.site/",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -5153,7 +5136,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -5217,7 +5200,7 @@
       "final_url": "https://locations.arbys.com/nm/raton/415-clayton-hwy.html",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -5506,7 +5489,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -5525,7 +5508,7 @@
       "final_url": "https://www.newmexico.org/listing/capulin-volcano-national-monument/2548/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "ddd5722c6b2a8ac927b07710d3395e742e639ae1b3a2f73a968a0ce1b4074abf",
       "error": ""
@@ -5544,12 +5527,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://carlswansongallery.com",
       "final_url": "https://carlswansongallery.com",
-      "status": "checked_no_name_match",
-      "status_code": 200,
-      "last_checked": "2026-07-22",
+      "status": "fetch_error",
+      "status_code": null,
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": ""
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     "travel-guide-carries-honey-and-more-raton-colfax": {
       "resource_name": "Carries Honey & More",
@@ -5565,7 +5548,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -5586,7 +5569,7 @@
       "final_url": "https://www.casalemus.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "ad9acb51e49fef91f896b5f2accd4097610b029ba114a766e522f5147054a47e",
       "error": ""
@@ -5764,7 +5747,7 @@
       "final_url": "https://ratonnm.gov",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "2f5e2d55bea8c96cbc0109cb3919bd88b572a11b8abf465be3f844ad34eb1b13",
       "error": ""
@@ -5940,7 +5923,7 @@
       "final_url": "https://ratonnm.gov",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "2f5e2d55bea8c96cbc0109cb3919bd88b572a11b8abf465be3f844ad34eb1b13",
       "error": ""
@@ -6537,7 +6520,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -6699,7 +6682,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -6754,7 +6737,7 @@
       "final_url": "https://www.newmexico.org/frontier-trails-and-tracks/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "c8b92039a006da968d486eb05e5d9c6976cc7686d85ad3a87140ebd4c49aac97",
       "error": ""
@@ -6852,7 +6835,7 @@
       "final_url": "https://loschanquismexicanseafood.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "9eef1bb99a1b6642a737867059a1cbcc30e94caa7f4607619446960241cae3e0",
       "error": ""
@@ -6971,7 +6954,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -7199,7 +7182,7 @@
       "final_url": "https://krtnradio.com/event/mcmc-auxiliary-thrift-shop-20/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "a27589647af4c441ebff497de09d822aa8fe8f4c9768d3f29743ff5e35db52c7",
       "error": ""
@@ -7420,7 +7403,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -7601,7 +7584,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -7680,7 +7663,7 @@
       "final_url": "https://www.mcdonalds.com/us/en-us/location/nm/raton/542-clayton-rd/6011.html?cid=RF:YXT:GMB::Clicks",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -7701,7 +7684,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -7720,7 +7703,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -8139,11 +8122,11 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.ratonarts.org/",
       "final_url": "https://www.ratonarts.org/",
-      "status": "checked_no_name_match",
+      "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "4a9bed81a54b9ce1e8f76bacf3cae7ff6caa1354ed3e45271bd161fba932e623",
+      "content_hash": "04e85676591b8e2c7aa253ef5783b0b874354fab3bd6f430b34281051bdaf635",
       "error": ""
     },
     "travel-guide-pack-rat-raton-colfax": {
@@ -8160,7 +8143,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -8181,7 +8164,7 @@
       "final_url": "https://pappassweetshop.wixsite.com/pappas",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "2bfd26b0361cc5d76d37e7b976a8177885782dbd0b9780e28db768897dac1241",
       "error": ""
@@ -8238,7 +8221,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -8355,7 +8338,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -8444,7 +8427,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -8476,11 +8459,11 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.ratonarts.org/",
       "final_url": "https://www.ratonarts.org/",
-      "status": "checked_no_name_match",
+      "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "4a9bed81a54b9ce1e8f76bacf3cae7ff6caa1354ed3e45271bd161fba932e623",
+      "content_hash": "04e85676591b8e2c7aa253ef5783b0b874354fab3bd6f430b34281051bdaf635",
       "error": ""
     },
     "raton-arts-and-humanities-council-visual-arts-calendar-raton-colfax-visual-arts-calend": {
@@ -8499,7 +8482,7 @@
       "final_url": "https://www.ratonarts.org/visual-arts",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "a78660a380ffe1af73be5eb0987675c345b32219fd231d854ee753beb5f9dc92",
       "error": ""
@@ -8548,7 +8531,7 @@
       "final_url": "https://www.exploreraton.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "54e01b3104e8e8a4debb941c9add3346cc20283425b4897c8bb17ffc69d63b3d",
       "error": ""
@@ -8928,7 +8911,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -9061,7 +9044,7 @@
       "final_url": "https://www.newmexico.org/places-to-visit/scenic-byways/santa-fe-trail-national/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "2f86549ce94bdf2ae8572fbcfe8827fe7f17d172296b0d9a858b6b7b81c3ec67",
       "error": ""
@@ -9126,7 +9109,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -9240,7 +9223,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -9259,7 +9242,7 @@
       "final_url": "https://www.exploreraton.com/blog/categories/_food",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "c8ce29e2ea295dc50a3bad31230761df460cf7e95d6e0497ee27834a34e1593d",
       "error": ""
@@ -9513,7 +9496,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -9532,7 +9515,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -9741,7 +9724,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -9790,7 +9773,7 @@
       "final_url": "https://www.exploreraton.com/shop",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "f7a5f215375a1943712bcd8c6ba4ed5fa680edba398a557ac6e31bd92abdc00c",
       "error": ""
@@ -9809,7 +9792,7 @@
       "final_url": "https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -10302,12 +10285,14 @@
         "real estate"
       ],
       "source_keywords": [],
-      "blocked_source_keywords": [],
+      "blocked_source_keywords": [
+        "chamber of commerce"
+      ],
       "source_url": "https://www.chamber.huerfano.org/bachman-and-associates",
       "final_url": "https://www.chamber.huerfano.org/bachman-and-associates",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-08-19",
       "content_hash": "57487f6cea9a00d04ae756212f40f718d3126408cd390f53f1e3ecccca7495a7",
       "error": ""
@@ -10438,7 +10423,7 @@
       "final_url": "https://spanishpeakscountry.com/music-theater/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6bd6f51f14125e367c26a2d592b5dfd60e89aada2c102d85e86633fbf6736668",
       "error": ""
@@ -10489,7 +10474,7 @@
       "final_url": "https://huerfanofair.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1016)>"
@@ -10541,9 +10526,9 @@
       "final_url": "https://local.safeway.com/safeway/co/walsenburg/222-w-7th-st.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "b7ad39ab60997502bfeb00c790dda2d6570a309482c16e344c0dba1bd51a51ab",
+      "content_hash": "e67a1d04622adee674f3ad535330b71b63c77d26bcd2ec8e9c2f9e70a9f64dd5",
       "error": ""
     },
     "southern-colorado-economic-development-district-huerfano-grant-and-loan-": {
@@ -10678,7 +10663,7 @@
       "final_url": "https://www.chamber.huerfano.org/spanish-peaks-cycling",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "7fc582653cb57f86a0816e26091e4cbbcca6b0d5ec7fecae52fe23a689c75ae7",
       "error": ""
@@ -10714,7 +10699,7 @@
       "final_url": "https://www.fulldrawoutfitters.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "516034994d616e1422b10dcf79cbb6a77397683a024e5cebc5061fec9553baed",
       "error": ""
@@ -10729,7 +10714,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -10748,7 +10733,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -10767,7 +10752,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -10873,7 +10858,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -10930,14 +10915,16 @@
         "lodging"
       ],
       "source_keywords": [],
-      "blocked_source_keywords": [],
+      "blocked_source_keywords": [
+        "agriculture"
+      ],
       "source_url": "https://yellowpine.us/",
       "final_url": "https://yellowpine.us/",
-      "status": "checked_no_name_match",
+      "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "",
+      "content_hash": "7acea33b5acfddbdbc58e38aeb864e59aa8e0f3cd88abefd8a7474d4fd99a0f1",
       "error": ""
     },
     "travel-guide-cuchara-mountain-park-cuchara-la-veta-huerfano": {
@@ -10958,7 +10945,7 @@
       "final_url": "https://thecucharamountainpark.org/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "9a40cb1d252f3dafcdcc7254b9fe1503878e1c3a621aed8e03076432a6436d01",
       "error": ""
@@ -11034,7 +11021,7 @@
       "final_url": "https://www.coloradodirectory.com/nationalparks/spanishpeaks.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "376268b210f8e6eb39a9bd522fd7f42fa3c0b8524d11e9a44ad4e5e013010700",
       "error": ""
@@ -11055,7 +11042,7 @@
       "final_url": "https://www.coloradodirectory.com/stonewall/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-08-19",
       "content_hash": "d5bd3c9d2a0f87b4d1341a56dca732b86d53e576e0655585bbbb7c580ebf18ac",
       "error": ""
@@ -11106,7 +11093,7 @@
       "final_url": "https://www.alysrestaurant.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "20409a6ed62647a1e62ec74d4f7dac5e3968a104ab3f4898280fd2b000d616d6",
       "error": ""
@@ -11181,7 +11168,7 @@
       "final_url": "https://www.artisansonmain.art/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-08-19",
       "content_hash": "7b3855172fc261734475a1ee882ee0b1e524096134f2b5cf52d1fc0d3702be62",
       "error": ""
@@ -11337,7 +11324,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -11404,7 +11391,7 @@
       "final_url": "https://charlies-market.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1016)>"
@@ -11512,7 +11499,7 @@
       "final_url": "https://spanishpeakscountry.com/business-directory/listing/cuchara-higher-ground-coffee-bar",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "e8185fce00fcec65fb63824683fb1ffaec9e589ca4c9f85553875a42fa7dcfd5",
       "error": ""
@@ -11563,9 +11550,9 @@
       "final_url": "https://www.cuchara.org/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "",
-      "content_hash": "3166d8a38843c91d6dcd3e56dedd2bb3e98e27a1508b520803b22279b20964ce",
+      "content_hash": "ed24a91a035c3215a407342ebc4a57bd1d74524f1e06ea538ad5d724747fac81",
       "error": ""
     },
     "yellowpages-lead-dog-bar-grill-la-veta-huerfano": {
@@ -11637,7 +11624,7 @@
       "final_url": "https://franciscofort.org",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)>"
@@ -11713,7 +11700,7 @@
       "final_url": "https://playgrandote.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "0b5ea918d593ea3439163e9c59106115c2290e95a551136df811589126eb1404",
       "error": ""
@@ -11738,7 +11725,7 @@
       "final_url": "https://playgrandote.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "0b5ea918d593ea3439163e9c59106115c2290e95a551136df811589126eb1404",
       "error": ""
@@ -11806,7 +11793,7 @@
       "final_url": "https://hallowoodcabin.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "345473cfe733f71fb122847d1d5925de257f5864abef492ebf1e93dfc78c1b72",
       "error": ""
@@ -11863,7 +11850,7 @@
       "final_url": "https://www.hhfoundation.org",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": ""
@@ -11970,7 +11957,7 @@
       "final_url": "https://www.jbmfibreartist.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "c238e4636cf1ee9b1579d79c684020ab4a5b2fc40ff63bf4e7f62cefce5b50c4",
       "error": ""
@@ -12083,7 +12070,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -12104,7 +12091,7 @@
       "final_url": "https://lavetacountrystore.com/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -12169,7 +12156,7 @@
       "final_url": "https://www.lavetacreativedistrict.org/aid-for-artists",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "8cf6233813e4473172ec1fcb005982069ee594ea2b999e6f2500110fe0b0b0d8",
       "error": ""
@@ -12295,7 +12282,7 @@
       "final_url": "https://www.lavetainncolorado.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "0519b74fabc372a36b711034e61124b71fc6b5ac756423bfa213d96cc3e3d647",
       "error": ""
@@ -12471,7 +12458,7 @@
       "final_url": "https://lvpl.org",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "c7b203fd3ee33b49e45b973739f29ff7dce64d51488930b537802bb1824d45f9",
       "error": ""
@@ -12492,7 +12479,7 @@
       "final_url": "https://thelvesa.org/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -12585,7 +12572,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -12892,7 +12879,7 @@
       "final_url": "https://playgrandote.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "0b5ea918d593ea3439163e9c59106115c2290e95a551136df811589126eb1404",
       "error": ""
@@ -13046,7 +13033,7 @@
       "final_url": "https://www.roomsattheclub.com/",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -13088,12 +13075,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.sammiescampground.com/",
       "final_url": "https://www.sammiescampground.com/",
-      "status": "checked",
-      "status_code": 200,
-      "last_checked": "2026-07-22",
+      "status": "fetch_error",
+      "status_code": 404,
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "ceb1d127f6b1a47f26f94c6d8303b439c24afa85150327ea419b4e10d8c3c2e7",
-      "error": ""
+      "content_hash": "",
+      "error": "HTTP Error 404: Not Found"
     },
     "sammie-s-rv-park-huerfano-lodging-rv": {
       "resource_name": "Sammie's RV Park",
@@ -13269,7 +13256,7 @@
       "final_url": "https://www.skinnysdinerandbar.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -13416,7 +13403,7 @@
       "final_url": "https://spanishpeakscountry.com/business-directory/categories/dining",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "973de730b175bd493245b2e346412288edd1714cfe5c1913c760a8ec0f767bd9",
       "error": ""
@@ -13579,7 +13566,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -13985,7 +13972,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -14023,7 +14010,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -14065,7 +14052,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -14163,7 +14150,7 @@
       "final_url": "https://www.bestwestern.com/en_US/book/hotels-in-walsenburg/best-western-rambler/propertyCode.06038.html",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -14380,7 +14367,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -14467,7 +14454,7 @@
       "final_url": "https://c1btrueorganics.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -5] No address associated with hostname>"
@@ -14482,7 +14469,7 @@
       "final_url": "https://www.coloradodirectory.com/calendars/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "435ff938c42b7b351b081e975380f40528f0a7abdafd23979b14429cd154e4a8",
       "error": ""
@@ -14501,7 +14488,7 @@
       "final_url": "https://www.cannacity.us/home",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -14696,7 +14683,7 @@
       "final_url": "https://cityofwalsenburg.colorado.gov",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -14846,7 +14833,7 @@
       "final_url": "https://www.coloradodirectory.com/contact.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "12186598092d3c995722ad1bd5f385f2ae0f421266dea9ce57c15ccc6ff2f630",
       "error": ""
@@ -15151,7 +15138,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -15248,7 +15235,7 @@
       "final_url": "https://www.walsenburgmercantile.com/vendors/dewitt-enterprise",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-08-19",
       "content_hash": "dd18ad26ea4e680bd8375226b1859d0214da892c7ccbe85720a71ca4d8fb866d",
       "error": ""
@@ -15551,7 +15538,7 @@
       "final_url": "https://spanishpeakscountry.com/business-directory/listing/first-choice-market",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "26a9c38ae9de702b84f4b2346ebd2986e28a277f8f693e4567f18800c66cdc52",
       "error": ""
@@ -15719,7 +15706,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -15778,7 +15765,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -15793,7 +15780,7 @@
       "final_url": "https://www.coloradodirectory.com/greenhorn-valley/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "15adf1f5866c1951aa788e6e5b4af55236f30afe2f09076597c71d22b4f15c79",
       "error": ""
@@ -15988,7 +15975,7 @@
       "final_url": "https://www.coloradodirectory.com/Hotsprings/hotspringpools.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc963fad0df64eea312e9ea22cad1acdb972048da07fa3f9cd08a85566d0289e",
       "error": ""
@@ -16074,7 +16061,7 @@
       "final_url": "https://huerfano.us/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "28ed4bd287dee254d3aab54e461852475703571f23d22aa4a2eb0e5a3904d53d",
       "error": ""
@@ -16228,7 +16215,7 @@
       "final_url": "https://walsenburgnursery.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "8af0ba80c8b917b365a635abc070f0d9232980c6ebb94bcd92a1e41032c1ee21",
       "error": ""
@@ -16272,7 +16259,7 @@
       "final_url": "https://www.coloradodirectory.com/hunting/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6887ac08a9b7f608886ba7e1410b2667e08c5dadef7f191b04fcc3de3362a8b1",
       "error": ""
@@ -16291,7 +16278,7 @@
       "final_url": "https://www.coloradodirectory.com/hunting/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6887ac08a9b7f608886ba7e1410b2667e08c5dadef7f191b04fcc3de3362a8b1",
       "error": ""
@@ -16310,7 +16297,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -16545,7 +16532,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -16645,7 +16632,7 @@
       "final_url": "https://la-h-health.colorado.gov",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -16691,7 +16678,7 @@
       "final_url": "https://cpw.state.co.us/state-parks/lathrop-state-park",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "a889a6142ffcf8244b2fa96982519e09f274eb041c013cf4d692d32506303c8b",
       "error": ""
@@ -16799,7 +16786,7 @@
       "final_url": "https://www.loafnjug.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "2c6ff50db63083f561625258ef68e679cdbbf013b34ecfd76b676273e171c37e",
       "error": ""
@@ -16871,7 +16858,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -17077,7 +17064,7 @@
       "final_url": "https://www.museumoffriends.org/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6de9f0241a842a42a019eab4878f11eb6e2e9b63b038b2f6a3f53833885f8491",
       "error": ""
@@ -17232,7 +17219,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -17266,7 +17253,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -17517,7 +17504,7 @@
       "final_url": "https://www.walsenburgmercantile.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "1541c497f5bc5182f08dca8a7e55489ecef9f4486b1b605ad4172d2c8bad596a",
       "error": ""
@@ -17538,7 +17525,7 @@
       "final_url": "https://www.coloradodirectory.com/Restaurants/restaurantsbytown.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "0e35cd6d96bbe8d46bda21dcd1192aa28777ed22a6d38e7bfd8b33fa15cbdadf",
       "error": ""
@@ -17557,7 +17544,7 @@
       "final_url": "https://www.coloradodirectory.com/Restaurants/restaurantsbytown.html",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "0e35cd6d96bbe8d46bda21dcd1192aa28777ed22a6d38e7bfd8b33fa15cbdadf",
       "error": ""
@@ -17717,7 +17704,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -17869,18 +17856,15 @@
         "restaurant",
         "retail"
       ],
-      "source_keywords": [
-        "cafe",
-        "retail"
-      ],
+      "source_keywords": [],
       "blocked_source_keywords": [],
       "source_url": "https://serendipitywalsenburg.com/",
       "final_url": "https://serendipitywalsenburg.com/",
-      "status": "checked",
+      "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "e1b685522fb629f3fa0169ba8dd53b251e0e8647e64d771ac1b6d5c055df3072",
+      "content_hash": "",
       "error": ""
     },
     "yellowpages-lead-sheldon-garrett-atty-walsenburg-huerfano": {
@@ -17912,7 +17896,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -17931,7 +17915,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -18036,7 +18020,7 @@
       "final_url": "https://www.coloradodirectory.com/snowmobiling/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b43b18b2f72cfe3f1ea624ebd51892e5c9f2c93369f7168d36213882d781f55",
       "error": ""
@@ -18051,7 +18035,7 @@
       "final_url": "https://www.coloradodirectory.com/snowshoeing/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "0bb9882a79cb57033403adb514afc6522b91d0545a77203702ad0d522d3dee57",
       "error": ""
@@ -18275,7 +18259,7 @@
       "final_url": "https://www.sprhc.org/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "9a7e04483f9d81f688fadaa13d5ca60f64a9c31d5b29738fda9ba7cffda004f1",
       "error": ""
@@ -18309,7 +18293,7 @@
       "final_url": "https://www.sprhc.org/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "9a7e04483f9d81f688fadaa13d5ca60f64a9c31d5b29738fda9ba7cffda004f1",
       "error": ""
@@ -18511,9 +18495,9 @@
       "final_url": "https://restaurants.subway.com/united-states/co/walsenburg/228-n-main-st",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "f0a7822f28ab739e0334f9942d46fc34f3042961f57cedc1c8235ad47ff27a14",
+      "content_hash": "b4c4343a711e3f16115fcebb0df9ee4d9134c0c1d266b7c150ccd43fc7dc27a8",
       "error": ""
     },
     "sunrise-mesa-design-huerfano-design-maker-vendor": {
@@ -18582,12 +18566,14 @@
         "agriculture"
       ],
       "source_keywords": [],
-      "blocked_source_keywords": [],
+      "blocked_source_keywords": [
+        "agriculture"
+      ],
       "source_url": "https://tmranch.org/",
       "final_url": "https://tmranch.org/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "b96ab84d04bfe135d6ea7c0da6ef259f01044d0dcb23fa2e9f4ab5b87a6398a4",
       "error": ""
@@ -18621,7 +18607,7 @@
       "final_url": "https://spanishpeakscountry.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc198ccb292f54d696ce011e14e82e36e995ef0d2317bceb471dfd55c607a592",
       "error": ""
@@ -19028,7 +19014,7 @@
       "final_url": "https://www.walsenburgmercantile.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "1541c497f5bc5182f08dca8a7e55489ecef9f4486b1b605ad4172d2c8bad596a",
       "error": ""
@@ -19051,7 +19037,7 @@
       "final_url": "https://www.walsenburgmercantile.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "1541c497f5bc5182f08dca8a7e55489ecef9f4486b1b605ad4172d2c8bad596a",
       "error": ""
@@ -19226,7 +19212,7 @@
       "final_url": "https://www.coloradodirectory.com/FallWinter/winterbytown.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "d2f4a38beb5a310c2502a4fe1c0e0708944e9ee6bece5dfa49b8b6eb31257b7d",
       "error": ""
@@ -19315,7 +19301,7 @@
       "final_url": "https://aguilarcountrycottages.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -19571,7 +19557,7 @@
       "final_url": "https://aguilarstation.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -19820,7 +19806,7 @@
       "final_url": "https://221bgallery.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -20027,7 +20013,7 @@
       "final_url": "https://visittrinidadcolorado.com/arts-culture/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "42a06ae9872504e2a19188b4c4ce70661d075e9aa4c25c5445dd9555acdd1db4",
       "error": ""
@@ -20358,7 +20344,7 @@
       "final_url": "https://boom-noodles.com",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -20488,7 +20474,7 @@
       "final_url": "https://www.coloradodirectory.com/calendars/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "435ff938c42b7b351b081e975380f40528f0a7abdafd23979b14429cd154e4a8",
       "error": ""
@@ -20545,7 +20531,7 @@
       "final_url": "https://cawthonpark.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1016)>"
@@ -20867,7 +20853,7 @@
       "final_url": "https://www.trinidadcreativedistrict.org/the-commons",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fe0204d7b4ef8ebd2068804d6e4161a9e9c9a16b46ec5c2968478f0bff8d6b20",
       "error": ""
@@ -20924,7 +20910,7 @@
       "final_url": "https://www.coloradodirectory.com/contact.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "12186598092d3c995722ad1bd5f385f2ae0f421266dea9ce57c15ccc6ff2f630",
       "error": ""
@@ -21110,9 +21096,9 @@
       "final_url": "https://app.seemylegacy.com/community/2682/campaign/7906",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "14e19732377de02c6e7cc19d160b2d151ca50679339b66827d9bea9b0041ba40",
+      "content_hash": "4cf980d8b06983293f87d8f72ac7db8d7547665299eaae6a14825f1aa8435d6d",
       "error": ""
     },
     "create-trinidad-las-animas-creative-district-cultural-hub": {
@@ -21131,7 +21117,7 @@
       "final_url": "https://www.trinidadcreativedistrict.org/about",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "15969c05b597d19bc4612a4f5d5e2c344b8bf0335ab862ac4ca867c259f44665",
       "error": ""
@@ -21572,7 +21558,7 @@
       "final_url": "https://visittrinidadcolorado.com/arts-culture/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "42a06ae9872504e2a19188b4c4ce70661d075e9aa4c25c5445dd9555acdd1db4",
       "error": ""
@@ -21914,7 +21900,7 @@
       "final_url": "https://gagliardis489.com",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "587fbc5fb81abbe8466fc9ff2c36910d9533cc3bca18769528c5dea394d13b5e",
       "error": ""
@@ -22163,12 +22149,12 @@
       "source_keywords": [],
       "blocked_source_keywords": [],
       "source_url": "https://grill14.com",
-      "final_url": "https://grill14.com",
-      "status": "checked",
+      "final_url": "https://themarketplacetrinidad.com/our-partners/",
+      "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "bb081bf0c938ea02e0d5fa46d2b2cea252afa13508145481150945f08dbffa4a",
+      "content_hash": "ddb329e15730e382575c257fac9d4f13c91cc90f655539f4d923e9b544141ef1",
       "error": ""
     },
     "travel-guide-grill-14-food-court-at-marketplace-trinidad-las-animas": {
@@ -22474,7 +22460,7 @@
       "final_url": "https://www.coloradodirectory.com/Hotsprings/hotspringpools.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fc963fad0df64eea312e9ea22cad1acdb972048da07fa3f9cd08a85566d0289e",
       "error": ""
@@ -22499,7 +22485,7 @@
       "final_url": "https://www.coloradodirectory.com/hunting/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6887ac08a9b7f608886ba7e1410b2667e08c5dadef7f191b04fcc3de3362a8b1",
       "error": ""
@@ -22518,7 +22504,7 @@
       "final_url": "https://www.coloradodirectory.com/hunting/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6887ac08a9b7f608886ba7e1410b2667e08c5dadef7f191b04fcc3de3362a8b1",
       "error": ""
@@ -22841,7 +22827,7 @@
       "final_url": "https://visittrinidadcolorado.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "63ca1e50f2fecfc6f286c0b14195f66ec344bc33e1507c217aae5ded4d817f3f",
       "error": ""
@@ -22890,7 +22876,7 @@
       "final_url": "https://www.trinidad.co.gov",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "220ffd201b1b507b84d9e91652809d3359609da4d3eccf7611a659c6a404b1b0",
       "error": ""
@@ -23143,7 +23129,7 @@
       "final_url": "https://www.luckybluetattootrinidad.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-08-19",
       "content_hash": "2b363af0a22fe42f8477797abc7f9d8ac06c2f090b23f2595e0bdfeee79ff110",
       "error": ""
@@ -23232,7 +23218,7 @@
       "final_url": "https://www.mainstreetlive.org/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "b57aa2d7373d18ccca5e324688aebf292393f315fb3b2a006ba2af5fe71a5951",
       "error": ""
@@ -23270,7 +23256,7 @@
       "final_url": "https://www.marketplacegallery.net",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -23368,10 +23354,10 @@
       "final_url": "https://missionatthebell.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
+      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)>"
     },
     "yellowpages-lead-mission-at-bell-restaurant-trinidad-las-animas": {
       "resource_name": "Mission at the Bell Restaurant",
@@ -23409,7 +23395,7 @@
       "final_url": "https://themonumentlakeresort.com",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "9ce24dc3aaa2fd1ca807cbeb26dc5e2b02798f2de5ce6a40175aaa5cdcc10be8",
       "error": ""
@@ -23472,7 +23458,7 @@
       "final_url": "https://www.msrhc.org/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fd0bcaa0f0db7e315ad675a21f4d3b45a1c1b2a325ea91210b7878aece530a69",
       "error": ""
@@ -23658,12 +23644,14 @@
         "agriculture"
       ],
       "source_keywords": [],
-      "blocked_source_keywords": [],
+      "blocked_source_keywords": [
+        "agriculture"
+      ],
       "source_url": "https://www.coloradodirectory.com/peaceful-peaks-glamping",
       "final_url": "https://www.coloradodirectory.com/peaceful-peaks-glamping/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "a5d30f588c6c8d5a642a683b50368dad38241b69852e77ae1af88ff10d72082f",
       "error": ""
@@ -24019,7 +24007,7 @@
       "final_url": "https://www.coloradodirectory.com/Restaurants/restaurantsbytown.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "0e35cd6d96bbe8d46bda21dcd1192aa28777ed22a6d38e7bfd8b33fa15cbdadf",
       "error": ""
@@ -24038,7 +24026,7 @@
       "final_url": "https://www.coloradodirectory.com/Restaurants/restaurantsbytown.html",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "0e35cd6d96bbe8d46bda21dcd1192aa28777ed22a6d38e7bfd8b33fa15cbdadf",
       "error": ""
@@ -24121,7 +24109,7 @@
       "final_url": "https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -24441,7 +24429,7 @@
       "final_url": "https://www.coloradodirectory.com/snowmobiling/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "6b43b18b2f72cfe3f1ea624ebd51892e5c9f2c93369f7168d36213882d781f55",
       "error": ""
@@ -24456,7 +24444,7 @@
       "final_url": "https://www.coloradodirectory.com/snowshoeing/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "0bb9882a79cb57033403adb514afc6522b91d0545a77203702ad0d522d3dee57",
       "error": ""
@@ -24535,7 +24523,7 @@
       "final_url": "https://visittrinidadcolorado.com/attraction/space-to-create/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "66244972ed495a38eda12489da21789ba69f734fb0d2fd256054cde7121327b2",
       "error": ""
@@ -24695,7 +24683,7 @@
       "final_url": "https://www.coloradodirectory.com/stonewall/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-08-19",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-08-19",
       "content_hash": "d5bd3c9d2a0f87b4d1341a56dca732b86d53e576e0655585bbbb7c580ebf18ac",
       "error": ""
@@ -24771,7 +24759,7 @@
       "final_url": "https://www.tabularasa.gallery",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -24801,7 +24789,7 @@
       "final_url": "https://visittrinidadcolorado.com/arts-culture/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "42a06ae9872504e2a19188b4c4ce70661d075e9aa4c25c5445dd9555acdd1db4",
       "error": ""
@@ -24998,7 +24986,7 @@
       "final_url": "https://jimandmelissa.org",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -25328,7 +25316,7 @@
       "final_url": "https://dadlounge.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "fbabf4b897f81edecc6c7e240a4528780926f9fe6670b7b9799f2aa5eafdee45",
       "error": ""
@@ -25373,7 +25361,7 @@
       "final_url": "https://www.trinidadcreativedistrict.org/space-to-create",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "1d73cdccd3d924c01ffe350732b73d3dae73fd4780ce69a94219236d3dba9ce3",
       "error": ""
@@ -25396,7 +25384,7 @@
       "final_url": "https://trinidadstate.edu/collaboratory/index.html",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -25596,7 +25584,7 @@
       "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "8a124112147b9109d61a968ad84db8723e27c09e99aabb480f97098bbba097f8",
       "error": ""
@@ -25634,7 +25622,7 @@
       "final_url": "https://visittrinidadcolorado.com/arts-culture/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "42a06ae9872504e2a19188b4c4ce70661d075e9aa4c25c5445dd9555acdd1db4",
       "error": ""
@@ -25810,9 +25798,9 @@
       "final_url": "https://wellhoteltrinidad.com/events/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "8ef9350dcc5d79beba9d6ef40cee9274fb2da2310b9c20dfe3d430da279a9e59",
+      "content_hash": "b13a4c2e9c2dd1544ca3c6c350a04e3f93a7cf847b7636ae4b8ebe1fb27828be",
       "error": ""
     },
     "travel-guide-whitewater-rafting-and-kayaking-trinidad-las-animas": {
@@ -25852,7 +25840,7 @@
       "final_url": "https://www.coloradodirectory.com/FallWinter/winterbytown.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "d2f4a38beb5a310c2502a4fe1c0e0708944e9ee6bece5dfa49b8b6eb31257b7d",
       "error": ""
@@ -25920,9 +25908,9 @@
       "final_url": "https://www.redlineart.org/ais-apply-for-a-grant",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
-      "content_hash": "4d2f6275d346805e4d1936cea31d3f013e1b4da08988cffbf7364052b905145e",
+      "content_hash": "dc5cb27ba415357cc54538e724e19fd63a544749d51f035a2d82ea4919d6db8f",
       "error": ""
     },
     "call-yourself-creative-certified-district-partners-regional-regional-creative-district": {
@@ -25994,7 +25982,7 @@
       "final_url": "https://oedit.colorado.gov/colorado-creative-districts",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -26045,7 +26033,7 @@
       "final_url": "https://creativeindustriesdivision.submittable.com/submit",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "4b5e9f5446b4120a23d96caad5ab74eefbc6d4948ab30368c74308fecf8c45f9",
       "error": ""
@@ -26428,7 +26416,7 @@
       "final_url": "https://www.newmexicoartistdirectory.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "da2bee62fd3b84873fb92c2ea1f1e237bca3bc0d4e661dd1e7c9a8d083ac859e",
       "error": ""
@@ -26487,10 +26475,10 @@
       ],
       "blocked_source_keywords": [],
       "source_url": "https://www.edd.newmexico.gov/grants/cid-grants/",
-      "final_url": "https://www.edd.newmexico.gov/grants/cid-grants/",
+      "final_url": "https://edd.newmexico.gov/grants/cid-grants/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-07-22",
+      "last_checked": "2026-11-02",
       "last_changed": "2026-07-22",
       "content_hash": "153c1d24e7b59bf94553178e4eb68c14c81b3f3213e465722d0270b2e4967a2d",
       "error": ""

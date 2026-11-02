@@ -1,6 +1,6 @@
 # Weekly Directory Query Check
 
-Generated: 2026-10-26
+Generated: 2026-11-02
 
 Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.
 
@@ -8,12 +8,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 
 - Sources watched: 15
 - Pages checked: 32
-- Pages failed: 2
-- Listing-like candidates found: 322
-- Already represented in guide: 290
-- Possible new leads: 32
+- Pages failed: 3
+- Listing-like candidates found: 313
+- Already represented in guide: 288
+- Possible new leads: 25
 - Priority new leads: 1
-- Low-confidence text leads: 31
+- Low-confidence text leads: 24
 
 ## Watch Sources
 
@@ -77,8 +77,11 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary visitor-facing source for Trinidad events and event submission routes.
 - Pages checked: 2
-- Possible new leads: 1
+- Possible new leads: 0
 - Priority new leads: 0
+
+Fetch issues:
+- [https://visittrinidadcolorado.com/upcoming-events/](https://visittrinidadcolorado.com/upcoming-events/) - The read operation timed out
 
 ### Visit Trinidad Meetings, Weddings, and Venue Routes
 
@@ -135,7 +138,7 @@ Fetch issues:
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.
 - Pages checked: 2
-- Possible new leads: 14
+- Possible new leads: 8
 - Priority new leads: 0
 
 ### Town of La Veta Business Directory
@@ -170,15 +173,9 @@ These came from directory page text rather than individual listing links. Review
 - KYC vs No-KYC: What "Anonymous" Really Means - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
 - Licensed & Regulated - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
 - Licensed & Regulated - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
+- 82ND GARDNER CHUCKWAGON DINNER - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Annual Holiday Bell Ringing in La Veta - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Cuchara Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Gardner Farmer and Craft Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Gardner Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Gardner Methodist Church - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Halloweentown Movie Night at Fiesta Park - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Kellen Goode Live at the Stokehouse! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- La Veta Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- La Veta Library - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Mason Davis Live at the Stokehouse! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Museum of Friends Fifth Biennial Gala - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - MUSIC BY MIDI LIVE!!!! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
@@ -193,7 +190,6 @@ These came from directory page text rather than individual listing links. Review
 - Stashes - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Stop for local visitor information, maps and help planning a Trinidad visit. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Visit Trinidad Colorado Tourism and Events Office - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
-- Visit Trinidad Colorado – - Las Animas; Visit Trinidad Events and Submit-Event Routes; source page: https://visittrinidadcolorado.com/upcoming-events/
 - Visit Trinidad Colorado – - Las Animas; Visit Trinidad Meetings, Weddings, and Venue Routes; source page: https://visittrinidadcolorado.com/meetings-conventions/
 - Visit Trinidad Colorado – - Las Animas; Visit Trinidad Meetings, Weddings, and Venue Routes; source page: https://visittrinidadcolorado.com/weddings/
 - World Journal - Trinidad Branch - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co

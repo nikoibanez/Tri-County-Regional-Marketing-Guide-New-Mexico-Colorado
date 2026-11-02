@@ -1,6 +1,6 @@
 # Update Source Audit
 
-Generated: 2026-10-26
+Generated: 2026-11-02
 
 This report separates confirmed link failures from pages that merely block or confuse scripted checks.
 

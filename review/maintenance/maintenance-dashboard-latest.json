@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T20:25:49+00:00",
+  "generated_at": "2026-11-02T23:06:09+00:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1498,
@@ -25,10 +25,10 @@
     "source_urls_script_limited": 21,
     "source_field_checks": 1,
     "watch_pages_checked": 32,
-    "watch_pages_failed": 2,
+    "watch_pages_failed": 3,
     "priority_new_leads": 1,
     "keyword_urls_checked": 120,
-    "keyword_entries_changed": 31,
+    "keyword_entries_changed": 3,
     "outreach_listed_routes": 307,
     "outreach_ask_routes": 703,
     "outreach_without_routes": 620,
@@ -37,22 +37,22 @@
     "shortcut_outreach_without_routes": 52,
     "funding_watch_pages_checked": 36,
     "funding_watch_pages_changed": 6,
-    "funding_watch_new_baselines": 8,
+    "funding_watch_new_baselines": 0,
     "funding_watch_confirmed_broken": 0,
     "funding_watch_check_failures": 6,
-    "resource_discovery_candidates": 178,
-    "resource_discovery_changed": 22,
+    "resource_discovery_candidates": 180,
+    "resource_discovery_changed": 20,
     "resource_discovery_broken": 1,
-    "resource_discovery_failures": 5,
+    "resource_discovery_failures": 4,
     "free_tool_pages_checked": 22,
-    "free_tool_pages_changed": 0,
-    "free_tool_candidate_links": 0,
+    "free_tool_pages_changed": 1,
+    "free_tool_candidate_links": 1,
     "free_tool_checks_failed": 5
   },
   "action_queue": [
     {
       "priority": "high",
-      "count": 14,
+      "count": 6,
       "label": "national funding pages waiting for claim review",
       "next_action": "Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory."
     },
@@ -70,7 +70,7 @@
     },
     {
       "priority": "medium",
-      "count": 178,
+      "count": 180,
       "label": "resource candidate links waiting for review",
       "next_action": "Review the highest-scoring links, confirm current public details and terms of use, then add only useful entities or programs to canonical data."
     },
@@ -82,13 +82,13 @@
     },
     {
       "priority": "medium",
-      "count": 31,
+      "count": 3,
       "label": "listing keyword sets proposed for review",
       "next_action": "Review additions and removals in the latest keyword-sweep report before merging the keyword index."
     },
     {
       "priority": "medium",
-      "count": 1,
+      "count": 2,
       "label": "free-tool or nonprofit-offer pages waiting for wording review",
       "next_action": "Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory."
     },
@@ -100,7 +100,7 @@
     },
     {
       "priority": "low",
-      "count": 30,
+      "count": 32,
       "label": "keyword source pages needing attention",
       "next_action": "Open failed pages normally before removing retained source-derived keywords."
     },
@@ -113,20 +113,26 @@
     {
       "priority": "low",
       "count": 5,
-      "label": "resource-discovery hubs needing a normal-browser check",
-      "next_action": "Open these pages normally; do not remove a source because of bot blocking or a temporary request failure."
+      "label": "free-tool pages needing a normal-browser check",
+      "next_action": "Open failed pages normally; do not remove a tool solely because automation was blocked or timed out."
     },
     {
       "priority": "low",
-      "count": 5,
-      "label": "free-tool pages needing a normal-browser check",
-      "next_action": "Open failed pages normally; do not remove a tool solely because automation was blocked or timed out."
+      "count": 4,
+      "label": "resource-discovery hubs needing a normal-browser check",
+      "next_action": "Open these pages normally; do not remove a source because of bot blocking or a temporary request failure."
     },
     {
       "priority": "low",
       "count": 1,
       "label": "offline posting pathways awaiting a field check",
       "next_action": "Confirm the physical location or owner-controlled posting policy locally."
+    },
+    {
+      "priority": "low",
+      "count": 1,
+      "label": "free-tool candidate links waiting for review",
+      "next_action": "Open each official candidate and add it only when it fills a real guide task without duplicating an existing tool."
     }
   ]
 }
