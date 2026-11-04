@@ -40,7 +40,16 @@
       "exclude_phrases": [
         "research article",
         "news archive",
-        "grant writer for hire"
+        "grant writer for hire",
+        "awarded grants",
+        "grant reporting",
+        "grant acknowledgement",
+        "past grant",
+        "current scholars",
+        "alumni",
+        "promotional materials",
+        "currently closed",
+        "logon"
       ]
     },
     {
@@ -277,6 +286,38 @@
         "terms of use",
         "login",
         "weather forecast",
+        "past events"
+      ]
+    },
+    {
+      "id": "event-venues",
+      "label": "Event and meeting venues",
+      "include_phrases": [
+        "event venue",
+        "meeting facility",
+        "meeting space",
+        "venue rental",
+        "facility rental",
+        "theater rental",
+        "book the theater",
+        "rent the space",
+        "rental agreement",
+        "wedding venue",
+        "event space"
+      ],
+      "decision_terms": [
+        "location",
+        "capacity",
+        "accessibility",
+        "availability",
+        "insurance",
+        "deposit",
+        "contact",
+        "booking"
+      ],
+      "exclude_phrases": [
+        "venue inspiration",
+        "event planning ideas",
         "past events"
       ]
     }

@@ -35,6 +35,11 @@ LOW_SIGNAL_HOSTS = {
     "youtube.com",
 }
 
+UNAVAILABLE_PAGE_SIGNALS = (
+    "site is undergoing maintenance",
+    "notice of dissolution of the angel fire chamber of commerce",
+)
+
 GENERIC_CATEGORY_PHRASES = (
     "all tourism directory listings",
     "commercial directory lead",
@@ -46,6 +51,7 @@ GENERIC_CATEGORY_PHRASES = (
 
 GENERIC_NOTE_PHRASES = (
     "commercial-directory-only lead",
+    "commercial-directory sweep also surfaced",
     "creative-directory lead added",
     "is listed as a",
     "listed category:",
@@ -432,6 +438,17 @@ def fetch_keyword_signals(url: str, timeout: int) -> dict:
             "error": clean_text(str(exc)),
         }
     signal = clean_text(parser.signal_text())
+    if any(marker in signal.casefold() for marker in UNAVAILABLE_PAGE_SIGNALS):
+        return {
+            "ok": False,
+            "status": "source_unavailable",
+            "status_code": result.get("status_code"),
+            "final_url": result.get("final_url") or url,
+            "keywords": [],
+            "content_hash": "",
+            "signal_text": "",
+            "error": "Publisher page shows a maintenance or dissolution notice, not a listing.",
+        }
     return {
         "ok": True,
         "status": "checked",
@@ -556,6 +573,12 @@ def run_sweep(args: argparse.Namespace) -> dict:
                     status = "checked_no_name_match"
 
         source_keywords, blocked_source_keywords = filter_source_keywords(row, source_keywords, guardrails)
+        fetched = fetch_results.get(source_url)
+        if source_url and source_url == clean_text(old.get("source_url")) and not args.reset_source_keywords:
+            if not fetched or not fetched["ok"]:
+                blocked_source_keywords = list(dict.fromkeys(
+                    list(old.get("blocked_source_keywords") or []) + blocked_source_keywords
+                ))
         if blocked_source_keywords:
             blocked_inferences.append(
                 {

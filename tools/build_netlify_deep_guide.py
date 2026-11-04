@@ -427,9 +427,18 @@ DIRECTORY_SOURCES = [
         "county": "Colfax",
         "kind": "Local business list",
         "url": "https://www.elratonmediaworks.org/local-businesses",
-        "best_for": "Raton business examples and media/arts adjacent anchors.",
-        "action": "Use as a supplemental contact discovery source, then verify details.",
+        "best_for": "Raton-area shops, food businesses, lodging, and film-production services; some profiles cover nearby counties.",
+        "action": "Open the business profile and check its town and current contact details.",
         "confidence": "Medium",
+    },
+    {
+        "title": "Red River Chamber Member Spotlights",
+        "county": "Colfax",
+        "kind": "Business directory",
+        "url": "https://redriverchamber.org/business-listing/",
+        "best_for": "Red River member profiles for dining, lodging, wellness, retail, and local services.",
+        "action": "Open a member profile for the business website or contact route.",
+        "confidence": "High",
     },
     {
         "title": "Raton Arts & Humanities Council",
@@ -652,9 +661,18 @@ DIRECTORY_SOURCES = [
         "county": "Huerfano",
         "kind": "Incubator / makerspace",
         "url": "https://www.wheelhouseincubator.org/",
-        "best_for": "Retail incubation, makerspace activity, pop-up retail, and early-stage local business support.",
-        "action": "Use for product-based businesses, makers, and local retail experimentation.",
+        "best_for": "Walsenburg maker storefronts, workshops, and small-business incubation.",
+        "action": "Browse current retailers or ask about incubator and makerspace access.",
         "confidence": "High",
+    },
+    {
+        "title": "Canyons & Plains Las Animas Attractions",
+        "county": "Las Animas",
+        "kind": "Tourism attraction guide",
+        "url": "https://canyonsandplains.org/destination-item/las-animas-county/",
+        "best_for": "Las Animas museums, historic sites, and performance venues with destination links.",
+        "action": "Open the destination's own page for current hours and contact details.",
+        "confidence": "Medium",
     },
     {
         "title": "Bachman Community Calendar",
@@ -958,6 +976,15 @@ FUNDING_DIRECTORY_ADDITIONS = [
         "confidence": "High",
     },
     {
+        "title": "Trinidad Community Foundation Fiscal Sponsorship",
+        "county": "Las Animas",
+        "kind": "Fiscal sponsorship",
+        "url": "https://www.trinidadcf.org/organizations.html",
+        "best_for": "Local community projects seeking a fiscal-sponsor conversation.",
+        "action": "Contact the foundation to discuss mission fit and current terms.",
+        "confidence": "High",
+    },
+    {
         "title": "USDA Rural Microentrepreneur Assistance Program",
         "county": "Regional",
         "kind": "Rural microbusiness loans / grants",
@@ -1164,12 +1191,12 @@ DIRECTORY_SOURCES.extend(
             "confidence": "High",
         },
         {
-            "title": "Angel Fire Chamber Member Business Directory",
+            "title": "Visit Angel Fire Business Directory",
             "county": "Colfax",
-            "kind": "Member business directory",
-            "url": "https://angelfirechamber.org/local-businesses/",
-            "best_for": "Angel Fire and Moreno Valley businesses, nonprofits, artists, lodging, dining, services, and chamber member categories.",
-            "action": "Use as a broader Angel Fire directory before searching by category or building a manual list.",
+            "kind": "Tourism business directory",
+            "url": "https://visitangelfirenm.com/all-listings/",
+            "best_for": "Angel Fire businesses, lodging, dining, shopping, services, and visitor-facing attractions.",
+            "action": "Browse local listings or use the site's get-listed route for a business update.",
             "confidence": "High",
         },
         {
@@ -4416,7 +4443,7 @@ def sorted_sources(sources: list[dict]) -> list[dict]:
 
 
 SOURCE_GROUP_OVERRIDES = {
-    "angelfirechamber.org": "Angel Fire Chamber directory and member routes",
+    "angelfirechamber.org": "Former Angel Fire Chamber listing",
     "biz.nm.gov": "New Mexico Business Portal resources",
     "chamber.huerfano.org": "Huerfano Chamber business and resource routes",
     "co.colfax.nm.us": "Colfax County official business and civic routes",
@@ -5854,6 +5881,7 @@ DISCOVERY_CATEGORY_LABELS = {
     "nonprofit-directories": "Nonprofit directories",
     "business-directories": "Business directories",
     "artists-creative-opportunities": "Artist opportunities",
+    "event-venues": "Event venues",
 }
 
 
@@ -6277,7 +6305,7 @@ def events_page() -> str:
     {page_wayfinding(
         "Events",
         "Find a current calendar, discover what is happening, or choose a public route for sharing an event.",
-        [("Event hubs", "#event-hubs"), ("Search all event routes", "#event-directory"), ("County event routes", "#event-county-routes")],
+        [("Event hubs", "#event-hubs"), ("Search all event routes", "#event-directory"), ("County event routes", "#event-county-routes"), ("Find venues", "#event-venue-hubs")],
         [("Promotion finder", "promote/?route=events#promotion-results"), ("Message templates", "templates/"), ("Submit an update", "submit/")],
         1,
     )}
@@ -6338,6 +6366,14 @@ def events_page() -> str:
         <a class="button button-primary" href="../templates/index.html">Prepare an event message</a>
         <a class="button button-soft" href="../submit/index.html">Add or correct an event route</a>
       </div>
+    </section>
+    <section id="event-venue-hubs" class="section tinted" aria-labelledby="event-venue-hubs-title">
+      <div class="section-heading">
+        <p class="eyebrow">Places to host an event</p>
+        <h2 id="event-venue-hubs-title">Research venues across the three counties.</h2>
+        <p class="section-note">Check the venue's own booking page for availability, accessibility, costs, and conditions.</p>
+      </div>
+      <div class="source-grid compact" data-progressive-list data-compact-count="3" data-wide-count="5">{discovery_source_cards(['event-venues'], 99)}</div>
     </section>
     """
     return page_shell(
@@ -7279,6 +7315,16 @@ def about_page(summary: dict) -> str:
         """
         for item in AMPLIFIER_CHANNELS
     )
+    research_rows = "\n".join(
+        f"""
+        <tr>
+          <td><a href="{html_escape(item['url'])}" target="_blank" rel="noreferrer">{html_escape(item['name'])}</a></td>
+          <td>{html_escape(DISCOVERY_CATEGORY_LABELS.get(item['category'], 'Resource search'))}</td>
+          <td>{html_escape(item['public_use'])}</td>
+        </tr>
+        """
+        for item in RESOURCE_DISCOVERY_SOURCES
+    )
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">How the guide works</p>
@@ -7346,6 +7392,15 @@ def about_page(summary: dict) -> str:
         </table>
       </div>
       <p class="section-note">Downloadable data files are available for users who need a spreadsheet or page list.</p>
+      <details>
+        <summary>Funding, nonprofit, loan, artist, and venue search hubs ({len(RESOURCE_DISCOVERY_SOURCES)})</summary>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Search hub</th><th>Type</th><th>What to check</th></tr></thead>
+            <tbody>{research_rows}</tbody>
+          </table>
+        </div>
+      </details>
     </section>
     <section class="section tinted">
       <div class="section-heading">

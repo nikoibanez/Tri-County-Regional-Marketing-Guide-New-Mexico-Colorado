@@ -137,7 +137,7 @@
     {
       "id": "anschutz-family-foundation",
       "name": "Anschutz Family Foundation Grantmaking",
-      "url": "https://anschutzfamilyfoundation.org/our-grantmaking/",
+      "url": "https://anschutzfamilyfoundation.org/apply-for-a-grant/",
       "category": "grants-public-funding",
       "authority": "Anschutz Family Foundation",
       "automation_mode": "page_links",
@@ -534,6 +534,226 @@
       "cadence_days": 7,
       "public_use": "Check grants, programs, and development opportunities for New Mexico creative businesses and organizations.",
       "query_groups": ["creative entrepreneur", "creative business", "arts organization", "marketing", "technical assistance"]
+    },
+    {
+      "id": "southern-colorado-community-foundation",
+      "name": "Southern Colorado Community Foundation Grants",
+      "url": "https://sccfcolorado.org/for-grantseekers/grants/",
+      "category": "grants-public-funding",
+      "authority": "Southern Colorado Community Foundation",
+      "automation_mode": "page_links",
+      "cadence_days": 14,
+      "public_use": "Review foundation funds serving Las Animas and Huerfano counties; check each fund's current service area and terms.",
+      "query_groups": ["Las Animas", "Huerfano", "community fund", "scholarship", "nonprofit"]
+    },
+    {
+      "id": "taos-community-foundation-impact",
+      "name": "Taos Community Foundation Impact Grants",
+      "url": "https://www.taoscf.org/grants/impact/",
+      "category": "grants-public-funding",
+      "authority": "Taos Community Foundation",
+      "automation_mode": "page_links",
+      "cadence_days": 14,
+      "public_use": "Check grant routes for organizations serving western Colfax County; do not extend that geography to all of Colfax.",
+      "query_groups": ["western Colfax", "Moreno Valley", "nonprofit", "fiscal sponsor", "scholarship"]
+    },
+    {
+      "id": "boettcher-grantmaking",
+      "name": "Boettcher Foundation Grantmaking",
+      "url": "https://boettcherfoundation.org/grantmaking/",
+      "category": "grants-public-funding",
+      "authority": "Boettcher Foundation",
+      "automation_mode": "page_links",
+      "cadence_days": 14,
+      "public_use": "Review Colorado grant and scholarship pathways, including rural programs; confirm each program's current eligibility.",
+      "query_groups": ["rural", "Colorado nonprofit", "scholarship", "community connections", "leadership"]
+    },
+    {
+      "id": "daniels-fund-grants",
+      "name": "Daniels Fund Grants",
+      "url": "https://danielsfund.org/our-work/grants/",
+      "category": "grants-public-funding",
+      "authority": "Daniels Fund",
+      "automation_mode": "page_links",
+      "cadence_days": 14,
+      "public_use": "Check grants for qualifying Colorado and New Mexico programs; the foundation's eligibility inquiry controls application access.",
+      "query_groups": ["Colorado", "New Mexico", "nonprofit", "education", "community"]
+    },
+    {
+      "id": "colorado-health-foundation-funding",
+      "name": "Colorado Health Foundation Funding",
+      "url": "https://coloradohealth.org/funding",
+      "category": "grants-public-funding",
+      "authority": "Colorado Health Foundation",
+      "automation_mode": "page_links",
+      "cadence_days": 14,
+      "public_use": "Review Colorado health and community-wellbeing funding; program-specific criteria apply and scholarships are excluded.",
+      "query_groups": ["Colorado", "health", "nonprofit", "fiscal sponsor", "community"]
+    },
+    {
+      "id": "colorado-trust-grantees",
+      "name": "Colorado Trust Grantee Database",
+      "url": "https://www.coloradotrust.org/grantees/",
+      "category": "nonprofit-directories",
+      "authority": "The Colorado Trust",
+      "automation_mode": "page_links",
+      "cadence_days": 30,
+      "public_use": "Discover Colorado organizations through past grant records; a historical grant does not establish a current program or contact route.",
+      "query_groups": ["Las Animas", "Huerfano", "Trinidad", "Walsenburg", "rural"]
+    },
+    {
+      "id": "trinidad-state-scholarships",
+      "name": "Trinidad State Scholarships and Grants",
+      "url": "https://www.trinidadstate.edu/scholarships/index.html",
+      "category": "grants-public-funding",
+      "authority": "Trinidad State College",
+      "automation_mode": "page_links",
+      "cadence_days": 30,
+      "public_use": "Review college and foundation scholarships relevant to students in Las Animas and Huerfano counties; check each award's current terms.",
+      "query_groups": ["Las Animas", "Huerfano", "scholarship", "foundation", "technical education"]
+    },
+    {
+      "id": "nm-higher-education-scholarships",
+      "name": "New Mexico Higher Education Scholarships",
+      "url": "https://hed.nm.gov/financial-aid/scholarships",
+      "category": "grants-public-funding",
+      "authority": "New Mexico Higher Education Department",
+      "automation_mode": "page_links",
+      "cadence_days": 30,
+      "public_use": "Compare state grants and scholarships for New Mexico students; eligibility differs by program.",
+      "query_groups": ["New Mexico", "Colfax", "scholarship", "grant", "student aid"]
+    },
+    {
+      "id": "albuquerque-community-foundation-scholarships",
+      "name": "Albuquerque Community Foundation Scholarships",
+      "url": "https://abqcf.org/scholarships/",
+      "category": "grants-public-funding",
+      "authority": "Albuquerque Community Foundation",
+      "automation_mode": "page_links",
+      "cadence_days": 30,
+      "public_use": "Search donor-specific scholarships for New Mexico residents; do not assume every fund serves Colfax County.",
+      "query_groups": ["New Mexico", "Colfax", "scholarship", "student aid"]
+    },
+    {
+      "id": "fca-emergency-grants",
+      "name": "Foundation for Contemporary Arts Emergency Grants",
+      "url": "https://www.foundationforcontemporaryarts.org/grants/emergency-grants/",
+      "category": "grants-public-funding",
+      "authority": "Foundation for Contemporary Arts",
+      "automation_mode": "page_links",
+      "cadence_days": 30,
+      "public_use": "Review urgent project support for eligible experimental artists with a committed public presentation; this is not general arts funding.",
+      "query_groups": ["artist", "experimental", "performance", "exhibition", "emergency grant"]
+    },
+    {
+      "id": "pollock-krasner-artist-grants",
+      "name": "Pollock-Krasner Foundation Artist Grants",
+      "url": "https://www.pkf.org/how-to-apply/",
+      "category": "grants-public-funding",
+      "authority": "Pollock-Krasner Foundation",
+      "automation_mode": "change_watch",
+      "cadence_days": 30,
+      "public_use": "Review individual visual-artist grants and discipline exclusions before applying.",
+      "query_groups": ["visual artist", "grant", "rolling", "exhibition"]
+    },
+    {
+      "id": "dreamspring-small-business-loans",
+      "name": "DreamSpring Small Business Loans",
+      "url": "https://www.dreamspring.org/sba-community-advantage-loan",
+      "category": "business-capital",
+      "authority": "DreamSpring",
+      "automation_mode": "page_links",
+      "cadence_days": 30,
+      "public_use": "Review mission-driven small-business lending in New Mexico and Colorado; confirm service area, rates, and underwriting directly.",
+      "query_groups": ["New Mexico", "Colorado", "small business loan", "microloan"]
+    },
+    {
+      "id": "colorado-enterprise-fund-loans",
+      "name": "Colorado Enterprise Fund Loans",
+      "url": "https://coloradoenterprisefund.org/loans/",
+      "category": "business-capital",
+      "authority": "Colorado Enterprise Fund",
+      "automation_mode": "page_links",
+      "cadence_days": 30,
+      "public_use": "Compare statewide Colorado small-business loan products; do not apply Denver-only program terms to southern Colorado.",
+      "query_groups": ["Colorado", "Las Animas", "Huerfano", "small business loan", "working capital"]
+    },
+    {
+      "id": "accion-opportunity-fund-loans",
+      "name": "Accion Opportunity Fund Business Loans",
+      "url": "https://aofund.org/state-licenses-disclosures-and-programs/",
+      "category": "business-capital",
+      "authority": "Accion Opportunity Fund",
+      "automation_mode": "change_watch",
+      "cadence_days": 30,
+      "public_use": "Check state lending availability and disclosures for Colorado and New Mexico businesses; rates and approval depend on the product and borrower.",
+      "query_groups": ["Colorado", "New Mexico", "small business loan", "disclosure"]
+    },
+    {
+      "id": "gudsy-colfax-nonprofits",
+      "name": "Gudsy Colfax County Nonprofits",
+      "url": "https://www.gudsy.org/colfax-county-nm/",
+      "category": "nonprofit-directories",
+      "authority": "Gudsy, using public IRS filings",
+      "automation_mode": "page_links",
+      "cadence_days": 30,
+      "public_use": "Find Colfax County nonprofit leads from public filings; verify current activity, service area, and contact details separately.",
+      "query_groups": ["Colfax", "Raton", "Cimarron", "Angel Fire", "nonprofit"]
+    },
+    {
+      "id": "destination-colorado-trinidad-venues",
+      "name": "Destination Colorado Trinidad Meeting Facilities",
+      "url": "https://destinationcolorado.com/destination/trinidad/",
+      "category": "event-venues",
+      "authority": "Destination Colorado",
+      "automation_mode": "page_links",
+      "cadence_days": 30,
+      "public_use": "Find Trinidad meeting-facility leads, then confirm rentals and contact details with each venue.",
+      "query_groups": ["Trinidad", "Las Animas", "meeting", "venue", "event"]
+    },
+    {
+      "id": "shuler-theater-rental",
+      "name": "Shuler Theater Rental Information",
+      "url": "https://shulertheater.com/rentaltech/",
+      "category": "event-venues",
+      "authority": "Shuler Theater",
+      "automation_mode": "change_watch",
+      "cadence_days": 30,
+      "public_use": "Check the Raton theater's rental agreement and current booking contact before planning an event.",
+      "query_groups": ["Raton", "Colfax", "theater", "rental", "performance"]
+    },
+    {
+      "id": "main-street-live-venue",
+      "name": "Main Street LIVE Venue Rental",
+      "url": "https://www.mainstreetlive.org/venue-rental",
+      "category": "event-venues",
+      "authority": "Main Street LIVE",
+      "automation_mode": "change_watch",
+      "cadence_days": 30,
+      "public_use": "Review the Trinidad performance venue's rental inquiry route; availability and terms require direct confirmation.",
+      "query_groups": ["Trinidad", "Las Animas", "venue", "concert", "rental"]
+    },
+    {
+      "id": "francisco-center-theater-rental",
+      "name": "Francisco Center for the Performing Arts Theater Booking",
+      "url": "https://www.fcpalaveta.org/bookthetheater",
+      "category": "event-venues",
+      "authority": "Francisco Center for the Performing Arts",
+      "automation_mode": "change_watch",
+      "cadence_days": 30,
+      "public_use": "Review the La Veta theater booking route; confirm dates and conditions with the theater manager.",
+      "query_groups": ["La Veta", "Huerfano", "theater", "booking", "rental"]
+    },
+    {
+      "id": "cuchara-mountain-park-rentals",
+      "name": "Cuchara Mountain Park Facility Rentals",
+      "url": "https://cucharamountainpark.org/pages/facility-rental",
+      "category": "event-venues",
+      "authority": "Cuchara Mountain Park",
+      "automation_mode": "change_watch",
+      "cadence_days": 30,
+      "public_use": "Review the Huerfano County park's rental request route; confirm suitability and availability directly.",
+      "query_groups": ["Huerfano", "Cuchara", "facility rental", "event", "lodge"]
     }
   ]
 }

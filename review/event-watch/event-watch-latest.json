@@ -1,26 +1,24 @@
 {
-  "generated_at": "2026-10-11T00:16:27-06:00",
+  "generated_at": "2026-11-02T23:05:40+00:00",
   "review_policy": "Automation may report page changes and candidate event links. A person must review dates, locations, costs, submission rules, and public wording before canonical event data changes.",
   "summary": {
     "sources": 15,
     "checked": 15,
-    "changed": 0,
-    "new_baselines": 13,
-    "candidate_links": 24,
+    "changed": 8,
+    "new_baselines": 0,
+    "candidate_links": 12,
     "confirmed_broken": 0,
-    "script_access_limited": 1,
-    "check_failures": 2,
+    "script_access_limited": 0,
+    "check_failures": 0,
     "categories": {
       "events-calendars": 15
     },
     "status_counts": {
-      "access_blocked": 1,
-      "network_error": 1,
-      "ok": 13
+      "ok": 15
     },
     "change_counts": {
-      "check_failed": 2,
-      "new_baseline": 13
+      "changed": 8,
+      "unchanged": 7
     }
   },
   "results": [
@@ -50,7 +48,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.exploreraton.com/events",
-        "elapsed_ms": 900,
+        "elapsed_ms": 117,
         "content_hash": "0e68fa90eb95df45bf058c2dcffa880ef571f5eeb585eb78576a465519bf8659",
         "text_length": 3094,
         "link_count": 48,
@@ -84,8 +82,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "0e68fa90eb95df45bf058c2dcffa880ef571f5eeb585eb78576a465519bf8659"
     },
     {
       "source": {
@@ -113,15 +111,24 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://ratonmainstreet.org/events/",
-        "elapsed_ms": 6741,
-        "content_hash": "51d7aa43463bc1d70784c41773ec03c318ff4e0748966e5825da453aeee26da6",
-        "text_length": 869,
+        "elapsed_ms": 7002,
+        "content_hash": "1741bff72d8cf9f6aab0a79c3ff133a496fe05c6113c2691d2e80e5f0b5ae774",
+        "text_length": 841,
         "link_count": 25,
-        "candidates": [],
+        "candidates": [
+          {
+            "title": "Festival of Lights 2026",
+            "url": "https://ratonmainstreet.org/event/festival-of-lights-2026/",
+            "score": 4,
+            "matched_terms": [
+              "festival"
+            ]
+          }
+        ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "886481f972eb261133f047b683a301ea891b371b83c152aef0ad483ffef41952"
     },
     {
       "source": {
@@ -149,10 +156,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://krtnradio.com/calendar/",
-        "elapsed_ms": 1888,
-        "content_hash": "ef1322ff6048a86cf96de0f0df1fb4693a101594db3ed2e1529f0760dca8a226",
-        "text_length": 9488,
-        "link_count": 102,
+        "elapsed_ms": 2378,
+        "content_hash": "c0f82df7c13c7388c8fae97bcdef6463dac7ab9f56d0522bba35fa1c09b12ddc",
+        "text_length": 7403,
+        "link_count": 86,
         "candidates": [
           {
             "title": "The Events Calendar",
@@ -165,8 +172,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "b973245cda7e971c0fa01aedaa8657cfe33a3d9a635bc8df24e11e7abff557e2"
     },
     {
       "source": {
@@ -191,14 +198,18 @@
         ]
       },
       "check": {
-        "status": "network_error",
-        "status_code": null,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://theratonian.com/calendar/",
-        "error": "[Errno 11001] getaddrinfo failed",
-        "candidates": []
+        "elapsed_ms": 571,
+        "content_hash": "6fc12a0b32c8426a8aeefbf937ae6ad984614bf598f160eb20ddd702680594a8",
+        "text_length": 305,
+        "link_count": 2,
+        "candidates": [],
+        "error": ""
       },
-      "change_status": "check_failed",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "6fc12a0b32c8426a8aeefbf937ae6ad984614bf598f160eb20ddd702680594a8"
     },
     {
       "source": {
@@ -223,14 +234,18 @@
         ]
       },
       "check": {
-        "status": "access_blocked",
-        "status_code": 403,
+        "status": "ok",
+        "status_code": 200,
         "final_url": "https://visitangelfirenm.com/list-your-event/",
-        "error": "HTTP Error 403: Forbidden",
-        "candidates": []
+        "elapsed_ms": 1149,
+        "content_hash": "4f88b9d494283f28f3bcf618dda831ac68f48981ffc24f2f6cede0ba3596f1d1",
+        "text_length": 3221,
+        "link_count": 68,
+        "candidates": [],
+        "error": ""
       },
-      "change_status": "check_failed",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "ddf3191adc84bd26425bab9ae867cc0907f57ebd5a40d27b6d9a865e5aae15d2"
     },
     {
       "source": {
@@ -258,10 +273,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
-        "elapsed_ms": 510,
-        "content_hash": "c3a857578ef76f3e6af56185a43853895a390313a5a0f09e1d2a2d1d9ef1e757",
-        "text_length": 5665,
-        "link_count": 94,
+        "elapsed_ms": 363,
+        "content_hash": "0d56b931140137a600ed3013c82564d2627381fcf7cdbad70feac6ca3b36cdbf",
+        "text_length": 5670,
+        "link_count": 95,
         "candidates": [
           {
             "title": "Upcoming Events",
@@ -274,8 +289,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "6ba508a98c61a8382a89027508837219d69edc10744fd0efd610656bd560face"
     },
     {
       "source": {
@@ -303,15 +318,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://trinidadpubliclibrary.org/events/",
-        "elapsed_ms": 1036,
-        "content_hash": "8dc566653585b1408cc1bb5464619f0d97ee57a4829902be1e569ee991358b10",
-        "text_length": 6428,
-        "link_count": 51,
+        "elapsed_ms": 308,
+        "content_hash": "44c358e09981c9c4850766684fd3a8ba0160917c2bf1e2068c374765ebc30ae4",
+        "text_length": 6551,
+        "link_count": 52,
         "candidates": [],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "2a3d740a31a4f83eff15c2840b48a199929edcc70a16cf81bfde89c4d7b58b71"
     },
     {
       "source": {
@@ -339,24 +354,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidadcreativedistrict.org/trinidad-creative-district-events",
-        "elapsed_ms": 850,
-        "content_hash": "eb82b3c5d3d1e7b152e070133c91ed56f07e7121b663848c3baccaf5f01eb037",
-        "text_length": 1602,
-        "link_count": 27,
-        "candidates": [
-          {
-            "title": "2026 GET LIT! Literary Festival",
-            "url": "https://www.trinidadcreativedistrict.org/2026-get-lit-literary-festival",
-            "score": 4,
-            "matched_terms": [
-              "festival"
-            ]
-          }
-        ],
+        "elapsed_ms": 128,
+        "content_hash": "ca3974127ac21025f67c44eeae74ab6348148fdfcf46afe93277eb7c0b0aed09",
+        "text_length": 1564,
+        "link_count": 26,
+        "candidates": [],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "ca3974127ac21025f67c44eeae74ab6348148fdfcf46afe93277eb7c0b0aed09"
     },
     {
       "source": {
@@ -384,15 +390,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.mainstreetlive.org/home",
-        "elapsed_ms": 834,
+        "elapsed_ms": 120,
         "content_hash": "4c19f332b383fbc5d5b989ed348e516c78e9789de6356bc30ff34ec771a268a9",
         "text_length": 1272,
         "link_count": 34,
         "candidates": [],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "4c19f332b383fbc5d5b989ed348e516c78e9789de6356bc30ff34ec771a268a9"
     },
     {
       "source": {
@@ -420,15 +426,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://extension.colostate.edu/las-animas/events/",
-        "elapsed_ms": 380,
+        "elapsed_ms": 88,
         "content_hash": "bf7768f01166727caa18d9cc5f502841f7e20ae18af6f1b543d36d3bb41c5e74",
         "text_length": 674,
         "link_count": 33,
         "candidates": [],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "bf7768f01166727caa18d9cc5f502841f7e20ae18af6f1b543d36d3bb41c5e74"
     },
     {
       "source": {
@@ -456,81 +462,17 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/spc-events/",
-        "elapsed_ms": 660,
-        "content_hash": "df7539fe863a2362a3014cc094904f3bce1936a851f5d94e60d92b5688fbee14",
-        "text_length": 5945,
-        "link_count": 94,
+        "elapsed_ms": 195,
+        "content_hash": "f0e963ae31b4402e969504b5e43cb4cbdec0974f75304d19eee6d772330de37a",
+        "text_length": 6165,
+        "link_count": 88,
         "candidates": [
           {
-            "title": "Cuchara Farmers Market",
-            "url": "https://spanishpeakscountry.com/series/cuchara-farmers-market/",
+            "title": "Parade of Lights",
+            "url": "https://spanishpeakscountry.com/spc-event/parade-of-lights/",
             "score": 4,
             "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "Cuchara Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/cuchara-farmers-market/2026-10-16/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "Cuchara Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/cuchara-farmers-market/2026-10-23/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "Gardner Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/gardner-farmer-and-craft-market/2026-10-10/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "Gardner Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/gardner-farmer-and-craft-market/2026-10-17/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "Gardner Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/gardner-farmer-and-craft-market/2026-10-24/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "La Veta Farmers Market",
-            "url": "https://spanishpeakscountry.com/series/la-veta-farmers-market-2/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "La Veta Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/la-veta-farmers-market-2/2026-10-15/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "La Veta Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/la-veta-farmers-market-2/2026-10-22/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
+              "parade"
             ]
           },
           {
@@ -548,36 +490,12 @@
             "matched_terms": [
               "submit an event"
             ]
-          },
-          {
-            "title": "Walsenburg Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/walsenburg-farm-makers-market/2026-10-11/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "Walsenburg Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/walsenburg-farm-makers-market/2026-10-18/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "Walsenburg Farmers Market",
-            "url": "https://spanishpeakscountry.com/spc-event/walsenburg-farm-makers-market/2026-10-25/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
           }
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "98165b9871295d48cc501c23572d9d99387cafe7cdc71467b55bab3d5364c68a"
     },
     {
       "source": {
@@ -605,15 +523,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.chamber.huerfano.org/submit-an-event",
-        "elapsed_ms": 1594,
+        "elapsed_ms": 339,
         "content_hash": "9f3f6c4a4b1781852d6d72c5f425818960d752ff1fef3c2ea11ff89d6e7c1d5d",
         "text_length": 862,
         "link_count": 33,
         "candidates": [],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "9f3f6c4a4b1781852d6d72c5f425818960d752ff1fef3c2ea11ff89d6e7c1d5d"
     },
     {
       "source": {
@@ -641,14 +559,22 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://huerfano.us/events/",
-        "elapsed_ms": 1473,
-        "content_hash": "7947a5d4a2e756d22144887c27b23c46771d85f775b36b427d6a766b9bcf8d57",
-        "text_length": 5724,
-        "link_count": 123,
+        "elapsed_ms": 1051,
+        "content_hash": "4e3950af852ebadd2fc01c99133b85f616d18695f58b21beef617aa08e641f8a",
+        "text_length": 5059,
+        "link_count": 124,
         "candidates": [
           {
-            "title": "Public Works Workshop",
-            "url": "https://huerfano.us/event/public-works-workshop-17/",
+            "title": "IT Workshop",
+            "url": "https://huerfano.us/event/it-workshop-11/",
+            "score": 4,
+            "matched_terms": [
+              "workshop"
+            ]
+          },
+          {
+            "title": "Land Use and Building Workshop",
+            "url": "https://huerfano.us/event/land-use-and-building-workshop-11/",
             "score": 4,
             "matched_terms": [
               "workshop"
@@ -657,8 +583,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "bf612e59d1651acd465d3440b7abee5515666cb16a6a4f4c7f507a81729e4dfb"
     },
     {
       "source": {
@@ -686,32 +612,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://lvpl.org/full-calendar/",
-        "elapsed_ms": 1884,
-        "content_hash": "d8bdf9a204ff6f990d6688b16a3b85523af476466edecdbf1154f7205928fa4a",
-        "text_length": 3166,
+        "elapsed_ms": 1319,
+        "content_hash": "c7391f40aabfff7a8067efb2a1df7bf850273dea0c6d0d62bd2a28f84207b1d7",
+        "text_length": 3072,
         "link_count": 130,
-        "candidates": [
-          {
-            "title": "Huerfano Farmers Market",
-            "url": "https://lvpl.org/events/huerfano-farmers-market-21/",
-            "score": 4,
-            "matched_terms": [
-              "farmers market"
-            ]
-          },
-          {
-            "title": "Theatre Games Workshop at the Francisco Center for the Performing Arts",
-            "url": "https://lvpl.org/events/theatre-games-workshop-at-the-francisco-center-for-the-performing-arts-2/",
-            "score": 4,
-            "matched_terms": [
-              "workshop"
-            ]
-          }
-        ],
+        "candidates": [],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "changed",
+      "previous_hash": "ffe03069e6c69cf500748491943319f61e52e0559fc43eb450b323e902e5b076"
     },
     {
       "source": {
@@ -739,7 +648,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
-        "elapsed_ms": 705,
+        "elapsed_ms": 119,
         "content_hash": "89e1855bda6969822ef3c6cff3df61f99a28fc48c294feaaf08005ef5205a916",
         "text_length": 4311,
         "link_count": 28,
@@ -755,8 +664,8 @@
         ],
         "error": ""
       },
-      "change_status": "new_baseline",
-      "previous_hash": ""
+      "change_status": "unchanged",
+      "previous_hash": "89e1855bda6969822ef3c6cff3df61f99a28fc48c294feaaf08005ef5205a916"
     }
   ]
 }

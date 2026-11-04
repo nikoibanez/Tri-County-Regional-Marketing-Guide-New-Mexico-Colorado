@@ -4,6 +4,7 @@ import json
 import sys
 import unittest
 from pathlib import Path
+from urllib.parse import urlparse
 from unittest.mock import patch
 
 
@@ -45,6 +46,35 @@ class ResourceDiscoveryRegistryTests(unittest.TestCase):
         self.assertEqual(len(source_ids), len(set(source_ids)))
         self.assertTrue(all(item["category"] in group_ids for item in sources))
         self.assertTrue(all(str(item["url"]).startswith("https://") for item in sources))
+
+    def test_twenty_new_hubs_are_distinct_and_venue_routes_cover_all_counties(self) -> None:
+        sources = json.loads((ROOT / "data" / "resource-discovery-sources.json").read_text(encoding="utf-8"))["sources"]
+        hosts = [urlparse(item["url"]).netloc.removeprefix("www.") for item in sources]
+        self.assertGreaterEqual(len(sources), 65)
+        self.assertEqual(len(hosts), len(set(hosts)))
+        venue_sources = [item for item in sources if item["category"] == "event-venues"]
+        self.assertGreaterEqual(len(venue_sources), 5)
+        for county in ("Colfax", "Las Animas", "Huerfano"):
+            self.assertTrue(any(county in item["query_groups"] for item in venue_sources))
+
+    def test_about_source_index_includes_new_research_hubs(self) -> None:
+        page = guide_builder.about_page({})
+        for name in (
+            "Southern Colorado Community Foundation Grants",
+            "Taos Community Foundation Impact Grants",
+            "Gudsy Colfax County Nonprofits",
+            "Shuler Theater Rental Information",
+            "Francisco Center for the Performing Arts Theater Booking",
+        ):
+            self.assertIn(name, page)
+        self.assertIn("Event venues", page)
+
+    def test_angel_fire_directory_watchers_use_active_tourism_pages(self) -> None:
+        sources = json.loads((ROOT / "data" / "directory-watch-sources.json").read_text(encoding="utf-8"))["sources"]
+        angel_fire = [item for item in sources if item["id"].startswith("colfax-angel-fire") or item["id"] == "colfax-visit-angel-fire-tourism-events"]
+        self.assertEqual(len(angel_fire), 3)
+        self.assertTrue(all("visitangelfirenm.com" in url for item in angel_fire for url in item["seed_urls"]))
+        self.assertTrue(any(item["title"] == "Visit Angel Fire Business Directory" for item in guide_builder.DIRECTORY_SOURCES))
 
     def test_artist_routes_are_numerous_and_user_labeled(self) -> None:
         sources = json.loads((ROOT / "data" / "resource-discovery-sources.json").read_text(encoding="utf-8"))["sources"]
@@ -95,6 +125,19 @@ class ResourceDiscoveryRegistryTests(unittest.TestCase):
         candidates = discovery.extract_candidates(source, "https://example.org/", links, groups)
         self.assertEqual([item["title"] for item in candidates], ["Artist grant deadline"])
 
+    def test_grant_discovery_skips_closed_and_historical_routes(self) -> None:
+        payload = json.loads((ROOT / "data" / "resource-keyword-registry.json").read_text(encoding="utf-8"))
+        groups = discovery.keyword_group_map(payload)
+        links = [
+            ("Awarded Grants", "/awarded-grants/"),
+            ("Past Grant Programs", "/past-programs/"),
+            ("Applications for Impact Grants Are Currently Closed", "/grants/impact/"),
+            ("Rural Catalyst Grants", "/grants/rural-catalyst/"),
+        ]
+        source = {"category": "grants-public-funding", "query_groups": []}
+        candidates = discovery.extract_candidates(source, "https://example.org/grants/", links, groups)
+        self.assertEqual([item["title"] for item in candidates], ["Rural Catalyst Grants"])
+
     def test_failed_fetch_preserves_previous_successful_state(self) -> None:
         sources = [{"id": "example", "name": "Example", "url": "https://example.org", "category": "grants-public-funding"}]
         groups = {"grants-public-funding": {"include_phrases": ["grant"], "decision_terms": [], "exclude_phrases": []}}
@@ -118,6 +161,8 @@ class GuideTaxonomyTests(unittest.TestCase):
         self.assertIn('id="event-county-filter"', page)
         self.assertIn('id="event-type-filter"', page)
         self.assertIn('id="event-action-filter"', page)
+        self.assertIn('id="event-venue-hubs"', page)
+        self.assertIn("Shuler Theater Rental Information", page)
         self.assertIn("Visit Angel Fire - List Your Event", page)
         self.assertNotIn("Angel Fire Chamber", page)
         self.assertNotIn("verification", page.casefold())

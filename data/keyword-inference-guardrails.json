@@ -1,8 +1,16 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-08-13",
+  "reviewed_on": "2026-11-04",
   "description": "Prevents source-page navigation, host branding, nearby listings, and legal-status language from becoming misleading public search keywords. These rules apply only to automated source-page inferences; canonical editor-reviewed keywords remain unchanged.",
   "global_rules": {
+    "business directory": {
+      "required_canonical_phrases": [
+        "business directory",
+        "member directory",
+        "merchant directory"
+      ],
+      "reason": "A business appearing on a directory page is not itself a business directory."
+    },
     "agriculture": {
       "required_canonical_phrases": [
         "agriculture",
@@ -55,6 +63,19 @@
     }
   },
   "listing_rules": {
+    "summit-rv-park-las-animas-rv-park": {
+      "blocked_source_keywords": [
+        "hotel"
+      ],
+      "reason": "A shared stay page lists hotels and RV parks; it does not establish that this RV park is a hotel."
+    },
+    "la-veta-oil-company-huerfano-service-fuel": {
+      "blocked_source_keywords": [
+        "business directory",
+        "directory"
+      ],
+      "reason": "This fuel-service listing appears on a commercial directory page; the directory describes the host, not the business."
+    },
     "travel-guide-bobcat-pass-wilderness-adventures-angel-fire-colfax": {
       "blocked_source_keywords": [
         "agriculture"
@@ -100,6 +121,38 @@
         "library"
       ],
       "reason": "Books & More is a used bookstore associated with the Friends of the Library, not the library itself."
+    },
+    "travel-guide-angel-fire-ebikes-angel-fire-colfax": {
+      "blocked_source_keywords": ["hiking"],
+      "reason": "The tourism template mentions hiking; the listing describes an e-bike business."
+    },
+    "travel-guide-angel-fire-homes-angel-fire-colfax": {
+      "blocked_source_keywords": ["outdoor recreation"],
+      "reason": "Outdoor recreation describes the destination, not this real-estate business."
+    },
+    "travel-guide-lindsey-vacation-rentals-angel-fire-colfax": {
+      "blocked_source_keywords": ["outdoor recreation"],
+      "reason": "The lodging listing is not itself an outdoor-recreation provider."
+    },
+    "travel-guide-off-grid-grow-dispensary-angel-fire-colfax": {
+      "blocked_source_keywords": ["outdoor recreation"],
+      "reason": "Destination recreation language does not describe this dispensary."
+    },
+    "travel-guide-pub-and-grub-angel-fire-colfax": {
+      "blocked_source_keywords": ["outdoor recreation"],
+      "reason": "The restaurant listing is not an outdoor-recreation provider."
+    },
+    "travel-guide-trailhead-ski-shop-angel-fire-colfax": {
+      "blocked_source_keywords": ["bakery", "cafe"],
+      "reason": "Food-service terms belong to nearby tourism-page content, not this ski shop."
+    },
+    "travel-guide-zia-bar-angel-fire-colfax": {
+      "blocked_source_keywords": ["outdoor recreation"],
+      "reason": "The bar listing is not an outdoor-recreation provider."
+    },
+    "zancana-bakery-colfax-raton": {
+      "blocked_source_keywords": ["cafe"],
+      "reason": "The page describes a bakery and catering; a nearby cafe link is navigation to a different business."
     }
   }
 }

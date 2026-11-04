@@ -1,6 +1,6 @@
 # Directory Online Connection Review
 
-Generated: 2026-10-11T06:20:56.419978+00:00
+Generated: 2026-11-02T23:02:25.746533+00:00
 
 This review distinguishes a first-party website from a hosted directory, tourism page, social profile, email, phone, street address, or missing contact route. An HTTP response does not prove that an organization is active or that page content is current.
 
@@ -8,22 +8,22 @@ This review distinguishes a first-party website from a hosted directory, tourism
 
 - Published directory entries reviewed: 1362
 - First-party website candidates: 195
-- Live first-party business links eligible for the public animation: 128
-- Live direct websites: 168
-- Direct website links needing a normal-browser check: 27
-- Live hosted profiles or directory pages: 344
-- Hosted links needing a normal-browser check: 691
+- Live first-party business links eligible for the public animation: 129
+- Live direct websites: 171
+- Direct website links needing a normal-browser check: 23
+- Live hosted profiles or directory pages: 1034
+- Hosted links needing a normal-browser check: 2
 - Entries with contact details but no URL: 74
 - Entries with no online or direct contact path: 58
 - Unique URLs checked: 589
-- Confirmed broken URLs: 0
-- Script-access limits such as 403 or TLS errors: 130
+- Confirmed broken URLs: 1
+- Script-access limits such as 403 or TLS errors: 12
 
 The companion CSV contains all entries and their assigned connection group.
 
 ## Confirmed Broken Listing URLs
 
-- None found by this scripted check.
+- Sammie's Motel & RV Park (La Veta): https://www.sammiescampground.com/
 
 ## Listings Without Any URL
 

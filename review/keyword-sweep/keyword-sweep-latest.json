@@ -1,141 +1,160 @@
 {
-  "generated_at": "2026-10-11",
+  "generated_at": "2026-11-04",
   "index_path": "C:\\Temp\\tri-county-raton-animation-palettes\\data\\listing-keyword-index.json",
   "network_enabled": true,
   "summary": {
-    "rows": 1498,
-    "rows_with_source_url": 1325,
-    "distinct_source_urls": 419,
+    "rows": 1507,
+    "rows_with_source_url": 1334,
+    "distinct_source_urls": 426,
     "urls_selected": 120,
     "urls_checked": 120,
-    "urls_failed": 76,
-    "entries_changed": 9,
-    "source_keyword_changes": 19,
-    "entries_with_blocked_inferences": 2,
-    "blocked_inference_count": 2,
+    "urls_failed": 41,
+    "entries_changed": 0,
+    "source_keyword_changes": 1,
+    "entries_with_blocked_inferences": 20,
+    "blocked_inference_count": 22,
     "status_counts": {
-      "checked": 232,
-      "checked_no_name_match": 866,
-      "fetch_error": 227,
-      "no_source": 173
+      "checked": 322,
+      "checked_no_name_match": 600,
+      "fetch_error": 400,
+      "no_source": 173,
+      "source_unavailable": 12
     }
   },
-  "changes": [
+  "changes": [],
+  "blocked_inferences": [
     {
-      "id": "travel-guide-pecos-canadian-cimarron-and-mora-rivers-raton-colfax",
-      "name": "The Pecos, Canadian, Cimarron, and Mora Rivers",
+      "id": "travel-guide-angel-fire-ebikes-angel-fire-colfax",
+      "name": "Angel Fire Ebikes LLC",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "blocked": [
+        "hiking"
+      ],
+      "source_url": "https://visitangelfirenm.com/listing/angel-fire-ebikes-llc/"
+    },
+    {
+      "id": "travel-guide-angel-fire-homes-angel-fire-colfax",
+      "name": "Angel Fire Homes",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "blocked": [
+        "outdoor recreation"
+      ],
+      "source_url": "https://visitangelfirenm.com/listing/angel-fire-homes/"
+    },
+    {
+      "id": "angel-fire-resort-colfax-recreation-tourism",
+      "name": "Angel Fire Resort",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "blocked": [
+        "chamber of commerce"
+      ],
+      "source_url": "https://angelfirechamber.org/business/hotels-motels-lodges/"
+    },
+    {
+      "id": "travel-guide-lindsey-vacation-rentals-angel-fire-colfax",
+      "name": "Lindsey Vacation Rentals",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "blocked": [
+        "outdoor recreation"
+      ],
+      "source_url": "https://visitangelfirenm.com/listing/lindsey-vacation-rentals/"
+    },
+    {
+      "id": "travel-guide-off-grid-grow-dispensary-angel-fire-colfax",
+      "name": "Off Grid Grow Co. Dispensary",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "blocked": [
+        "outdoor recreation"
+      ],
+      "source_url": "https://visitangelfirenm.com/listing/off-grid-grow-co-dispensary/"
+    },
+    {
+      "id": "travel-guide-pub-and-grub-angel-fire-colfax",
+      "name": "Pub and Grub",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "blocked": [
+        "outdoor recreation"
+      ],
+      "source_url": "https://visitangelfirenm.com/listing/pub-and-grub/"
+    },
+    {
+      "id": "travel-guide-trailhead-ski-shop-angel-fire-colfax",
+      "name": "Trailhead Ski Shop",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "blocked": [
+        "bakery",
+        "cafe"
+      ],
+      "source_url": "https://visitangelfirenm.com/listing/trailhead-ski-shop/"
+    },
+    {
+      "id": "travel-guide-zia-bar-angel-fire-colfax",
+      "name": "Zia Bar",
+      "county": "Colfax",
+      "town": "Angel Fire",
+      "blocked": [
+        "outdoor recreation"
+      ],
+      "source_url": "https://visitangelfirenm.com/listing/zia-bar/"
+    },
+    {
+      "id": "travel-guide-mesalands-cc-dinosaur-museum-raton-colfax",
+      "name": "Mesalands CC Dinosaur Museum",
       "county": "Colfax",
       "town": "Raton",
-      "added": [
-        "tourism"
+      "blocked": [
+        "outdoor recreation"
       ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://www.newmexico.org/things-to-do/outdoor-adventures/rafting-kayaking/pecos-canadian-cimarron-mora/"
+      "source_url": "https://www.newmexico.org/listing/mesalands-community-college%e2%80%99s-dinosaur-museum/1411/"
     },
     {
-      "id": "crafted-in-colorado-huerfano-retail-maker",
-      "name": "Crafted in Colorado",
+      "id": "travel-guide-bachman-and-associates-entry-huerfano",
+      "name": "Bachman & associates",
+      "county": "Huerfano",
+      "town": "",
+      "blocked": [
+        "chamber of commerce"
+      ],
+      "source_url": "https://www.chamber.huerfano.org/bachman-and-associates"
+    },
+    {
+      "id": "travel-guide-yellow-pine-guest-ranch-cuchara-huerfano",
+      "name": "Yellow Pine Guest Ranch",
+      "county": "Huerfano",
+      "town": "Cuchara",
+      "blocked": [
+        "agriculture"
+      ],
+      "source_url": "https://yellowpine.us/"
+    },
+    {
+      "id": "la-veta-oil-company-huerfano-service-fuel",
+      "name": "La Veta Oil Company",
       "county": "Huerfano",
       "town": "La Veta",
-      "added": [
-        "artist"
+      "blocked": [
+        "business directory",
+        "directory"
       ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://www.craftedincolorado.com"
+      "source_url": "https://www.yellowpages.com/la-veta-co"
     },
     {
-      "id": "fox-theatre-walsenburg-huerfano-arts-culture-venue",
-      "name": "Fox Theatre Walsenburg",
+      "id": "spanish-peaks-country-galleries-directory-la-veta-walsenburg-huerfano-visitor-facing-g",
+      "name": "Spanish Peaks Country Galleries Directory",
       "county": "Huerfano",
-      "town": "Walsenburg",
-      "added": [
-        "live music"
+      "town": "La Veta / Walsenburg",
+      "blocked": [
+        "business directory"
       ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://foxtheatrewalsenburg.org"
+      "source_url": "https://spanishpeakscountry.com/business-directory/categories/galleries"
     },
-    {
-      "id": "travel-guide-story-creek-outfitters-walsenburg-huerfano",
-      "name": "Story Creek Outfitters",
-      "county": "Huerfano",
-      "town": "Walsenburg",
-      "added": [
-        "hunting",
-        "lodging",
-        "transportation"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://storycreek.com/wp/"
-    },
-    {
-      "id": "walsenburg-mining-museum-huerfano-county-historical-society-huerfano-art",
-      "name": "Walsenburg Mining Museum / Huerfano County Historical Society",
-      "county": "Huerfano",
-      "town": "Walsenburg",
-      "added": [
-        "cultural heritage"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://www.huerfanohistory.org/mining-museum"
-    },
-    {
-      "id": "travel-guide-weddings-and-elopements-walsenburg-huerfano",
-      "name": "Weddings & Elopements",
-      "county": "Huerfano",
-      "town": "Walsenburg",
-      "added": [
-        "catering",
-        "lodging"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://www.coloradodirectory.com/Weddings/planning.html"
-    },
-    {
-      "id": "travel-guide-ar-mitchell-museum-of-western-art-trinidad-las-animas",
-      "name": "AR Mitchell Museum of Western Art",
-      "county": "Las Animas",
-      "town": "Trinidad",
-      "added": [
-        "antiques",
-        "gift shop"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visittrinidadcolorado.com/shop/"
-    },
-    {
-      "id": "travel-guide-trinidad-triggers-trinidad-las-animas",
-      "name": "Trinidad Triggers",
-      "county": "Las Animas",
-      "town": "Trinidad",
-      "added": [
-        "spa and wellness"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visittrinidadcolorado.com/more-fun/"
-    },
-    {
-      "id": "travel-guide-weddings-and-elopements-trinidad-las-animas",
-      "name": "Weddings & Elopements",
-      "county": "Las Animas",
-      "town": "Trinidad",
-      "added": [
-        "catering",
-        "lodging"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://www.coloradodirectory.com/Weddings/planning.html"
-    }
-  ],
-  "blocked_inferences": [
     {
       "id": "fox-theatre-walsenburg-huerfano-arts-culture-venue",
       "name": "Fox Theatre Walsenburg",
@@ -155,6 +174,56 @@
         "agriculture"
       ],
       "source_url": "https://storycreek.com/wp/"
+    },
+    {
+      "id": "travel-guide-t-m-ranch-walsenburg-huerfano",
+      "name": "The T/M Ranch",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "blocked": [
+        "agriculture"
+      ],
+      "source_url": "https://tmranch.org/"
+    },
+    {
+      "id": "walsenburg-studio-huerfano-art-studio-gallery",
+      "name": "Walsenburg Studio",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "blocked": [
+        "main street"
+      ],
+      "source_url": "https://spanishpeakscountry.com/business-directory/listing/walsenburg-studio"
+    },
+    {
+      "id": "travel-guide-peaceful-peaks-ranch-glamping-off-grid-trinidad-las-animas",
+      "name": "Peaceful Peaks Ranch - Glamping Off-The-Grid",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "blocked": [
+        "agriculture"
+      ],
+      "source_url": "https://www.coloradodirectory.com/peaceful-peaks-glamping"
+    },
+    {
+      "id": "summit-rv-park-las-animas-rv-park",
+      "name": "Summit RV Park",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "blocked": [
+        "hotel"
+      ],
+      "source_url": "https://visittrinidadcolorado.com/stay/"
+    },
+    {
+      "id": "zancana-bakery-colfax-raton",
+      "name": "Zancana Bakery",
+      "county": "Colfax",
+      "town": "Raton",
+      "blocked": [
+        "cafe"
+      ],
+      "source_url": "https://www.elratonmediaworks.org/businesses/zancana-bakery"
     }
   ],
   "guardrail_path": "C:\\Temp\\tri-county-raton-animation-palettes\\data\\keyword-inference-guardrails.json",
@@ -172,16 +241,64 @@
       "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
-      "url": "https://allseasonsgiftshop.business.site/",
+      "url": "https://aguilarstation.com",
       "status": "fetch_error",
-      "status_code": 404,
-      "error": "HTTP Error 404: Not Found"
+      "status_code": null,
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
-      "url": "https://bigronline.com/locations/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
+      "url": "https://angelfirechamber.org/business/angel-fire-rv-resort/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/bobcat-pass-wilderness-adventures/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/category/dining/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/category/gift-shops/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/laguna-vista/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/longhorn-lodge/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/mountain-sports-of-angel-fire/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/music-from-angel-fire/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/road-runner-tours-ltd/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
     },
     {
       "url": "https://boom-noodles.com",
@@ -196,13 +313,25 @@
       "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
+      "url": "https://carlswansongallery.com",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
       "url": "https://cawthonpark.com",
       "status": "fetch_error",
       "status_code": null,
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1028)>"
     },
     {
-      "url": "https://county.pueblo.org/energy-and-economic-development-department/small-business-development-center",
+      "url": "https://charlies-market.com/",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1028)>"
+    },
+    {
+      "url": "https://cityofwalsenburg.colorado.gov",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -214,25 +343,49 @@
       "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028)>"
     },
     {
+      "url": "https://grill14.com",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://huerfanofair.com",
       "status": "fetch_error",
       "status_code": null,
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)>"
     },
     {
-      "url": "https://jimandmelissa.org",
-      "status": "fetch_error",
-      "status_code": 404,
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "url": "https://missionatthebell.com",
+      "url": "https://la-h-health.colorado.gov",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://lavetacountrystore.com/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://locations.arbys.com/nm/raton/415-clayton-hwy.html",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "url": "https://missionatthebell.com",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028)>"
+    },
+    {
       "url": "https://oedit.colorado.gov/colorado-creative-districts",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -250,325 +403,7 @@
       "error": "HTTP Error 404: Not Found"
     },
     {
-      "url": "https://trinidadstate.edu/collaboratory/index.html",
-      "status": "fetch_error",
-      "status_code": 404,
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "url": "https://visitangelfirenm.com/catering/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/allen-fields-sports-complex/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/alpine-lumber-company/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/angel-fire-community-center/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/angel-fire-ebikes-llc/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/angel-fire-resort-nordic-center-golf-course/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/angel-fire-resort-vacation-rentals/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/angel-fire-visitors-center/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/angel-fired-pizza/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/arias-taqueria-food-truck/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/aspen-gold-laundromat/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/blue-dawg-furnishings/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/chisum-group-berkshire-hathaway-homeservices-angel-fire-real-estate/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/clean-af-llc/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/coyote-creek-state-park/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/dollar-general/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/elevated-pour/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/enchanted-circle-campground-rv-park/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/enchanted-circle-campground/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/high-country-ski-rental/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/jc-critter-control-llc/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/jeanettes-specialty-foods-catering/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/legacy-silver-company/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/lindsey-homes/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/lowes-market/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/maverick-campground/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/mountain-serenity-rentals/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/north-country-real-estate/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/off-grid-grow-co-dispensary/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/pizza-stop/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/pub-and-grub/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/purple-sage-studio/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/ridgewalk-treehouse/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/rio-grande-balloons/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/santa-fe-party-rentals/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/sierra-bonita-cabins-rv-park/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/ski-tech-bluebird-mountain-sports/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/slope-side-sports/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/smoke-rings-bbq/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/snowblaze-ski-shop/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/southern-exposure-photography/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/sweet-shirt-co/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/taos-community-foundation/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/thai-angel/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/the-bakery-and-cafe/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/the-shuter-library-of-angel-fire/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/the-vietnam-veterans-memorial/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/vacasa-new-mexico-llc/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/village-ski-shop/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/weezies-wild-rides/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/whatville/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/zebs-restaurant-and-bar/",
+      "url": "https://visitangelfirenm.com/listing/lindsey-living/",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
@@ -592,25 +427,49 @@
       "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
+      "url": "https://www.mcdonalds.com/us/en-us/location/nm/raton/542-clayton-rd/6011.html?cid=RF:YXT:GMB::Clicks",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.sammiescampground.com/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.skinnysdinerandbar.com/",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "url": "https://www.startupspace.app/resource?page=62",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://www.tabularasa.gallery",
       "status": "fetch_error",
       "status_code": null,
       "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
-      "url": "https://www.twofoxcabins.com/",
+      "url": "https://www.yellowpages.com/cimarron-nm",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://www.yellowpages.com/angel-fire-nm/business-listings/1",
+      "url": "https://www.yellowpages.com/raton-nm/business-listings/1",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://www.yellowpages.com/la-veta-co",
+      "url": "https://www.yellowpages.com/trinidad-co/business-listings/1",
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
