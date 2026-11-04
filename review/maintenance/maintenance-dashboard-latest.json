@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T05:07:26-07:00",
+  "generated_at": "2026-11-04T05:14:30-07:00",
   "review_policy": "Automation detects and drafts. A person approves public claims, directory changes, contact details, funding terms, deadlines, rates, and civic guidance.",
   "inventory": {
     "canonical_resource_rows": 1507,
@@ -37,7 +37,7 @@
     "shortcut_outreach_without_routes": 53,
     "funding_watch_pages_checked": 36,
     "funding_watch_pages_changed": 6,
-    "funding_watch_new_baselines": 8,
+    "funding_watch_new_baselines": 0,
     "funding_watch_confirmed_broken": 0,
     "funding_watch_check_failures": 6,
     "resource_discovery_candidates": 227,
@@ -45,8 +45,8 @@
     "resource_discovery_broken": 0,
     "resource_discovery_failures": 12,
     "free_tool_pages_checked": 22,
-    "free_tool_pages_changed": 0,
-    "free_tool_candidate_links": 0,
+    "free_tool_pages_changed": 1,
+    "free_tool_candidate_links": 1,
     "free_tool_checks_failed": 5
   },
   "action_queue": [
@@ -58,7 +58,7 @@
     },
     {
       "priority": "high",
-      "count": 14,
+      "count": 6,
       "label": "national funding pages waiting for claim review",
       "next_action": "Open each official page and confirm deadlines, eligibility, award range, application cost, fiscal-sponsor rules, and allowed uses before changing the public funding directory."
     },
@@ -76,7 +76,7 @@
     },
     {
       "priority": "medium",
-      "count": 1,
+      "count": 2,
       "label": "free-tool or nonprofit-offer pages waiting for wording review",
       "next_action": "Confirm current free-plan limits, nonprofit eligibility, geographic availability, and provider terms before changing the public tool inventory."
     },
@@ -115,6 +115,12 @@
       "count": 1,
       "label": "offline posting pathways awaiting a field check",
       "next_action": "Confirm the physical location or owner-controlled posting policy locally."
+    },
+    {
+      "priority": "low",
+      "count": 1,
+      "label": "free-tool candidate links waiting for review",
+      "next_action": "Open each official candidate and add it only when it fills a real guide task without duplicating an existing tool."
     }
   ]
 }

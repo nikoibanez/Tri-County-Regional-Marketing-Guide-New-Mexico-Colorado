@@ -1,6 +1,6 @@
 # Tri-County Event Source Review
 
-Generated: 2026-10-26T20:25:14+00:00
+Generated: 2026-11-02T23:05:40+00:00
 
 This is a private candidate queue. A link or page change is not proof that a resource fits the guide or that an opportunity is open.
 
@@ -8,9 +8,9 @@ This is a private candidate queue. A link or page change is not proof that a res
 
 - Source hubs configured: 15
 - Source hubs checked: 15
-- Candidate links collected: 17
+- Candidate links collected: 12
 - Changed pages: 8
-- New baselines: 1
+- New baselines: 0
 - Confirmed broken URLs: 0
 - Script-access limitations: 0
 - Other check failures: 0
@@ -47,11 +47,6 @@ Category: events-calendars. Page status: changed.
 
 Category: events-calendars. Page status: changed.
 
-- [Cuchara Farmers Market](https://spanishpeakscountry.com/series/cuchara-farmers-market/) - matched: farmers market
-- [Cuchara Farmers Market](https://spanishpeakscountry.com/spc-event/cuchara-farmers-market/2026-10-30/) - matched: farmers market
-- [Gardner Farmers Market](https://spanishpeakscountry.com/spc-event/gardner-farmer-and-craft-market/2026-10-31/) - matched: farmers market
-- [La Veta Farmers Market](https://spanishpeakscountry.com/series/la-veta-farmers-market-2/) - matched: farmers market
-- [La Veta Farmers Market](https://spanishpeakscountry.com/spc-event/la-veta-farmers-market-2/2026-10-29/) - matched: farmers market
 - [Parade of Lights](https://spanishpeakscountry.com/spc-event/parade-of-lights/) - matched: parade
 - [Submit an Event](https://spanishpeakscountry.com/spc-events/community/add/) - matched: submit an event
 - [Submit an Event](https://spanishpeakscountry.com/submit-spc-event/) - matched: submit an event
@@ -60,7 +55,7 @@ Category: events-calendars. Page status: changed.
 
 Category: events-calendars. Page status: changed.
 
-- [Emergency Management Workshop](https://huerfano.us/event/emergency-management-workshop-13/) - matched: workshop
+- [IT Workshop](https://huerfano.us/event/it-workshop-11/) - matched: workshop
 - [Land Use and Building Workshop](https://huerfano.us/event/land-use-and-building-workshop-11/) - matched: workshop
 
 ### [La Veta Creative District Festivals and Signature Events](https://www.lavetacreativedistrict.org/festivals-and-signature-events)
