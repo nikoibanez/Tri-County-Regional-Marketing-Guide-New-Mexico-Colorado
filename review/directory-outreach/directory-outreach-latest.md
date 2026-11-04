@@ -1,6 +1,6 @@
 # Directory Outreach Channel Review
 
-Generated: 2026-10-26T23:13:35.841497+00:00
+Generated: 2026-11-04T11:53:25.300022+00:00
 
 This report reviews every published directory listing for practical physical and digital outreach routes. A listed route means the attached listing information identifies that kind of channel. Ask first means the entity may be a sensible contact, but placement, sharing, price, eligibility, and acceptance are not promised.
 
@@ -9,10 +9,10 @@ This report reviews every published directory listing for practical physical and
 - Published listings reviewed: 1371
 - Directory shortcuts reviewed: 120
 - Total directory records reviewed: 1491
-- Listings with at least one outreach route: 748
+- Listings with at least one outreach route: 749
 - Listings with at least one listed route: 308
-- Listings with at least one ask-first route: 708
-- Listings without an identified outreach route: 623
+- Listings with at least one ask-first route: 709
+- Listings without an identified outreach route: 622
 - Listings missing structured outreach fields: 0
 - Directory shortcuts with a listed or ask-first route: 67
 - Directory shortcuts without an identified route: 53
@@ -22,18 +22,18 @@ This report reviews every published directory listing for practical physical and
 
 | Channel | Listed route | Ask first | Not indicated |
 | --- | ---: | ---: | ---: |
-| Flyers and posters | 0 | 337 | 1034 |
+| Flyers and posters | 0 | 338 | 1033 |
 | Brochures and rack cards | 0 | 106 | 1265 |
-| Bulletin boards | 0 | 25 | 1346 |
-| Front-desk referrals | 0 | 285 | 1086 |
+| Bulletin boards | 0 | 26 | 1345 |
+| Front-desk referrals | 0 | 288 | 1083 |
 | Directory profiles and listings | 306 | 16 | 1049 |
 | Event calendars | 1 | 120 | 1250 |
-| Social cross-promotion | 0 | 39 | 1332 |
+| Social cross-promotion | 0 | 38 | 1333 |
 | Newsletters and mailing lists | 0 | 187 | 1184 |
-| Paid digital advertising | 1 | 59 | 1311 |
-| Media and editorial coverage | 2 | 59 | 1310 |
+| Paid digital advertising | 1 | 58 | 1312 |
+| Media and editorial coverage | 2 | 58 | 1311 |
 | Sponsorships | 0 | 212 | 1159 |
-| Partner cross-promotion | 0 | 401 | 970 |
+| Partner cross-promotion | 0 | 400 | 971 |
 
 ## Directory Shortcut Coverage
 
@@ -120,7 +120,6 @@ This report reviews every published directory listing for practical physical and
 - Lake View Country Kitchen - Eagle Nest, Colfax, NM; Local business or service
 - 87 Express - Raton, Colfax, NM; Local business or service
 - A Cut Above - Raton, Colfax, NM; Local business or service
-- All Seasons Gift Shop - Raton, Colfax, NM; Retail & local goods
 - American Legion - Raton, Colfax, NM; Local business or service
 - Amtrak - Raton, Colfax, NM; Local business or service
 - Anthony's Jewelers - Raton, Colfax, NM; Local business or service

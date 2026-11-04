@@ -1,19 +1,19 @@
 # Weekly Directory Query Check
 
-Generated: 2026-10-26
+Generated: 2026-11-04
 
 Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.
 
 ## Summary
 
 - Sources watched: 20
-- Pages checked: 38
-- Pages failed: 0
-- Listing-like candidates found: 370
-- Already represented in guide: 281
-- Possible new leads: 89
+- Pages checked: 36
+- Pages failed: 8
+- Listing-like candidates found: 358
+- Already represented in guide: 279
+- Possible new leads: 79
 - Priority new leads: 15
-- Low-confidence text leads: 74
+- Low-confidence text leads: 64
 
 ## Watch Sources
 
@@ -23,35 +23,50 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Chamber business directory
 - Why watch: Raton-area chamber source for business names, local service anchors, restaurants, and potential outreach contacts.
 - Pages checked: 2
-- Possible new leads: 4
+- Possible new leads: 0
 - Priority new leads: 0
 
-### Angel Fire Chamber Member Business Directory
+Fetch issues:
+- [https://www.raton.info/business_directory.html](https://www.raton.info/business_directory.html) - HTTP Error 403: Forbidden
+- [https://www.raton.info/business-directory.html](https://www.raton.info/business-directory.html) - HTTP Error 403: Forbidden
+
+### Visit Angel Fire Business Directory
 
 - County: Colfax
-- Source type: Chamber member directory
-- Why watch: Angel Fire and Moreno Valley chamber source for member businesses, nonprofits, artists, lodging, dining, and services.
+- Source type: Official tourism business directory
+- Why watch: Current Angel Fire tourism directory for local businesses, services, dining, lodging, and attractions.
 - Pages checked: 1
 - Possible new leads: 0
 - Priority new leads: 0
 
-### Angel Fire Chamber Food, Catering, and Event-Service Categories
+Fetch issues:
+- [https://visitangelfirenm.com/all-listings/](https://visitangelfirenm.com/all-listings/) - HTTP Error 403: Forbidden
+
+### Visit Angel Fire Dining and Catering
 
 - County: Colfax
-- Source type: Food, catering, and event-service directory categories
+- Source type: Official tourism dining and catering directories
 - Why watch: Useful for expanding food, catering, and event-service entries around Angel Fire and the Moreno Valley.
-- Pages checked: 3
+- Pages checked: 2
 - Possible new leads: 0
 - Priority new leads: 0
 
-### Visit Angel Fire Tourism, Dining, and Events
+Fetch issues:
+- [https://visitangelfirenm.com/dining/](https://visitangelfirenm.com/dining/) - HTTP Error 403: Forbidden
+- [https://visitangelfirenm.com/catering/](https://visitangelfirenm.com/catering/) - HTTP Error 403: Forbidden
+
+### Visit Angel Fire Shopping and Lodging
 
 - County: Colfax
 - Source type: Tourism, events, dining, and travel source
-- Why watch: Tourism-facing source for Angel Fire visitor pages, dining discovery, lodging, activities, and events.
-- Pages checked: 3
+- Why watch: Tourism-facing pages for Angel Fire shopping, lodging, and visitor-facing services.
+- Pages checked: 2
 - Possible new leads: 0
 - Priority new leads: 0
+
+Fetch issues:
+- [https://visitangelfirenm.com/shopping/](https://visitangelfirenm.com/shopping/) - HTTP Error 403: Forbidden
+- [https://visitangelfirenm.com/stay/](https://visitangelfirenm.com/stay/) - HTTP Error 403: Forbidden
 
 ### Explore Raton Tourism and Event Pages
 
@@ -107,6 +122,9 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Possible new leads: 13
 - Priority new leads: 0
 
+Fetch issues:
+- [https://southerncoloradotourism.com/](https://southerncoloradotourism.com/) - The read operation timed out
+
 ### Spanish Peaks Country Business Directory
 
 - County: Huerfano
@@ -131,7 +149,7 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.
 - Pages checked: 2
-- Possible new leads: 14
+- Possible new leads: 8
 - Priority new leads: 0
 
 ### Town of La Veta Business Directory
@@ -149,7 +167,7 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Chamber member directory
 - Why watch: Countywide chamber source for business collaboration, member exposure, events, and local business updates.
 - Pages checked: 1
-- Possible new leads: 3
+- Possible new leads: 2
 - Priority new leads: 0
 
 ### Red River Chamber Member Spotlights
@@ -176,7 +194,7 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Source type: Regional tourism attraction guide
 - Why watch: County-specific attraction links provide direct destination or operator pages; check each linked page for current details.
 - Pages checked: 1
-- Possible new leads: 2
+- Possible new leads: 3
 - Priority new leads: 0
 
 ### Trinidad Community Foundation Support
@@ -221,26 +239,16 @@ These have linked listing-page evidence. They are still not publication-ready ad
 
 These came from directory page text rather than individual listing links. Review them more carefully before using.
 
-- KYC vs No-KYC: What "Anonymous" Really Means - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
-- KYC vs No-KYC: What "Anonymous" Really Means - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
-- Licensed & Regulated - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
-- Licensed & Regulated - Colfax; Raton Chamber Business Directory; source page: https://raton.info/
 - 123’s - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
+- 82ND GARDNER CHUCKWAGON DINNER - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Annual Holiday Bell Ringing in La Veta - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Become a Member - Huerfano; Huerfano County Chamber Directory; source page: https://www.chamber.huerfano.org/membership-directory
 - Contact Information - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
-- Cuchara Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Danae's Diner - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Forms & Permits - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Frequently Asked Questions - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
-- Gardner Farmer and Craft Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Gardner Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Gardner Methodist Church - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- Halloweentown Movie Night at Fiesta Park - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Kellen Goode Live at the Stokehouse! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
-- La Veta Farmers Market - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - La Veta Flower Company - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
-- La Veta Library - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Marshal — Harold Willburn - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Mason Davis Live at the Stokehouse! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Member Directory | Connect Locally — huerfano county chamber of commerce - Huerfano; Huerfano County Chamber Directory; source page: https://www.chamber.huerfano.org/membership-directory
@@ -253,7 +261,6 @@ These came from directory page text rather than individual listing links. Review
 - Office Hours - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Parade of Lights - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Shalawalla - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
-- Storage - Huerfano; Huerfano County Chamber Directory; source page: https://www.chamber.huerfano.org/membership-directory
 - (719) 846-9843 ext. 160 - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - 420 Festival at Central Park - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - An independent antiques stop on historic East Main Street. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
@@ -269,6 +276,7 @@ These came from directory page text rather than individual listing links. Review
 - KCRT AM-FM Radio - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Literary Festival – GET LIT! - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Lou Ann Peters - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/resources-for-locals/
+- Louden-Henritze Archaeological Museum - Las Animas; Canyons & Plains Las Animas County Attractions; source page: https://canyonsandplains.org/destination-item/las-animas-county/
 - Ludlow Massacre History Site - Las Animas; Canyons & Plains Las Animas County Attractions; source page: https://canyonsandplains.org/destination-item/las-animas-county/
 - March - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - November - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/

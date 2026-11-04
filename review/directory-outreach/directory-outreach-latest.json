@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-26T23:13:35.841497+00:00",
+  "generated_at": "2026-11-04T11:53:25.300022+00:00",
   "source": "C:\\Temp\\tri-county-raton-animation-palettes\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
   "summary": {
     "entries": 1371,
     "directory_shortcuts": 120,
     "total_records_reviewed": 1491,
-    "with_any_route": 748,
+    "with_any_route": 749,
     "with_listed_route": 308,
-    "with_ask_route": 708,
-    "without_outreach_route": 623,
+    "with_ask_route": 709,
+    "without_outreach_route": 622,
     "missing_structured_fields": 0,
     "shortcuts_with_any_route": 67,
     "shortcuts_with_listed_route": 29,
@@ -19,8 +19,8 @@
       "physical_flyers": {
         "label": "Flyers and posters",
         "listed": 0,
-        "ask": 337,
-        "not_indicated": 1034
+        "ask": 338,
+        "not_indicated": 1033
       },
       "physical_brochures": {
         "label": "Brochures and rack cards",
@@ -31,14 +31,14 @@
       "physical_bulletin_board": {
         "label": "Bulletin boards",
         "listed": 0,
-        "ask": 25,
-        "not_indicated": 1346
+        "ask": 26,
+        "not_indicated": 1345
       },
       "front_desk_referrals": {
         "label": "Front-desk referrals",
         "listed": 0,
-        "ask": 285,
-        "not_indicated": 1086
+        "ask": 288,
+        "not_indicated": 1083
       },
       "directory_listing": {
         "label": "Directory profiles and listings",
@@ -55,8 +55,8 @@
       "social_cross_promotion": {
         "label": "Social cross-promotion",
         "listed": 0,
-        "ask": 39,
-        "not_indicated": 1332
+        "ask": 38,
+        "not_indicated": 1333
       },
       "newsletter_mailing_list": {
         "label": "Newsletters and mailing lists",
@@ -67,14 +67,14 @@
       "paid_digital_advertising": {
         "label": "Paid digital advertising",
         "listed": 1,
-        "ask": 59,
-        "not_indicated": 1311
+        "ask": 58,
+        "not_indicated": 1312
       },
       "media_editorial": {
         "label": "Media and editorial coverage",
         "listed": 2,
-        "ask": 59,
-        "not_indicated": 1310
+        "ask": 58,
+        "not_indicated": 1311
       },
       "sponsorship": {
         "label": "Sponsorships",
@@ -85,8 +85,8 @@
       "partner_cross_promotion": {
         "label": "Partner cross-promotion",
         "listed": 0,
-        "ask": 401,
-        "not_indicated": 970
+        "ask": 400,
+        "not_indicated": 971
       }
     },
     "shortcut_channel_counts": {

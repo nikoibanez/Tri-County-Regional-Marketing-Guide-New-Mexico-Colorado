@@ -51,6 +51,7 @@ from sweep_listing_keywords import (  # noqa: E402
     KeywordSignalParser,
     canonical_signal,
     extract_controlled_keywords,
+    fetch_keyword_signals,
     filter_source_keywords,
     listing_name_matches_signal,
     primary_source_url,
@@ -224,6 +225,18 @@ class DirectoryQualityTests(unittest.TestCase):
         )
         self.assertEqual(alias_match["match_type"], "exact_normalized")
         self.assertEqual(url_match["match_type"], "exact_url")
+
+    def test_directory_hub_url_does_not_merge_unrelated_listings(self) -> None:
+        shared = "directory.example.org/businesses"
+        names = {"town of la veta business directory": {"Town of La Veta Business Directory"}}
+        urls = {shared: {"Town of La Veta Business Directory", "Existing Shop"}}
+        match = match_existing(
+            "New Gallery",
+            names,
+            "https://directory.example.org/businesses",
+            urls,
+        )
+        self.assertEqual(match["status"], "possible_new_lead")
 
     def test_reviewed_link_repairs_replace_stale_urls_and_keep_fallbacks(self) -> None:
         rows = [
@@ -1216,6 +1229,23 @@ class KeywordSweepTests(unittest.TestCase):
         self.assertEqual(allowed, ["library"])
         self.assertEqual(blocked, [])
 
+    def test_dissolved_directory_page_does_not_erase_source_keywords(self) -> None:
+        markup = (
+            "<html><head><title>Site is undergoing maintenance</title></head>"
+            "<body><h2>Notice of Dissolution of the Angel Fire Chamber of Commerce</h2></body></html>"
+        )
+        fetched = {
+            "ok": True,
+            "status_code": 200,
+            "final_url": "https://angelfirechamber.org/business/example/",
+            "content_type": "text/html",
+            "html": markup,
+        }
+        with patch("sweep_listing_keywords.fetch_url", return_value=fetched):
+            result = fetch_keyword_signals(fetched["final_url"], 1)
+        self.assertEqual(result["status"], "source_unavailable")
+        self.assertFalse(result["ok"])
+
     def test_business_directory_host_does_not_reclassify_a_member(self) -> None:
         row = {
             "id": "la-veta-oil-company-huerfano-service-fuel",
@@ -1246,6 +1276,23 @@ class KeywordSweepTests(unittest.TestCase):
         allowed, blocked = filter_source_keywords(row, ["hotel", "lodging"], guardrails)
         self.assertEqual(allowed, ["lodging"])
         self.assertEqual(blocked, ["hotel"])
+
+    def test_angel_fire_tourism_context_does_not_reclassify_businesses(self) -> None:
+        guardrails = json.loads(
+            (ROOT / "data" / "keyword-inference-guardrails.json").read_text(encoding="utf-8")
+        )
+        cases = (
+            ("travel-guide-angel-fire-homes-angel-fire-colfax", "Angel Fire Homes", "Real estate", "outdoor recreation"),
+            ("travel-guide-trailhead-ski-shop-angel-fire-colfax", "Trailhead Ski Shop", "Ski shop", "cafe"),
+            ("travel-guide-zia-bar-angel-fire-colfax", "Zia Bar", "Bar", "outdoor recreation"),
+            ("zancana-bakery-colfax-raton", "Zancana Bakery", "Bakery", "cafe"),
+        )
+        for resource_id, name, category, keyword in cases:
+            with self.subTest(resource_id=resource_id):
+                row = {"id": resource_id, "resource_name": name, "category": category}
+                allowed, blocked = filter_source_keywords(row, [keyword], guardrails)
+                self.assertEqual(allowed, [])
+                self.assertEqual(blocked, [keyword])
 
     def test_keyword_sweep_retains_blocked_terms_when_source_is_not_checked(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

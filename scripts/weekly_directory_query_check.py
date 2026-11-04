@@ -585,11 +585,18 @@ def match_existing(
 ) -> dict:
     url_key = normalize_url_key(candidate_url)
     if url_key and existing_urls and url_key in existing_urls:
-        return {
-            "status": "already_in_guide",
-            "matched_name": sorted(existing_urls[url_key])[0],
-            "match_type": "exact_url",
-        }
+        candidate_key = normalize_name(candidate_name).removeprefix("the ")
+        url_names = sorted(existing_urls[url_key])
+        matched_name = next(
+            (name for name in url_names if normalize_name(name).removeprefix("the ") == candidate_key),
+            "",
+        )
+        if matched_name:
+            return {
+                "status": "already_in_guide",
+                "matched_name": matched_name,
+                "match_type": "exact_url",
+            }
     key = normalize_name(candidate_name)
     compact = compact_key(candidate_name)
     if key in existing_names:

@@ -1,6 +1,6 @@
 # Update Source Registry
 
-Generated: 2026-10-26
+Generated: 2026-11-04
 
 Automation may propose updates. Human approval is required for public claims, eligibility, rates, deadlines, contact changes, listing removal, and civic/legal guidance.
 
@@ -30,6 +30,7 @@ Automation may propose updates. Human approval is required for public claims, el
 - [RAIN Colfax Business Licenses](https://raincolfax.org/business-community-resources/wpbdp_category/business-licenses/) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-10-26; ok; next 2026-11-25
 - [ROAMS Local Resources](https://roamsnm.org/) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-26; ok; next 2026-11-25
 - [Village of Eagle Nest Business Directory](https://www.eaglenest.org/water_waste_water/businessdirectory) - Colfax; directory; every 30 days; human_approval_required; last checked 2026-10-26; ok; next 2026-11-25
+- [Visit Angel Fire Business Directory](https://visitangelfirenm.com/all-listings/) - Colfax; directory; every 30 days; human_approval_required; not checked yet
 - [Yellow Pages Raton Business Listings](https://www.yellowpages.com/raton-nm/business-listings/1) - Colfax; directory; every 30 days; standard_review; last checked 2026-10-26; access_blocked; next 2026-11-25
 - [Spanish Peaks Country Add Business Listing](https://spanishpeakscountry.com/add-business-listing/) - Huerfano; directory; every 30 days; standard_review; last checked 2026-10-26; ok; next 2026-11-25
 - [Spanish Peaks Country Business Directory](https://spanishpeakscountry.com/business-directory) - Huerfano; directory; every 30 days; standard_review; last checked 2026-10-26; ok; next 2026-11-25
@@ -49,7 +50,6 @@ Automation may propose updates. Human approval is required for public claims, el
 - [Angel Fire Resort Vacation Rentals](https://www.angelfireresortvacationrentals.com/plan-your-trip/summer-events/) - Angel Fire / Colfax; events; every 7 days; standard_review; last checked 2026-10-26; ok; next 2026-11-02
 - [Visit Angel Fire Events](https://visitangelfirenm.com/events/) - Angel Fire / Colfax; events; every 7 days; standard_review; last checked 2026-10-26; access_blocked; next 2026-11-02
 - [Visit Angel Fire NM Get Listed](https://visitangelfirenm.com/get-listed/) - Angel Fire / Colfax; events; every 7 days; standard_review; last checked 2026-10-26; access_blocked; next 2026-11-02
-- [Angel Fire Chamber Member Business Directory](https://angelfirechamber.org/local-businesses/) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-26; ok; next 2026-11-02
 - [Explore Raton](https://www.exploreraton.com/) - Colfax; events; every 7 days; standard_review; last checked 2026-10-26; ok; next 2026-11-02
 - [Explore Raton Events](https://www.exploreraton.com/events) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-26; ok; next 2026-11-02
 - [Explore Raton Visitors Guide Advertising](https://www.exploreraton.com/post/purchase-your-2026-raton-visitors-guide-ad) - Colfax; events; every 7 days; human_approval_required; last checked 2026-10-26; ok; next 2026-11-02

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22",
+  "generated_at": "2026-11-04",
   "status": "pass",
   "blocking": [],
   "warnings": [
@@ -14,9 +14,9 @@
     "blank_names": 0,
     "exact_name_place_duplicate_groups": 0,
     "without_website_or_source": 173,
-    "without_phone": 1300,
-    "without_email": 1468,
-    "without_address": 1031,
+    "without_phone": 1296,
+    "without_email": 1467,
+    "without_address": 1030,
     "contact_enrichment_sample": [
       "111 Park Espresso Bar / Enchanted Grounds Espresso Bar",
       "A Taylor Made Haircut",

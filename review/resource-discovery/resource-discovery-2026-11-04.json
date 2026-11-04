@@ -1,0 +1,4059 @@
+{
+  "generated_at": "2026-11-04T04:51:14-07:00",
+  "review_policy": "These hubs can suggest candidate resources. Automation may collect page links and change signals, but a person must confirm relevance, eligibility, deadlines, contact details, and public wording before publication.",
+  "summary": {
+    "sources": 65,
+    "checked": 65,
+    "changed": 8,
+    "new_baselines": 0,
+    "candidate_links": 227,
+    "confirmed_broken": 0,
+    "script_access_limited": 11,
+    "check_failures": 12,
+    "categories": {
+      "artists-creative-opportunities": 19,
+      "business-capital": 5,
+      "business-directories": 3,
+      "event-venues": 5,
+      "fiscal-sponsorship": 3,
+      "grants-public-funding": 21,
+      "nonprofit-directories": 9
+    },
+    "status_counts": {
+      "access_blocked": 10,
+      "ok": 53,
+      "timeout": 1,
+      "tls_error": 1
+    },
+    "change_counts": {
+      "changed": 8,
+      "check_failed": 12,
+      "unchanged": 45
+    }
+  },
+  "results": [
+    {
+      "source": {
+        "id": "grants-gov-api",
+        "name": "Grants.gov API and Opportunity Search",
+        "url": "https://www.grants.gov/api/api-guide",
+        "category": "grants-public-funding",
+        "authority": "U.S. government",
+        "automation_mode": "public_api",
+        "cadence_days": 7,
+        "public_use": "Search current federal funding opportunities, then confirm the full notice and deadline on Grants.gov.",
+        "query_groups": [
+          "arts",
+          "rural economic development",
+          "small business",
+          "tribal",
+          "nonprofit capacity building"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.grants.gov/api/api-guide",
+        "elapsed_ms": 493,
+        "content_hash": "d4e3e57e27171e716ea928fce4ce60b39a5aa6c5e5a80b50e16a53c51c4a781d",
+        "text_length": 5581,
+        "link_count": 40,
+        "candidates": [
+          {
+            "title": "GRANTS.GOV",
+            "url": "https://www.grants.gov/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "https://www.grants.gov/system-to-system",
+            "url": "https://www.grants.gov/system-to-system",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "https://api.grants.gov/v1/api/search2",
+            "url": "https://api.grants.gov/v1/api/search2",
+            "score": 3,
+            "matched_terms": [
+              "grants"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "d4e3e57e27171e716ea928fce4ce60b39a5aa6c5e5a80b50e16a53c51c4a781d"
+    },
+    {
+      "source": {
+        "id": "sam-assistance-listings",
+        "name": "SAM.gov Assistance Listings",
+        "url": "https://sam.gov/assistance-listings",
+        "category": "grants-public-funding",
+        "authority": "U.S. government",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Look up federal assistance programs before searching for a currently open opportunity.",
+        "query_groups": [
+          "arts",
+          "community facilities",
+          "economic development",
+          "rural business",
+          "tribal"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://sam.gov/assistance-listings",
+        "elapsed_ms": 1150,
+        "content_hash": "13d2661c7ada086dab3dd058ffee39a670f8e180d93281670f53245bf329eed4",
+        "text_length": 2948,
+        "link_count": 36,
+        "candidates": [
+          {
+            "title": "grants.gov",
+            "url": "https://grants.gov/",
+            "score": 3,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Grants.gov Learning Center.",
+            "url": "https://grants.gov/learn-grants/",
+            "score": 3,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "USA.gov Government Benefits, Grants, and Loans.",
+            "url": "https://www.usa.gov/benefits-grants-loans",
+            "score": 3,
+            "matched_terms": [
+              "grants"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "13d2661c7ada086dab3dd058ffee39a670f8e180d93281670f53245bf329eed4"
+    },
+    {
+      "source": {
+        "id": "nea-grants",
+        "name": "National Endowment for the Arts Grants",
+        "url": "https://www.arts.gov/grants",
+        "category": "grants-public-funding",
+        "authority": "National Endowment for the Arts",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Review current federal arts grants for eligible organizations, communities, research projects, and selected individual programs.",
+        "query_groups": [
+          "arts organization",
+          "creative placemaking",
+          "small organization",
+          "research",
+          "fellowship"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.arts.gov/grants",
+        "elapsed_ms": 786,
+        "content_hash": "3bd409fff078455162dcdd5e84f4d9cb2d27698f0974b0c4d1b0216f938fd9fe",
+        "text_length": 6423,
+        "link_count": 110,
+        "candidates": [
+          {
+            "title": "Grant Review Process",
+            "url": "https://www.arts.gov/grants/grant-review-process",
+            "score": 7,
+            "matched_terms": [
+              "grant",
+              "grants"
+            ]
+          },
+          {
+            "title": "Scam Regarding NEA Grants",
+            "url": "https://www.arts.gov/about/national-endowment-arts-warns-public-about-grant-scam",
+            "score": 7,
+            "matched_terms": [
+              "grant",
+              "grants"
+            ]
+          },
+          {
+            "title": "Research Awards",
+            "url": "https://www.arts.gov/grants/research-awards",
+            "score": 6,
+            "matched_terms": [
+              "grants",
+              "research"
+            ]
+          },
+          {
+            "title": "Challenge America",
+            "url": "https://www.arts.gov/grants/challenge-america",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "First Time Applicant Guide for Organizations",
+            "url": "https://www.arts.gov/grants/first-time-applicant-guide-for-organizations",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Grants for Arts Projects",
+            "url": "https://www.arts.gov/grants/grants-for-arts-projects",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Manage Your Award",
+            "url": "https://www.arts.gov/grants/manage-your-award",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "National Heritage Fellowships",
+            "url": "https://www.arts.gov/honors/heritage",
+            "score": 4,
+            "matched_terms": [
+              "fellowships"
+            ]
+          },
+          {
+            "title": "NEA Jazz Masters Fellowships",
+            "url": "https://www.arts.gov/honors/jazz",
+            "score": 4,
+            "matched_terms": [
+              "fellowships"
+            ]
+          },
+          {
+            "title": "Our Town",
+            "url": "https://www.arts.gov/grants/our-town",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Partnership Agreement Grants",
+            "url": "https://www.arts.gov/grants/partnership-agreement-grants",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Recent Grants",
+            "url": "https://www.arts.gov/grants/recent-grants",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "3bd409fff078455162dcdd5e84f4d9cb2d27698f0974b0c4d1b0216f938fd9fe"
+    },
+    {
+      "source": {
+        "id": "neh-grants",
+        "name": "National Endowment for the Humanities Grants",
+        "url": "https://www.neh.gov/grants",
+        "category": "grants-public-funding",
+        "authority": "National Endowment for the Humanities",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Find current humanities funding for museums, historic sites, libraries, media, preservation, research, education, and public programs.",
+        "query_groups": [
+          "museum",
+          "historic site",
+          "library",
+          "preservation",
+          "public humanities",
+          "individual"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.neh.gov/grants",
+        "elapsed_ms": 762,
+        "content_hash": "d56ae199880230358fc1ca838b11c711ed406c04a141d3fbe824090815b87a9e",
+        "text_length": 2877,
+        "link_count": 86,
+        "candidates": [
+          {
+            "title": "Fellowships, Conferences, Seminars, and Workshops",
+            "url": "https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5656",
+            "score": 7,
+            "matched_terms": [
+              "fellowships",
+              "grants"
+            ]
+          },
+          {
+            "title": "Other Grant Opportunities",
+            "url": "https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5661",
+            "score": 7,
+            "matched_terms": [
+              "grant",
+              "grants"
+            ]
+          },
+          {
+            "title": "Search Grant Programs",
+            "url": "https://www.neh.gov/grants/listing",
+            "score": 7,
+            "matched_terms": [
+              "grant",
+              "grants"
+            ]
+          },
+          {
+            "title": "Preservation & Access Projects",
+            "url": "https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5646",
+            "score": 6,
+            "matched_terms": [
+              "grants",
+              "preservation"
+            ]
+          },
+          {
+            "title": "Public Humanities Projects (Historic Sites, Exhibitions, Media, and Other Programs)",
+            "url": "https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5651",
+            "score": 6,
+            "matched_terms": [
+              "grants",
+              "public humanities"
+            ]
+          },
+          {
+            "title": "Application Review Process",
+            "url": "https://www.neh.gov/grants/application-process",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Books, Articles, and Other Publications",
+            "url": "https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5631",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Curricula and Teaching Resources",
+            "url": "https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5636",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Digital Projects (Websites, Software, and Other Tools)",
+            "url": "https://www.neh.gov/grants/listing?f%5B0%5D=output%3A5641",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Grantee Communications Toolkit",
+            "url": "https://www.neh.gov/grants/manage/grantee-communications-toolkit",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Landmarks of American History and Culture and Summer Institutes for Higher Education Faculty",
+            "url": "https://www.neh.gov/grants/education/landmarks/highered",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Landmarks of American History and Culture and Summer Institutes for K-12 Educators",
+            "url": "https://www.neh.gov/grants/education/landmarks/k-12-educators",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Manage Your Award",
+            "url": "https://www.neh.gov/grants/manage",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "NEH Resources",
+            "url": "https://www.neh.gov/grants/neh-resources",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Professional Development",
+            "url": "https://www.neh.gov/grants/professional-development",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "quiz",
+            "url": "https://www.neh.gov/grants-quiz",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "d56ae199880230358fc1ca838b11c711ed406c04a141d3fbe824090815b87a9e"
+    },
+    {
+      "source": {
+        "id": "usda-rural-business-programs",
+        "name": "USDA Rural Development Business Programs",
+        "url": "https://www.rd.usda.gov/programs-services/business-programs",
+        "category": "grants-public-funding",
+        "authority": "USDA Rural Development",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Compare rural business grants, loans, loan guarantees, relending, technical assistance, and community-development programs.",
+        "query_groups": [
+          "rural business",
+          "nonprofit",
+          "tribe",
+          "technical assistance",
+          "loan guarantee",
+          "small business"
+        ]
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://www.rd.usda.gov/programs-services/business-programs",
+        "error": "HTTP Error 403: Forbidden",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "eda-funding-opportunities",
+        "name": "U.S. Economic Development Administration Funding Opportunities",
+        "url": "https://www.eda.gov/funding/funding-opportunities",
+        "category": "grants-public-funding",
+        "authority": "U.S. Economic Development Administration",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Check current federal economic-development funding for public works, planning, technical assistance, innovation, and economic adjustment.",
+        "query_groups": [
+          "economic development",
+          "public works",
+          "technical assistance",
+          "planning",
+          "innovation",
+          "rural"
+        ]
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://www.eda.gov/funding/funding-opportunities",
+        "error": "HTTP Error 403: Forbidden",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "sbir-funding",
+        "name": "SBIR and STTR Funding Opportunities",
+        "url": "https://www.sbir.gov/topics?page=0&program=&status=Open",
+        "category": "grants-public-funding",
+        "authority": "U.S. government",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Find federal research and development opportunities for eligible small businesses.",
+        "query_groups": [
+          "small business",
+          "research",
+          "technology",
+          "innovation"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.sbir.gov/topics?page=0&program=&status=Open",
+        "elapsed_ms": 1313,
+        "content_hash": "e8057c3ea1ecf4da86849a6926236dee22e3f81c74ed0cff4ac7c53a43596b3e",
+        "text_length": 10135,
+        "link_count": 68,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "e8057c3ea1ecf4da86849a6926236dee22e3f81c74ed0cff4ac7c53a43596b3e"
+    },
+    {
+      "source": {
+        "id": "cdfi-certified-list",
+        "name": "CDFI Fund Certified CDFI List",
+        "url": "https://www.cdfifund.gov/programs-training/certification/cdfi",
+        "category": "business-capital",
+        "authority": "U.S. Department of the Treasury",
+        "automation_mode": "download_or_page_links",
+        "cadence_days": 30,
+        "public_use": "Find mission-driven lenders and financing organizations serving underserved communities.",
+        "query_groups": [
+          "New Mexico",
+          "Colorado",
+          "small business loan",
+          "Native communities",
+          "rural"
+        ]
+      },
+      "check": {
+        "status": "timeout",
+        "status_code": null,
+        "final_url": "https://www.cdfifund.gov/programs-training/certification/cdfi",
+        "error": "The read operation timed out",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": "75da2c09c0bddb8a88485086a880b023a389c49327bd5cb5a910510402d4d1ef"
+    },
+    {
+      "source": {
+        "id": "sba-lender-match",
+        "name": "SBA Lender Match",
+        "url": "https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders",
+        "category": "business-capital",
+        "authority": "U.S. Small Business Administration",
+        "automation_mode": "change_watch",
+        "cadence_days": 30,
+        "public_use": "Connect a small business with participating SBA-approved lenders; this is a matching route, not a loan approval.",
+        "query_groups": [
+          "startup",
+          "working capital",
+          "equipment",
+          "real estate",
+          "microloan"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.sba.gov/loans/lender-match/",
+        "elapsed_ms": 823,
+        "content_hash": "225154ff710b9de600418ef6387b58a0cbdf4b77c359337a2c06d773b5df6f02",
+        "text_length": 5528,
+        "link_count": 115,
+        "candidates": [
+          {
+            "title": "List of microlenders",
+            "url": "https://www.sba.gov/loans/microloans/list-of-microlenders/",
+            "score": 4,
+            "matched_terms": [
+              "microloans"
+            ]
+          },
+          {
+            "title": "Microloans",
+            "url": "https://www.sba.gov/loans/microloans/",
+            "score": 4,
+            "matched_terms": [
+              "microloans"
+            ]
+          },
+          {
+            "title": "Find a lender",
+            "url": "https://lending.sba.gov/lender-match/",
+            "score": 3,
+            "matched_terms": [
+              "lender match"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "225154ff710b9de600418ef6387b58a0cbdf4b77c359337a2c06d773b5df6f02"
+    },
+    {
+      "source": {
+        "id": "candid-foundation-directory",
+        "name": "Candid Foundation Directory Free Access",
+        "url": "https://learning.candid.org/free-access-to-foundation-directory",
+        "category": "grants-public-funding",
+        "authority": "Candid",
+        "automation_mode": "change_watch",
+        "cadence_days": 30,
+        "public_use": "Locate participating libraries and partners that provide free access to foundation-funding research.",
+        "query_groups": [
+          "nonprofit",
+          "foundation",
+          "arts",
+          "community development"
+        ]
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://learning.candid.org/free-access-to-foundation-directory",
+        "error": "HTTP Error 403: Forbidden",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": "6c45a1c0d674bb94679e605f4c346c00eef248102206e0725181be33ffc64b9a"
+    },
+    {
+      "source": {
+        "id": "nm-community-foundation-grants",
+        "name": "New Mexico Community Foundation Grants and Scholarships",
+        "url": "https://nmcf.org/grants-and-scholarships/",
+        "category": "grants-public-funding",
+        "authority": "New Mexico Community Foundation",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Check statewide and initiative-specific grants and scholarships serving New Mexico nonprofits and communities.",
+        "query_groups": [
+          "New Mexico nonprofit",
+          "community",
+          "rural",
+          "scholarship",
+          "general operating support"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://nmcf.org/grants-and-scholarships/",
+        "elapsed_ms": 772,
+        "content_hash": "bf6ca79476c48bebf2a4fe22c2e2e4119cac6809cf215ee810d9ec2a8c03932e",
+        "text_length": 3954,
+        "link_count": 176,
+        "candidates": [
+          {
+            "title": "Apply For A Scholarship",
+            "url": "https://nmcf.org/scholarships/",
+            "score": 9,
+            "matched_terms": [
+              "scholarship",
+              "scholarships"
+            ]
+          },
+          {
+            "title": "Apply For A Grant",
+            "url": "https://nmcf.org/apply-for-a-grant/",
+            "score": 4,
+            "matched_terms": [
+              "grant"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "bf6ca79476c48bebf2a4fe22c2e2e4119cac6809cf215ee810d9ec2a8c03932e"
+    },
+    {
+      "source": {
+        "id": "el-pomar-grantmaking",
+        "name": "El Pomar Foundation Grantmaking",
+        "url": "https://www.elpomar.org/grant-making/",
+        "category": "grants-public-funding",
+        "authority": "El Pomar Foundation",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Review Colorado grant routes for eligible nonprofits and public entities in arts and culture, civic life, education, health, and human services.",
+        "query_groups": [
+          "Colorado nonprofit",
+          "arts and culture",
+          "rural",
+          "community",
+          "education",
+          "human services"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.elpomar.org/grant-making/",
+        "elapsed_ms": 897,
+        "content_hash": "10e4a02ed731b2ab87457bf92024ddffbcc97bce5c47701f484ec7344bd5e5f1",
+        "text_length": 10620,
+        "link_count": 117,
+        "candidates": [
+          {
+            "title": "Search Grants",
+            "url": "https://www.elpomar.org/grant-making/search-grants/",
+            "score": 7,
+            "matched_terms": [
+              "grant",
+              "grants"
+            ]
+          },
+          {
+            "title": "Apply",
+            "url": "https://www.elpomar.org/grant-making/apply/",
+            "score": 4,
+            "matched_terms": [
+              "grant"
+            ]
+          },
+          {
+            "title": "Apply for the 2027 Fellowship",
+            "url": "https://www.elpomar.org/contact-us/career-opportunities/",
+            "score": 4,
+            "matched_terms": [
+              "fellowship"
+            ]
+          },
+          {
+            "title": "Contact Us",
+            "url": "https://www.elpomar.org/grant-making/contact-us-1/",
+            "score": 4,
+            "matched_terms": [
+              "grant"
+            ]
+          },
+          {
+            "title": "Fellowship",
+            "url": "https://www.elpomar.org/fellowship/",
+            "score": 4,
+            "matched_terms": [
+              "fellowship"
+            ]
+          },
+          {
+            "title": "Grant Process & Guidelines",
+            "url": "https://www.elpomar.org/grant-making/grant-process/",
+            "score": 4,
+            "matched_terms": [
+              "grant"
+            ]
+          },
+          {
+            "title": "Grant Toolkit",
+            "url": "https://www.elpomar.org/grant-making/grant-toolkit/",
+            "score": 4,
+            "matched_terms": [
+              "grant"
+            ]
+          },
+          {
+            "title": "Leadership Development Developing and enhancing leadership throughout the state: Fellowship, Internship, ELD, and PeOPLE.",
+            "url": "https://www.elpomar.org/programs/leadership-development/",
+            "score": 4,
+            "matched_terms": [
+              "fellowship"
+            ]
+          },
+          {
+            "title": "Our Funds",
+            "url": "https://www.elpomar.org/grant-making/el-pomars-funds/",
+            "score": 4,
+            "matched_terms": [
+              "grant"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "10e4a02ed731b2ab87457bf92024ddffbcc97bce5c47701f484ec7344bd5e5f1"
+    },
+    {
+      "source": {
+        "id": "anschutz-family-foundation",
+        "name": "Anschutz Family Foundation Grantmaking",
+        "url": "https://anschutzfamilyfoundation.org/apply-for-a-grant/",
+        "category": "grants-public-funding",
+        "authority": "Anschutz Family Foundation",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Check Colorado nonprofit grant cycles with a strong rural-community emphasis; confirm current program exclusions before applying.",
+        "query_groups": [
+          "Colorado nonprofit",
+          "rural community",
+          "capacity building",
+          "family",
+          "youth",
+          "human services"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://anschutzfamilyfoundation.org/apply-for-a-grant/",
+        "elapsed_ms": 1275,
+        "content_hash": "0852a207c8cb67bde1b1ae5a26841e134fd9e0c5250b4700e12d03d9a5aec7d1",
+        "text_length": 2501,
+        "link_count": 44,
+        "candidates": [
+          {
+            "title": "SEARCH OUR PAST GRANTS",
+            "url": "https://anschutzfamilyfoundation.org/search-our-past-grants/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "GRANTEE LOGIN",
+            "url": "https://anschutzfamilyfdn.my.site.com/grants/s/",
+            "score": 3,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "grantee portal",
+            "url": "https://anschutzfamilyfdn.my.site.com/grants/s/login/?startURL=%2Fgrants%2Fs%2F%3Ft%3D1661136770131",
+            "score": 3,
+            "matched_terms": [
+              "grants"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "0852a207c8cb67bde1b1ae5a26841e134fd9e0c5250b4700e12d03d9a5aec7d1"
+    },
+    {
+      "source": {
+        "id": "nnfs-member-directory",
+        "name": "National Network of Fiscal Sponsors Member Directory",
+        "url": "https://www.fiscalsponsors.org/member-directory",
+        "category": "fiscal-sponsorship",
+        "authority": "National Network of Fiscal Sponsors",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Browse fiscal-sponsor organizations, then ask each sponsor about project fit, fees, geography, and application timing.",
+        "query_groups": [
+          "arts",
+          "community project",
+          "New Mexico",
+          "Colorado",
+          "national"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.fiscalsponsors.org/member-directory",
+        "elapsed_ms": 1170,
+        "content_hash": "d7092235d54fcb4845044eff9ea1d76c04e7b463add679fc2b00adf0794a3def",
+        "text_length": 1002,
+        "link_count": 54,
+        "candidates": [
+          {
+            "title": "About Fiscal Sponsorship",
+            "url": "https://www.fiscalsponsors.org/about-fiscal-sponsorship",
+            "score": 4,
+            "matched_terms": [
+              "fiscal sponsorship"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "d7092235d54fcb4845044eff9ea1d76c04e7b463add679fc2b00adf0794a3def"
+    },
+    {
+      "source": {
+        "id": "fiscal-sponsor-directory",
+        "name": "Fiscal Sponsor Directory",
+        "url": "https://fiscalsponsordirectory.org/",
+        "category": "fiscal-sponsorship",
+        "authority": "San Francisco Study Center",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Compare fiscal-sponsor leads by service area and project type before contacting a sponsor directly.",
+        "query_groups": [
+          "arts",
+          "community development",
+          "education",
+          "rural",
+          "national"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://fiscalsponsordirectory.org/",
+        "elapsed_ms": 1567,
+        "content_hash": "f32f49d3a95f9b57aa9a189231464eba448d1f652af06e5c041661a1c0b165e2",
+        "text_length": 5321,
+        "link_count": 82,
+        "candidates": [
+          {
+            "title": "Fiscal Sponsorship",
+            "url": "https://fiscalsponsordirectory.org/what-it-is/",
+            "score": 4,
+            "matched_terms": [
+              "fiscal sponsorship"
+            ]
+          },
+          {
+            "title": "Fiscal Sponsorship: 6 Ways To Do It Right (eBook)",
+            "url": "https://fiscalsponsordirectory.org/product/fiscal-sponsorship-6-ways-to-do-it-right-e-book/",
+            "score": 4,
+            "matched_terms": [
+              "fiscal sponsorship"
+            ]
+          },
+          {
+            "title": "Fiscal Sponsorship: 6 Ways \u2013 Buy the book",
+            "url": "https://fiscalsponsordirectory.org/product/fiscal-sponsorship-6-ways-to-do-it-right-3rd-edition/",
+            "score": 4,
+            "matched_terms": [
+              "fiscal sponsorship"
+            ]
+          },
+          {
+            "title": "Fiscal Sponsorship: Up and up",
+            "url": "https://fiscalsponsordirectory.org/?p=12947",
+            "score": 4,
+            "matched_terms": [
+              "fiscal sponsorship"
+            ]
+          },
+          {
+            "title": "History of fiscal sponsorship",
+            "url": "https://fiscalsponsordirectory.org/history-of-fiscalssponsorship/",
+            "score": 4,
+            "matched_terms": [
+              "fiscal sponsorship"
+            ]
+          },
+          {
+            "title": "Join",
+            "url": "https://fiscalsponsordirectory.org/join-the-fiscal-sponsor-directory/",
+            "score": 4,
+            "matched_terms": [
+              "fiscal sponsor"
+            ]
+          },
+          {
+            "title": "News",
+            "url": "https://fiscalsponsordirectory.org/fiscal-sponsorship-news/",
+            "score": 4,
+            "matched_terms": [
+              "fiscal sponsorship"
+            ]
+          },
+          {
+            "title": "What is fiscal sponsorship?",
+            "url": "https://fiscalsponsordirectory.org/definition-of-fiscal-sponsorship/",
+            "score": 4,
+            "matched_terms": [
+              "fiscal sponsorship"
+            ]
+          },
+          {
+            "title": "Support the Directory",
+            "url": "https://studycenter.org/help-make-the-fiscal-sponsor-directory-even-better/",
+            "score": 3,
+            "matched_terms": [
+              "fiscal sponsor"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "f32f49d3a95f9b57aa9a189231464eba448d1f652af06e5c041661a1c0b165e2"
+    },
+    {
+      "source": {
+        "id": "fractured-atlas-sponsorship",
+        "name": "Fractured Atlas Fiscal Sponsorship",
+        "url": "https://www.fracturedatlas.org/fiscal-sponsorship",
+        "category": "fiscal-sponsorship",
+        "authority": "Fractured Atlas",
+        "automation_mode": "change_watch",
+        "cadence_days": 30,
+        "public_use": "Review a national arts-focused fiscal-sponsorship route for eligible creative projects.",
+        "query_groups": [
+          "artists",
+          "performing arts",
+          "film",
+          "creative project"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.fracturedatlas.org/fiscal-sponsorship",
+        "elapsed_ms": 1046,
+        "content_hash": "5f54e33b686dfac64269f3d30632d43961638302ed083600cf503f987999a7c0",
+        "text_length": 2852,
+        "link_count": 51,
+        "candidates": [
+          {
+            "title": "Fiscal sponsorship is a contractual relationship",
+            "url": "https://blog.fracturedatlas.org/what-is-fiscal-sponsorship-artists-d3753d8b29ca",
+            "score": 5,
+            "matched_terms": [
+              "artists",
+              "fiscal sponsorship"
+            ]
+          },
+          {
+            "title": "activities are prohibited",
+            "url": "https://fracturedatlas.zendesk.com/hc/en-us/articles/1260801753749-Fiscal-Sponsorship-Prohibited-Activities",
+            "score": 3,
+            "matched_terms": [
+              "fiscal sponsorship"
+            ]
+          },
+          {
+            "title": "grants and corporate sponsorships.",
+            "url": "https://fracturedatlas.zendesk.com/hc/en-us/categories/360005957733-Fiscal-Sponsorship-Grants",
+            "score": 3,
+            "matched_terms": [
+              "fiscal sponsorship"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "5f54e33b686dfac64269f3d30632d43961638302ed083600cf503f987999a7c0"
+    },
+    {
+      "source": {
+        "id": "irs-eo-bmf",
+        "name": "IRS Exempt Organizations Business Master File",
+        "url": "https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
+        "category": "nonprofit-directories",
+        "authority": "Internal Revenue Service",
+        "automation_mode": "bulk_csv",
+        "cadence_days": 30,
+        "public_use": "Check current IRS tax-exempt organization records by state; a filing address does not prove a local service area.",
+        "query_groups": [
+          "New Mexico",
+          "Colorado",
+          "Colfax",
+          "Las Animas",
+          "Huerfano"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
+        "elapsed_ms": 640,
+        "content_hash": "65dbddca4d826fa1c42387b7fef8f03aff1720886b2abc9353a019c71f04eb3a",
+        "text_length": 8862,
+        "link_count": 283,
+        "candidates": [
+          {
+            "title": "Espa\u00f1ol",
+            "url": "https://www.irs.gov/es/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
+            "score": 7,
+            "matched_terms": [
+              "EO BMF",
+              "exempt organizations business master file"
+            ]
+          },
+          {
+            "title": "Krey\u00f2l ayisyen",
+            "url": "https://www.irs.gov/ht/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
+            "score": 7,
+            "matched_terms": [
+              "EO BMF",
+              "exempt organizations business master file"
+            ]
+          },
+          {
+            "title": "Statistics of Income annual extracts of tax-exempt organization financial data",
+            "url": "https://www.irs.gov/statistics/soi-tax-stats-annual-extract-of-tax-exempt-organization-financial-data",
+            "score": 7,
+            "matched_terms": [
+              "tax exempt organization",
+              "tax-exempt organization"
+            ]
+          },
+          {
+            "title": "Ti\u1ebfng Vi\u1ec7t",
+            "url": "https://www.irs.gov/vi/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
+            "score": 7,
+            "matched_terms": [
+              "EO BMF",
+              "exempt organizations business master file"
+            ]
+          },
+          {
+            "title": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
+            "url": "https://www.irs.gov/ru/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
+            "score": 7,
+            "matched_terms": [
+              "EO BMF",
+              "exempt organizations business master file"
+            ]
+          },
+          {
+            "title": "\u4e2d\u6587 (\u7b80\u4f53)",
+            "url": "https://www.irs.gov/zh-hans/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
+            "score": 7,
+            "matched_terms": [
+              "EO BMF",
+              "exempt organizations business master file"
+            ]
+          },
+          {
+            "title": "\u4e2d\u6587 (\u7e41\u9ad4)",
+            "url": "https://www.irs.gov/zh-hant/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
+            "score": 7,
+            "matched_terms": [
+              "EO BMF",
+              "exempt organizations business master file"
+            ]
+          },
+          {
+            "title": "\ud55c\uad6d\uc5b4",
+            "url": "https://www.irs.gov/ko/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
+            "score": 7,
+            "matched_terms": [
+              "EO BMF",
+              "exempt organizations business master file"
+            ]
+          },
+          {
+            "title": "Apply for an Employer ID Number (EIN)",
+            "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+            "score": 4,
+            "matched_terms": [
+              "EIN"
+            ]
+          },
+          {
+            "title": "Search for charities",
+            "url": "https://www.irs.gov/charities-non-profits/tax-exempt-organization-search",
+            "score": 4,
+            "matched_terms": [
+              "tax exempt organization"
+            ]
+          },
+          {
+            "title": "Tax Exempt Organization Search bulk data downloads",
+            "url": "https://www.irs.gov/charities-non-profits/tax-exempt-organization-search-bulk-data-downloads",
+            "score": 4,
+            "matched_terms": [
+              "tax exempt organization"
+            ]
+          },
+          {
+            "title": "Tax Exempt Organization Search Tool",
+            "url": "https://www.irs.gov/charities-non-profits/search-for-tax-exempt-organizations",
+            "score": 4,
+            "matched_terms": [
+              "tax exempt organization"
+            ]
+          },
+          {
+            "title": "Colorado",
+            "url": "https://www.irs.gov/pub/irs-soi/eo_co.csv",
+            "score": 3,
+            "matched_terms": [
+              "Colorado"
+            ]
+          },
+          {
+            "title": "New Mexico",
+            "url": "https://www.irs.gov/pub/irs-soi/eo_nm.csv",
+            "score": 3,
+            "matched_terms": [
+              "New Mexico"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "65dbddca4d826fa1c42387b7fef8f03aff1720886b2abc9353a019c71f04eb3a"
+    },
+    {
+      "source": {
+        "id": "propublica-nonprofit-api",
+        "name": "ProPublica Nonprofit Explorer API",
+        "url": "https://projects.propublica.org/nonprofits/api/",
+        "category": "nonprofit-directories",
+        "authority": "ProPublica",
+        "automation_mode": "public_api",
+        "cadence_days": 30,
+        "public_use": "Search nonprofit names, locations, and public Form 990 records, then confirm current local contact information separately.",
+        "query_groups": [
+          "Raton",
+          "Trinidad",
+          "Walsenburg",
+          "Colfax",
+          "Las Animas",
+          "Huerfano"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://projects.propublica.org/nonprofits/api/",
+        "elapsed_ms": 491,
+        "content_hash": "97c0e3d8fa33db39aaf50a5724198e82cca4aaca7caf2372aa7249fc6ed469fb",
+        "text_length": 18157,
+        "link_count": 56,
+        "candidates": [
+          {
+            "title": "IRS Annual Extract of Tax-Exempt Organization Financial Data",
+            "url": "https://www.irs.gov/uac/soi-tax-stats-annual-extract-of-tax-exempt-organization-financial-data",
+            "score": 6,
+            "matched_terms": [
+              "tax exempt organization",
+              "tax-exempt organization"
+            ]
+          },
+          {
+            "title": "IRS Business Master File",
+            "url": "https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf",
+            "score": 6,
+            "matched_terms": [
+              "EO BMF",
+              "exempt organizations business master file"
+            ]
+          },
+          {
+            "title": "because of a dispute involving unredacted social security numbers",
+            "url": "https://www.propublica.org/nerds/item/why-we-removed-form-990-pdfs-from-nonprofit-explorer",
+            "score": 3,
+            "matched_terms": [
+              "Form 990"
+            ]
+          },
+          {
+            "title": "Form 990N \"e-Postcard,\"",
+            "url": "https://www.irs.gov/charities-non-profits/annual-electronic-filing-requirement-for-small-exempt-organizations-form-990-n-e-postcard",
+            "score": 3,
+            "matched_terms": [
+              "Form 990"
+            ]
+          },
+          {
+            "title": "Read more about this update.",
+            "url": "https://www.propublica.org/nerds/item/form-990-documents-return-to-nonprofit-explorer",
+            "score": 3,
+            "matched_terms": [
+              "Form 990"
+            ]
+          },
+          {
+            "title": "the IRS",
+            "url": "https://www.irs.gov/charities-non-profits/form-990-series-downloads",
+            "score": 3,
+            "matched_terms": [
+              "Form 990"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "changed",
+      "previous_hash": "47ab2e3cc69c9454e068c77940da4449a6e6b509f68d205c8a9a0753eb4cea8c"
+    },
+    {
+      "source": {
+        "id": "guidestar-search",
+        "name": "Candid GuideStar Search",
+        "url": "https://www.guidestar.org/search",
+        "category": "nonprofit-directories",
+        "authority": "Candid",
+        "automation_mode": "manual_search",
+        "cadence_days": 30,
+        "public_use": "Look up nonprofit profiles and filings; some profile features may require an account.",
+        "query_groups": [
+          "Raton",
+          "Trinidad",
+          "Walsenburg",
+          "New Mexico",
+          "Colorado"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.guidestar.org/search",
+        "elapsed_ms": 674,
+        "content_hash": "f1299718d4a3259df3fe4ef2cfe5a431da0f13e82ad692a9f4879b35c3d288e6",
+        "text_length": 23820,
+        "link_count": 16,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "f1299718d4a3259df3fe4ef2cfe5a431da0f13e82ad692a9f4879b35c3d288e6"
+    },
+    {
+      "source": {
+        "id": "groundworks-nm-directory",
+        "name": "Groundworks New Mexico Nonprofit Directory",
+        "url": "https://www.groundworksnm.org/nonprofit-directory",
+        "category": "nonprofit-directories",
+        "authority": "Groundworks New Mexico",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Search New Mexico nonprofit names, missions, locations, and NTEE categories.",
+        "query_groups": [
+          "Raton",
+          "Colfax",
+          "northeastern New Mexico",
+          "arts",
+          "economic development"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.groundworksnm.org/nonprofit-directory",
+        "elapsed_ms": 523,
+        "content_hash": "ccf0c959307b4a0c3d37c51e41092506b238364067d881a47e8c462bcee429b4",
+        "text_length": 7299,
+        "link_count": 117,
+        "candidates": [
+          {
+            "title": "City",
+            "url": "https://www.groundworksnm.org/nonprofit-directory?order=city&sort=asc",
+            "score": 5,
+            "matched_terms": [
+              "city",
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "2",
+            "url": "https://www.groundworksnm.org/nonprofit-directory?page=1",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "3",
+            "url": "https://www.groundworksnm.org/nonprofit-directory?page=2",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "4",
+            "url": "https://www.groundworksnm.org/nonprofit-directory?page=3",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "5",
+            "url": "https://www.groundworksnm.org/nonprofit-directory?page=4",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "6",
+            "url": "https://www.groundworksnm.org/nonprofit-directory?page=5",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "7",
+            "url": "https://www.groundworksnm.org/nonprofit-directory?page=6",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "8",
+            "url": "https://www.groundworksnm.org/nonprofit-directory?page=7",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "9",
+            "url": "https://www.groundworksnm.org/nonprofit-directory?page=8",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "Advanced Search",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/advanced-search",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "Bernalillo County Extension Master Composters",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/40279",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "Browse by Name",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/all",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "Center for Civic Values",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/12005",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "Delta Management Group",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/52060",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "Deming Animal Guardians",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/7017",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "El Camino Real International Heritage Center Foundation",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/27023",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "El Ranchito de los Ninos",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/872",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "Explora",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/885",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "fightwns",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/1161",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "Gathings Community Gardens",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/61798",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "Keres Children's Learning Center",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/40522",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "last \u00bb",
+            "url": "https://www.groundworksnm.org/nonprofit-directory?page=109",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "Malik's Gift of Thrift",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/57837",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          },
+          {
+            "title": "National Association for the Legal Support of Alternative Schools",
+            "url": "https://www.groundworksnm.org/nonprofit-directory/nonprofit/27177",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit directory"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "ccf0c959307b4a0c3d37c51e41092506b238364067d881a47e8c462bcee429b4"
+    },
+    {
+      "source": {
+        "id": "colorado-nonprofit-directory",
+        "name": "Colorado Nonprofit Association Member Directory",
+        "url": "https://coloradononprofits.org/member-resources/nonprofit-member-directory/",
+        "category": "nonprofit-directories",
+        "authority": "Colorado Nonprofit Association",
+        "automation_mode": "page_links_noncommercial",
+        "cadence_days": 30,
+        "public_use": "Find association members for referral and research; observe the directory's stated noncommercial-use restriction.",
+        "query_groups": [
+          "Trinidad",
+          "Walsenburg",
+          "Las Animas",
+          "Huerfano",
+          "southern Colorado"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://coloradononprofits.org/member-resources/nonprofit-member-directory/",
+        "elapsed_ms": 567,
+        "content_hash": "54852b77db8700df95c3fd547a9c2c138c854665d03536734e735ead0ce4d6bf",
+        "text_length": 1291,
+        "link_count": 46,
+        "candidates": [
+          {
+            "title": "0175-238 (303)",
+            "url": "https://coloradononprofits.org/member-resources/nonprofit-member-directory/obfuscated",
+            "score": 4,
+            "matched_terms": [
+              "nonprofit member directory"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "54852b77db8700df95c3fd547a9c2c138c854665d03536734e735ead0ce4d6bf"
+    },
+    {
+      "source": {
+        "id": "share-new-mexico",
+        "name": "SHARE New Mexico Resource Directory",
+        "url": "https://www.sharenm.org/",
+        "category": "nonprofit-directories",
+        "authority": "New Mexico Alliance of Health Councils",
+        "automation_mode": "manual_search",
+        "cadence_days": 30,
+        "public_use": "Search New Mexico community programs, nonprofit services, county resources, and grant listings by place and need.",
+        "query_groups": [
+          "Raton",
+          "Colfax",
+          "community program",
+          "nonprofit",
+          "grant",
+          "resource directory"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.sharenm.org/",
+        "elapsed_ms": 1915,
+        "content_hash": "3c6be4aae4ee9de363a5383fcd2cb572a0d985634a129fa5df8a43bf4d3db415",
+        "text_length": 3944,
+        "link_count": 27,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "3c6be4aae4ee9de363a5383fcd2cb572a0d985634a129fa5df8a43bf4d3db415"
+    },
+    {
+      "source": {
+        "id": "colorado-gives-directory",
+        "name": "ColoradoGives.org Organization Search",
+        "url": "https://www.coloradogives.org/search",
+        "category": "nonprofit-directories",
+        "authority": "Colorado Gives Foundation",
+        "automation_mode": "manual_search",
+        "cadence_days": 30,
+        "public_use": "Find Colorado nonprofit profiles, public descriptions, service areas, donation pages, and current organization contact routes.",
+        "query_groups": [
+          "Trinidad",
+          "Walsenburg",
+          "La Veta",
+          "Las Animas",
+          "Huerfano",
+          "southern Colorado"
+        ]
+      },
+      "check": {
+        "status": "tls_error",
+        "status_code": null,
+        "final_url": "https://www.coloradogives.org/search",
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": "cf860ef4c4530f15b6ca866c99060caa112ac50d916511b68327a4e6ef36d626"
+    },
+    {
+      "source": {
+        "id": "nm-sos-business-search",
+        "name": "New Mexico Secretary of State Business Search",
+        "url": "https://enterprise.sos.nm.gov/search/business",
+        "category": "business-directories",
+        "authority": "New Mexico Secretary of State",
+        "automation_mode": "manual_search",
+        "cadence_days": 30,
+        "public_use": "Confirm registered New Mexico business names and filing records; this is not a customer-facing business directory.",
+        "query_groups": [
+          "Raton",
+          "Angel Fire",
+          "Cimarron",
+          "Eagle Nest",
+          "Colfax"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://enterprise.sos.nm.gov/search/business",
+        "elapsed_ms": 520,
+        "content_hash": "6df41d1fe61422b48f4d79fc2d671a7a704127780a228444629368a63bc31f81",
+        "text_length": 18,
+        "link_count": 0,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "6df41d1fe61422b48f4d79fc2d671a7a704127780a228444629368a63bc31f81"
+    },
+    {
+      "source": {
+        "id": "colorado-sos-business-search",
+        "name": "Colorado Secretary of State Business Database",
+        "url": "https://www.sos.state.co.us/biz/BusinessEntityCriteriaExt.do",
+        "category": "business-directories",
+        "authority": "Colorado Secretary of State",
+        "automation_mode": "manual_search",
+        "cadence_days": 30,
+        "public_use": "Confirm Colorado entity names and filing records; use the entity's own site for public contact details when available.",
+        "query_groups": [
+          "Trinidad",
+          "Walsenburg",
+          "La Veta",
+          "Las Animas",
+          "Huerfano"
+        ]
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://www.sos.state.co.us/biz/BusinessEntityCriteriaExt.do",
+        "error": "HTTP Error 403: Forbidden",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": "10cc9d754f99dbb33611c6ad1a37b12c2d70180d3a9ca2cb563ac04a36eb57ff"
+    },
+    {
+      "source": {
+        "id": "sba-small-business-search",
+        "name": "SBA Small Business Search",
+        "url": "https://dsbs.sba.gov/search/dsp_dsbs.cfm",
+        "category": "business-directories",
+        "authority": "U.S. Small Business Administration",
+        "automation_mode": "manual_search",
+        "cadence_days": 30,
+        "public_use": "Find small-business profiles used for federal contracting and potential teaming relationships.",
+        "query_groups": [
+          "New Mexico",
+          "Colorado",
+          "women-owned",
+          "HUBZone",
+          "veteran-owned"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://search.certifications.sba.gov:443/",
+        "elapsed_ms": 1357,
+        "content_hash": "61b12b9cb165f2bd278eee2af8270fd883440ccaf774748937274989f170e510",
+        "text_length": 25,
+        "link_count": 0,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "61b12b9cb165f2bd278eee2af8270fd883440ccaf774748937274989f170e510"
+    },
+    {
+      "source": {
+        "id": "nm-arts-artist-opportunities",
+        "name": "New Mexico Arts Artist Opportunities",
+        "url": "https://nmarts.org/public-art/are-you-an-artist/",
+        "category": "artists-creative-opportunities",
+        "authority": "New Mexico Arts",
+        "resource_type": "State open calls",
+        "action_label": "Open New Mexico calls",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Check current New Mexico public-art calls, artist-in-residence opportunities, and artist application routes.",
+        "query_groups": [
+          "public art",
+          "artist in residence",
+          "New Mexico artist",
+          "commission"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://nmarts.org/public-art/are-you-an-artist/",
+        "elapsed_ms": 2940,
+        "content_hash": "c974bba2e60a5e51c08a0f030834c79973b993a2087e0a4d6fe806fdf10046af",
+        "text_length": 12035,
+        "link_count": 141,
+        "candidates": [
+          {
+            "title": "creative-industries",
+            "url": "https://edd.newmexico.gov/business-development/creative-industries/",
+            "score": 3,
+            "matched_terms": [
+              "creative industries"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "c974bba2e60a5e51c08a0f030834c79973b993a2087e0a4d6fe806fdf10046af"
+    },
+    {
+      "source": {
+        "id": "colorado-creative-industries",
+        "name": "Colorado Creative Industries",
+        "url": "https://oedit.colorado.gov/colorado-creative-industries",
+        "category": "artists-creative-opportunities",
+        "authority": "Colorado Office of Economic Development and International Trade",
+        "resource_type": "State arts programs",
+        "action_label": "Open Colorado arts programs",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Find Colorado arts grants, creative-business support, recognition programs, and creative-district routes.",
+        "query_groups": [
+          "artist",
+          "creative business",
+          "creative district",
+          "grant",
+          "southern Colorado"
+        ]
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://oedit.colorado.gov/colorado-creative-industries",
+        "error": "HTTP Error 403: Forbidden",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "taos-center-calls",
+        "name": "Taos Center for the Arts Calls for Submission",
+        "url": "https://tcataos.org/calls-for-submission",
+        "category": "artists-creative-opportunities",
+        "authority": "Taos Center for the Arts",
+        "resource_type": "Northern New Mexico calls",
+        "action_label": "Open current calls",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Check current gallery, fellowship, and multidisciplinary calls. Some programs list Colfax County among the eligible northern New Mexico counties.",
+        "query_groups": [
+          "Colfax County",
+          "Northern New Mexico",
+          "fellowship",
+          "gallery",
+          "artist call",
+          "writer",
+          "musician"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://tcataos.org/calls-for-submission/",
+        "elapsed_ms": 2004,
+        "content_hash": "6a83fadfb34f406605bb9e6b58d748bc7a838661cff93960f6b64e678483550a",
+        "text_length": 4446,
+        "link_count": 69,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "6a83fadfb34f406605bb9e6b58d748bc7a838661cff93960f6b64e678483550a"
+    },
+    {
+      "source": {
+        "id": "ar-mitchell-resonance",
+        "name": "A.R. Mitchell Museum Resonance Call",
+        "url": "https://armitchellmuseum.com/resonance",
+        "category": "artists-creative-opportunities",
+        "authority": "A.R. Mitchell Museum of Western Art",
+        "resource_type": "Trinidad open call",
+        "action_label": "Open the Resonance call",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Check the museum's recurring Resonance page for the current artist application and exhibition cycle in Trinidad.",
+        "query_groups": [
+          "Trinidad",
+          "Las Animas County",
+          "western art",
+          "exhibition",
+          "call for artists"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://armitchellmuseum.com/resonance",
+        "elapsed_ms": 900,
+        "content_hash": "fb05aa28a8a4e8efeda5998e1f36c5a8fc4c41292ee57a5904d237dcad7bf2c9",
+        "text_length": 2239,
+        "link_count": 78,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "fb05aa28a8a4e8efeda5998e1f36c5a8fc4c41292ee57a5904d237dcad7bf2c9"
+    },
+    {
+      "source": {
+        "id": "taos-arts-community-directory",
+        "name": "TaosArts Artist Community Directory",
+        "url": "https://taosarts.org/",
+        "category": "artists-creative-opportunities",
+        "authority": "TaosArts.org",
+        "resource_type": "Joinable artist directory",
+        "action_label": "Browse or apply to join",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Browse Northern New Mexico artist profiles and events or open the site's application route to request a directory profile.",
+        "query_groups": [
+          "Taos",
+          "Northern New Mexico",
+          "artist directory",
+          "event calendar",
+          "apply to join"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://taosarts.org/",
+        "elapsed_ms": 521,
+        "content_hash": "87d7ea32e46633b15b3b78a6638d5ac182186d7f031a6e413b0b3d1c58926546",
+        "text_length": 2222,
+        "link_count": 42,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "87d7ea32e46633b15b3b78a6638d5ac182186d7f031a6e413b0b3d1c58926546"
+    },
+    {
+      "source": {
+        "id": "southwest-contemporary-classifieds",
+        "name": "Southwest Contemporary Classifieds",
+        "url": "https://southwestcontemporary.com/classifieds/",
+        "category": "artists-creative-opportunities",
+        "authority": "Southwest Contemporary",
+        "resource_type": "Southwest opportunity board",
+        "action_label": "Search current classifieds",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Filter moderated Southwest listings for calls, residencies, fellowships, grants, jobs, internships, and studio space; submission terms vary by listing.",
+        "query_groups": [
+          "New Mexico",
+          "Colorado",
+          "call for artists",
+          "residency",
+          "fellowship",
+          "grant",
+          "job"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://southwestcontemporary.com/classifieds/",
+        "elapsed_ms": 629,
+        "content_hash": "f9949d360a4a4323cac36414b8f86d5e874440a3938e19e8c29cc516452a3207",
+        "text_length": 2670,
+        "link_count": 118,
+        "candidates": [
+          {
+            "title": "Residency Call for Artists in Residence: Taliesin West December 31, 2026 October 5, 2026",
+            "url": "https://southwestcontemporary.com/classifieds/call-for-artists-in-residence-taliesin-west/",
+            "score": 8,
+            "matched_terms": [
+              "call for artists",
+              "residency"
+            ]
+          },
+          {
+            "title": "Call for Artists",
+            "url": "https://southwestcontemporary.com/call-for-artists/",
+            "score": 6,
+            "matched_terms": [
+              "call for artists"
+            ]
+          },
+          {
+            "title": "Call for Artists $4,500 Artist Grants | The Hopper Prize Fall 2026 November 17, 2026 September 23, 2026",
+            "url": "https://southwestcontemporary.com/classifieds/4500-artist-grants-the-hopper-prize-fall-2026/",
+            "score": 6,
+            "matched_terms": [
+              "call for artists"
+            ]
+          },
+          {
+            "title": "Call for Artists Call for Art: Black and White Exhibition November 20, 2026 October 23, 2026",
+            "url": "https://southwestcontemporary.com/classifieds/call-for-art-black-and-white-exhibition/",
+            "score": 6,
+            "matched_terms": [
+              "call for artists"
+            ]
+          },
+          {
+            "title": "Call for Artists Call for Art: Hearts & Cups December 15, 2026 October 23, 2026",
+            "url": "https://southwestcontemporary.com/classifieds/call-for-art-hearts-cups/",
+            "score": 6,
+            "matched_terms": [
+              "call for artists"
+            ]
+          },
+          {
+            "title": "Call for Artists Call for Artists: Southwest Contemporary Vol. 15: Fire November 17, 2026 October 27, 2026",
+            "url": "https://southwestcontemporary.com/classifieds/call-for-artists-vol-15-fire/",
+            "score": 6,
+            "matched_terms": [
+              "call for artists"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "f9949d360a4a4323cac36414b8f86d5e874440a3938e19e8c29cc516452a3207"
+    },
+    {
+      "source": {
+        "id": "nm-women-in-arts-registry",
+        "name": "New Mexico Women in the Arts Artist Registry",
+        "url": "https://newmexicowomeninthearts.org/artist-registry-sign-up/",
+        "category": "artists-creative-opportunities",
+        "authority": "New Mexico State Committee of the National Museum of Women in the Arts",
+        "resource_type": "Membership artist registry",
+        "action_label": "Review registry eligibility",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Review the profile registry for eligible New Mexico women-identifying member artists; membership, age, and residency requirements apply.",
+        "query_groups": [
+          "New Mexico",
+          "women artists",
+          "artist registry",
+          "membership",
+          "artist profile"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://newmexicowomeninthearts.org/artist-registry-sign-up/",
+        "elapsed_ms": 741,
+        "content_hash": "081d651a202d66de28652dd6cc3c93ed2859c85e61b72317a6dcb3e61de1e941",
+        "text_length": 7757,
+        "link_count": 73,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "changed",
+      "previous_hash": "1855d2d0302ec502ee070e14cd204590af58f2098b978f6b156981833204abad"
+    },
+    {
+      "source": {
+        "id": "high-road-artisans",
+        "name": "High Road Artisans Studio Tour",
+        "url": "https://www.highroadnewmexico.com/",
+        "category": "artists-creative-opportunities",
+        "authority": "High Road Artisans",
+        "resource_type": "Northern New Mexico studio tour",
+        "action_label": "Check the artist application",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Check the current tour application if you are an artist or artisan living along the High Road to Taos; geographic and annual-cycle requirements apply.",
+        "query_groups": [
+          "Northern New Mexico",
+          "artist",
+          "artisan",
+          "studio tour",
+          "gallery",
+          "application"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.highroadnewmexico.com/",
+        "elapsed_ms": 833,
+        "content_hash": "b742eef88e68b01ce66b407aeddc319516a59dc6a839bd42cff36285a7fe057a",
+        "text_length": 3383,
+        "link_count": 128,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "b742eef88e68b01ce66b407aeddc319516a59dc6a839bd42cff36285a7fe057a"
+    },
+    {
+      "source": {
+        "id": "new-mexico-artist-directory",
+        "name": "New Mexico Artist Directory",
+        "url": "https://www.newmexicoartistdirectory.com/",
+        "category": "artists-creative-opportunities",
+        "authority": "Independent artist directory",
+        "resource_type": "Artist discovery directory",
+        "action_label": "Browse New Mexico artists",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Discover self-presented New Mexico artist, studio, and gallery profiles, then use each profile's direct contact route.",
+        "query_groups": [
+          "Raton",
+          "Colfax",
+          "northeastern New Mexico",
+          "studio",
+          "gallery"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.newmexicoartistdirectory.com/",
+        "elapsed_ms": 767,
+        "content_hash": "ccf79c16fcfbec8ad86d08e75474d71c07cc224150390b33517e7bc7e55a4ed6",
+        "text_length": 3616,
+        "link_count": 104,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "changed",
+      "previous_hash": "cf71d2e623e90b535cd79bedd8b16e8903a61f91c928f51641a08e7dc8cac8c1"
+    },
+    {
+      "source": {
+        "id": "colorado-music-directory",
+        "name": "Colorado Music Directory",
+        "url": "https://focoma.org/directory/artists",
+        "category": "artists-creative-opportunities",
+        "authority": "FoCoMA",
+        "resource_type": "Musician directory",
+        "action_label": "Browse the music directory",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Browse Colorado musician profiles and booking links, then check the current account and listing requirements before creating a profile.",
+        "query_groups": [
+          "Colorado",
+          "musician",
+          "band",
+          "booking",
+          "artist profile",
+          "music directory"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://focoma.org/directory/artists",
+        "elapsed_ms": 545,
+        "content_hash": "f555b2c2a3b33ee69e7024c65f07167bf874a754608ed76657e0ec9498309b9f",
+        "text_length": 9381,
+        "link_count": 218,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "f555b2c2a3b33ee69e7024c65f07167bf874a754608ed76657e0ec9498309b9f"
+    },
+    {
+      "source": {
+        "id": "creative-west-opportunities",
+        "name": "Creative West Opportunities Portal",
+        "url": "https://opportunities.wearecreativewest.org/",
+        "category": "artists-creative-opportunities",
+        "authority": "Creative West",
+        "resource_type": "Western states opportunity hub",
+        "action_label": "Open the opportunity portal",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Find public-art commissions, exhibitions, fellowships, festivals, and other artist calls through Creative West's application platforms.",
+        "query_groups": [
+          "New Mexico",
+          "Colorado",
+          "public art",
+          "exhibition",
+          "fellowship"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://opportunities.wearecreativewest.org/",
+        "elapsed_ms": 2133,
+        "content_hash": "25f731613b572f90d4d68028ac3dc6a80c9f1554aeac5d6d194343c0a89d3812",
+        "text_length": 3540,
+        "link_count": 59,
+        "candidates": [
+          {
+            "title": "Commissions Public Art Archive - Call for Artwork Submissions Online Application fee: $0",
+            "url": "https://opportunities.wearecreativewest.org/opportunity/13531/CAFE",
+            "score": 7,
+            "matched_terms": [
+              "application fee",
+              "public art",
+              "public art archive"
+            ]
+          },
+          {
+            "title": "Competitions OPEN CALL: ONGOING Los Angeles, California Application fee: $32",
+            "url": "https://opportunities.wearecreativewest.org/opportunity/16993/CAFE",
+            "score": 5,
+            "matched_terms": [
+              "application fee",
+              "open call"
+            ]
+          },
+          {
+            "title": "Public Art Archive\u2122",
+            "url": "https://publicartarchive.org/",
+            "score": 5,
+            "matched_terms": [
+              "public art",
+              "public art archive"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "changed",
+      "previous_hash": "e24f471f0b5eee8479c24cd5402379656737d04e1bb60ba23d66f926285e153c"
+    },
+    {
+      "source": {
+        "id": "cafe-public-art-calls",
+        "name": "CaFE Public Art Calls",
+        "url": "https://www.callforentry.org/public-art/",
+        "category": "artists-creative-opportunities",
+        "authority": "CaFE / Creative West",
+        "resource_type": "Public-art open calls",
+        "action_label": "Search public-art calls",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Browse and filter current public-art calls, requests for qualifications, commissions, project budgets, and application requirements.",
+        "query_groups": [
+          "New Mexico",
+          "Colorado",
+          "public art",
+          "request for qualifications",
+          "commission",
+          "project budget"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.callforentry.org/public-art/",
+        "elapsed_ms": 1370,
+        "content_hash": "e95997c6d07eb13d1da77ae15767ab12c8c0010d752f4bd19acf1c48428b9075",
+        "text_length": 4133,
+        "link_count": 62,
+        "candidates": [
+          {
+            "title": "Public Art Archive\u2122 (PAA)",
+            "url": "http://www.publicartarchive.org",
+            "score": 5,
+            "matched_terms": [
+              "public art",
+              "public art archive"
+            ]
+          },
+          {
+            "title": "Public Art Archive\u2122 (PAA)",
+            "url": "https://publicartarchive.org/",
+            "score": 5,
+            "matched_terms": [
+              "public art",
+              "public art archive"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "e95997c6d07eb13d1da77ae15767ab12c8c0010d752f4bd19acf1c48428b9075"
+    },
+    {
+      "source": {
+        "id": "zapp-artist-events",
+        "name": "ZAPP Artist Event Applications",
+        "url": "https://www.zapplication.org/",
+        "category": "artists-creative-opportunities",
+        "authority": "ZAPP / Creative West",
+        "resource_type": "Art-fair applications",
+        "action_label": "Search art fairs",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Search juried art fairs and festivals accepting artist applications; check each event's fee, media, booth, image, and eligibility requirements.",
+        "query_groups": [
+          "New Mexico",
+          "Colorado",
+          "art fair",
+          "festival",
+          "artist application",
+          "artisan",
+          "vendor"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.zapplication.org/",
+        "elapsed_ms": 1712,
+        "content_hash": "df334b5dac28c1f3eb9a3c45b4e06942d663fafe793eb72b15b9e4f2caa6b227",
+        "text_length": 39693,
+        "link_count": 915,
+        "candidates": [
+          {
+            "title": "Ann Arbor State Street District Art Fair 2027 - Artist Application",
+            "url": "https://www.zapplication.org/event-info.php?ID=14856",
+            "score": 8,
+            "matched_terms": [
+              "art fair",
+              "artist application"
+            ]
+          },
+          {
+            "title": "Ann Arbor State Street District MarketPlace 2027 - Vendor Application",
+            "url": "https://www.zapplication.org/event-info.php?ID=14857",
+            "score": 6,
+            "matched_terms": [
+              "vendor",
+              "vendor application"
+            ]
+          },
+          {
+            "title": "Bellevue Arts Fair 2026 - Food Vendor Application",
+            "url": "https://www.zapplication.org/event-info.php?ID=14237",
+            "score": 6,
+            "matched_terms": [
+              "vendor",
+              "vendor application"
+            ]
+          },
+          {
+            "title": "Oktoberfest 2026 Retail Vendor Application",
+            "url": "https://www.zapplication.org/event-info.php?ID=14342",
+            "score": 6,
+            "matched_terms": [
+              "vendor",
+              "vendor application"
+            ]
+          },
+          {
+            "title": "RiverArtsFest 2026 - Food Vendor Application",
+            "url": "https://www.zapplication.org/event-info.php?ID=14136",
+            "score": 6,
+            "matched_terms": [
+              "vendor",
+              "vendor application"
+            ]
+          },
+          {
+            "title": "Wesleyan Artist Market 2027 - Professional Artist Application",
+            "url": "https://www.zapplication.org/event-info.php?ID=14799",
+            "score": 6,
+            "matched_terms": [
+              "artist application"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "df334b5dac28c1f3eb9a3c45b4e06942d663fafe793eb72b15b9e4f2caa6b227"
+    },
+    {
+      "source": {
+        "id": "public-art-archive-submission",
+        "name": "Public Art Archive Artwork Submission",
+        "url": "https://explore.publicartarchive.org/submission-form/",
+        "category": "artists-creative-opportunities",
+        "authority": "Public Art Archive / Creative West",
+        "resource_type": "Public-art registry",
+        "action_label": "Review submission form",
+        "automation_mode": "change_watch",
+        "cadence_days": 30,
+        "public_use": "Submit completed work that meets the archive's public-art definition, or update an existing artwork record; review the form requirements before starting.",
+        "query_groups": [
+          "public art",
+          "artist registry",
+          "completed artwork",
+          "mural",
+          "sculpture",
+          "installation"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://explore.publicartarchive.org/submission-form/",
+        "elapsed_ms": 2236,
+        "content_hash": "afc883efd53321fcd64b91703c1847bb1283b2dc2f5d4ccdbfbe8ae45f00c1be",
+        "text_length": 9170,
+        "link_count": 64,
+        "candidates": [
+          {
+            "title": "Public Art Archive Team",
+            "url": "https://explore.publicartarchive.org/about/public-art-archive-team/",
+            "score": 6,
+            "matched_terms": [
+              "public art",
+              "public art archive"
+            ]
+          },
+          {
+            "title": "Review the Public Art Archive\u2019s Content Submission Agreement .",
+            "url": "https://explore.publicartarchive.org/content-submission-agreeement/",
+            "score": 6,
+            "matched_terms": [
+              "public art",
+              "public art archive"
+            ]
+          },
+          {
+            "title": "Review the Public Art Archive\u2019s Terms of Use",
+            "url": "https://explore.publicartarchive.org/terms-of-use/",
+            "score": 6,
+            "matched_terms": [
+              "public art",
+              "public art archive"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "changed",
+      "previous_hash": "eb1f2edfe576f30c87a8978a494c8e7ffa790585b8e65031fb2886d8e799ff47"
+    },
+    {
+      "source": {
+        "id": "aca-residency-directory",
+        "name": "Artist Communities Alliance Directory",
+        "url": "https://artistcommunities.org/directory",
+        "category": "artists-creative-opportunities",
+        "authority": "Artist Communities Alliance",
+        "resource_type": "Residency directory",
+        "action_label": "Search residencies",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Search artist residencies and artist-centered programs by discipline, place, and opportunity type.",
+        "query_groups": [
+          "New Mexico",
+          "Colorado",
+          "visual arts",
+          "writers",
+          "performing arts"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://artistcommunities.org/directory",
+        "elapsed_ms": 908,
+        "content_hash": "97406b9a7f59d4501eb4fd88a56a6addc5b441481e4045270b15c430ca8c8584",
+        "text_length": 4191,
+        "link_count": 124,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "97406b9a7f59d4501eb4fd88a56a6addc5b441481e4045270b15c430ca8c8584"
+    },
+    {
+      "source": {
+        "id": "res-artis-open-calls",
+        "name": "Res Artis Open Calls",
+        "url": "https://resartis.org/open-calls/",
+        "category": "artists-creative-opportunities",
+        "authority": "Res Artis",
+        "resource_type": "Residency open calls",
+        "action_label": "Search residency calls",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Search current artist-residency calls, then compare the host, cost, stipend, housing, travel, work requirements, and application terms directly.",
+        "query_groups": [
+          "artist residency",
+          "open call",
+          "visual arts",
+          "writer",
+          "musician",
+          "performing arts"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://resartis.org/open-calls/",
+        "elapsed_ms": 3952,
+        "content_hash": "5122931cb4a4fd23a6237fc3012fa081b208a1501011c6170222869409aaf2d3",
+        "text_length": 35836,
+        "link_count": 784,
+        "candidates": [
+          {
+            "title": "2026-anderson-center-at-tower-view-artist-residency-program",
+            "url": "https://resartis.org/open-call/2026-anderson-center-at-tower-view-artist-residency-program/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "2026-artist-residency-studio-programs-2",
+            "url": "https://resartis.org/open-call/2026-artist-residency-studio-programs-2/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "acentricspace-artist-residency-2027-spring-summer-open-call",
+            "url": "https://resartis.org/open-call/acentricspace-artist-residency-2027-spring-summer-open-call/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "application-round-for-peripeteia-artist-residency-2",
+            "url": "https://resartis.org/open-call/application-round-for-peripeteia-artist-residency-2/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "artist-residency-apply-now",
+            "url": "https://resartis.org/open-call/artist-residency-apply-now/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "artist-residency-in-hainan-china",
+            "url": "https://resartis.org/open-call/artist-residency-in-hainan-china/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "casasanvito-call-artist-residency-in-marche-italy-last-call-for-2026",
+            "url": "https://resartis.org/open-call/casasanvito-call-artist-residency-in-marche-italy-last-call-for-2026/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "fall-2026-artist-residency-in-a-medieval-water-mill",
+            "url": "https://resartis.org/open-call/fall-2026-artist-residency-in-a-medieval-water-mill/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "fall-2027-artist-residency-in-morocco-with-green-olive-arts",
+            "url": "https://resartis.org/open-call/fall-2027-artist-residency-in-morocco-with-green-olive-arts/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "guatemalan-artist-residency-black-sand-beaches",
+            "url": "https://resartis.org/open-call/guatemalan-artist-residency-black-sand-beaches/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "guatemalan-artist-residency-on-the-pacific-coast",
+            "url": "https://resartis.org/open-call/guatemalan-artist-residency-on-the-pacific-coast/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "gullo-gard-artist-residency-a-residency-by-skogshyddan-air",
+            "url": "https://resartis.org/open-call/gullo-gard-artist-residency-a-residency-by-skogshyddan-air/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "horse-and-art-research-program-individual-artist-residency",
+            "url": "https://resartis.org/open-call/horse-and-art-research-program-individual-artist-residency/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "hub-feenix-artist-residency-2026-27",
+            "url": "https://resartis.org/open-call/hub-feenix-artist-residency-2026-27/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "kala-yatra-international-artist-residency-2025-2026",
+            "url": "https://resartis.org/open-call/kala-yatra-international-artist-residency-2025-2026/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "kala-yatra-international-artist-residency-nepal-2025-2026",
+            "url": "https://resartis.org/open-call/kala-yatra-international-artist-residency-nepal-2025-2026/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "last-minute-opportunity-artist-residency-at-haihatus-finland-autumn-2026",
+            "url": "https://resartis.org/open-call/last-minute-opportunity-artist-residency-at-haihatus-finland-autumn-2026/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "peaceful-artist-residency-on-guatemalas-pacific-coast-4",
+            "url": "https://resartis.org/open-call/peaceful-artist-residency-on-guatemalas-pacific-coast-4/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "september-2025-anderson-center-at-tower-view-early-career-artist-residency-for-mn-nyc-artists",
+            "url": "https://resartis.org/open-call/september-2025-anderson-center-at-tower-view-early-career-artist-residency-for-mn-nyc-artists/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "spring-2026-artist-residency-in-south-west-of-france",
+            "url": "https://resartis.org/open-call/spring-2026-artist-residency-in-south-west-of-france/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "spring-2027-artist-residency-in-morocco-with-green-olive-arts",
+            "url": "https://resartis.org/open-call/spring-2027-artist-residency-in-morocco-with-green-olive-arts/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "studio-luce-guatemalan-artist-residency",
+            "url": "https://resartis.org/open-call/studio-luce-guatemalan-artist-residency/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "summer-2027-artist-residency-in-morocco-with-green-olive-art",
+            "url": "https://resartis.org/open-call/summer-2027-artist-residency-in-morocco-with-green-olive-art/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          },
+          {
+            "title": "ucross-fall-2027-artist-residency",
+            "url": "https://resartis.org/open-call/ucross-fall-2027-artist-residency/",
+            "score": 11,
+            "matched_terms": [
+              "artist residency",
+              "open call"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "5122931cb4a4fd23a6237fc3012fa081b208a1501011c6170222869409aaf2d3"
+    },
+    {
+      "source": {
+        "id": "creative-capital-resources",
+        "name": "Creative Capital Artist Opportunities",
+        "url": "https://creative-capital.org/artist-resources/",
+        "category": "artists-creative-opportunities",
+        "authority": "Creative Capital",
+        "resource_type": "Artist opportunity list",
+        "action_label": "Browse artist opportunities",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Browse grants, residencies, commissions, and professional opportunities collected for artists.",
+        "query_groups": [
+          "artist grant",
+          "residency",
+          "commission",
+          "fellowship",
+          "open call"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://creative-capital.org/artist-resources/",
+        "elapsed_ms": 520,
+        "content_hash": "b5fe618a839bac530e53577926ddcfc340878525e7ba8a329f6e161044b43102",
+        "text_length": 4856,
+        "link_count": 61,
+        "candidates": [
+          {
+            "title": "Search Opportunities",
+            "url": "https://creative-capital.org/artist-resources/artist-opportunities/",
+            "score": 4,
+            "matched_terms": [
+              "artist opportunities"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "changed",
+      "previous_hash": "df07ed3dd5e27da1c9d0872580b730927df6a6e9a9ff53bade64fc3d8e45b3aa"
+    },
+    {
+      "source": {
+        "id": "submittable-discover",
+        "name": "Submittable Discover",
+        "url": "https://www.submittable.com/discover",
+        "category": "artists-creative-opportunities",
+        "authority": "Submittable",
+        "resource_type": "Submission marketplace",
+        "action_label": "Search open submissions",
+        "automation_mode": "change_watch",
+        "cadence_days": 7,
+        "public_use": "Search open creative calls, grants, fellowships, scholarships, residencies, contests, deadlines, and submission fees.",
+        "query_groups": [
+          "artist",
+          "writer",
+          "musician",
+          "grant",
+          "fellowship",
+          "residency",
+          "no fee"
+        ]
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://www.submittable.com/discover",
+        "error": "HTTP Error 403: Forbidden",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": "a8fbcbcd5382ecf52eb8f5cd5ec05e626910b09ac1430c55a192be3b66504a26"
+    },
+    {
+      "source": {
+        "id": "nm-creative-industries",
+        "name": "New Mexico Creative Industries Division Opportunities",
+        "url": "https://www.edd.newmexico.gov/grants/cid-grants/",
+        "category": "artists-creative-opportunities",
+        "authority": "New Mexico Economic Development Department",
+        "resource_type": "Creative-business support",
+        "action_label": "Open creative-industry programs",
+        "automation_mode": "page_links",
+        "cadence_days": 7,
+        "public_use": "Check grants, programs, and development opportunities for New Mexico creative businesses and organizations.",
+        "query_groups": [
+          "creative entrepreneur",
+          "creative business",
+          "arts organization",
+          "marketing",
+          "technical assistance"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://edd.newmexico.gov/grants/cid-grants/",
+        "elapsed_ms": 3808,
+        "content_hash": "d0cc3952b22e9b831ba82bdfc670be905df79cb6c5ef60065180ebd48fcbf4b9",
+        "text_length": 37155,
+        "link_count": 183,
+        "candidates": [
+          {
+            "title": "Creative Ambassadors",
+            "url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/ci-ambassadors/",
+            "score": 4,
+            "matched_terms": [
+              "creative industries"
+            ]
+          },
+          {
+            "title": "Creative Economy Insights",
+            "url": "https://edd.newmexico.gov/creative-industries/",
+            "score": 4,
+            "matched_terms": [
+              "creative industries"
+            ]
+          },
+          {
+            "title": "Creative Industries Division (CID)",
+            "url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/",
+            "score": 4,
+            "matched_terms": [
+              "creative industries"
+            ]
+          },
+          {
+            "title": "Creative Industries Division Study",
+            "url": "https://edd.newmexico.gov/wp-content/uploads/2026/03/NM_CID_Report_2024UPDATEDDEC6.pdf",
+            "score": 4,
+            "matched_terms": [
+              "creative industries"
+            ]
+          },
+          {
+            "title": "Creative Industries Division Toolbox",
+            "url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/cid-toolbox/",
+            "score": 4,
+            "matched_terms": [
+              "creative industries"
+            ]
+          },
+          {
+            "title": "Creative Industries Event Calendar",
+            "url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-events/",
+            "score": 4,
+            "matched_terms": [
+              "creative industries"
+            ]
+          },
+          {
+            "title": "Creative Industries Season 2025",
+            "url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-season-2025/",
+            "score": 4,
+            "matched_terms": [
+              "creative industries"
+            ]
+          },
+          {
+            "title": "Creative Resource Center",
+            "url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
+            "score": 4,
+            "matched_terms": [
+              "creative industries"
+            ]
+          },
+          {
+            "title": "Knowledge Center",
+            "url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/knowledge-center/",
+            "score": 4,
+            "matched_terms": [
+              "creative industries"
+            ]
+          },
+          {
+            "title": "Meet Our Partners",
+            "url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/cid-partners/",
+            "score": 4,
+            "matched_terms": [
+              "creative industries"
+            ]
+          },
+          {
+            "title": "NM CreativeCon 2026",
+            "url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/creativecon/",
+            "score": 4,
+            "matched_terms": [
+              "creative industries"
+            ]
+          },
+          {
+            "title": "Creative Industries YouTube",
+            "url": "https://youtube.com/playlist?list=PLGKR-UpukkDKAN8-uA85PgE7pEhe6kz5h&si=k05R_tZiXZK0PrCG",
+            "score": 3,
+            "matched_terms": [
+              "creative industries"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "d0cc3952b22e9b831ba82bdfc670be905df79cb6c5ef60065180ebd48fcbf4b9"
+    },
+    {
+      "source": {
+        "id": "southern-colorado-community-foundation",
+        "name": "Southern Colorado Community Foundation Grants",
+        "url": "https://sccfcolorado.org/for-grantseekers/grants/",
+        "category": "grants-public-funding",
+        "authority": "Southern Colorado Community Foundation",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Review foundation funds serving Las Animas and Huerfano counties; check each fund's current service area and terms.",
+        "query_groups": [
+          "Las Animas",
+          "Huerfano",
+          "community fund",
+          "scholarship",
+          "nonprofit"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://sccfcolorado.org/for-grantseekers/grants/",
+        "elapsed_ms": 1043,
+        "content_hash": "a4457e221bc11bdbc0e32765a4771f394a0bd1ca26c82c581cc934241be1bd0d",
+        "text_length": 2917,
+        "link_count": 32,
+        "candidates": [
+          {
+            "title": "Madeline Mellers Golf Scholarship",
+            "url": "https://sccfcolorado.org/madeline-mellers-memorial-girls-golf-scholarship/",
+            "score": 6,
+            "matched_terms": [
+              "scholarship"
+            ]
+          },
+          {
+            "title": "View Grant Application",
+            "url": "https://sccfcolorado.org/for-grantseekers/apply/",
+            "score": 4,
+            "matched_terms": [
+              "grant"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "a4457e221bc11bdbc0e32765a4771f394a0bd1ca26c82c581cc934241be1bd0d"
+    },
+    {
+      "source": {
+        "id": "taos-community-foundation-impact",
+        "name": "Taos Community Foundation Impact Grants",
+        "url": "https://www.taoscf.org/grants/impact/",
+        "category": "grants-public-funding",
+        "authority": "Taos Community Foundation",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Check grant routes for organizations serving western Colfax County; do not extend that geography to all of Colfax.",
+        "query_groups": [
+          "western Colfax",
+          "Moreno Valley",
+          "nonprofit",
+          "fiscal sponsor",
+          "scholarship"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.taoscf.org/grants/impact/",
+        "elapsed_ms": 1042,
+        "content_hash": "16c51c6fb24150ac62df93c463e1efdb24591955205c60619b21471c31215cfb",
+        "text_length": 9728,
+        "link_count": 122,
+        "candidates": [
+          {
+            "title": "Grant Opportunities",
+            "url": "https://www.taoscf.org/grants/",
+            "score": 7,
+            "matched_terms": [
+              "grant",
+              "grants"
+            ]
+          },
+          {
+            "title": "Event Support Grants",
+            "url": "https://www.taoscf.org/grants/event-support/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Scholarships",
+            "url": "https://www.taoscf.org/scholarships/",
+            "score": 4,
+            "matched_terms": [
+              "scholarships"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "16c51c6fb24150ac62df93c463e1efdb24591955205c60619b21471c31215cfb"
+    },
+    {
+      "source": {
+        "id": "boettcher-grantmaking",
+        "name": "Boettcher Foundation Grantmaking",
+        "url": "https://boettcherfoundation.org/grantmaking/",
+        "category": "grants-public-funding",
+        "authority": "Boettcher Foundation",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Review Colorado grant and scholarship pathways, including rural programs; confirm each program's current eligibility.",
+        "query_groups": [
+          "rural",
+          "Colorado nonprofit",
+          "scholarship",
+          "community connections",
+          "leadership"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://boettcherfoundation.org/grantmaking/",
+        "elapsed_ms": 716,
+        "content_hash": "d3ad3db93ba69f4e7f4c5e39f0c817e4e6f2c8e79a89d65970fb9b785450ae06",
+        "text_length": 25275,
+        "link_count": 79,
+        "candidates": [
+          {
+            "title": "College & Scholarship Guide",
+            "url": "https://boettcherfoundation.org/scholarships/prospective-scholars/all-the-wisdom/",
+            "score": 9,
+            "matched_terms": [
+              "scholarship",
+              "scholarships"
+            ]
+          },
+          {
+            "title": "Community Connections Grants",
+            "url": "https://boettcherfoundation.org/grantmaking/community-connections-grants/",
+            "score": 6,
+            "matched_terms": [
+              "community connections",
+              "grants"
+            ]
+          },
+          {
+            "title": "Leadership Practitioner Catalyst Grants",
+            "url": "https://boettcherfoundation.org/grantmaking/leadership-practitioner-catalyst-grants/",
+            "score": 6,
+            "matched_terms": [
+              "grants",
+              "leadership"
+            ]
+          },
+          {
+            "title": "Learn more about REsponsive grants",
+            "url": "https://boettcherfoundation.org/grantmaking/community-connections/",
+            "score": 6,
+            "matched_terms": [
+              "community connections",
+              "grants"
+            ]
+          },
+          {
+            "title": "Rural Catalyst Grants",
+            "url": "https://boettcherfoundation.org/grantmaking/rural-catalyst-grants/",
+            "score": 6,
+            "matched_terms": [
+              "grants",
+              "rural"
+            ]
+          },
+          {
+            "title": "Prospective Scholars",
+            "url": "https://boettcherfoundation.org/scholarships/prospective-scholars/",
+            "score": 4,
+            "matched_terms": [
+              "scholarships"
+            ]
+          },
+          {
+            "title": "Scholarships",
+            "url": "https://boettcherfoundation.org/scholarships/",
+            "score": 4,
+            "matched_terms": [
+              "scholarships"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "d3ad3db93ba69f4e7f4c5e39f0c817e4e6f2c8e79a89d65970fb9b785450ae06"
+    },
+    {
+      "source": {
+        "id": "daniels-fund-grants",
+        "name": "Daniels Fund Grants",
+        "url": "https://danielsfund.org/our-work/grants/",
+        "category": "grants-public-funding",
+        "authority": "Daniels Fund",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Check grants for qualifying Colorado and New Mexico programs; the foundation's eligibility inquiry controls application access.",
+        "query_groups": [
+          "Colorado",
+          "New Mexico",
+          "nonprofit",
+          "education",
+          "community"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://danielsfund.org/our-work/grants/",
+        "elapsed_ms": 810,
+        "content_hash": "f3a17870016dc485ecec730d8f20f3a2c16b1367d775d982d98471a18ce1b6eb",
+        "text_length": 10597,
+        "link_count": 101,
+        "candidates": [
+          {
+            "title": "Funding Areas",
+            "url": "https://danielsfund.org/our-work/grants/funding-areas/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Scholarships",
+            "url": "https://danielsfund.org/our-work/scholarships/",
+            "score": 4,
+            "matched_terms": [
+              "scholarships"
+            ]
+          },
+          {
+            "title": "Grants Eligibility Quiz",
+            "url": "https://grants.danielsfund.org/s/eligibility-quiz",
+            "score": 3,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Grants Portal",
+            "url": "https://grants.danielsfund.org/",
+            "score": 3,
+            "matched_terms": [
+              "grants"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "f3a17870016dc485ecec730d8f20f3a2c16b1367d775d982d98471a18ce1b6eb"
+    },
+    {
+      "source": {
+        "id": "colorado-health-foundation-funding",
+        "name": "Colorado Health Foundation Funding",
+        "url": "https://coloradohealth.org/funding",
+        "category": "grants-public-funding",
+        "authority": "Colorado Health Foundation",
+        "automation_mode": "page_links",
+        "cadence_days": 14,
+        "public_use": "Review Colorado health and community-wellbeing funding; program-specific criteria apply and scholarships are excluded.",
+        "query_groups": [
+          "Colorado",
+          "health",
+          "nonprofit",
+          "fiscal sponsor",
+          "community"
+        ]
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://coloradohealth.org/funding",
+        "error": "HTTP Error 403: Forbidden",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "colorado-trust-grantees",
+        "name": "Colorado Trust Grantee Database",
+        "url": "https://www.coloradotrust.org/grantees/",
+        "category": "nonprofit-directories",
+        "authority": "The Colorado Trust",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Discover Colorado organizations through past grant records; a historical grant does not establish a current program or contact route.",
+        "query_groups": [
+          "Las Animas",
+          "Huerfano",
+          "Trinidad",
+          "Walsenburg",
+          "rural"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.coloradotrust.org/grantees/",
+        "elapsed_ms": 525,
+        "content_hash": "3314806930565f8aa35247317b1a6d4e10922b650ea3af4055752400c7a59f74",
+        "text_length": 3803,
+        "link_count": 90,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "changed",
+      "previous_hash": "e5ff3f6f74586e07d8d658ae32cd7622fe1b7e019c834faee392b3fcb4d0f2f3"
+    },
+    {
+      "source": {
+        "id": "trinidad-state-scholarships",
+        "name": "Trinidad State Scholarships and Grants",
+        "url": "https://www.trinidadstate.edu/scholarships/index.html",
+        "category": "grants-public-funding",
+        "authority": "Trinidad State College",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Review college and foundation scholarships relevant to students in Las Animas and Huerfano counties; check each award's current terms.",
+        "query_groups": [
+          "Las Animas",
+          "Huerfano",
+          "scholarship",
+          "foundation",
+          "technical education"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.trinidadstate.edu/scholarships/index.html",
+        "elapsed_ms": 838,
+        "content_hash": "71e90f9bfef9c18a9373be96b0047b8817ab089d5717e1b9c7e1ad6cb92db9a7",
+        "text_length": 10623,
+        "link_count": 129,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "71e90f9bfef9c18a9373be96b0047b8817ab089d5717e1b9c7e1ad6cb92db9a7"
+    },
+    {
+      "source": {
+        "id": "nm-higher-education-scholarships",
+        "name": "New Mexico Higher Education Scholarships",
+        "url": "https://hed.nm.gov/financial-aid/scholarships",
+        "category": "grants-public-funding",
+        "authority": "New Mexico Higher Education Department",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Compare state grants and scholarships for New Mexico students; eligibility differs by program.",
+        "query_groups": [
+          "New Mexico",
+          "Colfax",
+          "scholarship",
+          "grant",
+          "student aid"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://hed.nm.gov/financial-aid/scholarships",
+        "elapsed_ms": 1254,
+        "content_hash": "3bb1083967308f315598b2855bda4d9a1adcf96cf7816d4ad3a1101f141b167b",
+        "text_length": 5566,
+        "link_count": 176,
+        "candidates": [
+          {
+            "title": "New Mexico Lottery Scholarship",
+            "url": "https://hed.nm.gov/financial-aid/scholarships/new-mexico-lottery-scholarship",
+            "score": 11,
+            "matched_terms": [
+              "New Mexico",
+              "scholarship",
+              "scholarships"
+            ]
+          },
+          {
+            "title": "New Mexico Native American Tuition Scholarship",
+            "url": "https://hed.nm.gov/financial-aid/scholarships/new-mexico-native-american-tuition-scholarship",
+            "score": 11,
+            "matched_terms": [
+              "New Mexico",
+              "scholarship",
+              "scholarships"
+            ]
+          },
+          {
+            "title": "Athletic Scholarship",
+            "url": "https://hed.nm.gov/financial-aid/scholarships/athletic",
+            "score": 9,
+            "matched_terms": [
+              "scholarship",
+              "scholarships"
+            ]
+          },
+          {
+            "title": "Fire Fighters and Peace Officers Survivors Scholarship",
+            "url": "https://hed.nm.gov/financial-aid/scholarships/fire-fighters-and-peace-officers-survivors",
+            "score": 9,
+            "matched_terms": [
+              "scholarship",
+              "scholarships"
+            ]
+          },
+          {
+            "title": "Graduate Scholarship",
+            "url": "https://hed.nm.gov/financial-aid/scholarships/graduate",
+            "score": 9,
+            "matched_terms": [
+              "scholarship",
+              "scholarships"
+            ]
+          },
+          {
+            "title": "Opportunity Scholarship",
+            "url": "https://hed.nm.gov/financial-aid/scholarships/opportunity-scholarship",
+            "score": 9,
+            "matched_terms": [
+              "scholarship",
+              "scholarships"
+            ]
+          },
+          {
+            "title": "Student Incentive Grant Program",
+            "url": "https://hed.nm.gov/financial-aid/scholarships/student-incentive",
+            "score": 9,
+            "matched_terms": [
+              "grant",
+              "scholarships"
+            ]
+          },
+          {
+            "title": "Teacher Preparation Affordability Scholarship Program",
+            "url": "https://hed.nm.gov/financial-aid/scholarships/teacher-preparation-affordability-scholarship-program",
+            "score": 9,
+            "matched_terms": [
+              "scholarship",
+              "scholarships"
+            ]
+          },
+          {
+            "title": "Wartime & Vietnam Veterans Scholarship",
+            "url": "https://hed.nm.gov/financial-aid/scholarships/vietnam-veterans",
+            "score": 9,
+            "matched_terms": [
+              "scholarship",
+              "scholarships"
+            ]
+          },
+          {
+            "title": "New Mexico Scholars",
+            "url": "https://hed.nm.gov/financial-aid/scholarships/nm",
+            "score": 6,
+            "matched_terms": [
+              "New Mexico",
+              "scholarships"
+            ]
+          },
+          {
+            "title": "Request For Proposals: Tribal Education Technical Assistance Centers",
+            "url": "https://hed.nm.gov/resources-for-schools/rfp/rfp-tribal-education-technical-assistance-centers",
+            "score": 4,
+            "matched_terms": [
+              "technical assistance"
+            ]
+          },
+          {
+            "title": "Work Study Program",
+            "url": "https://hed.nm.gov/financial-aid/scholarships/work-study-program",
+            "score": 4,
+            "matched_terms": [
+              "scholarships"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "3bb1083967308f315598b2855bda4d9a1adcf96cf7816d4ad3a1101f141b167b"
+    },
+    {
+      "source": {
+        "id": "albuquerque-community-foundation-scholarships",
+        "name": "Albuquerque Community Foundation Scholarships",
+        "url": "https://abqcf.org/scholarships/",
+        "category": "grants-public-funding",
+        "authority": "Albuquerque Community Foundation",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Search donor-specific scholarships for New Mexico residents; do not assume every fund serves Colfax County.",
+        "query_groups": [
+          "New Mexico",
+          "Colfax",
+          "scholarship",
+          "student aid"
+        ]
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://abqcf.org/scholarships/",
+        "error": "HTTP Error 403: Forbidden",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "fca-emergency-grants",
+        "name": "Foundation for Contemporary Arts Emergency Grants",
+        "url": "https://www.foundationforcontemporaryarts.org/grants/emergency-grants/",
+        "category": "grants-public-funding",
+        "authority": "Foundation for Contemporary Arts",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Review urgent project support for eligible experimental artists with a committed public presentation; this is not general arts funding.",
+        "query_groups": [
+          "artist",
+          "experimental",
+          "performance",
+          "exhibition",
+          "emergency grant"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.foundationforcontemporaryarts.org/grants/emergency-grants/",
+        "elapsed_ms": 806,
+        "content_hash": "4b850f81d35903b90294c4bdc621f2daa7cc62a75455c6e2faf942e6f5c60a65",
+        "text_length": 4458,
+        "link_count": 118,
+        "candidates": [
+          {
+            "title": "Grant Programs",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/",
+            "score": 7,
+            "matched_terms": [
+              "grant",
+              "grants"
+            ]
+          },
+          {
+            "title": "Grants to Artists",
+            "url": "https://www.foundationforcontemporaryarts.org/recipients/grant/grants-to-artists/",
+            "score": 7,
+            "matched_terms": [
+              "grant",
+              "grants"
+            ]
+          },
+          {
+            "title": "Artist Relief",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/past-programs/artist-relief/",
+            "score": 6,
+            "matched_terms": [
+              "artist",
+              "grants"
+            ]
+          },
+          {
+            "title": "Cancellation Funds",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/past-programs/cancellation-funds/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Creative Research Grants",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/creative-research-grants/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Early Grantees",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/past-programs/early-grants/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Ellsworth Kelly AWard",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/ellsworth-kelly-award/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Ellsworth Kelly Award",
+            "url": "https://www.foundationforcontemporaryarts.org/recipients/grant/ellsworth-kelly-award/",
+            "score": 4,
+            "matched_terms": [
+              "grant"
+            ]
+          },
+          {
+            "title": "Emergency Grants",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/emergency-grants/recipients/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "FCA COVID-19 Bridge Fund",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/past-programs/bridge-fund/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "FCA Emergency Grants COVID-19 Fund",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/past-programs/covid-19-fund/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Frequently Asked Questions",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/faq/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Grant Recipients",
+            "url": "https://www.foundationforcontemporaryarts.org/recipients/",
+            "score": 4,
+            "matched_terms": [
+              "grant"
+            ]
+          },
+          {
+            "title": "Grants by Application",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/by-application/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Grants by Invitation",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/by-invitation/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Grants by Nomination",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/by-nomination/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Grants to Artists",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/grants-to-artists/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Grants to Organizations",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/past-programs/organizational-grants/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Guidelines",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/emergency-grants/guidelines/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Process",
+            "url": "https://www.foundationforcontemporaryarts.org/grants/emergency-grants/process/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "4b850f81d35903b90294c4bdc621f2daa7cc62a75455c6e2faf942e6f5c60a65"
+    },
+    {
+      "source": {
+        "id": "pollock-krasner-artist-grants",
+        "name": "Pollock-Krasner Foundation Artist Grants",
+        "url": "https://www.pkf.org/how-to-apply/",
+        "category": "grants-public-funding",
+        "authority": "Pollock-Krasner Foundation",
+        "automation_mode": "change_watch",
+        "cadence_days": 30,
+        "public_use": "Review individual visual-artist grants and discipline exclusions before applying.",
+        "query_groups": [
+          "visual artist",
+          "grant",
+          "rolling",
+          "exhibition"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.pkf.org/how-to-apply/",
+        "elapsed_ms": 569,
+        "content_hash": "918bbd406f6023a9f3d9f67c8b7009956ecf0eb198488b5d39c9c88fdcd7c787",
+        "text_length": 18433,
+        "link_count": 43,
+        "candidates": [
+          {
+            "title": "Organization Grant",
+            "url": "https://www.pkf.org/grants/organization-grant/",
+            "score": 9,
+            "matched_terms": [
+              "grant",
+              "grants"
+            ]
+          },
+          {
+            "title": "Pollock-Krasner Foundation Grants for Artists",
+            "url": "https://www.pkf.org/grants/grant-for-artists/",
+            "score": 9,
+            "matched_terms": [
+              "grant",
+              "grants"
+            ]
+          },
+          {
+            "title": "Lee Krasner Award",
+            "url": "https://www.pkf.org/grants/lee-krasner-award/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Our Grants",
+            "url": "https://www.pkf.org/grants/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          },
+          {
+            "title": "Pollock Prize for Creativity",
+            "url": "https://www.pkf.org/grants/pollock-prize-for-creativity/",
+            "score": 4,
+            "matched_terms": [
+              "grants"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "changed",
+      "previous_hash": "b7bf944fbca6c454a431a07676cb0bb9e4422f4e298ec3941cb3966030850bb4"
+    },
+    {
+      "source": {
+        "id": "dreamspring-small-business-loans",
+        "name": "DreamSpring Small Business Loans",
+        "url": "https://www.dreamspring.org/sba-community-advantage-loan",
+        "category": "business-capital",
+        "authority": "DreamSpring",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Review mission-driven small-business lending in New Mexico and Colorado; confirm service area, rates, and underwriting directly.",
+        "query_groups": [
+          "New Mexico",
+          "Colorado",
+          "small business loan",
+          "microloan"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.dreamspring.org/sba-community-advantage-loan",
+        "elapsed_ms": 560,
+        "content_hash": "ff3a0191d90b10b3d4e1c227ecef6be769895231d9187613e6c9627807fc1c38",
+        "text_length": 5368,
+        "link_count": 67,
+        "candidates": [
+          {
+            "title": "Small Business Loan",
+            "url": "https://www.dreamspring.org/small-business-loans?hsLang=en",
+            "score": 6,
+            "matched_terms": [
+              "small business loan"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "ff3a0191d90b10b3d4e1c227ecef6be769895231d9187613e6c9627807fc1c38"
+    },
+    {
+      "source": {
+        "id": "colorado-enterprise-fund-loans",
+        "name": "Colorado Enterprise Fund Loans",
+        "url": "https://coloradoenterprisefund.org/loans/",
+        "category": "business-capital",
+        "authority": "Colorado Enterprise Fund",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Compare statewide Colorado small-business loan products; do not apply Denver-only program terms to southern Colorado.",
+        "query_groups": [
+          "Colorado",
+          "Las Animas",
+          "Huerfano",
+          "small business loan",
+          "working capital"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://coloradoenterprisefund.org/loans/",
+        "elapsed_ms": 926,
+        "content_hash": "5719b0b64e3b7ad34201ca38fe27f323e485ddb73900915159b4a769941475e8",
+        "text_length": 2425,
+        "link_count": 54,
+        "candidates": [
+          {
+            "title": "New Markets Tax Credit",
+            "url": "https://coloradoenterprisefund.org/New-Markets-Tax-Credit",
+            "score": 4,
+            "matched_terms": [
+              "tax credit"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "5719b0b64e3b7ad34201ca38fe27f323e485ddb73900915159b4a769941475e8"
+    },
+    {
+      "source": {
+        "id": "accion-opportunity-fund-loans",
+        "name": "Accion Opportunity Fund Business Loans",
+        "url": "https://aofund.org/state-licenses-disclosures-and-programs/",
+        "category": "business-capital",
+        "authority": "Accion Opportunity Fund",
+        "automation_mode": "change_watch",
+        "cadence_days": 30,
+        "public_use": "Check state lending availability and disclosures for Colorado and New Mexico businesses; rates and approval depend on the product and borrower.",
+        "query_groups": [
+          "Colorado",
+          "New Mexico",
+          "small business loan",
+          "disclosure"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://aofund.org/state-licenses-disclosures-and-programs/",
+        "elapsed_ms": 839,
+        "content_hash": "2d48135a684f4869f5f6125bbbdbd26dae594fa2159cbfbdf9131465bccc6d7a",
+        "text_length": 3715,
+        "link_count": 78,
+        "candidates": [
+          {
+            "title": "SBA 7(a) Loan",
+            "url": "https://aofund.org/business-loans/sba-small-business-loan/",
+            "score": 6,
+            "matched_terms": [
+              "small business loan"
+            ]
+          },
+          {
+            "title": "New Markets Tax Credit Program",
+            "url": "https://aofund.org/community-research/new-markets-tax-credit-program/",
+            "score": 4,
+            "matched_terms": [
+              "tax credit"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "2d48135a684f4869f5f6125bbbdbd26dae594fa2159cbfbdf9131465bccc6d7a"
+    },
+    {
+      "source": {
+        "id": "gudsy-colfax-nonprofits",
+        "name": "Gudsy Colfax County Nonprofits",
+        "url": "https://www.gudsy.org/colfax-county-nm/",
+        "category": "nonprofit-directories",
+        "authority": "Gudsy, using public IRS filings",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Find Colfax County nonprofit leads from public filings; verify current activity, service area, and contact details separately.",
+        "query_groups": [
+          "Colfax",
+          "Raton",
+          "Cimarron",
+          "Angel Fire",
+          "nonprofit"
+        ]
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 403,
+        "final_url": "https://www.gudsy.org/colfax-county-nm/",
+        "error": "HTTP Error 403: Forbidden",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": ""
+    },
+    {
+      "source": {
+        "id": "destination-colorado-trinidad-venues",
+        "name": "Destination Colorado Trinidad Meeting Facilities",
+        "url": "https://destinationcolorado.com/destination/trinidad/",
+        "category": "event-venues",
+        "authority": "Destination Colorado",
+        "automation_mode": "page_links",
+        "cadence_days": 30,
+        "public_use": "Find Trinidad meeting-facility leads, then confirm rentals and contact details with each venue.",
+        "query_groups": [
+          "Trinidad",
+          "Las Animas",
+          "meeting",
+          "venue",
+          "event"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://destinationcolorado.com/destination/trinidad/",
+        "elapsed_ms": 1139,
+        "content_hash": "c04a88a796e22dfaa25aeccc3267284efcda3e46d3d8ff740a83a15b6d9bd37e",
+        "text_length": 4713,
+        "link_count": 59,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "c04a88a796e22dfaa25aeccc3267284efcda3e46d3d8ff740a83a15b6d9bd37e"
+    },
+    {
+      "source": {
+        "id": "shuler-theater-rental",
+        "name": "Shuler Theater Rental Information",
+        "url": "https://shulertheater.com/rentaltech/",
+        "category": "event-venues",
+        "authority": "Shuler Theater",
+        "automation_mode": "change_watch",
+        "cadence_days": 30,
+        "public_use": "Check the Raton theater's rental agreement and current booking contact before planning an event.",
+        "query_groups": [
+          "Raton",
+          "Colfax",
+          "theater",
+          "rental",
+          "performance"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://shulertheater.com/rentaltech/",
+        "elapsed_ms": 1663,
+        "content_hash": "8f9fa3767200df7d30805f1543d02a8b9d12c1e614e15acd236be0240d4c01cb",
+        "text_length": 4361,
+        "link_count": 16,
+        "candidates": [
+          {
+            "title": "Rental Agreement",
+            "url": "http://shulertheater.com/wp-content/uploads/2016/04/ShulerRentalAgreement.pdf",
+            "score": 6,
+            "matched_terms": [
+              "rental",
+              "rental agreement"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "8f9fa3767200df7d30805f1543d02a8b9d12c1e614e15acd236be0240d4c01cb"
+    },
+    {
+      "source": {
+        "id": "main-street-live-venue",
+        "name": "Main Street LIVE Venue Rental",
+        "url": "https://www.mainstreetlive.org/venue-rental",
+        "category": "event-venues",
+        "authority": "Main Street LIVE",
+        "automation_mode": "change_watch",
+        "cadence_days": 30,
+        "public_use": "Review the Trinidad performance venue's rental inquiry route; availability and terms require direct confirmation.",
+        "query_groups": [
+          "Trinidad",
+          "Las Animas",
+          "venue",
+          "concert",
+          "rental"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.mainstreetlive.org/venue-rental",
+        "elapsed_ms": 679,
+        "content_hash": "4d5a8499b829470f4525932163401522555487bca1aea991e425da3eccdf01ab",
+        "text_length": 2660,
+        "link_count": 25,
+        "candidates": [],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "4d5a8499b829470f4525932163401522555487bca1aea991e425da3eccdf01ab"
+    },
+    {
+      "source": {
+        "id": "francisco-center-theater-rental",
+        "name": "Francisco Center for the Performing Arts Theater Booking",
+        "url": "https://www.fcpalaveta.org/bookthetheater",
+        "category": "event-venues",
+        "authority": "Francisco Center for the Performing Arts",
+        "automation_mode": "change_watch",
+        "cadence_days": 30,
+        "public_use": "Review the La Veta theater booking route; confirm dates and conditions with the theater manager.",
+        "query_groups": [
+          "La Veta",
+          "Huerfano",
+          "theater",
+          "booking",
+          "rental"
+        ]
+      },
+      "check": {
+        "status": "ok",
+        "status_code": 200,
+        "final_url": "https://www.fcpalaveta.org/bookthetheater",
+        "elapsed_ms": 989,
+        "content_hash": "ced14429ca136462a3ab5adcd06478a28faa8ae362f507b9d3cd6d1c2a2c570b",
+        "text_length": 1640,
+        "link_count": 47,
+        "candidates": [
+          {
+            "title": "Booking Form",
+            "url": "https://www.fcpalaveta.org/s/FCPA-Rental-Agreement.pdf",
+            "score": 9,
+            "matched_terms": [
+              "booking",
+              "rental",
+              "rental agreement"
+            ]
+          },
+          {
+            "title": "Rental Agreement",
+            "url": "https://www.fcpalaveta.org/s/Theatre-rental-form.pdf",
+            "score": 6,
+            "matched_terms": [
+              "rental",
+              "rental agreement"
+            ]
+          }
+        ],
+        "error": ""
+      },
+      "change_status": "unchanged",
+      "previous_hash": "ced14429ca136462a3ab5adcd06478a28faa8ae362f507b9d3cd6d1c2a2c570b"
+    },
+    {
+      "source": {
+        "id": "cuchara-mountain-park-rentals",
+        "name": "Cuchara Mountain Park Facility Rentals",
+        "url": "https://cucharamountainpark.org/pages/facility-rental",
+        "category": "event-venues",
+        "authority": "Cuchara Mountain Park",
+        "automation_mode": "change_watch",
+        "cadence_days": 30,
+        "public_use": "Review the Huerfano County park's rental request route; confirm suitability and availability directly.",
+        "query_groups": [
+          "Huerfano",
+          "Cuchara",
+          "facility rental",
+          "event",
+          "lodge"
+        ]
+      },
+      "check": {
+        "status": "access_blocked",
+        "status_code": 429,
+        "final_url": "https://cucharamountainpark.org/pages/facility-rental",
+        "error": "HTTP Error 429: Too Many Requests",
+        "candidates": []
+      },
+      "change_status": "check_failed",
+      "previous_hash": ""
+    }
+  ]
+}

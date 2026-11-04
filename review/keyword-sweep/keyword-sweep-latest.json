@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-10-26",
-  "index_path": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/listing-keyword-index.json",
+  "generated_at": "2026-11-04",
+  "index_path": "C:\\Temp\\tri-county-raton-animation-palettes\\data\\listing-keyword-index.json",
   "network_enabled": true,
   "summary": {
-    "rows": 1498,
-    "rows_with_source_url": 1325,
-    "distinct_source_urls": 419,
+    "rows": 1507,
+    "rows_with_source_url": 1334,
+    "distinct_source_urls": 426,
     "urls_selected": 120,
     "urls_checked": 120,
-    "urls_failed": 30,
-    "entries_changed": 31,
-    "source_keyword_changes": 56,
-    "entries_with_blocked_inferences": 5,
-    "blocked_inference_count": 6,
+    "urls_failed": 41,
+    "entries_changed": 0,
+    "source_keyword_changes": 1,
+    "entries_with_blocked_inferences": 20,
+    "blocked_inference_count": 22,
     "status_counts": {
-      "checked": 328,
-      "checked_no_name_match": 967,
-      "fetch_error": 30,
-      "no_source": 173
+      "checked": 322,
+      "checked_no_name_match": 600,
+      "fetch_error": 400,
+      "no_source": 173,
+      "source_unavailable": 12
     }
   },
-  "changes": [
+  "changes": [],
+  "blocked_inferences": [
     {
       "id": "travel-guide-angel-fire-ebikes-angel-fire-colfax",
       "name": "Angel Fire Ebikes LLC",
       "county": "Colfax",
       "town": "Angel Fire",
-      "added": [
+      "blocked": [
         "hiking"
       ],
-      "removed": [],
-      "status": "checked",
       "source_url": "https://visitangelfirenm.com/listing/angel-fire-ebikes-llc/"
     },
     {
@@ -38,368 +38,102 @@
       "name": "Angel Fire Homes",
       "county": "Colfax",
       "town": "Angel Fire",
-      "added": [
+      "blocked": [
         "outdoor recreation"
       ],
-      "removed": [],
-      "status": "checked",
       "source_url": "https://visitangelfirenm.com/listing/angel-fire-homes/"
     },
     {
-      "id": "travel-guide-angel-s-outback-adventures-angel-fire-colfax",
-      "name": "Angel’s Outback Adventures, LLC",
+      "id": "angel-fire-resort-colfax-recreation-tourism",
+      "name": "Angel Fire Resort",
       "county": "Colfax",
       "town": "Angel Fire",
-      "added": [
-        "outdoor recreation"
+      "blocked": [
+        "chamber of commerce"
       ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/"
-    },
-    {
-      "id": "travel-guide-chisum-group-berkshire-hathaway-homeservices-angel-fire-colfax",
-      "name": "Chisum Group | Berkshire Hathaway HomeServices",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "real estate"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/chisum-group-berkshire-hathaway-homeservices-angel-fire-real-estate/"
-    },
-    {
-      "id": "travel-guide-coldwell-banker-mountain-properties-angel-fire-colfax",
-      "name": "Coldwell Banker Mountain Properties",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "real estate"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/coldwell-banker-mountain-properties/"
-    },
-    {
-      "id": "cottam-s-of-angel-fire-colfax-retail",
-      "name": "Cottam's of Angel Fire",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "skiing"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/cottams-of-angel-fire/"
-    },
-    {
-      "id": "travel-guide-coyote-creek-state-park-angel-fire-colfax",
-      "name": "Coyote Creek State Park",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "camping"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/coyote-creek-state-park/"
-    },
-    {
-      "id": "travel-guide-enchanted-outpost-magazine-angel-fire-colfax",
-      "name": "Enchanted Outpost Magazine",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "marketing",
-        "visitor guide"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/enchanted-outpost-magazine/"
-    },
-    {
-      "id": "travel-guide-family-dollar-angel-fire-colfax",
-      "name": "Family Dollar",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "grocery"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/family-dollar/"
-    },
-    {
-      "id": "travel-guide-frontier-park-angel-fire-colfax",
-      "name": "Frontier Park",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "live music"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/frontier-park/"
-    },
-    {
-      "id": "travel-guide-lindsey-homes-angel-fire-colfax",
-      "name": "Lindsey Homes",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "real estate"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/lindsey-homes/"
+      "source_url": "https://angelfirechamber.org/business/hotels-motels-lodges/"
     },
     {
       "id": "travel-guide-lindsey-vacation-rentals-angel-fire-colfax",
       "name": "Lindsey Vacation Rentals",
       "county": "Colfax",
       "town": "Angel Fire",
-      "added": [
+      "blocked": [
         "outdoor recreation"
       ],
-      "removed": [],
-      "status": "checked",
       "source_url": "https://visitangelfirenm.com/listing/lindsey-vacation-rentals/"
-    },
-    {
-      "id": "mi-cocina-mexicana-colfax-food-beverage",
-      "name": "Mi Cocina Mexicana",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "restaurant"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/mi-cocina-mexicana/"
-    },
-    {
-      "id": "travel-guide-monte-verde-lake-angel-fire-colfax",
-      "name": "Monte Verde Lake",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "fishing"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/monte-verde-lake/"
-    },
-    {
-      "id": "travel-guide-mountain-serenity-rentals-angel-fire-colfax",
-      "name": "Mountain Serenity Rentals",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "vacation rental"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/mountain-serenity-rentals/"
-    },
-    {
-      "id": "travel-guide-mountain-view-event-center-angel-fire-colfax",
-      "name": "Mountain View Event Center",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "event venue"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/mountain-view-event-center/"
     },
     {
       "id": "travel-guide-off-grid-grow-dispensary-angel-fire-colfax",
       "name": "Off Grid Grow Co. Dispensary",
       "county": "Colfax",
       "town": "Angel Fire",
-      "added": [
+      "blocked": [
         "outdoor recreation"
       ],
-      "removed": [],
-      "status": "checked",
       "source_url": "https://visitangelfirenm.com/listing/off-grid-grow-co-dispensary/"
-    },
-    {
-      "id": "travel-guide-olympic-park-angel-fire-colfax",
-      "name": "Olympic Park",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "hiking",
-        "outdoor recreation"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/olympic-park/"
-    },
-    {
-      "id": "travel-guide-pine-and-peak-home-decor-angel-fire-colfax",
-      "name": "Pine & Peak Home Decor",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "gift shop",
-        "jewelry"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/pine-peak-home-decor/"
     },
     {
       "id": "travel-guide-pub-and-grub-angel-fire-colfax",
       "name": "Pub and Grub",
       "county": "Colfax",
       "town": "Angel Fire",
-      "added": [
+      "blocked": [
         "outdoor recreation"
       ],
-      "removed": [],
-      "status": "checked",
       "source_url": "https://visitangelfirenm.com/listing/pub-and-grub/"
-    },
-    {
-      "id": "travel-guide-rio-grande-balloons-angel-fire-colfax",
-      "name": "Rio Grande Balloons",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "outdoor recreation"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/rio-grande-balloons/"
-    },
-    {
-      "id": "travel-guide-slope-side-sports-angel-fire-colfax",
-      "name": "Slope Side Sports",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "gift shop"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/slope-side-sports/"
-    },
-    {
-      "id": "travel-guide-snowblaze-ski-shop-angel-fire-colfax",
-      "name": "Snowblaze Ski Shop",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "outdoor recreation"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/snowblaze-ski-shop/"
-    },
-    {
-      "id": "travel-guide-sweet-shirt-angel-fire-colfax",
-      "name": "Sweet Shirt Co",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "gift shop"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/sweet-shirt-co/"
-    },
-    {
-      "id": "travel-guide-taty-at-bump-angel-fire-colfax",
-      "name": "Taty at the Bump",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "bakery",
-        "cafe"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/taty-at-the-bump/"
-    },
-    {
-      "id": "travel-guide-thai-angel-angel-fire-colfax",
-      "name": "Thai Angel",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "restaurant"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/thai-angel/"
     },
     {
       "id": "travel-guide-trailhead-ski-shop-angel-fire-colfax",
       "name": "Trailhead Ski Shop",
       "county": "Colfax",
       "town": "Angel Fire",
-      "added": [
+      "blocked": [
         "bakery",
         "cafe"
       ],
-      "removed": [],
-      "status": "checked",
       "source_url": "https://visitangelfirenm.com/listing/trailhead-ski-shop/"
-    },
-    {
-      "id": "travel-guide-vacasa-new-mexico-angel-fire-colfax",
-      "name": "Vacasa New Mexico LLC",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "vacation rental"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/vacasa-new-mexico-llc/"
-    },
-    {
-      "id": "travel-guide-weezie-s-wild-rides-angel-fire-colfax",
-      "name": "Weezie’s Wild Rides",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "outfitter"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/weezies-wild-rides/"
-    },
-    {
-      "id": "travel-guide-whatville-angel-fire-colfax",
-      "name": "Whatville",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "sculpture"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/whatville/"
     },
     {
       "id": "travel-guide-zia-bar-angel-fire-colfax",
       "name": "Zia Bar",
       "county": "Colfax",
       "town": "Angel Fire",
-      "added": [
+      "blocked": [
         "outdoor recreation"
       ],
-      "removed": [],
-      "status": "checked",
       "source_url": "https://visitangelfirenm.com/listing/zia-bar/"
-    }
-  ],
-  "blocked_inferences": [
+    },
+    {
+      "id": "travel-guide-mesalands-cc-dinosaur-museum-raton-colfax",
+      "name": "Mesalands CC Dinosaur Museum",
+      "county": "Colfax",
+      "town": "Raton",
+      "blocked": [
+        "outdoor recreation"
+      ],
+      "source_url": "https://www.newmexico.org/listing/mesalands-community-college%e2%80%99s-dinosaur-museum/1411/"
+    },
+    {
+      "id": "travel-guide-bachman-and-associates-entry-huerfano",
+      "name": "Bachman & associates",
+      "county": "Huerfano",
+      "town": "",
+      "blocked": [
+        "chamber of commerce"
+      ],
+      "source_url": "https://www.chamber.huerfano.org/bachman-and-associates"
+    },
+    {
+      "id": "travel-guide-yellow-pine-guest-ranch-cuchara-huerfano",
+      "name": "Yellow Pine Guest Ranch",
+      "county": "Huerfano",
+      "town": "Cuchara",
+      "blocked": [
+        "agriculture"
+      ],
+      "source_url": "https://yellowpine.us/"
+    },
     {
       "id": "la-veta-oil-company-huerfano-service-fuel",
       "name": "La Veta Oil Company",
@@ -442,6 +176,36 @@
       "source_url": "https://storycreek.com/wp/"
     },
     {
+      "id": "travel-guide-t-m-ranch-walsenburg-huerfano",
+      "name": "The T/M Ranch",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "blocked": [
+        "agriculture"
+      ],
+      "source_url": "https://tmranch.org/"
+    },
+    {
+      "id": "walsenburg-studio-huerfano-art-studio-gallery",
+      "name": "Walsenburg Studio",
+      "county": "Huerfano",
+      "town": "Walsenburg",
+      "blocked": [
+        "main street"
+      ],
+      "source_url": "https://spanishpeakscountry.com/business-directory/listing/walsenburg-studio"
+    },
+    {
+      "id": "travel-guide-peaceful-peaks-ranch-glamping-off-grid-trinidad-las-animas",
+      "name": "Peaceful Peaks Ranch - Glamping Off-The-Grid",
+      "county": "Las Animas",
+      "town": "Trinidad",
+      "blocked": [
+        "agriculture"
+      ],
+      "source_url": "https://www.coloradodirectory.com/peaceful-peaks-glamping"
+    },
+    {
       "id": "summit-rv-park-las-animas-rv-park",
       "name": "Summit RV Park",
       "county": "Las Animas",
@@ -450,39 +214,91 @@
         "hotel"
       ],
       "source_url": "https://visittrinidadcolorado.com/stay/"
+    },
+    {
+      "id": "zancana-bakery-colfax-raton",
+      "name": "Zancana Bakery",
+      "county": "Colfax",
+      "town": "Raton",
+      "blocked": [
+        "cafe"
+      ],
+      "source_url": "https://www.elratonmediaworks.org/businesses/zancana-bakery"
     }
   ],
-  "guardrail_path": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/keyword-inference-guardrails.json",
+  "guardrail_path": "C:\\Temp\\tri-county-raton-animation-palettes\\data\\keyword-inference-guardrails.json",
   "fetch_failures": [
     {
       "url": "https://221bgallery.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://aguilarcountrycottages.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://aguilarstation.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
-      "url": "https://allseasonsgiftshop.business.site/",
-      "status": "fetch_error",
-      "status_code": 404,
-      "error": "HTTP Error 404: Not Found"
+      "url": "https://angelfirechamber.org/business/angel-fire-rv-resort/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
     },
     {
-      "url": "https://angelfirechamber.org/business/lindsey-living/",
-      "status": "fetch_error",
-      "status_code": 404,
-      "error": "HTTP Error 404: Not Found"
+      "url": "https://angelfirechamber.org/business/bobcat-pass-wilderness-adventures/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/category/dining/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/category/gift-shops/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/laguna-vista/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/longhorn-lodge/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/mountain-sports-of-angel-fire/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/music-from-angel-fire/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+    },
+    {
+      "url": "https://angelfirechamber.org/business/road-runner-tours-ltd/",
+      "status": "source_unavailable",
+      "status_code": 200,
+      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
     },
     {
       "url": "https://boom-noodles.com",
@@ -494,19 +310,25 @@
       "url": "https://c1btrueorganics.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -5] No address associated with hostname>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "url": "https://carlswansongallery.com",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://cawthonpark.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1016)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1028)>"
     },
     {
       "url": "https://charlies-market.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1016)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1028)>"
     },
     {
       "url": "https://cityofwalsenburg.colorado.gov",
@@ -518,19 +340,19 @@
       "url": "https://franciscofort.org",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)>"
+      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028)>"
+    },
+    {
+      "url": "https://grill14.com",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://huerfanofair.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1016)>"
-    },
-    {
-      "url": "https://jimandmelissa.org",
-      "status": "fetch_error",
-      "status_code": 404,
-      "error": "HTTP Error 404: Not Found"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)>"
     },
     {
       "url": "https://la-h-health.colorado.gov",
@@ -548,13 +370,13 @@
       "url": "https://locations.arbys.com/nm/raton/415-clayton-hwy.html",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://missionatthebell.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
+      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028)>"
     },
     {
       "url": "https://oedit.colorado.gov/colorado-creative-districts",
@@ -572,7 +394,7 @@
       "url": "https://thelvesa.org/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html",
@@ -581,10 +403,10 @@
       "error": "HTTP Error 404: Not Found"
     },
     {
-      "url": "https://trinidadstate.edu/collaboratory/index.html",
+      "url": "https://visitangelfirenm.com/listing/lindsey-living/",
       "status": "fetch_error",
-      "status_code": 404,
-      "error": "HTTP Error 404: Not Found"
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://www.bestwestern.com/en_US/book/hotels-in-walsenburg/best-western-rambler/propertyCode.06038.html",
@@ -596,13 +418,13 @@
       "url": "https://www.cannacity.us/home",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://www.marketplacegallery.net",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://www.mcdonalds.com/us/en-us/location/nm/raton/542-clayton-rd/6011.html?cid=RF:YXT:GMB::Clicks",
@@ -611,7 +433,7 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://www.roomsattheclub.com/",
+      "url": "https://www.sammiescampground.com/",
       "status": "fetch_error",
       "status_code": 404,
       "error": "HTTP Error 404: Not Found"
@@ -620,7 +442,7 @@
       "url": "https://www.skinnysdinerandbar.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
     },
     {
       "url": "https://www.startupspace.app/resource?page=62",
@@ -632,7 +454,25 @@
       "url": "https://www.tabularasa.gallery",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "url": "https://www.yellowpages.com/cimarron-nm",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.yellowpages.com/raton-nm/business-listings/1",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.yellowpages.com/trinidad-co/business-listings/1",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
     }
   ]
 }

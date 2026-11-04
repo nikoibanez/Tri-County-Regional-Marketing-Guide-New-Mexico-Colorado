@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-26",
+  "generated_at": "2026-11-04",
   "publication_note": "Automatically refreshed from watched public directory and tourism pages. Treat these as candidate updates, not official directory additions, until a human confirms the linked source.",
   "summary": {
     "sources_watched": 20,
-    "pages_checked": 38,
-    "pages_failed": 0,
-    "already_represented": 281,
-    "possible_new_leads": 89,
+    "pages_checked": 36,
+    "pages_failed": 8,
+    "already_represented": 279,
+    "possible_new_leads": 79,
     "priority_new_leads": 15,
-    "low_confidence_text_leads": 74
+    "low_confidence_text_leads": 64
   },
   "watched_sources": [
     {
@@ -19,39 +19,39 @@
       "source_role": "Business directory, local services, restaurants, visitor-facing businesses",
       "why_watch": "Raton-area chamber source for business names, local service anchors, restaurants, and potential outreach contacts.",
       "pages_checked": 2,
-      "possible_new_leads": 4,
+      "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
-      "id": "colfax-angel-fire-chamber-member-directory",
-      "title": "Angel Fire Chamber Member Business Directory",
+      "id": "colfax-angel-fire-tourism-business-directory",
+      "title": "Visit Angel Fire Business Directory",
       "county": "Colfax",
-      "source_type": "Chamber member directory",
+      "source_type": "Official tourism business directory",
       "source_role": "Business directory, lodging, dining, services, arts, nonprofits",
-      "why_watch": "Angel Fire and Moreno Valley chamber source for member businesses, nonprofits, artists, lodging, dining, and services.",
+      "why_watch": "Current Angel Fire tourism directory for local businesses, services, dining, lodging, and attractions.",
       "pages_checked": 1,
       "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
       "id": "colfax-angel-fire-food-catering-events",
-      "title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
+      "title": "Visit Angel Fire Dining and Catering",
       "county": "Colfax",
-      "source_type": "Food, catering, and event-service directory categories",
+      "source_type": "Official tourism dining and catering directories",
       "source_role": "Restaurants, catering, event services, food-service leads",
       "why_watch": "Useful for expanding food, catering, and event-service entries around Angel Fire and the Moreno Valley.",
-      "pages_checked": 3,
+      "pages_checked": 2,
       "possible_new_leads": 0,
       "priority_new_leads": 0
     },
     {
       "id": "colfax-visit-angel-fire-tourism-events",
-      "title": "Visit Angel Fire Tourism, Dining, and Events",
+      "title": "Visit Angel Fire Shopping and Lodging",
       "county": "Colfax",
       "source_type": "Tourism, events, dining, and travel source",
-      "source_role": "Tourist/travel spots, restaurants, events, lodging, visitor-facing listings",
-      "why_watch": "Tourism-facing source for Angel Fire visitor pages, dining discovery, lodging, activities, and events.",
-      "pages_checked": 3,
+      "source_role": "Tourist/travel spots, shops, lodging, visitor-facing listings",
+      "why_watch": "Tourism-facing pages for Angel Fire shopping, lodging, and visitor-facing services.",
+      "pages_checked": 2,
       "possible_new_leads": 0,
       "priority_new_leads": 0
     },
@@ -151,7 +151,7 @@
       "source_role": "Event spots, community calendar, event submission, visitor-facing activities",
       "why_watch": "Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.",
       "pages_checked": 2,
-      "possible_new_leads": 14,
+      "possible_new_leads": 8,
       "priority_new_leads": 0
     },
     {
@@ -173,7 +173,7 @@
       "source_role": "Business directory, member exposure, events, local services",
       "why_watch": "Countywide chamber source for business collaboration, member exposure, events, and local business updates.",
       "pages_checked": 1,
-      "possible_new_leads": 3,
+      "possible_new_leads": 2,
       "priority_new_leads": 0
     },
     {
@@ -206,7 +206,7 @@
       "source_role": "Museums, heritage sites, performance venues, and visitor destinations",
       "why_watch": "County-specific attraction links provide direct destination or operator pages; check each linked page for current details.",
       "pages_checked": 1,
-      "possible_new_leads": 2,
+      "possible_new_leads": 3,
       "priority_new_leads": 0
     },
     {
@@ -401,50 +401,6 @@
   ],
   "low_confidence_text_leads": [
     {
-      "name": "KYC vs No-KYC: What \"Anonymous\" Really Means",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://raton.info/",
-      "listing_url": "https://raton.info/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "KYC vs No-KYC: What \"Anonymous\" Really Means",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://raton.info/",
-      "listing_url": "https://raton.info/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Licensed & Regulated",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://raton.info/",
-      "listing_url": "https://raton.info/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Licensed & Regulated",
-      "county": "Colfax",
-      "state": "NM",
-      "source_title": "Raton Chamber Business Directory",
-      "source_type": "Chamber business directory",
-      "source_page": "https://raton.info/",
-      "listing_url": "https://raton.info/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "123’s",
       "county": "Huerfano",
       "state": "CO",
@@ -452,6 +408,17 @@
       "source_type": "Municipal business directory",
       "source_page": "https://townoflaveta-co.gov/business-directory/",
       "listing_url": "https://townoflaveta-co.gov/business-directory/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "82ND GARDNER CHUCKWAGON DINNER",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -489,17 +456,6 @@
       "confidence": "low"
     },
     {
-      "name": "Cuchara Farmers Market",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Danae's Diner",
       "county": "Huerfano",
       "state": "CO",
@@ -533,62 +489,7 @@
       "confidence": "low"
     },
     {
-      "name": "Gardner Farmer and Craft Market",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Gardner Farmers Market",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Gardner Methodist Church",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Halloweentown Movie Night at Fiesta Park",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "Kellen Goode Live at the Stokehouse!",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "La Veta Farmers Market",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -606,17 +507,6 @@
       "source_type": "Municipal business directory",
       "source_page": "https://townoflaveta-co.gov/business-directory/",
       "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "La Veta Library",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -749,17 +639,6 @@
       "source_type": "Municipal business directory",
       "source_page": "https://townoflaveta-co.gov/business-directory/",
       "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Storage",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Huerfano County Chamber Directory",
-      "source_type": "Chamber member directory",
-      "source_page": "https://www.chamber.huerfano.org/membership-directory",
-      "listing_url": "https://www.chamber.huerfano.org/membership-directory",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -927,6 +806,17 @@
       "listing_url": "https://visittrinidadcolorado.com/resources-for-locals/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
+    },
+    {
+      "name": "Louden-Henritze Archaeological Museum",
+      "county": "Las Animas",
+      "state": "CO",
+      "source_title": "Canyons & Plains Las Animas County Attractions",
+      "source_type": "Regional tourism attraction guide",
+      "source_page": "https://canyonsandplains.org/destination-item/las-animas-county/",
+      "listing_url": "https://trinidadstate.edu/archaeology-museum/index.html",
+      "evidence_type": "linked_text",
+      "confidence": "medium"
     },
     {
       "name": "Ludlow Massacre History Site",

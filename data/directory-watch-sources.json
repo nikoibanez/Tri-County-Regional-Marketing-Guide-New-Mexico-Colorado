@@ -21,53 +21,51 @@
       "exclude_url_path_contains": ["/directory-page", "/about", "/contact"]
     },
     {
-      "id": "colfax-angel-fire-chamber-member-directory",
-      "title": "Angel Fire Chamber Member Business Directory",
+      "id": "colfax-angel-fire-tourism-business-directory",
+      "title": "Visit Angel Fire Business Directory",
       "county": "Colfax",
       "state": "NM",
-      "source_type": "Chamber member directory",
+      "source_type": "Official tourism business directory",
       "source_role": "Business directory, lodging, dining, services, arts, nonprofits",
-      "why_watch": "Angel Fire and Moreno Valley chamber source for member businesses, nonprofits, artists, lodging, dining, and services.",
+      "why_watch": "Current Angel Fire tourism directory for local businesses, services, dining, lodging, and attractions.",
       "seed_urls": [
-        "https://angelfirechamber.org/local-businesses/"
+        "https://visitangelfirenm.com/all-listings/"
       ],
-      "allow_link_candidates": true,
-      "allow_text_candidates": false,
-      "priority_link_candidates": true,
-      "include_url_path_contains": ["/business/"],
-      "exclude_url_path_contains": ["/business/category/", "/business/categories/", "/event/", "/my-account", "/cart"]
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/event/", "/my-account", "/cart"]
     },
     {
       "id": "colfax-angel-fire-food-catering-events",
-      "title": "Angel Fire Chamber Food, Catering, and Event-Service Categories",
+      "title": "Visit Angel Fire Dining and Catering",
       "county": "Colfax",
       "state": "NM",
-      "source_type": "Food, catering, and event-service directory categories",
+      "source_type": "Official tourism dining and catering directories",
       "source_role": "Restaurants, catering, event services, food-service leads",
       "why_watch": "Useful for expanding food, catering, and event-service entries around Angel Fire and the Moreno Valley.",
       "seed_urls": [
-        "https://angelfirechamber.org/business/category/restaurants/",
-        "https://angelfirechamber.org/business/tags/catering/",
-        "https://angelfirechamber.org/business/category/catering/"
+        "https://visitangelfirenm.com/dining/",
+        "https://visitangelfirenm.com/catering/"
       ],
-      "allow_link_candidates": true,
-      "allow_text_candidates": false,
-      "priority_link_candidates": true,
-      "include_url_path_contains": ["/business/"],
-      "exclude_url_path_contains": ["/business/category/", "/business/categories/", "/business/tags/", "/event/", "/my-account", "/cart"]
+      "allow_link_candidates": false,
+      "allow_text_candidates": true,
+      "priority_link_candidates": false,
+      "include_url_path_contains": [],
+      "exclude_url_path_contains": ["/event/", "/my-account", "/cart"]
     },
     {
       "id": "colfax-visit-angel-fire-tourism-events",
-      "title": "Visit Angel Fire Tourism, Dining, and Events",
+      "title": "Visit Angel Fire Shopping and Lodging",
       "county": "Colfax",
       "state": "NM",
       "source_type": "Tourism, events, dining, and travel source",
-      "source_role": "Tourist/travel spots, restaurants, events, lodging, visitor-facing listings",
-      "why_watch": "Tourism-facing source for Angel Fire visitor pages, dining discovery, lodging, activities, and events.",
+      "source_role": "Tourist/travel spots, shops, lodging, visitor-facing listings",
+      "why_watch": "Tourism-facing pages for Angel Fire shopping, lodging, and visitor-facing services.",
       "seed_urls": [
-        "https://angelfirechamber.org/visitor/",
-        "https://angelfirechamber.org/annual-calendar-of-events/",
-        "https://angelfirechamber.org/visitor/arts-and-culture/"
+        "https://visitangelfirenm.com/shopping/",
+        "https://visitangelfirenm.com/stay/"
       ],
       "allow_link_candidates": false,
       "allow_text_candidates": true,

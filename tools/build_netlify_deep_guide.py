@@ -1191,12 +1191,12 @@ DIRECTORY_SOURCES.extend(
             "confidence": "High",
         },
         {
-            "title": "Angel Fire Chamber Member Business Directory",
+            "title": "Visit Angel Fire Business Directory",
             "county": "Colfax",
-            "kind": "Member business directory",
-            "url": "https://angelfirechamber.org/local-businesses/",
-            "best_for": "Angel Fire and Moreno Valley businesses, nonprofits, artists, lodging, dining, services, and chamber member categories.",
-            "action": "Use as a broader Angel Fire directory before searching by category or building a manual list.",
+            "kind": "Tourism business directory",
+            "url": "https://visitangelfirenm.com/all-listings/",
+            "best_for": "Angel Fire businesses, lodging, dining, shopping, services, and visitor-facing attractions.",
+            "action": "Browse local listings or use the site's get-listed route for a business update.",
             "confidence": "High",
         },
         {
@@ -4443,7 +4443,7 @@ def sorted_sources(sources: list[dict]) -> list[dict]:
 
 
 SOURCE_GROUP_OVERRIDES = {
-    "angelfirechamber.org": "Angel Fire Chamber directory and member routes",
+    "angelfirechamber.org": "Former Angel Fire Chamber listing",
     "biz.nm.gov": "New Mexico Business Portal resources",
     "chamber.huerfano.org": "Huerfano Chamber business and resource routes",
     "co.colfax.nm.us": "Colfax County official business and civic routes",
@@ -5881,6 +5881,7 @@ DISCOVERY_CATEGORY_LABELS = {
     "nonprofit-directories": "Nonprofit directories",
     "business-directories": "Business directories",
     "artists-creative-opportunities": "Artist opportunities",
+    "event-venues": "Event venues",
 }
 
 
@@ -6304,7 +6305,7 @@ def events_page() -> str:
     {page_wayfinding(
         "Events",
         "Find a current calendar, discover what is happening, or choose a public route for sharing an event.",
-        [("Event hubs", "#event-hubs"), ("Search all event routes", "#event-directory"), ("County event routes", "#event-county-routes")],
+        [("Event hubs", "#event-hubs"), ("Search all event routes", "#event-directory"), ("County event routes", "#event-county-routes"), ("Find venues", "#event-venue-hubs")],
         [("Promotion finder", "promote/?route=events#promotion-results"), ("Message templates", "templates/"), ("Submit an update", "submit/")],
         1,
     )}
@@ -6365,6 +6366,14 @@ def events_page() -> str:
         <a class="button button-primary" href="../templates/index.html">Prepare an event message</a>
         <a class="button button-soft" href="../submit/index.html">Add or correct an event route</a>
       </div>
+    </section>
+    <section id="event-venue-hubs" class="section tinted" aria-labelledby="event-venue-hubs-title">
+      <div class="section-heading">
+        <p class="eyebrow">Places to host an event</p>
+        <h2 id="event-venue-hubs-title">Research venues across the three counties.</h2>
+        <p class="section-note">Check the venue's own booking page for availability, accessibility, costs, and conditions.</p>
+      </div>
+      <div class="source-grid compact" data-progressive-list data-compact-count="3" data-wide-count="5">{discovery_source_cards(['event-venues'], 99)}</div>
     </section>
     """
     return page_shell(
@@ -7306,6 +7315,16 @@ def about_page(summary: dict) -> str:
         """
         for item in AMPLIFIER_CHANNELS
     )
+    research_rows = "\n".join(
+        f"""
+        <tr>
+          <td><a href="{html_escape(item['url'])}" target="_blank" rel="noreferrer">{html_escape(item['name'])}</a></td>
+          <td>{html_escape(DISCOVERY_CATEGORY_LABELS.get(item['category'], 'Resource search'))}</td>
+          <td>{html_escape(item['public_use'])}</td>
+        </tr>
+        """
+        for item in RESOURCE_DISCOVERY_SOURCES
+    )
     content = f"""
     <section class="page-hero">
       <p class="eyebrow">How the guide works</p>
@@ -7373,6 +7392,15 @@ def about_page(summary: dict) -> str:
         </table>
       </div>
       <p class="section-note">Downloadable data files are available for users who need a spreadsheet or page list.</p>
+      <details>
+        <summary>Funding, nonprofit, loan, artist, and venue search hubs ({len(RESOURCE_DISCOVERY_SOURCES)})</summary>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Search hub</th><th>Type</th><th>What to check</th></tr></thead>
+            <tbody>{research_rows}</tbody>
+          </table>
+        </div>
+      </details>
     </section>
     <section class="section tinted">
       <div class="section-heading">

@@ -35,6 +35,11 @@ LOW_SIGNAL_HOSTS = {
     "youtube.com",
 }
 
+UNAVAILABLE_PAGE_SIGNALS = (
+    "site is undergoing maintenance",
+    "notice of dissolution of the angel fire chamber of commerce",
+)
+
 GENERIC_CATEGORY_PHRASES = (
     "all tourism directory listings",
     "commercial directory lead",
@@ -433,6 +438,17 @@ def fetch_keyword_signals(url: str, timeout: int) -> dict:
             "error": clean_text(str(exc)),
         }
     signal = clean_text(parser.signal_text())
+    if any(marker in signal.casefold() for marker in UNAVAILABLE_PAGE_SIGNALS):
+        return {
+            "ok": False,
+            "status": "source_unavailable",
+            "status_code": result.get("status_code"),
+            "final_url": result.get("final_url") or url,
+            "keywords": [],
+            "content_hash": "",
+            "signal_text": "",
+            "error": "Publisher page shows a maintenance or dissolution notice, not a listing.",
+        }
     return {
         "ok": True,
         "status": "checked",

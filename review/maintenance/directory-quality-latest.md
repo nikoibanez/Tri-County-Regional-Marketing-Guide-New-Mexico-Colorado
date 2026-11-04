@@ -1,6 +1,6 @@
 # Directory Quality Report
 
-Generated: 2026-10-22
+Generated: 2026-11-04
 
 Status: **PASS**
 
@@ -20,9 +20,9 @@ Status: **PASS**
 - Explicitly excluded organization rows: 0
 - Exact name/place duplicate groups: 0
 - Without website or source URL: 173
-- Without phone: 1300
-- Without email: 1468
-- Without address: 1031
+- Without phone: 1296
+- Without email: 1467
+- Without address: 1030
 
 ## Published Network Directory
 
