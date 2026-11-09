@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-04T11:53:25.300022+00:00",
-  "source": "C:\\Temp\\tri-county-raton-animation-palettes\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
+  "generated_at": "2026-11-09T23:47:21.221991+00:00",
+  "source": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/dist/tri-county-netlify-guide-deep/data/guide-data.json",
   "summary": {
     "entries": 1371,
     "directory_shortcuts": 120,
@@ -12,7 +12,7 @@
     "missing_structured_fields": 0,
     "shortcuts_with_any_route": 67,
     "shortcuts_with_listed_route": 29,
-    "shortcuts_with_ask_route": 58,
+    "shortcuts_with_ask_route": 57,
     "shortcuts_without_outreach_route": 53,
     "shortcuts_missing_structured_fields": 0,
     "channel_counts": {
@@ -123,8 +123,8 @@
       "event_calendar": {
         "label": "Event calendars",
         "listed": 14,
-        "ask": 16,
-        "not_indicated": 90
+        "ask": 15,
+        "not_indicated": 91
       },
       "social_cross_promotion": {
         "label": "Social cross-promotion",
@@ -135,8 +135,8 @@
       "newsletter_mailing_list": {
         "label": "Newsletters and mailing lists",
         "listed": 0,
-        "ask": 37,
-        "not_indicated": 83
+        "ask": 36,
+        "not_indicated": 84
       },
       "paid_digital_advertising": {
         "label": "Paid digital advertising",
@@ -153,14 +153,14 @@
       "sponsorship": {
         "label": "Sponsorships",
         "listed": 0,
-        "ask": 25,
-        "not_indicated": 95
+        "ask": 24,
+        "not_indicated": 96
       },
       "partner_cross_promotion": {
         "label": "Partner cross-promotion",
         "listed": 0,
-        "ask": 54,
-        "not_indicated": 66
+        "ask": 53,
+        "not_indicated": 67
       }
     }
   },

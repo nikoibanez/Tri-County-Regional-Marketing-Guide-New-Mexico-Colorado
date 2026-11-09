@@ -1,29 +1,33 @@
 # Directory Online Connection Review
 
-Generated: 2026-11-02T23:02:25.746533+00:00
+Generated: 2026-11-09T23:43:33.837931+00:00
 
 This review distinguishes a first-party website from a hosted directory, tourism page, social profile, email, phone, street address, or missing contact route. An HTTP response does not prove that an organization is active or that page content is current.
 
 ## Summary
 
-- Published directory entries reviewed: 1362
-- First-party website candidates: 195
-- Live first-party business links eligible for the public animation: 129
-- Live direct websites: 171
-- Direct website links needing a normal-browser check: 23
-- Live hosted profiles or directory pages: 1034
+- Published directory entries reviewed: 1371
+- First-party website candidates: 208
+- Live first-party business links eligible for the public animation: 139
+- Live direct websites: 183
+- Direct website links needing a normal-browser check: 22
+- Live hosted profiles or directory pages: 1032
 - Hosted links needing a normal-browser check: 2
 - Entries with contact details but no URL: 74
 - Entries with no online or direct contact path: 58
-- Unique URLs checked: 589
-- Confirmed broken URLs: 1
+- Unique URLs checked: 608
+- Confirmed broken URLs: 5
 - Script-access limits such as 403 or TLS errors: 12
 
 The companion CSV contains all entries and their assigned connection group.
 
 ## Confirmed Broken Listing URLs
 
-- Sammie's Motel & RV Park (La Veta): https://www.sammiescampground.com/
+- All Seasons Gift Shop (Raton): https://allseasonsgiftshop.business.site/
+- Boom Noodles (Trinidad): https://boom-noodles.com
+- Double Black Design, LLC (Angel Fire): https://www.linkedin.com/company/double-black-design-llc
+- Lindsey Living (Angel Fire): https://angelfirechamber.org/business/lindsey-living/
+- The Royal Tavern (Trinidad): https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html
 
 ## Listings Without Any URL
 
@@ -131,7 +135,6 @@ The companion CSV contains all entries and their assigned connection group.
 - Segundo - Segundo, Las Animas (no contact path)
 - Starkville - Starkville, Las Animas (no contact path)
 - Arts/culture/tourism audiences - Trinidad, Las Animas (no contact path)
-- Boom Noodles - Trinidad, Las Animas (phone, address)
 - Great Wall Restaurant - Trinidad, Las Animas (phone, address)
 - Trinidad State College - Trinidad, Las Animas (no contact path)
 - Tyrone / Villegreen - Tyrone, Las Animas (no contact path)
