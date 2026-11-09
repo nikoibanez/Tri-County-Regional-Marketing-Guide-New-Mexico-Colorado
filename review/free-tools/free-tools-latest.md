@@ -1,6 +1,6 @@
 # Monthly Free Tools Review
 
-Generated: 2026-11-02T23:05:52+00:00
+Generated: 2026-11-09T23:47:10+00:00
 
 This is a review queue. It does not change public pricing, eligibility, or tool recommendations automatically.
 
@@ -8,24 +8,23 @@ This is a review queue. It does not change public pricing, eligibility, or tool 
 
 - Public tools configured: 22
 - Discovery pages configured: 5
-- Pages checked successfully: 22
-- Changed pages: 1
+- Pages checked successfully: 21
+- Changed pages: 0
 - New baselines: 0
-- Failed checks: 5 (5 automation-blocked)
-- Newly failed checks: 0
+- Failed checks: 6 (5 automation-blocked)
+- Newly failed checks: 1
 - Tool claims currently missing an expected term: 1 (0 new)
-- Candidate links found: 63 (1 new)
+- Candidate links found: 63 (0 new)
 
 ## Review Queue
 
-### TechSoup nonprofit technology catalog
+### Inkscape
 
-- Kind: discovery
-- URL: https://www.techsoup.org/
-- Check: ok / changed
+- Kind: tool
+- URL: https://inkscape.org/about/
+- Check: timeout / check_failed
 - Expected-term hits: none
-- Candidate links:
-  - [Financial Management Accounting & QuickBooks Services Expert financial Support for your mission​](https://page.techsoup.org/services?category=accounting)
+- Error: The read operation timed out
 
 ## Human Review
 

@@ -1,6 +1,6 @@
 # Weekly Directory Query Check
 
-Generated: 2026-11-04
+Generated: 2026-11-09
 
 Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.
 
@@ -8,12 +8,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 
 - Sources watched: 20
 - Pages checked: 36
-- Pages failed: 8
-- Listing-like candidates found: 358
-- Already represented in guide: 279
-- Possible new leads: 79
-- Priority new leads: 15
-- Low-confidence text leads: 64
+- Pages failed: 4
+- Listing-like candidates found: 405
+- Already represented in guide: 323
+- Possible new leads: 82
+- Priority new leads: 12
+- Low-confidence text leads: 70
 
 ## Watch Sources
 
@@ -36,11 +36,8 @@ Fetch issues:
 - Source type: Official tourism business directory
 - Why watch: Current Angel Fire tourism directory for local businesses, services, dining, lodging, and attractions.
 - Pages checked: 1
-- Possible new leads: 0
+- Possible new leads: 2
 - Priority new leads: 0
-
-Fetch issues:
-- [https://visitangelfirenm.com/all-listings/](https://visitangelfirenm.com/all-listings/) - HTTP Error 403: Forbidden
 
 ### Visit Angel Fire Dining and Catering
 
@@ -48,12 +45,8 @@ Fetch issues:
 - Source type: Official tourism dining and catering directories
 - Why watch: Useful for expanding food, catering, and event-service entries around Angel Fire and the Moreno Valley.
 - Pages checked: 2
-- Possible new leads: 0
+- Possible new leads: 10
 - Priority new leads: 0
-
-Fetch issues:
-- [https://visitangelfirenm.com/dining/](https://visitangelfirenm.com/dining/) - HTTP Error 403: Forbidden
-- [https://visitangelfirenm.com/catering/](https://visitangelfirenm.com/catering/) - HTTP Error 403: Forbidden
 
 ### Visit Angel Fire Shopping and Lodging
 
@@ -61,12 +54,8 @@ Fetch issues:
 - Source type: Tourism, events, dining, and travel source
 - Why watch: Tourism-facing pages for Angel Fire shopping, lodging, and visitor-facing services.
 - Pages checked: 2
-- Possible new leads: 0
+- Possible new leads: 6
 - Priority new leads: 0
-
-Fetch issues:
-- [https://visitangelfirenm.com/shopping/](https://visitangelfirenm.com/shopping/) - HTTP Error 403: Forbidden
-- [https://visitangelfirenm.com/stay/](https://visitangelfirenm.com/stay/) - HTTP Error 403: Forbidden
 
 ### Explore Raton Tourism and Event Pages
 
@@ -119,11 +108,12 @@ Fetch issues:
 - Source type: Regional tourism and event source
 - Why watch: Regional Southern Colorado event and tourism source that can surface Las Animas County travel and event leads.
 - Pages checked: 2
-- Possible new leads: 13
+- Possible new leads: 0
 - Priority new leads: 0
 
 Fetch issues:
-- [https://southerncoloradotourism.com/](https://southerncoloradotourism.com/) - The read operation timed out
+- [https://southerncoloradotourism.com/events/](https://southerncoloradotourism.com/events/) - <urlopen error timed out>
+- [https://southerncoloradotourism.com/](https://southerncoloradotourism.com/) - <urlopen error timed out>
 
 ### Spanish Peaks Country Business Directory
 
@@ -167,7 +157,7 @@ Fetch issues:
 - Source type: Chamber member directory
 - Why watch: Countywide chamber source for business collaboration, member exposure, events, and local business updates.
 - Pages checked: 1
-- Possible new leads: 2
+- Possible new leads: 3
 - Priority new leads: 0
 
 ### Red River Chamber Member Spotlights
@@ -176,8 +166,8 @@ Fetch issues:
 - Source type: Chamber business profiles
 - Why watch: Current chamber profiles link to individual Red River businesses; review each town before importing because some members serve nearby areas.
 - Pages checked: 1
-- Possible new leads: 3
-- Priority new leads: 3
+- Possible new leads: 0
+- Priority new leads: 0
 
 ### El Raton Media Works Local Businesses
 
@@ -219,9 +209,6 @@ Fetch issues:
 
 These have linked listing-page evidence. They are still not publication-ready additions until a human confirms the source page.
 
-- [Apothecary Shoppe of TX](https://redriverchamber.org/2026-member-spotlight-apothecary-shoppe-of-tx/) - Colfax; Red River Chamber Member Spotlights; evidence: linked_text; confidence: medium-high
-- [Questa Lumber and Hardware Co.](https://redriverchamber.org/2026-member-spotlight-questa-lumber-hardware-co/) - Colfax; Red River Chamber Member Spotlights; evidence: linked_text; confidence: medium-high
-- [The Vault](https://redriverchamber.org/2026-member-spotlight-the-vault/) - Colfax; Red River Chamber Member Spotlights; evidence: linked_text; confidence: medium-high
 - [Cuchara Mountain Trail Ride - Guided Horseback Rides](https://spanishpeakscountry.com/business-directory/listing/cuchara-mountain-trail-ride) - Huerfano; Spanish Peaks Country Business Directory; evidence: linked_text; confidence: medium-high
 - [111 Park - Espresso Bar & Cafe](https://www.elratonmediaworks.org/businesses/111-park) - Regional; El Raton Media Works Local Businesses; evidence: linked_text; confidence: medium-high
 - [Blue Sky Ranch](https://www.elratonmediaworks.org/businesses/blue-sky-ranch) - Regional; El Raton Media Works Local Businesses; evidence: linked_text; confidence: medium-high
@@ -239,6 +226,24 @@ These have linked listing-page evidence. They are still not publication-ready ad
 
 These came from directory page text rather than individual listing links. Review them more carefully before using.
 
+- 3315 Mountain View - Colfax; Visit Angel Fire Shopping and Lodging; source page: https://visitangelfirenm.com/shopping/
+- 3373 Highway 434 - Colfax; Visit Angel Fire Dining and Catering; source page: https://visitangelfirenm.com/dining/
+- Across from the Chile Express Chair Lift - Colfax; Visit Angel Fire Dining and Catering; source page: https://visitangelfirenm.com/dining/
+- BLVD Suite G1 - Colfax; Visit Angel Fire Shopping and Lodging; source page: https://visitangelfirenm.com/shopping/
+- City - Colfax; Visit Angel Fire Business Directory; source page: https://visitangelfirenm.com/all-listings/
+- City - Colfax; Visit Angel Fire Dining and Catering; source page: https://visitangelfirenm.com/dining/
+- City - Colfax; Visit Angel Fire Dining and Catering; source page: https://visitangelfirenm.com/catering/
+- City - Colfax; Visit Angel Fire Shopping and Lodging; source page: https://visitangelfirenm.com/shopping/
+- City - Colfax; Visit Angel Fire Shopping and Lodging; source page: https://visitangelfirenm.com/stay/
+- La Finca de Villa - Colfax; Visit Angel Fire Dining and Catering; source page: https://visitangelfirenm.com/dining/
+- La Finca de Villa - Colfax; Visit Angel Fire Dining and Catering; source page: https://visitangelfirenm.com/catering/
+- State / Province / Region - Colfax; Visit Angel Fire Business Directory; source page: https://visitangelfirenm.com/all-listings/
+- State / Province / Region - Colfax; Visit Angel Fire Dining and Catering; source page: https://visitangelfirenm.com/dining/
+- State / Province / Region - Colfax; Visit Angel Fire Dining and Catering; source page: https://visitangelfirenm.com/catering/
+- State / Province / Region - Colfax; Visit Angel Fire Shopping and Lodging; source page: https://visitangelfirenm.com/shopping/
+- State / Province / Region - Colfax; Visit Angel Fire Shopping and Lodging; source page: https://visitangelfirenm.com/stay/
+- Suite D - Colfax; Visit Angel Fire Dining and Catering; source page: https://visitangelfirenm.com/dining/
+- Within the Angel Fire Resort, 2nd floor - Colfax; Visit Angel Fire Dining and Catering; source page: https://visitangelfirenm.com/dining/
 - 123’s - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - 82ND GARDNER CHUCKWAGON DINNER - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Annual Holiday Bell Ringing in La Veta - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
@@ -261,37 +266,25 @@ These came from directory page text rather than individual listing links. Review
 - Office Hours - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Parade of Lights - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Shalawalla - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
+- Storage - Huerfano; Huerfano County Chamber Directory; source page: https://www.chamber.huerfano.org/membership-directory
 - (719) 846-9843 ext. 160 - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
-- 420 Festival at Central Park - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - An independent antiques stop on historic East Main Street. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
-- April - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Books & More - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/shop/
-- Christmas Tree Lighting - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - City of Trinidad City Hall - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Colorado - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
-- Details - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Find city services, official notices and municipal contact information. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
-- Hometown Holidays Parade of Lights - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
-- June - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - KCRT AM-FM Radio - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
-- Literary Festival – GET LIT! - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Lou Ann Peters - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/resources-for-locals/
 - Louden-Henritze Archaeological Museum - Las Animas; Canyons & Plains Las Animas County Attractions; source page: https://canyonsandplains.org/destination-item/las-animas-county/
 - Ludlow Massacre History Site - Las Animas; Canyons & Plains Las Animas County Attractions; source page: https://canyonsandplains.org/destination-item/las-animas-county/
-- March - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
-- November - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Organizer - Las Animas; Visit Trinidad Events and Submit-Event Routes; source page: https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/
 - Scenic Highway of Legends - Las Animas; Canyons & Plains Las Animas County Attractions; source page: https://canyonsandplains.org/destination-item/las-animas-county/
 - Show Filters - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/dine/
 - Show Filters - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/stay/
 - Show Filters - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/shop/
 - Space To Create & Tourism Coordinator - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/resources-for-locals/
-- St. Patrick's Day Parade - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Stashes - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
-- Stonewall Fishing Tournament - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Stop for local visitor information, maps and help planning a Trinidad visit. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
-- Summer Arts Exhibits - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
-- The Annual Collector's Series Calendar - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Victor Gutierrez - Las Animas; Visit Trinidad Events and Submit-Event Routes; source page: https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/
 - Visit Trinidad Colorado Tourism and Events Office - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Visit Trinidad Colorado – - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/dine/
@@ -309,40 +302,40 @@ These came from directory page text rather than individual listing links. Review
 - A Taylor Made Haircut -> A Taylor Made Haircut (exact_normalized)
 - A&W -> A&W (exact_url)
 - A&W -> A&W (exact_url)
+- Allen Fields Sports Complex -> Allen Fields Sports Complex (exact_normalized)
 - AlMack's Kitchen -> AlMack's Kitchen (exact_normalized)
+- Alpine Lumber Company -> Alpine Lumber Company (exact_normalized)
+- Alpine Lumber Company -> Alpine Lumber Company (exact_normalized)
 - Alys' Restaurant -> Alys' Restaurant (exact_url)
 - Alys' Restaurant -> Alys' Restaurant (exact_url)
 - Alys' Restaurant -> Alys' Restaurant (exact_normalized)
 - Anchor Motel -> Anchor Motel (exact_url)
 - Anchor Motel -> Anchor Motel (exact_url)
+- Angel Fire Community Center -> Angel Fire Community Center (exact_normalized)
+- Angel Fire Ebikes LLC -> Angel Fire Ebikes LLC (exact_normalized)
+- Angel Fire Resort -> Angel Fire Resort (exact_normalized)
+- Angel Fire Resort -> Angel Fire Resort (exact_normalized)
+- Angel Fire Resort -> Angel Fire Resort (exact_normalized)
+- Angel Fire Resort -> Angel Fire Resort (exact_normalized)
+- Angel Fire Resort Nordic & Golf Center -> Angel Fire Resort Nordic & Golf Center (exact_normalized)
+- Angel Fire Resort Vacation Rentals -> Angel Fire Resort Vacation Rentals (exact_normalized)
+- Angel Fire RV Resort -> Angel Fire RV Resort (exact_normalized)
+- Angel Fire Visitor Center -> Angel Fire Visitor Center (exact_normalized)
+- Angel Fired Pizza -> Angel Fired Pizza (exact_normalized)
+- Angel Fired Pizza -> Angel Fired Pizza (exact_normalized)
+- Angel’s Outback Adventures, LLC -> Angel’s Outback Adventures, LLC (exact_normalized)
 - Antique Avenue -> Antique Avenue (exact_url)
 - AR Mitchell Museum of Western Art -> AR Mitchell Museum of Western Art (exact_normalized)
+- Arias Taqueria Food Truck -> Arias Taqueria Food Truck (exact_normalized)
 - Armidas -> Armidas (exact_url)
 - Artisans on Main -> Artisans on Main (exact_url)
 - Artisans on Main LLC -> Artisans on Main (exact_normalized)
 - Arts & Antiques -> Arts & Antiques (exact_url)
+- Aspen Gold Laundromat -> Aspen Gold Laundromat (exact_normalized)
 - Ayers Family Fitness -> Ayers Family Fitness (exact_url)
 - Bachman & Associates Real Estate -> Bachman & Associates Real Estate (exact_normalized)
-- Bearly Awake Coffee Co. -> Bearly Awake Coffee Co. (exact_url)
 - Bella Luna Pizzeria -> Bella Luna Pizzeria (exact_normalized)
 - Best Western Rambler -> Best Western Rambler (exact_url)
 - Best Western Rambler -> Best Western Rambler (exact_url)
 - Big "R" -> Big R (exact_normalized)
 - Big R -> Big R (exact_normalized)
-- Big R -> Big R (exact_url)
-- Bob & Earl's -> Bob & Earl's (exact_normalized)
-- Book Nook -> Book Nook (exact_normalized)
-- Boom Noodles (Food Court at the Marketplace) -> Boom Noodles (Food Court at the Marketplace) (exact_normalized)
-- Brick City Tattoo -> Brick City Tattoo (exact_normalized)
-- Brick Road Bakery -> Brick Road Bakery (exact_normalized)
-- Brick Road Bakery -> Brick Road Bakery (exact_normalized)
-- Bud Hut -> Bud Hut (exact_url)
-- Budget Host & Summit RV Park -> Budget Host & Summit RV Park (exact_normalized)
-- C Cubed Training -> C Cubed Training (exact_url)
-- C1B True Organics -> C1B True Organics (exact_url)
-- Canna City -> Canna City (exact_url)
-- Cannaco -> Cannaco (exact_url)
-- Capture Colorado -> Capture Colorado (exact_normalized)
-- Casa de Pajaros -> Casa de Pajaros (exact_url)
-- Casa de Pajaros -> Casa de Pajaros (exact_normalized)
-- Cawthon RV Park & Motel -> Cawthon RV Park & Motel (exact_normalized)
