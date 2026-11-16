@@ -1,28 +1,29 @@
 # Directory Online Connection Review
 
-Generated: 2026-11-02T23:02:25.746533+00:00
+Generated: 2026-11-16T23:41:17.513513+00:00
 
 This review distinguishes a first-party website from a hosted directory, tourism page, social profile, email, phone, street address, or missing contact route. An HTTP response does not prove that an organization is active or that page content is current.
 
 ## Summary
 
-- Published directory entries reviewed: 1362
-- First-party website candidates: 195
-- Live first-party business links eligible for the public animation: 129
-- Live direct websites: 171
+- Published directory entries reviewed: 1371
+- First-party website candidates: 206
+- Live first-party business links eligible for the public animation: 137
+- Live direct websites: 181
 - Direct website links needing a normal-browser check: 23
-- Live hosted profiles or directory pages: 1034
+- Live hosted profiles or directory pages: 1033
 - Hosted links needing a normal-browser check: 2
 - Entries with contact details but no URL: 74
 - Entries with no online or direct contact path: 58
-- Unique URLs checked: 589
-- Confirmed broken URLs: 1
-- Script-access limits such as 403 or TLS errors: 12
+- Unique URLs checked: 604
+- Confirmed broken URLs: 2
+- Script-access limits such as 403 or TLS errors: 13
 
 The companion CSV contains all entries and their assigned connection group.
 
 ## Confirmed Broken Listing URLs
 
+- Main Street LIVE (Trinidad): https://www.mainstreetlive.org/
 - Sammie's Motel & RV Park (La Veta): https://www.sammiescampground.com/
 
 ## Listings Without Any URL
