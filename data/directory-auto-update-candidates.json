@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-09",
+  "generated_at": "2026-11-16",
   "publication_note": "Automatically refreshed from watched public directory and tourism pages. Treat these as candidate updates, not official directory additions, until a human confirms the linked source.",
   "summary": {
     "sources_watched": 20,
     "pages_checked": 36,
     "pages_failed": 4,
-    "already_represented": 323,
-    "possible_new_leads": 82,
-    "priority_new_leads": 12,
-    "low_confidence_text_leads": 70
+    "already_represented": 326,
+    "possible_new_leads": 86,
+    "priority_new_leads": 15,
+    "low_confidence_text_leads": 71
   },
   "watched_sources": [
     {
@@ -151,7 +151,7 @@
       "source_role": "Event spots, community calendar, event submission, visitor-facing activities",
       "why_watch": "Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.",
       "pages_checked": 2,
-      "possible_new_leads": 8,
+      "possible_new_leads": 9,
       "priority_new_leads": 0
     },
     {
@@ -184,8 +184,8 @@
       "source_role": "Red River businesses, lodging, food, wellness, and member contact paths",
       "why_watch": "Current chamber profiles link to individual Red River businesses; review each town before importing because some members serve nearby areas.",
       "pages_checked": 1,
-      "possible_new_leads": 0,
-      "priority_new_leads": 0
+      "possible_new_leads": 3,
+      "priority_new_leads": 3
     },
     {
       "id": "regional-el-raton-media-works-businesses",
@@ -233,6 +233,39 @@
     }
   ],
   "priority_new_leads": [
+    {
+      "name": "Edelweiss Condominiums Red River, NM",
+      "county": "Colfax",
+      "state": "NM",
+      "source_title": "Red River Chamber Member Spotlights",
+      "source_type": "Chamber business profiles",
+      "source_page": "https://redriverchamber.org/business-listing/",
+      "listing_url": "https://redriverchamber.org/2026-member-spotlight-edelweiss-condominiums-red-river-new-mexico-usa/",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Red River Community House",
+      "county": "Colfax",
+      "state": "NM",
+      "source_title": "Red River Chamber Member Spotlights",
+      "source_type": "Chamber business profiles",
+      "source_page": "https://redriverchamber.org/business-listing/",
+      "listing_url": "https://redriverchamber.org/2026-member-spotlight-red-river-community-house/",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
+    {
+      "name": "The Lucky District",
+      "county": "Colfax",
+      "state": "NM",
+      "source_title": "Red River Chamber Member Spotlights",
+      "source_type": "Chamber business profiles",
+      "source_page": "https://redriverchamber.org/business-listing/",
+      "listing_url": "https://redriverchamber.org/2026-member-spotlight-the-lucky-district/",
+      "evidence_type": "linked_text",
+      "confidence": "medium-high"
+    },
     {
       "name": "Cuchara Mountain Trail Ride - Guided Horseback Rides",
       "county": "Huerfano",
@@ -577,6 +610,17 @@
       "confidence": "low"
     },
     {
+      "name": "2nd Annual Turkey Walk",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
       "name": "82ND GARDNER CHUCKWAGON DINNER",
       "county": "Huerfano",
       "state": "CO",
@@ -654,17 +698,6 @@
       "confidence": "low"
     },
     {
-      "name": "Kellen Goode Live at the Stokehouse!",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
       "name": "La Veta Flower Company",
       "county": "Huerfano",
       "state": "CO",
@@ -688,6 +721,17 @@
     },
     {
       "name": "Mason Davis Live at the Stokehouse!",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "Max Gomez",
       "county": "Huerfano",
       "state": "CO",
       "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
@@ -727,17 +771,6 @@
       "source_type": "Municipal business directory",
       "source_page": "https://townoflaveta-co.gov/business-directory/",
       "listing_url": "https://townoflaveta-co.gov/business-directory/",
-      "evidence_type": "text_listing_block",
-      "confidence": "low"
-    },
-    {
-      "name": "Museum of Friends Fifth Biennial Gala",
-      "county": "Huerfano",
-      "state": "CO",
-      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-      "source_type": "Tourism event calendar and submission source",
-      "source_page": "https://spanishpeakscountry.com/spc-events/",
-      "listing_url": "https://spanishpeakscountry.com/spc-events/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },
@@ -815,6 +848,17 @@
       "source_type": "Chamber member directory",
       "source_page": "https://www.chamber.huerfano.org/membership-directory",
       "listing_url": "https://www.chamber.huerfano.org/membership-directory",
+      "evidence_type": "text_listing_block",
+      "confidence": "low"
+    },
+    {
+      "name": "The Rifters",
+      "county": "Huerfano",
+      "state": "CO",
+      "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+      "source_type": "Tourism event calendar and submission source",
+      "source_page": "https://spanishpeakscountry.com/spc-events/",
+      "listing_url": "https://spanishpeakscountry.com/spc-events/",
       "evidence_type": "text_listing_block",
       "confidence": "low"
     },

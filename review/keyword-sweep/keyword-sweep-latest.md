@@ -1,6 +1,6 @@
 # Listing Keyword Sweep
 
-Generated: 2026-11-09
+Generated: 2026-11-16
 
 This is a review queue. Source-page terms improve directory search only after the generated index change is reviewed and merged.
 
@@ -11,8 +11,8 @@ This is a review queue. Source-page terms improve directory search only after th
 - Distinct source URLs: 426
 - URLs selected this run: 120
 - URLs checked: 120
-- URL checks needing attention: 44
-- Listing keyword sets changed: 1
+- URL checks needing attention: 34
+- Listing keyword sets changed: 0
 - Source-derived keyword sets changed: 1
 - Entries with blocked inferences: 20
 - Misleading inferred keywords blocked: 22
@@ -20,20 +20,14 @@ This is a review queue. Source-page terms improve directory search only after th
 ## Status
 
 - checked: 322
-- checked_no_name_match: 955
+- checked_no_name_match: 949
 - fetch_error: 28
 - no_source: 173
-- source_unavailable: 29
+- source_unavailable: 35
 
 ## Proposed Keyword Changes
 
-### Lindsey Living (Angel Fire, Colfax)
-
-- Status: checked
-- Add: real estate
-- Remove: None
-- Public page: https://visitangelfirenm.com/listing/lindsey-living/
-
+No keyword changes were proposed.
 
 ## Blocked Inferences
 
@@ -64,22 +58,12 @@ This is a review queue. Source-page terms improve directory search only after th
 - https://aguilarcountrycottages.com: <urlopen error [Errno -2] Name or service not known>
 - https://aguilarstation.com: <urlopen error [Errno -2] Name or service not known>
 - https://anchormotelandcottages.com/: <urlopen error [Errno -5] No address associated with hostname>
-- https://angelfirechamber.org/business/aspen-springs-at-angel-fire/: HTTP 200
-- https://angelfirechamber.org/business/brenda-johnsons-property-management/: HTTP 200
-- https://angelfirechamber.org/business/category/artists-galleries-studios/: HTTP 200
-- https://angelfirechamber.org/business/el-jefe/: HTTP 200
-- https://angelfirechamber.org/business/elements/: HTTP 200
-- https://angelfirechamber.org/business/kwk-events/: HTTP 200
-- https://angelfirechamber.org/business/mikuna-grill/: HTTP 200
-- https://angelfirechamber.org/business/morning-star-restaurant/: HTTP 200
-- https://angelfirechamber.org/business/par-grill/: HTTP 200
-- https://angelfirechamber.org/business/ponce-de-leon-creations/: HTTP 200
-- https://angelfirechamber.org/business/snowball-lodge-llc/: HTTP 200
-- https://angelfirechamber.org/business/taos-mountain-cabinets-and-doors/: HTTP 200
-- https://angelfirechamber.org/business/the-lift-cafe-market/: HTTP 200
-- https://angelfirechamber.org/business/the-trailhead-ski-shop/: HTTP 200
-- https://angelfirechamber.org/business/the-village-haus/: HTTP 200
-- https://angelfirechamber.org/business/village-ski-shop-ski-rentals/: HTTP 200
+- https://angelfirechamber.org/business/dons-flooring-window-covering-inc/: HTTP 200
+- https://angelfirechamber.org/business/resort-properties-of-angel-fire/: HTTP 200
+- https://angelfirechamber.org/business/subway/: HTTP 200
+- https://angelfirechamber.org/business/summit-haus/: HTTP 200
+- https://angelfirechamber.org/business/the-lodge-at-angel-fire-resort/: HTTP 200
+- https://angelfirechamber.org/business/winter-sports/: HTTP 200
 - https://boom-noodles.com: HTTP 404
 - https://c1btrueorganics.com/: <urlopen error [Errno -5] No address associated with hostname>
 - https://carlswansongallery.com: <urlopen error [Errno -2] Name or service not known>

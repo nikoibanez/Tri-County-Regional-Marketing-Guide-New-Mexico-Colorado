@@ -1,6 +1,6 @@
 # Update Source Audit
 
-Generated: 2026-11-09
+Generated: 2026-11-16
 
 This report separates confirmed link failures from pages that merely block or confuse scripted checks.
 
@@ -8,7 +8,7 @@ This report separates confirmed link failures from pages that merely block or co
 
 - Records checked: 178
 - Web sources checked: 177
-- Confirmed broken or missing: 0
+- Confirmed broken or missing: 3
 - Normal-browser confirmation required: 0
 - Script-access limitations (not broken): 22
 - Offline field-check records: 1
@@ -17,14 +17,17 @@ This report separates confirmed link failures from pages that merely block or co
 ## Status Counts
 
 - access_blocked: 21
+- broken: 3
 - field_check: 1
-- ok: 142
-- redirect: 13
+- ok: 135
+- redirect: 17
 - tls_error: 1
 
 ## Confirmed Broken Or Missing
 
-No checked web source is confirmed broken or missing.
+- [Main Street LIVE Events](https://www.mainstreetlive.org/home) - Las Animas; events; broken; HTTP Error 404: Not Found
+- [Main Street LIVE](https://www.mainstreetlive.org/) - Trinidad / Las Animas; events; broken; HTTP Error 404: Not Found
+- [Main Street LIVE 2026 Calendar](https://www.mainstreetlive.org/2026-calendar) - Trinidad / Las Animas; events; broken; HTTP Error 404: Not Found
 
 ## Normal-Browser Confirmation Required
 

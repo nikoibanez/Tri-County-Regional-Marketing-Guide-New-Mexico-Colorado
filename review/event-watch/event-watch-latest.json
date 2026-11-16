@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T23:46:40+00:00",
+  "generated_at": "2026-11-16T23:44:32+00:00",
   "review_policy": "Automation may report page changes and candidate event links. A person must review dates, locations, costs, submission rules, and public wording before canonical event data changes.",
   "summary": {
     "sources": 15,
@@ -7,18 +7,20 @@
     "changed": 8,
     "new_baselines": 0,
     "candidate_links": 13,
-    "confirmed_broken": 0,
+    "confirmed_broken": 1,
     "script_access_limited": 0,
-    "check_failures": 0,
+    "check_failures": 1,
     "categories": {
       "events-calendars": 15
     },
     "status_counts": {
-      "ok": 15
+      "broken": 1,
+      "ok": 14
     },
     "change_counts": {
       "changed": 8,
-      "unchanged": 7
+      "check_failed": 1,
+      "unchanged": 6
     }
   },
   "results": [
@@ -48,7 +50,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.exploreraton.com/events",
-        "elapsed_ms": 265,
+        "elapsed_ms": 97,
         "content_hash": "0e68fa90eb95df45bf058c2dcffa880ef571f5eeb585eb78576a465519bf8659",
         "text_length": 3094,
         "link_count": 48,
@@ -111,10 +113,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://ratonmainstreet.org/events/",
-        "elapsed_ms": 1043,
-        "content_hash": "1741bff72d8cf9f6aab0a79c3ff133a496fe05c6113c2691d2e80e5f0b5ae774",
-        "text_length": 841,
-        "link_count": 25,
+        "elapsed_ms": 6639,
+        "content_hash": "609ac8dd5392c0056894f1e893b7e589f0b0182f83197400999657a6a198dd95",
+        "text_length": 801,
+        "link_count": 23,
         "candidates": [
           {
             "title": "Festival of Lights 2026",
@@ -127,7 +129,7 @@
         ],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "1741bff72d8cf9f6aab0a79c3ff133a496fe05c6113c2691d2e80e5f0b5ae774"
     },
     {
@@ -156,10 +158,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://krtnradio.com/calendar/",
-        "elapsed_ms": 5477,
-        "content_hash": "3cc4a4022026fbdd7e30782dce556a35fc3287780c9a34601a2f76dcac087f1b",
-        "text_length": 7244,
-        "link_count": 93,
+        "elapsed_ms": 2658,
+        "content_hash": "2a3ed214ea45178a116ba4d60aaa6bd6ce5f94eab88f5af88eed94b958c66930",
+        "text_length": 7324,
+        "link_count": 99,
         "candidates": [
           {
             "title": "The Events Calendar",
@@ -173,7 +175,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "c0f82df7c13c7388c8fae97bcdef6463dac7ab9f56d0522bba35fa1c09b12ddc"
+      "previous_hash": "3cc4a4022026fbdd7e30782dce556a35fc3287780c9a34601a2f76dcac087f1b"
     },
     {
       "source": {
@@ -201,7 +203,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://theratonian.com/calendar/",
-        "elapsed_ms": 552,
+        "elapsed_ms": 160,
         "content_hash": "6fc12a0b32c8426a8aeefbf937ae6ad984614bf598f160eb20ddd702680594a8",
         "text_length": 305,
         "link_count": 2,
@@ -237,15 +239,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://visitangelfirenm.com/list-your-event/",
-        "elapsed_ms": 1041,
-        "content_hash": "e516448f63c2a2a647647361e8b3178ff6976e5eb7d73078b18c35f3223a4cac",
-        "text_length": 3223,
+        "elapsed_ms": 939,
+        "content_hash": "bb54b439603b46de1e43a3e1796ce8b9c0068967dafcd4979d8702611d1803ba",
+        "text_length": 3220,
         "link_count": 68,
         "candidates": [],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "4f88b9d494283f28f3bcf618dda831ac68f48981ffc24f2f6cede0ba3596f1d1"
+      "previous_hash": "e516448f63c2a2a647647361e8b3178ff6976e5eb7d73078b18c35f3223a4cac"
     },
     {
       "source": {
@@ -273,8 +275,8 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
-        "elapsed_ms": 210,
-        "content_hash": "3888c87fdb755aaf3050cc4fce43ce1bcf3c9c0a8587fb9adcd3507752137fa7",
+        "elapsed_ms": 2016,
+        "content_hash": "2b0468e6d1a63a0e042c6c418cc420164228cd420066f19df86035430d958c4c",
         "text_length": 5670,
         "link_count": 95,
         "candidates": [
@@ -290,7 +292,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "0d56b931140137a600ed3013c82564d2627381fcf7cdbad70feac6ca3b36cdbf"
+      "previous_hash": "3888c87fdb755aaf3050cc4fce43ce1bcf3c9c0a8587fb9adcd3507752137fa7"
     },
     {
       "source": {
@@ -318,15 +320,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://trinidadpubliclibrary.org/events/",
-        "elapsed_ms": 338,
-        "content_hash": "56baa64c4a8e05d8655b53ffb6d29eb290107b150056e7354bd241ab7cefa17a",
-        "text_length": 5991,
-        "link_count": 50,
+        "elapsed_ms": 306,
+        "content_hash": "812cfd63a4b482b2452f6049de8776118eb2d1c97c41a5c7a774de9e1f9caa4b",
+        "text_length": 6583,
+        "link_count": 51,
         "candidates": [],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "44c358e09981c9c4850766684fd3a8ba0160917c2bf1e2068c374765ebc30ae4"
+      "previous_hash": "56baa64c4a8e05d8655b53ffb6d29eb290107b150056e7354bd241ab7cefa17a"
     },
     {
       "source": {
@@ -354,15 +356,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.trinidadcreativedistrict.org/trinidad-creative-district-events",
-        "elapsed_ms": 142,
+        "elapsed_ms": 168,
         "content_hash": "bbb43e1b92da7cace75b06c712385f5178c21cc8454e6adffe5e063ed6827add",
         "text_length": 1548,
         "link_count": 25,
         "candidates": [],
         "error": ""
       },
-      "change_status": "changed",
-      "previous_hash": "ca3974127ac21025f67c44eeae74ab6348148fdfcf46afe93277eb7c0b0aed09"
+      "change_status": "unchanged",
+      "previous_hash": "bbb43e1b92da7cace75b06c712385f5178c21cc8454e6adffe5e063ed6827add"
     },
     {
       "source": {
@@ -387,17 +389,13 @@
         ]
       },
       "check": {
-        "status": "ok",
-        "status_code": 200,
+        "status": "broken",
+        "status_code": 404,
         "final_url": "https://www.mainstreetlive.org/home",
-        "elapsed_ms": 124,
-        "content_hash": "4c19f332b383fbc5d5b989ed348e516c78e9789de6356bc30ff34ec771a268a9",
-        "text_length": 1272,
-        "link_count": 34,
-        "candidates": [],
-        "error": ""
+        "error": "HTTP Error 404: Not Found",
+        "candidates": []
       },
-      "change_status": "unchanged",
+      "change_status": "check_failed",
       "previous_hash": "4c19f332b383fbc5d5b989ed348e516c78e9789de6356bc30ff34ec771a268a9"
     },
     {
@@ -426,7 +424,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://extension.colostate.edu/las-animas/events/",
-        "elapsed_ms": 91,
+        "elapsed_ms": 76,
         "content_hash": "bf7768f01166727caa18d9cc5f502841f7e20ae18af6f1b543d36d3bb41c5e74",
         "text_length": 674,
         "link_count": 33,
@@ -462,10 +460,10 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://spanishpeakscountry.com/spc-events/",
-        "elapsed_ms": 159,
-        "content_hash": "cf8de49f7437e22f04affdc7e2ea20dd33ed25f544b1021aea762da1ae182152",
-        "text_length": 4289,
-        "link_count": 86,
+        "elapsed_ms": 84,
+        "content_hash": "375eb367d9cc5c17812aca99140b4972df648460dd0ea68bde48baf93ed831d9",
+        "text_length": 4498,
+        "link_count": 87,
         "candidates": [
           {
             "title": "Parade of Lights",
@@ -495,7 +493,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "f0e963ae31b4402e969504b5e43cb4cbdec0974f75304d19eee6d772330de37a"
+      "previous_hash": "cf8de49f7437e22f04affdc7e2ea20dd33ed25f544b1021aea762da1ae182152"
     },
     {
       "source": {
@@ -523,7 +521,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.chamber.huerfano.org/submit-an-event",
-        "elapsed_ms": 204,
+        "elapsed_ms": 366,
         "content_hash": "9f3f6c4a4b1781852d6d72c5f425818960d752ff1fef3c2ea11ff89d6e7c1d5d",
         "text_length": 862,
         "link_count": 33,
@@ -559,14 +557,22 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://huerfano.us/events/",
-        "elapsed_ms": 814,
-        "content_hash": "1174bee690ac54ba7f76a79c452d5cdceb69319453cd54721b4613209e27f226",
-        "text_length": 5916,
+        "elapsed_ms": 1069,
+        "content_hash": "383d1b88f5a502b95b1cbebac1d7a9184799a18135a225bdbf2a76e0fff2a211",
+        "text_length": 5669,
         "link_count": 123,
         "candidates": [
           {
-            "title": "Public Works Workshop",
-            "url": "https://huerfano.us/event/public-works-workshop-18/",
+            "title": "Human Services Workshop",
+            "url": "https://huerfano.us/event/human-services-workshop-11/",
+            "score": 4,
+            "matched_terms": [
+              "workshop"
+            ]
+          },
+          {
+            "title": "Joint Budget Workshop with Las Animas County",
+            "url": "https://huerfano.us/event/joint-budget-workshop-with-las-animas-county/",
             "score": 4,
             "matched_terms": [
               "workshop"
@@ -584,7 +590,7 @@
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "4e3950af852ebadd2fc01c99133b85f616d18695f58b21beef617aa08e641f8a"
+      "previous_hash": "1174bee690ac54ba7f76a79c452d5cdceb69319453cd54721b4613209e27f226"
     },
     {
       "source": {
@@ -612,25 +618,15 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://lvpl.org/full-calendar/",
-        "elapsed_ms": 1307,
-        "content_hash": "99a3ae753197345b7d717eeca49f347bfd50f4e253cb00bbb585a371f0009786",
-        "text_length": 3166,
+        "elapsed_ms": 1314,
+        "content_hash": "ddc9b8edc832258b42cd87f51cefe034e187876f787879029a0b44b7fd6cc344",
+        "text_length": 3406,
         "link_count": 130,
-        "candidates": [
-          {
-            "title": "Theatre Games Workshop at the Spanish Peaks Library",
-            "url": "https://lvpl.org/events/theatre-games-workshop-at-the-spanish-peaks-library-2/",
-            "score": 6,
-            "matched_terms": [
-              "library",
-              "workshop"
-            ]
-          }
-        ],
+        "candidates": [],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "c7391f40aabfff7a8067efb2a1df7bf850273dea0c6d0d62bd2a28f84207b1d7"
+      "previous_hash": "99a3ae753197345b7d717eeca49f347bfd50f4e253cb00bbb585a371f0009786"
     },
     {
       "source": {
@@ -658,7 +654,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.lavetacreativedistrict.org/festivals-and-signature-events",
-        "elapsed_ms": 298,
+        "elapsed_ms": 205,
         "content_hash": "89e1855bda6969822ef3c6cff3df61f99a28fc48c294feaaf08005ef5205a916",
         "text_length": 4311,
         "link_count": 28,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09",
+  "generated_at": "2026-11-16",
   "index_path": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/listing-keyword-index.json",
   "network_enabled": true,
   "summary": {
@@ -8,33 +8,20 @@
     "distinct_source_urls": 426,
     "urls_selected": 120,
     "urls_checked": 120,
-    "urls_failed": 44,
-    "entries_changed": 1,
+    "urls_failed": 34,
+    "entries_changed": 0,
     "source_keyword_changes": 1,
     "entries_with_blocked_inferences": 20,
     "blocked_inference_count": 22,
     "status_counts": {
       "checked": 322,
-      "checked_no_name_match": 955,
+      "checked_no_name_match": 949,
       "fetch_error": 28,
       "no_source": 173,
-      "source_unavailable": 29
+      "source_unavailable": 35
     }
   },
-  "changes": [
-    {
-      "id": "travel-guide-lindsey-living-angel-fire-colfax",
-      "name": "Lindsey Living",
-      "county": "Colfax",
-      "town": "Angel Fire",
-      "added": [
-        "real estate"
-      ],
-      "removed": [],
-      "status": "checked",
-      "source_url": "https://visitangelfirenm.com/listing/lindsey-living/"
-    }
-  ],
+  "changes": [],
   "blocked_inferences": [
     {
       "id": "travel-guide-angel-fire-ebikes-angel-fire-colfax",
@@ -266,97 +253,37 @@
       "error": "<urlopen error [Errno -5] No address associated with hostname>"
     },
     {
-      "url": "https://angelfirechamber.org/business/aspen-springs-at-angel-fire/",
+      "url": "https://angelfirechamber.org/business/dons-flooring-window-covering-inc/",
       "status": "source_unavailable",
       "status_code": 200,
       "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
     },
     {
-      "url": "https://angelfirechamber.org/business/brenda-johnsons-property-management/",
+      "url": "https://angelfirechamber.org/business/resort-properties-of-angel-fire/",
       "status": "source_unavailable",
       "status_code": 200,
       "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
     },
     {
-      "url": "https://angelfirechamber.org/business/category/artists-galleries-studios/",
+      "url": "https://angelfirechamber.org/business/subway/",
       "status": "source_unavailable",
       "status_code": 200,
       "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
     },
     {
-      "url": "https://angelfirechamber.org/business/el-jefe/",
+      "url": "https://angelfirechamber.org/business/summit-haus/",
       "status": "source_unavailable",
       "status_code": 200,
       "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
     },
     {
-      "url": "https://angelfirechamber.org/business/elements/",
+      "url": "https://angelfirechamber.org/business/the-lodge-at-angel-fire-resort/",
       "status": "source_unavailable",
       "status_code": 200,
       "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
     },
     {
-      "url": "https://angelfirechamber.org/business/kwk-events/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
-    },
-    {
-      "url": "https://angelfirechamber.org/business/mikuna-grill/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
-    },
-    {
-      "url": "https://angelfirechamber.org/business/morning-star-restaurant/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
-    },
-    {
-      "url": "https://angelfirechamber.org/business/par-grill/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
-    },
-    {
-      "url": "https://angelfirechamber.org/business/ponce-de-leon-creations/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
-    },
-    {
-      "url": "https://angelfirechamber.org/business/snowball-lodge-llc/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
-    },
-    {
-      "url": "https://angelfirechamber.org/business/taos-mountain-cabinets-and-doors/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
-    },
-    {
-      "url": "https://angelfirechamber.org/business/the-lift-cafe-market/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
-    },
-    {
-      "url": "https://angelfirechamber.org/business/the-trailhead-ski-shop/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
-    },
-    {
-      "url": "https://angelfirechamber.org/business/the-village-haus/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
-    },
-    {
-      "url": "https://angelfirechamber.org/business/village-ski-shop-ski-rentals/",
+      "url": "https://angelfirechamber.org/business/winter-sports/",
       "status": "source_unavailable",
       "status_code": 200,
       "error": "Publisher page shows a maintenance or dissolution notice, not a listing."

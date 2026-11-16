@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09",
+  "generated_at": "2026-11-16",
   "config": "data/directory-watch-sources.json",
   "directory_files": [
     "data/directory_of_absolutely_everything.csv",
@@ -10,11 +10,11 @@
     "sources": 20,
     "pages_checked": 36,
     "pages_failed": 4,
-    "candidates": 405,
-    "already_in_guide": 323,
-    "possible_new_leads": 82,
-    "priority_new_leads": 12,
-    "low_confidence_new_leads": 70
+    "candidates": 412,
+    "already_in_guide": 326,
+    "possible_new_leads": 86,
+    "priority_new_leads": 15,
+    "low_confidence_new_leads": 71
   },
   "results": [
     {
@@ -33,7 +33,7 @@
             "status_code": 403,
             "final_url": "https://www.raton.info/business_directory.html",
             "content_type": "",
-            "elapsed_ms": 275,
+            "elapsed_ms": 150,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -45,7 +45,7 @@
             "status_code": 403,
             "final_url": "https://www.raton.info/business-directory.html",
             "content_type": "",
-            "elapsed_ms": 81,
+            "elapsed_ms": 85,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -68,7 +68,7 @@
             "status_code": 200,
             "final_url": "https://visitangelfirenm.com/all-listings/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 305,
+            "elapsed_ms": 265,
             "error": ""
           },
           "candidates": [
@@ -398,7 +398,7 @@
             "status_code": 200,
             "final_url": "https://visitangelfirenm.com/dining/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 251,
+            "elapsed_ms": 232,
             "error": ""
           },
           "candidates": [
@@ -789,7 +789,7 @@
             "status_code": 200,
             "final_url": "https://visitangelfirenm.com/catering/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 901,
+            "elapsed_ms": 191,
             "error": ""
           },
           "candidates": [
@@ -921,7 +921,7 @@
             "status_code": 200,
             "final_url": "https://visitangelfirenm.com/shopping/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 271,
+            "elapsed_ms": 990,
             "error": ""
           },
           "candidates": [
@@ -1276,7 +1276,7 @@
             "status_code": 200,
             "final_url": "https://visitangelfirenm.com/stay/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 213,
+            "elapsed_ms": 152,
             "error": ""
           },
           "candidates": [
@@ -1336,7 +1336,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 353,
+            "elapsed_ms": 250,
             "error": ""
           },
           "candidates": []
@@ -1348,7 +1348,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/events",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 121,
+            "elapsed_ms": 182,
             "error": ""
           },
           "candidates": []
@@ -1360,7 +1360,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/blog",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 165,
+            "elapsed_ms": 1101,
             "error": ""
           },
           "candidates": []
@@ -1383,7 +1383,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/dine/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 242,
+            "elapsed_ms": 2293,
             "error": ""
           },
           "candidates": [
@@ -1756,7 +1756,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/stay/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1168,
+            "elapsed_ms": 2392,
             "error": ""
           },
           "candidates": [
@@ -2093,7 +2093,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/shop/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 171,
+            "elapsed_ms": 2330,
             "error": ""
           },
           "candidates": [
@@ -2466,7 +2466,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 154,
+            "elapsed_ms": 2269,
             "error": ""
           },
           "candidates": [
@@ -2562,7 +2562,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/upcoming-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 758,
+            "elapsed_ms": 1935,
             "error": ""
           },
           "candidates": [
@@ -2593,7 +2593,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 154,
+            "elapsed_ms": 2214,
             "error": ""
           },
           "candidates": [
@@ -2671,7 +2671,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/meetings-conventions/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 130,
+            "elapsed_ms": 2488,
             "error": ""
           },
           "candidates": [
@@ -2702,7 +2702,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/weddings/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 140,
+            "elapsed_ms": 1879,
             "error": ""
           },
           "candidates": [
@@ -2744,7 +2744,7 @@
             "status_code": 200,
             "final_url": "https://localstash.com/colorado/towns/trinidad-co",
             "content_type": "text/html; charset=utf-8",
-            "elapsed_ms": 590,
+            "elapsed_ms": 713,
             "error": ""
           },
           "candidates": [
@@ -3008,8 +3008,8 @@
             "ok": true,
             "status_code": 200,
             "final_url": "https://weekender.pub/",
-            "content_type": "text/html; charset=utf-8",
-            "elapsed_ms": 439,
+            "content_type": "text/html; charset=UTF-8",
+            "elapsed_ms": 248,
             "error": ""
           },
           "candidates": []
@@ -3032,7 +3032,7 @@
             "status_code": null,
             "final_url": "https://southerncoloradotourism.com/events/",
             "content_type": "",
-            "elapsed_ms": 18155,
+            "elapsed_ms": 18150,
             "error": "<urlopen error timed out>"
           },
           "candidates": []
@@ -3044,7 +3044,7 @@
             "status_code": null,
             "final_url": "https://southerncoloradotourism.com/",
             "content_type": "",
-            "elapsed_ms": 18162,
+            "elapsed_ms": 18121,
             "error": "<urlopen error timed out>"
           },
           "candidates": []
@@ -3067,7 +3067,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 159,
+            "elapsed_ms": 233,
             "error": ""
           },
           "candidates": [
@@ -4981,7 +4981,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory/categories/dining",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 76,
+            "elapsed_ms": 189,
             "error": ""
           },
           "candidates": [
@@ -5534,7 +5534,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory/categories/lodging",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 165,
+            "elapsed_ms": 188,
             "error": ""
           },
           "candidates": [
@@ -5943,7 +5943,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1076,
+            "elapsed_ms": 1308,
             "error": ""
           },
           "candidates": []
@@ -5966,13 +5966,13 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/spc-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 196,
+            "elapsed_ms": 203,
             "error": ""
           },
           "candidates": [
             {
-              "id": "museum-of-friends-42ed5bc304",
-              "name": "Museum of Friends",
+              "id": "lathrop-state-park-4d4329ea8d",
+              "name": "Lathrop State Park",
               "source_id": "huerfano-spanish-peaks-events",
               "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
               "county": "Huerfano",
@@ -5984,7 +5984,7 @@
               "confidence": "low",
               "priority_candidate": false,
               "match_status": "already_in_guide",
-              "matched_name": "Museum of Friends",
+              "matched_name": "Lathrop State Park",
               "match_type": "exact_normalized",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
@@ -6004,6 +6004,24 @@
               "match_status": "already_in_guide",
               "matched_name": "The Stokehouse",
               "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "2nd-annual-turkey-walk-a0f5e2f002",
+              "name": "2nd Annual Turkey Walk",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
@@ -6043,24 +6061,6 @@
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
-              "id": "kellen-goode-live-at-the-stokehouse-fa6031dafe",
-              "name": "Kellen Goode Live at the Stokehouse!",
-              "source_id": "huerfano-spanish-peaks-events",
-              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
-              "county": "Huerfano",
-              "state": "CO",
-              "source_type": "Tourism event calendar and submission source",
-              "source_page": "https://spanishpeakscountry.com/spc-events/",
-              "listing_url": "https://spanishpeakscountry.com/spc-events/",
-              "evidence_type": "text_listing_block",
-              "confidence": "low",
-              "priority_candidate": false,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
               "id": "mason-davis-live-at-the-stokehouse-f15f42edf5",
               "name": "Mason Davis Live at the Stokehouse!",
               "source_id": "huerfano-spanish-peaks-events",
@@ -6079,8 +6079,8 @@
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
-              "id": "museum-of-friends-fifth-biennial-gala-99b0285632",
-              "name": "Museum of Friends Fifth Biennial Gala",
+              "id": "max-gomez-abfad10ea7",
+              "name": "Max Gomez",
               "source_id": "huerfano-spanish-peaks-events",
               "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
               "county": "Huerfano",
@@ -6149,6 +6149,24 @@
               "matched_name": "",
               "match_type": "",
               "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "the-rifters-b82a53e611",
+              "name": "The Rifters",
+              "source_id": "huerfano-spanish-peaks-events",
+              "source_title": "Spanish Peaks Country Events and Submit-Event Routes",
+              "county": "Huerfano",
+              "state": "CO",
+              "source_type": "Tourism event calendar and submission source",
+              "source_page": "https://spanishpeakscountry.com/spc-events/",
+              "listing_url": "https://spanishpeakscountry.com/spc-events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
             }
           ]
         },
@@ -6159,7 +6177,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 252,
+            "elapsed_ms": 2291,
             "error": ""
           },
           "candidates": [
@@ -6219,7 +6237,7 @@
             "status_code": 200,
             "final_url": "https://townoflaveta-co.gov/business-directory/",
             "content_type": "text/html",
-            "elapsed_ms": 174,
+            "elapsed_ms": 202,
             "error": ""
           },
           "candidates": [
@@ -7269,7 +7287,7 @@
             "status_code": 200,
             "final_url": "https://www.chamber.huerfano.org/membership-directory",
             "content_type": "text/html;charset=utf-8",
-            "elapsed_ms": 821,
+            "elapsed_ms": 552,
             "error": ""
           },
           "candidates": [
@@ -7344,13 +7362,122 @@
           "url": "https://redriverchamber.org/business-listing/",
           "fetch": {
             "ok": true,
-            "status_code": 202,
+            "status_code": 200,
             "final_url": "https://redriverchamber.org/business-listing/",
-            "content_type": "text/html",
-            "elapsed_ms": 157,
+            "content_type": "text/html; charset=UTF-8",
+            "elapsed_ms": 1145,
             "error": ""
           },
-          "candidates": []
+          "candidates": [
+            {
+              "id": "bearly-awake-coffee-co-2fc444b3e8",
+              "name": "Bearly Awake Coffee Co.",
+              "source_id": "colfax-red-river-chamber-member-spotlights",
+              "source_title": "Red River Chamber Member Spotlights",
+              "county": "Colfax",
+              "state": "NM",
+              "source_type": "Chamber business profiles",
+              "source_page": "https://redriverchamber.org/business-listing/",
+              "listing_url": "https://redriverchamber.org/2026-member-spotlight-bearly-awake-coffee-co/",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "already_in_guide",
+              "matched_name": "Bearly Awake Coffee Co.",
+              "match_type": "exact_url",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "bobcat-pass-wilderness-adventures-f8d06fb266",
+              "name": "Bobcat Pass Wilderness Adventures",
+              "source_id": "colfax-red-river-chamber-member-spotlights",
+              "source_title": "Red River Chamber Member Spotlights",
+              "county": "Colfax",
+              "state": "NM",
+              "source_type": "Chamber business profiles",
+              "source_page": "https://redriverchamber.org/business-listing/",
+              "listing_url": "https://redriverchamber.org/2026-member-spotlight-bobcat-pass-wilderness-adventures/",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "already_in_guide",
+              "matched_name": "Bobcat Pass Wilderness Adventures",
+              "match_type": "exact_normalized",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "rio-colorado-cabins-6ae45a7a29",
+              "name": "Rio Colorado Cabins",
+              "source_id": "colfax-red-river-chamber-member-spotlights",
+              "source_title": "Red River Chamber Member Spotlights",
+              "county": "Colfax",
+              "state": "NM",
+              "source_type": "Chamber business profiles",
+              "source_page": "https://redriverchamber.org/business-listing/",
+              "listing_url": "https://redriverchamber.org/2026-member-spotlight-rio-colorado-cabins/",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "already_in_guide",
+              "matched_name": "Rio Colorado Cabins",
+              "match_type": "exact_url",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "edelweiss-condominiums-red-river-nm-99536b33d0",
+              "name": "Edelweiss Condominiums Red River, NM",
+              "source_id": "colfax-red-river-chamber-member-spotlights",
+              "source_title": "Red River Chamber Member Spotlights",
+              "county": "Colfax",
+              "state": "NM",
+              "source_type": "Chamber business profiles",
+              "source_page": "https://redriverchamber.org/business-listing/",
+              "listing_url": "https://redriverchamber.org/2026-member-spotlight-edelweiss-condominiums-red-river-new-mexico-usa/",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "red-river-community-house-aadbc3f6ad",
+              "name": "Red River Community House",
+              "source_id": "colfax-red-river-chamber-member-spotlights",
+              "source_title": "Red River Chamber Member Spotlights",
+              "county": "Colfax",
+              "state": "NM",
+              "source_type": "Chamber business profiles",
+              "source_page": "https://redriverchamber.org/business-listing/",
+              "listing_url": "https://redriverchamber.org/2026-member-spotlight-red-river-community-house/",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "the-lucky-district-9621c173ae",
+              "name": "The Lucky District",
+              "source_id": "colfax-red-river-chamber-member-spotlights",
+              "source_title": "Red River Chamber Member Spotlights",
+              "county": "Colfax",
+              "state": "NM",
+              "source_type": "Chamber business profiles",
+              "source_page": "https://redriverchamber.org/business-listing/",
+              "listing_url": "https://redriverchamber.org/2026-member-spotlight-the-lucky-district/",
+              "evidence_type": "linked_text",
+              "confidence": "medium-high",
+              "priority_candidate": true,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            }
+          ]
         }
       ]
     },
@@ -7370,7 +7497,7 @@
             "status_code": 200,
             "final_url": "https://www.elratonmediaworks.org/local-businesses",
             "content_type": "text/html;charset=utf-8",
-            "elapsed_ms": 501,
+            "elapsed_ms": 563,
             "error": ""
           },
           "candidates": [
@@ -7682,7 +7809,7 @@
             "status_code": 200,
             "final_url": "https://canyonsandplains.org/destination-item/las-animas-county/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2383,
+            "elapsed_ms": 2711,
             "error": ""
           },
           "candidates": [
@@ -7814,7 +7941,7 @@
             "status_code": 200,
             "final_url": "https://www.trinidadcf.org/organizations.html",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 258,
+            "elapsed_ms": 275,
             "error": ""
           },
           "candidates": []
@@ -7826,7 +7953,7 @@
             "status_code": 200,
             "final_url": "https://www.trinidadcf.org/education.html",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 229,
+            "elapsed_ms": 235,
             "error": ""
           },
           "candidates": []
@@ -7849,7 +7976,7 @@
             "status_code": 200,
             "final_url": "https://www.wheelhouseincubator.org/our-retailers",
             "content_type": "text/html;charset=utf-8",
-            "elapsed_ms": 616,
+            "elapsed_ms": 959,
             "error": ""
           },
           "candidates": [

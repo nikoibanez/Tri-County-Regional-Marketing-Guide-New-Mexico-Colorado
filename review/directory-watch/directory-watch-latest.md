@@ -1,6 +1,6 @@
 # Weekly Directory Query Check
 
-Generated: 2026-11-09
+Generated: 2026-11-16
 
 Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.
 
@@ -9,11 +9,11 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 - Sources watched: 20
 - Pages checked: 36
 - Pages failed: 4
-- Listing-like candidates found: 405
-- Already represented in guide: 323
-- Possible new leads: 82
-- Priority new leads: 12
-- Low-confidence text leads: 70
+- Listing-like candidates found: 412
+- Already represented in guide: 326
+- Possible new leads: 86
+- Priority new leads: 15
+- Low-confidence text leads: 71
 
 ## Watch Sources
 
@@ -139,7 +139,7 @@ Fetch issues:
 - Source type: Tourism event calendar and submission source
 - Why watch: Primary Huerfano event calendar and submit-event route for Walsenburg, La Veta, Cuchara, and surrounding communities.
 - Pages checked: 2
-- Possible new leads: 8
+- Possible new leads: 9
 - Priority new leads: 0
 
 ### Town of La Veta Business Directory
@@ -166,8 +166,8 @@ Fetch issues:
 - Source type: Chamber business profiles
 - Why watch: Current chamber profiles link to individual Red River businesses; review each town before importing because some members serve nearby areas.
 - Pages checked: 1
-- Possible new leads: 0
-- Priority new leads: 0
+- Possible new leads: 3
+- Priority new leads: 3
 
 ### El Raton Media Works Local Businesses
 
@@ -209,6 +209,9 @@ Fetch issues:
 
 These have linked listing-page evidence. They are still not publication-ready additions until a human confirms the source page.
 
+- [Edelweiss Condominiums Red River, NM](https://redriverchamber.org/2026-member-spotlight-edelweiss-condominiums-red-river-new-mexico-usa/) - Colfax; Red River Chamber Member Spotlights; evidence: linked_text; confidence: medium-high
+- [Red River Community House](https://redriverchamber.org/2026-member-spotlight-red-river-community-house/) - Colfax; Red River Chamber Member Spotlights; evidence: linked_text; confidence: medium-high
+- [The Lucky District](https://redriverchamber.org/2026-member-spotlight-the-lucky-district/) - Colfax; Red River Chamber Member Spotlights; evidence: linked_text; confidence: medium-high
 - [Cuchara Mountain Trail Ride - Guided Horseback Rides](https://spanishpeakscountry.com/business-directory/listing/cuchara-mountain-trail-ride) - Huerfano; Spanish Peaks Country Business Directory; evidence: linked_text; confidence: medium-high
 - [111 Park - Espresso Bar & Cafe](https://www.elratonmediaworks.org/businesses/111-park) - Regional; El Raton Media Works Local Businesses; evidence: linked_text; confidence: medium-high
 - [Blue Sky Ranch](https://www.elratonmediaworks.org/businesses/blue-sky-ranch) - Regional; El Raton Media Works Local Businesses; evidence: linked_text; confidence: medium-high
@@ -245,6 +248,7 @@ These came from directory page text rather than individual listing links. Review
 - Suite D - Colfax; Visit Angel Fire Dining and Catering; source page: https://visitangelfirenm.com/dining/
 - Within the Angel Fire Resort, 2nd floor - Colfax; Visit Angel Fire Dining and Catering; source page: https://visitangelfirenm.com/dining/
 - 123’s - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
+- 2nd Annual Turkey Walk - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - 82ND GARDNER CHUCKWAGON DINNER - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Annual Holiday Bell Ringing in La Veta - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Become a Member - Huerfano; Huerfano County Chamber Directory; source page: https://www.chamber.huerfano.org/membership-directory
@@ -252,14 +256,13 @@ These came from directory page text rather than individual listing links. Review
 - Danae's Diner - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Forms & Permits - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Frequently Asked Questions - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
-- Kellen Goode Live at the Stokehouse! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - La Veta Flower Company - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Marshal — Harold Willburn - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Mason Davis Live at the Stokehouse! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
+- Max Gomez - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Member Directory | Connect Locally — huerfano county chamber of commerce - Huerfano; Huerfano County Chamber Directory; source page: https://www.chamber.huerfano.org/membership-directory
 - Mountain Oasis Designs - Huerfano; Wheelhouse Incubator Retailers; source page: https://www.wheelhouseincubator.org/our-retailers
 - Mountain Time Physical Therapy - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
-- Museum of Friends Fifth Biennial Gala - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - MUSIC BY MIDI LIVE!!!! - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - November 28 - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Off-Grid Hub’s Kampot Kitchen Pepper - Huerfano; Wheelhouse Incubator Retailers; source page: https://www.wheelhouseincubator.org/our-retailers
@@ -267,6 +270,7 @@ These came from directory page text rather than individual listing links. Review
 - Parade of Lights - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - Shalawalla - Huerfano; Town of La Veta Business Directory; source page: https://townoflaveta-co.gov/business-directory/
 - Storage - Huerfano; Huerfano County Chamber Directory; source page: https://www.chamber.huerfano.org/membership-directory
+- The Rifters - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - (719) 846-9843 ext. 160 - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - An independent antiques stop on historic East Main Street. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Books & More - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/shop/
@@ -334,8 +338,8 @@ These came from directory page text rather than individual listing links. Review
 - Aspen Gold Laundromat -> Aspen Gold Laundromat (exact_normalized)
 - Ayers Family Fitness -> Ayers Family Fitness (exact_url)
 - Bachman & Associates Real Estate -> Bachman & Associates Real Estate (exact_normalized)
+- Bearly Awake Coffee Co. -> Bearly Awake Coffee Co. (exact_url)
 - Bella Luna Pizzeria -> Bella Luna Pizzeria (exact_normalized)
 - Best Western Rambler -> Best Western Rambler (exact_url)
 - Best Western Rambler -> Best Western Rambler (exact_url)
 - Big "R" -> Big R (exact_normalized)
-- Big R -> Big R (exact_normalized)

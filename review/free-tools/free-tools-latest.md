@@ -1,6 +1,6 @@
 # Monthly Free Tools Review
 
-Generated: 2026-11-09T23:47:10+00:00
+Generated: 2026-11-16T23:44:43+00:00
 
 This is a review queue. It does not change public pricing, eligibility, or tool recommendations automatically.
 
@@ -11,7 +11,7 @@ This is a review queue. It does not change public pricing, eligibility, or tool 
 - Pages checked successfully: 21
 - Changed pages: 0
 - New baselines: 0
-- Failed checks: 6 (5 automation-blocked)
+- Failed checks: 6 (6 automation-blocked)
 - Newly failed checks: 1
 - Tool claims currently missing an expected term: 1 (0 new)
 - Candidate links found: 63 (0 new)
@@ -22,9 +22,9 @@ This is a review queue. It does not change public pricing, eligibility, or tool 
 
 - Kind: tool
 - URL: https://inkscape.org/about/
-- Check: timeout / check_failed
+- Check: access_blocked / check_failed
 - Expected-term hits: none
-- Error: The read operation timed out
+- Error: HTTP Error 403: Forbidden
 
 ## Human Review
 

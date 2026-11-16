@@ -1,6 +1,6 @@
 # Tri-County Event Source Review
 
-Generated: 2026-11-09T23:46:40+00:00
+Generated: 2026-11-16T23:44:32+00:00
 
 This is a private candidate queue. A link or page change is not proof that a resource fits the guide or that an opportunity is open.
 
@@ -11,9 +11,9 @@ This is a private candidate queue. A link or page change is not proof that a res
 - Candidate links collected: 13
 - Changed pages: 8
 - New baselines: 0
-- Confirmed broken URLs: 0
+- Confirmed broken URLs: 1
 - Script-access limitations: 0
-- Other check failures: 0
+- Other check failures: 1
 
 ## Candidate Links
 
@@ -27,7 +27,7 @@ Category: events-calendars. Page status: unchanged.
 
 ### [Raton MainStreet Events](https://ratonmainstreet.org/events/)
 
-Category: events-calendars. Page status: unchanged.
+Category: events-calendars. Page status: changed.
 
 - [Festival of Lights 2026](https://ratonmainstreet.org/event/festival-of-lights-2026/) - matched: festival
 
@@ -55,14 +55,9 @@ Category: events-calendars. Page status: changed.
 
 Category: events-calendars. Page status: changed.
 
-- [Public Works Workshop](https://huerfano.us/event/public-works-workshop-18/) - matched: workshop
+- [Human Services Workshop](https://huerfano.us/event/human-services-workshop-11/) - matched: workshop
+- [Joint Budget Workshop with Las Animas County](https://huerfano.us/event/joint-budget-workshop-with-las-animas-county/) - matched: workshop
 - [Road and Bridge Workshop](https://huerfano.us/event/road-and-bridge-workshop-18/) - matched: workshop
-
-### [La Veta Public Library Full Calendar](https://lvpl.org/full-calendar/)
-
-Category: events-calendars. Page status: changed.
-
-- [Theatre Games Workshop at the Spanish Peaks Library](https://lvpl.org/events/theatre-games-workshop-at-the-spanish-peaks-library-2/) - matched: library, workshop
 
 ### [La Veta Creative District Festivals and Signature Events](https://www.lavetacreativedistrict.org/festivals-and-signature-events)
 
@@ -72,4 +67,4 @@ Category: events-calendars. Page status: unchanged.
 
 ## Check Problems
 
-No source check failed.
+- [Main Street LIVE Events](https://www.mainstreetlive.org/home) - broken; HTTP Error 404: Not Found
