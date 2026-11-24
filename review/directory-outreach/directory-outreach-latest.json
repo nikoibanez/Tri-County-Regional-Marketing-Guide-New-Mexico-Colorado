@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-04T11:53:25.300022+00:00",
-  "source": "C:\\Temp\\tri-county-raton-animation-palettes\\dist\\tri-county-netlify-guide-deep\\data\\guide-data.json",
+  "generated_at": "2026-11-24T02:06:26.254099+00:00",
+  "source": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/dist/tri-county-netlify-guide-deep/data/guide-data.json",
   "summary": {
     "entries": 1371,
     "directory_shortcuts": 120,
     "total_records_reviewed": 1491,
     "with_any_route": 749,
-    "with_listed_route": 308,
-    "with_ask_route": 709,
+    "with_listed_route": 295,
+    "with_ask_route": 689,
     "without_outreach_route": 622,
     "missing_structured_fields": 0,
     "shortcuts_with_any_route": 67,
     "shortcuts_with_listed_route": 29,
-    "shortcuts_with_ask_route": 58,
+    "shortcuts_with_ask_route": 57,
     "shortcuts_without_outreach_route": 53,
     "shortcuts_missing_structured_fields": 0,
     "channel_counts": {
@@ -42,15 +42,15 @@
       },
       "directory_listing": {
         "label": "Directory profiles and listings",
-        "listed": 306,
-        "ask": 16,
-        "not_indicated": 1049
+        "listed": 293,
+        "ask": 24,
+        "not_indicated": 1054
       },
       "event_calendar": {
         "label": "Event calendars",
         "listed": 1,
-        "ask": 120,
-        "not_indicated": 1250
+        "ask": 100,
+        "not_indicated": 1270
       },
       "social_cross_promotion": {
         "label": "Social cross-promotion",
@@ -61,8 +61,8 @@
       "newsletter_mailing_list": {
         "label": "Newsletters and mailing lists",
         "listed": 0,
-        "ask": 187,
-        "not_indicated": 1184
+        "ask": 167,
+        "not_indicated": 1204
       },
       "paid_digital_advertising": {
         "label": "Paid digital advertising",
@@ -79,14 +79,14 @@
       "sponsorship": {
         "label": "Sponsorships",
         "listed": 0,
-        "ask": 212,
-        "not_indicated": 1159
+        "ask": 192,
+        "not_indicated": 1179
       },
       "partner_cross_promotion": {
         "label": "Partner cross-promotion",
         "listed": 0,
-        "ask": 400,
-        "not_indicated": 971
+        "ask": 380,
+        "not_indicated": 991
       }
     },
     "shortcut_channel_counts": {
@@ -123,8 +123,8 @@
       "event_calendar": {
         "label": "Event calendars",
         "listed": 14,
-        "ask": 16,
-        "not_indicated": 90
+        "ask": 15,
+        "not_indicated": 91
       },
       "social_cross_promotion": {
         "label": "Social cross-promotion",
@@ -135,8 +135,8 @@
       "newsletter_mailing_list": {
         "label": "Newsletters and mailing lists",
         "listed": 0,
-        "ask": 37,
-        "not_indicated": 83
+        "ask": 36,
+        "not_indicated": 84
       },
       "paid_digital_advertising": {
         "label": "Paid digital advertising",
@@ -153,14 +153,14 @@
       "sponsorship": {
         "label": "Sponsorships",
         "listed": 0,
-        "ask": 25,
-        "not_indicated": 95
+        "ask": 24,
+        "not_indicated": 96
       },
       "partner_cross_promotion": {
         "label": "Partner cross-promotion",
         "listed": 0,
-        "ask": 54,
-        "not_indicated": 66
+        "ask": 53,
+        "not_indicated": 67
       }
     }
   },

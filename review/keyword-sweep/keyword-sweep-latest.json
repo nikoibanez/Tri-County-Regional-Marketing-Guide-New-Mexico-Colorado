@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-04",
-  "index_path": "C:\\Temp\\tri-county-raton-animation-palettes\\data\\listing-keyword-index.json",
+  "generated_at": "2026-11-24",
+  "index_path": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/listing-keyword-index.json",
   "network_enabled": true,
   "summary": {
     "rows": 1507,
@@ -8,17 +8,17 @@
     "distinct_source_urls": 426,
     "urls_selected": 120,
     "urls_checked": 120,
-    "urls_failed": 41,
+    "urls_failed": 39,
     "entries_changed": 0,
-    "source_keyword_changes": 1,
+    "source_keyword_changes": 0,
     "entries_with_blocked_inferences": 20,
     "blocked_inference_count": 22,
     "status_counts": {
-      "checked": 322,
-      "checked_no_name_match": 600,
-      "fetch_error": 400,
+      "checked": 320,
+      "checked_no_name_match": 943,
+      "fetch_error": 43,
       "no_source": 173,
-      "source_unavailable": 12
+      "source_unavailable": 28
     }
   },
   "changes": [],
@@ -226,79 +226,73 @@
       "source_url": "https://www.elratonmediaworks.org/businesses/zancana-bakery"
     }
   ],
-  "guardrail_path": "C:\\Temp\\tri-county-raton-animation-palettes\\data\\keyword-inference-guardrails.json",
+  "guardrail_path": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/keyword-inference-guardrails.json",
   "fetch_failures": [
     {
       "url": "https://221bgallery.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     {
       "url": "https://aguilarcountrycottages.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     {
       "url": "https://aguilarstation.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "url": "https://anchormotelandcottages.com/",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error [Errno -5] No address associated with hostname>"
     },
     {
       "url": "https://angelfirechamber.org/business/angel-fire-rv-resort/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "url": "https://angelfirechamber.org/business/bobcat-pass-wilderness-adventures/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "url": "https://angelfirechamber.org/business/category/dining/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "url": "https://angelfirechamber.org/business/category/gift-shops/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
-    },
-    {
-      "url": "https://angelfirechamber.org/business/laguna-vista/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
-    },
-    {
-      "url": "https://angelfirechamber.org/business/longhorn-lodge/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "url": "https://angelfirechamber.org/business/mountain-sports-of-angel-fire/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "url": "https://angelfirechamber.org/business/music-from-angel-fire/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "url": "https://angelfirechamber.org/business/road-runner-tours-ltd/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "url": "https://boom-noodles.com",
@@ -310,25 +304,25 @@
       "url": "https://c1btrueorganics.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -5] No address associated with hostname>"
     },
     {
       "url": "https://carlswansongallery.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     {
       "url": "https://cawthonpark.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1028)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1018)>"
     },
     {
       "url": "https://charlies-market.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1028)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1018)>"
     },
     {
       "url": "https://cityofwalsenburg.colorado.gov",
@@ -337,22 +331,28 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://craftycanarybrewery.com/",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error _ssl.c:1001: The handshake operation timed out>"
+    },
+    {
+      "url": "https://dougandlori.art/",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error _ssl.c:1001: The handshake operation timed out>"
+    },
+    {
       "url": "https://franciscofort.org",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028)>"
-    },
-    {
-      "url": "https://grill14.com",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
+      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1018)>"
     },
     {
       "url": "https://huerfanofair.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1018)>"
     },
     {
       "url": "https://la-h-health.colorado.gov",
@@ -370,13 +370,13 @@
       "url": "https://locations.arbys.com/nm/raton/415-clayton-hwy.html",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     {
       "url": "https://missionatthebell.com",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1028)>"
+      "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1018)>"
     },
     {
       "url": "https://oedit.colorado.gov/colorado-creative-districts",
@@ -394,19 +394,13 @@
       "url": "https://thelvesa.org/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     {
       "url": "https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html",
       "status": "fetch_error",
       "status_code": 404,
       "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "url": "https://visitangelfirenm.com/listing/lindsey-living/",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://www.bestwestern.com/en_US/book/hotels-in-walsenburg/best-western-rambler/propertyCode.06038.html",
@@ -418,13 +412,13 @@
       "url": "https://www.cannacity.us/home",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     {
       "url": "https://www.marketplacegallery.net",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     {
       "url": "https://www.mcdonalds.com/us/en-us/location/nm/raton/542-clayton-rd/6011.html?cid=RF:YXT:GMB::Clicks",
@@ -433,16 +427,28 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://www.sammiescampground.com/",
+      "url": "https://www.newmexico.org/frontier-trails-and-tracks/",
       "status": "fetch_error",
-      "status_code": 404,
-      "error": "HTTP Error 404: Not Found"
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.newmexico.org/places-to-visit/regions/northeast/northeast-region-birding-map/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://www.skinnysdinerandbar.com/",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     },
     {
       "url": "https://www.startupspace.app/resource?page=62",
@@ -454,25 +460,7 @@
       "url": "https://www.tabularasa.gallery",
       "status": "fetch_error",
       "status_code": null,
-      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
-    },
-    {
-      "url": "https://www.yellowpages.com/cimarron-nm",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://www.yellowpages.com/raton-nm/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://www.yellowpages.com/trinidad-co/business-listings/1",
-      "status": "fetch_error",
-      "status_code": 403,
-      "error": "HTTP Error 403: Forbidden"
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     }
   ]
 }

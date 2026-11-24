@@ -1,6 +1,6 @@
 # Directory Outreach Channel Review
 
-Generated: 2026-11-04T11:53:25.300022+00:00
+Generated: 2026-11-24T02:06:26.254099+00:00
 
 This report reviews every published directory listing for practical physical and digital outreach routes. A listed route means the attached listing information identifies that kind of channel. Ask first means the entity may be a sensible contact, but placement, sharing, price, eligibility, and acceptance are not promised.
 
@@ -10,8 +10,8 @@ This report reviews every published directory listing for practical physical and
 - Directory shortcuts reviewed: 120
 - Total directory records reviewed: 1491
 - Listings with at least one outreach route: 749
-- Listings with at least one listed route: 308
-- Listings with at least one ask-first route: 709
+- Listings with at least one listed route: 295
+- Listings with at least one ask-first route: 689
 - Listings without an identified outreach route: 622
 - Listings missing structured outreach fields: 0
 - Directory shortcuts with a listed or ask-first route: 67
@@ -26,14 +26,14 @@ This report reviews every published directory listing for practical physical and
 | Brochures and rack cards | 0 | 106 | 1265 |
 | Bulletin boards | 0 | 26 | 1345 |
 | Front-desk referrals | 0 | 288 | 1083 |
-| Directory profiles and listings | 306 | 16 | 1049 |
-| Event calendars | 1 | 120 | 1250 |
+| Directory profiles and listings | 293 | 24 | 1054 |
+| Event calendars | 1 | 100 | 1270 |
 | Social cross-promotion | 0 | 38 | 1333 |
-| Newsletters and mailing lists | 0 | 187 | 1184 |
+| Newsletters and mailing lists | 0 | 167 | 1204 |
 | Paid digital advertising | 1 | 58 | 1312 |
 | Media and editorial coverage | 2 | 58 | 1311 |
-| Sponsorships | 0 | 212 | 1159 |
-| Partner cross-promotion | 0 | 400 | 971 |
+| Sponsorships | 0 | 192 | 1179 |
+| Partner cross-promotion | 0 | 380 | 991 |
 
 ## Directory Shortcut Coverage
 
@@ -44,13 +44,13 @@ This report reviews every published directory listing for practical physical and
 | Bulletin boards | 0 | 0 | 120 |
 | Front-desk referrals | 0 | 0 | 120 |
 | Directory profiles and listings | 16 | 10 | 94 |
-| Event calendars | 14 | 16 | 90 |
+| Event calendars | 14 | 15 | 91 |
 | Social cross-promotion | 1 | 0 | 119 |
-| Newsletters and mailing lists | 0 | 37 | 83 |
+| Newsletters and mailing lists | 0 | 36 | 84 |
 | Paid digital advertising | 1 | 4 | 115 |
 | Media and editorial coverage | 2 | 4 | 114 |
-| Sponsorships | 0 | 25 | 95 |
-| Partner cross-promotion | 0 | 54 | 66 |
+| Sponsorships | 0 | 24 | 96 |
+| Partner cross-promotion | 0 | 53 | 67 |
 
 ## Listings Without An Identified Route
 
