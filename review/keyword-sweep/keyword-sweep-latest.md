@@ -1,6 +1,6 @@
 # Listing Keyword Sweep
 
-Generated: 2026-11-16
+Generated: 2026-11-24
 
 This is a review queue. Source-page terms improve directory search only after the generated index change is reviewed and merged.
 
@@ -11,19 +11,19 @@ This is a review queue. Source-page terms improve directory search only after th
 - Distinct source URLs: 426
 - URLs selected this run: 120
 - URLs checked: 120
-- URL checks needing attention: 34
+- URL checks needing attention: 39
 - Listing keyword sets changed: 0
-- Source-derived keyword sets changed: 1
+- Source-derived keyword sets changed: 0
 - Entries with blocked inferences: 20
 - Misleading inferred keywords blocked: 22
 
 ## Status
 
-- checked: 322
-- checked_no_name_match: 949
-- fetch_error: 28
+- checked: 320
+- checked_no_name_match: 943
+- fetch_error: 43
 - no_source: 173
-- source_unavailable: 35
+- source_unavailable: 28
 
 ## Proposed Keyword Changes
 
@@ -58,18 +58,21 @@ No keyword changes were proposed.
 - https://aguilarcountrycottages.com: <urlopen error [Errno -2] Name or service not known>
 - https://aguilarstation.com: <urlopen error [Errno -2] Name or service not known>
 - https://anchormotelandcottages.com/: <urlopen error [Errno -5] No address associated with hostname>
-- https://angelfirechamber.org/business/dons-flooring-window-covering-inc/: HTTP 200
-- https://angelfirechamber.org/business/resort-properties-of-angel-fire/: HTTP 200
-- https://angelfirechamber.org/business/subway/: HTTP 200
-- https://angelfirechamber.org/business/summit-haus/: HTTP 200
-- https://angelfirechamber.org/business/the-lodge-at-angel-fire-resort/: HTTP 200
-- https://angelfirechamber.org/business/winter-sports/: HTTP 200
+- https://angelfirechamber.org/business/angel-fire-rv-resort/: HTTP 404
+- https://angelfirechamber.org/business/bobcat-pass-wilderness-adventures/: HTTP 404
+- https://angelfirechamber.org/business/category/dining/: HTTP 404
+- https://angelfirechamber.org/business/category/gift-shops/: HTTP 404
+- https://angelfirechamber.org/business/mountain-sports-of-angel-fire/: HTTP 404
+- https://angelfirechamber.org/business/music-from-angel-fire/: HTTP 404
+- https://angelfirechamber.org/business/road-runner-tours-ltd/: HTTP 404
 - https://boom-noodles.com: HTTP 404
 - https://c1btrueorganics.com/: <urlopen error [Errno -5] No address associated with hostname>
 - https://carlswansongallery.com: <urlopen error [Errno -2] Name or service not known>
 - https://cawthonpark.com: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1018)>
 - https://charlies-market.com/: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1018)>
 - https://cityofwalsenburg.colorado.gov: HTTP 403
+- https://craftycanarybrewery.com/: <urlopen error _ssl.c:1001: The handshake operation timed out>
+- https://dougandlori.art/: <urlopen error _ssl.c:1001: The handshake operation timed out>
 - https://franciscofort.org: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1018)>
 - https://huerfanofair.com: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1018)>
 - https://la-h-health.colorado.gov: HTTP 403
@@ -84,7 +87,9 @@ No keyword changes were proposed.
 - https://www.cannacity.us/home: <urlopen error [Errno -2] Name or service not known>
 - https://www.marketplacegallery.net: <urlopen error [Errno -2] Name or service not known>
 - https://www.mcdonalds.com/us/en-us/location/nm/raton/542-clayton-rd/6011.html?cid=RF:YXT:GMB::Clicks: HTTP 403
-- https://www.sammiescampground.com/: HTTP 404
+- https://www.newmexico.org/frontier-trails-and-tracks/: HTTP 403
+- https://www.newmexico.org/places-to-visit/regions/northeast/northeast-region-birding-map/: HTTP 403
+- https://www.newmexico.org/places-to-visit/regions/northeast/raton/: HTTP 403
 - https://www.skinnysdinerandbar.com/: <urlopen error [Errno -2] Name or service not known>
 - https://www.startupspace.app/resource?page=62: HTTP 403
 - https://www.tabularasa.gallery: <urlopen error [Errno -2] Name or service not known>

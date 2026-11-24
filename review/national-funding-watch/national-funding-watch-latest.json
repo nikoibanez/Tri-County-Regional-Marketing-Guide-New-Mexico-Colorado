@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T23:43:13+00:00",
+  "generated_at": "2026-11-24T02:04:19+00:00",
   "review_policy": "These pages are monitored in five independent subject sweeps. Automation may flag new language or changed deadlines, but a person must confirm all public funding claims before publication.",
   "summary": {
     "sources": 36,
@@ -7,63 +7,64 @@
     "changed": 7,
     "new_baselines": 0,
     "confirmed_broken": 0,
-    "script_access_limited": 6,
-    "check_failures": 6,
+    "script_access_limited": 7,
+    "check_failures": 8,
     "status_counts": {
       "access_blocked": 5,
-      "ok": 30,
-      "tls_error": 1
+      "network_error": 1,
+      "ok": 28,
+      "tls_error": 2
     },
     "change_counts": {
       "changed": 7,
-      "check_failed": 6,
-      "unchanged": 23
+      "check_failed": 8,
+      "unchanged": 21
     },
     "sweep_counts": {
       "economic-development": {
         "label": "Economic development",
         "configured": 16,
         "checked": 16,
-        "ok": 12,
+        "ok": 11,
         "changed": 1,
         "new_baselines": 0,
-        "check_failures": 4
+        "check_failures": 5
       },
       "education": {
         "label": "Education",
         "configured": 23,
         "checked": 23,
-        "ok": 20,
-        "changed": 3,
+        "ok": 19,
+        "changed": 4,
         "new_baselines": 0,
-        "check_failures": 3
+        "check_failures": 4
       },
       "healthcare": {
         "label": "Healthcare",
         "configured": 18,
         "checked": 18,
-        "ok": 17,
+        "ok": 15,
         "changed": 4,
         "new_baselines": 0,
-        "check_failures": 1
+        "check_failures": 3
       },
       "nonprofits": {
         "label": "Nonprofits",
         "configured": 26,
         "checked": 26,
-        "ok": 22,
-        "changed": 6,
+        "ok": 20,
+        "changed": 5,
         "new_baselines": 0,
-        "check_failures": 4
+        "check_failures": 6
       },
       "arts-culture": {
         "label": "Arts & culture",
         "configured": 19,
         "checked": 19,
-        "ok": 17,
-        "changed": 6,
+        "ok": 16,
+        "changed": 4,
         "new_baselines": 0,
-        "check_failures": 2
+        "check_failures": 3
       }
     },
     "expired_dated_entries": 7
@@ -147,18 +148,12 @@
         "cadence_days": 7
       },
       "check": {
-        "status": "ok",
-        "status_code": 200,
+        "status": "tls_error",
+        "status_code": null,
         "final_url": "https://www.grants.gov/search-grants",
-        "elapsed_ms": 105,
-        "content_hash": "38914b2b42777149c8cb6a3532e06d61a0ef0edb5cf23f05c2f581fbe68a4bc1",
-        "text_length": 1685,
-        "signal_snippets": [
-          "Menu Search Site Content Help Register Login Search Search Grants Basic Search Criteria: Keyword(s): Opportunity Number: Assistance Listings: Search Opportunity Status: Forecasted (0) Posted (0) Closed (0) Archived (0) Funding Instrument Type: All Funding Instruments Eligibility: All Eligibilities Category: All Categories Agency: All Agencies Search Tips Export Detailed Data SORT BY: Relevance (Descending) Opportunit"
-        ],
-        "error": ""
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1018)"
       },
-      "change_status": "unchanged",
+      "change_status": "check_failed",
       "previous_hash": "38914b2b42777149c8cb6a3532e06d61a0ef0edb5cf23f05c2f581fbe68a4bc1"
     },
     {
@@ -187,7 +182,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.arts.gov/grants",
-        "elapsed_ms": 338,
+        "elapsed_ms": 14,
         "content_hash": "facf55b576b58076bcb61661cccdfdf0dd0c2b3a640dfcfe01c288df05baeebe",
         "text_length": 7041,
         "signal_snippets": [
@@ -200,8 +195,8 @@
         ],
         "error": ""
       },
-      "change_status": "changed",
-      "previous_hash": "1c466bce9af006666f6a369bcb1182d05ca1efb26742e8fb0877f58908c2ef97"
+      "change_status": "unchanged",
+      "previous_hash": "facf55b576b58076bcb61661cccdfdf0dd0c2b3a640dfcfe01c288df05baeebe"
     },
     {
       "source": {
@@ -229,7 +224,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.imls.gov/find-funding/how-to-apply/funding-opportunities",
-        "elapsed_ms": 300,
+        "elapsed_ms": 262,
         "content_hash": "a44583d2895b13c8dd9c00a484e80dc177ff2bdb922fd7c32325db97f2c24fdf",
         "text_length": 3144,
         "signal_snippets": [
@@ -334,7 +329,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://learning.candid.org/free-access-to-foundation-directory/273922",
-        "elapsed_ms": 637,
+        "elapsed_ms": 449,
         "content_hash": "70a9931c16dea0bc84bc7d8133ba0ed5dbd86418d887d563ce3d06784a7da18f",
         "text_length": 1269,
         "signal_snippets": [],
@@ -399,7 +394,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nglcc.org/programs-initiatives",
-        "elapsed_ms": 259,
+        "elapsed_ms": 89,
         "content_hash": "138712c78374426a44433fcd25d12b2cea9fd1833fef5c3cd789edef79d2301d",
         "text_length": 2737,
         "signal_snippets": [
@@ -436,7 +431,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.firstpeoplesfund.org/programs/fellowships",
-        "elapsed_ms": 102,
+        "elapsed_ms": 75,
         "content_hash": "84eda065225358fbfa864673ef3405c15016b03fc20acd4712746b7b92472fb3",
         "text_length": 41906,
         "signal_snippets": [
@@ -480,18 +475,16 @@
       },
       "check": {
         "status": "ok",
-        "status_code": 200,
+        "status_code": 202,
         "final_url": "https://www.nalac.org/grants/nalac-fund-for-the-arts/",
-        "elapsed_ms": 919,
-        "content_hash": "f946343507fbec3ba36d4b89d95134ab81dc7c18782a137593845bcd56cc6c50",
-        "text_length": 6098,
-        "signal_snippets": [
-          "Advertising Used to measure ad performance and show you relevant ads, including on other sites."
-        ],
+        "elapsed_ms": 135,
+        "content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text_length": 0,
+        "signal_snippets": [],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "previous_hash": "f946343507fbec3ba36d4b89d95134ab81dc7c18782a137593845bcd56cc6c50"
     },
     {
       "source": {
@@ -587,7 +580,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://boettcherfoundation.org/grantmaking/rural-catalyst-grants/",
-        "elapsed_ms": 167,
+        "elapsed_ms": 47,
         "content_hash": "7272f434e100861ac8e911ef475aa7403a747869da06dd12768123f8cd074fb2",
         "text_length": 5310,
         "signal_snippets": [
@@ -627,7 +620,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://gatesfamilyfoundation.org/types-of-support/capital-grants/",
-        "elapsed_ms": 312,
+        "elapsed_ms": 121,
         "content_hash": "697b5254efd889f0fb3e0caa55bae612426c7317b5e6b448049127d174bf93db",
         "text_length": 254546,
         "signal_snippets": [
@@ -677,9 +670,9 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://danielsfund.org/our-work/grants/",
-        "elapsed_ms": 240,
-        "content_hash": "ce08c8d1886c6a08a76a7dfe2a9d72a58a3bfb9d18ae5b6053a7666044ded489",
-        "text_length": 10597,
+        "elapsed_ms": 118,
+        "content_hash": "820070c790acbca68a9fe4c84ba863ad1fa6e03157ede45d6d06377b87f06caa",
+        "text_length": 12244,
         "signal_snippets": [
           "Grants Program - Daniels Fund Skip to content Our Work Big Bets Scalable Solutions for Complex Challenges Restoring Civic Knowledge Increasing Educational Options Expanding Access To Youth Sports Addressing Homelessness & Addiction Applying Principle-Based Ethics Restoring Civic Knowledge Increasing educational options Expanding access to youth sports Addressing homelessness & addiction Applying principle-based ethic",
           "Keep Reading Keep Reading About Us Our Mission Public Disclosures Our People Join Our Team Contact News & Publications Book Our Meeting Space Book Our Meeting Space A premier meeting place designed to facilitate a productive, comfortable, and impactful experience for nonprofits and public entities Book Now Book Now Location, Hours & Parking Location, Hours & Parking \u00d7 Our Work Big Bets Scalable Solutions for Complex",
@@ -701,11 +694,12 @@
           "If your organization received a grant within the past two years, please contact your program officer to confirm your eligibility to apply again.",
           "If it has been more than two years, please complete the Grants Eligibility Quiz .",
           "When are your application deadlines?",
-          "If your organization has previously received a grant, please contact your program officer to discuss reapplication eligibility."
+          "If your organization has previously received a grant, please contact your program officer to discuss reapplication eligibility.",
+          "Marketing Marketing The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes."
         ],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "ce08c8d1886c6a08a76a7dfe2a9d72a58a3bfb9d18ae5b6053a7666044ded489"
     },
     {
@@ -738,7 +732,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/grants/",
-        "elapsed_ms": 1934,
+        "elapsed_ms": 1952,
         "content_hash": "f524b703f8523f6785f083f2677fd219dd70fdb36807c10d15f31cc14a3ca4da",
         "text_length": 8158,
         "signal_snippets": [
@@ -773,7 +767,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/grants/leads/",
-        "elapsed_ms": 2052,
+        "elapsed_ms": 1958,
         "content_hash": "6d8564a165aef0540a274150f8a4f691af39a22e66e90994a2c7017acfcca7c3",
         "text_length": 9596,
         "signal_snippets": [
@@ -811,7 +805,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://edd.newmexico.gov/grants/cid-grants/",
-        "elapsed_ms": 1990,
+        "elapsed_ms": 2250,
         "content_hash": "446e870053536fe2e202bc2f1eead20105608c9264fc4dfde2692d185a10e0f3",
         "text_length": 36966,
         "signal_snippets": [
@@ -863,14 +857,16 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nmad.dca.nm.gov/",
-        "elapsed_ms": 311,
-        "content_hash": "aca572cea67b4f627ed74772186435e756fac88bab6ff195b0a98a7e2a92e908",
-        "text_length": 1781,
-        "signal_snippets": [],
+        "elapsed_ms": 341,
+        "content_hash": "aa7e40678061b9519b5cdf2cc125d0a85c27e1411f6e112e44e4b3510b0578b0",
+        "text_length": 1782,
+        "signal_snippets": [
+          "Thi Please join the City of Santa Fe's Arts & Culture REGISTRATION DEADLINE: Friday, December 4, 2026 20 Follow Follow Follow Follow Follow Follow Follow Follow Latest News Stay informed with the latest updates from across New Mexico\u2019s cultural and historic communities."
+        ],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "760cb9fc113ea8723d8cc71e1fef91619d1883aefe5330fde365009c176acd48"
+      "previous_hash": "aca572cea67b4f627ed74772186435e756fac88bab6ff195b0a98a7e2a92e908"
     },
     {
       "source": {
@@ -897,14 +893,16 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.nmad.dca.nm.gov/",
-        "elapsed_ms": 301,
-        "content_hash": "aca572cea67b4f627ed74772186435e756fac88bab6ff195b0a98a7e2a92e908",
-        "text_length": 1781,
-        "signal_snippets": [],
+        "elapsed_ms": 329,
+        "content_hash": "aa7e40678061b9519b5cdf2cc125d0a85c27e1411f6e112e44e4b3510b0578b0",
+        "text_length": 1782,
+        "signal_snippets": [
+          "Thi Please join the City of Santa Fe's Arts & Culture REGISTRATION DEADLINE: Friday, December 4, 2026 20 Follow Follow Follow Follow Follow Follow Follow Follow Latest News Stay informed with the latest updates from across New Mexico\u2019s cultural and historic communities."
+        ],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "242d7332bc022ded625f154d5a54b580752c04f3aa8cd922f053faa8e0f81eb3"
+      "previous_hash": "aca572cea67b4f627ed74772186435e756fac88bab6ff195b0a98a7e2a92e908"
     },
     {
       "source": {
@@ -931,7 +929,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.conalma.org/grant-making",
-        "elapsed_ms": 349,
+        "elapsed_ms": 63,
         "content_hash": "3e874b8f31188c8f7372dd2c1ad14469546aeebad889be28d7a797f416cf2f6a",
         "text_length": 2382,
         "signal_snippets": [
@@ -973,7 +971,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://nmmccune.org/grant-eligibility/",
-        "elapsed_ms": 130,
+        "elapsed_ms": 34,
         "content_hash": "aabee6599f793ca3d8d276d58fbaa3c40905cfd10136dc3a8abed814d62b3d76",
         "text_length": 20337,
         "signal_snippets": [
@@ -995,8 +993,8 @@
         ],
         "error": ""
       },
-      "change_status": "changed",
-      "previous_hash": "6a9129e44d7083006fd0308202519c0b86d2ea6944f71406d73b5b0246cfe419"
+      "change_status": "unchanged",
+      "previous_hash": "aabee6599f793ca3d8d276d58fbaa3c40905cfd10136dc3a8abed814d62b3d76"
     },
     {
       "source": {
@@ -1029,7 +1027,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.elpomar.org/grant-making/",
-        "elapsed_ms": 158,
+        "elapsed_ms": 52,
         "content_hash": "c88686c27243cabc845e9c7d1df21d5232f3f252fe68bdaed6dc050038f82081",
         "text_length": 10620,
         "signal_snippets": [
@@ -1073,23 +1071,16 @@
       },
       "check": {
         "status": "ok",
-        "status_code": 200,
+        "status_code": 202,
         "final_url": "https://sccfcolorado.org/for-grantseekers/apply/",
-        "elapsed_ms": 211,
-        "content_hash": "3c8ccdb6274cb9eff35ad0f09ffe32cfc2e2511a5f8bc60922a665215a3e3e0c",
-        "text_length": 3990,
-        "signal_snippets": [
-          "Grant Application \u2013 Southern Colorado Community Foundation Menu Home About Our Role Board Financials Contact For Grantseekers Eligibility & Guidelines Available Grants Apply Grant Reporting Awarded Grants Scholarships Madeline Mellers Golf Scholarship For Donors Circle of 100 Donations Donor Advised Funds Planned & Legacy Giving Nonprofit Directory CLOSE MENU Grant Application Note: All fields are required.",
-          "Grant Deadlines: March 1 and September 1 REMINDER: We only provide funds to organizations that support Alamosa, Baca, Bent, Chaffee, Conejos, Costilla, Crowley, Custer, Fremont, Huerfano, Kiowa, Las Animas, Mineral, Otero, Prowers, Pueblo, Rio Grande, and Saguache counties.",
-          "Are You a 501(c)(3) Organization?",
-          "* Yes, I am a 501(c)(3) organization No, I am not a 501(c)(3) organization Amount Requested * When Are Funds Needed?",
-          "Save and Continue Later Take Action Apply for Grant Submit Grant Report Legacy Giving Get to Know Us Our Work Meet the Board See our Financials Connect Contact Donor Advised Funds Nonprofit Directory Privacy Policy Southern Colorado Community Foundation is a 501(c)(3) nonprofit organization \u00a9 2026",
-          "Southern Colorado Community Foundation a US 501(c)(3) public charity, EIN 84-1449305."
-        ],
+        "elapsed_ms": 20,
+        "content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text_length": 0,
+        "signal_snippets": [],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "previous_hash": "3c8ccdb6274cb9eff35ad0f09ffe32cfc2e2511a5f8bc60922a665215a3e3e0c"
     },
     {
       "source": {
@@ -1123,7 +1114,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.taoscf.org/grants/",
-        "elapsed_ms": 550,
+        "elapsed_ms": 2364,
         "content_hash": "b7fcb9af43b2ccccd0b68f3cdd65cbfd29e7b17f12c9b2b69756d2ba72126a10",
         "text_length": 5616,
         "signal_snippets": [
@@ -1162,7 +1153,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://trinidadstate.edu/scholarships/index.html",
-        "elapsed_ms": 255,
+        "elapsed_ms": 222,
         "content_hash": "9f118d28c2f7fe7328b082f67caa109b9c51f19aacc81175bea975828e163c92",
         "text_length": 10623,
         "signal_snippets": [
@@ -1203,7 +1194,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://goreescholarship.org/",
-        "elapsed_ms": 93,
+        "elapsed_ms": 20,
         "content_hash": "32b89db0989ac8861ab0d676e3f0f5aae138a975a7c65aeea7a3feb56db5171e",
         "text_length": 6088,
         "signal_snippets": [
@@ -1268,13 +1259,13 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.fswcf.org/grants",
-        "elapsed_ms": 344,
-        "content_hash": "6d329dc95a0b9d865039eb73fd64dfc803fbde4f02d65a2a6bbf57424ab90683",
-        "text_length": 3182,
+        "elapsed_ms": 264,
+        "content_hash": "0e487d61134e3e55badec6effd55c347f682603a5ac46aa6be053b281d84db17",
+        "text_length": 3207,
         "signal_snippets": [],
         "error": ""
       },
-      "change_status": "unchanged",
+      "change_status": "changed",
       "previous_hash": "6d329dc95a0b9d865039eb73fd64dfc803fbde4f02d65a2a6bbf57424ab90683"
     },
     {
@@ -1303,7 +1294,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://rawlingsfoundation.com/grants/requests/",
-        "elapsed_ms": 142,
+        "elapsed_ms": 17,
         "content_hash": "7477c88e3204af6e60bdc757576c1b8c4f5f5f269bca127f1a18d18e66dc3520",
         "text_length": 7747,
         "signal_snippets": [
@@ -1343,7 +1334,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.wellsfargo.com/private-foundations/duncan-charitable-trust/",
-        "elapsed_ms": 749,
+        "elapsed_ms": 155,
         "content_hash": "ed4fb4e9a75dfb3fff8709fee75d3ff5e9d23af98d2a483b8d10b3c640c06c35",
         "text_length": 8980,
         "signal_snippets": [
@@ -1383,7 +1374,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.brindlefoundation.org/grants",
-        "elapsed_ms": 92,
+        "elapsed_ms": 39,
         "content_hash": "87fcff1e9d3acaf684c38cab4ffad92e6cf18ab8e547701865191340bdf70e84",
         "text_length": 6362,
         "signal_snippets": [
@@ -1420,21 +1411,12 @@
         "cadence_days": 7
       },
       "check": {
-        "status": "ok",
-        "status_code": 200,
+        "status": "network_error",
+        "status_code": null,
         "final_url": "https://nmcf.org/northeastern-health-fund/",
-        "elapsed_ms": 504,
-        "content_hash": "457a5e5de6dd9ca05917260348ef19d7a03d3bcef2c6bf6aebaf7936fb6e605b",
-        "text_length": 5586,
-        "signal_snippets": [
-          "Northeastern Health Fund \u2013 NMCF NMCF Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern\u00ae NM True Aldo Leopold Charter School Anchorum Master\u2019s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Support an Existing Fund Fiscal Sponsorship Fisca",
-          "GRANT AMOUNT: Up to $5,000 TIMELINE Application Opens: November 2, 2026 Application deadline: 5 pm, November 30, 2026 Grants Announced: mid-December Grants Period: January 1, 2027 to December 31, 2027 To apply for a grant, click on the button below.",
-          "Contact 8 Calle Medico Santa Fe, NM 87505 505.820.6860 info@newmexicofoundation.org Facebook-f Linkedin-in Instagram Resources Grants and Scholarships Give Fiscal Sponsorships About Us Advisors Login Learn more \u00a9 Copyright 2026.",
-          "NMCF Sub-Menu Grants and Scholarships Grants and Scholarships Apply For A Grant Thriving New Mexico Native American Prep Scholars Northeastern Health Fund Vecino Fund Apply For A Scholarship 505 Southwestern\u00ae NM True Aldo Leopold Charter School Anchorum Master\u2019s in Nursing First American Bank Give Give Open a Fund Thriving New Mexico Annual Fund Support an Existing Fund Fiscal Sponsorship Fiscal Sponsorship Sponsored"
-        ],
-        "error": ""
+        "error": "timed out"
       },
-      "change_status": "unchanged",
+      "change_status": "check_failed",
       "previous_hash": "457a5e5de6dd9ca05917260348ef19d7a03d3bcef2c6bf6aebaf7936fb6e605b"
     },
     {
@@ -1464,14 +1446,14 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.health.solutions/requests/",
-        "elapsed_ms": 485,
-        "content_hash": "e1287589eda786e63ea72870f9677631c6c53185bba192118adfebc7dd8c03ff",
-        "text_length": 6382,
+        "elapsed_ms": 250,
+        "content_hash": "1d8de0a1b90dff826026fe92ef9b06a1ec286ad0eea7fabc06d4e8690538f8cb",
+        "text_length": 6401,
         "signal_snippets": [],
         "error": ""
       },
       "change_status": "changed",
-      "previous_hash": "2cdca2fc01df33f2e5df9a50fd073f3a6b1ca64092428903c6a0e4a3774c76e8"
+      "previous_hash": "e1287589eda786e63ea72870f9677631c6c53185bba192118adfebc7dd8c03ff"
     },
     {
       "source": {
@@ -1497,7 +1479,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://www.sprhc.org/spanish-peaks-healthcare-foundation",
-        "elapsed_ms": 370,
+        "elapsed_ms": 444,
         "content_hash": "d708e7161f86734f2cd8244b0c30ac0e463243eb25431f3d402f3da401260fbd",
         "text_length": 4187,
         "signal_snippets": [
@@ -1535,7 +1517,7 @@
         "status": "ok",
         "status_code": 200,
         "final_url": "https://newmexicohumanities.org/grants/",
-        "elapsed_ms": 1298,
+        "elapsed_ms": 956,
         "content_hash": "3a587015c8280e22ebfef80b7a4e4de7009a764a634fd98c931d07fcbdfe170b",
         "text_length": 4990,
         "signal_snippets": [

@@ -1,6 +1,6 @@
 # Weekly Directory Query Check
 
-Generated: 2026-11-16
+Generated: 2026-11-24
 
 Use this watcher to refresh public pending-update candidates. Do not merge candidates into the official directory until a human reviews the source page.
 
@@ -8,12 +8,12 @@ Use this watcher to refresh public pending-update candidates. Do not merge candi
 
 - Sources watched: 20
 - Pages checked: 36
-- Pages failed: 4
-- Listing-like candidates found: 412
-- Already represented in guide: 326
-- Possible new leads: 86
-- Priority new leads: 15
-- Low-confidence text leads: 71
+- Pages failed: 2
+- Listing-like candidates found: 420
+- Already represented in guide: 323
+- Possible new leads: 97
+- Priority new leads: 12
+- Low-confidence text leads: 85
 
 ## Watch Sources
 
@@ -99,7 +99,7 @@ Fetch issues:
 - Source type: Digital local guide and business/event listings
 - Why watch: LocalStash is the current digital successor route to the Weekender-style local guide model and can surface Trinidad businesses, events, restaurants, and shops.
 - Pages checked: 2
-- Possible new leads: 10
+- Possible new leads: 11
 - Priority new leads: 0
 
 ### Southern Colorado Tourism Event and Travel Pages
@@ -108,12 +108,8 @@ Fetch issues:
 - Source type: Regional tourism and event source
 - Why watch: Regional Southern Colorado event and tourism source that can surface Las Animas County travel and event leads.
 - Pages checked: 2
-- Possible new leads: 0
+- Possible new leads: 13
 - Priority new leads: 0
-
-Fetch issues:
-- [https://southerncoloradotourism.com/events/](https://southerncoloradotourism.com/events/) - <urlopen error timed out>
-- [https://southerncoloradotourism.com/](https://southerncoloradotourism.com/) - <urlopen error timed out>
 
 ### Spanish Peaks Country Business Directory
 
@@ -166,8 +162,8 @@ Fetch issues:
 - Source type: Chamber business profiles
 - Why watch: Current chamber profiles link to individual Red River businesses; review each town before importing because some members serve nearby areas.
 - Pages checked: 1
-- Possible new leads: 3
-- Priority new leads: 3
+- Possible new leads: 0
+- Priority new leads: 0
 
 ### El Raton Media Works Local Businesses
 
@@ -209,9 +205,6 @@ Fetch issues:
 
 These have linked listing-page evidence. They are still not publication-ready additions until a human confirms the source page.
 
-- [Edelweiss Condominiums Red River, NM](https://redriverchamber.org/2026-member-spotlight-edelweiss-condominiums-red-river-new-mexico-usa/) - Colfax; Red River Chamber Member Spotlights; evidence: linked_text; confidence: medium-high
-- [Red River Community House](https://redriverchamber.org/2026-member-spotlight-red-river-community-house/) - Colfax; Red River Chamber Member Spotlights; evidence: linked_text; confidence: medium-high
-- [The Lucky District](https://redriverchamber.org/2026-member-spotlight-the-lucky-district/) - Colfax; Red River Chamber Member Spotlights; evidence: linked_text; confidence: medium-high
 - [Cuchara Mountain Trail Ride - Guided Horseback Rides](https://spanishpeakscountry.com/business-directory/listing/cuchara-mountain-trail-ride) - Huerfano; Spanish Peaks Country Business Directory; evidence: linked_text; confidence: medium-high
 - [111 Park - Espresso Bar & Cafe](https://www.elratonmediaworks.org/businesses/111-park) - Regional; El Raton Media Works Local Businesses; evidence: linked_text; confidence: medium-high
 - [Blue Sky Ranch](https://www.elratonmediaworks.org/businesses/blue-sky-ranch) - Regional; El Raton Media Works Local Businesses; evidence: linked_text; confidence: medium-high
@@ -272,34 +265,44 @@ These came from directory page text rather than individual listing links. Review
 - Storage - Huerfano; Huerfano County Chamber Directory; source page: https://www.chamber.huerfano.org/membership-directory
 - The Rifters - Huerfano; Spanish Peaks Country Events and Submit-Event Routes; source page: https://spanishpeakscountry.com/spc-events/
 - (719) 846-9843 ext. 160 - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
+- 420 Festival at Central Park - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - An independent antiques stop on historic East Main Street. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
+- April - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Books & More - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/shop/
+- Christmas Tree Lighting - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - City of Trinidad City Hall - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Colorado - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
+- Details - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Find city services, official notices and municipal contact information. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
+- Hometown Holidays Parade of Lights - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
+- June - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - KCRT AM-FM Radio - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
+- Literary Festival – GET LIT! - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Lou Ann Peters - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/resources-for-locals/
 - Louden-Henritze Archaeological Museum - Las Animas; Canyons & Plains Las Animas County Attractions; source page: https://canyonsandplains.org/destination-item/las-animas-county/
 - Ludlow Massacre History Site - Las Animas; Canyons & Plains Las Animas County Attractions; source page: https://canyonsandplains.org/destination-item/las-animas-county/
+- March - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
+- November - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Organizer - Las Animas; Visit Trinidad Events and Submit-Event Routes; source page: https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/
 - Scenic Highway of Legends - Las Animas; Canyons & Plains Las Animas County Attractions; source page: https://canyonsandplains.org/destination-item/las-animas-county/
 - Show Filters - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/dine/
 - Show Filters - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/stay/
 - Show Filters - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/shop/
 - Space To Create & Tourism Coordinator - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/resources-for-locals/
+- St. Patrick's Day Parade - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Stashes - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
+- Stonewall Fishing Tournament - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Stop for local visitor information, maps and help planning a Trinidad visit. - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
+- Summer Arts Exhibits - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
+- The Annual Collector's Series Calendar - Las Animas; Southern Colorado Tourism Event and Travel Pages; source page: https://southerncoloradotourism.com/events/
 - Victor Gutierrez - Las Animas; Visit Trinidad Events and Submit-Event Routes; source page: https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/
+- Visa gift card - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Visit Trinidad Colorado Tourism and Events Office - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
 - Visit Trinidad Colorado – - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/dine/
 - Visit Trinidad Colorado – - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/stay/
 - Visit Trinidad Colorado – - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/shop/
 - Visit Trinidad Colorado – - Las Animas; Visit Trinidad Business and Visitor Listings; source page: https://visittrinidadcolorado.com/resources-for-locals/
-- Visit Trinidad Colorado – - Las Animas; Visit Trinidad Events and Submit-Event Routes; source page: https://visittrinidadcolorado.com/upcoming-events/
-- Visit Trinidad Colorado – - Las Animas; Visit Trinidad Events and Submit-Event Routes; source page: https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/
-- Visit Trinidad Colorado – - Las Animas; Visit Trinidad Meetings, Weddings, and Venue Routes; source page: https://visittrinidadcolorado.com/meetings-conventions/
-- Visit Trinidad Colorado – - Las Animas; Visit Trinidad Meetings, Weddings, and Venue Routes; source page: https://visittrinidadcolorado.com/weddings/
-- World Journal - Trinidad Branch - Las Animas; LocalStash Trinidad; source page: https://localstash.com/colorado/towns/trinidad-co
+- Additional low-confidence candidates omitted from Markdown: 5. See JSON.
 
 ## Already Represented Sample
 
@@ -338,8 +341,8 @@ These came from directory page text rather than individual listing links. Review
 - Aspen Gold Laundromat -> Aspen Gold Laundromat (exact_normalized)
 - Ayers Family Fitness -> Ayers Family Fitness (exact_url)
 - Bachman & Associates Real Estate -> Bachman & Associates Real Estate (exact_normalized)
-- Bearly Awake Coffee Co. -> Bearly Awake Coffee Co. (exact_url)
 - Bella Luna Pizzeria -> Bella Luna Pizzeria (exact_normalized)
 - Best Western Rambler -> Best Western Rambler (exact_url)
 - Best Western Rambler -> Best Western Rambler (exact_url)
 - Big "R" -> Big R (exact_normalized)
+- Big R -> Big R (exact_normalized)

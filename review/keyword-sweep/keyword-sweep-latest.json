@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16",
+  "generated_at": "2026-11-24",
   "index_path": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/data/listing-keyword-index.json",
   "network_enabled": true,
   "summary": {
@@ -8,17 +8,17 @@
     "distinct_source_urls": 426,
     "urls_selected": 120,
     "urls_checked": 120,
-    "urls_failed": 34,
+    "urls_failed": 39,
     "entries_changed": 0,
-    "source_keyword_changes": 1,
+    "source_keyword_changes": 0,
     "entries_with_blocked_inferences": 20,
     "blocked_inference_count": 22,
     "status_counts": {
-      "checked": 322,
-      "checked_no_name_match": 949,
-      "fetch_error": 28,
+      "checked": 320,
+      "checked_no_name_match": 943,
+      "fetch_error": 43,
       "no_source": 173,
-      "source_unavailable": 35
+      "source_unavailable": 28
     }
   },
   "changes": [],
@@ -253,40 +253,46 @@
       "error": "<urlopen error [Errno -5] No address associated with hostname>"
     },
     {
-      "url": "https://angelfirechamber.org/business/dons-flooring-window-covering-inc/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "url": "https://angelfirechamber.org/business/angel-fire-rv-resort/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
-      "url": "https://angelfirechamber.org/business/resort-properties-of-angel-fire/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "url": "https://angelfirechamber.org/business/bobcat-pass-wilderness-adventures/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
-      "url": "https://angelfirechamber.org/business/subway/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "url": "https://angelfirechamber.org/business/category/dining/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
-      "url": "https://angelfirechamber.org/business/summit-haus/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "url": "https://angelfirechamber.org/business/category/gift-shops/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
-      "url": "https://angelfirechamber.org/business/the-lodge-at-angel-fire-resort/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "url": "https://angelfirechamber.org/business/mountain-sports-of-angel-fire/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
-      "url": "https://angelfirechamber.org/business/winter-sports/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "url": "https://angelfirechamber.org/business/music-from-angel-fire/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://angelfirechamber.org/business/road-runner-tours-ltd/",
+      "status": "fetch_error",
+      "status_code": 404,
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "url": "https://boom-noodles.com",
@@ -323,6 +329,18 @@
       "status": "fetch_error",
       "status_code": 403,
       "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://craftycanarybrewery.com/",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error _ssl.c:1001: The handshake operation timed out>"
+    },
+    {
+      "url": "https://dougandlori.art/",
+      "status": "fetch_error",
+      "status_code": null,
+      "error": "<urlopen error _ssl.c:1001: The handshake operation timed out>"
     },
     {
       "url": "https://franciscofort.org",
@@ -409,10 +427,22 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://www.sammiescampground.com/",
+      "url": "https://www.newmexico.org/frontier-trails-and-tracks/",
       "status": "fetch_error",
-      "status_code": 404,
-      "error": "HTTP Error 404: Not Found"
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.newmexico.org/places-to-visit/regions/northeast/northeast-region-birding-map/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
+      "status": "fetch_error",
+      "status_code": 403,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://www.skinnysdinerandbar.com/",

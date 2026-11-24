@@ -1,6 +1,6 @@
 # Update Source Audit
 
-Generated: 2026-11-16
+Generated: 2026-11-24
 
 This report separates confirmed link failures from pages that merely block or confuse scripted checks.
 
@@ -8,43 +8,48 @@ This report separates confirmed link failures from pages that merely block or co
 
 - Records checked: 178
 - Web sources checked: 177
-- Confirmed broken or missing: 3
-- Normal-browser confirmation required: 0
-- Script-access limitations (not broken): 22
+- Confirmed broken or missing: 0
+- Normal-browser confirmation required: 2
+- Script-access limitations (not broken): 26
 - Offline field-check records: 1
 - Human approval required: 118
 
 ## Status Counts
 
-- access_blocked: 21
-- broken: 3
+- access_blocked: 23
 - field_check: 1
-- ok: 135
-- redirect: 17
-- tls_error: 1
+- network_error: 1
+- ok: 131
+- redirect: 18
+- timeout: 1
+- tls_error: 3
 
 ## Confirmed Broken Or Missing
 
-- [Main Street LIVE Events](https://www.mainstreetlive.org/home) - Las Animas; events; broken; HTTP Error 404: Not Found
-- [Main Street LIVE](https://www.mainstreetlive.org/) - Trinidad / Las Animas; events; broken; HTTP Error 404: Not Found
-- [Main Street LIVE 2026 Calendar](https://www.mainstreetlive.org/2026-calendar) - Trinidad / Las Animas; events; broken; HTTP Error 404: Not Found
+No checked web source is confirmed broken or missing.
 
 ## Normal-Browser Confirmation Required
 
-No inconclusive network or server response is waiting on a normal-browser confirmation.
+These pages are not classified as broken. A timeout, network problem, or temporary server response prevented a conclusive scripted check.
+
+- [Gates Family Foundation Capital Grants](https://gatesfamilyfoundation.org/types-of-support/capital-grants/) - National; funding; timeout; The read operation timed out
+- [New Mexico Community Foundation Northeastern Health Fund](https://nmcf.org/northeastern-health-fund/) - National; funding; network_error; timed out
 
 ## Script Access Limitations (Not Broken)
 
 These are informational results, not broken-link findings. The page blocked scripted access or the local certificate checker could not validate its chain.
 
 - [Walsenburg / Huerfano](https://www.walsenburg.org/city-clerks-office/page/agendas-and-minutes) - Regional; civic; access_blocked; HTTP Error 403: Forbidden
+- [New Mexico True Northeast and Raton Guide](https://www.newmexico.org/places-to-visit/regions/northeast/raton/) - Colfax; directory; access_blocked; HTTP Error 403: Forbidden
 - [Colorado OEDIT Rural Opportunity Office](https://oedit.colorado.gov/category/rural-opportunity-office) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Colorado SBDC Network](https://oedit.colorado.gov/colorado-small-business-development-center-network) - Regional; directory; access_blocked; HTTP Error 403: Forbidden
 - [Raton Chamber Business Directory](https://www.raton.info/business-directory.html) - Colfax; events; access_blocked; HTTP Error 403: Forbidden
 - [Walsenburg Forms and License Applications](https://www.walsenburg.org/forms) - Huerfano; events; access_blocked; HTTP Error 403: Forbidden
+- [Trinidad Community Foundation](https://www.trinidadcf.org/board.html) - Las Animas; funding; access_blocked; HTTP Error 429: Too Many Requests
 - [Colorado Creates Grant](https://oedit.colorado.gov/colorado-creates-grant) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [Colorado OEDIT Programs and Funding](https://oedit.colorado.gov/programs-and-funding) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [Cuchara Chapel Scholarship](https://www.cucharachapel.org/scholarship/) - National; funding; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1018)
+- [Grants.gov](https://www.grants.gov/search-grants) - National; funding; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1018)
 - [IFundWomen Grants](https://www.ifundwomen.com/grants/apply-for-grants) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [U.S. Economic Development Administration Funding Opportunities](https://www.eda.gov/funding/funding-opportunities) - National; funding; access_blocked; HTTP Error 403: Forbidden
 - [USDA Rural Development Programs and Services](https://www.rd.usda.gov/programs-services) - National; funding; access_blocked; HTTP Error 403: Forbidden
@@ -55,6 +60,7 @@ These are informational results, not broken-link findings. The page blocked scri
 - [Colorado Creative Industries](https://oedit.colorado.gov/colorado-creative-industries) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Colorado Rural Jump-Start Program](https://oedit.colorado.gov/rural-jump-start-program) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [Folk and Traditional Arts Project Grant](https://oedit.colorado.gov/folk-and-traditional-arts-project-grant) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
+- [Grants.gov](https://www.grants.gov/) - Regional; funding; tls_error; [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1018)
 - [USDA Rural Business Development Grants](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [USDA Rural Microentrepreneur Assistance Program](https://www.rd.usda.gov/programs-services/business-programs/rural-microentrepreneur-assistance-program) - Regional; funding; access_blocked; HTTP Error 403: Forbidden
 - [USDA Value-Added Producer Grants](https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants) - Regional; funding; access_blocked; HTTP Error 403: Forbidden

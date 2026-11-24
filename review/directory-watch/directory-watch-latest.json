@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16",
+  "generated_at": "2026-11-24",
   "config": "data/directory-watch-sources.json",
   "directory_files": [
     "data/directory_of_absolutely_everything.csv",
@@ -9,12 +9,12 @@
   "summary": {
     "sources": 20,
     "pages_checked": 36,
-    "pages_failed": 4,
-    "candidates": 412,
-    "already_in_guide": 326,
-    "possible_new_leads": 86,
-    "priority_new_leads": 15,
-    "low_confidence_new_leads": 71
+    "pages_failed": 2,
+    "candidates": 420,
+    "already_in_guide": 323,
+    "possible_new_leads": 97,
+    "priority_new_leads": 12,
+    "low_confidence_new_leads": 85
   },
   "results": [
     {
@@ -33,7 +33,7 @@
             "status_code": 403,
             "final_url": "https://www.raton.info/business_directory.html",
             "content_type": "",
-            "elapsed_ms": 150,
+            "elapsed_ms": 1185,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -45,7 +45,7 @@
             "status_code": 403,
             "final_url": "https://www.raton.info/business-directory.html",
             "content_type": "",
-            "elapsed_ms": 85,
+            "elapsed_ms": 82,
             "error": "HTTP Error 403: Forbidden"
           },
           "candidates": []
@@ -68,7 +68,7 @@
             "status_code": 200,
             "final_url": "https://visitangelfirenm.com/all-listings/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 265,
+            "elapsed_ms": 179,
             "error": ""
           },
           "candidates": [
@@ -398,7 +398,7 @@
             "status_code": 200,
             "final_url": "https://visitangelfirenm.com/dining/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 232,
+            "elapsed_ms": 4990,
             "error": ""
           },
           "candidates": [
@@ -789,7 +789,7 @@
             "status_code": 200,
             "final_url": "https://visitangelfirenm.com/catering/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 191,
+            "elapsed_ms": 3365,
             "error": ""
           },
           "candidates": [
@@ -921,7 +921,7 @@
             "status_code": 200,
             "final_url": "https://visitangelfirenm.com/shopping/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 990,
+            "elapsed_ms": 3067,
             "error": ""
           },
           "candidates": [
@@ -1276,7 +1276,7 @@
             "status_code": 200,
             "final_url": "https://visitangelfirenm.com/stay/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 152,
+            "elapsed_ms": 38,
             "error": ""
           },
           "candidates": [
@@ -1336,7 +1336,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 250,
+            "elapsed_ms": 112,
             "error": ""
           },
           "candidates": []
@@ -1348,7 +1348,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/events",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 182,
+            "elapsed_ms": 52,
             "error": ""
           },
           "candidates": []
@@ -1360,7 +1360,7 @@
             "status_code": 200,
             "final_url": "https://www.exploreraton.com/blog",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1101,
+            "elapsed_ms": 46,
             "error": ""
           },
           "candidates": []
@@ -1383,7 +1383,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/dine/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2293,
+            "elapsed_ms": 2614,
             "error": ""
           },
           "candidates": [
@@ -1756,7 +1756,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/stay/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2392,
+            "elapsed_ms": 124,
             "error": ""
           },
           "candidates": [
@@ -2093,7 +2093,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/shop/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2330,
+            "elapsed_ms": 113,
             "error": ""
           },
           "candidates": [
@@ -2466,7 +2466,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/resources-for-locals/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2269,
+            "elapsed_ms": 100,
             "error": ""
           },
           "candidates": [
@@ -2562,7 +2562,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/upcoming-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1935,
+            "elapsed_ms": 1208,
             "error": ""
           },
           "candidates": [
@@ -2593,7 +2593,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/resources-for-locals/submit-your-event/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2214,
+            "elapsed_ms": 1377,
             "error": ""
           },
           "candidates": [
@@ -2671,7 +2671,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/meetings-conventions/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2488,
+            "elapsed_ms": 76,
             "error": ""
           },
           "candidates": [
@@ -2702,7 +2702,7 @@
             "status_code": 200,
             "final_url": "https://visittrinidadcolorado.com/weddings/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1879,
+            "elapsed_ms": 97,
             "error": ""
           },
           "candidates": [
@@ -2744,7 +2744,7 @@
             "status_code": 200,
             "final_url": "https://localstash.com/colorado/towns/trinidad-co",
             "content_type": "text/html; charset=utf-8",
-            "elapsed_ms": 713,
+            "elapsed_ms": 657,
             "error": ""
           },
           "candidates": [
@@ -2965,6 +2965,24 @@
               "review_note": "Human review required before adding, removing, or changing public directory data."
             },
             {
+              "id": "visa-gift-card-7c6562bbea",
+              "name": "Visa gift card",
+              "source_id": "las-animas-localstash-trinidad",
+              "source_title": "LocalStash Trinidad",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Digital local guide and business/event listings",
+              "source_page": "https://localstash.com/colorado/towns/trinidad-co",
+              "listing_url": "https://localstash.com/colorado/towns/trinidad-co",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
               "id": "visit-trinidad-colorado-tourism-and-events-office-47cc9fe74d",
               "name": "Visit Trinidad Colorado Tourism and Events Office",
               "source_id": "las-animas-localstash-trinidad",
@@ -3008,8 +3026,8 @@
             "ok": true,
             "status_code": 200,
             "final_url": "https://weekender.pub/",
-            "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 248,
+            "content_type": "text/html; charset=utf-8",
+            "elapsed_ms": 220,
             "error": ""
           },
           "candidates": []
@@ -3028,24 +3046,259 @@
         {
           "url": "https://southerncoloradotourism.com/events/",
           "fetch": {
-            "ok": false,
-            "status_code": null,
+            "ok": true,
+            "status_code": 200,
             "final_url": "https://southerncoloradotourism.com/events/",
-            "content_type": "",
-            "elapsed_ms": 18150,
-            "error": "<urlopen error timed out>"
+            "content_type": "text/html; charset=UTF-8",
+            "elapsed_ms": 10588,
+            "error": ""
           },
-          "candidates": []
+          "candidates": [
+            {
+              "id": "420-festival-at-central-park-0d390fff40",
+              "name": "420 Festival at Central Park",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "april-c31c30ac1e",
+              "name": "April",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "christmas-tree-lighting-5c951f06dd",
+              "name": "Christmas Tree Lighting",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "details-2f93843c00",
+              "name": "Details",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "hometown-holidays-parade-of-lights-923daa021b",
+              "name": "Hometown Holidays Parade of Lights",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "june-3fd56b6c3e",
+              "name": "June",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "literary-festival-get-lit-46a4f6f713",
+              "name": "Literary Festival \u2013 GET LIT!",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "march-c11165e9ce",
+              "name": "March",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "november-b9cf619991",
+              "name": "November",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "st-patrick-s-day-parade-7250050d2a",
+              "name": "St. Patrick's Day Parade",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "stonewall-fishing-tournament-ce2792d7c2",
+              "name": "Stonewall Fishing Tournament",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "summer-arts-exhibits-c5aef7aa30",
+              "name": "Summer Arts Exhibits",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            },
+            {
+              "id": "the-annual-collector-s-series-calendar-baea10fc8d",
+              "name": "The Annual Collector's Series Calendar",
+              "source_id": "las-animas-southern-colorado-tourism-events",
+              "source_title": "Southern Colorado Tourism Event and Travel Pages",
+              "county": "Las Animas",
+              "state": "CO",
+              "source_type": "Regional tourism and event source",
+              "source_page": "https://southerncoloradotourism.com/events/",
+              "listing_url": "https://southerncoloradotourism.com/events/",
+              "evidence_type": "text_listing_block",
+              "confidence": "low",
+              "priority_candidate": false,
+              "match_status": "possible_new_lead",
+              "matched_name": "",
+              "match_type": "",
+              "review_note": "Human review required before adding, removing, or changing public directory data."
+            }
+          ]
         },
         {
           "url": "https://southerncoloradotourism.com/",
           "fetch": {
-            "ok": false,
-            "status_code": null,
+            "ok": true,
+            "status_code": 200,
             "final_url": "https://southerncoloradotourism.com/",
-            "content_type": "",
-            "elapsed_ms": 18121,
-            "error": "<urlopen error timed out>"
+            "content_type": "text/html; charset=UTF-8",
+            "elapsed_ms": 6958,
+            "error": ""
           },
           "candidates": []
         }
@@ -3067,7 +3320,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 233,
+            "elapsed_ms": 44,
             "error": ""
           },
           "candidates": [
@@ -4981,7 +5234,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory/categories/dining",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 189,
+            "elapsed_ms": 37,
             "error": ""
           },
           "candidates": [
@@ -5534,7 +5787,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/business-directory/categories/lodging",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 188,
+            "elapsed_ms": 41,
             "error": ""
           },
           "candidates": [
@@ -5943,7 +6196,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1308,
+            "elapsed_ms": 846,
             "error": ""
           },
           "candidates": []
@@ -5966,7 +6219,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/spc-events/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 203,
+            "elapsed_ms": 55,
             "error": ""
           },
           "candidates": [
@@ -6177,7 +6430,7 @@
             "status_code": 200,
             "final_url": "https://spanishpeakscountry.com/spc-events/community/add/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2291,
+            "elapsed_ms": 42,
             "error": ""
           },
           "candidates": [
@@ -6237,7 +6490,7 @@
             "status_code": 200,
             "final_url": "https://townoflaveta-co.gov/business-directory/",
             "content_type": "text/html",
-            "elapsed_ms": 202,
+            "elapsed_ms": 133,
             "error": ""
           },
           "candidates": [
@@ -7287,7 +7540,7 @@
             "status_code": 200,
             "final_url": "https://www.chamber.huerfano.org/membership-directory",
             "content_type": "text/html;charset=utf-8",
-            "elapsed_ms": 552,
+            "elapsed_ms": 153,
             "error": ""
           },
           "candidates": [
@@ -7362,122 +7615,13 @@
           "url": "https://redriverchamber.org/business-listing/",
           "fetch": {
             "ok": true,
-            "status_code": 200,
+            "status_code": 202,
             "final_url": "https://redriverchamber.org/business-listing/",
-            "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 1145,
+            "content_type": "text/html",
+            "elapsed_ms": 177,
             "error": ""
           },
-          "candidates": [
-            {
-              "id": "bearly-awake-coffee-co-2fc444b3e8",
-              "name": "Bearly Awake Coffee Co.",
-              "source_id": "colfax-red-river-chamber-member-spotlights",
-              "source_title": "Red River Chamber Member Spotlights",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber business profiles",
-              "source_page": "https://redriverchamber.org/business-listing/",
-              "listing_url": "https://redriverchamber.org/2026-member-spotlight-bearly-awake-coffee-co/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Bearly Awake Coffee Co.",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "bobcat-pass-wilderness-adventures-f8d06fb266",
-              "name": "Bobcat Pass Wilderness Adventures",
-              "source_id": "colfax-red-river-chamber-member-spotlights",
-              "source_title": "Red River Chamber Member Spotlights",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber business profiles",
-              "source_page": "https://redriverchamber.org/business-listing/",
-              "listing_url": "https://redriverchamber.org/2026-member-spotlight-bobcat-pass-wilderness-adventures/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Bobcat Pass Wilderness Adventures",
-              "match_type": "exact_normalized",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "rio-colorado-cabins-6ae45a7a29",
-              "name": "Rio Colorado Cabins",
-              "source_id": "colfax-red-river-chamber-member-spotlights",
-              "source_title": "Red River Chamber Member Spotlights",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber business profiles",
-              "source_page": "https://redriverchamber.org/business-listing/",
-              "listing_url": "https://redriverchamber.org/2026-member-spotlight-rio-colorado-cabins/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "already_in_guide",
-              "matched_name": "Rio Colorado Cabins",
-              "match_type": "exact_url",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "edelweiss-condominiums-red-river-nm-99536b33d0",
-              "name": "Edelweiss Condominiums Red River, NM",
-              "source_id": "colfax-red-river-chamber-member-spotlights",
-              "source_title": "Red River Chamber Member Spotlights",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber business profiles",
-              "source_page": "https://redriverchamber.org/business-listing/",
-              "listing_url": "https://redriverchamber.org/2026-member-spotlight-edelweiss-condominiums-red-river-new-mexico-usa/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "red-river-community-house-aadbc3f6ad",
-              "name": "Red River Community House",
-              "source_id": "colfax-red-river-chamber-member-spotlights",
-              "source_title": "Red River Chamber Member Spotlights",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber business profiles",
-              "source_page": "https://redriverchamber.org/business-listing/",
-              "listing_url": "https://redriverchamber.org/2026-member-spotlight-red-river-community-house/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            },
-            {
-              "id": "the-lucky-district-9621c173ae",
-              "name": "The Lucky District",
-              "source_id": "colfax-red-river-chamber-member-spotlights",
-              "source_title": "Red River Chamber Member Spotlights",
-              "county": "Colfax",
-              "state": "NM",
-              "source_type": "Chamber business profiles",
-              "source_page": "https://redriverchamber.org/business-listing/",
-              "listing_url": "https://redriverchamber.org/2026-member-spotlight-the-lucky-district/",
-              "evidence_type": "linked_text",
-              "confidence": "medium-high",
-              "priority_candidate": true,
-              "match_status": "possible_new_lead",
-              "matched_name": "",
-              "match_type": "",
-              "review_note": "Human review required before adding, removing, or changing public directory data."
-            }
-          ]
+          "candidates": []
         }
       ]
     },
@@ -7497,7 +7641,7 @@
             "status_code": 200,
             "final_url": "https://www.elratonmediaworks.org/local-businesses",
             "content_type": "text/html;charset=utf-8",
-            "elapsed_ms": 563,
+            "elapsed_ms": 281,
             "error": ""
           },
           "candidates": [
@@ -7809,7 +7953,7 @@
             "status_code": 200,
             "final_url": "https://canyonsandplains.org/destination-item/las-animas-county/",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 2711,
+            "elapsed_ms": 2450,
             "error": ""
           },
           "candidates": [
@@ -7941,7 +8085,7 @@
             "status_code": 200,
             "final_url": "https://www.trinidadcf.org/organizations.html",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 275,
+            "elapsed_ms": 173,
             "error": ""
           },
           "candidates": []
@@ -7953,7 +8097,7 @@
             "status_code": 200,
             "final_url": "https://www.trinidadcf.org/education.html",
             "content_type": "text/html; charset=UTF-8",
-            "elapsed_ms": 235,
+            "elapsed_ms": 143,
             "error": ""
           },
           "candidates": []
@@ -7976,7 +8120,7 @@
             "status_code": 200,
             "final_url": "https://www.wheelhouseincubator.org/our-retailers",
             "content_type": "text/html;charset=utf-8",
-            "elapsed_ms": 959,
+            "elapsed_ms": 243,
             "error": ""
           },
           "candidates": [

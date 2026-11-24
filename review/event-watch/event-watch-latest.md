@@ -1,6 +1,6 @@
 # Tri-County Event Source Review
 
-Generated: 2026-11-16T23:44:32+00:00
+Generated: 2026-11-24T02:05:49+00:00
 
 This is a private candidate queue. A link or page change is not proof that a resource fits the guide or that an opportunity is open.
 
@@ -8,18 +8,18 @@ This is a private candidate queue. A link or page change is not proof that a res
 
 - Source hubs configured: 15
 - Source hubs checked: 15
-- Candidate links collected: 13
-- Changed pages: 8
+- Candidate links collected: 12
+- Changed pages: 10
 - New baselines: 0
-- Confirmed broken URLs: 1
+- Confirmed broken URLs: 0
 - Script-access limitations: 0
-- Other check failures: 1
+- Other check failures: 0
 
 ## Candidate Links
 
 ### [Explore Raton Events](https://www.exploreraton.com/events)
 
-Category: events-calendars. Page status: unchanged.
+Category: events-calendars. Page status: changed.
 
 - [EXILE CANCELS SEPT 6 GATE CITY MUSIC FESTIVAL APPEARANCE IN RATON, NEW MEXICO](https://www.exploreraton.com/post/exile-cancels-sept-6-gate-city-music-festival-appearance-in-raton-new-mexico) - matched: festival, Raton
 - [4th of July in Raton Our small town charm is the perfect backdrop for the 4th of July parade, fun on Historic First Street, and the firework display held in the heart of Raton. The International Santa Fe Balloon rally kicks off the 4th of July holiday with rides, glows, and more! Each morning balloons ascend into the summer sky. LEARN MORE](http://exploreraton.com/4th-of-july) - matched: parade, Raton
@@ -55,9 +55,13 @@ Category: events-calendars. Page status: changed.
 
 Category: events-calendars. Page status: changed.
 
-- [Human Services Workshop](https://huerfano.us/event/human-services-workshop-11/) - matched: workshop
-- [Joint Budget Workshop with Las Animas County](https://huerfano.us/event/joint-budget-workshop-with-las-animas-county/) - matched: workshop
-- [Road and Bridge Workshop](https://huerfano.us/event/road-and-bridge-workshop-18/) - matched: workshop
+- [Public Works Workshop](https://huerfano.us/event/public-works-workshop-19/) - matched: workshop
+
+### [La Veta Public Library Full Calendar](https://lvpl.org/full-calendar/)
+
+Category: events-calendars. Page status: changed.
+
+- [Walsenburg’s 37th Annual Parade of Lights](https://lvpl.org/events/walsenburgs-37th-annual-parade-of-lights/) - matched: parade
 
 ### [La Veta Creative District Festivals and Signature Events](https://www.lavetacreativedistrict.org/festivals-and-signature-events)
 
@@ -67,4 +71,4 @@ Category: events-calendars. Page status: unchanged.
 
 ## Check Problems
 
-- [Main Street LIVE Events](https://www.mainstreetlive.org/home) - broken; HTTP Error 404: Not Found
+No source check failed.

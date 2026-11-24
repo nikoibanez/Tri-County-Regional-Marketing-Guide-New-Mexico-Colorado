@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-16",
+  "generated_at": "2026-11-24",
   "description": "Controlled search keywords derived from canonical listing fields and current public-page title, metadata, and heading signals.",
   "entries": {
     "the-candy-crate-colfax-retail-sweets": {
@@ -187,9 +187,9 @@
       "final_url": "https://visitangelfirenm.com/listing/allen-fields-sports-complex/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "118732e0284512c4b76bde1d8b6db065737e8083ae732ee4edca5bf77b6029bf",
+      "content_hash": "9508faf6ebf65ac6f83f4701d77c4a0874d1d0458d18da6516d2ecf74683cffc",
       "error": ""
     },
     "travel-guide-alpine-lumber-angel-fire-colfax": {
@@ -388,9 +388,9 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-homes/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-11-04",
-      "content_hash": "77fdf5fa9b7099c53b7af0b050ba8f9c05186d54aa17da9c2e134ce95ba9898e",
+      "content_hash": "b50902093ce30eb79fbc386280e6ec2ca2f753defaeedf1149b08b01d1d6d28f",
       "error": ""
     },
     "yellowpages-lead-angel-fire-homes-real-estate-construction-angel-fire-colfax": {
@@ -532,9 +532,9 @@
       "final_url": "https://visitangelfirenm.com/listing/angel-fire-resort-vacation-rentals/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "cf84d154f4b2bb744443e0488e25c3e302ee3200b2add04b2fd84c5a025c8dbe",
+      "content_hash": "a5795bf1a4cfda07872cd8317b006e8b5ead145cc6ab23472455cfd084ed5b4a",
       "error": ""
     },
     "angel-fire-rv-resort-colfax-lodging": {
@@ -549,12 +549,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/angel-fire-rv-resort/",
       "final_url": "https://angelfirechamber.org/business/angel-fire-rv-resort/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 404,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "error": "HTTP Error 404: Not Found"
     },
     "yellowpages-lead-angel-fire-small-animal-hospital-angel-fire-colfax": {
       "resource_name": "Angel Fire Small Animal Hospital",
@@ -638,9 +638,9 @@
       "final_url": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
-      "content_hash": "0e81a45b75a2cdf42b07d80b9798042083b59548a99f633b573ec677521cf9c2",
+      "content_hash": "b655ade669a9748aed77d51576ffb36a3e1b64566056b21dfc46438edf2fc351",
       "error": ""
     },
     "travel-guide-angel-s-outback-adventures-angel-fire-colfax": {
@@ -657,9 +657,9 @@
       "final_url": "https://visitangelfirenm.com/listing/angels-outback-adventures-llc/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-10-26",
-      "content_hash": "0e81a45b75a2cdf42b07d80b9798042083b59548a99f633b573ec677521cf9c2",
+      "content_hash": "b655ade669a9748aed77d51576ffb36a3e1b64566056b21dfc46438edf2fc351",
       "error": ""
     },
     "travel-guide-arias-taqueria-food-truck-angel-fire-colfax": {
@@ -678,9 +678,9 @@
       "final_url": "https://visitangelfirenm.com/listing/arias-taqueria-food-truck/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "1bdda63cf54ab0d8123d84ea566dac59172a7d309cbced4f0353107973cc280a",
+      "content_hash": "d33f708664b0814b3e5adcb932bf462241f984dba89c773ab95f6b8add4a07e5",
       "error": ""
     },
     "art-up-northern-new-mexico-colfax-arts-nonprofit-artist-membership-organiz": {
@@ -701,7 +701,7 @@
       "final_url": "https://artup-nnm.org",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "d1b27f8803a8c2eadce5c5618cb16ee86d0ff19b95343f8279d23ee9b767974a",
       "error": ""
@@ -716,9 +716,9 @@
       "final_url": "https://visitangelfirenm.com/listing/aspen-gold-laundromat/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "85fbd642c7fe9e7b455cb9ff8efdacc2296881a634d9ff2c94e38c194fe4d0d4",
+      "content_hash": "85d1edc7c8d4864992f15bfe5794a7a014c00265ca2573727c9c60444ff2a2f5",
       "error": ""
     },
     "travel-guide-aspen-springs-at-angel-fire-angel-fire-colfax": {
@@ -931,9 +931,9 @@
       "final_url": "https://visitangelfirenm.com/listing/ski-tech-bluebird-mountain-sports/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "b71bca158cd47715a360915c4454f0ebeeba7cbc91a5b6f8569d844e2b6e834c",
+      "content_hash": "21f2f7622ff11108cffbafdfe93500982987cd0c6e9902d1e6bc16324752b32d",
       "error": ""
     },
     "yellowpages-lead-bob-s-yard-angel-fire-colfax": {
@@ -963,12 +963,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/bobcat-pass-wilderness-adventures/",
       "final_url": "https://angelfirechamber.org/business/bobcat-pass-wilderness-adventures/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 404,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "error": "HTTP Error 404: Not Found"
     },
     "yellowpages-lead-bond-electric-angel-fire-colfax": {
       "resource_name": "Bond Electric Inc.",
@@ -1016,9 +1016,9 @@
       "final_url": "https://visitangelfirenm.com/listing/cabin-comforts/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "f8fe8a03ef9e18782255f2607c31a7d6cb74ca8e4d2edf07bd96a39fb7308d72",
+      "content_hash": "312c32c72a3a71c02e22775f1cde6dc458d42110b7800d5d7d596aabdfefcdab",
       "error": ""
     },
     "travel-guide-capulin-camp-and-rv-park-angel-fire-colfax": {
@@ -1054,12 +1054,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/category/gift-shops/",
       "final_url": "https://angelfirechamber.org/business/category/gift-shops/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 404,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "error": "HTTP Error 404: Not Found"
     },
     "travel-guide-chisum-group-berkshire-hathaway-homeservices-angel-fire-colfax": {
       "resource_name": "Chisum Group | Berkshire Hathaway HomeServices",
@@ -1105,9 +1105,9 @@
       "final_url": "https://visitangelfirenm.com/listing/cimarron-canyon-state-park/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "71fd473eabf486da40bf8708db9296b824a6dfa4b1514b2edaed997814dcb974",
+      "content_hash": "df721d2507107743b5f70062848299ea544e6264d8f38f5a4735f24a8d20c0cb",
       "error": ""
     },
     "travel-guide-clean-af-angel-fire-colfax": {
@@ -1154,9 +1154,9 @@
       "final_url": "https://visitangelfirenm.com/listing/coldwell-banker-mountain-properties/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-10-26",
-      "content_hash": "1a066ab9a30342add5680da2c209ca2a4f37922baf9233a88446b2cc208e4cf4",
+      "content_hash": "9bac65f60f4f91576126a91be728edb586cd14d0b9c462878e18f5137c126beb",
       "error": ""
     },
     "travel-guide-community-center-park-angel-fire-colfax": {
@@ -1169,9 +1169,9 @@
       "final_url": "https://visitangelfirenm.com/listing/community-center-park/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "62ef23dc56ba26a545b18b9aeda49d048354f9da39e50305ae6d09373527df98",
+      "content_hash": "01901919372e59561b06726190d076da456d4c8645ec2eda2e05a9841d4a8c79",
       "error": ""
     },
     "cottam-s-of-angel-fire-colfax-retail": {
@@ -1191,9 +1191,9 @@
       "final_url": "https://visitangelfirenm.com/listing/cottams-of-angel-fire/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-10-26",
-      "content_hash": "54f9c8701cca8e17bd84460184f5472528f70ccb7b6c607e47e0ebc9c3891a2d",
+      "content_hash": "87b9a0e3cf6b9d312a9a0358e1ec4a2cd3fe9eb49c9f8f59902a816975661945",
       "error": ""
     },
     "travel-guide-coyote-creek-state-park-angel-fire-colfax": {
@@ -1210,9 +1210,9 @@
       "final_url": "https://visitangelfirenm.com/listing/coyote-creek-state-park/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-10-26",
-      "content_hash": "c1d0a388f53b81cba9defe41eace8f960cc9bf0ab92beda03805d154ad095ed7",
+      "content_hash": "463d56f32545f560045dcb9c889a535678904ff78c98b4bdd67c9c06fa32380f",
       "error": ""
     },
     "travel-guide-dan-s-flooring-and-window-covering-angel-fire-colfax": {
@@ -1348,9 +1348,9 @@
       "final_url": "https://visitangelfirenm.com/listing/elevated-pour/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "13391812352d7464f58e3a8639edf0e7140b40bea704015a4732d14aa0b4358d",
+      "content_hash": "6c87bd75476512fcd7ef33d26bc0ce98ae88a715a1124180455d1c75e7f781b4",
       "error": ""
     },
     "yellowpages-lead-elks-lodge-angel-fire-colfax": {
@@ -1508,9 +1508,9 @@
       "final_url": "https://visitangelfirenm.com/listing/four-seasons-of-angel-fire/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "d45b64b107ad7aa90b90f814ef4cdf6c8c2194683021e47b63811bdcc7ede135",
+      "content_hash": "cbfccf0490d87743c2b7011027556b990647453c89116f1d2a68b3c719fc4366",
       "error": ""
     },
     "travel-guide-frontier-park-angel-fire-colfax": {
@@ -1679,12 +1679,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/category/dining/",
       "final_url": "https://angelfirechamber.org/business/category/dining/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 404,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "error": "HTTP Error 404: Not Found"
     },
     "j-binford-bell-studio-and-gallery-colfax-artist-studio-gallery": {
       "resource_name": "J. Binford-Bell Studio & Gallery",
@@ -1730,9 +1730,9 @@
       "final_url": "https://visitangelfirenm.com/listing/jc-critter-control-llc/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "35284b2be9489ee15c28e09bf530bd24b8074a939a2ac87d729e359647a41937",
+      "content_hash": "7ade9c149c88548cef69fb1d406a47c6c6b40dc827f18f20c3741c1b2ed3f3a6",
       "error": ""
     },
     "travel-guide-jeanette-s-specialty-foods-and-catering-angel-fire-colfax": {
@@ -1847,9 +1847,9 @@
       "final_url": "https://visitangelfirenm.com/listing/las-petacas-campground/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "d00ed88c60c7d1a691ecf1e9c0e9b1318f4b0954e6022883115956564ac607ba",
+      "content_hash": "1783cc455fdff06ad7fc70536c740d4e31e7f41719da89bba08ece6454429ab0",
       "error": ""
     },
     "travel-guide-legacy-silver-angel-fire-colfax": {
@@ -1887,9 +1887,9 @@
       "final_url": "https://visitangelfirenm.com/listing/legends-bar-and-grill/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "bb757637600ac34b652166fa31e8bd15900ee1571a7511f3d07fb82cd222a998",
+      "content_hash": "b84c1e4eb36dbb21fe539edb0febf61ac5b4cc90b849d4db9b6e361e3e081bc2",
       "error": ""
     },
     "travel-guide-legends-grill-angel-fire-colfax": {
@@ -1985,9 +1985,9 @@
       "final_url": "https://visitangelfirenm.com/listing/lindsey-vacation-rentals/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-11-04",
-      "content_hash": "4d519e7d963a1e6cf6dabfed2514e451cf986e74f37554dc32fae4e86ac2701a",
+      "content_hash": "3398e66fb6aee7af05714179943c4c9a6f0e99c5ec33c9cbe7e4b0aabeb2a36c",
       "error": ""
     },
     "yellowpages-lead-line-of-sight-surveying-angel-fire-colfax": {
@@ -2021,7 +2021,7 @@
       "final_url": "https://www.startupspace.app/resource?page=62",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -2381,9 +2381,9 @@
       "final_url": "https://visitangelfirenm.com/listing/mountain-serenity-rentals/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-10-26",
-      "content_hash": "8b4c480da4344f4a07821385d8de4cab232ab1dbd06a993eb3f339b17b7c73c9",
+      "content_hash": "24166ebf755cb2cf68dc403d22dcf61c8b7c0c66375e1a6d1a7945424ac7ba8a",
       "error": ""
     },
     "yellowpages-lead-mountain-sports-angel-fire-colfax": {
@@ -2416,12 +2416,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/mountain-sports-of-angel-fire/",
       "final_url": "https://angelfirechamber.org/business/mountain-sports-of-angel-fire/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 404,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "",
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "error": "HTTP Error 404: Not Found"
     },
     "mountain-supply-true-value-colfax-retail-hardware": {
       "resource_name": "Mountain Supply True Value",
@@ -2437,9 +2437,9 @@
       "final_url": "https://visitangelfirenm.com/listing/mountain-supply-true-value/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "cad315b3c4b638c4057ab8655ae9e7eefe83fccc29d6ec4f836a4b26d44152d5",
+      "content_hash": "ad145caf23fcc33cc76206660e7fbe758908146056b32a69222f9f9cc6ebaa97",
       "error": ""
     },
     "travel-guide-mountain-view-event-center-angel-fire-colfax": {
@@ -2479,12 +2479,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/music-from-angel-fire/",
       "final_url": "https://angelfirechamber.org/business/music-from-angel-fire/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 404,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "",
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "error": "HTTP Error 404: Not Found"
     },
     "yellowpages-lead-napa-auto-parts-professional-auto-parts-service-repair-angel-fire-colfax": {
       "resource_name": "Napa Auto Parts - Professional Auto Parts Service & Repair",
@@ -2540,9 +2540,9 @@
       "final_url": "https://visitangelfirenm.com/listing/north-country-real-estate/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "c7e19823db8c684bd3f9cf283cede821d5077e81939e159e54070b53d34d2bb7",
+      "content_hash": "282d971e847fb7986bacb752897fbf70e73076650e9187a9a902b1241ddeab03",
       "error": ""
     },
     "yellowpages-lead-northeastern-construction-angel-fire-colfax": {
@@ -2637,9 +2637,9 @@
       "final_url": "https://visitangelfirenm.com/listing/olympic-park/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-10-26",
-      "content_hash": "f1da5a59d6851530f8d67b13783775c5390a859660130dd1cd25236ae7e60e67",
+      "content_hash": "4513c6dfc58c4a316f968831fe4108962c0170ea8782a85e67ce4f6823bccda9",
       "error": ""
     },
     "travel-guide-one-people-s-kitchen-angel-fire-colfax": {
@@ -2658,9 +2658,9 @@
       "final_url": "https://visitangelfirenm.com/listing/one-peoples-kitchen/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "df39b075d4638f99b836ff0aef2f245228b01971dbe8e5d37eb448c9ec98ce08",
+      "content_hash": "7dc4f1c2ea65a9f076a537e9b0310ed7a50db36e1aef5c4129d3e0513e342b80",
       "error": ""
     },
     "travel-guide-par-and-grill-angel-fire-colfax": {
@@ -2731,9 +2731,9 @@
       "final_url": "https://visitangelfirenm.com/listing/pine-peak-home-decor/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-10-26",
-      "content_hash": "f83a5c6c4e09791dcbb074cd203e21cea4dfd826e1f72a3a8b0b2a65bbc721d1",
+      "content_hash": "3aa929b4c2a1cf2589a3118de736e7eb36629687705d665406d9eaad062a7848",
       "error": ""
     },
     "travel-guide-pizza-stop-angel-fire-colfax": {
@@ -2911,9 +2911,9 @@
       "final_url": "https://visitangelfirenm.com/listing/re-max-mountain-realty/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "f04965112e3399dd62f256431900f27b4d13d6af80d8677f9dc9d2a9167bd91a",
+      "content_hash": "25ae48bad4c2965cb8ffc0b3799dbec10ea6bf50d5a936935ad3f6f4a2868200",
       "error": ""
     },
     "travel-guide-resort-properties-of-angel-fire-angel-fire-colfax": {
@@ -2984,12 +2984,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://angelfirechamber.org/business/road-runner-tours-ltd/",
       "final_url": "https://angelfirechamber.org/business/road-runner-tours-ltd/",
-      "status": "source_unavailable",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 404,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "",
-      "error": "Publisher page shows a maintenance or dissolution notice, not a listing."
+      "error": "HTTP Error 404: Not Found"
     },
     "yellowpages-lead-robles-auto-glass-angel-fire-colfax": {
       "resource_name": "Robles Auto Glass",
@@ -3031,9 +3031,9 @@
       "final_url": "https://visitangelfirenm.com/listing/rockies-market/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "97f2b9ac4fe91c4dcf360004924ff8ea9f70a1c880139080e3d7f88f92375997",
+      "content_hash": "b456b665ff17f924f4a23336d6e1fd2f691cb34da44e46693c534ca0d7fee89a",
       "error": ""
     },
     "yellowpages-lead-rustic-chalet-angel-fire-colfax": {
@@ -3174,9 +3174,9 @@
       "final_url": "https://visitangelfirenm.com/listing/slope-side-sports/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-10-26",
-      "content_hash": "f937454d1a3d3016259bebde1f78846bf229efa4053b4d4af746e2d7bda8bf01",
+      "content_hash": "e7ba1614222264a9b3fbe1346e99f305e921ebf4fee6654c57093e81bc7f793c",
       "error": ""
     },
     "travel-guide-smoke-rings-bbq-angel-fire-colfax": {
@@ -3232,9 +3232,9 @@
       "final_url": "https://visitangelfirenm.com/listing/snowblaze-ski-shop/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-10-26",
-      "content_hash": "47d892fa159b2420fdac6c291074e8f0b529b4a09a0d5e55b6fcb81b5e39a8cc",
+      "content_hash": "65860ee12031d19468ff6fe2da95ea45d22e72610b10f8dbd0ebc21a70d60e18",
       "error": ""
     },
     "travel-guide-snowfish-ski-and-outdoor-formerly-cottam-s-of-angel-fire-angel-fire-colfax": {
@@ -3344,9 +3344,9 @@
       "final_url": "https://visitangelfirenm.com/listing/subway-lowes-pay-save/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "5e915d6377a102eb1131c4836294b009f6add398526c9b2f82c7a73537e7bceb",
+      "content_hash": "cabd151766f5d700c9af8c74cdb22af6264115b7cd87c3f958025318b11fa60a",
       "error": ""
     },
     "travel-guide-summit-haus-angel-fire-colfax": {
@@ -3733,9 +3733,9 @@
       "final_url": "https://visitangelfirenm.com/listing/the-vietnam-veterans-memorial/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "ac61540a2d19d5055a65a511ba7af2ea87aa3b7dad611a4c5c3778b450dcaa00",
+      "content_hash": "b92f338321ac79c67b22339b91160d342cdf4e4511e8367c772bfad327c2b1bf",
       "error": ""
     },
     "yellowpages-lead-village-church-angel-fire-colfax": {
@@ -3822,9 +3822,9 @@
       "final_url": "https://visitangelfirenm.com/catering/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "29052d0347062fe6b57fa30b48720b6656b274efbb8f4b08462bef400e469d09",
+      "content_hash": "0bfffc235e8693140757475badcab30245aea0088d1f598df89135a0f4533458",
       "error": ""
     },
     "travel-guide-weezie-s-wild-rides-angel-fire-colfax": {
@@ -3841,9 +3841,9 @@
       "final_url": "https://visitangelfirenm.com/listing/weezies-wild-rides/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-10-26",
-      "content_hash": "1e2ae6de568afb9a36c56545b899003152aefedf2822a621fbfa028082aaaf95",
+      "content_hash": "709025b145d8f3ca2764e1638aea55fea5e2081754a9b7886cad29b0ee4ff3a3",
       "error": ""
     },
     "travel-guide-wende-woolley-photography-angel-fire-colfax": {
@@ -4000,9 +4000,9 @@
       "final_url": "https://visitangelfirenm.com/listing/zia-bar/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-11-04",
-      "content_hash": "0db3681ccf6aca5df7ca9472f7fccd76ba1e2badedbb7aa7fe13f6a0f41608c8",
+      "content_hash": "68debf7216a0911eff507561c4347465ec5ea455141ce9a6569099433c3799d2",
       "error": ""
     },
     "casa-del-gavilan-historic-inn-colfax-lodging": {
@@ -4968,7 +4968,7 @@
       "final_url": "https://www.exploreraton.com/eat",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "8eb9df637a9e88de0ed33684d01faa955d41952532b914f0be14885a74960855",
       "error": ""
@@ -5049,12 +5049,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
       "final_url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
-      "status": "checked_no_name_match",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 403,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "6b401e7e1aeb9ae2f8ff4be299f021082c4f10d826db08606d087243af7b9f2d",
-      "error": ""
+      "content_hash": "",
+      "error": "HTTP Error 403: Forbidden"
     },
     "travel-guide-alfonso-s-mexican-food-raton-colfax": {
       "resource_name": "Alfonso's Mexican Food",
@@ -5070,7 +5070,7 @@
       "final_url": "https://www.exploreraton.com/eat",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "8eb9df637a9e88de0ed33684d01faa955d41952532b914f0be14885a74960855",
       "error": ""
@@ -5204,7 +5204,7 @@
       "final_url": "https://locations.arbys.com/nm/raton/415-clayton-hwy.html",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -5223,7 +5223,7 @@
       "final_url": "https://www.exploreraton.com/eat",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "8eb9df637a9e88de0ed33684d01faa955d41952532b914f0be14885a74960855",
       "error": ""
@@ -5287,7 +5287,7 @@
       "final_url": "https://www.exploreraton.com/history",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "91ddbf03b6239a28ccd2bff82262069cfdf6dd95768e0a7dffb112d8a93589f8",
       "error": ""
@@ -5376,7 +5376,7 @@
       "final_url": "https://www.exploreraton.com/eat",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "8eb9df637a9e88de0ed33684d01faa955d41952532b914f0be14885a74960855",
       "error": ""
@@ -5533,7 +5533,7 @@
       "final_url": "https://carlswansongallery.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -5976,7 +5976,7 @@
       "final_url": "https://www.exploreraton.com/eat",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "8eb9df637a9e88de0ed33684d01faa955d41952532b914f0be14885a74960855",
       "error": ""
@@ -6091,7 +6091,7 @@
       "final_url": "https://www.flatmountaintrading.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "d24fdc5ac3f655067b4380aa050532210299ee3dae23f96b1060968fe1e04172",
       "error": ""
@@ -6321,7 +6321,7 @@
       "final_url": "https://www.exploreraton.com/eat",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "8eb9df637a9e88de0ed33684d01faa955d41952532b914f0be14885a74960855",
       "error": ""
@@ -6385,7 +6385,7 @@
       "final_url": "https://www.elratonmediaworks.org",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "a42601932138813406fcdd10136ffd90157b530b45c2f7387acf262ab9e213dc",
       "error": ""
@@ -6404,7 +6404,7 @@
       "final_url": "https://www.exploreraton.com/arts-culture",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "2b0dba01c4e9e75dcabbf229b5a3aa0b4258f5a9bc7e0a6eb8075dc93c122d2d",
       "error": ""
@@ -6503,7 +6503,7 @@
       "final_url": "https://www.exploreraton.com/arts-culture",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "2b0dba01c4e9e75dcabbf229b5a3aa0b4258f5a9bc7e0a6eb8075dc93c122d2d",
       "error": ""
@@ -6705,7 +6705,7 @@
       "final_url": "https://www.exploreraton.com/history",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "91ddbf03b6239a28ccd2bff82262069cfdf6dd95768e0a7dffb112d8a93589f8",
       "error": ""
@@ -6739,12 +6739,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.newmexico.org/frontier-trails-and-tracks/",
       "final_url": "https://www.newmexico.org/frontier-trails-and-tracks/",
-      "status": "checked",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 403,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "c8b92039a006da968d486eb05e5d9c6976cc7686d85ad3a87140ebd4c49aac97",
-      "error": ""
+      "content_hash": "",
+      "error": "HTTP Error 403: Forbidden"
     },
     "yellowpages-lead-game-fish-department-raton-colfax": {
       "resource_name": "Game & Fish Department",
@@ -6818,12 +6818,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
       "final_url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
-      "status": "checked_no_name_match",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 403,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "6b401e7e1aeb9ae2f8ff4be299f021082c4f10d826db08606d087243af7b9f2d",
-      "error": ""
+      "content_hash": "",
+      "error": "HTTP Error 403: Forbidden"
     },
     "travel-guide-green-chili-grill-jr-s-raton-colfax": {
       "resource_name": "Green Chili Grill @ JR's",
@@ -7228,7 +7228,7 @@
       "final_url": "https://www.exploreraton.com/arts-culture",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "2b0dba01c4e9e75dcabbf229b5a3aa0b4258f5a9bc7e0a6eb8075dc93c122d2d",
       "error": ""
@@ -7441,7 +7441,7 @@
       "final_url": "https://www.exploreraton.com/eat",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "8eb9df637a9e88de0ed33684d01faa955d41952532b914f0be14885a74960855",
       "error": ""
@@ -7524,7 +7524,7 @@
       "final_url": "https://www.exploreraton.com/eat",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "",
       "content_hash": "8eb9df637a9e88de0ed33684d01faa955d41952532b914f0be14885a74960855",
       "error": ""
@@ -7667,7 +7667,7 @@
       "final_url": "https://www.mcdonalds.com/us/en-us/location/nm/raton/542-clayton-rd/6011.html?cid=RF:YXT:GMB::Clicks",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -7915,12 +7915,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
       "final_url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
-      "status": "checked_no_name_match",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 403,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "6b401e7e1aeb9ae2f8ff4be299f021082c4f10d826db08606d087243af7b9f2d",
-      "error": ""
+      "content_hash": "",
+      "error": "HTTP Error 403: Forbidden"
     },
     "motel-6-travelodge-by-wyndham-raton-colfax-records-needing-manual-verifi": {
       "resource_name": "Motel 6 / Travelodge by Wyndham Raton",
@@ -7955,7 +7955,7 @@
       "final_url": "https://www.exploreraton.com/eat",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "8eb9df637a9e88de0ed33684d01faa955d41952532b914f0be14885a74960855",
       "error": ""
@@ -8065,12 +8065,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.newmexico.org/places-to-visit/regions/northeast/northeast-region-birding-map/",
       "final_url": "https://www.newmexico.org/places-to-visit/regions/northeast/northeast-region-birding-map/",
-      "status": "checked_no_name_match",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 403,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "7f9bdb6519f05164059e8257fff3396819cd3d4a9d44a5ea8d499712133b2a5c",
-      "error": ""
+      "content_hash": "",
+      "error": "HTTP Error 403: Forbidden"
     },
     "travel-guide-nra-whittington-center-pro-shop-raton-colfax": {
       "resource_name": "NRA Whittington Center Pro Shop",
@@ -8105,9 +8105,9 @@
       "final_url": "https://www.sonicdrivein.com/locations/us/nm/raton/327-clayton-road/store-2821/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "b6007a7608149b63c229cbc5205e0dba0e0b2a9b50023bdfd216ac9986d0f34b",
+      "content_hash": "7b62dd786c1e7532e21ae4f03e984baad86d1e3cce39b8393a0720d5178e6f36",
       "error": ""
     },
     "old-pass-gallery-colfax-arts-culture": {
@@ -8657,7 +8657,7 @@
       "final_url": "https://www.ratonnm.gov/business_detail_T7_R36.php",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "166419605a3fc7f33a4be0c4954f770a56810036116bcff60619bb7518084f34",
       "error": ""
@@ -8970,7 +8970,7 @@
       "final_url": "https://www.exploreraton.com/eat",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "8eb9df637a9e88de0ed33684d01faa955d41952532b914f0be14885a74960855",
       "error": ""
@@ -9079,7 +9079,7 @@
       "final_url": "https://www.ratonnm.gov/business_detail_T7_R32.php",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "a75c71abd3bd9f3a0e5d6374a47d1fe492541b3327cf78e7a29f2fefd2e30eb9",
       "error": ""
@@ -9168,7 +9168,7 @@
       "final_url": "https://shulertheater.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "d34b0d50362cf4d68ff141779756fd8269bb645dc011505acd32a333607d808c",
       "error": ""
@@ -9340,12 +9340,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
       "final_url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
-      "status": "checked_no_name_match",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 403,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "6b401e7e1aeb9ae2f8ff4be299f021082c4f10d826db08606d087243af7b9f2d",
-      "error": ""
+      "content_hash": "",
+      "error": "HTTP Error 403: Forbidden"
     },
     "yellowpages-lead-subway-raton-colfax": {
       "resource_name": "Subway",
@@ -9649,12 +9649,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
       "final_url": "https://www.newmexico.org/places-to-visit/regions/northeast/raton/",
-      "status": "checked_no_name_match",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": 403,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "6b401e7e1aeb9ae2f8ff4be299f021082c4f10d826db08606d087243af7b9f2d",
-      "error": ""
+      "content_hash": "",
+      "error": "HTTP Error 403: Forbidden"
     },
     "yellowpages-lead-veterans-of-foreign-wars-raton-colfax": {
       "resource_name": "Veterans of Foreign Wars",
@@ -9798,7 +9798,7 @@
       "final_url": "https://startupspace.app/resource?comm_interest_search%5B0%5D=750&feature_button_show_hide=show&filter_show_hide=show&gray_button_show_hide=show&group_id=NTc5&is_search=1&map_list_type=list&map_view=hide&page=16&resource_type_selection=view_all_resource&search_latitude=34.9727305&search_location=New+Mexico%2C+USA&search_longitude=-105.0323635&search_radius=200",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -10480,7 +10480,7 @@
       "final_url": "https://huerfanofair.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1018)>"
@@ -10669,7 +10669,7 @@
       "final_url": "https://www.chamber.huerfano.org/spanish-peaks-cycling",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "7fc582653cb57f86a0816e26091e4cbbcca6b0d5ec7fecae52fe23a689c75ae7",
       "error": ""
@@ -10780,7 +10780,7 @@
       "final_url": "https://www.cucharalokalhotel.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "4dd3c43738d79c1f6121a3de406953e9d8f52ad707fb3b8bf662d19521ae93ef",
       "error": ""
@@ -10886,7 +10886,7 @@
       "final_url": "https://thedodgetoncreekinn.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "2323b63ab23bed84db609a5140776b6b36e930c6a297a393d4db023a77f8f206",
       "error": ""
@@ -11012,7 +11012,7 @@
       "final_url": "https://www.coloradodirectory.com/lavetacucharachamber/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "07b259e27d85842a9d9160ace65c4f8975fe3dd8e6bec07e8fa7804022125bff",
       "error": ""
@@ -11048,7 +11048,7 @@
       "final_url": "https://www.coloradodirectory.com/stonewall/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "d5bd3c9d2a0f87b4d1341a56dca732b86d53e576e0655585bbbb7c580ebf18ac",
       "error": ""
@@ -11174,7 +11174,7 @@
       "final_url": "https://www.artisansonmain.art/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "7b3855172fc261734475a1ee882ee0b1e524096134f2b5cf52d1fc0d3702be62",
       "error": ""
@@ -11235,7 +11235,7 @@
       "final_url": "https://bigronline.com/locations/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "a1cdf4320c9fbbba2fe3b3e79a630e972b0946681088eb593f1aaf02c415d2a3",
       "error": ""
@@ -11397,7 +11397,7 @@
       "final_url": "https://charlies-market.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'charlies-market.com'. (_ssl.c:1018)>"
@@ -11630,7 +11630,7 @@
       "final_url": "https://franciscofort.org",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1018)>"
@@ -11645,7 +11645,7 @@
       "final_url": "https://huerfano.us",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "28ed4bd287dee254d3aab54e461852475703571f23d22aa4a2eb0e5a3904d53d",
       "error": ""
@@ -12097,7 +12097,7 @@
       "final_url": "https://lavetacountrystore.com/",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -12139,7 +12139,7 @@
       "final_url": "https://www.lavetacreativedistrict.org/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "ed3c1a48431523f18e88191652f07c52960fa1f1d8823b944bf8615cd85a9539",
       "error": ""
@@ -12485,7 +12485,7 @@
       "final_url": "https://thelvesa.org/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -12559,7 +12559,7 @@
       "final_url": "https://www.legendsonmainstreet.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "d5a2d5485df647ec9dd13bfbb88faa595f7ca3ba134ed9066a830d4b1c96d61f",
       "error": ""
@@ -13081,12 +13081,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://www.sammiescampground.com/",
       "final_url": "https://www.sammiescampground.com/",
-      "status": "fetch_error",
-      "status_code": 404,
-      "last_checked": "2026-11-16",
+      "status": "checked",
+      "status_code": 200,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "",
-      "error": "HTTP Error 404: Not Found"
+      "content_hash": "ceb1d127f6b1a47f26f94c6d8303b439c24afa85150327ea419b4e10d8c3c2e7",
+      "error": ""
     },
     "sammie-s-rv-park-huerfano-lodging-rv": {
       "resource_name": "Sammie's RV Park",
@@ -13159,7 +13159,7 @@
       "final_url": "https://www.shalawalla.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "f317369f8a3bd5db3e45b023933f061fc9a8156b75f0765bbdc9abc7144263d9",
       "error": ""
@@ -13182,7 +13182,7 @@
       "final_url": "https://www.shalawalla.com/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "f317369f8a3bd5db3e45b023933f061fc9a8156b75f0765bbdc9abc7144263d9",
       "error": ""
@@ -13262,7 +13262,7 @@
       "final_url": "https://www.skinnysdinerandbar.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -13281,7 +13281,7 @@
       "final_url": "https://spanishpeaksarts.org/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "483914616b7fd81c515aa899e6f157a2af0a4c7525d56d34e0d4140d12b5ee82",
       "error": ""
@@ -13304,7 +13304,7 @@
       "final_url": "https://spanishpeaksarts.org/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "483914616b7fd81c515aa899e6f157a2af0a4c7525d56d34e0d4140d12b5ee82",
       "error": ""
@@ -13327,7 +13327,7 @@
       "final_url": "https://spanishpeaksarts.org/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "483914616b7fd81c515aa899e6f157a2af0a4c7525d56d34e0d4140d12b5ee82",
       "error": ""
@@ -13348,7 +13348,7 @@
       "final_url": "https://spanishpeaksarts.org/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "483914616b7fd81c515aa899e6f157a2af0a4c7525d56d34e0d4140d12b5ee82",
       "error": ""
@@ -13424,7 +13424,7 @@
       "final_url": "https://townoflaveta-co.gov/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "",
       "content_hash": "965736558688749afda9e0554f620aa74247562d1a454e6c5b632370c7e23285",
       "error": ""
@@ -13610,7 +13610,7 @@
       "final_url": "https://www.wervchampions.com/communities/we-rv-champions-of-la-veta/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "",
       "content_hash": "1e38ffa7ce33933fab1301d97288a04ef8b8fe6b979d3ce1267f976b588bc848",
       "error": ""
@@ -13776,7 +13776,7 @@
       "final_url": "https://awrestaurants.com/locations/colorado/walsenburg/455-us-highway-85",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "a968884abc710f150a05d6bf2c2cd85d59dc3a206dee421fa18ca4a667194d74",
       "error": ""
@@ -13936,7 +13936,7 @@
       "final_url": "https://anchormotelandcottages.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -5] No address associated with hostname>"
@@ -14156,7 +14156,7 @@
       "final_url": "https://www.bestwestern.com/en_US/book/hotels-in-walsenburg/best-western-rambler/propertyCode.06038.html",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -14392,7 +14392,7 @@
       "final_url": "https://www.budhutinc.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "e85bf327449c1a2bf2543869b6e25f2edaf84a05fbb538ad741ba70356273506",
       "error": ""
@@ -14460,7 +14460,7 @@
       "final_url": "https://c1btrueorganics.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -5] No address associated with hostname>"
@@ -14494,7 +14494,7 @@
       "final_url": "https://www.cannacity.us/home",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -14689,7 +14689,7 @@
       "final_url": "https://cityofwalsenburg.colorado.gov",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -14980,12 +14980,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://craftycanarybrewery.com/",
       "final_url": "https://craftycanarybrewery.com/",
-      "status": "checked",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": null,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "f54672fcf74fffb233db57d0c7f05ef5d7ef6603ce771332d04a0302ad94a5d5",
-      "error": ""
+      "content_hash": "",
+      "error": "<urlopen error _ssl.c:1001: The handshake operation timed out>"
     },
     "travel-guide-cross-country-ski-walsenburg-huerfano": {
       "resource_name": "Cross-Country Ski",
@@ -15241,7 +15241,7 @@
       "final_url": "https://www.walsenburgmercantile.com/vendors/dewitt-enterprise",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "dd18ad26ea4e680bd8375226b1859d0214da892c7ccbe85720a71ca4d8fb866d",
       "error": ""
@@ -16139,7 +16139,7 @@
       "final_url": "https://huerfano.us",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "28ed4bd287dee254d3aab54e461852475703571f23d22aa4a2eb0e5a3904d53d",
       "error": ""
@@ -16158,7 +16158,7 @@
       "final_url": "https://huerfano.us",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "28ed4bd287dee254d3aab54e461852475703571f23d22aa4a2eb0e5a3904d53d",
       "error": ""
@@ -16345,7 +16345,7 @@
       "final_url": "https://penningtonplaceinn.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "696093fb13dfbbc3bd7dc0179f1b6e2827ab4107dc5f4f9f7f617899b8c96d53",
       "error": ""
@@ -16400,7 +16400,7 @@
       "final_url": "https://www.coloradodirectory.com/jeeping/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "6e40937838987f3de5711fd39fda1cd92e94ef72c063eae1b8bba834d75f0c37",
       "error": ""
@@ -16638,7 +16638,7 @@
       "final_url": "https://la-h-health.colorado.gov",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -17531,7 +17531,7 @@
       "final_url": "https://www.coloradodirectory.com/Restaurants/restaurantsbytown.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "0e35cd6d96bbe8d46bda21dcd1192aa28777ed22a6d38e7bfd8b33fa15cbdadf",
       "error": ""
@@ -17550,7 +17550,7 @@
       "final_url": "https://www.coloradodirectory.com/Restaurants/restaurantsbytown.html",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "0e35cd6d96bbe8d46bda21dcd1192aa28777ed22a6d38e7bfd8b33fa15cbdadf",
       "error": ""
@@ -18212,7 +18212,7 @@
       "final_url": "https://www.spld.org/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "23d5892acdb98b80c332a8ded6099f6f088c395343e2b603566b085f03818e28",
       "error": ""
@@ -18265,7 +18265,7 @@
       "final_url": "https://www.sprhc.org/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "9a7e04483f9d81f688fadaa13d5ca60f64a9c31d5b29738fda9ba7cffda004f1",
       "error": ""
@@ -18299,7 +18299,7 @@
       "final_url": "https://www.sprhc.org/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "9a7e04483f9d81f688fadaa13d5ca60f64a9c31d5b29738fda9ba7cffda004f1",
       "error": ""
@@ -19309,7 +19309,7 @@
       "final_url": "https://aguilarcountrycottages.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -19565,7 +19565,7 @@
       "final_url": "https://aguilarstation.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -19795,7 +19795,7 @@
       "final_url": "https://www.trinidadcreativedistrict.org/2026-get-lit-literary-festival",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "ff0b6d572805396d57b018ea785b7a1f9e43f9f0737565fed96ca4774ddae7a7",
       "error": ""
@@ -19814,7 +19814,7 @@
       "final_url": "https://221bgallery.com/",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -19852,7 +19852,7 @@
       "final_url": "https://armitchellmuseum.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "b11097754765e6144ec18ddef5ed829e3fb1054504b64fdfcf1621699eb03179",
       "error": ""
@@ -20138,7 +20138,7 @@
       "final_url": "https://www.coloradodirectory.com/nationalparks/bentsfort.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "bc96abe6f313b9d6ad7af4d78dd252943e3f765d10d151418cc5381620940fa9",
       "error": ""
@@ -20352,7 +20352,7 @@
       "final_url": "https://boom-noodles.com",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -20539,7 +20539,7 @@
       "final_url": "https://cawthonpark.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cawthonpark.com'. (_ssl.c:1018)>"
@@ -20954,7 +20954,7 @@
       "final_url": "https://www.corazongallery.org/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "0ebbed758d3acfc6e2ea19e6376fca2fed767b1717228b2ea2c9df68e0cbd00f",
       "error": ""
@@ -20975,7 +20975,7 @@
       "final_url": "https://www.corazongallery.org/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "0ebbed758d3acfc6e2ea19e6376fca2fed767b1717228b2ea2c9df68e0cbd00f",
       "error": ""
@@ -21422,12 +21422,12 @@
       "blocked_source_keywords": [],
       "source_url": "https://dougandlori.art/",
       "final_url": "https://dougandlori.art/",
-      "status": "checked_no_name_match",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "fetch_error",
+      "status_code": null,
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
-      "content_hash": "b40b097862f3247cb771b8ec44853eb2ca85c14219188b4648ac839ec6955ba0",
-      "error": ""
+      "content_hash": "",
+      "error": "<urlopen error _ssl.c:1001: The handshake operation timed out>"
     },
     "travel-guide-downhill-skiing-and-snowboarding-trinidad-las-animas": {
       "resource_name": "Downhill Skiing & Snowboarding",
@@ -22004,7 +22004,7 @@
       "final_url": "https://www.glutenfreeinthe303.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "7c3f5fc681dbf9ade8260961e54fe0e2c3a7c3ad625e2be9252b6547ce9d92ea",
       "error": ""
@@ -22308,7 +22308,7 @@
       "final_url": "https://hoehnesd.org",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "b9cd6b5207d0981512ee03ee8d8ada407abb754ee17504156d64dbcd74a60cec",
       "error": ""
@@ -22629,7 +22629,7 @@
       "final_url": "https://www.coloradodirectory.com/jeeping/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "6e40937838987f3de5711fd39fda1cd92e94ef72c063eae1b8bba834d75f0c37",
       "error": ""
@@ -22725,11 +22725,11 @@
       "blocked_source_keywords": [],
       "source_url": "https://kangaroocoffeellc.com",
       "final_url": "https://kangaroocoffeellc.com",
-      "status": "checked",
-      "status_code": 200,
-      "last_checked": "2026-11-04",
+      "status": "checked_no_name_match",
+      "status_code": 202,
+      "last_checked": "2026-11-24",
       "last_changed": "",
-      "content_hash": "cace8315feb36ea4ae00094bacdb874a7c9ba8c983e30bfbecc3dda8a16f7ebe",
+      "content_hash": "",
       "error": ""
     },
     "travel-guide-kangaroo-coffee-food-court-at-marketplace-trinidad-las-animas": {
@@ -23137,7 +23137,7 @@
       "final_url": "https://www.luckybluetattootrinidad.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "2b363af0a22fe42f8477797abc7f9d8ac06c2f090b23f2595e0bdfeee79ff110",
       "error": ""
@@ -23264,7 +23264,7 @@
       "final_url": "https://www.marketplacegallery.net",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -23362,7 +23362,7 @@
       "final_url": "https://missionatthebell.com",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1018)>"
@@ -23964,7 +23964,7 @@
       "final_url": "https://www.coloradodirectory.com/nationalparks/ratonmesa.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "e9945ee1f364b0f957a7510dd228563839d4af85001cfdf9fc19d9a3ee39df03",
       "error": ""
@@ -24015,7 +24015,7 @@
       "final_url": "https://www.coloradodirectory.com/Restaurants/restaurantsbytown.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "0e35cd6d96bbe8d46bda21dcd1192aa28777ed22a6d38e7bfd8b33fa15cbdadf",
       "error": ""
@@ -24034,7 +24034,7 @@
       "final_url": "https://www.coloradodirectory.com/Restaurants/restaurantsbytown.html",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "0e35cd6d96bbe8d46bda21dcd1192aa28777ed22a6d38e7bfd8b33fa15cbdadf",
       "error": ""
@@ -24117,7 +24117,7 @@
       "final_url": "https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html",
       "status": "fetch_error",
       "status_code": 404,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 404: Not Found"
@@ -24691,7 +24691,7 @@
       "final_url": "https://www.coloradodirectory.com/stonewall/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
       "content_hash": "d5bd3c9d2a0f87b4d1341a56dca732b86d53e576e0655585bbbb7c580ebf18ac",
       "error": ""
@@ -24767,7 +24767,7 @@
       "final_url": "https://www.tabularasa.gallery",
       "status": "fetch_error",
       "status_code": null,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "<urlopen error [Errno -2] Name or service not known>"
@@ -25235,7 +25235,7 @@
       "final_url": "https://www.coloradodirectory.com/costateparks/trinidad.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "8e4fba45eb0ad9504eccce2585ff9485451993010e33d942a97d07bcfc33fecb",
       "error": ""
@@ -25394,7 +25394,7 @@
       "final_url": "https://trinidadstate.edu/makerspace/index.html",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "44891ec5f8230d059eaaf6d70c67ab87db30eec739991761f30c15a25a737077",
       "error": ""
@@ -25992,7 +25992,7 @@
       "final_url": "https://oedit.colorado.gov/colorado-creative-districts",
       "status": "fetch_error",
       "status_code": 403,
-      "last_checked": "2026-11-16",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "",
       "error": "HTTP Error 403: Forbidden"
@@ -26445,7 +26445,7 @@
       "final_url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "93bc432f5c56eec06d243a96b61642634ec94f1dab68bd7ae7e029bcf98a2995",
       "error": ""
@@ -26507,7 +26507,7 @@
       "final_url": "https://edd.newmexico.gov/divisions-and-offices/creative-industries/creative-industries-resource-center/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-07-22",
       "content_hash": "93bc432f5c56eec06d243a96b61642634ec94f1dab68bd7ae7e029bcf98a2995",
       "error": ""
@@ -27360,9 +27360,9 @@
       "final_url": "https://worldjournalnewspaper.com/",
       "status": "checked",
       "status_code": 200,
-      "last_checked": "2026-10-26",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-08-19",
-      "content_hash": "4c387756530816d6f99ce57d0ed451131126967ee3c1384811b84a39982e0a92",
+      "content_hash": "6b1de4177d2e71febae2fd64caa57e2684d73efdcb65c06b051209cd76b96c4c",
       "error": ""
     },
     "bearly-awake-coffee-colfax-red-river": {
@@ -27479,7 +27479,7 @@
       "final_url": "https://canyonsandplains.org/destination-item/las-animas-county/",
       "status": "checked_no_name_match",
       "status_code": 200,
-      "last_checked": "2026-11-04",
+      "last_checked": "2026-11-24",
       "last_changed": "2026-11-04",
       "content_hash": "796f962181934222da4f723947fea468c092f820e8f8179c1d32ecc842015b35",
       "error": ""

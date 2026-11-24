@@ -1,32 +1,32 @@
 {
-  "generated_at": "2026-11-16T23:41:17.513513+00:00",
+  "generated_at": "2026-11-24T02:02:06.142712+00:00",
   "source": "dist/tri-county-netlify-guide-deep/data/guide-data.json",
   "summary": {
     "entries": 1371,
     "connection_status_counts": {
       "address-only": 19,
       "contact-only": 55,
-      "direct-live": 181,
-      "direct-unconfirmed": 23,
-      "no-online-link": 58,
-      "profile-live": 1033,
-      "profile-unconfirmed": 2
+      "direct-live": 172,
+      "direct-unconfirmed": 31,
+      "no-online-link": 78,
+      "profile-live": 1005,
+      "profile-unconfirmed": 11
     },
-    "direct_website_candidates": 206,
-    "animated_business_connections": 137,
-    "without_any_url": 132,
-    "without_any_contact_path": 58,
-    "unique_urls_checked": 604,
+    "direct_website_candidates": 207,
+    "animated_business_connections": 131,
+    "without_any_url": 131,
+    "without_any_contact_path": 78,
+    "unique_urls_checked": 607,
     "url_check_counts": {
-      "access_blocked": 10,
-      "broken": 2,
-      "network_error": 16,
-      "ok": 512,
-      "redirect": 61,
+      "access_blocked": 21,
+      "broken": 72,
+      "network_error": 23,
+      "ok": 408,
+      "redirect": 80,
       "tls_error": 3
     },
-    "confirmed_broken_urls": 2,
-    "script_access_limited": 13
+    "confirmed_broken_urls": 72,
+    "script_access_limited": 24
   },
   "detail_files": {
     "status": "data/directory-connectivity-status.json",

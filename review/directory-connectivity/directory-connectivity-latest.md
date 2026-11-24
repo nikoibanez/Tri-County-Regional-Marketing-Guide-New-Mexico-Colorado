@@ -1,30 +1,90 @@
 # Directory Online Connection Review
 
-Generated: 2026-11-16T23:41:17.513513+00:00
+Generated: 2026-11-24T02:02:06.142712+00:00
 
 This review distinguishes a first-party website from a hosted directory, tourism page, social profile, email, phone, street address, or missing contact route. An HTTP response does not prove that an organization is active or that page content is current.
 
 ## Summary
 
 - Published directory entries reviewed: 1371
-- First-party website candidates: 206
-- Live first-party business links eligible for the public animation: 137
-- Live direct websites: 181
-- Direct website links needing a normal-browser check: 23
-- Live hosted profiles or directory pages: 1033
-- Hosted links needing a normal-browser check: 2
+- First-party website candidates: 207
+- Live first-party business links eligible for the public animation: 131
+- Live direct websites: 172
+- Direct website links needing a normal-browser check: 31
+- Live hosted profiles or directory pages: 1005
+- Hosted links needing a normal-browser check: 11
 - Entries with contact details but no URL: 74
-- Entries with no online or direct contact path: 58
-- Unique URLs checked: 604
-- Confirmed broken URLs: 2
-- Script-access limits such as 403 or TLS errors: 13
+- Entries with no online or direct contact path: 78
+- Unique URLs checked: 607
+- Confirmed broken URLs: 72
+- Script-access limits such as 403 or TLS errors: 24
 
 The companion CSV contains all entries and their assigned connection group.
 
 ## Confirmed Broken Listing URLs
 
-- Main Street LIVE (Trinidad): https://www.mainstreetlive.org/
-- Sammie's Motel & RV Park (La Veta): https://www.sammiescampground.com/
+- Advanced Air, LLC (Angel Fire): https://angelfirechamber.org/business/advanced-air/
+- All Seasons Gift Shop (Raton): https://allseasonsgiftshop.business.site/
+- Angel Fire Chamber Artists, Galleries, and Studios Directory (Angel Fire): https://angelfirechamber.org/business/category/artists-galleries-studios/
+- Angel Fire Resort (Angel Fire): https://angelfirechamber.org/business/hotels-motels-lodges/, https://angelfirechamber.org/business/category/activities-recreation/
+- Angel Fire Resort Hotel & Conference Center (Angel Fire): https://angelfirechamber.org/business/angel-fire-resort-2/, https://angelfirechamber.org/business/category/conference-center/
+- Angel Fire RV Resort (Angel Fire): https://angelfirechamber.org/business/angel-fire-rv-resort/, https://angelfirechamber.org/business/category/accommodations-lodging/, https://angelfirechamber.org/business/category/campgrounds-rv-parks/
+- Angel's Glow Tanning & Oxygen Bar (Angel Fire): https://angelfirechamber.org/business/angels-glow-tanning-oxygen-bar/
+- Angel's Outback Adventure (Angel Fire): https://angelfirechamber.org/business/category/activities-recreation/, https://angelfirechamber.org/business/category/sports-equipment-rentals/
+- Art Up Northern New Mexico (Angel Fire): https://angelfirechamber.org/business/art-up-northern-new-mexico/, https://angelfirechamber.org/business/category/artists-galleries-studios/
+- Aspen Springs at Angel Fire (Angel Fire): https://angelfirechamber.org/business/aspen-springs-at-angel-fire/, https://angelfirechamber.org/business/category/accommodations-lodging/, https://angelfirechamber.org/business/category/hotels-motels-lodges/, https://angelfirechamber.org/business/category/vacation-rentals-short-and-long-term/
+- Big River Raft Trips (Angel Fire): https://angelfirechamber.org/business/category/activities-recreation/
+- Bobcat Pass Wilderness Adventures (Angel Fire): https://angelfirechamber.org/business/bobcat-pass-wilderness-adventures/, https://angelfirechamber.org/business/category/activities-recreation/
+- Boom Noodles (Trinidad): https://boom-noodles.com
+- Brenda Johnson's Property Management (Angel Fire): https://angelfirechamber.org/business/brenda-johnsons-property-management/, https://angelfirechamber.org/business/category/accommodations-lodging/, https://angelfirechamber.org/business/category/vacation-rentals-short-and-long-term/
+- Brodsky Bookkeeping (Angel Fire): https://angelfirechamber.org/business/brodsky-bookkeeping/
+- Casa de Artesanias (Angel Fire): https://angelfirechamber.org/business/category/gift-shops/, https://angelfirechamber.org/business/category/specialty-shops
+- Comanche Creek Brewing Company (Eagle Nest): https://angelfirechamber.org/business/comanche-creek-brewing-company/
+- Cottam's of Angel Fire (Angel Fire): https://angelfirechamber.org/business/category/ski-snowboard-rentals/, https://angelfirechamber.org/business/category/sports-equipment-rentals/, https://angelfirechamber.org/business/cottams-of-angel-fire/
+- Dan's Flooring & Window Covering Inc. (Angel Fire): https://angelfirechamber.org/business/dons-flooring-window-covering-inc/, https://angelfirechamber.org/business/category/specialty-shops
+- Double Black Design, LLC (Angel Fire): https://www.linkedin.com/company/double-black-design-llc, https://angelfirechamber.org/business/double-black-design-llc/
+- Eagle Nest Mercantile (Eagle Nest): https://angelfirechamber.org/business/category/artists-galleries-studios/, https://angelfirechamber.org/business/category/gift-shops/, https://angelfirechamber.org/business/eagle-nest-mercantile/
+- El Jefe (Angel Fire): https://angelfirechamber.org/business/el-jefe/, https://angelfirechamber.org/business/category/dining/, https://angelfirechamber.org/business/category/restaurants/page/2/
+- Elements (Angel Fire): https://angelfirechamber.org/business/elements/, https://angelfirechamber.org/business/category/dining/page/2/, https://angelfirechamber.org/business/category/restaurants/page/2/
+- Enchanted Circle Pottery (Angel Fire): https://angelfirechamber.org/business/category/artists-galleries-studios/, https://angelfirechamber.org/business/category/specialty-shops
+- Enchanted Circle Pottery (Angel Fire corridor): https://angelfirechamber.org/business/category/artists-galleries-studios/
+- Far Flung Adventures (Angel Fire): https://angelfirechamber.org/business/category/activities-recreation/
+- Golden Eagle RV Park & Resort (Angel Fire): https://angelfirechamber.org/business/category/accommodations-lodging/, https://angelfirechamber.org/business/category/campgrounds-rv-parks/
+- Holy Angels Catholic Mission Church (Angel Fire): https://angelfirechamber.org/business/holy-angels-catholic-mission-church/
+- J & A's Cafe @ the Roadrunner (Angel Fire): https://angelfirechamber.org/business/category/dining/, https://angelfirechamber.org/business/category/food-cart/, https://angelfirechamber.org/business/category/restaurants/
+- J. Binford-Bell Studio & Gallery (Angel Fire): https://angelfirechamber.org/business/category/artists-galleries-studios/, https://angelfirechamber.org/business/j-binford-bell-studio-gallery/
+- KWK Events (Angel Fire): https://angelfirechamber.org/business/kwk-events/, http://angelfirechamber.org/business/category/weddings-events-planning
+- Laguna Vista Lodge, Historic Restaurant & Saloon (Angel Fire): https://angelfirechamber.org/business/laguna-vista/, https://angelfirechamber.org/business/category/accommodations-lodging/, https://angelfirechamber.org/business/category/hotels-motels-lodges/
+- Legends Grill (Angel Fire): https://angelfirechamber.org/business/legends-grill/, https://angelfirechamber.org/business/category/dining/, https://angelfirechamber.org/business/category/restaurants/page/2/
+- Lindsey Living (Angel Fire): https://angelfirechamber.org/business/category/gift-shops/, https://angelfirechamber.org/business/category/home-furnishings-decor/, https://angelfirechamber.org/business/category/specialty-shops, https://angelfirechamber.org/business/lindsey-living/
+- Longhorn Lodge (Angel Fire): https://angelfirechamber.org/business/longhorn-lodge/, https://angelfirechamber.org/business/category/accommodations-lodging/, https://angelfirechamber.org/business/category/vacation-rentals-short-and-long-term/
+- Mikuna Grill is temporarily at The Bakery & Cafe @Angel Fire (Angel Fire): https://angelfirechamber.org/business/mikuna-grill/, https://angelfirechamber.org/business/category/dining/page/2/, https://angelfirechamber.org/business/category/restaurants/page/2/
+- Monte Verde RV Park & Campground (Angel Fire): https://angelfirechamber.org/business/category/accommodations-lodging/, https://angelfirechamber.org/business/category/campgrounds-rv-parks/
+- Morning Star Restaurant (Angel Fire): https://angelfirechamber.org/business/morning-star-restaurant/, https://angelfirechamber.org/business/category/dining/, https://angelfirechamber.org/business/category/restaurants/
+- Mountain Sports of Angel Fire (Angel Fire): https://angelfirechamber.org/business/mountain-sports-of-angel-fire/, https://angelfirechamber.org/business/category/ski-snowboard-rentals/, https://angelfirechamber.org/business/category/specialty-shops, https://angelfirechamber.org/business/category/sports-equipment-rentals/
+- Music from Angel Fire (Angel Fire): https://angelfirechamber.org/business/music-from-angel-fire/, https://angelfirechamber.org/business/category/entertainment-music/
+- New Mexico River Adventures (Angel Fire): https://angelfirechamber.org/business/new-mexico-river-adventures/, https://angelfirechamber.org/business/category/activities-recreation/
+- Nuckolls Brewing Co. (Angel Fire): https://angelfirechamber.org/business/category/breweries/, https://angelfirechamber.org/business/category/restaurants/
+- Par & Grill (Angel Fire): https://angelfirechamber.org/business/par-grill/, https://angelfirechamber.org/business/category/dining/, https://angelfirechamber.org/business/category/restaurants/
+- Ponce de Leon Creations (Angel Fire): https://angelfirechamber.org/business/ponce-de-leon-creations/, https://angelfirechamber.org/business/category/gift-shops/, https://angelfirechamber.org/business/category/handcrafted-jewelry, https://angelfirechamber.org/business/category/specialty-shops
+- Pub n'grub (Angel Fire): https://angelfirechamber.org/business/category/dining/, https://angelfirechamber.org/business/category/restaurants/
+- Resort Properties of Angel Fire (Angel Fire): https://angelfirechamber.org/business/resort-properties-of-angel-fire/, https://angelfirechamber.org/business/category/accommodations-lodging/, https://angelfirechamber.org/business/category/vacation-rentals-short-and-long-term/
+- Roadrunner Tours (Angel Fire): https://angelfirechamber.org/business/road-runner-tours-ltd/, https://angelfirechamber.org/business/category/activities-recreation/
+- Snowball Lodge, LLC (Angel Fire): https://angelfirechamber.org/business/snowball-lodge-llc/, https://angelfirechamber.org/business/category/accommodations-lodging/, https://angelfirechamber.org/business/category/hotels-motels-lodges/, https://angelfirechamber.org/business/category/vacation-rentals-short-and-long-term/
+- Subway (Angel Fire): https://angelfirechamber.org/business/subway/, https://angelfirechamber.org/business/category/dining/, https://angelfirechamber.org/business/category/restaurants/
+- Summit Haus (Angel Fire): https://angelfirechamber.org/business/summit-haus/, https://angelfirechamber.org/business/category/dining/, https://angelfirechamber.org/business/category/restaurants/
+- Taos Lifestyle (Angel Fire): https://angelfirechamber.org/business/category/home-furnishings-decor/, https://angelfirechamber.org/business/category/specialty-shops
+- Taos Mountain Cabinets and Doors (Angel Fire): https://angelfirechamber.org/business/taos-mountain-cabinets-and-doors/, https://angelfirechamber.org/business/category/specialty-shops
+- Taty @ the Bump (Angel Fire): https://angelfirechamber.org/business/category/artists-galleries-studios/, https://angelfirechamber.org/business/category/coffee-shop-bistro/, https://angelfirechamber.org/business/category/restaurants/, https://angelfirechamber.org/business/category/specialty-shops
+- The Bakery & Cafe @ Angel Fire (Angel Fire): https://angelfirechamber.org/business/category/dining/page/2/, https://angelfirechamber.org/business/category/restaurants/page/2/, https://angelfirechamber.org/business/the-bakery-cafe-angel-fire/
+- The Lift Café (Angel Fire): https://angelfirechamber.org/business/the-lift-cafe-market/, https://angelfirechamber.org/business/category/coffee-shop-bistro/, https://angelfirechamber.org/business/category/dining/, https://angelfirechamber.org/business/category/restaurants/
+- The Lodge at Angel Fire Resort (Angel Fire): https://angelfirechamber.org/business/the-lodge-at-angel-fire-resort/, https://angelfirechamber.org/business/category/accommodations-lodging/, https://angelfirechamber.org/business/category/hotels-motels-lodges/
+- The Royal Tavern (Trinidad): https://theroyaltavern.simdif.com/upcoming_events%C2%A0.html
+- The Trailhead (Angel Fire): https://angelfirechamber.org/business/the-trailhead-ski-shop/, https://angelfirechamber.org/business/category/ski-snowboard-rentals/, https://angelfirechamber.org/business/category/specialty-shops, https://angelfirechamber.org/business/category/sports-equipment-rentals/
+- The Village Haus (Angel Fire): https://angelfirechamber.org/business/the-village-haus/, https://angelfirechamber.org/business/category/dining/, https://angelfirechamber.org/business/category/restaurants/
+- Village Ski Shop & Ski Rentals (Angel Fire): https://angelfirechamber.org/business/village-ski-shop-ski-rentals/, https://angelfirechamber.org/business/category/ski-snowboard-rentals/, https://angelfirechamber.org/business/category/sports-equipment-rentals/
+- Wende Woolley Photography (Angel Fire): https://angelfirechamber.org/business/wende-woolley-photography/, https://angelfirechamber.org/business/category/photography/
+- Winter Sports (Angel Fire): https://angelfirechamber.org/business/winter-sports/, https://angelfirechamber.org/business/category/ski-snowboard-rentals/, https://angelfirechamber.org/business/category/sports-equipment-rentals/
 
 ## Listings Without Any URL
 
@@ -132,7 +192,6 @@ The companion CSV contains all entries and their assigned connection group.
 - Segundo - Segundo, Las Animas (no contact path)
 - Starkville - Starkville, Las Animas (no contact path)
 - Arts/culture/tourism audiences - Trinidad, Las Animas (no contact path)
-- Boom Noodles - Trinidad, Las Animas (phone, address)
 - Great Wall Restaurant - Trinidad, Las Animas (phone, address)
 - Trinidad State College - Trinidad, Las Animas (no contact path)
 - Tyrone / Villegreen - Tyrone, Las Animas (no contact path)

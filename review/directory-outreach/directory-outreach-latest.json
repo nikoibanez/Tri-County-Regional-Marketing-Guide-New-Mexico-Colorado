@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-16T23:44:53.987617+00:00",
+  "generated_at": "2026-11-24T02:06:26.254099+00:00",
   "source": "/home/runner/work/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/Tri-County-Regional-Marketing-Guide-New-Mexico-Colorado/dist/tri-county-netlify-guide-deep/data/guide-data.json",
   "summary": {
     "entries": 1371,
     "directory_shortcuts": 120,
     "total_records_reviewed": 1491,
     "with_any_route": 749,
-    "with_listed_route": 308,
-    "with_ask_route": 709,
+    "with_listed_route": 295,
+    "with_ask_route": 689,
     "without_outreach_route": 622,
     "missing_structured_fields": 0,
     "shortcuts_with_any_route": 67,
@@ -42,27 +42,27 @@
       },
       "directory_listing": {
         "label": "Directory profiles and listings",
-        "listed": 306,
-        "ask": 16,
-        "not_indicated": 1049
+        "listed": 293,
+        "ask": 24,
+        "not_indicated": 1054
       },
       "event_calendar": {
         "label": "Event calendars",
         "listed": 1,
-        "ask": 120,
-        "not_indicated": 1250
+        "ask": 100,
+        "not_indicated": 1270
       },
       "social_cross_promotion": {
         "label": "Social cross-promotion",
         "listed": 0,
-        "ask": 39,
-        "not_indicated": 1332
+        "ask": 38,
+        "not_indicated": 1333
       },
       "newsletter_mailing_list": {
         "label": "Newsletters and mailing lists",
         "listed": 0,
-        "ask": 187,
-        "not_indicated": 1184
+        "ask": 167,
+        "not_indicated": 1204
       },
       "paid_digital_advertising": {
         "label": "Paid digital advertising",
@@ -79,14 +79,14 @@
       "sponsorship": {
         "label": "Sponsorships",
         "listed": 0,
-        "ask": 212,
-        "not_indicated": 1159
+        "ask": 192,
+        "not_indicated": 1179
       },
       "partner_cross_promotion": {
         "label": "Partner cross-promotion",
         "listed": 0,
-        "ask": 400,
-        "not_indicated": 971
+        "ask": 380,
+        "not_indicated": 991
       }
     },
     "shortcut_channel_counts": {
